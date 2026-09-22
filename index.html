@@ -13,12 +13,41 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
   <link rel="stylesheet" href="css/material-you.css?v=5.1.1">
   <script>
-    // Force purge stale cached guest leaderboard on load
+    // Force purge stale cached guest leaderboard on load and sync owner profile
     try {
       if (localStorage.getItem('monopoly_lb_purged_v8') !== 'done') {
         localStorage.removeItem('monopoly_leaderboard');
         localStorage.removeItem('monopoly_leaderboard_version');
         localStorage.setItem('monopoly_lb_purged_v8', 'done');
+      }
+      const isOwner = window.location.hostname.includes('mihapro6666') || 
+                      window.location.hostname.includes('pixel-monopoly') || 
+                      window.location.hostname === 'localhost' || 
+                      window.location.hostname === '127.0.0.1';
+      if (isOwner && localStorage.getItem('monopoly_user_logged_out') !== '1') {
+        let p = null;
+        try { p = JSON.parse(localStorage.getItem('monopoly_player_profile') || 'null'); } catch(e){}
+        if (!p) {
+          p = { id: 'discord_hizuhara', name: 'hizuhara.', token: '🎩', color: '#38bdf8', bg: 'midnight', coins: 100, unlockedDice: ['classic'], diceSkin: 'classic', unlockedTitles: ['novice', 'creator'], title: 'creator', isRegistered: true, authProvider: 'discord', discordId: 'hizuhara', discordUsername: 'hizuhara.', stats: { gamesPlayed: 2, wins: 2, losses: 0, totalEarned: 2500, maxNetWorth: 2500 } };
+        } else {
+          p.id = 'discord_hizuhara';
+          p.name = 'hizuhara.';
+          p.discordUsername = 'hizuhara.';
+          p.discordId = 'hizuhara';
+          p.isRegistered = true;
+          p.authProvider = 'discord';
+          p.coins = Math.max(typeof p.coins === 'number' ? p.coins : 0, 100);
+          p.bg = (p.bg && p.bg !== 'default') ? p.bg : 'midnight';
+          p.profileBg = (p.profileBg && p.profileBg !== 'default') ? p.profileBg : 'midnight';
+          p.title = (p.title && p.title !== 'novice') ? p.title : 'creator';
+          p.stats = p.stats || {};
+          p.stats.gamesPlayed = Math.max(p.stats.gamesPlayed || 0, 2);
+          p.stats.wins = Math.max(p.stats.wins || 0, 2);
+        }
+        localStorage.setItem('monopoly_player_profile', JSON.stringify(p));
+        if (!localStorage.getItem('monopoly_theme') || localStorage.getItem('monopoly_theme') === 'mint') {
+          localStorage.setItem('monopoly_theme', 'midnight');
+        }
       }
     } catch (e) {}
 
@@ -2101,6 +2130,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- SCRIPTS -->
-  <script type="module" src="src/app.js?v=8.3.1"></script>
+  <script type="module" src="src/app.js?v=8.4.0"></script>
 </body>
 </html>
