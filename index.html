@@ -130,14 +130,14 @@
         <span id="header-discord-label">Войти</span>
       </button>
 
-      <!-- Settings Button (Sound & Theme) positioned right before profile -->
-      <button id="btn-open-settings" class="md-btn-icon" title="Настройки" onclick="window.openSettingsModal?.()">
-        <i class="ph ph-gear" style="font-size: 1.25rem;"></i>
-      </button>
-
       <!-- Profile Button -->
       <button id="btn-open-profile" class="md-btn md-btn-tonal" title="Профиль игрока" onclick="window.openProfileModal?.()">
         <span id="profile-name-display">Игрок</span>
+      </button>
+
+      <!-- Settings Button (Sound & Theme) always positioned at the top-right corner -->
+      <button id="btn-open-settings" class="md-btn-icon" title="Настройки" onclick="window.openSettingsModal?.()">
+        <i class="ph ph-gear" style="font-size: 1.25rem;"></i>
       </button>
     </div>
   </header>
@@ -2077,6 +2077,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- SCRIPTS -->
-  <script type="module" src="src/app.js?v=5.0.0"></script>
+  <script type="module" src="src/app.js?v=5.1.0"></script>
 </body>
 </html>
