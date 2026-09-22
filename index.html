@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="midnight">
+<html lang="ru" data-theme="cyberpunk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +11,18 @@
   <!-- Three.js 3D Engine & GLTFLoader -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-  <link rel="stylesheet" href="css/material-you.css?v=5.2.2">
+  <link rel="stylesheet" href="css/material-you.css?v=5.2.3">
   <script>
     // Force purge stale cached guest leaderboard on load and sync owner profile
     try {
-      const savedTheme = localStorage.getItem('monopoly_theme');
-      if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
+      if (localStorage.getItem('monopoly_theme_sync_v8_4_3') !== 'done') {
+        if (!localStorage.getItem('monopoly_theme') || localStorage.getItem('monopoly_theme') === 'midnight') {
+          localStorage.setItem('monopoly_theme', 'cyberpunk');
+        }
+        localStorage.setItem('monopoly_theme_sync_v8_4_3', 'done');
       }
+      const savedTheme = localStorage.getItem('monopoly_theme') || 'cyberpunk';
+      document.documentElement.setAttribute('data-theme', savedTheme);
 
       if (localStorage.getItem('monopoly_lb_purged_v8') !== 'done') {
         localStorage.removeItem('monopoly_leaderboard');
@@ -52,7 +56,7 @@
             customToken: customPawnData,
             color: '#2563eb', 
             bg: 'space', 
-            profileBg: 'midnight', 
+            profileBg: 'space', 
             coins: 0, 
             unlockedDice: ALL_DICE, 
             diceSkin: 'cosmic_void', 
@@ -83,7 +87,7 @@
           p.customToken = p.customToken || customPawnData;
           p.color = p.color || '#2563eb';
           p.bg = p.bg || 'space';
-          p.profileBg = p.profileBg || 'midnight';
+          p.profileBg = p.profileBg || 'space';
           p.title = 'creator';
           p.diceSkin = 'cosmic_void';
           p.unlockedDice = ALL_DICE;
@@ -97,6 +101,130 @@
         localStorage.setItem('monopoly_player_profile', JSON.stringify(p));
         localStorage.setItem('monopoly_is_creator', 'true');
         localStorage.setItem('monopoly_dev_mode', 'true');
+
+        // Seed match history corresponding to the 2 recorded wins
+        try {
+          const hist = JSON.parse(localStorage.getItem('monopoly_match_history') || '[]');
+          if (!Array.isArray(hist) || hist.length === 0) {
+            const defaultMatches = [
+              {
+                id: 'match_1726860000001',
+                timestamp: Date.now() - 3600000 * 2,
+                dateStr: '20 сент, 23:15',
+                mode: 'Онлайн',
+                roomCode: 'MONO-777',
+                isLocal: false,
+                durationStr: '14 мин 32 сек',
+                turnsCount: 28,
+                winner: {
+                  id: 'discord_1472673126859935765',
+                  name: 'hizuhara.',
+                  token: 'custom',
+                  customToken: customPawnData,
+                  color: '#2563eb'
+                },
+                isMeWinner: true,
+                myResult: 'WIN',
+                coinsEarned: 50,
+                myCash: 2500,
+                myNetWorth: 2500,
+                myPropCount: 6,
+                myHousesCount: 4,
+                playersCount: 2,
+                players: [
+                  {
+                    id: 'discord_1472673126859935765',
+                    name: 'hizuhara.',
+                    token: 'custom',
+                    customToken: customPawnData,
+                    color: '#2563eb',
+                    cash: 2500,
+                    netWorth: 2500,
+                    propCount: 6,
+                    housesCount: 4,
+                    isBankrupt: false,
+                    hasLeft: false,
+                    isWinner: true,
+                    isMe: true
+                  },
+                  {
+                    id: 'discord_player_cat',
+                    name: 'СЫН ШЛЮХИ',
+                    token: '🐱',
+                    customToken: null,
+                    color: '#3b82f6',
+                    cash: 0,
+                    netWorth: 0,
+                    propCount: 1,
+                    housesCount: 0,
+                    isBankrupt: true,
+                    hasLeft: false,
+                    isWinner: false,
+                    isMe: false
+                  }
+                ]
+              },
+              {
+                id: 'match_1726860000002',
+                timestamp: Date.now() - 3600000 * 5,
+                dateStr: '20 сент, 21:40',
+                mode: 'Онлайн',
+                roomCode: 'PIXEL-42',
+                isLocal: false,
+                durationStr: '11 мин 18 сек',
+                turnsCount: 22,
+                winner: {
+                  id: 'discord_1472673126859935765',
+                  name: 'hizuhara.',
+                  token: 'custom',
+                  customToken: customPawnData,
+                  color: '#2563eb'
+                },
+                isMeWinner: true,
+                myResult: 'WIN',
+                coinsEarned: 50,
+                myCash: 2200,
+                myNetWorth: 2500,
+                myPropCount: 5,
+                myHousesCount: 2,
+                playersCount: 2,
+                players: [
+                  {
+                    id: 'discord_1472673126859935765',
+                    name: 'hizuhara.',
+                    token: 'custom',
+                    customToken: customPawnData,
+                    color: '#2563eb',
+                    cash: 2200,
+                    netWorth: 2500,
+                    propCount: 5,
+                    housesCount: 2,
+                    isBankrupt: false,
+                    hasLeft: false,
+                    isWinner: true,
+                    isMe: true
+                  },
+                  {
+                    id: 'discord_player_cat',
+                    name: 'СЫН ШЛЮХИ',
+                    token: '🐱',
+                    customToken: null,
+                    color: '#3b82f6',
+                    cash: 0,
+                    netWorth: 0,
+                    propCount: 2,
+                    housesCount: 0,
+                    isBankrupt: true,
+                    hasLeft: false,
+                    isWinner: false,
+                    isMe: false
+                  }
+                ]
+              }
+            ];
+            localStorage.setItem('monopoly_match_history', JSON.stringify(defaultMatches));
+          }
+        } catch(e) {}
       }
     } catch (e) {}
 
@@ -2179,6 +2307,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- SCRIPTS -->
-  <script type="module" src="src/app.js?v=8.4.2"></script>
+  <script type="module" src="src/app.js?v=8.4.3"></script>
 </body>
 </html>
