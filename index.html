@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="midnight">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Монополия</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎩</text></svg>">
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Three.js 3D Engine & GLTFLoader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <link rel="stylesheet" href="css/material-you.css?v=4.1.7">
+  <script>
+    window.openModalById = function(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('active');
+        modal.style.display = 'grid';
+      }
+    };
+    window.closeModalById = function(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('active');
+        modal.style.display = '';
+      }
+    };
+    window.openChangelogModal = function() {
+      window.openModalById('modal-changelog');
+      window.sound?.playClick?.();
+    };
+    window.openSettingsModal = function() {
+      window.openModalById('modal-settings');
+      window.app?.openSettingsModal?.();
+      window.sound?.playClick?.();
+    };
+    window.openLeaderboardModal = function() {
+      window.openModalById('modal-leaderboard');
+      window.app?.openLeaderboardModal?.();
+      window.sound?.playClick?.();
+    };
+    window.openMatchHistoryModal = function(filter = 'all') {
+      window.openModalById('modal-match-history');
+      window.app?.openMatchHistoryModal?.(filter);
+      window.sound?.playClick?.();
+    };
+    window.openShopModal = function() {
+      window.openModalById('modal-shop');
+      window.app?.openShopModal?.();
+      window.sound?.playClick?.();
+    };
+    window.openAdminModal = function() {
+      window.openModalById('modal-admin-panel');
+      window.sound?.playClick?.();
+    };
+    window.openDiscordAuthModal = function() {
+      window.openModalById('modal-discord-auth');
+      window.sound?.playClick?.();
+    };
+    window.openProfileModal = function() {
+      window.openModalById('modal-profile');
+      window.app?.openProfileModal?.();
+      window.sound?.playClick?.();
+    };
+    window.goToMainMenu = function() {
+      if (window.app?.currentScreen === 'game') {
+        document.getElementById('btn-leave-game')?.click();
+        return;
+      }
+      if (window.app?.currentScreen === 'lobby') {
+        document.getElementById('btn-leave-lobby')?.click();
+        return;
+      }
+      document.querySelectorAll('.md-modal-backdrop.active').forEach(m => {
+        m.classList.remove('active');
+        m.style.display = '';
+      });
+      if (window.app?.showScreen) {
+        window.app.showScreen('menu');
+      } else {
+        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+        document.getElementById('screen-menu')?.classList.add('active');
+      }
+      window.sound?.playClick?.();
+    };
+  </script>
+</head>
+<body>
+
+  <!-- APP HEADER -->
+  <header class="app-header">
+    <div class="header-brand-group">
+      <div class="brand" id="brand-logo" role="button" tabindex="0" title="В главное меню" onclick="window.goToMainMenu?.()">
+        <div class="brand-icon">M</div>
+      </div>
+      <button id="btn-open-changelog" class="badge-changelog-btn" title="Журнал обновлений (Update Log)" onclick="window.openChangelogModal?.()">
+        v4.1
+      </button>
+    </div>
+
+    <div class="header-actions">
+      <!-- Leaderboard Button -->
+      <button id="btn-open-leaderboard" class="md-btn-icon" title="Топ игроков" onclick="window.openLeaderboardModal?.()">
+        <i class="ph ph-trophy" style="font-size: 1.25rem; color: #eab308;"></i>
+      </button>
+
+      <!-- Match History Button -->
+      <button id="btn-open-history" class="md-btn-icon" title="История матчей" style="color: #38bdf8;" onclick="window.openMatchHistoryModal?.('all')">
+        <i class="ph ph-clock-counter-clockwise" style="font-size: 1.25rem;"></i>
+      </button>
+
+      <!-- Admin Panel Button (Developer Only) -->
+      <button id="btn-open-admin" class="md-btn-icon" style="display: none; color: #fbbf24; background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.35);" title="Панель администратора (hizuhara)" onclick="window.openAdminModal?.()">
+        <i class="ph ph-crown" style="font-size: 1.25rem;"></i>
+      </button>
+
+      <!-- Shop Button with Coins Pill -->
+      <button id="btn-open-shop" class="md-btn md-btn-tonal shop-header-btn" title="Магазин" onclick="window.openShopModal?.()">
+        <span style="font-size: 1.1rem; line-height: 1;">🪙</span>
+        <span id="header-coins-display" style="font-weight: 700; font-size: 0.85rem; color: #eab308;">0</span>
+      </button>
+
+      <!-- Discord Login / Status Button -->
+      <button id="btn-header-discord" class="md-btn discord-header-btn" title="Вход через Discord" onclick="window.openDiscordAuthModal?.()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+        </svg>
+        <span id="header-discord-label">Войти</span>
+      </button>
+
+      <!-- Settings Button (Sound & Theme) positioned right before profile -->
+      <button id="btn-open-settings" class="md-btn-icon" title="Настройки" onclick="window.openSettingsModal?.()">
+        <i class="ph ph-gear" style="font-size: 1.25rem;"></i>
+      </button>
+
+      <!-- Profile Button -->
+      <button id="btn-open-profile" class="md-btn md-btn-tonal" title="Профиль игрока" onclick="window.openProfileModal?.()">
+        <span id="profile-name-display">Игрок</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- RECONNECT BANNER -->
+  <div id="reconnect-banner" style="display: none; background: var(--md-primary-container); color: var(--md-on-primary-container); padding: 12px 24px; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--md-outline-variant);">
+    <div>Обнаружена незавершенная игра в комнате <b id="reconnect-room-code"></b>. Вернуться?</div>
+    <div style="display: flex; gap: 8px;">
+      <button id="btn-reconnect-yes" class="md-btn md-btn-filled">Продолжить</button>
+      <button id="btn-reconnect-dismiss" class="md-btn md-btn-text">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SCREEN 1: MAIN MENU & LOBBY SEARCH
+       ========================================================================= -->
+  <main id="screen-menu" class="screen active">
+    <div class="menu-container">
+      
+      <!-- Left Column: Actions & Open Lobbies -->
+      <div class="hero-section">
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button class="md-btn md-btn-filled" id="btn-create-room" style="flex: 1 1 200px; padding: 14px 20px; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+            <i class="ph ph-users" style="font-size: 1.25rem;"></i>
+            <span>Создать онлайн-лобби</span>
+          </button>
+          <button class="md-btn md-btn-tonal" id="btn-create-solo-room" style="flex: 1 1 200px; padding: 14px 20px; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 8px; background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <i class="ph ph-robot" style="font-size: 1.25rem;"></i>
+            <span>Игра с ботами (Соло)</span>
+          </button>
+        </div>
+
+        <!-- Join by Room Code -->
+        <div class="md-card" style="padding: 14px 18px;">
+          <form id="form-join-room" style="display: flex; gap: 10px; align-items: center;">
+            <input type="text" id="input-join-code" class="md-input" placeholder="Код комнаты (например: ABCD-123)" required>
+            <button type="submit" class="md-btn md-btn-filled" style="white-space: nowrap;">Войти по коду</button>
+          </form>
+        </div>
+
+        <!-- Open Lobbies List -->
+        <div class="md-card" style="padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <h3 style="font-size: 1.1rem; font-weight: 600;">Поиск лобби</h3>
+            <button id="btn-refresh-lobbies" class="md-btn md-btn-text" style="font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px;">
+              <i class="ph ph-arrows-clockwise" style="font-size: 1rem;"></i>
+              <span>Обновить</span>
+            </button>
+          </div>
+
+          <div id="lobbies-list" style="display: flex; flex-direction: column; gap: 10px; min-height: 120px;">
+            <div style="text-align: center; color: var(--md-on-surface-variant); padding: 30px 10px; font-size: 0.9rem;">
+              Поиск активных комнат в сети...
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Profile & Stats -->
+      <div>
+        <div class="md-card md-card-elevated profile-card">
+          <div class="profile-header-row">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span id="profile-card-badge" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; min-width: 32px; font-size: 1.4rem;"></span>
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                  <h2 style="font-size: 1.25rem; font-weight: 600; margin: 0;" id="profile-card-name">Профиль</h2>
+                  <span id="profile-card-title-badge"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="stat-box">
+              <div class="stat-num" id="stat-coins" style="color: #eab308;">0</div>
+              <div class="stat-label">🪙</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" id="stat-games">0</div>
+              <div class="stat-label">Матчей</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" id="stat-wins">0</div>
+              <div class="stat-label">Побед</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num" id="stat-winrate">0%</div>
+              <div class="stat-label">Винрейт</div>
+            </div>
+          </div>
+
+          <!-- Profile Actions -->
+          <div style="display: flex; gap: 8px; margin-top: 14px;">
+            <button id="btn-edit-profile-trigger" class="md-btn md-btn-outlined" style="flex: 1;">
+              Поменять профиль
+            </button>
+            <button id="btn-card-logout-trigger" class="md-btn md-btn-outlined" style="display: none; color: #ef4444; border-color: rgba(239,68,68,0.35); padding: 8px 12px;" title="Выйти из аккаунта">
+              <i class="ph ph-sign-out" style="font-size: 1.1rem;"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Leaderboard Card -->
+        <div class="md-card md-card-elevated" style="margin-top: 14px; padding: 16px;">
+          <div class="leaderboard-card-header">
+            <div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <i class="ph ph-trophy" style="font-size: 1.3rem; color: #eab308;"></i>
+                <h3 style="font-size: 1.1rem; font-weight: 700; margin: 0;">Топ игроков</h3>
+              </div>
+              <div style="font-size: 0.72rem; color: var(--md-on-surface-variant); margin-top: 2px;">
+                👑 Только зарегистрированные игроки (Discord)
+              </div>
+            </div>
+            <div class="leaderboard-tabs" id="inline-leaderboard-tabs">
+              <button class="lb-tab active" data-sort="wins">Победы</button>
+              <button class="lb-tab" data-sort="games">Матчи</button>
+              <button class="lb-tab" data-sort="cash">Капитал</button>
+              <button class="lb-tab" data-sort="winrate">% Вин</button>
+            </div>
+          </div>
+
+          <div id="inline-leaderboard-list" class="leaderboard-list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       SCREEN 2: LOBBY & RULES CONFIGURATION
+       ========================================================================= -->
+  <section id="screen-lobby" class="screen">
+    <div class="lobby-layout">
+      
+      <!-- Left: Players List & Game Controls -->
+      <div class="md-card md-card-elevated">
+        <!-- Test Mode Notice Banner -->
+        <div id="lobby-test-banner" style="display: none; padding: 10px 14px; border-radius: 12px; background: rgba(217, 70, 239, 0.14); border: 1px dashed #d946ef; color: #f0abfc; font-size: 0.85rem; font-weight: 600; align-items: center; gap: 8px; margin-bottom: 14px;">
+          <span>🧪</span>
+          <span>Тестовый режим: тестовая игра (без наград и рейтинга)</span>
+        </div>
+
+        <!-- Solo / Bot Mode Notice Banner -->
+        <div id="lobby-bot-banner" style="display: none; padding: 10px 14px; border-radius: 12px; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.25); color: #38bdf8; font-size: 0.85rem; font-weight: 600; align-items: center; gap: 8px; margin-bottom: 14px;">
+          <span>🤖</span>
+          <span>Одиночный режим с ботами: тренировочная игра (без наград и рейтинга)</span>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <div>
+            <h2 style="font-size: 1.3rem; font-weight: 600;">Комната</h2>
+            <div style="font-size: 0.85rem; color: var(--md-on-surface-variant);" id="lobby-player-count">
+              1 / 4 участников
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end;">
+            <div class="room-code-badge" id="badge-room-code" title="Нажмите, чтобы скопировать код комнаты" style="cursor: pointer;">
+              <span id="lobby-room-code">----</span>
+              <i class="ph ph-copy" style="font-size: 1.05rem; opacity: 0.75; margin-left: 2px;"></i>
+            </div>
+            <button id="btn-copy-link" class="md-btn md-btn-tonal" style="padding: 6px 12px; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 5px;" title="Скопировать прямую ссылку">
+              <i class="ph ph-link" style="font-size: 1rem;"></i>
+              <span>Скопировать ссылку</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="players-list" id="lobby-players-list">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Host Bot Management Controls -->
+        <div id="lobby-bots-control-row" style="display: none; gap: 8px; margin-top: 10px;">
+          <button type="button" id="btn-lobby-add-bot" class="md-btn md-btn-tonal" style="flex: 1; font-size: 0.82rem; padding: 8px 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.25);">
+            <i class="ph ph-plus-circle" style="font-size: 1.05rem;"></i>
+            <span>+ Добавить бота</span>
+          </button>
+          <button type="button" id="btn-lobby-remove-bot" class="md-btn md-btn-tonal" style="flex: 1; font-size: 0.82rem; padding: 8px 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; color: #f87171; background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.25);">
+            <i class="ph ph-minus-circle" style="font-size: 1.05rem;"></i>
+            <span>- Убрать бота</span>
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 14px;">
+          <button id="btn-start-game" class="md-btn md-btn-filled" style="width: 100%;">Начать игру</button>
+        </div>
+
+        <!-- Custom tiles preview -->
+        <div id="custom-tiles-lobby-preview" style="display: none; align-items: center; gap: 8px; margin-top: 6px; padding: 6px 10px; background: rgba(56,189,248,0.08); border-radius: 10px; border: 1px solid rgba(56,189,248,0.2);">
+        </div>
+
+        <!-- Custom tiles button — visible to all players -->
+        <button id="btn-open-custom-tiles" class="md-btn md-btn-tonal" style="width: 100%; margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--md-primary); font-weight: 700; border-radius: 12px; padding: 9px 14px;">
+          <i class="ph ph-pencil-simple" style="font-size: 1.1rem;"></i>
+          <span>Свои клетки для этой партии</span>
+          <span id="custom-tiles-badge-count" style="display: none; background: var(--md-primary); color: var(--md-on-primary); font-size: 0.72rem; padding: 1px 7px; border-radius: 10px; font-weight: 800;">0</span>
+        </button>
+
+        <button id="btn-leave-lobby" class="md-btn md-btn-text" style="width: 100%; margin-top: 8px; color: var(--md-outline);">
+          Выйти в меню
+        </button>
+      </div>
+
+      <!-- Right: Lobby Settings & Rules Selection (Selected inside lobby!) -->
+      <!-- Right: Lobby Game Settings -->
+      <div class="md-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+          <h3 style="font-size: 1.15rem; font-weight: 600; margin: 0;">Параметры матча</h3>
+          <span id="lobby-host-only-badge" style="font-size: 0.75rem; color: var(--md-on-surface-variant); background: var(--md-surface-container-high); padding: 4px 10px; border-radius: 12px; display: none;">👑 Только хост</span>
+        </div>
+
+        <div id="lobby-settings-container" class="lobby-custom-settings">
+          <!-- Custom Tiles for this Match -->
+          <div id="lobby-custom-tiles-card" class="setting-row" style="position: relative; background: var(--md-surface-container-high); border-radius: 14px; padding: 14px 14px; border: 1px solid var(--md-outline-variant); margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <div class="setting-label-wrap" style="flex: 1; min-width: 0;">
+              <span class="setting-title" style="display: flex; align-items: center; gap: 6px;">
+                <i class="ph ph-map-pin" style="color: var(--md-primary); font-size: 1.1rem;"></i> Свои клетки для этой партии
+              </span>
+              <span class="setting-desc" id="custom-tiles-status-text">Стандартные клетки (нажмите чтобы настроить)</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-right: 32px;">
+              <button id="btn-open-custom-tiles-settings" class="md-btn md-btn-tonal" style="font-size: 0.82rem; padding: 8px 14px; font-weight: 700; white-space: nowrap;">
+                <i class="ph ph-pencil-simple"></i> Настроить
+              </button>
+            </div>
+            <!-- Top Right Red Cross -->
+            <button id="btn-close-custom-tiles-card" class="btn-card-close-red" title="Закрыть плашку" style="position: absolute; top: 8px; right: 10px; width: 26px; height: 26px; min-width: 26px; font-size: 0.85rem; border-radius: 8px; z-index: 2;">
+              ✕
+            </button>
+          </div>
+
+          <!-- Bot Difficulty Setting -->
+          <div class="setting-row" id="setting-bot-difficulty-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title" style="display: flex; align-items: center; gap: 6px;">
+                <i class="ph ph-robot" style="color: #38bdf8;"></i> Сложность ботов
+              </span>
+              <span class="setting-desc" id="setting-bot-diff-desc">Уровень интеллекта и агрессии AI ботов</span>
+            </div>
+            <div id="setting-bot-diff-chips" class="setting-chips-group">
+              <button class="md-chip" data-diff="easy" style="border-color: #22c55e;">🟢 Лёгкий</button>
+              <button class="md-chip active" data-diff="medium" style="border-color: #eab308;">🟡 Средний</button>
+              <button class="md-chip" data-diff="hard" style="border-color: #ef4444;">🔴 Сложный</button>
+            </div>
+          </div>
+
+          <!-- Max Players Setting -->
+          <div class="setting-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title">Количество игроков</span>
+              <span class="setting-desc">Лимит участников в комнате</span>
+            </div>
+            <div id="max-players-chips" class="setting-chips-group">
+              <button class="md-chip" data-max="2">2</button>
+              <button class="md-chip" data-max="3">3</button>
+              <button class="md-chip active" data-max="4">4</button>
+              <button class="md-chip" data-max="5">5</button>
+              <button class="md-chip" data-max="6">6</button>
+            </div>
+          </div>
+
+          <!-- Starting Cash -->
+          <div class="setting-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title">Стартовый капитал</span>
+              <span class="setting-desc">Баланс каждого игрока в начале</span>
+            </div>
+            <div id="setting-starting-cash-chips" class="setting-chips-group">
+              <button class="md-chip" data-val="1000">$1000</button>
+              <button class="md-chip active" data-val="1500">$1500</button>
+              <button class="md-chip" data-val="2000">$2000</button>
+              <button class="md-chip" data-val="2500">$2500</button>
+            </div>
+          </div>
+
+          <!-- Salary per GO -->
+          <div class="setting-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title">Зарплата за круг</span>
+              <span class="setting-desc">Премия при прохождении «ВПЕРЁД»</span>
+            </div>
+            <div id="setting-salary-chips" class="setting-chips-group">
+              <button class="md-chip" data-val="100">$100</button>
+              <button class="md-chip active" data-val="200">$200</button>
+              <button class="md-chip" data-val="300">$300</button>
+              <button class="md-chip" data-val="400">$400</button>
+            </div>
+          </div>
+
+          <!-- Turn Timer -->
+          <div class="setting-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title">Таймер на ход</span>
+              <span class="setting-desc">Ограничение времени на принятие решений</span>
+            </div>
+            <div id="setting-timer-chips" class="setting-chips-group">
+              <button class="md-chip" data-val="30">30с</button>
+              <button class="md-chip" data-val="45">45с</button>
+              <button class="md-chip active" data-val="60">60с</button>
+              <button class="md-chip" data-val="90">90с</button>
+            </div>
+          </div>
+
+          <!-- Random Initial Streets -->
+          <div class="setting-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title">Стартовая раздача улиц</span>
+              <span class="setting-desc">Случайные улицы игрокам на старте</span>
+            </div>
+            <div id="setting-streets-chips" class="setting-chips-group">
+              <button class="md-chip active" data-val="0">0 (Нет)</button>
+              <button class="md-chip" data-val="1">По 1</button>
+              <button class="md-chip" data-val="2">По 2</button>
+              <button class="md-chip" data-val="3">По 3</button>
+            </div>
+          </div>
+
+          <div class="setting-divider"></div>
+
+          <!-- Double Salary On GO Landing Toggle -->
+          <div class="setting-toggle-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title">Удвоение зарплаты на «ВПЕРЁД»</span>
+              <span class="setting-desc">2x премия при точной остановке на клетке</span>
+            </div>
+            <label class="md-switch">
+              <input type="checkbox" id="toggle-double-salary">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <!-- Rent in Jail Toggle -->
+          <div class="setting-toggle-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title">Сбор ренты в тюрьме</span>
+              <span class="setting-desc">Получать доход с улиц во время заключения</span>
+            </div>
+            <label class="md-switch">
+              <input type="checkbox" id="toggle-rent-jail" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <!-- Build Without Full Monopoly Toggle -->
+          <div class="setting-toggle-row">
+            <div class="setting-label-wrap">
+              <span class="setting-title">Стройка без монополии</span>
+              <span class="setting-desc">Позволяет строить дома на отдельных улицах</span>
+            </div>
+            <label class="md-switch">
+              <input type="checkbox" id="toggle-build-no-monopoly">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SCREEN 3: GAME BOARD
+       ========================================================================= -->
+  <section id="screen-game" class="screen">
+    <div class="game-container">
+      
+      <!-- Main Board -->
+      <div class="board-wrapper">
+        <div class="board-grid" id="board-grid">
+          <!-- 40 Tiles & Center rendered by JS -->
+        </div>
+        <div class="tokens-overlay" id="tokens-overlay">
+          <!-- Player tokens placed here -->
+        </div>
+      </div>
+
+      <!-- Right Sidebar: Players, Actions & Log -->
+      <aside class="game-sidebar">
+        
+        <!-- Test Mode Banner in Game -->
+        <div id="game-test-banner" style="display: none; padding: 8px 12px; border-radius: 12px; background: rgba(217, 70, 239, 0.14); border: 1px dashed #d946ef; color: #f0abfc; font-size: 0.78rem; font-weight: 600; text-align: center;">
+          🧪 Тестовый матч • Без наград и рейтинга
+        </div>
+
+        <!-- Sidebar Header with Leave button -->
+        <div class="md-card" style="padding: 12px 16px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-weight: 600; font-size: 0.95rem;">Участники матча</span>
+          <button id="btn-leave-game" class="md-btn md-btn-text" style="color: #dc2626; font-size: 0.85rem; padding: 6px 12px;">
+            Выйти
+          </button>
+        </div>
+
+        <!-- Players List Dashboard -->
+        <div class="players-list" id="sidebar-players">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <!-- Tabbed Sidebar Panel: Events & Chat -->
+        <div class="md-card sidebar-panel-card" style="padding: 12px; display: flex; flex-direction: column; flex: 1; min-height: 260px;">
+          <!-- Tabs Header -->
+          <div class="sidebar-tabs-header">
+            <div class="sidebar-tabs-row">
+              <button class="sidebar-tab-btn active" id="tab-btn-logs" data-tab="logs">
+                <i class="ph ph-scroll"></i>
+                <span>События</span>
+              </button>
+              <button class="sidebar-tab-btn" id="tab-btn-chat" data-tab="chat">
+                <i class="ph ph-chat-circle-dots"></i>
+                <span>Чат</span>
+                <span id="chat-unread-badge" class="chat-unread-dot" style="display: none;"></span>
+              </button>
+            </div>
+            <button id="btn-open-trade-history" class="md-btn md-btn-text" style="font-size: 0.72rem; padding: 2px 6px; color: var(--md-primary);" title="Посмотреть историю обменов">
+              <i class="ph ph-clock-counter-clockwise"></i> Сделки
+            </button>
+          </div>
+
+          <!-- Tab 1: Action Logs -->
+          <div id="tab-content-logs" class="sidebar-tab-pane active">
+            <div class="action-log" id="action-log">
+              <!-- Logs rendered here -->
+            </div>
+          </div>
+
+          <!-- Tab 2: In-Game Chat -->
+          <div id="tab-content-chat" class="sidebar-tab-pane">
+            <div class="game-chat-container">
+              <!-- Chat messages stream -->
+              <div class="game-chat-messages" id="game-chat-messages">
+                <div class="chat-system-notice">
+                  💬 Игровой чат комнаты. Общайтесь и договаривайтесь о сделках!
+                </div>
+              </div>
+
+              <!-- Quick Reaction Bar -->
+              <div class="chat-quick-reactions" id="chat-quick-reactions">
+                <button type="button" class="chat-quick-btn" data-text="🎲">🎲</button>
+                <button type="button" class="chat-quick-btn" data-text="💰">💰</button>
+                <button type="button" class="chat-quick-btn" data-text="🔥">🔥</button>
+                <button type="button" class="chat-quick-btn" data-text="🤝">🤝</button>
+                <button type="button" class="chat-quick-btn" data-text="GG!">GG!</button>
+                <button type="button" class="chat-quick-btn" data-text="Куплю твою улицу!">Куплю улицу</button>
+                <button type="button" class="chat-quick-btn" data-text="Удачи!">Удачи!</button>
+              </div>
+
+              <!-- Chat Input Form with Emoji Picker -->
+              <div class="game-chat-form-wrap" style="position: relative;">
+                <div id="chat-emoji-popover" class="chat-emoji-popover" style="display: none;">
+                  <div class="chat-emoji-header">
+                    <span>Эмодзи</span>
+                    <button type="button" id="btn-close-emoji-popover" class="chat-emoji-close-btn">✕</button>
+                  </div>
+                  <div class="chat-emoji-grid">
+                    <button type="button" class="chat-emoji-btn" data-emoji="😀">😀</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="😂">😂</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🤣">🤣</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="😎">😎</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🥳">🥳</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🤑">🤑</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="😍">😍</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="😭">😭</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="😡">😡</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🤔">🤔</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🤫">🤫</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🤡">🤡</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🎲">🎲</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="💰">💰</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🪙">🪙</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="💎">💎</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="👑">👑</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🔥">🔥</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🤝">🤝</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="👍">👍</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="👎">👎</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🎉">🎉</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="💸">💸</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🚀">🚀</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🎩">🎩</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🏰">🏰</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="🏠">🏠</button>
+                    <button type="button" class="chat-emoji-btn" data-emoji="💣">💣</button>
+                  </div>
+                </div>
+
+                <form id="form-game-chat" class="game-chat-form">
+                  <button type="button" id="btn-chat-emoji-toggle" class="md-btn-icon game-chat-emoji-btn" title="Выбрать эмодзи">
+                    <i class="ph ph-smiley" style="font-size: 1.25rem;"></i>
+                  </button>
+                  <input type="text" id="input-game-chat" class="game-chat-input" placeholder="Сообщение в чат..." maxlength="120" autocomplete="off">
+                  <button type="submit" id="btn-send-chat" class="md-btn-icon game-chat-send-btn" title="Отправить">
+                    <i class="ph ph-paper-plane-right" style="font-size: 1.15rem; color: var(--md-primary);"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MODALS
+       ========================================================================= -->
+
+  <!-- Buy Property Modal -->
+  <div class="md-modal-backdrop" id="modal-buy-property">
+    <div class="md-modal">
+      <div class="modal-header">
+        <div class="modal-title">Покупка недвижимости</div>
+      </div>
+      <p>Вы попали на свободную улицу <b id="buy-prop-name">---</b> за <b id="buy-prop-price">$---</b>. Желаете приобрести?</p>
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px;">
+        <button id="btn-decline-buy" class="md-btn md-btn-outlined">Отказаться</button>
+        <button id="btn-confirm-buy" class="md-btn md-btn-filled">Купить</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card Event Modal -->
+  <div class="md-modal-backdrop" id="modal-card">
+    <div class="md-modal">
+      <div class="modal-header">
+        <div class="modal-title" id="card-title">Карточка</div>
+      </div>
+      <p id="card-desc" style="font-size: 1.05rem; line-height: 1.5;"></p>
+      <div style="display: flex; justify-content: flex-end; margin-top: 10px;">
+        <button id="btn-card-ok" class="md-btn md-btn-filled">Принять</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Deed Viewer Modal (Dark Theme Improvements) -->
+  <div class="md-modal-backdrop" id="modal-deed">
+    <div class="md-modal modal-dark-deed" style="max-width: 440px; padding: 18px;">
+      <div id="deed-modal-content"></div>
+      <button class="md-btn md-btn-tonal" data-close-modal style="width: 100%; margin-top: 10px;">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Floating Tile Improvements Hover Popover (Dark Theme) -->
+  <div id="tile-hover-popover" class="tile-hover-popover" style="display: none;"></div>
+
+  <!-- Manage Properties Modal -->
+  <div class="md-modal-backdrop" id="modal-manage-properties">
+    <div class="md-modal" style="max-width: 520px;">
+      <div class="modal-header">
+        <div class="modal-title">Управление недвижимостью</div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+      <div id="manage-properties-list" style="max-height: 380px; overflow-y: auto;">
+        <!-- Properties rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Edit Modal -->
+  <div class="md-modal-backdrop" id="modal-profile">
+    <div class="md-modal" style="max-width: 500px;">
+      <div class="modal-header">
+        <div class="modal-title">Настройки профиля</div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+      <form id="form-profile" style="display: flex; flex-direction: column; gap: 10px;">
+        <div>
+          <label style="font-size: 0.82rem; font-weight: 600; display: block; margin-bottom: 4px;">Никнейм</label>
+          <input type="text" id="input-profile-name" class="md-input" maxlength="20" placeholder="Ваш никнейм" required>
+        </div>
+
+        <!-- Collapsible Section: Token -->
+        <div class="profile-accordion-item" id="accordion-token">
+          <div class="profile-accordion-header" role="button" tabindex="0">
+            <div class="profile-accordion-title">
+              <span style="font-size: 1.15rem;">♟️</span>
+              <span>Фишка игрока</span>
+            </div>
+            <div class="profile-accordion-summary">
+              <span id="profile-summary-token" class="profile-summary-pill">🎩 Шляпа</span>
+              <i class="ph ph-caret-down accordion-chevron"></i>
+            </div>
+          </div>
+          <div class="profile-accordion-body">
+            <div id="token-picker-grid" style="display: flex; flex-wrap: wrap; gap: 8px; max-height: 200px; overflow-y: auto; padding: 4px 2px;"></div>
+            <button type="button" id="btn-open-pawn-editor" class="md-btn md-btn-outlined" style="width: 100%; margin-top: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;">
+              <i class="ph ph-paint-brush" style="font-size: 1.1rem; color: #38bdf8;"></i>
+              <span>🎨 Нарисовать свою пешку</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Collapsible Section: Background -->
+        <div class="profile-accordion-item" id="accordion-bg">
+          <div class="profile-accordion-header" role="button" tabindex="0">
+            <div class="profile-accordion-title">
+              <span style="font-size: 1.15rem;">🎨</span>
+              <span>Фон профиля</span>
+            </div>
+            <div class="profile-accordion-summary">
+              <span id="profile-summary-bg" class="profile-summary-pill">Стандарт</span>
+              <i class="ph ph-caret-down accordion-chevron"></i>
+            </div>
+          </div>
+          <div class="profile-accordion-body">
+            <div id="bg-picker-grid" class="bg-picker-grid" style="max-height: 220px; overflow-y: auto; padding: 4px 2px;"></div>
+          </div>
+        </div>
+
+        <!-- Collapsible Section: Title -->
+        <div class="profile-accordion-item" id="accordion-title">
+          <div class="profile-accordion-header" role="button" tabindex="0">
+            <div class="profile-accordion-title">
+              <span style="font-size: 1.15rem;">🏷️</span>
+              <span>Титул игрока</span>
+            </div>
+            <div class="profile-accordion-summary">
+              <span id="profile-summary-title" class="profile-summary-pill">🌱 Новичок</span>
+              <i class="ph ph-caret-down accordion-chevron"></i>
+            </div>
+          </div>
+          <div class="profile-accordion-body">
+            <div id="title-picker-grid" class="title-picker-grid" style="max-height: 200px; overflow-y: auto; padding: 4px 2px;"></div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; gap: 10px;">
+          <button type="button" id="btn-profile-logout" class="md-btn md-btn-outlined" style="display: none; color: #ef4444; border-color: rgba(239, 68, 68, 0.4); align-items: center; gap: 6px; font-size: 0.85rem;">
+            <i class="ph ph-sign-out"></i>
+            <span>Выйти из аккаунта</span>
+          </button>
+          <button type="submit" class="md-btn md-btn-filled" style="flex: 1; max-width: 140px; margin-left: auto;">Сохранить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Pawn Pixel Art Editor Modal -->
+  <div class="md-modal-backdrop" id="modal-pawn-editor">
+    <div class="md-modal pawn-editor-modal">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.5rem;">🎨</span>
+          <div>
+            <div class="modal-title">Редактор пешки</div>
+            <div style="font-size: 0.76rem; color: var(--md-on-surface-variant);">Пиксель-арт 16x16 для вашей фишки на поле</div>
+          </div>
+        </div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <div class="pawn-editor-body">
+        <!-- Canvas & Live Previews Column -->
+        <div class="pawn-canvas-column">
+          <div class="pawn-canvas-wrapper">
+            <canvas id="pawn-editor-canvas" width="288" height="288"></canvas>
+          </div>
+          
+          <!-- Live Preview Bar -->
+          <div class="pawn-previews-container">
+            <div class="pawn-preview-box">
+              <div class="pawn-preview-label">На доске:</div>
+              <div class="board-token pawn-preview-token" id="pawn-preview-board"></div>
+            </div>
+            <div class="pawn-preview-box">
+              <div class="pawn-preview-label">В профиле:</div>
+              <div class="pawn-preview-sidebar-token" id="pawn-preview-sidebar"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls Column: Tools, Palette, Templates -->
+        <div class="pawn-controls-column">
+          <!-- Tools Bar -->
+          <div class="pawn-tools-bar">
+            <button type="button" class="pawn-tool-btn active" data-tool="pencil" title="Карандаш (рисовать)">
+              <i class="ph ph-pencil-simple"></i>
+              <span>Карандаш</span>
+            </button>
+            <button type="button" class="pawn-tool-btn" data-tool="eraser" title="Ластик (стирать)">
+              <i class="ph ph-eraser"></i>
+              <span>Ластик</span>
+            </button>
+            <button type="button" class="pawn-tool-btn" data-tool="bucket" title="Заливка">
+              <i class="ph ph-paint-bucket"></i>
+              <span>Заливка</span>
+            </button>
+            <button type="button" class="pawn-tool-btn" data-tool="picker" title="Пипетка">
+              <i class="ph ph-eyedropper"></i>
+              <span>Пипетка</span>
+            </button>
+          </div>
+
+          <!-- Undo / Redo / Clear Row -->
+          <div class="pawn-action-btns-row">
+            <button type="button" class="md-btn md-btn-tonal" id="btn-pawn-undo" title="Отменить действие">
+              <i class="ph ph-arrow-u-up-left"></i>
+              <span>Отмена</span>
+            </button>
+            <button type="button" class="md-btn md-btn-tonal" id="btn-pawn-redo" title="Повторить действие">
+              <i class="ph ph-arrow-u-up-right"></i>
+              <span>Повтор</span>
+            </button>
+            <button type="button" class="md-btn md-btn-text" id="btn-pawn-clear" style="color: var(--md-error);" title="Очистить холст">
+              <i class="ph ph-trash"></i>
+              <span>Очистить</span>
+            </button>
+          </div>
+
+          <!-- Color Palette Grid & Custom Picker -->
+          <div class="pawn-palette-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--md-on-surface);">Палитра цветов:</span>
+              <div class="pawn-current-color-box">
+                <span style="font-size: 0.72rem; color: var(--md-on-surface-variant);">Текущий:</span>
+                <span id="pawn-current-color-indicator" class="pawn-color-dot" style="background-color: #ffffff;"></span>
+                <input type="color" id="pawn-color-picker" value="#ffffff" title="Выбрать любой цвет" />
+              </div>
+            </div>
+            <div class="pawn-palette-grid" id="pawn-palette-grid"></div>
+          </div>
+
+          <!-- Templates Section -->
+          <div class="pawn-templates-section">
+            <div style="font-size: 0.8rem; font-weight: 600; color: var(--md-on-surface); margin-bottom: 6px;">
+              Шаблоны для старта:
+            </div>
+            <div class="pawn-templates-grid" id="pawn-templates-grid"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pawn-editor-footer">
+        <button type="button" class="md-btn md-btn-text" id="btn-pawn-reset-default" style="color: var(--md-on-surface-variant);">
+          Сбросить к стандарту
+        </button>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="md-btn md-btn-outlined" data-close-modal>Отмена</button>
+          <button type="button" class="md-btn md-btn-filled" id="btn-pawn-save-equip" style="background: #22c55e; color: #fff;">
+            ✨ Сохранить и надеть
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dedicated View Player Profile Modal (For inspecting any player) -->
+  <div class="md-modal-backdrop" id="modal-view-player-profile">
+    <div class="md-modal" style="max-width: 480px;">
+      <div class="modal-header">
+        <div class="modal-title">Профиль игрока</div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <div class="view-profile-container">
+        <!-- Top Banner with Avatar & Badges -->
+        <div class="view-profile-header">
+          <div id="vp-avatar-badge" class="view-profile-avatar">
+            <span id="vp-avatar-emoji">💎</span>
+            <img id="vp-avatar-img" src="" alt="Avatar" style="display:none; width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+          </div>
+          <div class="view-profile-info">
+            <div class="view-profile-name-row">
+              <span id="vp-name" class="view-profile-name">Игрок</span>
+              <span id="vp-badge-verified" class="badge-verified-discord" style="display: none;">✓ Discord</span>
+              <span id="vp-badge-guest" class="badge-guest-tag" style="display: none;">Гость</span>
+            </div>
+            <div id="vp-title-container" style="margin-top: 3px;">
+              <span id="vp-title-badge"></span>
+            </div>
+            <div id="vp-discord-tag" class="view-profile-tag" style="display: none;">@user#0000</div>
+            <div id="vp-role-tag" class="view-profile-role" style="display: none;">Участник</div>
+          </div>
+        </div>
+
+        <!-- Career Statistics Grid -->
+        <div class="view-profile-section-title">📊 Статистика игрока</div>
+        <div class="view-profile-stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));">
+          <div class="vp-stat-box">
+            <span class="vp-stat-val" id="vp-stat-coins" style="color: #eab308;">0</span>
+            <span class="vp-stat-lbl">🪙</span>
+          </div>
+          <div class="vp-stat-box">
+            <span class="vp-stat-val" id="vp-stat-wins">0</span>
+            <span class="vp-stat-lbl">🏆 Побед</span>
+          </div>
+          <div class="vp-stat-box">
+            <span class="vp-stat-val" id="vp-stat-matches">0</span>
+            <span class="vp-stat-lbl">🎮 Матчей</span>
+          </div>
+          <div class="vp-stat-box">
+            <span class="vp-stat-val" id="vp-stat-winrate">0%</span>
+            <span class="vp-stat-lbl">📈 Винрейт</span>
+          </div>
+          <div class="vp-stat-box">
+            <span class="vp-stat-val" id="vp-stat-networth">$0</span>
+            <span class="vp-stat-lbl">💰 Рекорд</span>
+          </div>
+        </div>
+
+        <!-- Leaderboard Standings Section -->
+        <div class="view-profile-section-title" style="margin-top: 10px;">🏆 Места в топе</div>
+        <div class="vp-ranks-grid">
+          <div class="vp-rank-card">
+            <span class="vp-rank-lbl">🏆 Победы</span>
+            <span class="vp-rank-val" id="vp-rank-wins">—</span>
+          </div>
+          <div class="vp-rank-card">
+            <span class="vp-rank-lbl">🎮 Матчи</span>
+            <span class="vp-rank-val" id="vp-rank-matches">—</span>
+          </div>
+          <div class="vp-rank-card">
+            <span class="vp-rank-lbl">💰 Капитал</span>
+            <span class="vp-rank-val" id="vp-rank-cash">—</span>
+          </div>
+          <div class="vp-rank-card">
+            <span class="vp-rank-lbl">📈 Винрейт</span>
+            <span class="vp-rank-val" id="vp-rank-winrate">—</span>
+          </div>
+        </div>
+
+        <!-- Game Context Details (if viewed during game) -->
+        <div id="vp-game-details" style="display: none;">
+          <div class="view-profile-section-title" style="margin-top: 14px;">🎲 Текущий матч</div>
+          <div class="vp-game-info-card">
+            <div class="vp-game-row">
+              <span>Баланс наличных:</span>
+              <b id="vp-game-cash" style="color: var(--md-primary);">$1500</b>
+            </div>
+            <div class="vp-game-row">
+              <span>Позиция на поле:</span>
+              <b id="vp-game-pos">🏁 ВПЕРЁД</b>
+            </div>
+            <div class="vp-game-row">
+              <span>Статус:</span>
+              <span id="vp-game-status-tag" class="player-status-tag">В игре</span>
+            </div>
+            <div style="margin-top: 8px;">
+              <div style="font-size: 0.8rem; color: var(--md-on-surface-variant); margin-bottom: 4px;">Собственность:</div>
+              <div id="vp-game-props" style="display: flex; flex-wrap: wrap; gap: 4px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Action -->
+        <div class="view-profile-footer" style="margin-top: 16px; display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap;">
+          <button id="vp-btn-logout-self" class="md-btn md-btn-outlined" style="display: none; color: #ef4444; border-color: rgba(239, 68, 68, 0.4);">
+            <i class="ph ph-sign-out"></i> Выйти
+          </button>
+          <button id="vp-btn-edit-self" class="md-btn md-btn-tonal" style="display: none;">
+            <i class="ph ph-pencil-simple"></i> Редактировать
+          </button>
+          <button class="md-btn md-btn-outlined" data-close-modal>Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop Modal (Магазин предметов) -->
+  <div class="md-modal-backdrop" id="modal-shop">
+    <div class="md-modal" style="max-width: 540px;">
+      <div class="modal-header">
+        <div class="modal-title" style="display: flex; align-items: center; gap: 8px;">
+          <span>🛍️ Магазин предметов</span>
+        </div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <!-- Shop Balance Banner -->
+      <div class="shop-balance-banner">
+        <div>
+          <div style="font-size: 0.8rem; color: var(--md-on-surface-variant); font-weight: 500;">Ваш баланс:</div>
+          <div style="font-size: 1.4rem; font-weight: 800; color: #eab308; display: flex; align-items: center; gap: 6px;">
+            <span>🪙</span>
+            <span id="shop-balance-val">0</span>
+            <span style="font-size: 0.85rem; color: var(--md-on-surface); font-weight: 500;">монет</span>
+          </div>
+        </div>
+        <div style="font-size: 0.78rem; color: var(--md-on-surface-variant); text-align: right; line-height: 1.35;">
+          🏆 <b>+50 🪙</b> за победу
+        </div>
+      </div>
+
+      <!-- Shop Tabs Bar -->
+      <div class="shop-tabs-bar">
+        <button type="button" class="shop-tab-btn active" id="btn-shop-tab-dice" data-tab="dice">
+          <span>🎲</span>
+          <span>Кубики и кейс</span>
+        </button>
+        <button type="button" class="shop-tab-btn" id="btn-shop-tab-titles" data-tab="titles">
+          <span>🏷️</span>
+          <span>Титулы игрока</span>
+        </button>
+      </div>
+
+      <!-- Tab 1: Dice & Cases -->
+      <div id="shop-tab-pane-dice">
+        <!-- Dice Case Feature Card -->
+        <div class="shop-case-card">
+          <div class="shop-case-header">
+            <div class="shop-case-icon-box">🎲</div>
+            <div style="flex: 1;">
+              <div class="shop-case-title">Кейс «Кости Удачи»</div>
+              <div class="shop-case-desc">Откройте кейс и получите 1 из 7 уникальных 3D-стилей игральных костей!</div>
+            </div>
+          </div>
+
+          <div class="shop-case-odds">
+            <span class="shop-odd-pill" style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border-color: rgba(244, 63, 94, 0.3);">Редкие: 55%</span>
+            <span class="shop-odd-pill" style="background: rgba(168, 85, 247, 0.15); color: #a855f7; border-color: rgba(168, 85, 247, 0.3);">Эпические: 33%</span>
+            <span class="shop-odd-pill" style="background: rgba(234, 179, 8, 0.15); color: #eab308; border-color: rgba(234, 179, 8, 0.3);">Легендарные: 12%</span>
+          </div>
+
+          <button id="btn-open-dice-case" class="shop-btn-open-case">
+            <span>🎲</span>
+            <span>Открыть кейс (50 🪙)</span>
+          </button>
+        </div>
+
+        <!-- Dice Collection Grid -->
+        <div class="shop-section-heading">
+          <span>🎲 Ваша коллекция кубиков</span>
+          <span id="shop-dice-count-label" style="font-size: 0.75rem; color: var(--md-on-surface-variant);">1 / 8 открыто</span>
+        </div>
+
+        <div class="shop-dice-grid" id="shop-dice-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- Tab 2: Titles -->
+      <div id="shop-tab-pane-titles" style="display: none;">
+        <div class="shop-section-heading" style="margin-top: 4px;">
+          <span>🏷️ Коллекция внутриигровых титулов</span>
+          <span id="shop-titles-count-label" style="font-size: 0.75rem; color: var(--md-on-surface-variant);">1 / 14 открыто</span>
+        </div>
+
+        <!-- Title Filter Buttons Bar -->
+        <div class="shop-titles-filter-bar" id="shop-titles-filter-bar">
+          <button type="button" class="shop-filter-btn active" data-filter="all">
+            <span>✨ Все</span>
+          </button>
+          <button type="button" class="shop-filter-btn" data-filter="unlocked">
+            <span>✓ Полученные</span>
+          </button>
+          <button type="button" class="shop-filter-btn" data-filter="locked">
+            <span>🔒 Неполученные</span>
+          </button>
+          <button type="button" class="shop-filter-btn" data-filter="nearest">
+            <span>🎯 Ближайшие</span>
+          </button>
+        </div>
+
+        <div class="shop-titles-grid" id="shop-titles-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Opening Roulette Modal -->
+  <div class="md-modal-backdrop" id="modal-case-roulette">
+    <div class="md-modal" style="max-width: 480px; text-align: center;">
+      <div class="modal-header">
+        <div class="modal-title" style="margin: 0 auto; display: flex; align-items: center; gap: 8px;">
+          <span>🎲 Открытие кейса</span>
+        </div>
+      </div>
+
+      <!-- Spinning state -->
+      <div id="roulette-spin-container">
+        <div style="font-size: 0.85rem; color: var(--md-on-surface-variant); margin-bottom: 6px;">
+          Испытываем удачу...
+        </div>
+        
+        <div class="roulette-viewport">
+          <div class="roulette-center-pointer"></div>
+          <div class="roulette-track" id="roulette-track"></div>
+        </div>
+      </div>
+
+      <!-- Win state -->
+      <div id="roulette-win-container" class="roulette-win-box" style="display: none;">
+        <div style="font-size: 0.9rem; font-weight: 700; color: var(--md-primary);">🎉 ВАМ ВЫПАЛО:</div>
+        <div class="roulette-win-die" id="roulette-win-die">🎲</div>
+        <div id="roulette-win-name" style="font-size: 1.3rem; font-weight: 800; margin-bottom: 4px;">Неоновый Рубин</div>
+        <div id="roulette-win-rarity" style="font-size: 0.8rem; font-weight: 700; margin-bottom: 8px;">Редкий скин</div>
+        <p id="roulette-win-desc" style="font-size: 0.82rem; color: var(--md-on-surface-variant); max-width: 340px; margin: 0 auto 16px; line-height: 1.4;">
+          Описание скина
+        </p>
+        <div id="roulette-duplicate-notice" style="display: none; padding: 8px 12px; background: rgba(234, 179, 8, 0.15); border: 1px solid #eab308; border-radius: 12px; font-size: 0.82rem; font-weight: 700; color: #eab308; margin-bottom: 14px;">
+          Дубликат! Возврат +20 🪙 на баланс
+        </div>
+
+        <div style="display: flex; gap: 10px; justify-content: center;">
+          <button id="btn-equip-won-dice" class="md-btn md-btn-filled" style="background: #22c55e; color: #fff;">
+            ✨ Надеть сейчас
+          </button>
+          <button id="btn-close-roulette" class="md-btn md-btn-tonal">
+            В магазин
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Panel Modal (Developer Only) -->
+  <div class="md-modal-backdrop" id="modal-admin-panel">
+    <div class="md-modal" style="max-width: 520px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.5rem;">👑</span>
+          <div>
+            <div class="modal-title" style="font-size: 1.15rem;">Панель администратора</div>
+            <div style="font-size: 0.76rem; color: #fbbf24; font-weight: 600;">Управление экономикой и балансом</div>
+          </div>
+        </div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 10px;">
+        
+        <!-- Section 1: Self Coin Management -->
+        <div style="background: var(--md-surface-container-low); border: 1px solid var(--md-outline-variant); border-radius: 16px; padding: 14px;">
+          <div style="font-weight: 700; font-size: 0.92rem; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+            <span>👤 Мой баланс:</span>
+            <span id="admin-my-coins-display" style="color: #eab308; font-size: 1.15rem; font-weight: 800;">0 🪙</span>
+          </div>
+
+          <!-- Quick Add/Remove chips -->
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px;">
+            <button type="button" class="md-chip active btn-admin-quick-add" data-amount="50">+50 🪙</button>
+            <button type="button" class="md-chip active btn-admin-quick-add" data-amount="100">+100 🪙</button>
+            <button type="button" class="md-chip active btn-admin-quick-add" data-amount="500">+500 🪙</button>
+            <button type="button" class="md-chip active btn-admin-quick-add" data-amount="1000">+1000 🪙</button>
+            <button type="button" class="md-chip btn-admin-quick-sub" data-amount="100" style="color: #f87171; border-color: rgba(248, 113, 113, 0.4);">-100 🪙</button>
+            <button type="button" class="md-chip btn-admin-quick-sub" data-amount="500" style="color: #f87171; border-color: rgba(248, 113, 113, 0.4);">-500 🪙</button>
+            <button type="button" class="md-chip btn-admin-quick-reset" style="color: var(--md-error);">Обнулить</button>
+          </div>
+
+          <!-- Manual Set Input -->
+          <form id="form-admin-set-my-coins" style="display: flex; gap: 8px;">
+            <input type="number" id="input-admin-my-coins" class="md-input" placeholder="Задать точный баланс..." min="0" max="9999999" required style="flex: 1;">
+            <button type="submit" class="md-btn md-btn-filled" style="white-space: nowrap;">Задать</button>
+          </form>
+        </div>
+
+        <!-- Section 2: Manage other players / network players -->
+        <div style="background: var(--md-surface-container-low); border: 1px solid var(--md-outline-variant); border-radius: 16px; padding: 14px;">
+          <div style="font-weight: 700; font-size: 0.92rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <i class="ph ph-users" style="font-size: 1.1rem; color: var(--md-primary);"></i>
+            <span>Игроки на сервере / в комнате:</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <select id="select-admin-target-player" class="md-input" style="width: 100%;">
+              <!-- Populated dynamically -->
+            </select>
+
+            <div style="display: flex; gap: 8px;">
+              <input type="number" id="input-admin-target-amount" class="md-input" placeholder="Количество монет..." min="1" max="9999999" value="100" style="flex: 1;">
+              <button type="button" id="btn-admin-give-player" class="md-btn md-btn-filled" style="background: #16a34a; border-color: #16a34a; color: #ffffff; white-space: nowrap;">+ Выдать</button>
+              <button type="button" id="btn-admin-take-player" class="md-btn md-btn-outlined" style="color: #dc2626; border-color: #dc2626; white-space: nowrap;">- Снять</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: Extra Dev Perks -->
+        <div style="background: var(--md-surface-container-low); border: 1px solid var(--md-outline-variant); border-radius: 16px; padding: 14px;">
+          <div style="font-weight: 700; font-size: 0.92rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <i class="ph ph-sparkle" style="font-size: 1.1rem; color: #a855f7;"></i>
+            <span>Быстрая разблокировка:</span>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button type="button" id="btn-admin-grant-creator-title" class="md-btn md-btn-outlined" style="flex: 1 1 45%; font-size: 0.8rem; color: #f43f5e; border-color: #f43f5e;">
+              🛠️ Выдать титул «Создатель»
+            </button>
+            <button type="button" id="btn-admin-unlock-all-titles" class="md-btn md-btn-outlined" style="flex: 1 1 45%; font-size: 0.8rem; color: #fbbf24; border-color: #fbbf24;">
+              👑 Разблокировать все титулы
+            </button>
+            <button type="button" id="btn-admin-unlock-all-dice" class="md-btn md-btn-outlined" style="flex: 1 1 100%; font-size: 0.8rem;">
+              🎲 Разблокировать все скины кубиков
+            </button>
+          </div>
+        </div>
+
+        <!-- Section 4: Developer Test Lobby -->
+        <div style="background: var(--md-surface-container-low); border: 1px solid rgba(217, 70, 239, 0.3); border-radius: 16px; padding: 14px;">
+          <div style="font-weight: 700; font-size: 0.92rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; color: #f0abfc;">
+            <span>🧪</span>
+            <span>Тестовые комнаты (Developer):</span>
+          </div>
+          <button type="button" id="btn-admin-create-test-room" class="md-btn md-btn-tonal" style="width: 100%; border: 1px dashed #d946ef; color: #f0abfc; background: rgba(217, 70, 239, 0.15); display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; padding: 10px;">
+            <span>🧪 Создать тестовое лобби (TEST-XXXX)</span>
+          </button>
+        </div>
+
+        <!-- Section 5: Hard Refresh & Cache Clear -->
+        <div style="background: var(--md-surface-container-low); border: 1px solid var(--md-outline-variant); border-radius: 16px; padding: 14px;">
+          <div style="font-weight: 700; font-size: 0.92rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+            <i class="ph ph-arrows-clockwise" style="font-size: 1.1rem; color: #38bdf8;"></i>
+            <span>Обновление и кэш:</span>
+          </div>
+          <button type="button" id="btn-admin-hard-refresh" class="md-btn md-btn-filled" style="width: 100%; background: #0284c7; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; padding: 10px;">
+            <i class="ph ph-arrows-clockwise" style="font-size: 1.2rem;"></i>
+            <span>⚡ Перезапустить сайт для всех (Clear Cache)</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Changelog / Updates Modal -->
+  <div class="md-modal-backdrop" id="modal-changelog">
+    <div class="md-modal" style="max-width: 540px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.5rem;">📜</span>
+          <div class="modal-title">Журнал обновлений</div>
+        </div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <div class="changelog-list" style="max-height: 420px; overflow-y: auto; padding-right: 4px; display: flex; flex-direction: column; gap: 14px; margin-top: 8px;">
+        <!-- v4.1 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill current">v4.1</span>
+            <span class="changelog-date">20 сентября 2026</span>
+            <span class="changelog-tag-new">Новое</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🤖 <b>Одиночный режим с ботами:</b> Полноценный соло-режим с ИИ соперниками и возможностью добавлять/удалять ботов в лобби. Тренировочный режим без наград, монет и изменения статистики.</li>
+            <li>🎯 <b>Выбор сложности ботов:</b> Переключатель сложности (🟢 Лёгкий / 🟡 Средний / 🔴 Сложный) в лобби и параметрах матча. Боты адаптируют стратегию выкупа улиц, застройки отелей и согласия на обмен.</li>
+            <li>⚙️ <b>Новое меню настроек:</b> Быстрый доступ к настройкам слева от профиля — управление общей громкостью (0–100%), звуками игры (SFX), звуками интерфейса (UI), авто-ходом, подсказками и скоростью анимации.</li>
+            <li>🎨 <b>16 тем оформления:</b> Выбор любой цветовой палитры интерфейса встроен прямо в меню настроек с мгновенным переключением.</li>
+            <li>🗺️ <b>Карта «Страны и города»:</b> Обновленные локации с группировкой по странам и городам (Киев, Крещатик, Троещина, Бровары, Анапа).</li>
+            <li>📊 <b>Редизайн истории матчей:</b> Новый удобный segmented control для быстрой фильтрации побед и поражений.</li>
+          </ul>
+        </div>
+
+        <!-- v4.0 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v4.0</span>
+            <span class="changelog-date">20 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🎨 <b>Встроенный редактор пешки:</b> Теперь каждый игрок может нарисовать свою собственную уникальную пиксель-арт пешку (холст 16x16)!</li>
+            <li>🖌️ <b>Инструменты рисования:</b> Карандаш, ластик, умная заливка (ведро), пипетка цвета, история отмены/повтора (Undo/Redo) и палитра из 24 сочных цветов.</li>
+            <li>🌟 <b>10 готовых шаблонов:</b> Пешка, Корона, Алмаз, Котик, Машинка, Звезда, Призрак, Пришелец, Уточка, Огонь.</li>
+            <li>♟️ <b>Полная синхронизация:</b> Нарисованная пешка автоматически сохраняется в профиле, отображается на игровом поле, в лобби и в карточках игроков, а также видна соперникам по сети!</li>
+          </ul>
+        </div>
+
+        <!-- v3.9 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.9</span>
+            <span class="changelog-date">20 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🏷️ <b>Внутриигровые титулы:</b> Коллекция из 10 уникальных титулов (Новичок, Акула бизнеса, Монополист, Олигарх, Магнат, Счастливчик, Шейх, Повелитель кубиков, Легенда, Создатель). Открывайте за достижения в матчах или покупайте за монеты в магазине!</li>
+            <li>😀 <b>Кнопка эмодзи в чате:</b> Интерактивная панель выбора эмодзи прямо возле поля ввода сообщений для быстрой отправки смайликов.</li>
+            <li>🛍️ <b>Вкладки магазина:</b> Удобное разделение магазина на категории «Кубики и кейс» и «Титулы игрока».</li>
+            <li>📢 <b>Интеграция с Discord:</b> Автоматическая отправка детальной статистики завершённых матчей в Discord-канал.</li>
+          </ul>
+        </div>
+
+        <!-- v3.8 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.8</span>
+            <span class="changelog-date">20 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>📢 <b>Интеграция с Discord:</b> Автоматическая отправка детальной статистики завершённых матчей в Discord-канал (победитель, рейтинг игроков, капитал, владения).</li>
+          </ul>
+        </div>
+
+        <!-- v3.7 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.7</span>
+            <span class="changelog-date">20 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🎨 <b>Палитра тем оформления:</b> Интерактивное меню выбора любой из 8 цветовых тем оформления сайта в один клик.</li>
+            <li>🎲 <b>Улучшенная физика броска:</b> Быстрая, плавная и отзывчивая 3D-анимация кубиков с чётким приземлением.</li>
+            <li>🎰 <b>Честный кейс кубиков:</b> Обычные белые кости удалены из дропа — теперь выпадают исключительно редкие, эпические и легендарные скины!</li>
+            <li>🛡️ <b>Исправление покупок:</b> Устранена блокировка интерфейса при попытке покупки поля при нехватке денег.</li>
+            <li>🧹 <b>Очистка профиля:</b> Убраны лишние статусные надписи из карточки просмотра игроков.</li>
+            <li>⚡ <b>Управление лобби:</b> Мгновенное удаление закрытых комнат из глобального списка поиска.</li>
+          </ul>
+        </div>
+
+        <!-- v3.6 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.6</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🧹 <b>Очистка настроек правил:</b> Удалена опция «Джекпот Бесплатной стоянки» из настроек лобби.</li>
+          </ul>
+        </div>
+
+        <!-- v3.5 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.5</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🔔 <b>Уведомление при создании:</b> Добавлено мгновенное всплывающее уведомление «Лобби создано» при открытии комнаты.</li>
+          </ul>
+        </div>
+
+        <!-- v3.4 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.4</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🎲 <b>Новая 3D-анимация кубиков:</b> Реалистичная физическая траектория броска кубиков с фазовым замедлением вращения и упругим эффектом приземления (Squash & Stretch).</li>
+          </ul>
+        </div>
+
+        <!-- v3.3 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.3</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🧹 <b>Чистый бейдж версий:</b> Убрана светящаяся точка и эффекты слева от номера версии в шапке.</li>
+          </ul>
+        </div>
+
+        <!-- v3.2 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.2</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>✨ <b>Минималистичный профиль:</b> Карточка профиля в главном меню очищена от лишних плашек — оставлена только ключевая статистика и кнопка настройки имени/фишки.</li>
+          </ul>
+        </div>
+
+        <!-- v3.1 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.1</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🎯 <b>Баланс шансов в кейсах:</b> Скорректированы вероятности выпадения скинов кубиков — Обычные (50%), Редкие (30%), Эпические (15%), Легендарные (5%).</li>
+            <li>🎲 <b>Чёткая градация редкости:</b> Обычные и Редкие скины теперь имеют понятную ступенчатую вероятность.</li>
+          </ul>
+        </div>
+
+        <!-- v3.0 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v3.0</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🎲 <b>Кейс кубиков «Кости Удачи» (50 🪙):</b> Открывайте кейсы в магазине и выбивайте 8 уникальных 3D-скинов игральных костей!</li>
+            <li>🎰 <b>Анимированная рулетка открытия:</b> Захватывающая плавная рулетка кейсов со звуковыми эффектами и гарантированным выпадением.</li>
+            <li>💎 <b>8 редких и легендарных скинов:</b> Золотой Магнат, Неоновый Рубин, Кибер-Изумруд, Огненная Лава, Сингулярность, Аметист, Ледяной Кристалл и др.</li>
+            <li>🔄 <b>Компенсация за дубликаты:</b> При повторном выпадении скина возвращается +20 🪙 на баланс.</li>
+            <li>✨ <b>Отображение в партии:</b> Ваши уникальные кубики видны всем игрокам при каждом броске на доске.</li>
+            <li>🧹 <b>Лаконичный интерфейс:</b> Убрано лишнее слово «Монет» в карточке профиля игрока.</li>
+            <li>🛡️ <b>Изоляция комнат:</b> Тестовые сессии больше не попадают в публичный список лобби.</li>
+          </ul>
+        </div>
+
+        <!-- v2.9 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.9</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🛡️ <b>Изоляция поиска лобби:</b> Тестовые и отладочные сессии полностью изолированы и не попадают в список публичных комнат.</li>
+            <li>🧹 <b>Чистый список комнат:</b> В поиске отображаются исключительно настоящие активные комнаты реальных игроков.</li>
+            <li>⚡ <b>Улучшенная фильтрация:</b> Автоматическое мгновенное удаление неактивных или закрытых лобби.</li>
+          </ul>
+        </div>
+
+        <!-- v2.8 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.8</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🪙 <b>Синхронизация монет:</b> Количество монет у других игроков теперь всегда корректно отображается при просмотре их профиля.</li>
+            <li>🏆 <b>Награды за победу:</b> Победные +50 🪙 мгновенно синхронизируются в профилях для всех участников матча.</li>
+            <li>🗺️ <b>Новые улицы:</b> Полная интеграция улиц <b>Анапа</b>, <b>Киев</b>, <b>Троещина</b>, <b>Бровары</b> на игровом поле и в карточках шанса.</li>
+          </ul>
+        </div>
+
+        <!-- v2.7 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.7</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🗺️ <b>Новые улицы и города:</b> Добавлены популярные локации — <b>Анапа</b>, <b>Киев</b>, <b>Троещина</b>, <b>Бровары</b>!</li>
+            <li>🏖️ <b>Анапа:</b> Курортная недвижимость с пляжным шармом на стартовом круге.</li>
+            <li>🏰 <b>Киев:</b> Топовая локация столицы в синем элитном секторе.</li>
+            <li>🏙️ <b>Троещина и Бровары:</b> Динамичные и перспективные городские улицы.</li>
+            <li>🎫 <b>Карточки Шанса:</b> Обновлены карточки путешествий («Поездка в Киев»).</li>
+          </ul>
+        </div>
+
+        <!-- v2.6 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.6</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>💬 <b>Внутриигровой чат:</b> Общайтесь в реальном времени с другими игроками прямо во время партии!</li>
+            <li>⚡ <b>Быстрые реакции:</b> Панель быстрых смайликов и сообщений (🎲, 💰, 🔥, 🤝, GG, «Куплю улицу», «Удачи!»).</li>
+            <li>🎨 <b>Видимость фонов:</b> Выбранные кастомные фоны профиля теперь видны всем игрокам в лобби, сайдбаре и окне профиля.</li>
+            <li>🔔 <b>Уведомления чата:</b> Звуковые сигналы и индикатор непрочитанных сообщений.</li>
+            <li>🤖 <b>Интерактивные боты:</b> AI боты умеют поддерживать диалог и весело реагировать в чате.</li>
+          </ul>
+        </div>
+
+        <!-- v2.5 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.5</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🪙 <b>Награды за победу:</b> Теперь победитель получает +50 монет!</li>
+            <li>🛍️ <b>Магазин:</b> Добавлена вкладка магазина с отображением баланса монет.</li>
+            <li>🎨 <b>Кастомизация профиля:</b> 9 уникальных тем оформления фона профиля (Неон, Магнат, Золото, Космос и др.).</li>
+            <li>🏆 <b>Места в топе:</b> Отображение вашей позиции в профиле по победам, матчам, капиталу и винрейту.</li>
+            <li>📜 <b>Журнал обновлений:</b> Быстрый доступ к патчноутам прямо из шапки игры рядом с логотипом.</li>
+          </ul>
+        </div>
+
+        <!-- v2.4 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.4</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🎮 <b>Топ по матчам:</b> Добавлена новая категория в таблицу лидеров.</li>
+            <li>👤 <b>Профили игроков:</b> Возможность открывать и просматривать профиль любого участника в лобби и во время игры.</li>
+            <li>🔊 <b>Компактный регулятор громкости:</b> Оптимизированы размер и плавность управления звуком.</li>
+          </ul>
+        </div>
+
+        <!-- v2.3 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.3</span>
+            <span class="changelog-date">19 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>👾 <b>Discord Авторизация:</b> Вход через Discord аккаунт с сохранением прогресса в облаке.</li>
+            <li>🏆 <b>Таблица лидеров:</b> Глобальный рейтинг магнатов по 4 категориям.</li>
+            <li>☁️ <b>Облачная синхронизация:</b> Автоматическое сохранение статистики профиля в Supabase.</li>
+          </ul>
+        </div>
+
+        <!-- v2.2 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.2</span>
+            <span class="changelog-date">18 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🤝 <b>Система торговли и аукционов:</b> Полноценный обмен недвижимостью и торгами между игроками.</li>
+            <li>🏠 <b>Строительство домов и отелей:</b> Управление недвижимостью и монополиями.</li>
+            <li>🔔 <b>Интерактивные уведомления:</b> Кастомные тосты и звуковые эффекты действий.</li>
+          </ul>
+        </div>
+
+        <!-- v2.0 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v2.0</span>
+            <span class="changelog-date">17 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>✨ <b>Material You Редизайн:</b> Полностью переработанный адаптивный интерфейс.</li>
+            <li>🌐 <b>Онлайн мультиплеер:</b> Комнаты с кодами и игра по сети с друзьями.</li>
+            <li>🤖 <b>Умные AI боты:</b> 3 уровня сложности виртуальных оппонентов.</li>
+          </ul>
+        </div>
+
+        <!-- v1.0 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill">v1.0</span>
+            <span class="changelog-date">16 сентября 2026</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🌟 <b>Релиз классической «Монополии»:</b> Базовые правила покупки и залога недвижимости, броски кубиков, тюрьма и карточки Шанса.</li>
+            <li>🎲 <b>Игровое поле:</b> Полноразмерное кольцевое поле на 40 клеток с цветовыми группами и вокзалами.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; margin-top: 14px;">
+        <button class="md-btn md-btn-filled" data-close-modal>Отлично</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Discord Authentication Modal -->
+  <div class="md-modal-backdrop" id="modal-discord-auth">
+    <div class="md-modal" style="max-width: 490px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="discord-icon-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#5865F2">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+          </div>
+          <div class="modal-title">Вход через Discord</div>
+        </div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <!-- State: Logged In -->
+      <div id="discord-logged-in-view" style="display: none; flex-direction: column; gap: 14px; margin-top: 10px;">
+        <div class="discord-profile-card">
+          <div id="discord-avatar-container" class="discord-avatar-container">
+            <span id="discord-avatar-emoji" style="font-size: 2rem;">💎</span>
+            <img id="discord-avatar-img" src="" alt="Avatar" style="display: none; width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+          </div>
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span id="discord-display-name" style="font-weight: 700; font-size: 1.05rem;">Player</span>
+              <span class="badge-verified-discord">✓ Подтверждён</span>
+            </div>
+            <div id="discord-tag-display" style="font-size: 0.82rem; color: var(--md-on-surface-variant);">@discord_user</div>
+          </div>
+        </div>
+        <div class="discord-notice-box success">
+          <i class="ph ph-check-circle" style="font-size: 1.2rem; color: #16a34a;"></i>
+          <span>Ваш аккаунт подтвержден. Ваши победы и капитал учитываются в <b>Топе игроков</b>!</span>
+        </div>
+        <button id="btn-discord-logout" class="md-btn md-btn-outlined" style="margin-top: 6px; color: var(--md-error); border-color: var(--md-error);">
+          <i class="ph ph-sign-out"></i>
+          <span>Выйти из аккаунта Discord</span>
+        </button>
+      </div>
+
+      <!-- State: Not Logged In -->
+      <div id="discord-logged-out-view" style="display: flex; flex-direction: column; gap: 16px; margin-top: 10px;">
+        <div class="discord-notice-box info">
+          <i class="ph ph-shield-check" style="font-size: 1.25rem; color: #5865F2;"></i>
+          <span>Только игроки с подтверждённым Discord отображаются в официальном рейтинге лучших игроков!</span>
+        </div>
+
+        <!-- Discord OAuth -->
+        <div class="discord-auth-option-box">
+          <p style="font-size: 0.85rem; color: var(--md-on-surface-variant); margin-bottom: 12px; line-height: 1.45;">
+            Авторизуйтесь через официальное окно Discord для подтверждения аккаунта и загрузки вашего аватара:
+          </p>
+          <button id="btn-start-discord-oauth" class="md-btn discord-brand-btn" style="width: 100%;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            <span>Войти через Discord OAuth</span>
+          </button>
+          
+          <div style="margin-top: 8px;">
+            <button id="btn-toggle-oauth-settings" class="md-btn md-btn-text" style="font-size: 0.75rem; padding: 2px 4px; color: var(--md-on-surface-variant);">
+              ⚙️ Настройки Client ID приложения Discord
+            </button>
+            <div id="discord-oauth-settings" style="display: none; margin-top: 8px; padding: 12px; background: var(--md-surface-container); border-radius: 10px; font-size: 0.8rem;">
+              <label style="display: block; margin-bottom: 4px; font-weight: 500;">Discord Client ID (Application ID):</label>
+              <input type="text" id="input-discord-client-id" class="md-input" placeholder="например, 1342930217032749117" style="font-size: 0.85rem; padding: 6px 10px; width: 100%; box-sizing: border-box;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; gap: 8px; flex-wrap: wrap;">
+                <button id="btn-save-client-id" class="md-btn md-btn-tonal" style="font-size: 0.78rem;">Сохранить ID</button>
+                <button id="btn-copy-redirect-uri" class="md-btn md-btn-outlined" style="font-size: 0.75rem;">📋 Скопировать Redirect URI</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-app Confirmation Modal (No browser popups!) -->
+  <div class="md-modal-backdrop" id="modal-confirm">
+    <div class="md-modal" style="max-width: 400px;">
+      <div class="modal-header">
+        <div class="modal-title" id="confirm-modal-title">Подтверждение</div>
+      </div>
+      <p id="confirm-modal-desc" style="color: var(--md-on-surface-variant); font-size: 0.95rem; line-height: 1.5;"></p>
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 14px;">
+        <button id="btn-confirm-cancel" class="md-btn md-btn-outlined">Отмена</button>
+        <button id="btn-confirm-ok" class="md-btn md-btn-filled">Подтвердить</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Propose Trade Modal -->
+  <div class="md-modal-backdrop" id="modal-trade">
+    <div class="md-modal" style="max-width: 680px;">
+      <div class="modal-header">
+        <div class="modal-title">Обмен карточками</div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button id="btn-trade-modal-history" class="md-btn md-btn-text" style="font-size: 0.8rem; padding: 4px 8px; color: var(--md-primary);" title="История сделок">
+            <i class="ph ph-clock-counter-clockwise"></i> История
+          </button>
+          <button class="md-btn-icon" data-close-modal>✕</button>
+        </div>
+      </div>
+
+      <div>
+        <label style="font-size: 0.85rem; font-weight: 500; display: block; margin-bottom: 4px;">Партнер по сделке</label>
+        <select id="trade-partner-select" class="md-select"></select>
+      </div>
+
+      <div class="trade-layout">
+        <!-- My Offer -->
+        <div class="trade-column">
+          <div class="trade-col-title">
+            <span>Вы отдаёте:</span>
+            <span id="trade-my-count" style="font-size: 0.75rem; color: var(--md-primary);">0 карт</span>
+          </div>
+          <div class="trade-card-grid" id="trade-my-cards-grid"></div>
+          <div class="trade-cash-row">
+            <label style="font-size: 0.8rem; white-space: nowrap;">Деньги $</label>
+            <input type="number" id="trade-my-cash" class="md-input" min="0" step="50" value="0" style="padding: 6px 10px;">
+          </div>
+        </div>
+
+        <!-- Their Offer -->
+        <div class="trade-column">
+          <div class="trade-col-title">
+            <span>Вы получаете:</span>
+            <span id="trade-their-count" style="font-size: 0.75rem; color: var(--md-primary);">0 карт</span>
+          </div>
+          <div class="trade-card-grid" id="trade-their-cards-grid"></div>
+          <div class="trade-cash-row">
+            <label style="font-size: 0.8rem; white-space: nowrap;">Деньги $</label>
+            <input type="number" id="trade-their-cash" class="md-input" min="0" step="50" value="0" style="padding: 6px 10px;">
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 14px;">
+        <button class="md-btn md-btn-outlined" data-close-modal>Отмена</button>
+        <button id="btn-send-trade-offer" class="md-btn md-btn-filled">Предложить обмен</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incoming Trade Modal -->
+  <div class="md-modal-backdrop" id="modal-trade-incoming">
+    <div class="md-modal" style="max-width: 600px;">
+      <div class="modal-header">
+        <div class="modal-title">Предложение обмена</div>
+      </div>
+      <p id="trade-incoming-desc" style="color: var(--md-on-surface-variant); font-size: 0.95rem;"></p>
+
+      <div class="trade-layout" style="margin-top: 12px;">
+        <div class="trade-column">
+          <div class="trade-col-title">Вы отдаёте:</div>
+          <div id="trade-incoming-give-items" style="font-size: 0.85rem; line-height: 1.5;"></div>
+        </div>
+        <div class="trade-column">
+          <div class="trade-col-title">Вы получите:</div>
+          <div id="trade-incoming-receive-items" style="font-size: 0.85rem; line-height: 1.5;"></div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px;">
+        <button id="btn-trade-reject" class="md-btn md-btn-outlined">Отклонить</button>
+        <button id="btn-trade-accept" class="md-btn md-btn-filled">Принять сделку</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trade History Modal -->
+  <div class="md-modal-backdrop" id="modal-trade-history">
+    <div class="md-modal" style="max-width: 560px;">
+      <div class="modal-header">
+        <div class="modal-title">История сделок</div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+      <div id="trade-history-list" style="max-height: 380px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaderboard Modal -->
+  <div class="md-modal-backdrop" id="modal-leaderboard">
+    <div class="md-modal" style="max-width: 580px;">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="ph ph-trophy" style="font-size: 1.6rem; color: #eab308;"></i>
+          <div class="modal-title">Таблица лидеров</div>
+        </div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+        <span style="font-size: 0.85rem; color: var(--md-on-surface-variant);">Рейтинг лучших магнатов</span>
+        <div class="leaderboard-tabs" id="modal-leaderboard-tabs">
+          <button class="lb-tab active" data-sort="wins">Победы</button>
+          <button class="lb-tab" data-sort="games">Матчи</button>
+          <button class="lb-tab" data-sort="cash">Капитал</button>
+          <button class="lb-tab" data-sort="winrate">% Вин</button>
+        </div>
+      </div>
+
+      <div id="modal-leaderboard-list" class="leaderboard-list" style="max-height: 420px; overflow-y: auto;">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Match History Modal -->
+  <div class="md-modal-backdrop" id="modal-match-history">
+    <div class="md-modal match-history-modal" style="max-width: 640px; padding: 22px;">
+      <div class="modal-header" style="margin-bottom: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(56,189,248,0.15); display: flex; align-items: center; justify-content: center;">
+            <i class="ph ph-clock-counter-clockwise" style="font-size: 1.5rem; color: #38bdf8;"></i>
+          </div>
+          <div>
+            <div class="modal-title" style="font-size: 1.25rem;">История матчей</div>
+            <div style="font-size: 0.76rem; color: var(--md-on-surface-variant);">Записи всех сыгранных партий и статистика</div>
+          </div>
+        </div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="match-history-tabs">
+        <button type="button" class="mh-tab active" data-filter="all">
+          <i class="ph ph-squares-four"></i>
+          <span>Все матчи</span>
+        </button>
+        <button type="button" class="mh-tab" data-filter="win">
+          <i class="ph ph-trophy"></i>
+          <span>Победы</span>
+        </button>
+        <button type="button" class="mh-tab" data-filter="defeat">
+          <i class="ph ph-x-circle"></i>
+          <span>Поражения</span>
+        </button>
+      </div>
+
+      <!-- Match history list -->
+      <div id="match-history-list" class="match-history-list" style="max-height: 440px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px;">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Footer -->
+      <div class="match-history-footer" style="display: flex; justify-content: flex-start; align-items: center; margin-top: 14px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.08);">
+        <button id="btn-clear-match-history" class="md-btn md-btn-text" style="color: #ef4444; font-size: 0.8rem; display: flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 8px;">
+          <i class="ph ph-trash" style="font-size: 1rem;"></i> Очистить историю
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Winner Celebration Modal -->
+  <div class="md-modal-backdrop" id="modal-winner">
+    <div class="md-modal" style="text-align: center; max-width: 440px; padding: 28px 24px;">
+      <div style="font-size: 3.5rem; margin-bottom: 8px;">🏆</div>
+      <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 6px;">Победа в матче!</h2>
+      <p id="winner-name" style="font-size: 1.1rem; margin-bottom: 12px; font-weight: 600;"></p>
+      <div id="winner-reward-box" style="margin-bottom: 18px; padding: 10px 16px; background: var(--md-surface-container-high); border-radius: 16px; border: 1px solid var(--md-outline-variant); display: inline-flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.4rem;">🪙</span>
+        <span id="winner-coins-text" style="font-weight: 700; font-size: 1rem; color: #eab308;">+50 монет за победу!</span>
+      </div>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <button id="btn-winner-to-menu" class="md-btn md-btn-filled" style="padding: 12px 20px; flex: 1;">
+          В главное меню
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Lobby Tiles Modal -->
+  <div class="md-modal-backdrop" id="modal-custom-tiles">
+    <div class="md-modal" style="max-width: 680px; padding: 20px; background: #0f172a; border: 1px solid rgba(56,189,248,0.2);">
+      <div class="modal-header" style="margin-bottom: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(56,189,248,0.15); display: flex; align-items: center; justify-content: center;">
+            <i class="ph ph-map-pin" style="font-size: 1.5rem; color: #38bdf8;"></i>
+          </div>
+          <div>
+            <div class="modal-title" style="font-size: 1.2rem; color: #f1f5f9;">Свои клетки для этой партии</div>
+            <div style="font-size: 0.75rem; color: #94a3b8;">Названия, иконки и описания действуют только в этой партии и видны всем участникам</div>
+          </div>
+        </div>
+        <button class="md-btn-icon" data-close-modal style="color: #64748b;">✕</button>
+      </div>
+
+      <!-- Generator Bar -->
+      <div style="background: rgba(56,189,248,0.06); border: 1px solid rgba(56,189,248,0.25); border-radius: 12px; padding: 12px; margin-bottom: 12px;">
+        <div style="font-size: 0.82rem; font-weight: 700; color: #38bdf8; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+          <i class="ph ph-magic-wand"></i> Быстрый генератор по городу или теме
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <input id="input-city-generator" type="text" placeholder="Введите город или тему (напр. Киев, Токио, Хогвартс, CS2, Крипта...)" style="flex: 1; background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #fff; padding: 8px 12px; font-size: 0.84rem;" />
+          <button id="btn-generate-city-tiles" class="md-btn md-btn-filled" style="background: #38bdf8; color: #0f172a; padding: 8px 16px; font-size: 0.84rem; font-weight: 700; flex-shrink: 0;">
+            <i class="ph ph-lightning"></i> Применить
+          </button>
+        </div>
+        <div style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 8px;">
+          <button class="md-chip ct-city-chip" data-city="Киев" style="font-size: 0.72rem; padding: 3px 8px;">🇺🇦 Киев</button>
+          <button class="md-chip ct-city-chip" data-city="Питер" style="font-size: 0.72rem; padding: 3px 8px;">⚓ Санкт-Петербург</button>
+          <button class="md-chip ct-city-chip" data-city="Токио" style="font-size: 0.72rem; padding: 3px 8px;">🇯🇵 Токио</button>
+          <button class="md-chip ct-city-chip" data-city="Лондон" style="font-size: 0.72rem; padding: 3px 8px;">🇬🇧 Лондон</button>
+          <button class="md-chip ct-city-chip" data-city="Париж" style="font-size: 0.72rem; padding: 3px 8px;">🇫🇷 Париж</button>
+          <button class="md-chip ct-city-chip" data-city="Нью-Йорк" style="font-size: 0.72rem; padding: 3px 8px;">🗽 Нью-Йорк</button>
+          <button class="md-chip ct-city-chip" data-city="Дубай" style="font-size: 0.72rem; padding: 3px 8px;">🇦🇪 Дубай</button>
+          <button class="md-chip ct-city-chip" data-city="Хогвартс" style="font-size: 0.72rem; padding: 3px 8px;">🧙‍♂️ Хогвартс</button>
+          <button class="md-chip ct-city-chip" data-city="Гейминг" style="font-size: 0.72rem; padding: 3px 8px;">🎮 Гейминг</button>
+          <button class="md-chip ct-city-chip" data-city="Крипта" style="font-size: 0.72rem; padding: 3px 8px;">💎 Крипто</button>
+        </div>
+      </div>
+
+      <!-- Tiles editor list -->
+      <div id="custom-tiles-editor-list" style="max-height: 380px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; padding-right: 4px;">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Footer -->
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.07);">
+        <button id="btn-clear-custom-tiles" class="md-btn md-btn-text" style="color: #ef4444; font-size: 0.8rem;">
+          <i class="ph ph-trash"></i> Сбросить всё
+        </button>
+        <button class="md-btn md-btn-filled" data-close-modal style="background: #38bdf8; color: #0f172a;">
+          Готово
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal (Sound, General/UI & Theme) -->
+  <div class="md-modal-backdrop" id="modal-settings">
+    <div class="md-modal settings-modal" style="max-width: 620px; padding: 22px;">
+      <div class="modal-header" style="margin-bottom: 14px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(56,189,248,0.15); display: flex; align-items: center; justify-content: center;">
+            <i class="ph ph-gear" style="font-size: 1.5rem; color: #38bdf8;"></i>
+          </div>
+          <div>
+            <div class="modal-title" style="font-size: 1.25rem;">Настройки игры</div>
+            <div style="font-size: 0.76rem; color: var(--md-on-surface-variant);">Звук, интерфейс и темы оформления</div>
+          </div>
+        </div>
+        <button class="md-btn-icon" data-close-modal>✕</button>
+      </div>
+
+      <div class="settings-modal-body" style="display: flex; flex-direction: column; gap: 14px; max-height: 540px; overflow-y: auto; padding-right: 4px;">
+        
+        <!-- SECTION 1: SOUND & AUDIO -->
+        <div class="settings-section-card">
+          <div class="settings-section-header">
+            <i class="ph ph-speaker-high" style="color: #38bdf8; font-size: 1.15rem;"></i>
+            <span>Звуковые эффекты & Громкость</span>
+          </div>
+
+          <!-- Master volume -->
+          <div class="settings-vol-row">
+            <div class="settings-vol-label">
+              <span class="settings-vol-icon" style="color:#38bdf8;">🔊</span>
+              <span class="settings-vol-name">Общая громкость</span>
+              <button class="settings-vol-mute-btn" id="settings-master-mute-btn" title="Отключить звук">🔊</button>
+            </div>
+            <div class="settings-slider-wrap">
+              <input type="range" id="settings-volume-slider" class="settings-slider-colored" min="0" max="100" step="1" value="50" style="--track-color: #a78bfa;">
+            </div>
+            <span class="settings-vol-pct" id="settings-volume-percent">50%</span>
+          </div>
+
+          <div class="settings-vol-divider"></div>
+
+          <!-- Dice rolls -->
+          <div class="settings-vol-row">
+            <div class="settings-vol-label">
+              <span class="settings-vol-icon">🎲</span>
+              <span class="settings-vol-name">Броски кубиков</span>
+            </div>
+            <div class="settings-slider-wrap">
+              <input type="range" id="settings-dice-vol" class="settings-slider-colored" min="0" max="100" step="1" value="80" style="--track-color: #22d3ee;">
+            </div>
+            <span class="settings-vol-pct" id="settings-dice-vol-pct">80%</span>
+          </div>
+
+          <!-- Buy / Build -->
+          <div class="settings-vol-row">
+            <div class="settings-vol-label">
+              <span class="settings-vol-icon">🏠</span>
+              <span class="settings-vol-name">Покупка и стройка</span>
+            </div>
+            <div class="settings-slider-wrap">
+              <input type="range" id="settings-buy-vol" class="settings-slider-colored" min="0" max="100" step="1" value="85" style="--track-color: #facc15;">
+            </div>
+            <span class="settings-vol-pct" id="settings-buy-vol-pct">85%</span>
+          </div>
+
+          <!-- Bankrupt / Win -->
+          <div class="settings-vol-row">
+            <div class="settings-vol-label">
+              <span class="settings-vol-icon">🏆</span>
+              <span class="settings-vol-name">Победа и банкрот</span>
+            </div>
+            <div class="settings-slider-wrap">
+              <input type="range" id="settings-win-vol" class="settings-slider-colored" min="0" max="100" step="1" value="75" style="--track-color: #f97316;">
+            </div>
+            <span class="settings-vol-pct" id="settings-win-vol-pct">75%</span>
+          </div>
+
+          <!-- UI clicks -->
+          <div class="settings-vol-row">
+            <div class="settings-vol-label">
+              <span class="settings-vol-icon">✨</span>
+              <span class="settings-vol-name">Клики интерфейса</span>
+            </div>
+            <div class="settings-slider-wrap">
+              <input type="range" id="settings-ui-vol" class="settings-slider-colored" min="0" max="100" step="1" value="50" style="--track-color: #4ade80;">
+            </div>
+            <span class="settings-vol-pct" id="settings-ui-vol-pct">50%</span>
+          </div>
+
+          <!-- Cards -->
+          <div class="settings-vol-row">
+            <div class="settings-vol-label">
+              <span class="settings-vol-icon">🃏</span>
+              <span class="settings-vol-name">Карточки событий</span>
+            </div>
+            <div class="settings-slider-wrap">
+              <input type="range" id="settings-card-vol" class="settings-slider-colored" min="0" max="100" step="1" value="65" style="--track-color: #f472b6;">
+            </div>
+            <span class="settings-vol-pct" id="settings-card-vol-pct">65%</span>
+          </div>
+        </div>
+
+        <!-- SECTION 2: GENERAL & INTERFACE -->
+        <div class="settings-section-card">
+          <div class="settings-section-header">
+            <i class="ph ph-sliders" style="color: #a855f7; font-size: 1.15rem;"></i>
+            <span>Общий / Интерфейс</span>
+          </div>
+
+          <div class="settings-control-row">
+            <div class="settings-control-label">
+              <span class="settings-label-title">Авто-завершение хода</span>
+              <span class="settings-label-sub">Автоматически передавать ход при отсутствии действий</span>
+            </div>
+            <label class="md-switch">
+              <input type="checkbox" id="settings-auto-end-toggle" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-control-row">
+            <div class="settings-control-label">
+              <span class="settings-label-title">Подсказки на поле</span>
+              <span class="settings-label-sub">Показывать информацию об улице при наведении на клетку</span>
+            </div>
+            <label class="md-switch">
+              <input type="checkbox" id="settings-tooltips-toggle" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-control-row">
+            <div class="settings-control-label">
+              <span class="settings-label-title">Быстрая анимация фишек</span>
+              <span class="settings-label-sub">Ускоренное перемещение по полю без пауз</span>
+            </div>
+            <label class="md-switch">
+              <input type="checkbox" id="settings-fast-anim-toggle">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="settings-control-row">
+            <div class="settings-control-label">
+              <span class="settings-label-title">Звук сообщений в чате</span>
+              <span class="settings-label-sub">Уведомлять звуком при входящих сообщениях</span>
+            </div>
+            <label class="md-switch">
+              <input type="checkbox" id="settings-chat-sound-toggle" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- SECTION 3: THEMES (Ниже) -->
+        <div class="settings-section-card">
+          <div class="settings-section-header">
+            <i class="ph ph-palette" style="color: #ec4899; font-size: 1.15rem;"></i>
+            <span>Темы оформления</span>
+          </div>
+          <div style="font-size: 0.78rem; color: #94a3b8; margin-top: -4px;">
+            Выберите цветовую палитру интерфейса:
+          </div>
+          <div id="settings-theme-grid" class="theme-selector-grid">
+            <!-- Rendered dynamically by JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Legacy Theme Selector Alias Modal -->
+  <div class="md-modal-backdrop" id="modal-theme-selector" style="display: none;">
+    <div class="md-modal" style="max-width: 520px;">
+      <div id="theme-selector-grid" class="theme-selector-grid"></div>
+    </div>
+  </div>
+
+  <!-- In-App Floating Toasts Container (No browser alerts!) -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="src/app.js?v=4.1.7"></script>
+</body>
+</html>

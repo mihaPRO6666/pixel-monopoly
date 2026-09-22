@@ -1,0 +1,23 @@
+{
+  "name": "pixel-monopoly",
+  "version": "1.0.0",
+  "description": "Material You (Pixel style) Multiplayer Monopoly with Supabase Realtime",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 3000",
+    "test": "node test_lobby.mjs && node test_gameplay.mjs"
+  },
+  "keywords": [
+    "monopoly",
+    "game",
+    "supabase",
+    "material-you",
+    "pixel",
+    "multiplayer"
+  ],
+  "author": "hizu1",
+  "license": "MIT",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
