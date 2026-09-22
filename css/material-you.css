@@ -2623,6 +2623,11 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  color: var(--md-on-surface, #ffffff);
+}
+
+.lb-name > span:first-child {
+  color: var(--md-on-surface, #ffffff) !important;
 }
 
 .lb-me-tag {

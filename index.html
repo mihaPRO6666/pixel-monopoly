@@ -11,7 +11,7 @@
   <!-- Three.js 3D Engine & GLTFLoader -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-  <link rel="stylesheet" href="css/material-you.css?v=5.2.3">
+  <link rel="stylesheet" href="css/material-you.css?v=5.2.4">
   <script>
     // Force purge stale cached guest leaderboard on load and sync owner profile
     try {
@@ -24,10 +24,10 @@
       const savedTheme = localStorage.getItem('monopoly_theme') || 'cyberpunk';
       document.documentElement.setAttribute('data-theme', savedTheme);
 
-      if (localStorage.getItem('monopoly_lb_purged_v8') !== 'done') {
+      if (localStorage.getItem('monopoly_lb_purged_v8_4_4') !== 'done') {
         localStorage.removeItem('monopoly_leaderboard');
         localStorage.removeItem('monopoly_leaderboard_version');
-        localStorage.setItem('monopoly_lb_purged_v8', 'done');
+        localStorage.setItem('monopoly_lb_purged_v8_4_4', 'done');
       }
 
       const ALL_DICE = ['classic', 'neon_ruby', 'cyber_emerald', 'amethyst_twilight', 'frost_crystal', 'golden_tycoon', 'magma_flame', 'cosmic_void'];
@@ -2307,6 +2307,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- SCRIPTS -->
-  <script type="module" src="src/app.js?v=8.4.3"></script>
+  <script type="module" src="src/app.js?v=8.4.4"></script>
 </body>
 </html>
