@@ -1,1 +1,725 @@
-const a14_0x26b3d3=a14_0x3e59;(function(_0x2eeb52,_0x14eb27){const _0x3a9771=a14_0x3e59,_0x4eb3cd=_0x2eeb52();while(!![]){try{const _0x3c6701=-parseInt(_0x3a9771(0x1c8))/0x1+-parseInt(_0x3a9771(0x1e0))/0x2*(parseInt(_0x3a9771(0x28b))/0x3)+-parseInt(_0x3a9771(0x1e1))/0x4*(-parseInt(_0x3a9771(0x289))/0x5)+-parseInt(_0x3a9771(0x237))/0x6+-parseInt(_0x3a9771(0x201))/0x7*(parseInt(_0x3a9771(0x2b6))/0x8)+parseInt(_0x3a9771(0x23f))/0x9+parseInt(_0x3a9771(0x264))/0xa;if(_0x3c6701===_0x14eb27)break;else _0x4eb3cd['push'](_0x4eb3cd['shift']());}catch(_0x500538){_0x4eb3cd['push'](_0x4eb3cd['shift']());}}}(a14_0x344f,0xac63b));import{TITLES,getTitleById}from'./titles.js';export const AVAILABLE_TOKENS=[{'id':a14_0x26b3d3(0x22c),'emoji':'💎','name':'Алмаз'},{'id':'hat','emoji':'🎩','name':a14_0x26b3d3(0x204)},{'id':a14_0x26b3d3(0x22e),'emoji':'🎩','name':a14_0x26b3d3(0x204)},{'id':a14_0x26b3d3(0x2ad),'emoji':'💰','name':a14_0x26b3d3(0x1ed)},{'id':a14_0x26b3d3(0x203),'emoji':'🚗','name':a14_0x26b3d3(0x283)},{'id':a14_0x26b3d3(0x228),'emoji':'🐕','name':'Пёс'},{'id':a14_0x26b3d3(0x1fa),'emoji':'🚢','name':a14_0x26b3d3(0x1d4)},{'id':a14_0x26b3d3(0x272),'emoji':'🚀','name':'Ракета'},{'id':a14_0x26b3d3(0x24c),'emoji':'🐱','name':a14_0x26b3d3(0x26a)},{'id':'dino','emoji':'🦖','name':'Дино'},{'id':'alien','emoji':'👾','name':a14_0x26b3d3(0x1f5)},{'id':a14_0x26b3d3(0x235),'emoji':'👑','name':a14_0x26b3d3(0x1f9)},{'id':'fire','emoji':'🔥','name':a14_0x26b3d3(0x28d)},{'id':'star','emoji':'⭐','name':a14_0x26b3d3(0x1e2)},{'id':'ghost','emoji':'👻','name':a14_0x26b3d3(0x29b)},{'id':'pizza','emoji':'🍕','name':a14_0x26b3d3(0x29c)},{'id':a14_0x26b3d3(0x1cc),'emoji':'🎮','name':'Геймпад'},{'id':'robot','emoji':'🤖','name':'Робот'}];export const PLAYER_COLORS=[a14_0x26b3d3(0x213),'#dc2626',a14_0x26b3d3(0x251),a14_0x26b3d3(0x23e),a14_0x26b3d3(0x1df),a14_0x26b3d3(0x218)];export const PROFILE_BACKGROUNDS=[{'id':'default','name':a14_0x26b3d3(0x21a),'preview':a14_0x26b3d3(0x274),'bgStyle':'var(--md-surface-container-low)','borderStyle':a14_0x26b3d3(0x280),'textColor':a14_0x26b3d3(0x286),'tagColor':'var(--md-on-surface-variant)'},{'id':a14_0x26b3d3(0x270),'name':'Кибернеон','preview':a14_0x26b3d3(0x1dd),'bgStyle':a14_0x26b3d3(0x1d3),'borderStyle':a14_0x26b3d3(0x225),'glow':a14_0x26b3d3(0x2c0),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x1c3)},{'id':a14_0x26b3d3(0x276),'name':a14_0x26b3d3(0x293),'preview':a14_0x26b3d3(0x2bf),'bgStyle':a14_0x26b3d3(0x20d),'borderStyle':a14_0x26b3d3(0x2b2),'glow':a14_0x26b3d3(0x28c),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x2af)},{'id':'gold','name':'Золото','preview':a14_0x26b3d3(0x1d7),'bgStyle':a14_0x26b3d3(0x222),'borderStyle':a14_0x26b3d3(0x231),'glow':a14_0x26b3d3(0x1e7),'textColor':a14_0x26b3d3(0x1cf),'tagColor':'#fef08a'},{'id':a14_0x26b3d3(0x1db),'name':'Полночь','preview':a14_0x26b3d3(0x1e5),'bgStyle':a14_0x26b3d3(0x257),'borderStyle':a14_0x26b3d3(0x25d),'glow':a14_0x26b3d3(0x219),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x244)},{'id':a14_0x26b3d3(0x215),'name':a14_0x26b3d3(0x234),'preview':a14_0x26b3d3(0x275),'bgStyle':a14_0x26b3d3(0x24a),'borderStyle':'1px\x20solid\x20#6366f1','glow':a14_0x26b3d3(0x2be),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x298)},{'id':'sunset','name':'Закат','preview':a14_0x26b3d3(0x1ef),'bgStyle':a14_0x26b3d3(0x211),'borderStyle':a14_0x26b3d3(0x24d),'glow':'0\x200\x2018px\x20rgba(244,\x2063,\x2094,\x200.35)','textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x239)},{'id':'ocean','name':a14_0x26b3d3(0x2b8),'preview':a14_0x26b3d3(0x223),'bgStyle':a14_0x26b3d3(0x266),'borderStyle':a14_0x26b3d3(0x25d),'glow':a14_0x26b3d3(0x219),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x244)},{'id':'aurora','name':'Аврора','preview':a14_0x26b3d3(0x1c4),'bgStyle':a14_0x26b3d3(0x262),'borderStyle':'1px\x20solid\x20#2dd4bf','glow':a14_0x26b3d3(0x1f4),'textColor':'#ffffff','tagColor':'#99f6e4'},{'id':a14_0x26b3d3(0x279),'name':a14_0x26b3d3(0x294),'preview':a14_0x26b3d3(0x1f1),'bgStyle':a14_0x26b3d3(0x2c3),'borderStyle':a14_0x26b3d3(0x2c2),'glow':a14_0x26b3d3(0x1e4),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x22d)},{'id':'sakura','name':a14_0x26b3d3(0x2a9),'preview':a14_0x26b3d3(0x268),'bgStyle':a14_0x26b3d3(0x1f7),'borderStyle':a14_0x26b3d3(0x1d2),'glow':a14_0x26b3d3(0x2a0),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x239)},{'id':a14_0x26b3d3(0x2bc),'name':a14_0x26b3d3(0x2ae),'preview':a14_0x26b3d3(0x2a1),'bgStyle':a14_0x26b3d3(0x28f),'borderStyle':a14_0x26b3d3(0x21b),'glow':a14_0x26b3d3(0x263),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x281)},{'id':a14_0x26b3d3(0x261),'name':'Магма','preview':a14_0x26b3d3(0x242),'bgStyle':a14_0x26b3d3(0x28e),'borderStyle':'1px\x20solid\x20#f97316','glow':a14_0x26b3d3(0x233),'textColor':'#ffffff','tagColor':'#fed7aa'},{'id':a14_0x26b3d3(0x1d8),'name':a14_0x26b3d3(0x284),'preview':a14_0x26b3d3(0x29f),'bgStyle':a14_0x26b3d3(0x220),'borderStyle':'1px\x20solid\x20#67e8f9','glow':a14_0x26b3d3(0x209),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x1ce)},{'id':'lavender','name':a14_0x26b3d3(0x297),'preview':a14_0x26b3d3(0x27a),'bgStyle':a14_0x26b3d3(0x238),'borderStyle':a14_0x26b3d3(0x1c6),'glow':a14_0x26b3d3(0x2ac),'textColor':'#ffffff','tagColor':'#ddd6fe'},{'id':a14_0x26b3d3(0x1f8),'name':a14_0x26b3d3(0x243),'preview':a14_0x26b3d3(0x271),'bgStyle':'linear-gradient(135deg,\x20#230d02\x200%,\x20#451a03\x2050%,\x20#522306\x20100%)','borderStyle':'1px\x20solid\x20#d97706','glow':a14_0x26b3d3(0x2b4),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x2c4)},{'id':a14_0x26b3d3(0x253),'name':'Аметист','preview':a14_0x26b3d3(0x1ea),'bgStyle':'linear-gradient(135deg,\x20#1c0330\x200%,\x20#3b0764\x2050%,\x20#4c0d7d\x20100%)','borderStyle':a14_0x26b3d3(0x216),'glow':'0\x200\x2018px\x20rgba(192,\x20132,\x20252,\x200.35)','textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x224)},{'id':a14_0x26b3d3(0x2ab),'name':a14_0x26b3d3(0x295),'preview':a14_0x26b3d3(0x1e6),'bgStyle':a14_0x26b3d3(0x252),'borderStyle':'1px\x20solid\x20#818cf8','glow':a14_0x26b3d3(0x278),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x1da)},{'id':a14_0x26b3d3(0x1ec),'name':a14_0x26b3d3(0x20c),'preview':a14_0x26b3d3(0x29d),'bgStyle':'linear-gradient(135deg,\x20#3d1306\x200%,\x20#7c2d12\x2050%,\x20#9a3412\x20100%)','borderStyle':a14_0x26b3d3(0x26e),'glow':'0\x200\x2018px\x20rgba(251,\x20146,\x2060,\x200.35)','textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x250)},{'id':a14_0x26b3d3(0x24b),'name':a14_0x26b3d3(0x26f),'preview':a14_0x26b3d3(0x26c),'bgStyle':a14_0x26b3d3(0x245),'borderStyle':a14_0x26b3d3(0x249),'glow':a14_0x26b3d3(0x287),'textColor':a14_0x26b3d3(0x1cf),'tagColor':a14_0x26b3d3(0x273)}];export function getProfileBg(_0x41cc5f){const _0xc8de67=a14_0x26b3d3,_0x1ba7a3=PROFILE_BACKGROUNDS[_0xc8de67(0x2a3)](_0x34cf4c=>_0x34cf4c['id']===_0x41cc5f);return _0x1ba7a3||PROFILE_BACKGROUNDS[0x0];}const TOKEN_EMOJI_DICT={'diamond':'💎','hat':'🎩','tophat':'🎩','moneybag':'💰','money':'💰','bag':'💰','car':'🚗','dog':'🐕','ship':'🚢','rocket':'🚀','cat':'🐱','dino':'🦖','alien':'👾','crown':'👑','fire':'🔥','star':'⭐','ghost':'👻','pizza':'🍕','gamepad':'🎮','robot':'🤖','bot':'🤖'};export function getTokenEmoji(_0xe48cbc){const _0x4d8701=a14_0x26b3d3;if(!_0xe48cbc)return'💎';if(_0xe48cbc===_0x4d8701(0x20b)||typeof _0xe48cbc===_0x4d8701(0x1c7)&&_0xe48cbc[_0x4d8701(0x1de)](_0x4d8701(0x256)))return'🎨';const _0x20adfe=String(_0xe48cbc)['toLowerCase']()[_0x4d8701(0x1d1)]();if(TOKEN_EMOJI_DICT[_0x20adfe])return TOKEN_EMOJI_DICT[_0x20adfe];const _0x6128c6=AVAILABLE_TOKENS[_0x4d8701(0x2a3)](_0x5578a0=>_0x5578a0['id'][_0x4d8701(0x267)]()===_0x20adfe||_0x5578a0[_0x4d8701(0x210)]===_0xe48cbc);return _0x6128c6?_0x6128c6['emoji']:'🎩';}export function renderTokenHTML(_0x1c3982,_0x3e4d63=null,_0x4dfe16=''){const _0x3eefb0=a14_0x26b3d3,_0x1b7c50=_0x1c3982===_0x3eefb0(0x20b)||typeof _0x1c3982==='string'&&_0x1c3982[_0x3eefb0(0x1de)](_0x3eefb0(0x256));if(_0x1b7c50){const _0x34ff6e=typeof _0x1c3982===_0x3eefb0(0x1c7)&&_0x1c3982[_0x3eefb0(0x1de)]('data:image')?_0x1c3982:_0x3e4d63||(typeof profileManager!==_0x3eefb0(0x1fb)?profileManager?.[_0x3eefb0(0x288)]?.['customToken']:null);if(_0x34ff6e)return'<img\x20class=\x22board-token-img\x20'+_0x4dfe16+_0x3eefb0(0x226)+_0x34ff6e+_0x3eefb0(0x207);}const _0x512d9c=getTokenEmoji(_0x1c3982);return _0x3eefb0(0x229)+_0x4dfe16+'\x22>'+_0x512d9c+_0x3eefb0(0x2a7);}export function getTokenName(_0x179604){const _0x49ac67=a14_0x26b3d3;if(_0x179604===_0x49ac67(0x20b)||typeof _0x179604===_0x49ac67(0x1c7)&&_0x179604['startsWith'](_0x49ac67(0x256)))return'Моя\x20пешка';const _0x49be9c=String(_0x179604)['toLowerCase']()[_0x49ac67(0x1d1)](),_0x49aa35=AVAILABLE_TOKENS[_0x49ac67(0x2a3)](_0x5813ed=>_0x5813ed['id'][_0x49ac67(0x267)]()===_0x49be9c||_0x5813ed[_0x49ac67(0x210)]===_0x179604);return _0x49aa35?_0x49aa35[_0x49ac67(0x246)]:_0x49ac67(0x1c9);}function a14_0x344f(){const _0x14fbc=['mxb4ihnVBgLKicnMyMjMmJq','BNvTyMvY','mcaWide4ChGGCMDIysGYndKSideXnsWGmJiSidaUmZuP','0jRqVTgb0lZqVTgb','y3jVD24','C2v0q29PBNm','nZaYmZqWmMXOtgz1Ba','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZe3mdCZmYaWjsWGiZjLmta2nsa1mcuSicmZyJe0odaGmtaWjsK','i2zIy2zLoa','y29PBNm','DxbKyxrLvg9Rzw4','y2HLy2TvBMXVy2S','BwLSBgLVBMfPCMu','i2q5nZCWnG','otGYmZC3mgnOrevtvq','Dg9Rzw4','0jpqVTgb0ylrJa','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZqZmtqWnYaWjsWGi2mYndeWyYa1mcuSicnMotCZmtyGmtaWjsK','0jZqVTc60lRqVG','i2jHztzMza','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZi3mdiWyYaWjsWGiZrJmduXosa1mcuSicm2odbImJuGmtaWjsK','BMfTzq','BwLOyxbYBZy2nJy','AgL6DwHHCMe','mxb4ihnVBgLKicnMyJCXodu','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa2mdKXmYaWjsWGiZe0mtqZmYa1mcuSicmXzde4ngeGmtaWjsK','y3jPBxnVBG','y2f0','mxb4ihnVBgLKicnMndnMnwu','yxzHDgfYvxjS','Dg90ywXfyxjUzwq','i2zMzwrKnq','iZe2ytm0yq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZbImdKYncaWjsWGiZfLmwi0yIa1mcuSicmYyJi2nMuGmtaWjsK','yw1LDgH5C3q','C3vIC3rYAw5N','Bg9NB3v0rgLZy29Yza','zgf0ytPPBwfNzq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZaZmdCXmIaWjsWGiZbHmgyXzca1mcuSicmWzJe3mMeGmtaWjsK','Aw5JBhvKzxm','z29SzgvUx3r5y29VBG','y29SB3i','C3rHDhm','mti3lJaUmc4X','mxb4ihnVBgLKicmZogjKzJG','DxnYxW','0jJqS9ga0l7qUG','C2v0sxrLBq','BwfNBwe','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZaYmJaYmcaWjsWGiZbMngy0yYa1mcuSicmXmtvLntKGmtaWjsK','mcaWide4ChGGCMDIysGZncWGmtK3lca5ncWGmc4ZnsK','mJC5nde2mtbZt0n2sLi','yxv0AfbYB3zPzgvY','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa0mJaZmsaWjsWGiZa3ntK4nsa1mcuSicmWmZy5yteGmtaWjsK','Dg9mB3DLCKnHC2u','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZuWmdCYncaWjsWGi2jLmtG1zca1mcuSicnMndCYyJyGmtaWjsK','C2v0q3vZDg9Tvg9Rzw4','0jRqVTgc','zgLZy29Yzf8','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZrJmduXosaWjsWGi2jLmtiZyYa1mcuSicnMyJCXoduGmtaWjsK','zxf1AxbeAwnLu2TPBG','mxb4ihnVBgLKicnMyJKYm2m','0jhqSncZ0ydrJ9c90lxrHG','y3LIzxjWDw5R','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZq1mweWmYaWjsWGiZKYndaWzsa1mcuSicnKotC3mdyGmtaWjsK','CM9JA2v0','i2zMztrLnG','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZmZnde1nsaWjsWGiZfLmJKZyIaXmdaLkq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZbImgyXosaWjsWGiZfLmwi0yIa1mcuSicmZmtjLodeGmtaWjsK','zw1LCMfSza','BgvNzw5K','mcaWide4ChGGCMDIysGXmJKSide0mcWGmJq4lcaWlJm1kq','CNvIEq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZjLmta2nsaWjsWGiZzKmJHKosa1mcuSicnHnZHIzMeGmtaWjsK','zgLJzvnRAw4','Bw9UB3bVBhLFAxnFy3jLyxrVCG','yNv5vgL0Bgu','AgL6DwHHCMeU','CMvTB3zLq29PBNm','mxb4ihnVBgLKihzHCIGTlw1Klw91DgXPBMuTDMfYAwfUDcK','i2jIzJDKma','BwLZAge','0jdqSTgc0l4','0jVqTDc00l3qUnc6','C3bLBMrdB2LUCW','DMfYkc0TBwqTB24TC3vYzMfJzsK','mcaWide4ChGGCMDIysGYnteSideXmYWGmtmZlcaWlJm1kq','ChjVzMLSzq','nuvgCuTfCq','Dw5ZAgLMDa','mtKXmJjvvhDrqMO','mcaWide4ChGGCMDIysGXnIWGmtG1lcaXmJKSidaUmZuP','0j7qS9c+0l3rJa','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZiZmdGWmIaWjsWGiZqZmtqWnYa1mcuSicm1ndfJmdKGmtaWjsK','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZaXmtqWzIaWjsWGiZaZmMiXnYa1mcuSicmWntjLmtyGmtaWjsK','zgLZy29Yzf8XndCYnJCZmti2odu5otm1nZy1','Dw5SB2nRzwreAwnL','zNjVC3rFy3j5C3rHBa','0jZqSncZ0l3qSngc','0kdrG9cX0lJqVq','0jpqSnc70ldqUTgc0lJqUTcW','CM91BMq','0jVqSncY0ldqVDc00la','i2m3zdjMzq','CMfUzg9T','zM9YrwfJAa','0j/rGnc40lFrGncW0lO','0j/qUngg0yBqSa','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZDJmMqXmIaWjsWGi2vHntGWyYa1mcuSicnMyJKYm2mGmtaWjsK','BwfNBwfFzMXHBwu','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa4mZm0ncaWjsWGiZbLnZq5mca1mcuSicm2n2u4zJKGmtaWjsK','mcaWide4ChGGCMDIysGYndqSideXncWGmtGYlcaWlJm1kq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZaYmMmYmIaWjsWGiZe1odaZzca1mcuSicmYmMm1nwuGmtaWjsK','Dw5SB2nRvgL0Bgu','zMLUza','zgf0ytPPBwfNzs9WBMC7yMfZzty0lgLwqK9sDZblr2DVqufbqu5tvwHfvwDbqufcqufbqufrq0fzqufbqwy4lZLOqufbqM1vBevrvLi0qvv5u1mZtgPnqxHfrZLYrMm3mJrYsNPry3nwENzjBvHTugnNEvjvv0LiD2fHsuTRBhjNCtjunwzYvLLXAwG4ofrvB0HszKS0vw9Mr0fgmuTYnvaXnZbKvMrLn1HinKXnnNnjwuHyCgK2l2riAfP6DZb1ufzutKntmgvnA0CWvgDbqufbqKPsvtvfCMTkz2DNpt0','ChvZAa','y2HLy2TbDxrVBwf0AwnuAxrSzvvUBg9JA3m','pc9ZCgfUpG','Bg9ZC2vZ','0khqSnc60yprGncW','zgLJzv9Tyxn0zxi','z2fSyxH5','mcaWide4ChGGCMDIysGXnJCSideZosWGmJuWlcaWlJm1kq','Bw9UzxLIywC','0jZqSngc0ydqUngg0la','i2e3zJnKma','DgL0Bgu','BMvVBL9YDwj5','mxb4ihnVBgLKicmXmgi5ode','AxnszwDPC3rLCMvK','mcaWide4ChGGCMDIysGYmtCSideXosWGnIWGmc4ZnsK','AxnezxzpBMX5','mJeZnJK2ofbMyuf0Ca','y3vZDg9Tvg9Rzw4','0j7qUTc10ldqVq','mtq3mJy3mZeYnJG1otKZntC2nq','CMvJB3jKr2fTzvjLC3vSDa','y29ZBwLJx3zVAwq','Bwf0CML4','ChjVzMLSzujN','mcaWide4ChGGCMDIysG5osWGmtaYlcaYndeSidaUmZuP','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa2nguZyIaWjsWGiZa1oty2osa1mcuSicmXmgi5odeGmtaWjsK','mcaWide4ChGGCMDIysGYmtCSidCWlcaYmZKSidaUmZuP','Bw9UB3bVBhLFDxnLCL9SB2DNzwrFB3v0','mxb4ihnVBgLKicnKyZi2mJy','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZjHmdqWncaWjsWGiZu3mguWzsa1mcuSicm3zJfKmwqGmtaWjsK','i2zKzty4yq','Bwf4tMv0v29YDgG','Axnezxy','Bw9UB3bVBgLZDa','i2y1zdbMzq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa0mMyYzsaWjsWGiZbKotq4oca1mcuSicmYzgq0yMyGmtaWjsK','Dw5SB2nRzwruAxrSzxm','mxb4ihnVBgLKicnHnZHIzMe','C3rYAw5N','otm3mdKZB1bwzKPL','0ktqUngi0lRqSa','Bg9NB3v0','CMvTB3zLsxrLBq','z2fTzxbHza','z2fTzxnqBgf5zwq','i2nMzMfMzq','i2zMzMzMzG','B2XPz2fYy2G','DhjPBq','mxb4ihnVBgLKicnMndCYyJy','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZe4mdGYosaWjsWGiZm0mgm1nca1mcuSicm1yZbKndeGmtaWjsK','0jRqVTga0ldqSDc70yW','Dg9tDhjPBMC','zgvMyxvSDa','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZC4mZuWzIaWjsWGi2q5nZCWnIa1mcuSicnMyMjMmJqGmtaWjsK','zNjVC3q','AxnszwDPC3rLCMvKvxnLCG','i2uWztDMzG','BwLKBMLNAhq','y2XHC3nPyW','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZjLmdG1ncaWjsWGiZC5mJHJysa1mcuSicnMzJaWodaGmtaWjsK','C3rHCNrZv2L0Aa','iZKZmZnLyq','mZe2yuvLD2LX','oda5mtu2DLrnEwn4','0jFqSTc10lFqTncW','ChjPy2u','mcaWide4ChGGCMDIysGYmJaSidm4lcaZocWGmc4ZnsK','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa5mgqXnIaWjsWGiZbMmtCYysa1mcuSicmXzti5m2iGmtaWjsK','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZfLmwi0yIaWjsWGiZqZmZHJysa1mcuSicm4mtHJzJGGmtaWjsK','mcaWide4ChGGCMDIysGYnteSide5msWGmZySidaUmZuP','z2v0sxrLBq','z2v0v2LUuMf0zq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZnImdC2ncaWjsWGiZDLmJjJzsa1mcuSicnJmdG0zMmGmtaWjsK','y3LIzxjFzw1LCMfSza','C29Syxi','0jZqTDgi0l7qUIdqTnc10l3qTDcZ','Bw9UB3bVBhLFCgXHEwvYx3bYB2zPBgu','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZGZmtG0mYaWjsWGi2rImJC3nYa1mcuSicnMndnMnwuGmtaWjsK','zgLZy29YzeLK','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZq1mgeWysaWjsWGiZK5mwiXyIa1mcuSicnKyZi2mJyGmtaWjsK','BM92AwnL','CgL4zwWTBw9UB3bVBhK','mcaWide4ChGGCMDIysG0nsWGmJeYlcaXoteSidaUmZuP','0j/rGnc40yJqTDc70lxrHG','Bw9UB3bVBhLFzgv2x21Vzgu','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZjImdiXmYaWjsWGiZrJmduYnsa1mcuSicm3mdbHmZCGmtaWjsK','y29MzMvL','0jRqVTga0l7qVDcW','C2HPCa','Dw5KzwzPBMvK','zgLZy29YzfvZzxjUyw1L','Aw52zxn0B3i','Bg9JywXOB3n0','Ahr0Chm6lY9Jzg4UzgLZy29YzgfWCc5JB20VyxzHDgfYCY8XndCYnJCZmti2odu5otm1nZy1lZG4mtLIngy5ntfHyMuZzJrMnZzHmty0nMrLztfIytLKlNbUzW','y3LIzxjFA2LUzW','n0vUqwTzvq','zxf1AxbuAxrSzq','y2fY','0kJqU9gp0l/qSa','C2f2zvbYB2zPBgu','Bw9UB3bVBhLFy29PBNnFCMvZzxrFDJHFnf8Y','iIbHBhq9iLrVA2vUiIbKCMfNz2fIBgu9iMzHBhnLiIaVpG','CgfYC2u','mcaWide4ChGGCMDIysGXmdmSidiZmIWGmJq5lcaWlJm1kq','zgLZy29Yza','y3vZDg9T','0khqVTc70l3rHTc1','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZaYmJyXzsaWjsWGiZa2nguZyIa1mcuSicmWnJvMndyGmtaWjsK','C2HLAwTO','AxnbCNjHEq','zw1VAMK','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZq0mdqXnIaWjsWGiZCWmtmZysa1mcuSicm4odeZmZCGmtaWjsK','Bwf4','iZi1nJnLyG','Ag9ZDg5HBwu','C3bHy2u','mxb4ihnVBgLKicnJmdG0zMm','DxbKyxrLqMC','iZa4otfImG','mcaWide4ChGGCMDIysG1nIWGmtG5lcaYndGSidaUmZuP','0khrGTcW0l3qTncW0ydrGG','mxb4ihnVBgLKicmYmMm1nwu','DMLW','Bg9HzfbYB2zPBgu','Dhj1zq','C2HHCMS','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa0mtGYmcaWjsWGiZa4mZm0nca1mcuSicmWztrJnJmGmtaWjsK','zg9Uzq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZnKmtCWmIaWjsWGiZC4mZuWzIa1mcuSicm5mJqWmguGmtaWjsK','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZbJnge2zsaWjsWGiZaYodrJnYa1mcuSicmZogjKzJGGmtaWjsK','i2yZztHMzG','mxb4ihnVBgLKicnKotq2zwy','iIbZCMm9iG','ywrKq29PBNm','zg9N','phnWyw4Gy2XHC3m9iNrVA2vUlwvTB2PPia','yw1LDgH5C3rFDhDPBgLNAhq','DxbKyxrLtMfTzq','zgLHBw9Uza','i2zLy2fJyq','Dg9WAgf0','y3jLyxrVCG','Bg9JyxrPB24'];a14_0x344f=function(){return _0x14fbc;};return a14_0x344f();}export function isDevUser(_0x557826){const _0x17bffe=a14_0x26b3d3;if(!_0x557826)return![];const _0x1a7323=String(_0x557826['discordUsername']||'')[_0x17bffe(0x267)](),_0x57536c=String(_0x557826[_0x17bffe(0x246)]||'')['toLowerCase']();if(_0x1a7323['includes'](_0x17bffe(0x248))||_0x57536c['includes'](_0x17bffe(0x248))||_0x1a7323['includes'](_0x17bffe(0x282))||_0x57536c['includes'](_0x17bffe(0x282)))return!![];try{if(localStorage[_0x17bffe(0x1e8)](_0x17bffe(0x1f6))===_0x17bffe(0x21e)||sessionStorage[_0x17bffe(0x1e8)](_0x17bffe(0x1f6))===_0x17bffe(0x21e)||localStorage['getItem'](_0x17bffe(0x27c))===_0x17bffe(0x21e))return!![];}catch(_0x1c94e2){}return![];}function a14_0x3e59(_0xb68fd4,_0x1a9b09){_0xb68fd4=_0xb68fd4-0x1c3;const _0x344f41=a14_0x344f();let _0x3e5960=_0x344f41[_0xb68fd4];if(a14_0x3e59['nNOAFD']===undefined){var _0x5a176a=function(_0xa5b129){const _0x989cf9='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x22c977='',_0x41cc5f='';for(let _0x1ba7a3=0x0,_0x34cf4c,_0xe48cbc,_0x20adfe=0x0;_0xe48cbc=_0xa5b129['charAt'](_0x20adfe++);~_0xe48cbc&&(_0x34cf4c=_0x1ba7a3%0x4?_0x34cf4c*0x40+_0xe48cbc:_0xe48cbc,_0x1ba7a3++%0x4)?_0x22c977+=String['fromCharCode'](0xff&_0x34cf4c>>(-0x2*_0x1ba7a3&0x6)):0x0){_0xe48cbc=_0x989cf9['indexOf'](_0xe48cbc);}for(let _0x6128c6=0x0,_0x5578a0=_0x22c977['length'];_0x6128c6<_0x5578a0;_0x6128c6++){_0x41cc5f+='%'+('00'+_0x22c977['charCodeAt'](_0x6128c6)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x41cc5f);};a14_0x3e59['ILisWZ']=_0x5a176a,a14_0x3e59['MrCuPV']={},a14_0x3e59['nNOAFD']=!![];}const _0x528283=_0x344f41[0x0];a14_0x3e59['obPenH']!==_0x528283&&(a14_0x3e59['MrCuPV']={},a14_0x3e59['obPenH']=_0x528283);const _0x37e3e7=a14_0x3e59['MrCuPV'][_0xb68fd4];return _0x37e3e7===undefined?(_0x3e5960=a14_0x3e59['ILisWZ'](_0x3e5960),a14_0x3e59['MrCuPV'][_0xb68fd4]=_0x3e5960):_0x3e5960=_0x37e3e7,_0x3e5960;}export const ALL_DICE_IDS=[a14_0x26b3d3(0x1dc),a14_0x26b3d3(0x2b1),a14_0x26b3d3(0x1eb),a14_0x26b3d3(0x22a),a14_0x26b3d3(0x292),a14_0x26b3d3(0x259),a14_0x26b3d3(0x29e),a14_0x26b3d3(0x2bb)];export const ALL_TITLE_IDS=[a14_0x26b3d3(0x1f2),a14_0x26b3d3(0x21f),a14_0x26b3d3(0x2c7),'magnate','lucky',a14_0x26b3d3(0x1d0),a14_0x26b3d3(0x2aa),a14_0x26b3d3(0x277),a14_0x26b3d3(0x1fd),a14_0x26b3d3(0x21c),a14_0x26b3d3(0x23d),a14_0x26b3d3(0x20e),a14_0x26b3d3(0x200),a14_0x26b3d3(0x22f)];class ProfileManager{constructor(){const _0x5055aa=a14_0x26b3d3;this[_0x5055aa(0x288)]=this[_0x5055aa(0x21d)]();}['isDev'](){const _0x608cd5=a14_0x26b3d3;return isDevUser(this[_0x608cd5(0x288)]);}[a14_0x26b3d3(0x21d)](){const _0x42e6ae=a14_0x26b3d3,_0x20b7c1=typeof window!==_0x42e6ae(0x1fb)&&(window[_0x42e6ae(0x230)][_0x42e6ae(0x214)][_0x42e6ae(0x258)](_0x42e6ae(0x247))||window[_0x42e6ae(0x230)]['hostname'][_0x42e6ae(0x258)](_0x42e6ae(0x1f3))||window['location']['hostname']===_0x42e6ae(0x1fe)||window['location']['hostname']===_0x42e6ae(0x25c)),_0x120c9c=typeof localStorage!==_0x42e6ae(0x1fb)&&localStorage['getItem']('monopoly_user_logged_out')==='1',_0x271e38=_0x42e6ae(0x2a4),_0x196e10=()=>({'id':'discord_1472673126859935765','name':'hizuhara.','token':_0x42e6ae(0x20b),'customToken':_0x271e38,'color':_0x42e6ae(0x213),'bg':'space','profileBg':'space','coins':0x0,'unlockedDice':[...ALL_DICE_IDS],'diceSkin':_0x42e6ae(0x2bb),'unlockedTitles':[...ALL_TITLE_IDS],'title':'creator','isRegistered':!![],'authProvider':_0x42e6ae(0x20a),'discordId':'1472673126859935765','discordUsername':_0x42e6ae(0x27e),'avatarUrl':_0x42e6ae(0x1ff),'stats':{'gamesPlayed':0x2,'wins':0x2,'losses':0x0,'totalEarned':0xa8c,'maxNetWorth':0x9c4}}),_0x497793=localStorage['getItem'](_0x42e6ae(0x1ee));if(_0x497793)try{const _0x427196=JSON[_0x42e6ae(0x208)](_0x497793);if(_0x20b7c1&&!_0x120c9c){_0x427196['id']=_0x427196['id']||_0x42e6ae(0x290),_0x427196[_0x42e6ae(0x246)]=_0x42e6ae(0x27e),_0x427196[_0x42e6ae(0x1fc)]=_0x42e6ae(0x27e),_0x427196[_0x42e6ae(0x1f0)]=_0x427196[_0x42e6ae(0x1f0)]||_0x42e6ae(0x2b9),_0x427196['avatarUrl']=_0x427196[_0x42e6ae(0x24e)]||_0x42e6ae(0x1ff),_0x427196['authProvider']='discord',_0x427196[_0x42e6ae(0x2b3)]=!![];_0x427196['coins']===0x64&&localStorage[_0x42e6ae(0x1e8)](_0x42e6ae(0x206))!=='done'&&(_0x427196[_0x42e6ae(0x23a)]=0x0,localStorage[_0x42e6ae(0x260)](_0x42e6ae(0x206),_0x42e6ae(0x221)));_0x427196[_0x42e6ae(0x23a)]=typeof _0x427196[_0x42e6ae(0x23a)]===_0x42e6ae(0x232)?_0x427196[_0x42e6ae(0x23a)]:0x0,_0x427196[_0x42e6ae(0x240)]=_0x427196[_0x42e6ae(0x240)]||'custom',_0x427196['customToken']=_0x427196[_0x42e6ae(0x2b7)]||_0x271e38,_0x427196[_0x42e6ae(0x25a)]=_0x427196[_0x42e6ae(0x25a)]||_0x42e6ae(0x213),_0x427196['bg']=_0x427196['bg']||_0x42e6ae(0x215),_0x427196['profileBg']=_0x427196[_0x42e6ae(0x2bd)]||_0x42e6ae(0x215),_0x427196[_0x42e6ae(0x2b0)]='creator',_0x427196[_0x42e6ae(0x27b)]=_0x42e6ae(0x2bb),_0x427196[_0x42e6ae(0x1c5)]=[...ALL_TITLE_IDS],_0x427196[_0x42e6ae(0x291)]=[...ALL_DICE_IDS];if(!_0x427196[_0x42e6ae(0x25b)])_0x427196[_0x42e6ae(0x25b)]={};return _0x427196[_0x42e6ae(0x25b)][_0x42e6ae(0x1cd)]=Math['max'](_0x427196['stats']['gamesPlayed']||0x0,0x2),_0x427196[_0x42e6ae(0x25b)]['wins']=Math[_0x42e6ae(0x212)](_0x427196[_0x42e6ae(0x25b)]['wins']||0x0,0x2),_0x427196[_0x42e6ae(0x25b)][_0x42e6ae(0x2a8)]=_0x427196[_0x42e6ae(0x25b)][_0x42e6ae(0x2a8)]||0x0,_0x427196[_0x42e6ae(0x25b)]['totalEarned']=Math[_0x42e6ae(0x212)](_0x427196['stats'][_0x42e6ae(0x24f)]||0x0,0xa8c),_0x427196[_0x42e6ae(0x25b)][_0x42e6ae(0x2c5)]=Math['max'](_0x427196[_0x42e6ae(0x25b)]['maxNetWorth']||0x0,0x9c4),this[_0x42e6ae(0x205)](_0x427196),_0x427196;}_0x427196[_0x42e6ae(0x240)]&&_0x427196[_0x42e6ae(0x240)]!=='custom'&&!_0x427196[_0x42e6ae(0x240)][_0x42e6ae(0x1de)](_0x42e6ae(0x256))&&(_0x427196[_0x42e6ae(0x240)]=getTokenEmoji(_0x427196['token']));_0x427196[_0x42e6ae(0x2b7)]=_0x427196[_0x42e6ae(0x2b7)]||null,_0x427196['bg']=_0x427196['bg']||_0x42e6ae(0x1d6),_0x427196['coins']=typeof _0x427196[_0x42e6ae(0x23a)]==='number'?_0x427196[_0x42e6ae(0x23a)]:0x0,_0x427196[_0x42e6ae(0x291)]=Array[_0x42e6ae(0x20f)](_0x427196['unlockedDice'])?_0x427196[_0x42e6ae(0x291)]:[_0x42e6ae(0x1dc)];if(!_0x427196[_0x42e6ae(0x291)][_0x42e6ae(0x258)](_0x42e6ae(0x1dc)))_0x427196['unlockedDice'][_0x42e6ae(0x28a)](_0x42e6ae(0x1dc));_0x427196[_0x42e6ae(0x27b)]=_0x427196[_0x42e6ae(0x27b)]||'classic',_0x427196['unlockedTitles']=Array[_0x42e6ae(0x20f)](_0x427196['unlockedTitles'])?_0x427196[_0x42e6ae(0x1c5)]:['novice'];if(!_0x427196[_0x42e6ae(0x1c5)]['includes'](_0x42e6ae(0x1f2)))_0x427196['unlockedTitles'][_0x42e6ae(0x28a)](_0x42e6ae(0x1f2));(isDevUser(_0x427196)||typeof localStorage!==_0x42e6ae(0x1fb)&&localStorage[_0x42e6ae(0x1e8)](_0x42e6ae(0x27c))===_0x42e6ae(0x21e))&&(_0x427196[_0x42e6ae(0x1c5)]=[...ALL_TITLE_IDS],_0x427196[_0x42e6ae(0x291)]=[...ALL_DICE_IDS],_0x427196[_0x42e6ae(0x2b0)]=_0x42e6ae(0x22f),_0x427196[_0x42e6ae(0x27b)]=_0x42e6ae(0x2bb));_0x427196[_0x42e6ae(0x2b0)]=_0x427196[_0x42e6ae(0x2b0)]||'novice';const _0x3acd02=Boolean(_0x427196[_0x42e6ae(0x2b3)]||_0x427196[_0x42e6ae(0x1f0)]||_0x427196[_0x42e6ae(0x265)]===_0x42e6ae(0x20a));return _0x427196[_0x42e6ae(0x2b3)]=_0x3acd02,(!_0x427196['name']||_0x427196[_0x42e6ae(0x246)]===_0x42e6ae(0x241))&&(_0x427196['name']=_0x3acd02?_0x427196[_0x42e6ae(0x1fc)]||_0x42e6ae(0x25f):_0x427196[_0x42e6ae(0x246)]||_0x42e6ae(0x25f)),_0x427196;}catch(_0x47024c){console['error']('Failed\x20to\x20parse\x20profile:',_0x47024c);}if(_0x20b7c1&&!_0x120c9c){const _0x27c4b1=_0x196e10();return this[_0x42e6ae(0x205)](_0x27c4b1),_0x27c4b1;}const _0xeeb3db=_0x42e6ae(0x25e)+Math[_0x42e6ae(0x299)]()['toString'](0x24)['substring'](0x2,0x9),_0x353f03={'id':_0xeeb3db,'name':_0x42e6ae(0x241),'token':'💎','color':PLAYER_COLORS[0x0],'bg':_0x42e6ae(0x1d6),'coins':0x0,'unlockedDice':[_0x42e6ae(0x1dc)],'diceSkin':_0x42e6ae(0x1dc),'unlockedTitles':['novice'],'title':_0x42e6ae(0x1f2),'isRegistered':![],'authProvider':null,'discordId':null,'discordUsername':null,'avatarUrl':null,'stats':{'gamesPlayed':0x0,'wins':0x0,'losses':0x0,'totalEarned':0x0,'maxNetWorth':0x0}};return this['saveProfile'](_0x353f03),_0x353f03;}[a14_0x26b3d3(0x205)](_0x318501=this['profile']){const _0x5887da=a14_0x26b3d3;this[_0x5887da(0x288)]=_0x318501,localStorage[_0x5887da(0x260)](_0x5887da(0x1ee),JSON['stringify'](this[_0x5887da(0x288)]));}['setDiscordUser']({id:_0x5c6be5,discordId:_0x1df70e,name:_0x226a64,username:_0x2f42bf,avatarUrl:_0x58f667,isRegistered:isRegistered=!![],authProvider:authProvider='discord'}){const _0x12cf42=a14_0x26b3d3;typeof localStorage!==_0x12cf42(0x1fb)&&localStorage[_0x12cf42(0x1cb)](_0x12cf42(0x2c1));this[_0x12cf42(0x288)]['id']=_0x5c6be5||(_0x1df70e?_0x12cf42(0x26b)+_0x1df70e:this['profile']['id']),this['profile'][_0x12cf42(0x1f0)]=_0x1df70e||this['profile'][_0x12cf42(0x1f0)];_0x226a64&&_0x226a64[_0x12cf42(0x1d1)]()&&(this[_0x12cf42(0x288)][_0x12cf42(0x246)]=_0x226a64[_0x12cf42(0x1d1)]()[_0x12cf42(0x254)](0x0,0x14));this[_0x12cf42(0x288)]['discordUsername']=_0x2f42bf||_0x226a64||this[_0x12cf42(0x288)][_0x12cf42(0x1fc)],this[_0x12cf42(0x288)][_0x12cf42(0x24e)]=_0x58f667||this['profile'][_0x12cf42(0x24e)]||null,this[_0x12cf42(0x288)][_0x12cf42(0x2b3)]=!![],this[_0x12cf42(0x288)][_0x12cf42(0x265)]=authProvider;if(isDevUser(this[_0x12cf42(0x288)])){this[_0x12cf42(0x288)]['unlockedDice']=[...ALL_DICE_IDS],this[_0x12cf42(0x288)][_0x12cf42(0x1c5)]=[...ALL_TITLE_IDS],this[_0x12cf42(0x288)]['title']=_0x12cf42(0x22f),this[_0x12cf42(0x288)][_0x12cf42(0x27b)]=_0x12cf42(0x2bb);try{localStorage[_0x12cf42(0x260)]('monopoly_is_creator',_0x12cf42(0x21e)),localStorage[_0x12cf42(0x260)](_0x12cf42(0x1f6),_0x12cf42(0x21e));}catch(_0x378172){}}this[_0x12cf42(0x205)]();}['logout'](){const _0x2f2ea0=a14_0x26b3d3;typeof localStorage!==_0x2f2ea0(0x1fb)&&localStorage[_0x2f2ea0(0x260)](_0x2f2ea0(0x2c1),'1');const _0x38402b=_0x2f2ea0(0x25e)+Math[_0x2f2ea0(0x299)]()[_0x2f2ea0(0x1d5)](0x24)[_0x2f2ea0(0x254)](0x2,0x9);this[_0x2f2ea0(0x288)]['id']=_0x38402b,this[_0x2f2ea0(0x288)][_0x2f2ea0(0x246)]=_0x2f2ea0(0x241),this['profile'][_0x2f2ea0(0x2b3)]=![],this['profile'][_0x2f2ea0(0x265)]=null,this[_0x2f2ea0(0x288)][_0x2f2ea0(0x1f0)]=null,this[_0x2f2ea0(0x288)][_0x2f2ea0(0x1fc)]=null,this[_0x2f2ea0(0x288)][_0x2f2ea0(0x24e)]=null,this['saveProfile']();}[a14_0x26b3d3(0x255)](){const _0x19328b=a14_0x26b3d3;this[_0x19328b(0x1ca)]();}['isRegisteredUser'](){const _0x271b6f=a14_0x26b3d3;return Boolean(this['profile']&&(this[_0x271b6f(0x288)][_0x271b6f(0x2b3)]||this[_0x271b6f(0x288)][_0x271b6f(0x1f0)]||this[_0x271b6f(0x288)][_0x271b6f(0x265)]===_0x271b6f(0x20a)));}[a14_0x26b3d3(0x22b)](_0xe613d7){const _0x2599cb=a14_0x26b3d3;if(!this[_0x2599cb(0x1d9)]())return;_0xe613d7&&_0xe613d7[_0x2599cb(0x1d1)]()&&(this['profile'][_0x2599cb(0x246)]=_0xe613d7['trim']()[_0x2599cb(0x254)](0x0,0x14),this[_0x2599cb(0x205)]());}[a14_0x26b3d3(0x269)](_0xac743){const _0x3be0de=a14_0x26b3d3;this['profile'][_0x3be0de(0x2b7)]=_0xac743,this[_0x3be0de(0x288)][_0x3be0de(0x240)]=_0x3be0de(0x20b),this[_0x3be0de(0x205)]();}[a14_0x26b3d3(0x23b)](_0x36ea3a){const _0x465c86=a14_0x26b3d3;_0x36ea3a==='custom'?this['profile'][_0x465c86(0x240)]=_0x465c86(0x20b):this[_0x465c86(0x288)][_0x465c86(0x240)]=getTokenEmoji(_0x36ea3a),this[_0x465c86(0x205)]();}[a14_0x26b3d3(0x217)](_0x45ed77){const _0x34578e=a14_0x26b3d3;this[_0x34578e(0x288)]['bg']=_0x45ed77||_0x34578e(0x1d6),this[_0x34578e(0x205)]();}[a14_0x26b3d3(0x26d)](_0xc2d5dc){const _0x3be957=a14_0x26b3d3;if(!this[_0x3be957(0x288)]['unlockedDice'])this[_0x3be957(0x288)][_0x3be957(0x291)]=[_0x3be957(0x1dc)];if(this[_0x3be957(0x288)][_0x3be957(0x291)][_0x3be957(0x258)](_0xc2d5dc))return this[_0x3be957(0x288)]['diceSkin']=_0xc2d5dc,this[_0x3be957(0x205)](),!![];return![];}['unlockDiceSkin'](_0x1edcb1){const _0x109425=a14_0x26b3d3;if(!this['profile'][_0x109425(0x291)])this[_0x109425(0x288)][_0x109425(0x291)]=[_0x109425(0x1dc)];if(!this[_0x109425(0x288)]['unlockedDice'][_0x109425(0x258)](_0x1edcb1))return this['profile'][_0x109425(0x291)]['push'](_0x1edcb1),this[_0x109425(0x205)](),!![];return![];}['grantCreatorTitle'](){const _0x5183e8=a14_0x26b3d3;if(!this['profile'][_0x5183e8(0x1c5)])this['profile'][_0x5183e8(0x1c5)]=[_0x5183e8(0x1f2)];!this[_0x5183e8(0x288)][_0x5183e8(0x1c5)][_0x5183e8(0x258)]('creator')&&this[_0x5183e8(0x288)][_0x5183e8(0x1c5)][_0x5183e8(0x2a5)](_0x5183e8(0x22f));this[_0x5183e8(0x288)]['title']=_0x5183e8(0x22f);try{localStorage['setItem'](_0x5183e8(0x27c),_0x5183e8(0x21e)),localStorage['setItem'](_0x5183e8(0x1f6),_0x5183e8(0x21e));}catch(_0x362005){}return this[_0x5183e8(0x205)](),!![];}[a14_0x26b3d3(0x27d)](_0x5620c6){const _0x2d2b31=a14_0x26b3d3,_0x296b45=TITLES[_0x2d2b31(0x2a3)](_0x364ec1=>_0x364ec1['id']===_0x5620c6);if(!_0x296b45)return![];if(_0x296b45['hasCondition']||_0x296b45[_0x2d2b31(0x2b5)]||!_0x296b45['price']||_0x296b45[_0x2d2b31(0x1e3)]<=0x0)return![];if(this[_0x2d2b31(0x285)](_0x296b45['price']))return this[_0x2d2b31(0x2a2)](_0x5620c6),!![];return![];}[a14_0x26b3d3(0x202)](_0x4e638c){const _0x5daf81=a14_0x26b3d3;if(!this['profile'][_0x5daf81(0x1c5)])this['profile'][_0x5daf81(0x1c5)]=[_0x5daf81(0x1f2)];(this[_0x5daf81(0x2c6)]()||typeof localStorage!=='undefined'&&localStorage['getItem'](_0x5daf81(0x27c))===_0x5daf81(0x21e))&&!this[_0x5daf81(0x288)]['unlockedTitles'][_0x5daf81(0x258)](_0x5daf81(0x22f))&&this['profile'][_0x5daf81(0x1c5)][_0x5daf81(0x2a5)](_0x5daf81(0x22f));if(this[_0x5daf81(0x288)][_0x5daf81(0x1c5)][_0x5daf81(0x258)](_0x4e638c))return this[_0x5daf81(0x288)][_0x5daf81(0x2b0)]=_0x4e638c,this[_0x5daf81(0x205)](),!![];return![];}[a14_0x26b3d3(0x2a2)](_0x16d413){const _0xf53ad9=a14_0x26b3d3;if(!this[_0xf53ad9(0x288)]['unlockedTitles'])this[_0xf53ad9(0x288)]['unlockedTitles']=['novice'];if(!this[_0xf53ad9(0x288)][_0xf53ad9(0x1c5)][_0xf53ad9(0x258)](_0x16d413))return this[_0xf53ad9(0x288)][_0xf53ad9(0x1c5)][_0xf53ad9(0x2a5)](_0x16d413),this[_0xf53ad9(0x205)](),!![];return![];}[a14_0x26b3d3(0x2a6)](){const _0x20b028=a14_0x26b3d3;if(!this[_0x20b028(0x288)][_0x20b028(0x1c5)])this[_0x20b028(0x288)]['unlockedTitles']=[_0x20b028(0x1f2)];(this[_0x20b028(0x2c6)]()||typeof localStorage!==_0x20b028(0x1fb)&&localStorage[_0x20b028(0x1e8)]('monopoly_is_creator')===_0x20b028(0x21e))&&(this[_0x20b028(0x288)][_0x20b028(0x1c5)]=[...ALL_TITLE_IDS],this[_0x20b028(0x288)]['unlockedDice']=[...ALL_DICE_IDS]),TITLES[_0x20b028(0x29a)](_0x587bf2=>{const _0x2fbffd=_0x20b028;_0x587bf2[_0x2fbffd(0x23c)]&&_0x587bf2['checkUnlock'](this[_0x2fbffd(0x288)][_0x2fbffd(0x25b)])&&(!this[_0x2fbffd(0x288)][_0x2fbffd(0x1c5)][_0x2fbffd(0x258)](_0x587bf2['id'])&&this[_0x2fbffd(0x288)]['unlockedTitles']['push'](_0x587bf2['id']));}),this[_0x20b028(0x205)]();}[a14_0x26b3d3(0x227)](_0x599e02){const _0x37a4a8=a14_0x26b3d3;if(typeof _0x599e02!==_0x37a4a8(0x232)||_0x599e02<=0x0)return this[_0x37a4a8(0x288)]['coins']||0x0;return this[_0x37a4a8(0x288)][_0x37a4a8(0x23a)]=(this[_0x37a4a8(0x288)]['coins']||0x0)+_0x599e02,this[_0x37a4a8(0x205)](),this[_0x37a4a8(0x288)]['coins'];}[a14_0x26b3d3(0x27f)](_0x1b65a7){const _0x2266a0=a14_0x26b3d3,_0x5eb3d8=parseInt(_0x1b65a7)||0x0;if(_0x5eb3d8<=0x0)return this[_0x2266a0(0x288)]['coins']||0x0;return this['profile'][_0x2266a0(0x23a)]=Math[_0x2266a0(0x212)](0x0,(this[_0x2266a0(0x288)]['coins']||0x0)-_0x5eb3d8),this[_0x2266a0(0x205)](),this[_0x2266a0(0x288)][_0x2266a0(0x23a)];}[a14_0x26b3d3(0x236)](_0xa39e67){const _0x2f2695=a14_0x26b3d3;return this['profile'][_0x2f2695(0x23a)]=Math[_0x2f2695(0x212)](0x0,parseInt(_0xa39e67)||0x0),this[_0x2f2695(0x205)](),this[_0x2f2695(0x288)][_0x2f2695(0x23a)];}[a14_0x26b3d3(0x285)](_0x1fd471){const _0x308754=a14_0x26b3d3;if(typeof _0x1fd471!==_0x308754(0x232)||_0x1fd471<=0x0)return![];if((this[_0x308754(0x288)]['coins']||0x0)>=_0x1fd471)return this['profile'][_0x308754(0x23a)]-=_0x1fd471,this[_0x308754(0x205)](),!![];return![];}[a14_0x26b3d3(0x2ba)](_0x4b8503,_0x1410de,_0x1ea6ee){const _0x2088ca=a14_0x26b3d3;this[_0x2088ca(0x288)][_0x2088ca(0x25b)]['gamesPlayed']+=0x1,_0x4b8503?(this[_0x2088ca(0x288)]['stats']['wins']+=0x1,this[_0x2088ca(0x227)](0x32)):this[_0x2088ca(0x288)][_0x2088ca(0x25b)][_0x2088ca(0x2a8)]+=0x1,this[_0x2088ca(0x288)][_0x2088ca(0x25b)][_0x2088ca(0x24f)]+=_0x1410de||0x0,_0x1ea6ee>this['profile'][_0x2088ca(0x25b)][_0x2088ca(0x2c5)]&&(this[_0x2088ca(0x288)]['stats'][_0x2088ca(0x2c5)]=_0x1ea6ee),this[_0x2088ca(0x2a6)](),this['saveProfile']();}[a14_0x26b3d3(0x1e9)](){const _0x249f0c=a14_0x26b3d3;if(this[_0x249f0c(0x288)]['stats']['gamesPlayed']===0x0)return 0x0;return Math[_0x249f0c(0x296)](this[_0x249f0c(0x288)][_0x249f0c(0x25b)]['wins']/this[_0x249f0c(0x288)]['stats'][_0x249f0c(0x1cd)]*0x64);}}export const profileManager=new ProfileManager();
+import { TITLES, getTitleById } from './titles.js';
+
+export const AVAILABLE_TOKENS = [
+  { id: 'diamond', emoji: '💎', name: 'Алмаз' },
+  { id: 'hat', emoji: '🎩', name: 'Шляпа' },
+  { id: 'tophat', emoji: '🎩', name: 'Шляпа' },
+  { id: 'moneybag', emoji: '💰', name: 'Мешок денег' },
+  { id: 'car', emoji: '🚗', name: 'Авто' },
+  { id: 'dog', emoji: '🐕', name: 'Пёс' },
+  { id: 'ship', emoji: '🚢', name: 'Корабль' },
+  { id: 'rocket', emoji: '🚀', name: 'Ракета' },
+  { id: 'cat', emoji: '🐱', name: 'Кот' },
+  { id: 'dino', emoji: '🦖', name: 'Дино' },
+  { id: 'alien', emoji: '👾', name: 'Пришелец' },
+  { id: 'crown', emoji: '👑', name: 'Корона' },
+  { id: 'fire', emoji: '🔥', name: 'Огонь' },
+  { id: 'star', emoji: '⭐', name: 'Звезда' },
+  { id: 'ghost', emoji: '👻', name: 'Призрак' },
+  { id: 'pizza', emoji: '🍕', name: 'Пицца' },
+  { id: 'gamepad', emoji: '🎮', name: 'Геймпад' },
+  { id: 'robot', emoji: '🤖', name: 'Робот' }
+];
+
+export const PLAYER_COLORS = [
+  '#2563eb', // Blue
+  '#dc2626', // Red
+  '#16a34a', // Green
+  '#d97706', // Amber
+  '#9333ea', // Purple
+  '#0891b2'  // Cyan
+];
+
+export const PROFILE_BACKGROUNDS = [
+  {
+    id: 'default',
+    name: 'Стандарт',
+    preview: 'linear-gradient(135deg, #334155 0%, #1e293b 100%)',
+    bgStyle: 'var(--md-surface-container-low)',
+    borderStyle: '1px solid var(--md-outline-variant)',
+    textColor: 'var(--md-on-surface)',
+    tagColor: 'var(--md-on-surface-variant)'
+  },
+  {
+    id: 'cyberpunk',
+    name: 'Кибернеон',
+    preview: 'linear-gradient(135deg, #2e0854 0%, #7928ca 50%, #ff0080 100%)',
+    bgStyle: 'linear-gradient(135deg, #180829 0%, #340c54 50%, #5c0d41 100%)',
+    borderStyle: '1px solid #d946ef',
+    glow: '0 0 18px rgba(217, 70, 239, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#f5d0fe'
+  },
+  {
+    id: 'emerald',
+    name: 'Магнат',
+    preview: 'linear-gradient(135deg, #064e3b 0%, #059669 50%, #10b981 100%)',
+    bgStyle: 'linear-gradient(135deg, #02261e 0%, #064e3b 50%, #065f46 100%)',
+    borderStyle: '1px solid #10b981',
+    glow: '0 0 18px rgba(16, 185, 129, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#a7f3d0'
+  },
+  {
+    id: 'gold',
+    name: 'Золото',
+    preview: 'linear-gradient(135deg, #78350f 0%, #d97706 50%, #fbbf24 100%)',
+    bgStyle: 'linear-gradient(135deg, #3d1702 0%, #78350f 50%, #92400e 100%)',
+    borderStyle: '1px solid #fbbf24',
+    glow: '0 0 18px rgba(251, 191, 36, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#fef08a'
+  },
+  {
+    id: 'midnight',
+    name: 'Полночь',
+    preview: 'linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e293b 100%)',
+    bgStyle: 'linear-gradient(135deg, #030712 0%, #0a0f1d 50%, #0f172a 100%)',
+    borderStyle: '1px solid #38bdf8',
+    glow: '0 0 18px rgba(56, 189, 248, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#bae6fd'
+  },
+  {
+    id: 'space',
+    name: 'Космос',
+    preview: 'linear-gradient(135deg, #0b0f19 0%, #1e1b4b 50%, #312e81 100%)',
+    bgStyle: 'linear-gradient(135deg, #060913 0%, #141433 50%, #1d184a 100%)',
+    borderStyle: '1px solid #6366f1',
+    glow: '0 0 18px rgba(99, 102, 241, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#c7d2fe'
+  },
+  {
+    id: 'sunset',
+    name: 'Закат',
+    preview: 'linear-gradient(135deg, #831843 0%, #db2777 50%, #f43f5e 100%)',
+    bgStyle: 'linear-gradient(135deg, #440416 0%, #70133a 50%, #881337 100%)',
+    borderStyle: '1px solid #f43f5e',
+    glow: '0 0 18px rgba(244, 63, 94, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#fbcfe8'
+  },
+  {
+    id: 'ocean',
+    name: 'Океан',
+    preview: 'linear-gradient(135deg, #0c4a6e 0%, #0284c7 50%, #38bdf8 100%)',
+    bgStyle: 'linear-gradient(135deg, #042031 0%, #075985 50%, #0369a1 100%)',
+    borderStyle: '1px solid #38bdf8',
+    glow: '0 0 18px rgba(56, 189, 248, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#bae6fd'
+  },
+  {
+    id: 'aurora',
+    name: 'Аврора',
+    preview: 'linear-gradient(135deg, #042f2e 0%, #0d9488 50%, #2dd4bf 100%)',
+    bgStyle: 'linear-gradient(135deg, #022020 0%, #0f4f4c 50%, #115e59 100%)',
+    borderStyle: '1px solid #2dd4bf',
+    glow: '0 0 18px rgba(45, 212, 191, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#99f6e4'
+  },
+  {
+    id: 'ruby',
+    name: 'Рубин',
+    preview: 'linear-gradient(135deg, #450a0a 0%, #991b1b 50%, #dc2626 100%)',
+    bgStyle: 'linear-gradient(135deg, #2a0404 0%, #570e0e 50%, #7f1d1d 100%)',
+    borderStyle: '1px solid #dc2626',
+    glow: '0 0 18px rgba(220, 38, 38, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#fecaca'
+  },
+  {
+    id: 'sakura',
+    name: 'Сакура',
+    preview: 'linear-gradient(135deg, #500724 0%, #be185d 50%, #f472b6 100%)',
+    bgStyle: 'linear-gradient(135deg, #2b0213 0%, #4c0525 50%, #700a37 100%)',
+    borderStyle: '1px solid #f472b6',
+    glow: '0 0 18px rgba(244, 114, 182, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#fbcfe8'
+  },
+  {
+    id: 'matrix',
+    name: 'Матрица',
+    preview: 'linear-gradient(135deg, #022c22 0%, #15803d 50%, #22c55e 100%)',
+    bgStyle: 'linear-gradient(135deg, #01140f 0%, #032b17 50%, #052e16 100%)',
+    borderStyle: '1px solid #22c55e',
+    glow: '0 0 18px rgba(34, 197, 94, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#bbf7d0'
+  },
+  {
+    id: 'magma',
+    name: 'Магма',
+    preview: 'linear-gradient(135deg, #431407 0%, #c2410c 50%, #f97316 100%)',
+    bgStyle: 'linear-gradient(135deg, #230802 0%, #431407 50%, #541c09 100%)',
+    borderStyle: '1px solid #f97316',
+    glow: '0 0 18px rgba(249, 115, 22, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#fed7aa'
+  },
+  {
+    id: 'frost',
+    name: 'Ледник',
+    preview: 'linear-gradient(135deg, #083344 0%, #0e7490 50%, #67e8f9 100%)',
+    bgStyle: 'linear-gradient(135deg, #041820 0%, #083344 50%, #0e4c63 100%)',
+    borderStyle: '1px solid #67e8f9',
+    glow: '0 0 18px rgba(103, 232, 249, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#cffafe'
+  },
+  {
+    id: 'lavender',
+    name: 'Лаванда',
+    preview: 'linear-gradient(135deg, #2e1065 0%, #6d28d9 50%, #a78bfa 100%)',
+    bgStyle: 'linear-gradient(135deg, #170733 0%, #2e1065 50%, #3b1480 100%)',
+    borderStyle: '1px solid #a78bfa',
+    glow: '0 0 18px rgba(167, 139, 250, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#ddd6fe'
+  },
+  {
+    id: 'coffee',
+    name: 'Мокко',
+    preview: 'linear-gradient(135deg, #451a03 0%, #92400e 50%, #d97706 100%)',
+    bgStyle: 'linear-gradient(135deg, #230d02 0%, #451a03 50%, #522306 100%)',
+    borderStyle: '1px solid #d97706',
+    glow: '0 0 18px rgba(217, 119, 6, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#fde68a'
+  },
+  {
+    id: 'amethyst',
+    name: 'Аметист',
+    preview: 'linear-gradient(135deg, #3b0764 0%, #7e22ce 50%, #c084fc 100%)',
+    bgStyle: 'linear-gradient(135deg, #1c0330 0%, #3b0764 50%, #4c0d7d 100%)',
+    borderStyle: '1px solid #c084fc',
+    glow: '0 0 18px rgba(192, 132, 252, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#f3e8ff'
+  },
+  {
+    id: 'galaxy',
+    name: 'Галактика',
+    preview: 'linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #818cf8 100%)',
+    bgStyle: 'linear-gradient(135deg, #0b0924 0%, #1e1b4b 50%, #2b266e 100%)',
+    borderStyle: '1px solid #818cf8',
+    glow: '0 0 18px rgba(129, 140, 248, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#e0e7ff'
+  },
+  {
+    id: 'solar',
+    name: 'Солнце',
+    preview: 'linear-gradient(135deg, #7c2d12 0%, #ea580c 50%, #fb923c 100%)',
+    bgStyle: 'linear-gradient(135deg, #3d1306 0%, #7c2d12 50%, #9a3412 100%)',
+    borderStyle: '1px solid #fb923c',
+    glow: '0 0 18px rgba(251, 146, 60, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#ffedd5'
+  },
+  {
+    id: 'crimson',
+    name: 'Багрянец',
+    preview: 'linear-gradient(135deg, #4c0519 0%, #be123c 50%, #fb7185 100%)',
+    bgStyle: 'linear-gradient(135deg, #27020c 0%, #4c0519 50%, #680b25 100%)',
+    borderStyle: '1px solid #fb7185',
+    glow: '0 0 18px rgba(251, 113, 133, 0.35)',
+    textColor: '#ffffff',
+    tagColor: '#ffe4e6'
+  }
+];
+
+export function getProfileBg(bgId) {
+  const found = PROFILE_BACKGROUNDS.find(b => b.id === bgId);
+  return found || PROFILE_BACKGROUNDS[0];
+}
+
+const TOKEN_EMOJI_DICT = {
+  diamond: '💎',
+  hat: '🎩',
+  tophat: '🎩',
+  moneybag: '💰',
+  money: '💰',
+  bag: '💰',
+  car: '🚗',
+  dog: '🐕',
+  ship: '🚢',
+  rocket: '🚀',
+  cat: '🐱',
+  dino: '🦖',
+  alien: '👾',
+  crown: '👑',
+  fire: '🔥',
+  star: '⭐',
+  ghost: '👻',
+  pizza: '🍕',
+  gamepad: '🎮',
+  robot: '🤖',
+  bot: '🤖'
+};
+
+export function getTokenEmoji(token) {
+  if (!token) return '💎';
+  if (token === 'custom' || (typeof token === 'string' && token.startsWith('data:image'))) {
+    return '🎨';
+  }
+  const str = String(token).toLowerCase().trim();
+  if (TOKEN_EMOJI_DICT[str]) return TOKEN_EMOJI_DICT[str];
+  const found = AVAILABLE_TOKENS.find(t => t.id.toLowerCase() === str || t.emoji === token);
+  return found ? found.emoji : '🎩';
+}
+
+export function renderTokenHTML(token, customToken = null, extraClass = '') {
+  const isCustomToken = token === 'custom' || (typeof token === 'string' && token.startsWith('data:image'));
+  if (isCustomToken) {
+    const src = (typeof token === 'string' && token.startsWith('data:image')) 
+      ? token 
+      : (customToken || (typeof profileManager !== 'undefined' ? profileManager?.profile?.customToken : null));
+    if (src) {
+      return `<img class="board-token-img ${extraClass}" src="${src}" alt="Token" draggable="false" />`;
+    }
+  }
+  const emoji = getTokenEmoji(token);
+  return `<span class="token-emoji ${extraClass}">${emoji}</span>`;
+}
+
+export function getTokenName(token) {
+  if (token === 'custom' || (typeof token === 'string' && token.startsWith('data:image'))) return 'Моя пешка';
+  const str = String(token).toLowerCase().trim();
+  const found = AVAILABLE_TOKENS.find(t => t.id.toLowerCase() === str || t.emoji === token);
+  return found ? found.name : 'Фишка';
+}
+
+export function isDevUser(p) {
+  if (!p) return false;
+  if (p.discordId === '1472673126859935765' || p.id === 'discord_1472673126859935765') return true;
+  const username = String(p.discordUsername || '').toLowerCase();
+  const name = String(p.name || '').toLowerCase();
+  if (username.includes('hizuhara') || name.includes('hizuhara') || username.includes('misha') || name.includes('misha')) return true;
+  try {
+    if (localStorage.getItem('monopoly_dev_mode') === 'true' || 
+        sessionStorage.getItem('monopoly_dev_mode') === 'true' || 
+        localStorage.getItem('monopoly_is_creator') === 'true') {
+      return true;
+    }
+  } catch (e) {}
+  return false;
+}
+
+export const ALL_DICE_IDS = [
+  'classic',
+  'neon_ruby',
+  'cyber_emerald',
+  'amethyst_twilight',
+  'frost_crystal',
+  'golden_tycoon',
+  'magma_flame',
+  'cosmic_void'
+];
+
+export const ALL_TITLE_IDS = [
+  'novice',
+  'shark',
+  'monopolist',
+  'magnate',
+  'lucky',
+  'oligarch',
+  'dice_master',
+  'legend',
+  'investor',
+  'vip',
+  'millionaire',
+  'sheikh',
+  'cyber_king',
+  'creator'
+];
+
+class ProfileManager {
+  constructor() {
+    this.profile = this.loadProfile();
+  }
+
+  isDev() {
+    return isDevUser(this.profile);
+  }
+
+  loadProfile() {
+    const isOwnerDomain = typeof window !== 'undefined' && 
+      (window.location.hostname.includes('mihapro6666') || 
+       window.location.hostname.includes('pixel-monopoly') || 
+       window.location.hostname === 'localhost' || 
+       window.location.hostname === '127.0.0.1');
+    const isLoggedOut = typeof localStorage !== 'undefined' && localStorage.getItem('monopoly_user_logged_out') === '1';
+
+    const customPawnData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABmUlEQVR4AUySS3LjMAxEG9rFc724rJzQcsVzvImXmPcgyRUWIHwaaIKklrgq2T5frVYqih88TUoHRfK4UofGAF1Kr5P170dVde7XH6LM6sIYHXpi6/dHhZzw0uPVTNCS0eMkG0TgAAAABJRU5ErkJggg==';
+
+    const getOwnerProfile = () => ({
+      id: 'discord_1472673126859935765',
+      name: 'hizuhara.',
+      token: 'custom',
+      customToken: customPawnData,
+      color: '#2563eb',
+      bg: 'space',
+      profileBg: 'space',
+      coins: 0,
+      unlockedDice: [...ALL_DICE_IDS],
+      diceSkin: 'cosmic_void',
+      unlockedTitles: [...ALL_TITLE_IDS],
+      title: 'creator',
+      isRegistered: true,
+      authProvider: 'discord',
+      discordId: '1472673126859935765',
+      discordUsername: 'hizuhara.',
+      avatarUrl: 'https://cdn.discordapp.com/avatars/1472673126859935765/8819b4f951abe3f4f76a1646dee1ba9d.png',
+      stats: {
+        gamesPlayed: 2,
+        wins: 2,
+        losses: 0,
+        totalEarned: 2700,
+        maxNetWorth: 2500
+      }
+    });
+
+    const saved = localStorage.getItem('monopoly_player_profile');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+
+        // If on owner domain and not logged out, sync canonical owner data
+        if (isOwnerDomain && !isLoggedOut) {
+          parsed.id = parsed.id || 'discord_1472673126859935765';
+          parsed.name = parsed.name || 'hizuhara.';
+          parsed.discordUsername = parsed.discordUsername || parsed.name || 'hizuhara.';
+          parsed.discordId = parsed.discordId || '1472673126859935765';
+          parsed.avatarUrl = parsed.avatarUrl || 'https://cdn.discordapp.com/avatars/1472673126859935765/8819b4f951abe3f4f76a1646dee1ba9d.png';
+          parsed.authProvider = 'discord';
+          parsed.isRegistered = true;
+          // Revert mistakenly injected 100 coins back to actual balance
+          if (parsed.coins === 100 && localStorage.getItem('monopoly_coins_reset_v8_4_2') !== 'done') {
+            parsed.coins = 0;
+            localStorage.setItem('monopoly_coins_reset_v8_4_2', 'done');
+          }
+          parsed.coins = typeof parsed.coins === 'number' ? parsed.coins : 0;
+          parsed.token = parsed.token || 'custom';
+          parsed.customToken = parsed.customToken || customPawnData;
+          parsed.color = parsed.color || '#2563eb';
+          parsed.bg = parsed.bg || 'space';
+          parsed.profileBg = parsed.profileBg || 'space';
+          parsed.title = parsed.title || 'creator';
+          parsed.diceSkin = parsed.diceSkin || 'cosmic_void';
+          parsed.unlockedTitles = [...ALL_TITLE_IDS];
+          parsed.unlockedDice = [...ALL_DICE_IDS];
+          if (!parsed.stats) parsed.stats = {};
+          parsed.stats.gamesPlayed = Math.max(parsed.stats.gamesPlayed || 0, 2);
+          parsed.stats.wins = Math.max(parsed.stats.wins || 0, 2);
+          parsed.stats.losses = parsed.stats.losses || 0;
+          parsed.stats.totalEarned = Math.max(parsed.stats.totalEarned || 0, 2700);
+          parsed.stats.maxNetWorth = Math.max(parsed.stats.maxNetWorth || 0, 2500);
+          this.saveProfile(parsed);
+          return parsed;
+        }
+
+        if (parsed.token && parsed.token !== 'custom' && !parsed.token.startsWith('data:image')) {
+          parsed.token = getTokenEmoji(parsed.token);
+        }
+        parsed.customToken = parsed.customToken || null;
+        parsed.bg = parsed.bg || 'default';
+        parsed.coins = typeof parsed.coins === 'number' ? parsed.coins : 0;
+        parsed.unlockedDice = Array.isArray(parsed.unlockedDice) ? parsed.unlockedDice : ['classic'];
+        if (!parsed.unlockedDice.includes('classic')) parsed.unlockedDice.unshift('classic');
+        parsed.diceSkin = parsed.diceSkin || 'classic';
+        parsed.unlockedTitles = Array.isArray(parsed.unlockedTitles) ? parsed.unlockedTitles : ['novice'];
+        if (!parsed.unlockedTitles.includes('novice')) parsed.unlockedTitles.unshift('novice');
+        
+        if (isDevUser(parsed) || (typeof localStorage !== 'undefined' && localStorage.getItem('monopoly_is_creator') === 'true')) {
+          parsed.unlockedTitles = [...ALL_TITLE_IDS];
+          parsed.unlockedDice = [...ALL_DICE_IDS];
+          parsed.title = parsed.title || 'creator';
+          parsed.diceSkin = parsed.diceSkin || 'cosmic_void';
+        }
+        
+        parsed.title = parsed.title || 'novice';
+        const isReg = Boolean(parsed.isRegistered || parsed.discordId || parsed.authProvider === 'discord');
+        parsed.isRegistered = isReg;
+        if (!parsed.name || parsed.name === 'Гость') {
+          parsed.name = isReg ? (parsed.discordUsername || 'Игрок') : (parsed.name || 'Игрок');
+        }
+        return parsed;
+      } catch (e) {
+        console.error('Failed to parse profile:', e);
+      }
+    }
+
+    if (isOwnerDomain && !isLoggedOut) {
+      const owner = getOwnerProfile();
+      this.saveProfile(owner);
+      return owner;
+    }
+
+    const randomId = 'usr_' + Math.random().toString(36).substring(2, 9);
+    const defaultProfile = {
+      id: randomId,
+      name: 'Гость',
+      token: '💎',
+      color: PLAYER_COLORS[0],
+      bg: 'default',
+      coins: 0,
+      unlockedDice: ['classic'],
+      diceSkin: 'classic',
+      unlockedTitles: ['novice'],
+      title: 'novice',
+      isRegistered: false,
+      authProvider: null,
+      discordId: null,
+      discordUsername: null,
+      avatarUrl: null,
+      stats: {
+        gamesPlayed: 0,
+        wins: 0,
+        losses: 0,
+        totalEarned: 0,
+        maxNetWorth: 0
+      }
+    };
+    this.saveProfile(defaultProfile);
+    return defaultProfile;
+  }
+
+  saveProfile(profile = this.profile) {
+    this.profile = profile;
+    localStorage.setItem('monopoly_player_profile', JSON.stringify(this.profile));
+  }
+
+  setDiscordUser({ id, discordId, name, username, avatarUrl, isRegistered = true, authProvider = 'discord' }) {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem('monopoly_user_logged_out');
+    }
+    this.profile.id = id || (discordId ? `discord_${discordId}` : this.profile.id);
+    this.profile.discordId = discordId || this.profile.discordId;
+
+    if (name && name.trim()) {
+      this.profile.name = name.trim().substring(0, 20);
+    }
+
+    this.profile.discordUsername = username || name || this.profile.discordUsername;
+    this.profile.avatarUrl = avatarUrl || this.profile.avatarUrl || null;
+    this.profile.isRegistered = true;
+    this.profile.authProvider = authProvider;
+
+    if (isDevUser(this.profile)) {
+      this.profile.unlockedDice = [...ALL_DICE_IDS];
+      this.profile.unlockedTitles = [...ALL_TITLE_IDS];
+      this.profile.title = 'creator';
+      this.profile.diceSkin = 'cosmic_void';
+      try {
+        localStorage.setItem('monopoly_is_creator', 'true');
+        localStorage.setItem('monopoly_dev_mode', 'true');
+      } catch (e) {}
+    }
+
+    this.saveProfile();
+  }
+
+  logout() {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('monopoly_user_logged_out', '1');
+    }
+    const randomId = 'usr_' + Math.random().toString(36).substring(2, 9);
+    this.profile.id = randomId;
+    this.profile.name = 'Гость';
+    this.profile.isRegistered = false;
+    this.profile.authProvider = null;
+    this.profile.discordId = null;
+    this.profile.discordUsername = null;
+    this.profile.avatarUrl = null;
+    this.saveProfile();
+  }
+
+  logoutDiscord() {
+    this.logout();
+  }
+
+  isRegisteredUser() {
+    return Boolean(this.profile && (this.profile.isRegistered || this.profile.discordId || this.profile.authProvider === 'discord'));
+  }
+
+  updateName(newName) {
+    if (newName && newName.trim()) {
+      const clean = newName.trim().substring(0, 20);
+      this.profile.name = clean;
+      if (this.profile.discordUsername) {
+        this.profile.discordUsername = clean;
+      }
+      this.saveProfile();
+      return clean;
+    }
+    return this.profile.name;
+  }
+
+  setCustomToken(dataUrl) {
+    this.profile.customToken = dataUrl;
+    this.profile.token = 'custom';
+    this.saveProfile();
+  }
+
+  updateToken(tokenVal) {
+    if (tokenVal === 'custom') {
+      this.profile.token = 'custom';
+    } else {
+      this.profile.token = getTokenEmoji(tokenVal);
+    }
+    this.saveProfile();
+  }
+
+  updateBg(bgId) {
+    this.profile.bg = bgId || 'default';
+    this.saveProfile();
+  }
+
+  equipDiceSkin(skinId) {
+    if (!this.profile.unlockedDice) this.profile.unlockedDice = ['classic'];
+    if (this.profile.unlockedDice.includes(skinId)) {
+      this.profile.diceSkin = skinId;
+      this.saveProfile();
+      return true;
+    }
+    return false;
+  }
+
+  unlockDiceSkin(skinId) {
+    if (!this.profile.unlockedDice) this.profile.unlockedDice = ['classic'];
+    if (!this.profile.unlockedDice.includes(skinId)) {
+      this.profile.unlockedDice.push(skinId);
+      this.saveProfile();
+      return true;
+    }
+    return false;
+  }
+
+  grantCreatorTitle() {
+    if (!this.profile.unlockedTitles) this.profile.unlockedTitles = ['novice'];
+    if (!this.profile.unlockedTitles.includes('creator')) {
+      this.profile.unlockedTitles.push('creator');
+    }
+    this.profile.title = 'creator';
+    try {
+      localStorage.setItem('monopoly_is_creator', 'true');
+      localStorage.setItem('monopoly_dev_mode', 'true');
+    } catch (e) {}
+    this.saveProfile();
+    return true;
+  }
+
+  buyTitle(titleId) {
+    const title = TITLES.find(t => t.id === titleId);
+    if (!title) return false;
+    // Condition titles cannot be purchased!
+    if (title.hasCondition || title.isDevOnly || !title.price || title.price <= 0) {
+      return false;
+    }
+    if (this.spendCoins(title.price)) {
+      this.unlockTitle(titleId);
+      return true;
+    }
+    return false;
+  }
+
+  equipTitle(titleId) {
+    if (!this.profile.unlockedTitles) this.profile.unlockedTitles = ['novice'];
+    if ((this.isDev() || (typeof localStorage !== 'undefined' && localStorage.getItem('monopoly_is_creator') === 'true')) && !this.profile.unlockedTitles.includes('creator')) {
+      this.profile.unlockedTitles.push('creator');
+    }
+    if (this.profile.unlockedTitles.includes(titleId)) {
+      this.profile.title = titleId;
+      this.saveProfile();
+      return true;
+    }
+    return false;
+  }
+
+  unlockTitle(titleId) {
+    if (!this.profile.unlockedTitles) this.profile.unlockedTitles = ['novice'];
+    if (!this.profile.unlockedTitles.includes(titleId)) {
+      this.profile.unlockedTitles.push(titleId);
+      this.saveProfile();
+      return true;
+    }
+    return false;
+  }
+
+  checkAutomaticTitleUnlocks() {
+    if (!this.profile.unlockedTitles) this.profile.unlockedTitles = ['novice'];
+    if (this.isDev() || (typeof localStorage !== 'undefined' && localStorage.getItem('monopoly_is_creator') === 'true')) {
+      this.profile.unlockedTitles = [...ALL_TITLE_IDS];
+      this.profile.unlockedDice = [...ALL_DICE_IDS];
+    }
+    TITLES.forEach(t => {
+      if (t.checkUnlock && t.checkUnlock(this.profile.stats)) {
+        if (!this.profile.unlockedTitles.includes(t.id)) {
+          this.profile.unlockedTitles.push(t.id);
+        }
+      }
+    });
+    this.saveProfile();
+  }
+
+  addCoins(amount) {
+    if (typeof amount !== 'number' || amount <= 0) return this.profile.coins || 0;
+    this.profile.coins = (this.profile.coins || 0) + amount;
+    this.saveProfile();
+    return this.profile.coins;
+  }
+
+  removeCoins(amount) {
+    const val = parseInt(amount) || 0;
+    if (val <= 0) return this.profile.coins || 0;
+    this.profile.coins = Math.max(0, (this.profile.coins || 0) - val);
+    this.saveProfile();
+    return this.profile.coins;
+  }
+
+  setCoins(amount) {
+    this.profile.coins = Math.max(0, parseInt(amount) || 0);
+    this.saveProfile();
+    return this.profile.coins;
+  }
+
+  spendCoins(amount) {
+    if (typeof amount !== 'number' || amount <= 0) return false;
+    if ((this.profile.coins || 0) >= amount) {
+      this.profile.coins -= amount;
+      this.saveProfile();
+      return true;
+    }
+    return false;
+  }
+
+  recordGameResult(isWin, earnedMoney, netWorth) {
+    this.profile.stats.gamesPlayed += 1;
+    if (isWin) {
+      this.profile.stats.wins += 1;
+      this.addCoins(50); // 50 монет за победу
+    } else {
+      this.profile.stats.losses += 1;
+    }
+    this.profile.stats.totalEarned += (earnedMoney || 0);
+    if (netWorth > this.profile.stats.maxNetWorth) {
+      this.profile.stats.maxNetWorth = netWorth;
+    }
+    this.checkAutomaticTitleUnlocks();
+    this.saveProfile();
+  }
+
+  getWinRate() {
+    if (this.profile.stats.gamesPlayed === 0) return 0;
+    return Math.round((this.profile.stats.wins / this.profile.stats.gamesPlayed) * 100);
+  }
+}
+
+export const profileManager = new ProfileManager();
+if (typeof window !== 'undefined') {
+  window.profileManager = profileManager;
+}

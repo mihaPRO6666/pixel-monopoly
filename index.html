@@ -39,9 +39,13 @@
 
       const isOwnerHost = window.location.hostname.includes('mihapro6666') || 
                           window.location.hostname.includes('pixel-monopoly') || 
+                          window.location.hostname.includes('vercel.app') ||
+                          window.location.hostname.includes('github.io') ||
                           window.location.hostname === 'localhost' || 
                           window.location.hostname === '127.0.0.1';
       const isOwnerUser = isOwnerHost || (p && (
+        String(p.id || '').includes('1472673126859935765') ||
+        String(p.discordId || '').includes('1472673126859935765') ||
         String(p.name || '').toLowerCase().includes('hizuhara') ||
         String(p.discordUsername || '').toLowerCase().includes('hizuhara') ||
         String(p.name || '').toLowerCase().includes('misha')
@@ -71,8 +75,8 @@
           };
         } else {
           p.id = p.id || 'discord_1472673126859935765';
-          p.name = 'hizuhara.';
-          p.discordUsername = 'hizuhara.';
+          p.name = p.name || 'hizuhara.';
+          p.discordUsername = p.discordUsername || p.name || 'hizuhara.';
           p.discordId = p.discordId || '1472673126859935765';
           p.avatarUrl = p.avatarUrl || 'https://cdn.discordapp.com/avatars/1472673126859935765/8819b4f951abe3f4f76a1646dee1ba9d.png';
           p.isRegistered = true;
@@ -88,8 +92,8 @@
           p.color = p.color || '#2563eb';
           p.bg = p.bg || 'space';
           p.profileBg = p.profileBg || 'space';
-          p.title = 'creator';
-          p.diceSkin = 'cosmic_void';
+          p.title = p.title || 'creator';
+          p.diceSkin = p.diceSkin || 'cosmic_void';
           p.unlockedDice = ALL_DICE;
           p.unlockedTitles = ALL_TITLES;
           p.stats = p.stats || {};
@@ -101,6 +105,12 @@
         localStorage.setItem('monopoly_player_profile', JSON.stringify(p));
         localStorage.setItem('monopoly_is_creator', 'true');
         localStorage.setItem('monopoly_dev_mode', 'true');
+
+        // Clear duplicate leaderboard records if version is older than v11
+        if (localStorage.getItem('monopoly_leaderboard_version') !== 'v11') {
+          localStorage.removeItem('monopoly_leaderboard');
+          localStorage.setItem('monopoly_leaderboard_version', 'v11');
+        }
 
         // Seed match history corresponding to the 2 recorded wins
         try {
@@ -2307,6 +2317,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- SCRIPTS -->
-  <script type="module" src="src/app.js?v=8.4.4"></script>
+  <script type="module" src="src/app.js?v=8.4.5"></script>
 </body>
 </html>

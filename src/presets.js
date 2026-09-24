@@ -1,1 +1,102 @@
-const a13_0x180c1e=a13_0x548f;(function(_0xd3341e,_0x399141){const _0x17cbdf=a13_0x548f,_0x596623=_0xd3341e();while(!![]){try{const _0x4aa2c6=-parseInt(_0x17cbdf(0x122))/0x1+-parseInt(_0x17cbdf(0x110))/0x2*(parseInt(_0x17cbdf(0x118))/0x3)+parseInt(_0x17cbdf(0x125))/0x4*(parseInt(_0x17cbdf(0x10e))/0x5)+-parseInt(_0x17cbdf(0x116))/0x6+parseInt(_0x17cbdf(0x115))/0x7*(-parseInt(_0x17cbdf(0x120))/0x8)+-parseInt(_0x17cbdf(0x11f))/0x9*(parseInt(_0x17cbdf(0x112))/0xa)+parseInt(_0x17cbdf(0x123))/0xb;if(_0x4aa2c6===_0x399141)break;else _0x596623['push'](_0x596623['shift']());}catch(_0x216124){_0x596623['push'](_0x596623['shift']());}}}(a13_0x55ab,0x19c44));function a13_0x55ab(){const _0x13dbe4=['jdi1mdaG0l3qScdrGDgc0ldrGngc0luSinc30ldrGnc/0lVqSngc0laGjdqWmcWG0ydqSnc30ltqSngh0laG0l/qVIaYingd0lVqUngg0ySG0lRqSnc20ltqVTc80ymG0lJqS9ga0l7qUTgd','mtmXmJa1C1L6yKzt','oti1mtu2mujxBLnmzG','yM9VBq','nZq4ngLnB3fPvq','0jtqTTc10lRqV9c+0yiG0lGG0lRqSnc30l3qSa','AMfJA3bVDa','yMXPDhO','ntvorgPcAvO','0j7rGnc40lpqUnc90ldqU9gm0l3rI9c1ingc0yprGnc90lJrGnc90yVqTsdqV9ga0ldqSTc40lVqScdqNnc+0l3qVTc/0l7qU9c40lG','mZa3ntq2teHbB0zv','0jhrI9gb0ylrGngl0lKG0lhqU9c40yy','ntbothjoCNK','y2XHC3nPyW','0kxqSnga0ltqUTc+0ya','n09WEhzQEG','nZG1mdGYEKvuuwnT','0kdqSnc30ydqTDgi0lxqVDcWingb0ylrGnc+0lNqUTcWincX0lxqTYdrGDcX0l7rGncWinc80l7qVDc+0l/qVTc70lJqUcWG0ltqVTc80laG0ltqTDgi0lxqSTc70luG0l3qScaZmcu','m1DOtgvOwq','jdeWmdaG0l3qScdrGDgc0ldrGngc0luSingd0ltqSTc+0lxqVDc90yVqTsdqVDcW0lVqVTcZ0lGSinc30ldqV9ga0lxrGIdrGDcX0l7rGncWinga0lxqVDgc0ySG0liG0ylrJTga0yZqVnc1','AgfYzgnVCMu','0khrGTga0l7qUngc0lxqU9gm0l3rI9c5incX0ypqVa','0jlrGDc1inc90ldqU9c+0lpqUcdqUcdrIngc0ydqSnge0ySG0l3qSnc60ldqV9c70lJqSTcW0y7rGTgb0y8G0liG0ytqVTc90ltqTsdcQ9cr0lxrGDc/0lVqSngc0l3qVTc5ingb0ylqVTgp0l3qUTc4WRS','zMLUza','BwvKAxvT','mZi5nJyXzwrIDMjb','mti1nJK3nKDcrxntAW'];a13_0x55ab=function(){return _0x13dbe4;};return a13_0x55ab();}function a13_0x548f(_0x22ad67,_0x1518b6){_0x22ad67=_0x22ad67-0x10e;const _0x55abf=a13_0x55ab();let _0x548f15=_0x55abf[_0x22ad67];if(a13_0x548f['xiAuxn']===undefined){var _0x2e8565=function(_0x1b8c3d){const _0x3e726f='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x487161='',_0x15b328='';for(let _0x10e67c=0x0,_0x98b85,_0x120d44,_0xcf43db=0x0;_0x120d44=_0x1b8c3d['charAt'](_0xcf43db++);~_0x120d44&&(_0x98b85=_0x10e67c%0x4?_0x98b85*0x40+_0x120d44:_0x120d44,_0x10e67c++%0x4)?_0x487161+=String['fromCharCode'](0xff&_0x98b85>>(-0x2*_0x10e67c&0x6)):0x0){_0x120d44=_0x3e726f['indexOf'](_0x120d44);}for(let _0x345655=0x0,_0x122200=_0x487161['length'];_0x345655<_0x122200;_0x345655++){_0x15b328+='%'+('00'+_0x487161['charCodeAt'](_0x345655)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x15b328);};a13_0x548f['tdcwbw']=_0x2e8565,a13_0x548f['tHegFn']={},a13_0x548f['xiAuxn']=!![];}const _0x487607=_0x55abf[0x0];a13_0x548f['fPcJvL']!==_0x487607&&(a13_0x548f['tHegFn']={},a13_0x548f['fPcJvL']=_0x487607);const _0x3e79b0=a13_0x548f['tHegFn'][_0x22ad67];return _0x3e79b0===undefined?(_0x548f15=a13_0x548f['tdcwbw'](_0x548f15),a13_0x548f['tHegFn'][_0x22ad67]=_0x548f15):_0x548f15=_0x3e79b0,_0x548f15;}export const GAME_PRESETS=[{'id':a13_0x180c1e(0x113),'name':'Классика','desc':a13_0x180c1e(0x10f),'settings':{'startingCash':0x5dc,'salary':0xc8,'doubleSalaryOnGoLanding':![],'freeParkingJackpot':![],'rentInJail':!![],'initialRandomStreets':0x0,'allowBuildingWithoutMonopoly':![],'buildingCostMultiplier':0x1,'rentMultiplier':0x1,'taxMultiplier':0x1,'turnTimerSeconds':0x3c,'botDifficulty':a13_0x180c1e(0x11e)}},{'id':a13_0x180c1e(0x128),'name':a13_0x180c1e(0x111),'desc':a13_0x180c1e(0x121),'settings':{'startingCash':0x9c4,'salary':0x190,'doubleSalaryOnGoLanding':!![],'freeParkingJackpot':!![],'rentInJail':!![],'initialRandomStreets':0x2,'allowBuildingWithoutMonopoly':![],'buildingCostMultiplier':0.8,'rentMultiplier':1.2,'taxMultiplier':0x1,'turnTimerSeconds':0x1e}},{'id':a13_0x180c1e(0x127),'name':a13_0x180c1e(0x126),'desc':a13_0x180c1e(0x11c),'settings':{'startingCash':0x5dc,'salary':0xc8,'doubleSalaryOnGoLanding':!![],'freeParkingJackpot':!![],'initialJackpot':0x1f4,'rentInJail':!![],'initialRandomStreets':0x0,'allowBuildingWithoutMonopoly':![],'buildingCostMultiplier':0x1,'rentMultiplier':0x1,'taxMultiplier':1.5,'turnTimerSeconds':0x3c}},{'id':a13_0x180c1e(0x124),'name':a13_0x180c1e(0x11b),'desc':a13_0x180c1e(0x117),'settings':{'startingCash':0x7d0,'salary':0xfa,'doubleSalaryOnGoLanding':![],'freeParkingJackpot':![],'rentInJail':!![],'initialRandomStreets':0x1,'allowBuildingWithoutMonopoly':!![],'buildingCostMultiplier':0.7,'rentMultiplier':1.3,'taxMultiplier':0x1,'turnTimerSeconds':0x2d}},{'id':a13_0x180c1e(0x11a),'name':a13_0x180c1e(0x114),'desc':a13_0x180c1e(0x119),'settings':{'startingCash':0x3e8,'salary':0x96,'doubleSalaryOnGoLanding':![],'freeParkingJackpot':![],'rentInJail':![],'initialRandomStreets':0x0,'allowBuildingWithoutMonopoly':![],'buildingCostMultiplier':1.2,'rentMultiplier':1.5,'taxMultiplier':0x2,'turnTimerSeconds':0x1e}}];export function getPresetById(_0x15b328){const _0x7754f8=a13_0x180c1e;return GAME_PRESETS[_0x7754f8(0x11d)](_0x10e67c=>_0x10e67c['id']===_0x15b328)||GAME_PRESETS[0x0];}
+/**
+ * Monopoly Rule Presets & Custom Modifiers
+ */
+
+export const GAME_PRESETS = [
+  {
+    id: 'classic',
+    name: 'Классика',
+    desc: 'Оригинальные турнирные правила Монополии',
+    settings: {
+      startingCash: 1500,
+      salary: 200,
+      doubleSalaryOnGoLanding: false,
+      freeParkingJackpot: false,
+      rentInJail: true,
+      initialRandomStreets: 0,
+      allowBuildingWithoutMonopoly: false,
+      buildingCostMultiplier: 1.0,
+      rentMultiplier: 1.0,
+      taxMultiplier: 1.0,
+      turnTimerSeconds: 60,
+      botDifficulty: 'medium'
+    }
+  },
+  {
+    id: 'blitz',
+    name: 'Быстрый блиц',
+    desc: '$2500 на старте, зарплата $400, раздача по 2 улицы каждому игроку',
+    settings: {
+      startingCash: 2500,
+      salary: 400,
+      doubleSalaryOnGoLanding: true,
+      freeParkingJackpot: true,
+      rentInJail: true,
+      initialRandomStreets: 2,
+      allowBuildingWithoutMonopoly: false,
+      buildingCostMultiplier: 0.8,
+      rentMultiplier: 1.2,
+      taxMultiplier: 1.0,
+      turnTimerSeconds: 30
+    }
+  },
+  {
+    id: 'jackpot',
+    name: 'Джекпот и казна',
+    desc: 'Все налоги и штрафы накапливаются в фонде «Бесплатной стоянки»',
+    settings: {
+      startingCash: 1500,
+      salary: 200,
+      doubleSalaryOnGoLanding: true,
+      freeParkingJackpot: true,
+      initialJackpot: 500,
+      rentInJail: true,
+      initialRandomStreets: 0,
+      allowBuildingWithoutMonopoly: false,
+      buildingCostMultiplier: 1.0,
+      rentMultiplier: 1.0,
+      taxMultiplier: 1.5,
+      turnTimerSeconds: 60
+    }
+  },
+  {
+    id: 'boom',
+    name: 'Строительный бум',
+    desc: 'Разрешена стройка без сбора монополии, дома дешевле на 30%',
+    settings: {
+      startingCash: 2000,
+      salary: 250,
+      doubleSalaryOnGoLanding: false,
+      freeParkingJackpot: false,
+      rentInJail: true,
+      initialRandomStreets: 1,
+      allowBuildingWithoutMonopoly: true,
+      buildingCostMultiplier: 0.7,
+      rentMultiplier: 1.3,
+      taxMultiplier: 1.0,
+      turnTimerSeconds: 45
+    }
+  },
+  {
+    id: 'hardcore',
+    name: 'Хардкор',
+    desc: '$1000 на старте, удвоенные налоги, запрет сбора ренты в тюрьме',
+    settings: {
+      startingCash: 1000,
+      salary: 150,
+      doubleSalaryOnGoLanding: false,
+      freeParkingJackpot: false,
+      rentInJail: false,
+      initialRandomStreets: 0,
+      allowBuildingWithoutMonopoly: false,
+      buildingCostMultiplier: 1.2,
+      rentMultiplier: 1.5,
+      taxMultiplier: 2.0,
+      turnTimerSeconds: 30
+    }
+  }
+];
+
+export function getPresetById(id) {
+  return GAME_PRESETS.find(p => p.id === id) || GAME_PRESETS[0];
+}

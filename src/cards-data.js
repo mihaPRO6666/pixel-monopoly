@@ -1,1 +1,117 @@
-function a3_0x2e21(_0x261f5e,_0x42cebd){_0x261f5e=_0x261f5e-0xb1;const _0xae84f1=a3_0xae84();let _0x2e2150=_0xae84f1[_0x261f5e];if(a3_0x2e21['xgQEpM']===undefined){var _0x433fde=function(_0x3d4994){const _0x2d3105='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x4b0566='',_0x28926d='';for(let _0x3722b4=0x0,_0x3b3916,_0x3f9717,_0x336d21=0x0;_0x3f9717=_0x3d4994['charAt'](_0x336d21++);~_0x3f9717&&(_0x3b3916=_0x3722b4%0x4?_0x3b3916*0x40+_0x3f9717:_0x3f9717,_0x3722b4++%0x4)?_0x4b0566+=String['fromCharCode'](0xff&_0x3b3916>>(-0x2*_0x3722b4&0x6)):0x0){_0x3f9717=_0x2d3105['indexOf'](_0x3f9717);}for(let _0x153ea4=0x0,_0x4564fd=_0x4b0566['length'];_0x153ea4<_0x4564fd;_0x153ea4++){_0x28926d+='%'+('00'+_0x4b0566['charCodeAt'](_0x153ea4)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x28926d);};a3_0x2e21['CbkCJK']=_0x433fde,a3_0x2e21['xumxhH']={},a3_0x2e21['xgQEpM']=!![];}const _0x175071=_0xae84f1[0x0];a3_0x2e21['SeQnXF']!==_0x175071&&(a3_0x2e21['xumxhH']={},a3_0x2e21['SeQnXF']=_0x175071);const _0x45f96a=a3_0x2e21['xumxhH'][_0x261f5e];return _0x45f96a===undefined?(_0x2e2150=a3_0x2e21['CbkCJK'](_0x2e2150),a3_0x2e21['xumxhH'][_0x261f5e]=_0x2e2150):_0x2e2150=_0x45f96a,_0x2e2150;}const a3_0x320b92=a3_0x2e21;(function(_0x3131d9,_0x42dfc2){const _0x4d4abc=a3_0x2e21,_0x44991f=_0x3131d9();while(!![]){try{const _0x564fc7=parseInt(_0x4d4abc(0xc8))/0x1*(parseInt(_0x4d4abc(0xd7))/0x2)+parseInt(_0x4d4abc(0xd2))/0x3+parseInt(_0x4d4abc(0xd6))/0x4+-parseInt(_0x4d4abc(0xc6))/0x5*(-parseInt(_0x4d4abc(0xb8))/0x6)+-parseInt(_0x4d4abc(0xd4))/0x7+parseInt(_0x4d4abc(0xde))/0x8+parseInt(_0x4d4abc(0xe0))/0x9*(-parseInt(_0x4d4abc(0xdb))/0xa);if(_0x564fc7===_0x42dfc2)break;else _0x44991f['push'](_0x44991f['shift']());}catch(_0x39f695){_0x44991f['push'](_0x44991f['shift']());}}}(a3_0xae84,0x75e11));export const CHANCE_CARDS=[{'id':'ch_go','title':a3_0x320b92(0xbb),'desc':'Переместитесь\x20на\x20клетку\x20ВПЕРЁД\x20и\x20получите\x20зарплату.','action':{'type':a3_0x320b92(0xb7),'tileId':0x0,'collectSalary':!![]}},{'id':a3_0x320b92(0xc4),'title':a3_0x320b92(0xc1),'desc':a3_0x320b92(0xc0),'action':{'type':'move_to','tileId':0x27,'collectSalary':!![]}},{'id':a3_0x320b92(0xcf),'title':a3_0x320b92(0xd8),'desc':a3_0x320b92(0xca),'action':{'type':a3_0x320b92(0xe6)}},{'id':'ch_out_jail','title':a3_0x320b92(0xe4),'desc':'Эту\x20карточку\x20можно\x20сохранить\x20до\x20востребования\x20или\x20продать\x20другому\x20игроку.','action':{'type':a3_0x320b92(0xdc)}},{'id':a3_0x320b92(0xb5),'title':a3_0x320b92(0xb3),'desc':a3_0x320b92(0xc9),'action':{'type':a3_0x320b92(0xd5),'amount':0x32}},{'id':a3_0x320b92(0xb2),'title':a3_0x320b92(0xc7),'desc':a3_0x320b92(0xd1),'action':{'type':'pay_money','amount':0x32}},{'id':a3_0x320b92(0xc2),'title':a3_0x320b92(0xd9),'desc':a3_0x320b92(0xcd),'action':{'type':a3_0x320b92(0xe3),'houseCost':0x19,'hotelCost':0x64}},{'id':'ch_station','title':a3_0x320b92(0xcc),'desc':a3_0x320b92(0xb9),'action':{'type':a3_0x320b92(0xbc),'targetGroup':a3_0x320b92(0xe5)}},{'id':'ch_loan','title':'Погашение\x20кредита','desc':a3_0x320b92(0xbe),'action':{'type':'gain_money','amount':0x96}}];function a3_0xae84(){const _0x5b852a=['z29FDg9FAMfPBa','y2nFAw5OzxjPDa','y2HFC3bLzwrPBMC','0jhqSnc90lRqVTcY0yhqUTc40luG0ltqUncY0lJqTnc10l3qTngl','0j7qV9c70ldrGTcWingb0ylrGncW0yxqVTcY0lRqUa','y2HFyMfUA19KAxy','0jlqVTc30llrGncW0yiG0l/qVTc00l7rHDc+0ltqVDc+0lpqVIdqVDcW0lVqVTcZ0la','Bw92zv90BW','mtjzvKjbCLy','0j7rGTc/0ydqSncY0lVrJ9c50ylqTDgb0yWG0l3qScdqSDc70lJqTTcW0lNrInc40lKG0llqVTc60lFqSnc7lIdqLDgb0lVqUcdqV9ga0l7rHDc+0ltqUngc0luG0jlqV9c10ydrKDc0iokaLcdqV9c+0lVrG9gh0lJrGTc1incY0yVqV9c70ldrGTgdlG','0jlqSngiinc00lxqVDgminga0l7qTTc00lxqVDc40y8H','0j7rGTc/0ydqSncY0lVrJ9c50ylqTDgb0yWG0l3qScdqV9c+0lVqTsdcQ9cs0j/qLDcG0ihqLmk7','Bw92zv90B19UzwfYzxn0','0j7qV9c70ldrGTc40ylqTsdrGDgh0zhrGIdqT9cWinc60l7qVDgb0ypqU9gm0ylqSngg0lJrJIaKntaU','0khrGnc+0lOG0llqSngi0lxqS9c+ingb0ylrGnc+0lJrGTc10lVrJnc90l7qS9c+inc60ydqTDc00lJrGTcWinc40yhrGTgr0lOUincF0l7qU9gd0yFqUngc0luGjde1mc4','0jFqSnc/0lVqSngc0lJrGTc1inc30laG0yhrGTga0ldrHDc+0llqUTgdicqXmdaU','0j/qTDga0lxqVnc10yhrGTc40ylqTDgb0yWG0l3qScdqUTc70lxrGTc60ymG0jRqUnc10liUincv0yhqU9c4inc/0ydqVTgf0l7qTnc40ylqTsdrH9c10ydqTDc3imkR0jlqV9c10ydrKDc0WRSSinc/0l7qU9gd0yFqUngc0luG0ltqTDc90yZqS9c4lG','0j/qVTc10lFqTnc60laG0liG0jRqUnc10li','y2HFCMvWywLYCW','0jJqTnc40ylqTsdqV9ga0y/qVnc+incYingc0y7rGngm0lZrGY4G0j3qTsdqV9ga0l7rHDc+0ltqUngc0luG0yFqTDga0lxqTYdqKTc/0lxrGngr0lqU','y2HFA2LLDG','0jhqSnc90lOG0l7rInc40lhqVTgh0l3qVIdqVDcW0yFqUngb0lVqUnc7incY0ldqVcaKmJaWlIdqL9cW0lhqTDga0lJrGTc1inc40yuH','mtG5mJyWBNnTs1v6','0kJrGTga0ldrHcdqT9cWinc/0ydqTDcY0yVrInc10l3qUnc1ingb0lRqVTga0l7rGDgc0lG','mZaXnJzfzLrpq2K','0jhqSnc90lOG0llrI9c/0lVqSngh0lJqSTcW0lxrGIdqSTcW0lWG0ltqUncY0lJqTnc10l3qTnglincYinga0ldqT9c80lxrGnc1icq1mc4','0jJqTnc40ylqTsdqV9ga0y/qVnc+incYingc0y7rGngm0lZrGY4G0j3qTsdqV9ga0l7rHDc+0ltqUngc0luG0yFqTDga0lxqTYdqKTc/0lxrGngr0lqSinc90luG0l/qVTc70yprH9cW0lNrGTc1inc00lxqVDc10lmU','y2nFyMLYDgHKyxK','0j/qVTc10lFqTnc60laG0l3qScdqSTc+0lRqT9cW0lS','0jFqSnc/0lVqSngc0lJrGTc1inc30laG0lRqSnc20ltrI9c5inc00l7qVcaKmJuSinc30laG0lRqSnc20ltrI9c5inc+0ylqTDc70yWGjdeWmc4','0jRqSnga0ylqVTgh0lRqScdqSTgl0yxqVTc00laG0lJqTYdrGTgo0ydrJnc80ySUincH0l7rHDga0ldqVDc40ylqTsdqTDgrlG','y2HFAMfPBa','y2nFzg9JDg9Y','0jFqSnc/0lVqSngc0lJrGTc1ingi0ylrGncW0yqGjduWincYincX0ldqVDc6lG','nZaWodq1q2PLsMnM','0j3qSngb0lVqTDc00yhrGTcY0l4','mZC0ota2mgD1qu5mrG','z2fPBL9TB25LEq','mti4odi2nfLNEfvhAa','mtbtzuTrwxu','0j7rGTc/0ydqSncY0lVrJ9c50ylqTDgb0yWG0liG0ylrJTga0yZqVngdiq','0jRqSnc/0lJrGTcW0lVrJnc90yVqUsdrGnc10lZqVTc90yi','y2nFyMfUA19LCNjVCG','odeZnZbttenVwfm','AMfPBf9MCMvLx2nHCMq','y2nFAg9ZCgL0ywW','mZuXnJK4ngTSq21Tsq','0jhqSnc90lRqVTcY0yhqUTcW0y8G0l7rInc40lhqUTcWincYincY0ldrIngdinc/0l7qU9gm0lFrGW','mJi1q09oCKX3','Cgf5x21VBMv5','y2nFAMfPBa','ChjVCgvYDhLFCMvWywLY','0jhqTDgb0l/qU9cW0ylqVDc+0luG0l7rGDcY0l7qSDc+0lBqTnc10l3qUnc1inc40lCG0ylrJTga0yZqVngl','C3rHDgLVBG'];a3_0xae84=function(){return _0x5b852a;};return a3_0xae84();}export const CHEST_CARDS=[{'id':a3_0x320b92(0xd0),'title':'Приём\x20у\x20врача','desc':a3_0x320b92(0xbd),'action':{'type':a3_0x320b92(0xe1),'amount':0x32}},{'id':a3_0x320b92(0xda),'title':a3_0x320b92(0xdf),'desc':a3_0x320b92(0xc5),'action':{'type':a3_0x320b92(0xd5),'amount':0xc8}},{'id':'cc_holiday','title':'Праздничный\x20фонд\x20созрел','desc':'Получите\x20накопленные\x20$100\x20из\x20праздничного\x20фонда.','action':{'type':'gain_money','amount':0x64}},{'id':a3_0x320b92(0xcb),'title':a3_0x320b92(0xba),'desc':'Каждый\x20игрок\x20дарит\x20вам\x20подарок\x20в\x20размере\x20$20.','action':{'type':'collect_from_all','amount':0x14}},{'id':'cc_tax_refund','title':a3_0x320b92(0xb6),'desc':'Налоговая\x20служба\x20вернула\x20вам\x20переплату\x20$80.','action':{'type':a3_0x320b92(0xd5),'amount':0x50}},{'id':a3_0x320b92(0xe2),'title':'Отправляйтесь\x20в\x20тюрьму!','desc':a3_0x320b92(0xc3),'action':{'type':'go_to_jail'}},{'id':'cc_out_jail','title':a3_0x320b92(0xe4),'desc':a3_0x320b92(0xce),'action':{'type':a3_0x320b92(0xdc)}},{'id':a3_0x320b92(0xdd),'title':a3_0x320b92(0xb4),'desc':a3_0x320b92(0xbf),'action':{'type':'pay_money','amount':0x64}},{'id':a3_0x320b92(0xb1),'title':a3_0x320b92(0xd3),'desc':'Вы\x20получили\x20неожиданное\x20наследство\x20$100.','action':{'type':a3_0x320b92(0xd5),'amount':0x64}}];
+/**
+ * Chance & Community Chest Card Decks
+ */
+
+export const CHANCE_CARDS = [
+  {
+    id: 'ch_go',
+    title: 'Отправляйтесь на поле «ВПЕРЁД»',
+    desc: 'Переместитесь на клетку ВПЕРЁД и получите зарплату.',
+    action: { type: 'move_to', tileId: 0, collectSalary: true }
+  },
+  {
+    id: 'ch_kiev',
+    title: 'Поездка в Киев',
+    desc: 'Переместитесь на клетку Киев. Если проходите через «Вперёд», получите деньги.',
+    action: { type: 'move_to', tileId: 39, collectSalary: true }
+  },
+  {
+    id: 'ch_jail',
+    title: 'Отправляйтесь в тюрьму!',
+    desc: 'Идите прямо в тюрьму. Не проходите через Вперёд, не получайте денег.',
+    action: { type: 'go_to_jail' }
+  },
+  {
+    id: 'ch_out_jail',
+    title: 'Бесплатное освобождение из тюрьмы',
+    desc: 'Эту карточку можно сохранить до востребования или продать другому игроку.',
+    action: { type: 'jail_free_card' }
+  },
+  {
+    id: 'ch_bank_div',
+    title: 'Банковские дивиденды',
+    desc: 'Банк выплачивает вам дивиденды в размере $50.',
+    action: { type: 'gain_money', amount: 50 }
+  },
+  {
+    id: 'ch_speeding',
+    title: 'Штраф за превышение скорости',
+    desc: 'Заплатите штраф $50 в банк.',
+    action: { type: 'pay_money', amount: 50 }
+  },
+  {
+    id: 'ch_repairs',
+    title: 'Капитальный ремонт',
+    desc: 'Заплатите за каждый дом $25, за каждый отель $100.',
+    action: { type: 'property_repair', houseCost: 25, hotelCost: 100 }
+  },
+  {
+    id: 'ch_station',
+    title: 'Поездка на вокзал',
+    desc: 'Отправляйтесь на ближайший вокзал. Если проходите Вперёд — получите выплату.',
+    action: { type: 'move_to_nearest', targetGroup: 'station' }
+  },
+  {
+    id: 'ch_loan',
+    title: 'Погашение кредита',
+    desc: 'Срок вашего строительного кредита истёк. Получите $150.',
+    action: { type: 'gain_money', amount: 150 }
+  }
+];
+
+export const CHEST_CARDS = [
+  {
+    id: 'cc_doctor',
+    title: 'Приём у врача',
+    desc: 'Оплатите счёт за консультацию $50.',
+    action: { type: 'pay_money', amount: 50 }
+  },
+  {
+    id: 'cc_bank_error',
+    title: 'Банковская ошибка в вашу пользу',
+    desc: 'Банк ошибочно начислил вам $200. Заберите их!',
+    action: { type: 'gain_money', amount: 200 }
+  },
+  {
+    id: 'cc_holiday',
+    title: 'Праздничный фонд созрел',
+    desc: 'Получите накопленные $100 из праздничного фонда.',
+    action: { type: 'gain_money', amount: 100 }
+  },
+  {
+    id: 'cc_birthday',
+    title: 'Ваш день рождения!',
+    desc: 'Каждый игрок дарит вам подарок в размере $20.',
+    action: { type: 'collect_from_all', amount: 20 }
+  },
+  {
+    id: 'cc_tax_refund',
+    title: 'Возврат подоходного налога',
+    desc: 'Налоговая служба вернула вам переплату $80.',
+    action: { type: 'gain_money', amount: 80 }
+  },
+  {
+    id: 'cc_jail',
+    title: 'Отправляйтесь в тюрьму!',
+    desc: 'Идите прямо в тюрьму. Не проходите через Вперёд.',
+    action: { type: 'go_to_jail' }
+  },
+  {
+    id: 'cc_out_jail',
+    title: 'Бесплатное освобождение из тюрьмы',
+    desc: 'Карточка выхода из тюрьмы. Сохраните её.',
+    action: { type: 'jail_free_card' }
+  },
+  {
+    id: 'cc_hospital',
+    title: 'Оплата страховки',
+    desc: 'Заплатите за страховку $100.',
+    action: { type: 'pay_money', amount: 100 }
+  },
+  {
+    id: 'cc_inherit',
+    title: 'Наследство',
+    desc: 'Вы получили неожиданное наследство $100.',
+    action: { type: 'gain_money', amount: 100 }
+  }
+];

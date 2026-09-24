@@ -1,1 +1,717 @@
-const a5_0x44e28a=a5_0x3f36;(function(_0x1ec94b,_0x16c497){const _0x595d02=a5_0x3f36,_0xb2ade2=_0x1ec94b();while(!![]){try{const _0x368a29=-parseInt(_0x595d02(0x1f1))/0x1*(-parseInt(_0x595d02(0x187))/0x2)+parseInt(_0x595d02(0x1dc))/0x3*(-parseInt(_0x595d02(0x1a2))/0x4)+-parseInt(_0x595d02(0x1da))/0x5+parseInt(_0x595d02(0x1e1))/0x6*(-parseInt(_0x595d02(0x1b6))/0x7)+-parseInt(_0x595d02(0x1a4))/0x8*(-parseInt(_0x595d02(0x1d1))/0x9)+parseInt(_0x595d02(0x20e))/0xa*(parseInt(_0x595d02(0x19d))/0xb)+-parseInt(_0x595d02(0x193))/0xc*(-parseInt(_0x595d02(0x197))/0xd);if(_0x368a29===_0x16c497)break;else _0xb2ade2['push'](_0xb2ade2['shift']());}catch(_0x1b8617){_0xb2ade2['push'](_0xb2ade2['shift']());}}}(a5_0x4fa3,0xb0ee9));import{getDiceSkin,DICE_SKINS}from'./dice-skins.js';const textureCache=new Map();export function createDiceFaceCanvas(_0x7f094f,_0x41d5b9='classic'){const _0x91c6cf=a5_0x3f36,_0x43d437=_0x41d5b9+_0x91c6cf(0x1d5)+_0x7f094f;if(textureCache[_0x91c6cf(0x223)](_0x43d437))return textureCache[_0x91c6cf(0x18d)](_0x43d437);const _0x1a34fc=document[_0x91c6cf(0x18b)]('canvas');_0x1a34fc[_0x91c6cf(0x183)]=0x400,_0x1a34fc[_0x91c6cf(0x1c9)]=0x400;const _0x354ab1=_0x1a34fc[_0x91c6cf(0x1ae)]('2d'),_0xb1fe3f=getDiceSkin(_0x41d5b9);_0x354ab1['save']();const _0x46cc93=0x82,_0x1e1135=0x400,_0x27540a=0x400;_0x354ab1[_0x91c6cf(0x1cf)](),_0x354ab1[_0x91c6cf(0x1d7)](_0x46cc93,0x0),_0x354ab1[_0x91c6cf(0x1e2)](_0x1e1135-_0x46cc93,0x0),_0x354ab1[_0x91c6cf(0x216)](_0x1e1135,0x0,_0x1e1135,_0x46cc93),_0x354ab1[_0x91c6cf(0x1e2)](_0x1e1135,_0x27540a-_0x46cc93),_0x354ab1[_0x91c6cf(0x216)](_0x1e1135,_0x27540a,_0x1e1135-_0x46cc93,_0x27540a),_0x354ab1[_0x91c6cf(0x1e2)](_0x46cc93,_0x27540a),_0x354ab1[_0x91c6cf(0x216)](0x0,_0x27540a,0x0,_0x27540a-_0x46cc93),_0x354ab1[_0x91c6cf(0x1e2)](0x0,_0x46cc93),_0x354ab1['quadraticCurveTo'](0x0,0x0,_0x46cc93,0x0),_0x354ab1[_0x91c6cf(0x181)](),_0x354ab1[_0x91c6cf(0x201)]();switch(_0x41d5b9){case _0x91c6cf(0x1f7):{const _0x52002c=_0x354ab1[_0x91c6cf(0x1f8)](0x200,0x200,0x64,0x200,0x200,0x2d0);_0x52002c[_0x91c6cf(0x1a7)](0x0,_0x91c6cf(0x1db)),_0x52002c['addColorStop'](0.5,_0x91c6cf(0x1aa)),_0x52002c[_0x91c6cf(0x1a7)](0x1,_0x91c6cf(0x1a5)),_0x354ab1[_0x91c6cf(0x1e0)]=_0x52002c,_0x354ab1[_0x91c6cf(0x20f)](0x0,0x0,0x400,0x400),_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x20c),_0x354ab1[_0x91c6cf(0x1ec)]=0x20,_0x354ab1[_0x91c6cf(0x18e)](0x10,0x10,0x3e0,0x3e0),_0x354ab1[_0x91c6cf(0x1d0)]='rgba(255,\x20255,\x20255,\x200.4)',_0x354ab1[_0x91c6cf(0x1ec)]=0x8,_0x354ab1['strokeRect'](0x24,0x24,0x3b8,0x3b8);break;}case _0x91c6cf(0x1f4):{const _0x5aa222=_0x354ab1[_0x91c6cf(0x1fb)](0x0,0x0,0x400,0x400);_0x5aa222[_0x91c6cf(0x1a7)](0x0,_0x91c6cf(0x1ef)),_0x5aa222[_0x91c6cf(0x1a7)](0.5,'#065f46'),_0x5aa222[_0x91c6cf(0x1a7)](0x1,_0x91c6cf(0x215)),_0x354ab1['fillStyle']=_0x5aa222,_0x354ab1['fillRect'](0x0,0x0,0x400,0x400),_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x1d4),_0x354ab1[_0x91c6cf(0x1ec)]=0x8;for(let _0x5b3711=0x80;_0x5b3711<0x400;_0x5b3711+=0x80){_0x354ab1[_0x91c6cf(0x1cf)](),_0x354ab1[_0x91c6cf(0x1d7)](_0x5b3711,0x0),_0x354ab1[_0x91c6cf(0x1e2)](_0x5b3711,0x400),_0x354ab1[_0x91c6cf(0x191)]();}for(let _0x3b71a4=0x80;_0x3b71a4<0x400;_0x3b71a4+=0x80){_0x354ab1['beginPath'](),_0x354ab1[_0x91c6cf(0x1d7)](0x0,_0x3b71a4),_0x354ab1[_0x91c6cf(0x1e2)](0x400,_0x3b71a4),_0x354ab1['stroke']();}_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x1cb),_0x354ab1['lineWidth']=0x20,_0x354ab1[_0x91c6cf(0x18e)](0x10,0x10,0x3e0,0x3e0);break;}case _0x91c6cf(0x1c5):{const _0x45edb9=_0x354ab1[_0x91c6cf(0x1f8)](0x200,0x200,0x64,0x200,0x200,0x2d0);_0x45edb9[_0x91c6cf(0x1a7)](0x0,'#9333ea'),_0x45edb9[_0x91c6cf(0x1a7)](0.6,_0x91c6cf(0x207)),_0x45edb9[_0x91c6cf(0x1a7)](0x1,_0x91c6cf(0x182)),_0x354ab1[_0x91c6cf(0x1e0)]=_0x45edb9,_0x354ab1['fillRect'](0x0,0x0,0x400,0x400),_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x1af),_0x354ab1[_0x91c6cf(0x1ec)]=0x20,_0x354ab1[_0x91c6cf(0x18e)](0x10,0x10,0x3e0,0x3e0);break;}case _0x91c6cf(0x1b2):{const _0x4a064e=_0x354ab1[_0x91c6cf(0x1fb)](0x0,0x0,0x400,0x400);_0x4a064e[_0x91c6cf(0x1a7)](0x0,_0x91c6cf(0x1ed)),_0x4a064e[_0x91c6cf(0x1a7)](0.5,_0x91c6cf(0x1a8)),_0x4a064e[_0x91c6cf(0x1a7)](0x1,'#38bdf8'),_0x354ab1['fillStyle']=_0x4a064e,_0x354ab1[_0x91c6cf(0x20f)](0x0,0x0,0x400,0x400),_0x354ab1[_0x91c6cf(0x1d0)]='rgba(255,\x20255,\x20255,\x200.45)',_0x354ab1[_0x91c6cf(0x1ec)]=0xa,_0x354ab1['beginPath'](),_0x354ab1['moveTo'](0x40,0x3c0),_0x354ab1[_0x91c6cf(0x1e2)](0x168,0x208),_0x354ab1[_0x91c6cf(0x1e2)](0x2d0,0x280),_0x354ab1[_0x91c6cf(0x1e2)](0x3c0,0xa0),_0x354ab1[_0x91c6cf(0x191)](),_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x1e3),_0x354ab1[_0x91c6cf(0x1ec)]=0x20,_0x354ab1[_0x91c6cf(0x18e)](0x10,0x10,0x3e0,0x3e0);break;}case'golden_tycoon':{const _0x3c179f=_0x354ab1[_0x91c6cf(0x1fb)](0x0,0x0,0x400,0x400);_0x3c179f[_0x91c6cf(0x1a7)](0x0,_0x91c6cf(0x1c2)),_0x3c179f[_0x91c6cf(0x1a7)](0.3,_0x91c6cf(0x19c)),_0x3c179f[_0x91c6cf(0x1a7)](0.5,_0x91c6cf(0x210)),_0x3c179f['addColorStop'](0.7,_0x91c6cf(0x1c0)),_0x3c179f[_0x91c6cf(0x1a7)](0x1,'#b45309'),_0x354ab1[_0x91c6cf(0x1e0)]=_0x3c179f,_0x354ab1[_0x91c6cf(0x20f)](0x0,0x0,0x400,0x400),_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x210),_0x354ab1[_0x91c6cf(0x1ec)]=0x20,_0x354ab1[_0x91c6cf(0x18e)](0x10,0x10,0x3e0,0x3e0);break;}case'magma_flame':{const _0x178c7b=_0x354ab1[_0x91c6cf(0x1f8)](0x200,0x200,0x64,0x200,0x200,0x2d0);_0x178c7b[_0x91c6cf(0x1a7)](0x0,_0x91c6cf(0x1d3)),_0x178c7b['addColorStop'](0.4,_0x91c6cf(0x218)),_0x178c7b['addColorStop'](0.8,_0x91c6cf(0x196)),_0x178c7b[_0x91c6cf(0x1a7)](0x1,'#2c0b02'),_0x354ab1[_0x91c6cf(0x1e0)]=_0x178c7b,_0x354ab1[_0x91c6cf(0x20f)](0x0,0x0,0x400,0x400),_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x1e5),_0x354ab1[_0x91c6cf(0x1ec)]=0xe,_0x354ab1[_0x91c6cf(0x1cf)](),_0x354ab1['moveTo'](0x50,0x78),_0x354ab1[_0x91c6cf(0x1e2)](0x140,0x190),_0x354ab1['lineTo'](0x1e0,0x118),_0x354ab1[_0x91c6cf(0x1e2)](0x398,0x348),_0x354ab1[_0x91c6cf(0x191)](),_0x354ab1['strokeStyle']=_0x91c6cf(0x21f),_0x354ab1[_0x91c6cf(0x1ec)]=0x20,_0x354ab1[_0x91c6cf(0x18e)](0x10,0x10,0x3e0,0x3e0);break;}case _0x91c6cf(0x18c):{const _0x2095e6=_0x354ab1[_0x91c6cf(0x1fb)](0x0,0x0,0x400,0x400);_0x2095e6[_0x91c6cf(0x1a7)](0x0,_0x91c6cf(0x213)),_0x2095e6[_0x91c6cf(0x1a7)](0.35,_0x91c6cf(0x189)),_0x2095e6[_0x91c6cf(0x1a7)](0.7,_0x91c6cf(0x219)),_0x2095e6['addColorStop'](0x1,_0x91c6cf(0x1af)),_0x354ab1[_0x91c6cf(0x1e0)]=_0x2095e6,_0x354ab1[_0x91c6cf(0x20f)](0x0,0x0,0x400,0x400),_0x354ab1[_0x91c6cf(0x1e0)]='#ffffff',[[0xa0,0xc8],[0x320,0xb4],[0x12c,0x320],[0x348,0x2f8],[0x200,0x78],[0xc8,0x1f4]][_0x91c6cf(0x1b9)](([_0x1eb642,_0x5497c8])=>{const _0x53b4ca=_0x91c6cf;_0x354ab1[_0x53b4ca(0x1cf)](),_0x354ab1[_0x53b4ca(0x188)](_0x1eb642,_0x5497c8,0x8,0x0,Math['PI']*0x2),_0x354ab1['fill']();}),_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x1ee),_0x354ab1['lineWidth']=0x20,_0x354ab1[_0x91c6cf(0x18e)](0x10,0x10,0x3e0,0x3e0);break;}case'classic':default:{const _0x36c1c0=_0x354ab1['createRadialGradient'](0x200,0x200,0x64,0x200,0x200,0x2d0);_0x36c1c0[_0x91c6cf(0x1a7)](0x0,_0x91c6cf(0x1f2)),_0x36c1c0['addColorStop'](0.75,'#f8fafc'),_0x36c1c0[_0x91c6cf(0x1a7)](0x1,_0x91c6cf(0x209)),_0x354ab1[_0x91c6cf(0x1e0)]=_0x36c1c0,_0x354ab1['fillRect'](0x0,0x0,0x400,0x400),_0x354ab1[_0x91c6cf(0x1d0)]=_0x91c6cf(0x1ba),_0x354ab1[_0x91c6cf(0x1ec)]=0x18,_0x354ab1[_0x91c6cf(0x18e)](0xc,0xc,0x3e8,0x3e8);break;}}const _0x1e901a={0x1:[[0x200,0x200]],0x2:[[0x120,0x120],[0x2e0,0x2e0]],0x3:[[0x120,0x120],[0x200,0x200],[0x2e0,0x2e0]],0x4:[[0x120,0x120],[0x2e0,0x120],[0x120,0x2e0],[0x2e0,0x2e0]],0x5:[[0x120,0x120],[0x2e0,0x120],[0x200,0x200],[0x120,0x2e0],[0x2e0,0x2e0]],0x6:[[0x120,0x104],[0x2e0,0x104],[0x120,0x200],[0x2e0,0x200],[0x120,0x2fc],[0x2e0,0x2fc]]},_0x28fc02=_0x1e901a[_0x7f094f]||[],_0x4492fa=0x4e;return _0x28fc02[_0x91c6cf(0x1b9)](([_0x4d8aac,_0x911d0b])=>{const _0x85b3eb=_0x91c6cf;_0x354ab1[_0x85b3eb(0x1f6)](),_0x354ab1['beginPath'](),_0x354ab1['arc'](_0x4d8aac,_0x911d0b+0x5,_0x4492fa+0x6,0x0,Math['PI']*0x2),_0x354ab1[_0x85b3eb(0x1e0)]=_0x85b3eb(0x18a),_0x354ab1[_0x85b3eb(0x21c)](),_0x354ab1[_0x85b3eb(0x1cf)](),_0x354ab1['arc'](_0x4d8aac,_0x911d0b,_0x4492fa,0x0,Math['PI']*0x2);switch(_0x41d5b9){case _0x85b3eb(0x1f7):{const _0x22acb8=_0x354ab1[_0x85b3eb(0x1f8)](_0x4d8aac-0xc,_0x911d0b-0xc,0x6,_0x4d8aac,_0x911d0b,_0x4492fa);_0x22acb8[_0x85b3eb(0x1a7)](0x0,_0x85b3eb(0x1f2)),_0x22acb8[_0x85b3eb(0x1a7)](0.3,_0x85b3eb(0x1e7)),_0x22acb8[_0x85b3eb(0x1a7)](0.8,'#f43f5e'),_0x22acb8[_0x85b3eb(0x1a7)](0x1,'#9f1239'),_0x354ab1[_0x85b3eb(0x1e0)]=_0x22acb8,_0x354ab1[_0x85b3eb(0x21c)]();break;}case _0x85b3eb(0x1f4):{const _0xf62766=_0x354ab1[_0x85b3eb(0x1f8)](_0x4d8aac-0xc,_0x911d0b-0xc,0x6,_0x4d8aac,_0x911d0b,_0x4492fa);_0xf62766[_0x85b3eb(0x1a7)](0x0,'#ffffff'),_0xf62766['addColorStop'](0.4,_0x85b3eb(0x1c4)),_0xf62766[_0x85b3eb(0x1a7)](0.8,_0x85b3eb(0x199)),_0xf62766[_0x85b3eb(0x1a7)](0x1,'#064e3b'),_0x354ab1[_0x85b3eb(0x1e0)]=_0xf62766,_0x354ab1['fill']();break;}case _0x85b3eb(0x1c5):{const _0x5ebf7d=_0x354ab1['createRadialGradient'](_0x4d8aac-0xc,_0x911d0b-0xc,0x6,_0x4d8aac,_0x911d0b,_0x4492fa);_0x5ebf7d['addColorStop'](0x0,_0x85b3eb(0x1f2)),_0x5ebf7d[_0x85b3eb(0x1a7)](0.4,_0x85b3eb(0x206)),_0x5ebf7d[_0x85b3eb(0x1a7)](0.8,_0x85b3eb(0x1ee)),_0x5ebf7d[_0x85b3eb(0x1a7)](0x1,_0x85b3eb(0x207)),_0x354ab1[_0x85b3eb(0x1e0)]=_0x5ebf7d,_0x354ab1['fill']();break;}case _0x85b3eb(0x1b2):{const _0x3d45fb=_0x354ab1[_0x85b3eb(0x1f8)](_0x4d8aac-0xc,_0x911d0b-0xc,0x6,_0x4d8aac,_0x911d0b,_0x4492fa);_0x3d45fb['addColorStop'](0x0,_0x85b3eb(0x1f2)),_0x3d45fb[_0x85b3eb(0x1a7)](0.4,_0x85b3eb(0x1c3)),_0x3d45fb[_0x85b3eb(0x1a7)](0.8,_0x85b3eb(0x1a8)),_0x3d45fb['addColorStop'](0x1,'#075985'),_0x354ab1[_0x85b3eb(0x1e0)]=_0x3d45fb,_0x354ab1[_0x85b3eb(0x21c)]();break;}case _0x85b3eb(0x17d):{const _0x27f6f8=_0x354ab1['createRadialGradient'](_0x4d8aac-0xc,_0x911d0b-0xc,0x6,_0x4d8aac,_0x911d0b,_0x4492fa);_0x27f6f8[_0x85b3eb(0x1a7)](0x0,_0x85b3eb(0x1f2)),_0x27f6f8[_0x85b3eb(0x1a7)](0.3,_0x85b3eb(0x210)),_0x27f6f8[_0x85b3eb(0x1a7)](0.7,_0x85b3eb(0x204)),_0x27f6f8['addColorStop'](0x1,_0x85b3eb(0x20a)),_0x354ab1[_0x85b3eb(0x1e0)]=_0x27f6f8,_0x354ab1[_0x85b3eb(0x21c)]();break;}case _0x85b3eb(0x1c1):{const _0x114d02=_0x354ab1[_0x85b3eb(0x1f8)](_0x4d8aac-0xc,_0x911d0b-0xc,0x6,_0x4d8aac,_0x911d0b,_0x4492fa);_0x114d02['addColorStop'](0x0,_0x85b3eb(0x1f2)),_0x114d02[_0x85b3eb(0x1a7)](0.3,'#fed7aa'),_0x114d02[_0x85b3eb(0x1a7)](0.7,_0x85b3eb(0x218)),_0x114d02[_0x85b3eb(0x1a7)](0x1,_0x85b3eb(0x1ac)),_0x354ab1['fillStyle']=_0x114d02,_0x354ab1[_0x85b3eb(0x21c)]();break;}case _0x85b3eb(0x18c):{const _0xbc4537=_0x354ab1[_0x85b3eb(0x1f8)](_0x4d8aac-0xc,_0x911d0b-0xc,0x6,_0x4d8aac,_0x911d0b,_0x4492fa);_0xbc4537[_0x85b3eb(0x1a7)](0x0,_0x85b3eb(0x1f2)),_0xbc4537['addColorStop'](0.4,_0x85b3eb(0x1d9)),_0xbc4537[_0x85b3eb(0x1a7)](0.8,_0x85b3eb(0x1a1)),_0xbc4537[_0x85b3eb(0x1a7)](0x1,_0x85b3eb(0x189)),_0x354ab1[_0x85b3eb(0x1e0)]=_0xbc4537,_0x354ab1[_0x85b3eb(0x21c)]();break;}case _0x85b3eb(0x1ca):default:{const _0x5c61c0=_0x354ab1[_0x85b3eb(0x1f8)](_0x4d8aac-0xe,_0x911d0b-0xe,0x4,_0x4d8aac,_0x911d0b,_0x4492fa);_0x5c61c0[_0x85b3eb(0x1a7)](0x0,'#475569'),_0x5c61c0[_0x85b3eb(0x1a7)](0.45,_0x85b3eb(0x1e9)),_0x5c61c0[_0x85b3eb(0x1a7)](0x1,_0x85b3eb(0x1e8)),_0x354ab1[_0x85b3eb(0x1e0)]=_0x5c61c0,_0x354ab1[_0x85b3eb(0x21c)]();break;}}_0x354ab1[_0x85b3eb(0x1cf)](),_0x354ab1[_0x85b3eb(0x188)](_0x4d8aac-_0x4492fa*0.35,_0x911d0b-_0x4492fa*0.35,_0x4492fa*0.22,0x0,Math['PI']*0x2),_0x354ab1[_0x85b3eb(0x1e0)]=_0x85b3eb(0x192),_0x354ab1[_0x85b3eb(0x21c)](),_0x354ab1[_0x85b3eb(0x1ab)]();}),_0x354ab1[_0x91c6cf(0x1ab)](),textureCache[_0x91c6cf(0x211)](_0x43d437,_0x1a34fc),_0x1a34fc;}export function createDiceBumpCanvas(_0x2381fe){const _0x1c919b=a5_0x3f36,_0x4a919c='bump_face_hd_'+_0x2381fe;if(textureCache[_0x1c919b(0x223)](_0x4a919c))return textureCache['get'](_0x4a919c);const _0x5b14c2=document[_0x1c919b(0x18b)](_0x1c919b(0x202));_0x5b14c2[_0x1c919b(0x183)]=0x400,_0x5b14c2[_0x1c919b(0x1c9)]=0x400;const _0x4daa96=_0x5b14c2[_0x1c919b(0x1ae)]('2d');_0x4daa96[_0x1c919b(0x1e0)]=_0x1c919b(0x1f2),_0x4daa96[_0x1c919b(0x20f)](0x0,0x0,0x400,0x400),_0x4daa96[_0x1c919b(0x1d0)]=_0x1c919b(0x209),_0x4daa96[_0x1c919b(0x1ec)]=0x24,_0x4daa96[_0x1c919b(0x18e)](0x12,0x12,0x3dc,0x3dc);const _0x15d7c2={0x1:[[0x200,0x200]],0x2:[[0x120,0x120],[0x2e0,0x2e0]],0x3:[[0x120,0x120],[0x200,0x200],[0x2e0,0x2e0]],0x4:[[0x120,0x120],[0x2e0,0x120],[0x120,0x2e0],[0x2e0,0x2e0]],0x5:[[0x120,0x120],[0x2e0,0x120],[0x200,0x200],[0x120,0x2e0],[0x2e0,0x2e0]],0x6:[[0x120,0x104],[0x2e0,0x104],[0x120,0x200],[0x2e0,0x200],[0x120,0x2fc],[0x2e0,0x2fc]]},_0x2bffcc=_0x15d7c2[_0x2381fe]||[],_0x39875d=0x50;return _0x2bffcc[_0x1c919b(0x1b9)](([_0x2a0942,_0x207448])=>{const _0xa90b63=_0x1c919b,_0x395041=_0x4daa96[_0xa90b63(0x1f8)](_0x2a0942,_0x207448,0x0,_0x2a0942,_0x207448,_0x39875d);_0x395041[_0xa90b63(0x1a7)](0x0,_0xa90b63(0x1f3)),_0x395041[_0xa90b63(0x1a7)](0.65,'#475569'),_0x395041[_0xa90b63(0x1a7)](0.9,_0xa90b63(0x1a9)),_0x395041[_0xa90b63(0x1a7)](0x1,_0xa90b63(0x1f2)),_0x4daa96['fillStyle']=_0x395041,_0x4daa96[_0xa90b63(0x1cf)](),_0x4daa96[_0xa90b63(0x188)](_0x2a0942,_0x207448,_0x39875d,0x0,Math['PI']*0x2),_0x4daa96[_0xa90b63(0x21c)]();}),textureCache[_0x1c919b(0x211)](_0x4a919c,_0x5b14c2),_0x5b14c2;}export function create3DDiceMesh(_0x55fd89=a5_0x44e28a(0x1ca),_0x5a3fd9=2.15){const _0x51ff3f=a5_0x44e28a;if(typeof THREE===_0x51ff3f(0x1b5))return null;const _0x4f315f=0xe,_0x3edb4a=new THREE[(_0x51ff3f(0x20d))](_0x5a3fd9,_0x5a3fd9,_0x5a3fd9,_0x4f315f,_0x4f315f,_0x4f315f),_0x1553ee=_0x3edb4a[_0x51ff3f(0x1bc)]['position'],_0x347d3c=_0x5a3fd9/0x2,_0x4292ef=_0x5a3fd9*0.15,_0x112ca6=new THREE[(_0x51ff3f(0x198))]();for(let _0x240677=0x0;_0x240677<_0x1553ee[_0x51ff3f(0x190)];_0x240677++){_0x112ca6[_0x51ff3f(0x19b)](_0x1553ee,_0x240677);const _0x454c3e=Math[_0x51ff3f(0x1de)](_0x112ca6['x']),_0x316a80=Math['sign'](_0x112ca6['y']),_0x1d837a=Math[_0x51ff3f(0x1de)](_0x112ca6['z']),_0x424bdc=(_0x347d3c-_0x4292ef)*_0x454c3e,_0x1edd7e=(_0x347d3c-_0x4292ef)*_0x316a80,_0x55ee08=(_0x347d3c-_0x4292ef)*_0x1d837a,_0x5336a5=Math[_0x51ff3f(0x1f0)](0x0,Math[_0x51ff3f(0x1ce)](_0x112ca6['x'])-(_0x347d3c-_0x4292ef)),_0xdb2750=Math['max'](0x0,Math[_0x51ff3f(0x1ce)](_0x112ca6['y'])-(_0x347d3c-_0x4292ef)),_0x4f4214=Math[_0x51ff3f(0x1f0)](0x0,Math[_0x51ff3f(0x1ce)](_0x112ca6['z'])-(_0x347d3c-_0x4292ef)),_0x5deed0=Math[_0x51ff3f(0x186)](_0x5336a5*_0x5336a5+_0xdb2750*_0xdb2750+_0x4f4214*_0x4f4214);if(_0x5deed0>0x0&&(Math[_0x51ff3f(0x1ce)](_0x112ca6['x'])>_0x347d3c-_0x4292ef||Math[_0x51ff3f(0x1ce)](_0x112ca6['y'])>_0x347d3c-_0x4292ef||Math[_0x51ff3f(0x1ce)](_0x112ca6['z'])>_0x347d3c-_0x4292ef)){const _0x5b4443=Math['min'](0x1,_0x4292ef/_0x5deed0);_0x112ca6['x']=_0x424bdc+_0x5336a5*_0x5b4443*_0x454c3e,_0x112ca6['y']=_0x1edd7e+_0xdb2750*_0x5b4443*_0x316a80,_0x112ca6['z']=_0x55ee08+_0x4f4214*_0x5b4443*_0x1d837a,_0x1553ee['setXYZ'](_0x240677,_0x112ca6['x'],_0x112ca6['y'],_0x112ca6['z']);}}_0x3edb4a[_0x51ff3f(0x221)]();const _0x291cb5=[0x3,0x4,0x2,0x5,0x1,0x6],_0x49f0f4=_0x291cb5[_0x51ff3f(0x1ff)](_0x543979=>{const _0x3604e9=_0x51ff3f,_0x34fe1c=createDiceFaceCanvas(_0x543979,_0x55fd89),_0x5d90d3=new THREE[(_0x3604e9(0x1b3))](_0x34fe1c);_0x5d90d3[_0x3604e9(0x200)]=!![],_0x5d90d3['minFilter']=THREE[_0x3604e9(0x21b)];const _0x4f8a52=createDiceBumpCanvas(_0x543979),_0xb59e95=new THREE[(_0x3604e9(0x1b3))](_0x4f8a52);_0xb59e95['generateMipmaps']=!![],_0xb59e95['minFilter']=THREE[_0x3604e9(0x21b)];let _0x1a8d07={'map':_0x5d90d3,'bumpMap':_0xb59e95,'bumpScale':0.08,'roughness':0.14,'metalness':0.06};if(_0x55fd89===_0x3604e9(0x17d))_0x1a8d07[_0x3604e9(0x1ad)]=0.94,_0x1a8d07[_0x3604e9(0x1a6)]=0.12;else(_0x55fd89===_0x3604e9(0x1f7)||_0x55fd89===_0x3604e9(0x1f4)||_0x55fd89===_0x3604e9(0x1c1)||_0x55fd89===_0x3604e9(0x18c)||_0x55fd89===_0x3604e9(0x1c5))&&(_0x1a8d07['emissive']=new THREE[(_0x3604e9(0x1bb))](0.3,0.3,0.3),_0x1a8d07[_0x3604e9(0x1cc)]=_0x5d90d3);return new THREE['MeshStandardMaterial'](_0x1a8d07);}),_0x11c7d4=new THREE[(_0x51ff3f(0x18f))](_0x3edb4a,_0x49f0f4);return _0x11c7d4['castShadow']=!![],_0x11c7d4[_0x51ff3f(0x1b8)]=![],_0x11c7d4;}function a5_0x4fa3(){const _0x567eef=['ugXHBMvhzw9TzxrYEq','y2XVC2vqyxrO','iZe4mdqYyW','D2LKDgG','DhLWzq','rgLYzwn0Aw9UywXmAwDODa','C3fYDa','mtq2qxr5CgXg','yxjJ','iZfLmwi0yG','CMDIysGWlcaWlcaWlcaWlJm1kq','y3jLyxrLrwXLBwvUDa','y29ZBwLJx3zVAwq','z2v0','C3rYB2TLuMvJDa','twvZAa','y291BNq','C3rYB2TL','CMDIysGYntuSidi1nsWGmJu1lcaWlJCP','nJq1nMvJChr5BW','ywrK','BM93','iZLHmZqXmG','nti3ntr4sfvyyum','vMvJDg9YmW','iZeWyJK4mq','Cg93','zNjVBuj1zMzLCKf0DhjPyNv0zq','i2q5nZCWnG','mtG3zMDWr1jl','C2HHzg93twfW','y2fTzxjH','Bg9VA0f0','iZDJm2fLza','mJmYzK1cvgzb','C2HHzg93','mtiYoduYmevQweDhrW','iZnHmdiXma','CM91z2HUzxnZ','ywrKq29SB3jtDg9W','iZaYodrJnW','i2nIzdvLmq','iZLMmtiZoq','CMvZDg9Yzq','iZqZmtqWnW','Bwv0ywXUzxnZ','z2v0q29UDgv4Da','i2mWodrMyW','z2v0rwXLBwvUDej5swq','BwLU','zNjVC3rFy3j5C3rHBa','q2fUDMfZvgv4DhvYzq','u2HHzg93twf0zxjPywW','Dw5KzwzPBMvK','mJu2ouDvrKXiqG','BwfWu2L6zq','CMvJzwL2zvnOywrVDW','zM9YrwfJAa','CMDIysGWlcaWlcaWlcaWlJa4kq','q29SB3i','yxr0CMLIDxrLCW','C2nLBMu','y29Z','y29SB3i','i2y1owuWyG','BwfNBwfFzMXHBwu','iZC4mZuWzG','i2uWzJjMzq','i2e3zJnKma','yw1LDgH5C3rFDhDPBgLNAhq','yNvPBgreAwnL','C2v0sgv4','zgvZDhjVEq','AgvPz2H0','y2XHC3nPyW','iZm0zdm5oq','zw1PC3nPDMvnyxa','BMvHCG','ywjZ','yMvNAw5qyxrO','C3rYB2TLu3r5Bgu','mJDOBgDRshu','y3vYCMvUDfnRAw4','i2zKyMe3na','CMDIysG1mIWGmJeXlcaXntmSidaUmIK','x2zHy2vFAgrF','CMvUzgvY','Bw92zvrV','Aw50zw5ZAxr5','i2rKzdzMzq','odC4mdCWu1jtv1Dz','i2uXmwq0oa','nJm3otHsDgfftwi','zgLLmu1LC2G','C2LNBG','C2LU','zMLSBfn0EwXL','mJeYodH2ChzPqxi','BgLUzvrV','i2jHztzMza','CMvUzgvYzxi','CMDIysGYntqSidi0mcWGmtm4lcaWlJCP','u2nLBMu','i2zLy2rKmW','iZa5mgqXnG','iZfLmJKZyG','Aw5Uzxjive1m','zgLLmK1LC2G','BgLUzvDPzhrO','iZbJnge2zq','i2e4ntvMnW','iZaYmMmYmG','Bwf4','mZe0n2Tpu2THsG','i2zMzMzMzG','iZaWmdaWma','y3LIzxjFzw1LCMfSza','qw1IAwvUDeXPz2H0','C2f2zq','BMvVBL9YDwj5','y3jLyxrLuMfKAwfSr3jHzgLLBNq','ug9PBNrmAwDODa','AgLNAc1WzxjMB3jTyw5Jzq','y3jLyxrLtgLUzwfYr3jHzgLLBNq','yw5PBuzYyw1Lswq','CMvTB3zL','y29UDgfPBMvYswq','BwfW','z2vUzxjHDgvnAxbTyxbZ','y2XPCa','y2fUDMfZ','C2v0rgLJzvzHBhvLCW','i2vHyJmWoa','AxnsB2XSAw5N','i2u5zdvMzG','iZu4mwm4nW','ugvYC3bLy3rPDMvdyw1LCMe','i2uYztHMma','iZCXm2yXmG','C2v0ugL4zwXsyxrPBW','i2zInZe4nq','qM94r2vVBwv0CNK','mZmWnZmWsezKuKvM','zMLSBfjLy3q','i2zLzJa4yq','C2v0','Cg9ZAxrPB24','iZaZmdCXmG','C2v0u2L6zq','iZa1oty2oq','CxvHzhjHDgLJq3vYDMvuBW','zMfY','i2vHntGWyW','iZqZmZHJyq','CM90yxrPB24','tgLUzwfYtwLWBwfWtgLUzwfYrMLSDgvY','zMLSBa','v2vIr0Xszw5KzxjLCG','zw5HyMXLza','i2zIotiZyW','CM9SBa','y29TChv0zvzLCNrLEe5VCM1HBhm','yxbWzw5Kq2HPBgq','AgfZ','z29SzgvUx3r5y29VBG','ywnJzw50tgLNAhq','zg9TrwXLBwvUDa'];a5_0x4fa3=function(){return _0x567eef;};return a5_0x4fa3();}export function getTargetRotationForFace(_0x51245b){const _0x1e338c=parseInt(_0x51245b)||0x1;switch(_0x1e338c){case 0x1:return{'x':-Math['PI']/0x2,'y':0x0,'z':0x0};case 0x2:return{'x':0x0,'y':0x0,'z':0x0};case 0x3:return{'x':0x0,'y':0x0,'z':Math['PI']/0x2};case 0x4:return{'x':0x0,'y':0x0,'z':-Math['PI']/0x2};case 0x5:return{'x':Math['PI'],'y':0x0,'z':0x0};case 0x6:return{'x':Math['PI']/0x2,'y':0x0,'z':0x0};default:return{'x':0x0,'y':0x0,'z':0x0};}}function a5_0x3f36(_0x52a696,_0x4940dd){_0x52a696=_0x52a696-0x17d;const _0x4fa3d3=a5_0x4fa3();let _0x3f360c=_0x4fa3d3[_0x52a696];if(a5_0x3f36['ELrdIP']===undefined){var _0x89b8ef=function(_0x568b43){const _0x551fc6='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x5bd593='',_0x7f094f='';for(let _0x41d5b9=0x0,_0x43d437,_0x1a34fc,_0x354ab1=0x0;_0x1a34fc=_0x568b43['charAt'](_0x354ab1++);~_0x1a34fc&&(_0x43d437=_0x41d5b9%0x4?_0x43d437*0x40+_0x1a34fc:_0x1a34fc,_0x41d5b9++%0x4)?_0x5bd593+=String['fromCharCode'](0xff&_0x43d437>>(-0x2*_0x41d5b9&0x6)):0x0){_0x1a34fc=_0x551fc6['indexOf'](_0x1a34fc);}for(let _0xb1fe3f=0x0,_0x46cc93=_0x5bd593['length'];_0xb1fe3f<_0x46cc93;_0xb1fe3f++){_0x7f094f+='%'+('00'+_0x5bd593['charCodeAt'](_0xb1fe3f)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x7f094f);};a5_0x3f36['MpJNpm']=_0x89b8ef,a5_0x3f36['mAOlwa']={},a5_0x3f36['ELrdIP']=!![];}const _0xc1cead=_0x4fa3d3[0x0];a5_0x3f36['WrYtxJ']!==_0xc1cead&&(a5_0x3f36['mAOlwa']={},a5_0x3f36['WrYtxJ']=_0xc1cead);const _0x511bf0=a5_0x3f36['mAOlwa'][_0x52a696];return _0x511bf0===undefined?(_0x3f360c=a5_0x3f36['MpJNpm'](_0x3f360c),a5_0x3f36['mAOlwa'][_0x52a696]=_0x3f360c):_0x3f360c=_0x511bf0,_0x3f360c;}export function getSkinAccentColor(_0x49ebf9=a5_0x44e28a(0x1ca)){const _0x1de6a2=a5_0x44e28a;switch(_0x49ebf9){case'neon_ruby':return 0xf43f5e;case _0x1de6a2(0x1f4):return 0x10b981;case'amethyst_twilight':return 0x7e22ce;case'frost_crystal':return 0x38bdf8;case'golden_tycoon':return 0xfbbf24;case _0x1de6a2(0x1c1):return 0xea580c;case _0x1de6a2(0x18c):return 0x818cf8;case _0x1de6a2(0x1ca):default:return 0xffffff;}}export class WebGLDiceStage{constructor(_0x2679ef='dice-stage-3d-canvas'){const _0x4e852e=a5_0x44e28a;this[_0x4e852e(0x1fe)]=_0x2679ef,this[_0x4e852e(0x1e4)]=null,this[_0x4e852e(0x1bd)]=null,this[_0x4e852e(0x19f)]=null,this['die1Mesh']=null,this['die2Mesh']=null,this[_0x4e852e(0x17e)]=null,this[_0x4e852e(0x1fc)]=null,this[_0x4e852e(0x205)]=![],this['currentSkin']=_0x4e852e(0x1ca);}['init'](_0x9a132e=0x154,_0x102a1c=0x82){const _0x18540a=a5_0x44e28a;if(typeof THREE===_0x18540a(0x1b5))return console['warn']('Three.js\x20not\x20found,\x20fallback\x20to\x20CSS\x203D'),![];const _0x4d3d99=document[_0x18540a(0x1b0)](this['containerId']);if(!_0x4d3d99)return![];_0x4d3d99[_0x18540a(0x1ea)]='',this[_0x18540a(0x1bd)]=new THREE[(_0x18540a(0x1e6))](),this[_0x18540a(0x19f)]=new THREE[(_0x18540a(0x208))](0x2c,_0x9a132e/_0x102a1c,0.1,0x64),this[_0x18540a(0x19f)][_0x18540a(0x212)][_0x18540a(0x211)](0x0,8.4,11.6),this['camera'][_0x18540a(0x1a0)](0x0,0.65,0x0),this[_0x18540a(0x1e4)]=new THREE[(_0x18540a(0x21d))]({'alpha':!![],'antialias':!![],'powerPreference':_0x18540a(0x1fa)}),this[_0x18540a(0x1e4)][_0x18540a(0x214)](_0x9a132e,_0x102a1c),this[_0x18540a(0x1e4)][_0x18540a(0x20b)](Math[_0x18540a(0x1b1)](window['devicePixelRatio']||0x2,0x2)),this[_0x18540a(0x1e4)][_0x18540a(0x19e)][_0x18540a(0x21e)]=!![],this[_0x18540a(0x1e4)][_0x18540a(0x19e)][_0x18540a(0x184)]=THREE['PCFSoftShadowMap'],_0x4d3d99[_0x18540a(0x222)](this[_0x18540a(0x1e4)][_0x18540a(0x17f)]);const _0x2cbff5=new THREE[(_0x18540a(0x1f5))](0xffffff,0.95);this[_0x18540a(0x1bd)]['add'](_0x2cbff5);const _0x1bbc02=new THREE['DirectionalLight'](0xffffff,1.35);_0x1bbc02[_0x18540a(0x212)][_0x18540a(0x211)](0x6,0xe,0x8),_0x1bbc02['castShadow']=!![],_0x1bbc02[_0x18540a(0x1a3)][_0x18540a(0x1b7)][_0x18540a(0x183)]=0x400,_0x1bbc02[_0x18540a(0x1a3)]['mapSize'][_0x18540a(0x1c9)]=0x400,_0x1bbc02['shadow']['camera'][_0x18540a(0x1cd)]=0.5,_0x1bbc02[_0x18540a(0x1a3)][_0x18540a(0x19f)][_0x18540a(0x217)]=0x1e,this['scene'][_0x18540a(0x194)](_0x1bbc02);const _0x396060=new THREE[(_0x18540a(0x185))](0x93c5fd,0.85);_0x396060[_0x18540a(0x212)][_0x18540a(0x211)](-0x7,0x9,-0x5),this[_0x18540a(0x1bd)][_0x18540a(0x194)](_0x396060),this[_0x18540a(0x17e)]=new THREE[(_0x18540a(0x1f9))](0xffffff,1.2,0x12),this[_0x18540a(0x17e)][_0x18540a(0x212)][_0x18540a(0x211)](0x0,4.5,2.5),this[_0x18540a(0x1bd)][_0x18540a(0x194)](this[_0x18540a(0x17e)]);const _0x243934=new THREE[(_0x18540a(0x180))](0x20,0x20),_0x51e87b=new THREE[(_0x18540a(0x1b4))]({'opacity':0.32}),_0x31576b=new THREE[(_0x18540a(0x18f))](_0x243934,_0x51e87b);return _0x31576b[_0x18540a(0x21a)]['x']=-Math['PI']/0x2,_0x31576b['position']['y']=-0.01,_0x31576b['receiveShadow']=!![],this[_0x18540a(0x1bd)][_0x18540a(0x194)](_0x31576b),this['buildDice']('classic',[0x1,0x1]),this[_0x18540a(0x1d6)](),!![];}['buildDice'](_0x380334=a5_0x44e28a(0x1ca),_0x5bb9ba=[0x1,0x1]){const _0x5a676d=a5_0x44e28a;if(!this['scene'])return;this[_0x5a676d(0x1d2)]=_0x380334;if(this[_0x5a676d(0x1dd)])this[_0x5a676d(0x1bd)]['remove'](this['die1Mesh']);if(this[_0x5a676d(0x1eb)])this[_0x5a676d(0x1bd)][_0x5a676d(0x1fd)](this[_0x5a676d(0x1eb)]);this[_0x5a676d(0x17e)]&&(this[_0x5a676d(0x17e)][_0x5a676d(0x1bf)][_0x5a676d(0x1c7)](getSkinAccentColor(_0x380334)),this[_0x5a676d(0x17e)][_0x5a676d(0x1d8)]=_0x380334===_0x5a676d(0x1ca)?0.5:1.35);const _0x1aa111=2.15;this[_0x5a676d(0x1dd)]=create3DDiceMesh(_0x380334,_0x1aa111),this[_0x5a676d(0x1eb)]=create3DDiceMesh(_0x380334,_0x1aa111);if(!this[_0x5a676d(0x1dd)]||!this[_0x5a676d(0x1eb)])return;this['die1Mesh']['position'][_0x5a676d(0x211)](-1.75,1.05,0x0),this['die2Mesh'][_0x5a676d(0x212)][_0x5a676d(0x211)](1.75,1.05,0x0);const _0xb1cd12=getTargetRotationForFace(_0x5bb9ba[0x0]),_0x8a52f=getTargetRotationForFace(_0x5bb9ba[0x1]);this[_0x5a676d(0x1dd)]['rotation']['set'](_0xb1cd12['x'],_0xb1cd12['y']+0.1,_0xb1cd12['z']),this[_0x5a676d(0x1eb)]['rotation'][_0x5a676d(0x211)](_0x8a52f['x'],_0x8a52f['y']-0.1,_0x8a52f['z']),this[_0x5a676d(0x1bd)][_0x5a676d(0x194)](this['die1Mesh']),this['scene']['add'](this[_0x5a676d(0x1eb)]);}[a5_0x44e28a(0x220)](_0x436389=[0x1,0x1],_0x50ac10=null,_0x1ac8e1=null){const _0x251e0c=a5_0x44e28a;if(!this[_0x251e0c(0x1bd)]||!this[_0x251e0c(0x1dd)]||!this[_0x251e0c(0x1eb)]){if(_0x1ac8e1)_0x1ac8e1();return;}const _0x31bdc3=_0x50ac10||this[_0x251e0c(0x1d2)]||_0x251e0c(0x1ca);_0x31bdc3!==this[_0x251e0c(0x1d2)]&&this[_0x251e0c(0x1c6)](_0x31bdc3,_0x436389);this[_0x251e0c(0x205)]=!![];const _0x4c2664=performance[_0x251e0c(0x195)](),_0x1ff061=0x2ee,_0x4254f6=getTargetRotationForFace(_0x436389[0x0]),_0x218459=getTargetRotationForFace(_0x436389[0x1]),_0x3c9cad={'x':Math['PI']*0x4,'y':Math['PI']*0x6,'z':Math['PI']*0x2},_0x2987e1={'x':-Math['PI']*0x6,'y':-Math['PI']*0x4,'z':-Math['PI']*0x2},_0x18e9b0=_0x2bf118=>{const _0x96c48d=_0x251e0c,_0x3fcaab=_0x2bf118-_0x4c2664,_0xde62f2=Math[_0x96c48d(0x1b1)](_0x3fcaab/_0x1ff061,0x1),_0x112d54=0x1-Math[_0x96c48d(0x19a)](0x1-_0xde62f2,0x3);if(_0xde62f2<0x1){const _0x341b25=0x1-_0x112d54,_0x2e316b=Math[_0x96c48d(0x1df)](_0xde62f2*Math['PI'])*1.15*(0x1-_0xde62f2*0.35),_0x3f86cb=Math[_0x96c48d(0x1df)](_0xde62f2*Math['PI'])*1.25*(0x1-_0xde62f2*0.35);this[_0x96c48d(0x1dd)][_0x96c48d(0x212)][_0x96c48d(0x211)](-1.75-Math[_0x96c48d(0x1df)](_0xde62f2*Math['PI']*0x2)*0.32*_0x341b25,1.05+Math[_0x96c48d(0x1f0)](0x0,_0x2e316b),Math[_0x96c48d(0x1be)](_0xde62f2*Math['PI']*0x2)*0.4*_0x341b25),this[_0x96c48d(0x1eb)][_0x96c48d(0x212)]['set'](1.75+Math[_0x96c48d(0x1df)](_0xde62f2*Math['PI']*0x2)*0.32*_0x341b25,1.05+Math[_0x96c48d(0x1f0)](0x0,_0x3f86cb),-Math[_0x96c48d(0x1be)](_0xde62f2*Math['PI']*0x2)*0.4*_0x341b25),this[_0x96c48d(0x1dd)]['rotation']['x']=_0x4254f6['x']+_0x3c9cad['x']*(0x1-_0x112d54),this[_0x96c48d(0x1dd)][_0x96c48d(0x21a)]['y']=_0x4254f6['y']+_0x3c9cad['y']*(0x1-_0x112d54)+0.1,this[_0x96c48d(0x1dd)][_0x96c48d(0x21a)]['z']=_0x4254f6['z']+_0x3c9cad['z']*(0x1-_0x112d54),this['die2Mesh'][_0x96c48d(0x21a)]['x']=_0x218459['x']+_0x2987e1['x']*(0x1-_0x112d54),this[_0x96c48d(0x1eb)]['rotation']['y']=_0x218459['y']+_0x2987e1['y']*(0x1-_0x112d54)-0.1,this[_0x96c48d(0x1eb)][_0x96c48d(0x21a)]['z']=_0x218459['z']+_0x2987e1['z']*(0x1-_0x112d54),this['animFrameId']=requestAnimationFrame(_0x18e9b0);}else{this[_0x96c48d(0x1dd)]['position'][_0x96c48d(0x211)](-1.75,1.05,0x0),this[_0x96c48d(0x1eb)][_0x96c48d(0x212)][_0x96c48d(0x211)](1.75,1.05,0x0),this[_0x96c48d(0x1dd)][_0x96c48d(0x21a)][_0x96c48d(0x211)](_0x4254f6['x'],_0x4254f6['y']+0.08,_0x4254f6['z']),this['die2Mesh'][_0x96c48d(0x21a)][_0x96c48d(0x211)](_0x218459['x'],_0x218459['y']-0.08,_0x218459['z']),this['isRolling']=![];if(_0x1ac8e1)_0x1ac8e1();}};this[_0x251e0c(0x1fc)]=requestAnimationFrame(_0x18e9b0);}[a5_0x44e28a(0x203)](_0x5296e7,_0x5d3817=null){const _0x31643b=a5_0x44e28a;if(!this[_0x31643b(0x1dd)]||!this['die2Mesh'])return;const _0x41e5c2=_0x5d3817||this[_0x31643b(0x1d2)]||'classic';_0x41e5c2!==this[_0x31643b(0x1d2)]&&this[_0x31643b(0x1c6)](_0x41e5c2,_0x5296e7);const _0x181daa=getTargetRotationForFace(_0x5296e7[0x0]),_0x4d3d09=getTargetRotationForFace(_0x5296e7[0x1]);this[_0x31643b(0x1dd)][_0x31643b(0x212)][_0x31643b(0x211)](-1.75,1.05,0x0),this[_0x31643b(0x1eb)][_0x31643b(0x212)][_0x31643b(0x211)](1.75,1.05,0x0),this[_0x31643b(0x1dd)][_0x31643b(0x21a)][_0x31643b(0x211)](_0x181daa['x'],_0x181daa['y']+0.08,_0x181daa['z']),this[_0x31643b(0x1eb)][_0x31643b(0x21a)][_0x31643b(0x211)](_0x4d3d09['x'],_0x4d3d09['y']-0.08,_0x4d3d09['z']);}[a5_0x44e28a(0x1d6)](){const _0x494683=a5_0x44e28a;requestAnimationFrame(()=>this['render']());if(this[_0x494683(0x1e4)]&&this[_0x494683(0x1bd)]&&this[_0x494683(0x19f)]){if(!this[_0x494683(0x205)]&&this[_0x494683(0x1dd)]&&this[_0x494683(0x1eb)]){const _0x3c54b2=performance['now']()*0.0015;this['die1Mesh'][_0x494683(0x212)]['y']=1.05+Math['sin'](_0x3c54b2)*0.035,this[_0x494683(0x1eb)][_0x494683(0x212)]['y']=1.05+Math[_0x494683(0x1be)](_0x3c54b2)*0.035;}this['renderer'][_0x494683(0x1d6)](this[_0x494683(0x1bd)],this['camera']);}}[a5_0x44e28a(0x1c8)](){const _0x3fefae=a5_0x44e28a;if(this[_0x3fefae(0x1fc)])cancelAnimationFrame(this[_0x3fefae(0x1fc)]);this[_0x3fefae(0x1e4)]&&this['renderer']['domElement']&&this[_0x3fefae(0x1e4)][_0x3fefae(0x17f)][_0x3fefae(0x1fd)]();}}export const webGLDice=new WebGLDiceStage();
+/**
+ * Real WebGL 3D Dice Engine using Three.js
+ * High-detail PBR 3D Dice Models with Physical Simulation & 8 Theme Materials
+ */
+
+import { getDiceSkin, DICE_SKINS } from './dice-skins.js';
+
+// Cache for generated canvas textures
+const textureCache = new Map();
+
+/**
+ * Generate high-res 1024x1024 canvas texture for a specific dice face & skin
+ */
+export function createDiceFaceCanvas(value, skinId = 'classic') {
+  const cacheKey = `${skinId}_face_hd_${value}`;
+  if (textureCache.has(cacheKey)) {
+    return textureCache.get(cacheKey);
+  }
+
+  const canvas = document.createElement('canvas');
+  canvas.width = 1024;
+  canvas.height = 1024;
+  const ctx = canvas.getContext('2d');
+  const skin = getDiceSkin(skinId);
+
+  // 1. Draw Face Background based on skin with rounded borders
+  ctx.save();
+  const radius = 130;
+  const w = 1024;
+  const h = 1024;
+
+  ctx.beginPath();
+  ctx.moveTo(radius, 0);
+  ctx.lineTo(w - radius, 0);
+  ctx.quadraticCurveTo(w, 0, w, radius);
+  ctx.lineTo(w, h - radius);
+  ctx.quadraticCurveTo(w, h, w - radius, h);
+  ctx.lineTo(radius, h);
+  ctx.quadraticCurveTo(0, h, 0, h - radius);
+  ctx.lineTo(0, radius);
+  ctx.quadraticCurveTo(0, 0, radius, 0);
+  ctx.closePath();
+  ctx.clip();
+
+  // Draw skin-specific background
+  switch (skinId) {
+    case 'neon_ruby': {
+      const grad = ctx.createRadialGradient(512, 512, 100, 512, 512, 720);
+      grad.addColorStop(0, '#e11d48');
+      grad.addColorStop(0.5, '#9f1239');
+      grad.addColorStop(1, '#3a0210');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      // Inner glowing neon rim
+      ctx.strokeStyle = '#fb7185';
+      ctx.lineWidth = 32;
+      ctx.strokeRect(16, 16, 992, 992);
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+      ctx.lineWidth = 8;
+      ctx.strokeRect(36, 36, 952, 952);
+      break;
+    }
+    case 'cyber_emerald': {
+      const grad = ctx.createLinearGradient(0, 0, 1024, 1024);
+      grad.addColorStop(0, '#022c22');
+      grad.addColorStop(0.5, '#065f46');
+      grad.addColorStop(1, '#059669');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      // Cyber grid overlay
+      ctx.strokeStyle = 'rgba(52, 211, 153, 0.2)';
+      ctx.lineWidth = 8;
+      for (let x = 128; x < 1024; x += 128) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 1024); ctx.stroke();
+      }
+      for (let y = 128; y < 1024; y += 128) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(1024, y); ctx.stroke();
+      }
+
+      ctx.strokeStyle = '#34d399';
+      ctx.lineWidth = 32;
+      ctx.strokeRect(16, 16, 992, 992);
+      break;
+    }
+    case 'amethyst_twilight': {
+      const grad = ctx.createRadialGradient(512, 512, 100, 512, 512, 720);
+      grad.addColorStop(0, '#9333ea');
+      grad.addColorStop(0.6, '#581c87');
+      grad.addColorStop(1, '#18042c');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      ctx.strokeStyle = '#c084fc';
+      ctx.lineWidth = 32;
+      ctx.strokeRect(16, 16, 992, 992);
+      break;
+    }
+    case 'frost_crystal': {
+      const grad = ctx.createLinearGradient(0, 0, 1024, 1024);
+      grad.addColorStop(0, '#0c4a6e');
+      grad.addColorStop(0.5, '#0284c7');
+      grad.addColorStop(1, '#38bdf8');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      // Frost crystalline glimmers
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.45)';
+      ctx.lineWidth = 10;
+      ctx.beginPath();
+      ctx.moveTo(64, 960); ctx.lineTo(360, 520); ctx.lineTo(720, 640); ctx.lineTo(960, 160);
+      ctx.stroke();
+
+      ctx.strokeStyle = '#bae6fd';
+      ctx.lineWidth = 32;
+      ctx.strokeRect(16, 16, 992, 992);
+      break;
+    }
+    case 'golden_tycoon': {
+      const grad = ctx.createLinearGradient(0, 0, 1024, 1024);
+      grad.addColorStop(0, '#78350f');
+      grad.addColorStop(0.3, '#d97706');
+      grad.addColorStop(0.5, '#fef08a');
+      grad.addColorStop(0.7, '#f59e0b');
+      grad.addColorStop(1, '#b45309');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      // Gold beveled border
+      ctx.strokeStyle = '#fef08a';
+      ctx.lineWidth = 32;
+      ctx.strokeRect(16, 16, 992, 992);
+      break;
+    }
+    case 'magma_flame': {
+      const grad = ctx.createRadialGradient(512, 512, 100, 512, 512, 720);
+      grad.addColorStop(0, '#fdba74');
+      grad.addColorStop(0.4, '#ea580c');
+      grad.addColorStop(0.8, '#9a3412');
+      grad.addColorStop(1, '#2c0b02');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      // Fiery cracks
+      ctx.strokeStyle = 'rgba(254, 240, 138, 0.7)';
+      ctx.lineWidth = 14;
+      ctx.beginPath();
+      ctx.moveTo(80, 120); ctx.lineTo(320, 400); ctx.lineTo(480, 280); ctx.lineTo(920, 840);
+      ctx.stroke();
+
+      ctx.strokeStyle = '#fb923c';
+      ctx.lineWidth = 32;
+      ctx.strokeRect(16, 16, 992, 992);
+      break;
+    }
+    case 'cosmic_void': {
+      const grad = ctx.createLinearGradient(0, 0, 1024, 1024);
+      grad.addColorStop(0, '#030712');
+      grad.addColorStop(0.35, '#1e1b4b');
+      grad.addColorStop(0.7, '#4338ca');
+      grad.addColorStop(1, '#c084fc');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      // Distant stars
+      ctx.fillStyle = '#ffffff';
+      [
+        [160, 200], [800, 180], [300, 800], [840, 760], [512, 120], [200, 500]
+      ].forEach(([sx, sy]) => {
+        ctx.beginPath(); ctx.arc(sx, sy, 8, 0, Math.PI * 2); ctx.fill();
+      });
+
+      ctx.strokeStyle = '#a855f7';
+      ctx.lineWidth = 32;
+      ctx.strokeRect(16, 16, 992, 992);
+      break;
+    }
+    case 'classic':
+    default: {
+      const grad = ctx.createRadialGradient(512, 512, 100, 512, 512, 720);
+      grad.addColorStop(0, '#ffffff');
+      grad.addColorStop(0.75, '#f8fafc');
+      grad.addColorStop(1, '#e2e8f0');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 1024, 1024);
+
+      // Subtle shadow border
+      ctx.strokeStyle = 'rgba(0, 0, 0, 0.08)';
+      ctx.lineWidth = 24;
+      ctx.strokeRect(12, 12, 1000, 1000);
+      break;
+    }
+  }
+
+  // 2. Draw High-Detail Pips (Concave with 3D Bevel & Specular Core)
+  const PIP_POSITIONS_HD = {
+    1: [[512, 512]],
+    2: [[288, 288], [736, 736]],
+    3: [[288, 288], [512, 512], [736, 736]],
+    4: [[288, 288], [736, 288], [288, 736], [736, 736]],
+    5: [[288, 288], [736, 288], [512, 512], [288, 736], [736, 736]],
+    6: [[288, 260], [736, 260], [288, 512], [736, 512], [288, 764], [736, 764]]
+  };
+
+  const pips = PIP_POSITIONS_HD[value] || [];
+  const pipRadius = 78;
+
+  pips.forEach(([x, y]) => {
+    ctx.save();
+
+    // 1. Drop shadow / Ambient occlusion ring around pip
+    ctx.beginPath();
+    ctx.arc(x, y + 5, pipRadius + 6, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.35)';
+    ctx.fill();
+
+    // 2. Main Pip Body with rich 3D shading
+    ctx.beginPath();
+    ctx.arc(x, y, pipRadius, 0, Math.PI * 2);
+
+    switch (skinId) {
+      case 'neon_ruby': {
+        const pGrad = ctx.createRadialGradient(x - 12, y - 12, 6, x, y, pipRadius);
+        pGrad.addColorStop(0, '#ffffff');
+        pGrad.addColorStop(0.3, '#fecdd3');
+        pGrad.addColorStop(0.8, '#f43f5e');
+        pGrad.addColorStop(1, '#9f1239');
+        ctx.fillStyle = pGrad;
+        ctx.fill();
+        break;
+      }
+      case 'cyber_emerald': {
+        const pGrad = ctx.createRadialGradient(x - 12, y - 12, 6, x, y, pipRadius);
+        pGrad.addColorStop(0, '#ffffff');
+        pGrad.addColorStop(0.4, '#a7f3d0');
+        pGrad.addColorStop(0.8, '#10b981');
+        pGrad.addColorStop(1, '#064e3b');
+        ctx.fillStyle = pGrad;
+        ctx.fill();
+        break;
+      }
+      case 'amethyst_twilight': {
+        const pGrad = ctx.createRadialGradient(x - 12, y - 12, 6, x, y, pipRadius);
+        pGrad.addColorStop(0, '#ffffff');
+        pGrad.addColorStop(0.4, '#e9d5ff');
+        pGrad.addColorStop(0.8, '#a855f7');
+        pGrad.addColorStop(1, '#581c87');
+        ctx.fillStyle = pGrad;
+        ctx.fill();
+        break;
+      }
+      case 'frost_crystal': {
+        const pGrad = ctx.createRadialGradient(x - 12, y - 12, 6, x, y, pipRadius);
+        pGrad.addColorStop(0, '#ffffff');
+        pGrad.addColorStop(0.4, '#e0f2fe');
+        pGrad.addColorStop(0.8, '#0284c7');
+        pGrad.addColorStop(1, '#075985');
+        ctx.fillStyle = pGrad;
+        ctx.fill();
+        break;
+      }
+      case 'golden_tycoon': {
+        const pGrad = ctx.createRadialGradient(x - 12, y - 12, 6, x, y, pipRadius);
+        pGrad.addColorStop(0, '#ffffff');
+        pGrad.addColorStop(0.3, '#fef08a');
+        pGrad.addColorStop(0.7, '#eab308');
+        pGrad.addColorStop(1, '#713f12');
+        ctx.fillStyle = pGrad;
+        ctx.fill();
+        break;
+      }
+      case 'magma_flame': {
+        const pGrad = ctx.createRadialGradient(x - 12, y - 12, 6, x, y, pipRadius);
+        pGrad.addColorStop(0, '#ffffff');
+        pGrad.addColorStop(0.3, '#fed7aa');
+        pGrad.addColorStop(0.7, '#ea580c');
+        pGrad.addColorStop(1, '#431407');
+        ctx.fillStyle = pGrad;
+        ctx.fill();
+        break;
+      }
+      case 'cosmic_void': {
+        const pGrad = ctx.createRadialGradient(x - 12, y - 12, 6, x, y, pipRadius);
+        pGrad.addColorStop(0, '#ffffff');
+        pGrad.addColorStop(0.4, '#ddd6fe');
+        pGrad.addColorStop(0.8, '#7c3aed');
+        pGrad.addColorStop(1, '#1e1b4b');
+        ctx.fillStyle = pGrad;
+        ctx.fill();
+        break;
+      }
+      case 'classic':
+      default: {
+        const pGrad = ctx.createRadialGradient(x - 14, y - 14, 4, x, y, pipRadius);
+        pGrad.addColorStop(0, '#475569');
+        pGrad.addColorStop(0.45, '#1e293b');
+        pGrad.addColorStop(1, '#090d16');
+        ctx.fillStyle = pGrad;
+        ctx.fill();
+        break;
+      }
+    }
+
+    // 3. Specular white gloss dot for glass/acrylic shine
+    ctx.beginPath();
+    ctx.arc(x - pipRadius * 0.35, y - pipRadius * 0.35, pipRadius * 0.22, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+    ctx.fill();
+
+    ctx.restore();
+  });
+
+  ctx.restore();
+  textureCache.set(cacheKey, canvas);
+  return canvas;
+}
+
+/**
+ * Generate 1024x1024 bump map texture with realistic concave spherical dimples for dots
+ */
+export function createDiceBumpCanvas(value) {
+  const cacheKey = `bump_face_hd_${value}`;
+  if (textureCache.has(cacheKey)) {
+    return textureCache.get(cacheKey);
+  }
+
+  const canvas = document.createElement('canvas');
+  canvas.width = 1024;
+  canvas.height = 1024;
+  const ctx = canvas.getContext('2d');
+
+  // Flat base level (white = highest surface)
+  ctx.fillStyle = '#ffffff';
+  ctx.fillRect(0, 0, 1024, 1024);
+
+  // Rounded edge bevel in bump map
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = 36;
+  ctx.strokeRect(18, 18, 988, 988);
+
+  const PIP_POSITIONS_HD = {
+    1: [[512, 512]],
+    2: [[288, 288], [736, 736]],
+    3: [[288, 288], [512, 512], [736, 736]],
+    4: [[288, 288], [736, 288], [288, 736], [736, 736]],
+    5: [[288, 288], [736, 288], [512, 512], [288, 736], [736, 736]],
+    6: [[288, 260], [736, 260], [288, 512], [736, 512], [288, 764], [736, 764]]
+  };
+
+  const pips = PIP_POSITIONS_HD[value] || [];
+  const pipRadius = 80;
+
+  pips.forEach(([x, y]) => {
+    // Parabolic concave indentation gradient
+    const grad = ctx.createRadialGradient(x, y, 0, x, y, pipRadius);
+    grad.addColorStop(0, '#000000');     // Deepest center pit
+    grad.addColorStop(0.65, '#475569');  // Concave wall
+    grad.addColorStop(0.9, '#cbd5e1');   // Rounded bevel rim
+    grad.addColorStop(1, '#ffffff');     // Flat face surface
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(x, y, pipRadius, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  textureCache.set(cacheKey, canvas);
+  return canvas;
+}
+
+/**
+ * Build a Three.js 3D Dice Mesh with rounded chamfered edges, engraved 3D pips and PBR materials
+ */
+export function create3DDiceMesh(skinId = 'classic', size = 2.15) {
+  if (typeof THREE === 'undefined') return null;
+
+  // High-poly BoxGeometry with subdivided segments for smooth edge rounding
+  const segments = 14;
+  const geometry = new THREE.BoxGeometry(size, size, size, segments, segments, segments);
+
+  // Smooth Chamfer / Rounding of edges
+  const pos = geometry.attributes.position;
+  const half = size / 2;
+  const r = size * 0.15; // corner curve radius
+  const v = new THREE.Vector3();
+
+  for (let i = 0; i < pos.count; i++) {
+    v.fromBufferAttribute(pos, i);
+    const sx = Math.sign(v.x);
+    const sy = Math.sign(v.y);
+    const sz = Math.sign(v.z);
+    const innerX = (half - r) * sx;
+    const innerY = (half - r) * sy;
+    const innerZ = (half - r) * sz;
+    const dx = Math.max(0, Math.abs(v.x) - (half - r));
+    const dy = Math.max(0, Math.abs(v.y) - (half - r));
+    const dz = Math.max(0, Math.abs(v.z) - (half - r));
+    const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+    if (dist > 0 && (Math.abs(v.x) > half - r || Math.abs(v.y) > half - r || Math.abs(v.z) > half - r)) {
+      const factor = Math.min(1.0, r / dist);
+      v.x = innerX + dx * factor * sx;
+      v.y = innerY + dy * factor * sy;
+      v.z = innerZ + dz * factor * sz;
+      pos.setXYZ(i, v.x, v.y, v.z);
+    }
+  }
+  geometry.computeVertexNormals();
+
+  // Box faces mapping in Three.js:
+  // 0: Right  (+X) -> Face 3
+  // 1: Left   (-X) -> Face 4
+  // 2: Top    (+Y) -> Face 2
+  // 3: Bottom (-Y) -> Face 5
+  // 4: Front  (+Z) -> Face 1
+  // 5: Back   (-Z) -> Face 6
+  const faceValues = [3, 4, 2, 5, 1, 6];
+
+  const materials = faceValues.map(val => {
+    const canvas = createDiceFaceCanvas(val, skinId);
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.generateMipmaps = true;
+    texture.minFilter = THREE.LinearMipmapLinearFilter;
+
+    const bumpCanvas = createDiceBumpCanvas(val);
+    const bumpTexture = new THREE.CanvasTexture(bumpCanvas);
+    bumpTexture.generateMipmaps = true;
+    bumpTexture.minFilter = THREE.LinearMipmapLinearFilter;
+
+    let matConfig = {
+      map: texture,
+      bumpMap: bumpTexture,
+      bumpScale: 0.08,
+      roughness: 0.14,
+      metalness: 0.06
+    };
+
+    if (skinId === 'golden_tycoon') {
+      matConfig.metalness = 0.94;
+      matConfig.roughness = 0.12;
+    } else if (skinId === 'neon_ruby' || skinId === 'cyber_emerald' || skinId === 'magma_flame' || skinId === 'cosmic_void' || skinId === 'amethyst_twilight') {
+      matConfig.emissive = new THREE.Color(0.3, 0.3, 0.3);
+      matConfig.emissiveMap = texture;
+    }
+
+    return new THREE.MeshStandardMaterial(matConfig);
+  });
+
+  const mesh = new THREE.Mesh(geometry, materials);
+  mesh.castShadow = true;
+  mesh.receiveShadow = false;
+  return mesh;
+}
+
+/**
+ * Target rotations (radians) to expose a specific face upward (+Y)
+ */
+export function getTargetRotationForFace(value) {
+  const v = parseInt(value) || 1;
+  switch (v) {
+    case 1: // Front (+Z) -> rotate down to Top (+Y)
+      return { x: -Math.PI / 2, y: 0, z: 0 };
+    case 2: // Top (+Y) -> already on Top
+      return { x: 0, y: 0, z: 0 };
+    case 3: // Right (+X) -> rotate left to Top (+Y)
+      return { x: 0, y: 0, z: Math.PI / 2 };
+    case 4: // Left (-X) -> rotate right to Top (+Y)
+      return { x: 0, y: 0, z: -Math.PI / 2 };
+    case 5: // Bottom (-Y) -> flip 180 to Top (+Y)
+      return { x: Math.PI, y: 0, z: 0 };
+    case 6: // Back (-Z) -> rotate up to Top (+Y)
+      return { x: Math.PI / 2, y: 0, z: 0 };
+    default:
+      return { x: 0, y: 0, z: 0 };
+  }
+}
+
+/**
+ * Get Accent Light Color for Skin
+ */
+export function getSkinAccentColor(skinId = 'classic') {
+  switch (skinId) {
+    case 'neon_ruby': return 0xf43f5e;
+    case 'cyber_emerald': return 0x10b981;
+    case 'amethyst_twilight': return 0x7e22ce;
+    case 'frost_crystal': return 0x38bdf8;
+    case 'golden_tycoon': return 0xfbbf24;
+    case 'magma_flame': return 0xea580c;
+    case 'cosmic_void': return 0x818cf8;
+    case 'classic':
+    default: return 0xffffff;
+  }
+}
+
+/**
+ * Complete WebGL 3D Dice Stage Orchestrator
+ */
+export class WebGLDiceStage {
+  constructor(containerId = 'dice-stage-3d-canvas') {
+    this.containerId = containerId;
+    this.renderer = null;
+    this.scene = null;
+    this.camera = null;
+    this.die1Mesh = null;
+    this.die2Mesh = null;
+    this.accentLight = null;
+    this.animFrameId = null;
+    this.isRolling = false;
+    this.currentSkin = 'classic';
+  }
+
+  init(width = 340, height = 130) {
+    if (typeof THREE === 'undefined') {
+      console.warn('Three.js not found, fallback to CSS 3D');
+      return false;
+    }
+
+    const container = document.getElementById(this.containerId);
+    if (!container) return false;
+
+    container.innerHTML = '';
+
+    // 1. Scene
+    this.scene = new THREE.Scene();
+
+    // 2. Camera positioned with comfortable wide framing for large 2.15 dice
+    this.camera = new THREE.PerspectiveCamera(44, width / height, 0.1, 100);
+    this.camera.position.set(0, 8.4, 11.6);
+    this.camera.lookAt(0, 0.65, 0);
+
+    // 3. Renderer with transparent background & antialiasing
+    this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
+    this.renderer.setSize(width, height);
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 2, 2));
+    this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    container.appendChild(this.renderer.domElement);
+
+    // 4. Lighting (Warm Key, Cool Rim, Soft Ambient, Dynamic Skin Accent)
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.95);
+    this.scene.add(ambientLight);
+
+    const keyLight = new THREE.DirectionalLight(0xffffff, 1.35);
+    keyLight.position.set(6, 14, 8);
+    keyLight.castShadow = true;
+    keyLight.shadow.mapSize.width = 1024;
+    keyLight.shadow.mapSize.height = 1024;
+    keyLight.shadow.camera.near = 0.5;
+    keyLight.shadow.camera.far = 30;
+    this.scene.add(keyLight);
+
+    const rimLight = new THREE.DirectionalLight(0x93c5fd, 0.85);
+    rimLight.position.set(-7, 9, -5);
+    this.scene.add(rimLight);
+
+    this.accentLight = new THREE.PointLight(0xffffff, 1.2, 18);
+    this.accentLight.position.set(0, 4.5, 2.5);
+    this.scene.add(this.accentLight);
+
+    // 5. Floor shadow receiver plane
+    const planeGeo = new THREE.PlaneGeometry(32, 32);
+    const planeMat = new THREE.ShadowMaterial({ opacity: 0.32 });
+    const floor = new THREE.Mesh(planeGeo, planeMat);
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -0.01;
+    floor.receiveShadow = true;
+    this.scene.add(floor);
+
+    // 6. Build Initial Dice Meshes
+    this.buildDice('classic', [1, 1]);
+
+    // 7. Start render loop
+    this.render();
+    return true;
+  }
+
+  buildDice(skinId = 'classic', initialValues = [1, 1]) {
+    if (!this.scene) return;
+    this.currentSkin = skinId;
+
+    if (this.die1Mesh) this.scene.remove(this.die1Mesh);
+    if (this.die2Mesh) this.scene.remove(this.die2Mesh);
+
+    if (this.accentLight) {
+      this.accentLight.color.setHex(getSkinAccentColor(skinId));
+      this.accentLight.intensity = skinId === 'classic' ? 0.5 : 1.35;
+    }
+
+    const diceSize = 2.15;
+    this.die1Mesh = create3DDiceMesh(skinId, diceSize);
+    this.die2Mesh = create3DDiceMesh(skinId, diceSize);
+
+    if (!this.die1Mesh || !this.die2Mesh) return;
+
+    this.die1Mesh.position.set(-1.75, 1.05, 0);
+    this.die2Mesh.position.set(1.75, 1.05, 0);
+
+    const r1 = getTargetRotationForFace(initialValues[0]);
+    const r2 = getTargetRotationForFace(initialValues[1]);
+    this.die1Mesh.rotation.set(r1.x, r1.y + 0.1, r1.z);
+    this.die2Mesh.rotation.set(r2.x, r2.y - 0.1, r2.z);
+
+    this.scene.add(this.die1Mesh);
+    this.scene.add(this.die2Mesh);
+  }
+
+  roll(finalValues = [1, 1], skinId = null, onComplete = null) {
+    if (!this.scene || !this.die1Mesh || !this.die2Mesh) {
+      if (onComplete) onComplete();
+      return;
+    }
+
+    const skin = skinId || this.currentSkin || 'classic';
+    if (skin !== this.currentSkin) {
+      this.buildDice(skin, finalValues);
+    }
+
+    this.isRolling = true;
+    const startTime = performance.now();
+    const duration = 750; // Total roll tumble time in ms
+
+    // Target final rotations
+    const tRot1 = getTargetRotationForFace(finalValues[0]);
+    const tRot2 = getTargetRotationForFace(finalValues[1]);
+
+    // Add multiple full 360-degree spins for realistic momentum
+    const fullSpins1 = { x: Math.PI * 4, y: Math.PI * 6, z: Math.PI * 2 };
+    const fullSpins2 = { x: -Math.PI * 6, y: -Math.PI * 4, z: -Math.PI * 2 };
+
+    const animate = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1.0);
+
+      // Smooth physics easing: fast burst, bounce, settle
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+
+      if (progress < 1.0) {
+        // Tumble in 3D space
+        const tumbleProgress = (1 - easeOut);
+
+        // Position arcs & bounce (kept strictly within visible camera frustum with safety margins)
+        const jumpY1 = Math.sin(progress * Math.PI) * 1.15 * (1 - progress * 0.35);
+        const jumpY2 = Math.sin(progress * Math.PI) * 1.25 * (1 - progress * 0.35);
+
+        this.die1Mesh.position.set(
+          -1.75 - Math.sin(progress * Math.PI * 2) * 0.32 * tumbleProgress,
+          1.05 + Math.max(0, jumpY1),
+          Math.cos(progress * Math.PI * 2) * 0.4 * tumbleProgress
+        );
+
+        this.die2Mesh.position.set(
+          1.75 + Math.sin(progress * Math.PI * 2) * 0.32 * tumbleProgress,
+          1.05 + Math.max(0, jumpY2),
+          -Math.cos(progress * Math.PI * 2) * 0.4 * tumbleProgress
+        );
+
+        // Rotations
+        this.die1Mesh.rotation.x = tRot1.x + fullSpins1.x * (1 - easeOut);
+        this.die1Mesh.rotation.y = tRot1.y + fullSpins1.y * (1 - easeOut) + 0.1;
+        this.die1Mesh.rotation.z = tRot1.z + fullSpins1.z * (1 - easeOut);
+
+        this.die2Mesh.rotation.x = tRot2.x + fullSpins2.x * (1 - easeOut);
+        this.die2Mesh.rotation.y = tRot2.y + fullSpins2.y * (1 - easeOut) - 0.1;
+        this.die2Mesh.rotation.z = tRot2.z + fullSpins2.z * (1 - easeOut);
+
+        this.animFrameId = requestAnimationFrame(animate);
+      } else {
+        // Land exactly on target values with tiny settle impact
+        this.die1Mesh.position.set(-1.75, 1.05, 0);
+        this.die2Mesh.position.set(1.75, 1.05, 0);
+
+        this.die1Mesh.rotation.set(tRot1.x, tRot1.y + 0.08, tRot1.z);
+        this.die2Mesh.rotation.set(tRot2.x, tRot2.y - 0.08, tRot2.z);
+
+        this.isRolling = false;
+        if (onComplete) onComplete();
+      }
+    };
+
+    this.animFrameId = requestAnimationFrame(animate);
+  }
+
+  setDiceValues(values, skinId = null) {
+    if (!this.die1Mesh || !this.die2Mesh) return;
+    const skin = skinId || this.currentSkin || 'classic';
+    if (skin !== this.currentSkin) {
+      this.buildDice(skin, values);
+    }
+    const r1 = getTargetRotationForFace(values[0]);
+    const r2 = getTargetRotationForFace(values[1]);
+    this.die1Mesh.position.set(-1.75, 1.05, 0);
+    this.die2Mesh.position.set(1.75, 1.05, 0);
+    this.die1Mesh.rotation.set(r1.x, r1.y + 0.08, r1.z);
+    this.die2Mesh.rotation.set(r2.x, r2.y - 0.08, r2.z);
+  }
+
+  render() {
+    requestAnimationFrame(() => this.render());
+    if (this.renderer && this.scene && this.camera) {
+      // Subtle idle breathing when not rolling
+      if (!this.isRolling && this.die1Mesh && this.die2Mesh) {
+        const t = performance.now() * 0.0015;
+        this.die1Mesh.position.y = 1.05 + Math.sin(t) * 0.035;
+        this.die2Mesh.position.y = 1.05 + Math.cos(t) * 0.035;
+      }
+      this.renderer.render(this.scene, this.camera);
+    }
+  }
+
+  destroy() {
+    if (this.animFrameId) cancelAnimationFrame(this.animFrameId);
+    if (this.renderer && this.renderer.domElement) {
+      this.renderer.domElement.remove();
+    }
+  }
+}
+
+export const webGLDice = new WebGLDiceStage();

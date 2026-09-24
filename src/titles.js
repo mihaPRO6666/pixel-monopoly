@@ -1,1 +1,294 @@
-function a16_0x5a6b(){const _0x217a70=['vKLqincF0lxrGngb0l7qVDcW','0j7qTnc10ydqTTc40ylqTsaXnsdqV9c+0lhqTDc0incYinc80ldrGTgh0ldrHq','mxb4ihnVBgLKicnHodu1zJC','4Q2qifzjucdqN9c10ydrGDc+0l3qSa','BgvNzw5K','BM92AwnL','CMDIysG1osWGmtmWlcaYndySidaUmtyP','jdeWldaWmcdqT9cW0ydqSncX0l7rGTc60la','0jZqVTc90l7qV9c+0lVqUngb0yi','8j+sJIdqNTc70lJqS9cW0ydrHq','Dg9mB2nHBgvtDhjPBMC','lZuG0lJqS9gakq','0j3qVTcY0lJrH9c+0lO','mxb4ihnVBgLKicnLywiZmdG','mcaWide0ChGGCMDIysGYnduSide1ocWGmteSidaUnduP','mtyWnhPSzvbLzq','otyWmJCWnfDAzvzOCG','mtqXntuWmZbdvMLJwva','0j7qTnc10ydqTTc40ylqTsaZinc/0l7qSDc10ltrIYdqSIdqVncW0ylrH9cW0yu','0jtqU9gpingc0lxrHsWG0lRrGTc+ingd0lZqTDc10yiG0lRqVTc/0lJrGTgminc60ldqV9c40ylqSnc7','0k3qUTgb0lRqU9go0lFqUncY0l3rI9c5inc90lxqVTc90l7qSTgl0lKG0ylqUngc0ypqUYdqUTc40lhqTDga0l/rGnc+0yhrGTga0ldqVDgb0ylqSTcW','C3rHCNrLCG','0j7rHnc40yBqUncW0lVrJnc90yVqUsdrGTc40ylrG9c7ingb0l7qT9c00ldrGTc10lVrJYbnB25VCg9SEq','Dg90ywXfyxjUzwq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGCMDIysGYnteSide5msWGmZySidaUmYKSihjNyMeOmJe3lca3mcWGmJm5lcaWlJmPkq','BwLU','ic8GmYdqV9c+0lhqTDc0','0jVqTDcZ0lxqVDc00ldrGnc90yVqUq','Bw9UB3bVBgLZDa','CM91BMq','0j7qSDgl0yFqVDgl0lK','mxb4ihnVBgLKicnMndnMnwu','0jZqUnc70lVqUnc+0l3qTDga','CMfYAxr5','z2fTzxnqBgf5zwq','mxb4ihnVBgLKicnMntLLmgi','y29SB3i','CMDIysGZncWGmtK3lca5ncWGmc4XnIK','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGCMDIysGXnIWGmtG1lcaXmJKSidaUmJiPlcbYz2jHkdySide4mIWGmJeYlcaWlJiYksK','8j+oSIdqN9c+0llqTDc70lJrGTc10lVrJcdqUTgd0lhqUnc60l7qSG','8j+pME+4JW','mxb4ihnVBgLKicnMyMjMmJq','0jdqUTgd0lVqScdqSDc40lFqVDc10yhqSa','oYbIB3jKzxi6ia','8j+pME+4JYdqNncW0lpqVDcW0yi','yM94lxnOywrVDZOG','BhvJA3K','i2y1owuWyG','0jtqU9gpingb0l7qT9c00ldrGTc10lVrJW','yM9YzgvYu3r5Bgu','mcaWide4ChGGCMDIysGYndqSidyZlca5ncWGmc42kq','zMLUza','mJuWnJi3nwjOD2zNua','CMDIysG1nIWGmtG5lcaYndGSidaUmtyP','iZK0ytnIoa','0khrH9cW0yhrGTc70lJqSTgh0lJqUG','0j7qTnc10ydqTTc40ylqTsaYnsdqV9c+0lhqTDc0incYinc80ldrGTgh0ldrHq','0jJqVDcY0lxrGDgc0l7rGa','DgfN','CMDIysGYmZqSide3osWGocWGmc4XnIK','C3bLy2LHBa','zxbPyW','mcaWide2ChGGCMDIysGXnJGSidG1lcaYndCSidaUnsK','i2zIyMyYna','ic8GnsdqV9c+0lhqTDc0','CMfYzq','CMDIysGXndGSide2mYWGmtG0lcaWlJe2kq','mZq1nZeZovfUEuLvBW','0kJqTDc50yu','iZiYyZu1zq','8j+BOo+4JYdqODc+0lFqTncW0ylqTDc70yW','8j+MIcdqKnc60ypqU9cWincX0lJqT9c90lxrGDcW','i2vJndG5oq','C2HVCa','0j/qVTcY0lxqU9c40ylqTDc70yWG0lRrG9cX0lJqUTc+0li','0k3qV9c40yFqTDgb0lRqUnc5','ic8GjdeWldaWma','mJuG0l/qVTcX0lxqTa','0jFqSnga0ldqSDc+0ylqSnc50ylqTsaKmtaSmdaWinc30laG0llrGDgrincY0ydqTDc80y8G0lJqS9ga0yS','B2XPz2fYy2G','0kpqVDc40lRqSnc70yZqVDgl0lK','8j+mSsdqNDc+0llqUngh0l7qUG','mxb4ihnVBgLKicmXmgi5ode','8j+BOo+4JW','z2XVDW','mxb4ihnVBgLKicnLyZq4otK','nNjRy2Dqwq','Aw52zxn0B3i','D2LUCW','mcaWideYChGGCMDIysGYmZySidCYlcaXntmSidaUncK','i2e4ntvMnW','CMDIysGXnIWGmtG1lcaXmJKSidaUmtyP','mtG2mdv4A2vhDvO','iZnIodjMnG','ic8GmtuG0l/qVTcX0lxqTa','0kdqTDc00lRqUnc5','0jVqTDcZ0lxqVDc00la','8j+sScdqNnc40lVqU9c40l7qVDc10ya','0khrGTcW0ydrGTc+0llrI9c5ingc0lJrGTgd0lSG0ltqU9gpincY0yhqTDgfinc40lprGnc+0lRqVTcY','mZqXnJiYnMv3zgzbCG','BgvNzw5Kyxj5','0jRqUncX0lxrGnc60l7rGnc+0lVrJa','iZm4yMrMoa','oYbIywnRz3jVDw5KoIa','C2HLAwTO','CMDIysG2lcaXodiSidiXmIWGmc4XnIK','0khqVTc30ltqSngc0lxqU9gm','iZeWyJK4mq','iZa2yJzKna','i2y0m2y1zq','ic8GmtaG0lJqS9ga','pc9ZCgfUpG','ic8GmJuG0l/qVTcX0lxqTa','0j7qTnc10ydqTTc40ylqTsa1inc/0l7qSDc10lqG0liG0lZqSngc0yFqSngf','BwfNBMf0zq','8j+nGcdqODgh0ldrGDgc0lVqUncY0yFqUnc6','BwLSBgLVBMfPCMu','mZyYmZy2nLbis2zbzq','y3LIzxjFA2LUzW','mwnlBvDzBW','8j+rKsdqM9c10lpqTDc90ltqSa','mYdqV9c+0lhqTDc00yS','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGCMDIysGYmZySidCYlcaXntmSidaUmJuPlcbYz2jHkde2ocWGoduSidi0nYWGmc4YnsKP','z2v0uhjVz3jLC3nsyxrPBW','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGCMDIysGXnJGSidG1lcaYndCSidaUmYKSihjNyMeOmJm2lca3mIWGmtuZlcaWlJmPkq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGCMDIysGYnduSide1ocWGmteSidaUmJuPlcbYz2jHkdiXnYWGmte5lca2lcaWlJi1ksK','yMDtDhLSzq','0jlrI9c00ldrKDgc0yhrJYdqVDcWingb0ylqSnga0ylqTq','8j+oQsdqNnc+0l3qVTc/0l7qU9c40yhrGG','iIbZDhLSzt0Iy29SB3i6ia','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGCMDIysGYndqSidyZlca5ncWGmc4ZnsKSihjNyMeOmti2lcaZncWGmJa2lcaWlJm1ksK','DMLW','0khrI9cZ0ydqSnc50ylqTsaXmcdqVncW0ylrH9c10lKG0liG0lJqS9ga0lu','ywnOAwv2zw1LBNq'];a16_0x5a6b=function(){return _0x217a70;};return a16_0x5a6b();}function a16_0x227b(_0x5ea03d,_0x424fa8){_0x5ea03d=_0x5ea03d-0x1a3;const _0x5a6bc5=a16_0x5a6b();let _0x227b96=_0x5a6bc5[_0x5ea03d];if(a16_0x227b['EdNhWT']===undefined){var _0x3d647f=function(_0x5db248){const _0x4393c2='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x9f752e='',_0x140d1b='';for(let _0x5cdda0=0x0,_0x4a9f05,_0xb4e41d,_0xda4198=0x0;_0xb4e41d=_0x5db248['charAt'](_0xda4198++);~_0xb4e41d&&(_0x4a9f05=_0x5cdda0%0x4?_0x4a9f05*0x40+_0xb4e41d:_0xb4e41d,_0x5cdda0++%0x4)?_0x9f752e+=String['fromCharCode'](0xff&_0x4a9f05>>(-0x2*_0x5cdda0&0x6)):0x0){_0xb4e41d=_0x4393c2['indexOf'](_0xb4e41d);}for(let _0x907c93=0x0,_0x4f8bfb=_0x9f752e['length'];_0x907c93<_0x4f8bfb;_0x907c93++){_0x140d1b+='%'+('00'+_0x9f752e['charCodeAt'](_0x907c93)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x140d1b);};a16_0x227b['WDOXnd']=_0x3d647f,a16_0x227b['GQuRdW']={},a16_0x227b['EdNhWT']=!![];}const _0x10e6f7=_0x5a6bc5[0x0];a16_0x227b['YUZUiI']!==_0x10e6f7&&(a16_0x227b['GQuRdW']={},a16_0x227b['YUZUiI']=_0x10e6f7);const _0x3f1a23=a16_0x227b['GQuRdW'][_0x5ea03d];return _0x3f1a23===undefined?(_0x227b96=a16_0x227b['WDOXnd'](_0x227b96),a16_0x227b['GQuRdW'][_0x5ea03d]=_0x227b96):_0x227b96=_0x3f1a23,_0x227b96;}const a16_0x2a9ee2=a16_0x227b;(function(_0x57f40c,_0x3a4ee1){const _0xbe590c=a16_0x227b,_0x259a2b=_0x57f40c();while(!![]){try{const _0x34be62=-parseInt(_0xbe590c(0x21f))/0x1*(parseInt(_0xbe590c(0x21d))/0x2)+-parseInt(_0xbe590c(0x20b))/0x3+parseInt(_0xbe590c(0x1b7))/0x4*(parseInt(_0xbe590c(0x204))/0x5)+parseInt(_0xbe590c(0x1fe))/0x6*(-parseInt(_0xbe590c(0x1eb))/0x7)+parseInt(_0xbe590c(0x1b8))/0x8+parseInt(_0xbe590c(0x1dc))/0x9+parseInt(_0xbe590c(0x1b9))/0xa;if(_0x34be62===_0x3a4ee1)break;else _0x259a2b['push'](_0x259a2b['shift']());}catch(_0x15e2b3){_0x259a2b['push'](_0x259a2b['shift']());}}}(a16_0x5a6b,0xe5fa1));export const TITLES=[{'id':a16_0x2a9ee2(0x1ad),'name':a16_0x2a9ee2(0x1b4),'icon':'🌱','tag':a16_0x2a9ee2(0x1f9),'rarity':'common','rarityName':a16_0x2a9ee2(0x1c6),'category':a16_0x2a9ee2(0x1bd),'color':a16_0x2a9ee2(0x1de),'bgStyle':a16_0x2a9ee2(0x1ea),'borderStyle':'1px\x20solid\x20rgba(148,\x20163,\x20184,\x200.3)','description':a16_0x2a9ee2(0x20a),'conditionText':a16_0x2a9ee2(0x227),'price':0x0,'getProgressRatio':()=>0x1},{'id':'shark','name':a16_0x2a9ee2(0x1d2),'icon':'🦈','tag':a16_0x2a9ee2(0x1ef),'rarity':'rare','rarityName':a16_0x2a9ee2(0x207),'category':a16_0x2a9ee2(0x1a7),'color':a16_0x2a9ee2(0x20e),'bgStyle':a16_0x2a9ee2(0x1dd),'borderStyle':'1px\x20solid\x20#38bdf8','description':a16_0x2a9ee2(0x1ba),'conditionText':a16_0x2a9ee2(0x221),'price':0x0,'hasCondition':!![],'checkUnlock':_0x140d1b=>(_0x140d1b?.['wins']||0x0)>=0x3,'getProgress':_0x5cdda0=>Math[a16_0x2a9ee2(0x1c1)](_0x5cdda0?.[a16_0x2a9ee2(0x200)]||0x0,0x3)+a16_0x2a9ee2(0x1c2),'getProgressRatio':_0x4a9f05=>Math[a16_0x2a9ee2(0x1c1)]((_0x4a9f05?.[a16_0x2a9ee2(0x200)]||0x0)/0x3,0x1)},{'id':a16_0x2a9ee2(0x1c4),'name':a16_0x2a9ee2(0x1b0),'icon':'🎩','tag':a16_0x2a9ee2(0x228),'rarity':a16_0x2a9ee2(0x1e9),'rarityName':'Редкий','category':a16_0x2a9ee2(0x1a7),'color':a16_0x2a9ee2(0x202),'bgStyle':'rgba(168,\x2085,\x20247,\x200.16)','borderStyle':a16_0x2a9ee2(0x1aa),'description':a16_0x2a9ee2(0x219),'conditionText':'5\x20побед','price':0x0,'hasCondition':!![],'checkUnlock':_0xb4e41d=>(_0xb4e41d?.[a16_0x2a9ee2(0x200)]||0x0)>=0x5,'getProgress':_0xda4198=>Math[a16_0x2a9ee2(0x1c1)](_0xda4198?.['wins']||0x0,0x5)+a16_0x2a9ee2(0x1e8),'getProgressRatio':_0x907c93=>Math['min']((_0x907c93?.['wins']||0x0)/0x5,0x1)},{'id':a16_0x2a9ee2(0x21a),'name':'Магнат','icon':a16_0x2a9ee2(0x1d0),'tag':a16_0x2a9ee2(0x1d4),'rarity':'epic','rarityName':a16_0x2a9ee2(0x1f3),'category':a16_0x2a9ee2(0x1a7),'color':a16_0x2a9ee2(0x213),'bgStyle':a16_0x2a9ee2(0x203),'borderStyle':a16_0x2a9ee2(0x1fa),'description':a16_0x2a9ee2(0x1a6),'conditionText':'10\x20матчей','price':0x0,'hasCondition':!![],'checkUnlock':_0x4f8bfb=>(_0x4f8bfb?.['gamesPlayed']||0x0)>=0xa,'getProgress':_0x882ecd=>Math['min'](_0x882ecd?.[a16_0x2a9ee2(0x1ca)]||0x0,0xa)+a16_0x2a9ee2(0x216),'getProgressRatio':_0x43c450=>Math[a16_0x2a9ee2(0x1c1)]((_0x43c450?.[a16_0x2a9ee2(0x1ca)]||0x0)/0xa,0x1)},{'id':a16_0x2a9ee2(0x1d6),'name':a16_0x2a9ee2(0x1df),'icon':'🍀','tag':a16_0x2a9ee2(0x21b),'rarity':a16_0x2a9ee2(0x1e5),'rarityName':a16_0x2a9ee2(0x1f3),'category':'achievement','color':a16_0x2a9ee2(0x1ed),'bgStyle':a16_0x2a9ee2(0x1cd),'borderStyle':'1px\x20solid\x20#22c55e','description':'Винрейт\x2050%+\x20(минимум\x205\x20сыгранных\x20матчей)','conditionText':'Винрейт\x2050%+\x20(от\x205\x20игр)','price':0x0,'hasCondition':!![],'checkUnlock':_0x36b1dd=>(_0x36b1dd?.[a16_0x2a9ee2(0x1ca)]||0x0)>=0x5&&(_0x36b1dd?.[a16_0x2a9ee2(0x200)]||0x0)/(_0x36b1dd?.[a16_0x2a9ee2(0x1ca)]||0x1)>=0.5,'getProgress':_0x15b796=>(_0x15b796?.['gamesPlayed']?Math[a16_0x2a9ee2(0x1c5)]((_0x15b796[a16_0x2a9ee2(0x200)]||0x0)/_0x15b796[a16_0x2a9ee2(0x1ca)]*0x64):0x0)+'%\x20винрейт\x20('+(_0x15b796?.[a16_0x2a9ee2(0x1ca)]||0x0)+a16_0x2a9ee2(0x1b3),'getProgressRatio':_0x5a043e=>{const _0x1379a6=a16_0x2a9ee2,_0x33d4e4=_0x5a043e?.[_0x1379a6(0x1ca)]||0x0,_0xb8c3a3=_0x5a043e?.['wins']||0x0;if(_0x33d4e4===0x0)return 0x0;const _0x3bac70=_0xb8c3a3/_0x33d4e4,_0x460666=Math[_0x1379a6(0x1c1)](_0x33d4e4/0x5,0x1),_0x3ec20a=_0x3bac70>=0.5?0x1:_0x3bac70/0.5;return Math[_0x1379a6(0x1c1)](_0x460666*_0x3ec20a,0x1);}},{'id':a16_0x2a9ee2(0x1f7),'name':'Олигарх','icon':'💎','tag':a16_0x2a9ee2(0x1b1),'rarity':a16_0x2a9ee2(0x1e5),'rarityName':a16_0x2a9ee2(0x1f3),'category':a16_0x2a9ee2(0x1a7),'color':a16_0x2a9ee2(0x214),'bgStyle':a16_0x2a9ee2(0x211),'borderStyle':'1px\x20solid\x20#06b6d4','description':a16_0x2a9ee2(0x1f6),'conditionText':a16_0x2a9ee2(0x1af),'price':0x0,'hasCondition':!![],'checkUnlock':_0x312b49=>(_0x312b49?.[a16_0x2a9ee2(0x1bf)]||0x0)>=0x2710,'getProgress':_0x4e6b7c=>'$'+Math['min'](_0x4e6b7c?.[a16_0x2a9ee2(0x1bf)]||0x0,0x2710)[a16_0x2a9ee2(0x1b2)]()+a16_0x2a9ee2(0x1f4),'getProgressRatio':_0x15c6f2=>Math[a16_0x2a9ee2(0x1c1)]((_0x15c6f2?.[a16_0x2a9ee2(0x1bf)]||0x0)/0x2710,0x1)},{'id':'dice_master','name':a16_0x2a9ee2(0x1f2),'icon':'🎲','tag':a16_0x2a9ee2(0x1cf),'rarity':a16_0x2a9ee2(0x20c),'rarityName':a16_0x2a9ee2(0x1c3),'category':a16_0x2a9ee2(0x1a7),'color':a16_0x2a9ee2(0x1f0),'bgStyle':a16_0x2a9ee2(0x222),'borderStyle':a16_0x2a9ee2(0x1fd),'glow':a16_0x2a9ee2(0x201),'description':a16_0x2a9ee2(0x1a9),'conditionText':'15\x20побед','price':0x0,'hasCondition':!![],'checkUnlock':_0x53298c=>(_0x53298c?.['wins']||0x0)>=0xf,'getProgress':_0x35dc46=>Math[a16_0x2a9ee2(0x1c1)](_0x35dc46?.[a16_0x2a9ee2(0x200)]||0x0,0xf)+a16_0x2a9ee2(0x206),'getProgressRatio':_0x1d24c2=>Math[a16_0x2a9ee2(0x1c1)]((_0x1d24c2?.['wins']||0x0)/0xf,0x1)},{'id':a16_0x2a9ee2(0x1ac),'name':a16_0x2a9ee2(0x208),'icon':'👑','tag':a16_0x2a9ee2(0x220),'rarity':a16_0x2a9ee2(0x20c),'rarityName':a16_0x2a9ee2(0x1c3),'category':a16_0x2a9ee2(0x1a7),'color':a16_0x2a9ee2(0x1e7),'bgStyle':a16_0x2a9ee2(0x1c0),'borderStyle':a16_0x2a9ee2(0x1d1),'glow':'0\x200\x2016px\x20rgba(251,\x20191,\x2036,\x200.5)','description':a16_0x2a9ee2(0x1e0),'conditionText':a16_0x2a9ee2(0x1f5),'price':0x0,'hasCondition':!![],'checkUnlock':_0x25774f=>(_0x25774f?.[a16_0x2a9ee2(0x200)]||0x0)>=0x19,'getProgress':_0x3cb311=>Math['min'](_0x3cb311?.[a16_0x2a9ee2(0x200)]||0x0,0x19)+a16_0x2a9ee2(0x218),'getProgressRatio':_0x127c48=>Math['min']((_0x127c48?.[a16_0x2a9ee2(0x200)]||0x0)/0x19,0x1)},{'id':a16_0x2a9ee2(0x1ff),'name':a16_0x2a9ee2(0x1e1),'icon':'💼','tag':'💼\x20Инвестор','rarity':'rare','rarityName':a16_0x2a9ee2(0x207),'category':a16_0x2a9ee2(0x1f1),'color':a16_0x2a9ee2(0x205),'bgStyle':a16_0x2a9ee2(0x1ae),'borderStyle':'1px\x20solid\x20#3b82f6','description':'Покупается\x20за\x20монеты\x20в\x20магазине','price':0x96,'hasCondition':![],'getProgressRatio':(_0x18241f,_0x596554)=>Math[a16_0x2a9ee2(0x1c1)]((_0x596554||0x0)/0x96,0x1)},{'id':a16_0x2a9ee2(0x1a5),'name':a16_0x2a9ee2(0x1a8),'icon':'⭐','tag':a16_0x2a9ee2(0x1ab),'rarity':a16_0x2a9ee2(0x1e5),'rarityName':a16_0x2a9ee2(0x1f3),'category':a16_0x2a9ee2(0x1f1),'color':'#eab308','bgStyle':a16_0x2a9ee2(0x1e3),'borderStyle':a16_0x2a9ee2(0x1b5),'glow':'0\x200\x2010px\x20rgba(234,\x20179,\x208,\x200.35)','description':'Престижный\x20статус\x20игрока\x20Monopoly','price':0x12c,'hasCondition':![],'getProgressRatio':(_0x4f0cee,_0x28fa80)=>Math[a16_0x2a9ee2(0x1c1)]((_0x28fa80||0x0)/0x12c,0x1)},{'id':a16_0x2a9ee2(0x21c),'name':a16_0x2a9ee2(0x1c8),'icon':'💰','tag':a16_0x2a9ee2(0x209),'rarity':'epic','rarityName':a16_0x2a9ee2(0x1f3),'category':a16_0x2a9ee2(0x1f1),'color':a16_0x2a9ee2(0x213),'bgStyle':a16_0x2a9ee2(0x1ce),'borderStyle':a16_0x2a9ee2(0x1fa),'glow':'0\x200\x2012px\x20rgba(16,\x20185,\x20129,\x200.4)','description':a16_0x2a9ee2(0x1bb),'price':0x1c2,'hasCondition':![],'getProgressRatio':(_0xe1ad2e,_0x4740d5)=>Math['min']((_0x4740d5||0x0)/0x1c2,0x1)},{'id':a16_0x2a9ee2(0x210),'name':a16_0x2a9ee2(0x1ec),'icon':'💰','tag':'💰\x20Шейх','rarity':a16_0x2a9ee2(0x20c),'rarityName':a16_0x2a9ee2(0x1c3),'category':a16_0x2a9ee2(0x1f1),'color':a16_0x2a9ee2(0x1d7),'bgStyle':a16_0x2a9ee2(0x225),'borderStyle':a16_0x2a9ee2(0x1cb),'glow':a16_0x2a9ee2(0x1b6),'description':'Премиальный\x20титул\x20высшего\x20общества','price':0x258,'hasCondition':![],'getProgressRatio':(_0x5df99f,_0x55d754)=>Math['min']((_0x55d754||0x0)/0x258,0x1)},{'id':a16_0x2a9ee2(0x21e),'name':a16_0x2a9ee2(0x20d),'icon':'⚡','tag':'⚡\x20Киберкороль','rarity':a16_0x2a9ee2(0x20c),'rarityName':a16_0x2a9ee2(0x1c3),'category':a16_0x2a9ee2(0x1f1),'color':a16_0x2a9ee2(0x202),'bgStyle':a16_0x2a9ee2(0x224),'borderStyle':'1px\x20solid\x20#a855f7','glow':a16_0x2a9ee2(0x1e6),'description':a16_0x2a9ee2(0x1bc),'price':0x352,'hasCondition':![],'getProgressRatio':(_0x56d3af,_0x2a9660)=>Math[a16_0x2a9ee2(0x1c1)]((_0x2a9660||0x0)/0x352,0x1)},{'id':'creator','name':a16_0x2a9ee2(0x212),'icon':a16_0x2a9ee2(0x1fb),'tag':a16_0x2a9ee2(0x1ee),'rarity':'mythic','rarityName':a16_0x2a9ee2(0x1f8),'category':a16_0x2a9ee2(0x1e4),'color':a16_0x2a9ee2(0x215),'bgStyle':a16_0x2a9ee2(0x1a4),'borderStyle':a16_0x2a9ee2(0x1c7),'glow':a16_0x2a9ee2(0x1da),'description':a16_0x2a9ee2(0x1be),'conditionText':a16_0x2a9ee2(0x1d8),'price':0x0,'hasCondition':!![],'isDevOnly':!![],'getProgressRatio':()=>0x0}];export function getTitleById(_0x4a69e2){const _0x377a5b=a16_0x2a9ee2;return TITLES[_0x377a5b(0x1db)](_0x33b5bf=>_0x33b5bf['id']===_0x4a69e2)||TITLES[0x0];}export function getTitleProgressRatio(_0x19af2b,_0x10eaf3,_0x53a732){const _0x555768=a16_0x2a9ee2;if(!_0x19af2b)return 0x0;if(typeof _0x19af2b[_0x555768(0x223)]==='function')return _0x19af2b[_0x555768(0x223)](_0x10eaf3,_0x53a732);return 0x0;}export function formatTitleBadge(_0xce35c4,_0x944b2a=''){const _0x251ef6=a16_0x2a9ee2,_0x5f1dbe=getTitleById(_0xce35c4);if(!_0x5f1dbe)return'';const _0x593bc1=_0x5f1dbe[_0x251ef6(0x1fc)]?_0x251ef6(0x1d5)+_0x5f1dbe[_0x251ef6(0x1fc)]+';':'';return'<span\x20class=\x22player-title-badge\x20rarity-'+_0x5f1dbe[_0x251ef6(0x1c9)]+_0x251ef6(0x1a3)+_0x5f1dbe[_0x251ef6(0x1cc)]+_0x251ef6(0x20f)+_0x5f1dbe[_0x251ef6(0x226)]+_0x251ef6(0x1d3)+_0x5f1dbe[_0x251ef6(0x1d9)]+';\x20'+_0x593bc1+'\x20'+_0x944b2a+'\x22>'+_0x5f1dbe[_0x251ef6(0x1e2)]+_0x251ef6(0x217);}
+/**
+ * In-Game Player Titles System
+ */
+
+export const TITLES = [
+  // --- 1. Common / Starting ---
+  {
+    id: 'novice',
+    name: 'Новичок',
+    icon: '🌱',
+    tag: '🌱 Новичок',
+    rarity: 'common',
+    rarityName: 'Обычный',
+    category: 'starter',
+    color: '#94a3b8',
+    bgStyle: 'rgba(148, 163, 184, 0.16)',
+    borderStyle: '1px solid rgba(148, 163, 184, 0.3)',
+    description: 'Стартовый титул для всех игроков',
+    conditionText: 'Выдаётся на старте',
+    price: 0,
+    getProgressRatio: () => 1.0
+  },
+
+  // --- 2. Condition-based Achievement Titles (CANNOT BE BOUGHT) ---
+  {
+    id: 'shark',
+    name: 'Акула бизнеса',
+    icon: '🦈',
+    tag: '🦈 Акула бизнеса',
+    rarity: 'rare',
+    rarityName: 'Редкий',
+    category: 'achievement',
+    color: '#38bdf8',
+    bgStyle: 'rgba(56, 189, 248, 0.16)',
+    borderStyle: '1px solid #38bdf8',
+    description: 'Одержите 3 победы в матчах',
+    conditionText: '3 победы',
+    price: 0,
+    hasCondition: true,
+    checkUnlock: (stats) => (stats?.wins || 0) >= 3,
+    getProgress: (stats) => `${Math.min(stats?.wins || 0, 3)} / 3 побед`,
+    getProgressRatio: (stats) => Math.min((stats?.wins || 0) / 3, 1.0)
+  },
+  {
+    id: 'monopolist',
+    name: 'Монополист',
+    icon: '🎩',
+    tag: '🎩 Монополист',
+    rarity: 'rare',
+    rarityName: 'Редкий',
+    category: 'achievement',
+    color: '#a855f7',
+    bgStyle: 'rgba(168, 85, 247, 0.16)',
+    borderStyle: '1px solid #a855f7',
+    description: 'Одержите 5 побед в матчах',
+    conditionText: '5 побед',
+    price: 0,
+    hasCondition: true,
+    checkUnlock: (stats) => (stats?.wins || 0) >= 5,
+    getProgress: (stats) => `${Math.min(stats?.wins || 0, 5)} / 5 побед`,
+    getProgressRatio: (stats) => Math.min((stats?.wins || 0) / 5, 1.0)
+  },
+  {
+    id: 'magnate',
+    name: 'Магнат',
+    icon: '🏙️',
+    tag: '🏙️ Магнат',
+    rarity: 'epic',
+    rarityName: 'Эпический',
+    category: 'achievement',
+    color: '#10b981',
+    bgStyle: 'rgba(16, 185, 129, 0.16)',
+    borderStyle: '1px solid #10b981',
+    description: 'Сыграйте 10 матчей в игре',
+    conditionText: '10 матчей',
+    price: 0,
+    hasCondition: true,
+    checkUnlock: (stats) => (stats?.gamesPlayed || 0) >= 10,
+    getProgress: (stats) => `${Math.min(stats?.gamesPlayed || 0, 10)} / 10 игр`,
+    getProgressRatio: (stats) => Math.min((stats?.gamesPlayed || 0) / 10, 1.0)
+  },
+  {
+    id: 'lucky',
+    name: 'Счастливчик',
+    icon: '🍀',
+    tag: '🍀 Счастливчик',
+    rarity: 'epic',
+    rarityName: 'Эпический',
+    category: 'achievement',
+    color: '#22c55e',
+    bgStyle: 'rgba(34, 197, 94, 0.16)',
+    borderStyle: '1px solid #22c55e',
+    description: 'Винрейт 50%+ (минимум 5 сыгранных матчей)',
+    conditionText: 'Винрейт 50%+ (от 5 игр)',
+    price: 0,
+    hasCondition: true,
+    checkUnlock: (stats) => (stats?.gamesPlayed || 0) >= 5 && ((stats?.wins || 0) / (stats?.gamesPlayed || 1)) >= 0.5,
+    getProgress: (stats) => `${stats?.gamesPlayed ? Math.round(((stats.wins || 0) / stats.gamesPlayed) * 100) : 0}% винрейт (${stats?.gamesPlayed || 0}/5 игр)`,
+    getProgressRatio: (stats) => {
+      const g = stats?.gamesPlayed || 0;
+      const w = stats?.wins || 0;
+      if (g === 0) return 0;
+      const wr = w / g;
+      const gProg = Math.min(g / 5, 1.0);
+      const wrProg = wr >= 0.5 ? 1.0 : (wr / 0.5);
+      return Math.min(gProg * wrProg, 1.0);
+    }
+  },
+  {
+    id: 'oligarch',
+    name: 'Олигарх',
+    icon: '💎',
+    tag: '💎 Олигарх',
+    rarity: 'epic',
+    rarityName: 'Эпический',
+    category: 'achievement',
+    color: '#06b6d4',
+    bgStyle: 'rgba(6, 182, 212, 0.16)',
+    borderStyle: '1px solid #06b6d4',
+    description: 'Заработайте $10,000 за всё время игры',
+    conditionText: '$10,000 заработка',
+    price: 0,
+    hasCondition: true,
+    checkUnlock: (stats) => (stats?.totalEarned || 0) >= 10000,
+    getProgress: (stats) => `$${Math.min(stats?.totalEarned || 0, 10000).toLocaleString()} / $10,000`,
+    getProgressRatio: (stats) => Math.min((stats?.totalEarned || 0) / 10000, 1.0)
+  },
+  {
+    id: 'dice_master',
+    name: 'Повелитель кубиков',
+    icon: '🎲',
+    tag: '🎲 Повелитель кубиков',
+    rarity: 'legendary',
+    rarityName: 'Легендарный',
+    category: 'achievement',
+    color: '#ec4899',
+    bgStyle: 'linear-gradient(135deg, rgba(236, 72, 153, 0.25), rgba(168, 85, 247, 0.25))',
+    borderStyle: '1px solid #ec4899',
+    glow: '0 0 12px rgba(236, 72, 153, 0.4)',
+    description: 'Одержите 15 побед в матчах',
+    conditionText: '15 побед',
+    price: 0,
+    hasCondition: true,
+    checkUnlock: (stats) => (stats?.wins || 0) >= 15,
+    getProgress: (stats) => `${Math.min(stats?.wins || 0, 15)} / 15 побед`,
+    getProgressRatio: (stats) => Math.min((stats?.wins || 0) / 15, 1.0)
+  },
+  {
+    id: 'legend',
+    name: 'Легенда',
+    icon: '👑',
+    tag: '👑 Легенда',
+    rarity: 'legendary',
+    rarityName: 'Легендарный',
+    category: 'achievement',
+    color: '#fbbf24',
+    bgStyle: 'linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(217, 70, 239, 0.3))',
+    borderStyle: '1px solid #fbbf24',
+    glow: '0 0 16px rgba(251, 191, 36, 0.5)',
+    description: 'Одержите 25 побед в матчах',
+    conditionText: '25 побед',
+    price: 0,
+    hasCondition: true,
+    checkUnlock: (stats) => (stats?.wins || 0) >= 25,
+    getProgress: (stats) => `${Math.min(stats?.wins || 0, 25)} / 25 побед`,
+    getProgressRatio: (stats) => Math.min((stats?.wins || 0) / 25, 1.0)
+  },
+
+  // --- 3. Pure Shop Purchasable Titles (NO CONDITIONS, BOUGHT FOR COINS) ---
+  {
+    id: 'investor',
+    name: 'Инвестор',
+    icon: '💼',
+    tag: '💼 Инвестор',
+    rarity: 'rare',
+    rarityName: 'Редкий',
+    category: 'shop',
+    color: '#3b82f6',
+    bgStyle: 'rgba(59, 130, 246, 0.16)',
+    borderStyle: '1px solid #3b82f6',
+    description: 'Покупается за монеты в магазине',
+    price: 150,
+    hasCondition: false,
+    getProgressRatio: (stats, coins) => Math.min((coins || 0) / 150, 1.0)
+  },
+  {
+    id: 'vip',
+    name: 'VIP Персона',
+    icon: '⭐',
+    tag: '⭐ VIP Персона',
+    rarity: 'epic',
+    rarityName: 'Эпический',
+    category: 'shop',
+    color: '#eab308',
+    bgStyle: 'rgba(234, 179, 8, 0.16)',
+    borderStyle: '1px solid #eab308',
+    glow: '0 0 10px rgba(234, 179, 8, 0.35)',
+    description: 'Престижный статус игрока Monopoly',
+    price: 300,
+    hasCondition: false,
+    getProgressRatio: (stats, coins) => Math.min((coins || 0) / 300, 1.0)
+  },
+  {
+    id: 'millionaire',
+    name: 'Миллионер',
+    icon: '💰',
+    tag: '💰 Миллионер',
+    rarity: 'epic',
+    rarityName: 'Эпический',
+    category: 'shop',
+    color: '#10b981',
+    bgStyle: 'linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(6, 182, 212, 0.22))',
+    borderStyle: '1px solid #10b981',
+    glow: '0 0 12px rgba(16, 185, 129, 0.4)',
+    description: 'Для тех, кто умеет копить капитал',
+    price: 450,
+    hasCondition: false,
+    getProgressRatio: (stats, coins) => Math.min((coins || 0) / 450, 1.0)
+  },
+  {
+    id: 'sheikh',
+    name: 'Шейх',
+    icon: '💰',
+    tag: '💰 Шейх',
+    rarity: 'legendary',
+    rarityName: 'Легендарный',
+    category: 'shop',
+    color: '#f59e0b',
+    bgStyle: 'linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.25))',
+    borderStyle: '1px solid #f59e0b',
+    glow: '0 0 14px rgba(245, 158, 11, 0.45)',
+    description: 'Премиальный титул высшего общества',
+    price: 600,
+    hasCondition: false,
+    getProgressRatio: (stats, coins) => Math.min((coins || 0) / 600, 1.0)
+  },
+  {
+    id: 'cyber_king',
+    name: 'Киберкороль',
+    icon: '⚡',
+    tag: '⚡ Киберкороль',
+    rarity: 'legendary',
+    rarityName: 'Легендарный',
+    category: 'shop',
+    color: '#a855f7',
+    bgStyle: 'linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3))',
+    borderStyle: '1px solid #a855f7',
+    glow: '0 0 16px rgba(168, 85, 247, 0.5)',
+    description: 'Эксклюзивный неоновый титул киберпространства',
+    price: 850,
+    hasCondition: false,
+    getProgressRatio: (stats, coins) => Math.min((coins || 0) / 850, 1.0)
+  },
+
+  // --- 4. Special / Developer Unique Title ---
+  {
+    id: 'creator',
+    name: 'Создатель',
+    icon: '🛠️',
+    tag: '🛠️ Создатель',
+    rarity: 'mythic',
+    rarityName: 'Уникальный',
+    category: 'special',
+    color: '#f43f5e',
+    bgStyle: 'linear-gradient(135deg, rgba(244, 63, 94, 0.35), rgba(126, 34, 206, 0.35))',
+    borderStyle: '1px solid #f43f5e',
+    glow: '0 0 18px rgba(244, 63, 94, 0.6)',
+    description: 'Официальный титул создателя Monopoly',
+    conditionText: 'Для создателя',
+    price: 0,
+    hasCondition: true,
+    isDevOnly: true,
+    getProgressRatio: () => 0.0
+  }
+];
+
+export function getTitleById(titleId) {
+  return TITLES.find(t => t.id === titleId) || TITLES[0];
+}
+
+export function getTitleProgressRatio(title, stats, coins) {
+  if (!title) return 0;
+  if (typeof title.getProgressRatio === 'function') {
+    return title.getProgressRatio(stats, coins);
+  }
+  return 0;
+}
+
+export function formatTitleBadge(titleId, customStyle = '') {
+  const t = getTitleById(titleId);
+  if (!t) return '';
+  const glow = t.glow ? `box-shadow: ${t.glow};` : '';
+  return `<span class="player-title-badge rarity-${t.rarity}" style="color: ${t.color}; background: ${t.bgStyle}; border: ${t.borderStyle}; ${glow} ${customStyle}">${t.tag}</span>`;
+}

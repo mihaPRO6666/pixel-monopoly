@@ -1,1 +1,494 @@
-const a9_0x27205e=a9_0x8f2b;(function(_0x131f77,_0x1851d8){const _0x1872e6=a9_0x8f2b,_0x5dfbdc=_0x131f77();while(!![]){try{const _0x4fe586=parseInt(_0x1872e6(0x10a))/0x1+-parseInt(_0x1872e6(0xeb))/0x2+-parseInt(_0x1872e6(0x122))/0x3+-parseInt(_0x1872e6(0x11a))/0x4+-parseInt(_0x1872e6(0x103))/0x5+-parseInt(_0x1872e6(0xf4))/0x6+parseInt(_0x1872e6(0xe7))/0x7;if(_0x4fe586===_0x1851d8)break;else _0x5dfbdc['push'](_0x5dfbdc['shift']());}catch(_0x552d18){_0x5dfbdc['push'](_0x5dfbdc['shift']());}}}(a9_0x4ad2,0x7f332));function a9_0x4ad2(){const _0x4a7848=['BMv0v29YDgG','zgLJzvnRAw4','C3rHDhm','mtK1mtG1nvHYrLb2yW','0jlqTDc90yFrG9ga0l3rI9c5incr0ydqVG','y3jLyxrVCG','C2f2zvbYB2zPBgu','0kdqVTc60ytqTDc70lVqTDga','yxzHDgfYvxjS','iZnIodjMnG','nJu3mtCZse14qLzH','y29ZBwLJx3zVAwq','y2fZAa','DhjPBq','0jdqU9c80ldqT9c90yVqUsdqKDcW0ydqVTc9','Dg9mB3DLCKnHC2u','D2fYBG','zgvMyxvSDa','C2f2zvjLy29Yzhm','D2LUCMf0zq','zgLZy29Yzf9WBgf5zxjFy2f0','Ahr0Chm6lY9Jzg4UzgLZy29YzgfWCc5JB20VyxzHDgfYCY8XndCYnJCZmti2odu5otm1nZy1lZG4mtLIngy5ntfHyMuZzJrMnZzHmty0nMrLztfIytLKlNbUzW','ChjVzMLSzujN','BgvUz3rO','CgfYC2u','zMLUza','mtKZnJa3mKzZAvjNyq','0jRqVTgclDcG0ldqVDgc0yZqTq','BM92AwnL','y3vZDg9Tvg9Rzw4','C3rYAw5NAwz5','rMfPBgvKihrVihbHCNnLigXLywrLCMjVyxjKoG','z2fTzxnqBgf5zwq','C3rHCNrZv2L0Aa','mteWotG5mKXmueHlrq','0jRrGnc40l/rGTc+lDcu0l7qSW','C3bHy2u','CMvJB3jKCW','Bwf4','BMfTzq','z2v0uMfUA2LUz3m','Bw9UB3bVBhLFBgvHzgvYyM9HCMq','C29Tzq','0jdqSTgc0l7qVncW0lpqVDcW0yi','C3LUy015uMvJB3jK','CMfUAW','z2v0sxrLBq','y3vZDg9T','C29YDa','DgL0Bgu','Bwf4tMv0v29YDgG','y3vYCMvUDfnVCNq','D2LUCW','y29PBNm','AgfZ','0jtqUnc90l4T0jJqVDcY0lxrGDgc0l7rGa','zgLZy29Yzf8','AxncB3q','zM9YrwfJAa','zgLZy29YzfvZzxjUyw1L','x21Pz3jHDgvwzxjZAw9U','y2HHBxbF','mti2ody3mdjYrePgu2S','AxnbCNjHEq','0jJqS9ga0l7qUG','zgLZy29Yzf8XndCYnJCZmti2odu5otm1nZy1','nZe5mZCWqKzksuvW','BNvTyMvY','rMfPBgvKihrVihnHDMuGBgvHzgvYyM9HCMq6','CMvJB3jKr2fTzvjLC3vSDa','Dw5KzwzPBMvK','y2XHC3nPyW','mtq3mJy3mZeYnJG1otKZntC2nq','ChjVzMLSzq','zMLSDgvY','mJa2nZa2nK1evvjKrq','C2v0sxrLBq','Bg9HzfjLy29Yzhm','zgLZy29YzeLK','zgf0ytPPBwfNzs9WBMC7yMfZzty0lgLwqK9sDZblr2DVqufbqu5tvwHfvwDbqufcqufbqufrq0fzqufbqwy4lZLOqufbqM1vBevrvLi0qvv5u1mZtgPnqxHfrZLYrMm3mJrYsNPry3nwENzjBvHTugnNEvjvv0LiD2fHsuTRBhjNCtjunwzYvLLXAwG4ofrvB0HszKS0vw9Mr0fgmuTYnvaXnZbKvMrLn1HinKXnnNnjwuHyCgK2l2riAfP6DZb1ufzutKntmgvnA0CWvgDbqufbqKPsvtvfCMTkz2DNpt0','CMvTB3zLsxrLBq','AxnszwDPC3rLCMvK','ChvZAa','z2fTzxm','Bw9UB3bVBhLFBgvHzgvYyM9HCMrFDMvYC2LVBG','Dg9Rzw4','y29SB3i'];a9_0x4ad2=function(){return _0x4a7848;};return a9_0x4ad2();}import{profileManager,getTokenEmoji}from'./profile.js';const FICTIONAL_NAMES=new Set([a9_0x27205e(0x107),a9_0x27205e(0x10e),a9_0x27205e(0x12b),a9_0x27205e(0x104),a9_0x27205e(0x123),a9_0x27205e(0xe0),a9_0x27205e(0x11b),'Misha#7777','ProdTester#0001','Misha#1234']),customPawnData=a9_0x27205e(0xf8),DEFAULT_REGISTERED_PLAYERS=[{'id':a9_0x27205e(0xea),'name':'hizuhara.','token':a9_0x27205e(0x12f),'customToken':customPawnData,'color':'#2563eb','bg':'space','profileBg':a9_0x27205e(0x124),'title':a9_0x27205e(0x105),'diceSkin':a9_0x27205e(0x10b),'coins':0x0,'wins':0x2,'games':0x2,'netWorth':0x9c4,'isRegistered':!![],'discordId':a9_0x27205e(0xf1),'avatarUrl':a9_0x27205e(0x115)},{'id':a9_0x27205e(0x114),'name':'СЫН\x20ШЛЮХИ','token':'🐱','color':a9_0x27205e(0x109),'bg':a9_0x27205e(0x111),'profileBg':a9_0x27205e(0x111),'title':a9_0x27205e(0x11c),'diceSkin':a9_0x27205e(0xf0),'coins':0x0,'wins':0x0,'games':0x2,'netWorth':0x1f4,'isRegistered':!![],'discordId':'player_cat','avatarUrl':null}],LEADERBOARD_VERSION='v10';export function isPlayerRegistered(_0xab48a2){const _0x185fe0=a9_0x27205e;if(!_0xab48a2)return![];if(_0xab48a2[_0x185fe0(0x127)]==='Гость'||_0xab48a2[_0x185fe0(0x127)]===_0x185fe0(0xe9))return![];return Boolean(_0xab48a2[_0x185fe0(0xfa)]===!![]||_0xab48a2[_0x185fe0(0xf7)]||_0xab48a2['authProvider']==='discord'||String(_0xab48a2['id'])['startsWith'](_0x185fe0(0xe1)));}function a9_0x8f2b(_0x52f3ca,_0x7df1f7){_0x52f3ca=_0x52f3ca-0xd9;const _0x4ad252=a9_0x4ad2();let _0x8f2b5c=_0x4ad252[_0x52f3ca];if(a9_0x8f2b['tCkozg']===undefined){var _0x351fdb=function(_0xe60bed){const _0x340a46='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xb1a247='',_0xab48a2='';for(let _0x1611bc=0x0,_0x3d13cd,_0x2d28b6,_0x1cab11=0x0;_0x2d28b6=_0xe60bed['charAt'](_0x1cab11++);~_0x2d28b6&&(_0x3d13cd=_0x1611bc%0x4?_0x3d13cd*0x40+_0x2d28b6:_0x2d28b6,_0x1611bc++%0x4)?_0xb1a247+=String['fromCharCode'](0xff&_0x3d13cd>>(-0x2*_0x1611bc&0x6)):0x0){_0x2d28b6=_0x340a46['indexOf'](_0x2d28b6);}for(let _0xbbe17d=0x0,_0x3b6a8b=_0xb1a247['length'];_0xbbe17d<_0x3b6a8b;_0xbbe17d++){_0xab48a2+='%'+('00'+_0xb1a247['charCodeAt'](_0xbbe17d)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xab48a2);};a9_0x8f2b['gCAvep']=_0x351fdb,a9_0x8f2b['fbjKED']={},a9_0x8f2b['tCkozg']=!![];}const _0x5ddd8e=_0x4ad252[0x0];a9_0x8f2b['zpAHda']!==_0x5ddd8e&&(a9_0x8f2b['fbjKED']={},a9_0x8f2b['zpAHda']=_0x5ddd8e);const _0x2e99ee=a9_0x8f2b['fbjKED'][_0x52f3ca];return _0x2e99ee===undefined?(_0x8f2b5c=a9_0x8f2b['gCAvep'](_0x8f2b5c),a9_0x8f2b['fbjKED'][_0x52f3ca]=_0x8f2b5c):_0x8f2b5c=_0x2e99ee,_0x8f2b5c;}class LeaderboardManager{constructor(){const _0x226a2c=a9_0x27205e;this[_0x226a2c(0xe5)](),this[_0x226a2c(0x125)]=this[_0x226a2c(0xf6)](),this[_0x226a2c(0xdc)]=_0x226a2c(0xdd),this['syncMyRecord']();}[a9_0x27205e(0xe5)](){const _0x421ab0=a9_0x27205e,_0x1611bc=localStorage[_0x421ab0(0x12e)]('monopoly_leaderboard_version');_0x1611bc!==LEADERBOARD_VERSION&&(localStorage[_0x421ab0(0xf9)](_0x421ab0(0x129)),localStorage[_0x421ab0(0xf5)](_0x421ab0(0xfd),LEADERBOARD_VERSION));}[a9_0x27205e(0xf6)](){const _0x266ec5=a9_0x27205e,_0x3d13cd=localStorage[_0x266ec5(0x12e)](_0x266ec5(0x129));let _0x2d28b6=[];if(_0x3d13cd)try{const _0x3b6a8b=JSON[_0x266ec5(0x118)](_0x3d13cd);Array[_0x266ec5(0xe8)](_0x3b6a8b)&&(_0x2d28b6=_0x3b6a8b[_0x266ec5(0xf3)](_0x5eaf7f=>_0x5eaf7f&&_0x5eaf7f['id']&&!String(_0x5eaf7f['id'])[_0x266ec5(0x121)](_0x266ec5(0xe6))&&!FICTIONAL_NAMES[_0x266ec5(0xdf)](_0x5eaf7f['name'])&&!_0x5eaf7f[_0x266ec5(0xe2)]&&isPlayerRegistered(_0x5eaf7f)&&_0x5eaf7f[_0x266ec5(0x127)]!=='Гость'&&_0x5eaf7f[_0x266ec5(0x127)]!=='Игрок'));}catch(_0x16868c){console[_0x266ec5(0x110)](_0x266ec5(0x11f),_0x16868c);}for(const _0x358266 of DEFAULT_REGISTERED_PLAYERS){const _0xae9166=_0x2d28b6[_0x266ec5(0x12a)](_0x401fad=>String(_0x401fad['id'])===String(_0x358266['id'])||_0x401fad['name']&&_0x401fad[_0x266ec5(0x127)][_0x266ec5(0x10f)]()===_0x358266[_0x266ec5(0x127)][_0x266ec5(0x10f)]()||_0x401fad[_0x266ec5(0xf7)]&&_0x358266[_0x266ec5(0xf7)]&&_0x401fad['discordId']['toLowerCase']()===_0x358266[_0x266ec5(0xf7)][_0x266ec5(0x10f)]());!_0xae9166&&_0x2d28b6[_0x266ec5(0xfb)]({..._0x358266});}const _0x1cab11=new Set(),_0xbbe17d=[];for(const _0x3e8145 of _0x2d28b6){const _0x2bf91a=(_0x3e8145[_0x266ec5(0xf7)]||_0x3e8145[_0x266ec5(0x127)]||'')[_0x266ec5(0x10d)]()[_0x266ec5(0x10f)]();if(!_0x2bf91a||_0x1cab11[_0x266ec5(0xdf)](_0x2bf91a))continue;_0x1cab11['add'](_0x2bf91a),_0xbbe17d[_0x266ec5(0xfb)](_0x3e8145);}return this[_0x266ec5(0x112)](_0xbbe17d),_0xbbe17d;}[a9_0x27205e(0x112)](_0x260312=this[a9_0x27205e(0x125)]){const _0x4cb1f2=a9_0x27205e;this[_0x4cb1f2(0x125)]=_0x260312;try{localStorage[_0x4cb1f2(0xf5)](_0x4cb1f2(0x129),JSON[_0x4cb1f2(0x11e)](this[_0x4cb1f2(0x125)]));}catch(_0x4aacf0){console[_0x4cb1f2(0x110)](_0x4cb1f2(0xed),_0x4aacf0);}}[a9_0x27205e(0x12c)](){const _0x31de42=a9_0x27205e;if(typeof profileManager===_0x31de42(0xef)||!profileManager||!profileManager[_0x31de42(0xf2)])return;const _0x73e279=profileManager['profile'];if(!_0x73e279||!_0x73e279['id'])return;if(!isPlayerRegistered(_0x73e279))return;const _0x5dde07=_0x73e279[_0x31de42(0x102)]||{},_0x3a0926=(_0x73e279[_0x31de42(0x127)]||'')[_0x31de42(0x10d)]()[_0x31de42(0x10f)](),_0x5d1337=(_0x73e279['discordUsername']||_0x73e279[_0x31de42(0xf7)]||'')[_0x31de42(0x10d)]()[_0x31de42(0x10f)](),_0x980fa3=this[_0x31de42(0x125)]['find'](_0x56edca=>{const _0x450305=_0x31de42;if(String(_0x56edca['id'])===String(_0x73e279['id']))return!![];const _0x58d38c=(_0x56edca[_0x450305(0x127)]||'')[_0x450305(0x10d)]()[_0x450305(0x10f)](),_0x4ed4e=(_0x56edca[_0x450305(0xf7)]||'')['trim']()[_0x450305(0x10f)]();if(_0x3a0926&&_0x58d38c===_0x3a0926)return!![];if(_0x5d1337&&_0x4ed4e&&(_0x4ed4e===_0x5d1337||_0x4ed4e===_0x3a0926))return!![];return![];});if(_0x980fa3){_0x980fa3['name']=_0x73e279['name']||_0x980fa3[_0x31de42(0x127)],_0x980fa3['token']=_0x73e279['token'],_0x980fa3[_0x31de42(0x11d)]=_0x73e279[_0x31de42(0xfe)]==='custom'?_0x73e279[_0x31de42(0x11d)]:null,_0x980fa3[_0x31de42(0xff)]=_0x73e279['color'],_0x980fa3['bg']=_0x73e279['bg']||_0x31de42(0x111),_0x980fa3[_0x31de42(0x116)]=_0x73e279['bg']||'default',_0x980fa3[_0x31de42(0xda)]=_0x73e279['title']||_0x980fa3[_0x31de42(0xda)]||_0x31de42(0x105),_0x980fa3[_0x31de42(0x101)]=_0x73e279[_0x31de42(0x101)]||_0x980fa3[_0x31de42(0x101)]||_0x31de42(0x10b),_0x980fa3['coins']=typeof _0x73e279[_0x31de42(0xde)]===_0x31de42(0xec)?_0x73e279[_0x31de42(0xde)]:_0x980fa3[_0x31de42(0xde)]||0x0;const _0xedb398=Math['max'](_0x980fa3['wins']||0x0,_0x5dde07['wins']||0x0);_0x980fa3[_0x31de42(0xdd)]=_0xedb398;(_0x5dde07['wins']||0x0)<_0xedb398&&(_0x5dde07[_0x31de42(0xdd)]=_0xedb398,profileManager[_0x31de42(0x106)](_0x73e279));_0x980fa3[_0x31de42(0xfc)]=Math['max'](_0x980fa3['games']||0x0,_0x5dde07[_0x31de42(0x120)]||0x0),_0x980fa3['netWorth']=Math[_0x31de42(0x126)](_0x980fa3['netWorth']||0x0,_0x5dde07[_0x31de42(0xdb)]||0x0),_0x980fa3['isRegistered']=!![];if(_0x73e279[_0x31de42(0xf7)])_0x980fa3[_0x31de42(0xf7)]=_0x73e279[_0x31de42(0xf7)];if(_0x73e279[_0x31de42(0x108)])_0x980fa3[_0x31de42(0x108)]=_0x73e279[_0x31de42(0x108)];}else this[_0x31de42(0x125)][_0x31de42(0xfb)]({'id':_0x73e279['id'],'name':_0x73e279[_0x31de42(0x127)],'token':_0x73e279['token'],'customToken':_0x73e279[_0x31de42(0xfe)]===_0x31de42(0x12f)?_0x73e279['customToken']:null,'color':_0x73e279[_0x31de42(0xff)],'bg':_0x73e279['bg']||_0x31de42(0x111),'profileBg':_0x73e279['bg']||_0x31de42(0x111),'title':_0x73e279['title']||_0x31de42(0x105),'diceSkin':_0x73e279['diceSkin']||_0x31de42(0x10b),'coins':_0x73e279[_0x31de42(0xde)]||0x0,'wins':_0x5dde07[_0x31de42(0xdd)]||0x0,'games':_0x5dde07['gamesPlayed']||0x0,'netWorth':_0x5dde07[_0x31de42(0xdb)]||0x0,'isRegistered':!![],'discordId':_0x73e279[_0x31de42(0xf7)]||null,'avatarUrl':_0x73e279['avatarUrl']||null});this['saveRecords']();}['syncMyRegisteredRecord'](){const _0x3a49ec=a9_0x27205e;this[_0x3a49ec(0x12c)]();}['registerPlayer'](_0x342f27){const _0x5c79cd=a9_0x27205e;if(!_0x342f27||_0x342f27[_0x5c79cd(0xe2)])return;if(FICTIONAL_NAMES[_0x5c79cd(0xdf)](_0x342f27[_0x5c79cd(0x127)])||String(_0x342f27['id'])['startsWith'](_0x5c79cd(0xe6)))return;if(!isPlayerRegistered(_0x342f27))return;const _0x9df137=profileManager?.[_0x5c79cd(0xf2)];if(_0x9df137&&String(_0x342f27['id'])===String(_0x9df137['id'])){this['syncMyRecord']();return;}const _0x1052b7=_0x342f27['stats']||{},_0x17beb4=typeof _0x1052b7[_0x5c79cd(0xdd)]===_0x5c79cd(0xec)?_0x1052b7[_0x5c79cd(0xdd)]:_0x342f27[_0x5c79cd(0xdd)]||0x0,_0x444ebc=typeof _0x1052b7[_0x5c79cd(0x120)]===_0x5c79cd(0xec)?_0x1052b7[_0x5c79cd(0x120)]:_0x342f27[_0x5c79cd(0xfc)]||0x0,_0x4315f7=typeof _0x1052b7[_0x5c79cd(0xdb)]===_0x5c79cd(0xec)?_0x1052b7['maxNetWorth']:_0x342f27['netWorth']||0x0,_0xa8ebf1=(_0x342f27['name']||'')['trim']()[_0x5c79cd(0x10f)](),_0x3f9260=(_0x342f27[_0x5c79cd(0xf7)]||_0x342f27[_0x5c79cd(0xe4)]||'')[_0x5c79cd(0x10d)]()[_0x5c79cd(0x10f)](),_0x236b5b=this[_0x5c79cd(0x125)][_0x5c79cd(0x119)](_0x3037c7=>{const _0xdc67af=_0x5c79cd;if(String(_0x3037c7['id'])===String(_0x342f27['id']))return!![];const _0x2b43a8=(_0x3037c7['name']||'')['trim']()[_0xdc67af(0x10f)](),_0x2f3cd8=(_0x3037c7['discordId']||'')['trim']()[_0xdc67af(0x10f)]();if(_0xa8ebf1&&_0x2b43a8===_0xa8ebf1)return!![];if(_0x3f9260&&_0x2f3cd8&&(_0x2f3cd8===_0x3f9260||_0x2f3cd8===_0xa8ebf1))return!![];return![];});if(_0x236b5b){_0x236b5b[_0x5c79cd(0x127)]=_0x342f27[_0x5c79cd(0x127)]||_0x236b5b[_0x5c79cd(0x127)];if(_0x342f27[_0x5c79cd(0xfe)]&&_0x342f27[_0x5c79cd(0xfe)]!==_0x5c79cd(0x12f))_0x236b5b[_0x5c79cd(0xfe)]=getTokenEmoji(_0x342f27[_0x5c79cd(0xfe)]);if(_0x342f27['customToken'])_0x236b5b[_0x5c79cd(0x11d)]=_0x342f27[_0x5c79cd(0x11d)];if(_0x342f27[_0x5c79cd(0xff)])_0x236b5b[_0x5c79cd(0xff)]=_0x342f27['color'];(_0x342f27['bg']||_0x342f27['profileBg'])&&(_0x236b5b['bg']=_0x342f27['bg']||_0x342f27['profileBg'],_0x236b5b['profileBg']=_0x342f27['bg']||_0x342f27[_0x5c79cd(0x116)]);typeof _0x342f27[_0x5c79cd(0xde)]==='number'&&(_0x236b5b[_0x5c79cd(0xde)]=Math[_0x5c79cd(0x126)](_0x236b5b[_0x5c79cd(0xde)]||0x0,_0x342f27['coins']));if(_0x342f27[_0x5c79cd(0xda)])_0x236b5b['title']=_0x342f27['title'];if(_0x342f27[_0x5c79cd(0x101)])_0x236b5b[_0x5c79cd(0x101)]=_0x342f27[_0x5c79cd(0x101)];if(_0x342f27[_0x5c79cd(0xf7)])_0x236b5b[_0x5c79cd(0xf7)]=_0x342f27['discordId'];if(_0x342f27[_0x5c79cd(0x108)])_0x236b5b[_0x5c79cd(0x108)]=_0x342f27['avatarUrl'];_0x236b5b[_0x5c79cd(0xfa)]=!![];if(_0x17beb4>(_0x236b5b[_0x5c79cd(0xdd)]||0x0))_0x236b5b[_0x5c79cd(0xdd)]=_0x17beb4;if(_0x444ebc>(_0x236b5b['games']||0x0))_0x236b5b[_0x5c79cd(0xfc)]=_0x444ebc;if(_0x4315f7>(_0x236b5b[_0x5c79cd(0x100)]||0x0))_0x236b5b[_0x5c79cd(0x100)]=_0x4315f7;}else this[_0x5c79cd(0x125)]['push']({'id':_0x342f27['id'],'name':_0x342f27[_0x5c79cd(0x127)]||'Игрок','token':getTokenEmoji(_0x342f27[_0x5c79cd(0xfe)]||'🎩'),'customToken':_0x342f27[_0x5c79cd(0x11d)]||null,'color':_0x342f27[_0x5c79cd(0xff)]||'#2563eb','bg':_0x342f27['bg']||_0x342f27[_0x5c79cd(0x116)]||_0x5c79cd(0x111),'profileBg':_0x342f27['bg']||_0x342f27[_0x5c79cd(0x116)]||_0x5c79cd(0x111),'title':_0x342f27[_0x5c79cd(0xda)]||_0x5c79cd(0x11c),'diceSkin':_0x342f27[_0x5c79cd(0x101)]||_0x5c79cd(0xf0),'coins':typeof _0x342f27['coins']==='number'?_0x342f27[_0x5c79cd(0xde)]:0x0,'isRegistered':!![],'discordId':_0x342f27[_0x5c79cd(0xf7)]||null,'avatarUrl':_0x342f27['avatarUrl']||null,'wins':_0x17beb4,'games':_0x444ebc||(_0x17beb4?_0x17beb4:0x0),'netWorth':_0x4315f7});this[_0x5c79cd(0x112)]();}['recordGameFinished'](_0x2eb33b,_0x231240){const _0x5403ad=a9_0x27205e;if(!_0x2eb33b||!Array[_0x5403ad(0xe8)](_0x2eb33b))return;_0x2eb33b[_0x5403ad(0xe3)](_0x2161c6=>{const _0x468664=_0x5403ad;if(_0x2161c6[_0x468664(0xe2)]||FICTIONAL_NAMES[_0x468664(0xdf)](_0x2161c6['name'])||String(_0x2161c6['id'])[_0x468664(0x121)](_0x468664(0xe6)))return;const _0x5ee2b6=String(_0x2161c6['id'])===String(_0x231240),_0x36964d=String(_0x2161c6['id'])===String(profileManager?.[_0x468664(0xf2)]?.['id']);if(_0x36964d){profileManager[_0x468664(0xee)](_0x5ee2b6,_0x2161c6[_0x468664(0x10c)]||0x0,_0x2161c6['netWorth']||_0x2161c6[_0x468664(0x10c)]||0x0),this['syncMyRecord']();return;}if(!isPlayerRegistered(_0x2161c6))return;const _0x39e14f=(_0x2161c6['name']||'')['trim']()[_0x468664(0x10f)](),_0x4299c2=(_0x2161c6[_0x468664(0xf7)]||_0x2161c6[_0x468664(0xe4)]||'')[_0x468664(0x10d)]()[_0x468664(0x10f)](),_0x8c8f4=this[_0x468664(0x125)][_0x468664(0x119)](_0xc033cf=>{const _0x13f0c6=_0x468664;if(String(_0xc033cf['id'])===String(_0x2161c6['id']))return!![];const _0x29e3b0=(_0xc033cf[_0x13f0c6(0x127)]||'')[_0x13f0c6(0x10d)]()['toLowerCase'](),_0x58bf89=(_0xc033cf[_0x13f0c6(0xf7)]||'')['trim']()[_0x13f0c6(0x10f)]();if(_0x39e14f&&_0x29e3b0===_0x39e14f)return!![];if(_0x4299c2&&_0x58bf89&&(_0x58bf89===_0x4299c2||_0x58bf89===_0x39e14f))return!![];return![];}),_0x532cb8=_0x2161c6[_0x468664(0x100)]||_0x2161c6[_0x468664(0x10c)]||0x0;if(_0x8c8f4){_0x8c8f4['games']=(_0x8c8f4[_0x468664(0xfc)]||0x0)+0x1;_0x5ee2b6&&(_0x8c8f4[_0x468664(0xdd)]=(_0x8c8f4['wins']||0x0)+0x1,_0x8c8f4[_0x468664(0xde)]=(_0x8c8f4[_0x468664(0xde)]||0x0)+0x32);typeof _0x2161c6[_0x468664(0xde)]===_0x468664(0xec)&&(_0x8c8f4[_0x468664(0xde)]=Math[_0x468664(0x126)](_0x8c8f4['coins']||0x0,_0x2161c6[_0x468664(0xde)]));if(_0x532cb8>(_0x8c8f4[_0x468664(0x100)]||0x0))_0x8c8f4['netWorth']=_0x532cb8;_0x8c8f4[_0x468664(0x127)]=_0x2161c6[_0x468664(0x127)],_0x8c8f4[_0x468664(0xfe)]=getTokenEmoji(_0x2161c6[_0x468664(0xfe)]);if(_0x2161c6['customToken'])_0x8c8f4[_0x468664(0x11d)]=_0x2161c6[_0x468664(0x11d)];_0x8c8f4['color']=_0x2161c6['color'];(_0x2161c6['bg']||_0x2161c6[_0x468664(0x116)])&&(_0x8c8f4['bg']=_0x2161c6['bg']||_0x2161c6[_0x468664(0x116)],_0x8c8f4[_0x468664(0x116)]=_0x2161c6['bg']||_0x2161c6[_0x468664(0x116)]);if(_0x2161c6[_0x468664(0xf7)])_0x8c8f4[_0x468664(0xf7)]=_0x2161c6[_0x468664(0xf7)];if(_0x2161c6[_0x468664(0x108)])_0x8c8f4[_0x468664(0x108)]=_0x2161c6[_0x468664(0x108)];_0x8c8f4[_0x468664(0xfa)]=!![];}else this[_0x468664(0x125)][_0x468664(0xfb)]({'id':_0x2161c6['id'],'name':_0x2161c6[_0x468664(0x127)],'token':getTokenEmoji(_0x2161c6[_0x468664(0xfe)]),'customToken':_0x2161c6[_0x468664(0x11d)]||null,'color':_0x2161c6[_0x468664(0xff)]||'#2563eb','bg':_0x2161c6['bg']||_0x2161c6[_0x468664(0x116)]||_0x468664(0x111),'profileBg':_0x2161c6['bg']||_0x2161c6[_0x468664(0x116)]||_0x468664(0x111),'coins':(typeof _0x2161c6['coins']===_0x468664(0xec)?_0x2161c6[_0x468664(0xde)]:0x0)+(_0x5ee2b6?0x32:0x0),'isRegistered':!![],'discordId':_0x2161c6['discordId']||null,'avatarUrl':_0x2161c6[_0x468664(0x108)]||null,'wins':_0x5ee2b6?0x1:0x0,'games':0x1,'netWorth':_0x532cb8});}),this[_0x5403ad(0x112)]();}[a9_0x27205e(0x128)](_0x588478=this[a9_0x27205e(0xdc)]){const _0x5be6d8=a9_0x27205e;this[_0x5be6d8(0xdc)]=_0x588478,this[_0x5be6d8(0x12c)]();const _0x2ed4c0=typeof profileManager!=='undefined'&&profileManager?profileManager[_0x5be6d8(0xf2)]:null,_0x532d06=_0x2ed4c0?isPlayerRegistered(_0x2ed4c0):![],_0x2474fd=_0x2ed4c0&&_0x2ed4c0[_0x5be6d8(0x127)]?String(_0x2ed4c0['name'])[_0x5be6d8(0x10d)]()[_0x5be6d8(0x10f)]():'',_0x7ba5e5=_0x2ed4c0&&(_0x2ed4c0[_0x5be6d8(0xe4)]||_0x2ed4c0[_0x5be6d8(0xf7)])?String(_0x2ed4c0[_0x5be6d8(0xe4)]||_0x2ed4c0[_0x5be6d8(0xf7)])[_0x5be6d8(0x10d)]()[_0x5be6d8(0x10f)]():'',_0x567624=new Set(),_0x4fe932=[];for(const _0x1df65b of this['records']){if(!_0x1df65b||!_0x1df65b['id']||String(_0x1df65b['id'])[_0x5be6d8(0x121)](_0x5be6d8(0xe6))||FICTIONAL_NAMES['has'](_0x1df65b[_0x5be6d8(0x127)])||_0x1df65b[_0x5be6d8(0xe2)])continue;if(!isPlayerRegistered(_0x1df65b))continue;if(_0x1df65b[_0x5be6d8(0x127)]==='Гость'||_0x1df65b[_0x5be6d8(0x127)]===_0x5be6d8(0xe9))continue;const _0x1ddfca=(_0x1df65b[_0x5be6d8(0x127)]||'')[_0x5be6d8(0x10d)]()['toLowerCase'](),_0x643220=(_0x1df65b[_0x5be6d8(0xf7)]||'')[_0x5be6d8(0x10d)]()[_0x5be6d8(0x10f)](),_0x50d0d4=_0x643220||_0x1ddfca;if(!_0x50d0d4||_0x567624[_0x5be6d8(0xdf)](_0x50d0d4))continue;_0x567624['add'](_0x50d0d4);const _0x4d4c84=_0x532d06&&(String(_0x1df65b['id'])===String(_0x2ed4c0?.['id'])||_0x2474fd&&_0x1ddfca===_0x2474fd||_0x7ba5e5&&_0x643220&&(_0x643220===_0x7ba5e5||_0x643220===_0x2474fd));_0x4fe932['push']({..._0x1df65b,'isMe':_0x4d4c84});}if(_0x588478===_0x5be6d8(0xdd))_0x4fe932['sort']((_0x5448ff,_0x2e3ff2)=>_0x2e3ff2[_0x5be6d8(0xdd)]-_0x5448ff[_0x5be6d8(0xdd)]||_0x2e3ff2[_0x5be6d8(0x100)]-_0x5448ff[_0x5be6d8(0x100)]||_0x2e3ff2[_0x5be6d8(0xfc)]-_0x5448ff[_0x5be6d8(0xfc)]);else{if(_0x588478===_0x5be6d8(0xfc)||_0x588478==='matches')_0x4fe932[_0x5be6d8(0xd9)]((_0x1681f2,_0x183106)=>_0x183106[_0x5be6d8(0xfc)]-_0x1681f2[_0x5be6d8(0xfc)]||_0x183106[_0x5be6d8(0xdd)]-_0x1681f2['wins']||_0x183106['netWorth']-_0x1681f2['netWorth']);else{if(_0x588478===_0x5be6d8(0x10c))_0x4fe932[_0x5be6d8(0xd9)]((_0x55eb3a,_0x5965af)=>_0x5965af[_0x5be6d8(0x100)]-_0x55eb3a['netWorth']||_0x5965af[_0x5be6d8(0xdd)]-_0x55eb3a[_0x5be6d8(0xdd)]);else _0x588478===_0x5be6d8(0x113)&&_0x4fe932[_0x5be6d8(0xd9)]((_0x43ef54,_0x168c19)=>{const _0x190288=_0x5be6d8,_0xb6575e=_0x43ef54['games']>0x0?_0x43ef54['wins']/_0x43ef54[_0x190288(0xfc)]:0x0,_0x5b306f=_0x168c19[_0x190288(0xfc)]>0x0?_0x168c19[_0x190288(0xdd)]/_0x168c19[_0x190288(0xfc)]:0x0;return _0x5b306f-_0xb6575e||_0x168c19[_0x190288(0xdd)]-_0x43ef54['wins']||_0x168c19[_0x190288(0xfc)]-_0x43ef54['games'];});}}return _0x4fe932['map']((_0x2268b1,_0x19a2c8)=>({'rank':_0x19a2c8+0x1,..._0x2268b1,'winRate':_0x2268b1[_0x5be6d8(0xfc)]>0x0?Math['round'](_0x2268b1[_0x5be6d8(0xdd)]/_0x2268b1[_0x5be6d8(0xfc)]*0x64):0x0}));}['getPlayerRanks'](_0x38eafa){const _0x53b4fb=a9_0x27205e;if(!_0x38eafa)return{'winsRank':null,'matchesRank':null,'cashRank':null,'winrateRank':null};const _0xa95530=this[_0x53b4fb(0x128)](_0x53b4fb(0xdd)),_0x2ab624=this['getRankings']('games'),_0xdf5a49=this[_0x53b4fb(0x128)](_0x53b4fb(0x10c)),_0x50e4cf=this[_0x53b4fb(0x128)](_0x53b4fb(0x113)),_0x576e1b=_0x4e330f=>{const _0x1e7149=_0x53b4fb,_0x8c9e18=_0x4e330f[_0x1e7149(0x119)](_0x56eee1=>String(_0x56eee1['id'])===String(_0x38eafa));return _0x8c9e18?_0x8c9e18[_0x1e7149(0x12d)]:null;};return{'winsRank':_0x576e1b(_0xa95530),'matchesRank':_0x576e1b(_0x2ab624),'cashRank':_0x576e1b(_0xdf5a49),'winrateRank':_0x576e1b(_0x50e4cf),'totalRanked':_0xa95530[_0x53b4fb(0x117)]};}}export const leaderboardManager=new LeaderboardManager();
+/**
+ * Leaderboard & Ranking Manager for Pixel Monopoly
+ * Tracks strictly real players (local profile, peers from multiplayer, games played)
+ */
+import { profileManager, getTokenEmoji } from './profile.js?v=8.0.0';
+
+// List of legacy fictional names and test accounts to permanently filter out
+const FICTIONAL_NAMES = new Set([
+  'Рокфеллер',
+  'Алмазный Барон',
+  'Автомагнат',
+  'Венчурный Бро',
+  'Крипто-Дог',
+  'Дино-Инвестор',
+  'Кот-Рантье',
+  // Test accounts from automated Playwright tests
+  'Misha#7777',
+  'ProdTester#0001',
+  'Misha#1234'
+]);
+
+const customPawnData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABmUlEQVR4AUySS3LjMAxEG9rFc724rJzQcsVzvImXmPcgyRUWIHwaaIKklrgq2T5frVYqih88TUoHRfK4UofGAF1Kr5P170dVde7XH6LM6sIYHXpi6/dHhZzw0uPVTNCS0eMkG0TgAAAABJRU5ErkJggg==';
+
+// List of official registered players to seed global leaderboard across domains
+const DEFAULT_REGISTERED_PLAYERS = [
+  {
+    id: 'discord_1472673126859935765',
+    name: 'hizuhara.',
+    token: 'custom',
+    customToken: customPawnData,
+    color: '#2563eb',
+    bg: 'space',
+    profileBg: 'space',
+    title: 'creator',
+    diceSkin: 'cosmic_void',
+    coins: 0,
+    wins: 2,
+    games: 2,
+    netWorth: 2500,
+    isRegistered: true,
+    discordId: '1472673126859935765',
+    avatarUrl: 'https://cdn.discordapp.com/avatars/1472673126859935765/8819b4f951abe3f4f76a1646dee1ba9d.png'
+  },
+  {
+    id: 'discord_player_cat',
+    name: 'СЫН ШЛЮХИ',
+    token: '🐱',
+    color: '#3b82f6',
+    bg: 'default',
+    profileBg: 'default',
+    title: 'novice',
+    diceSkin: 'classic',
+    coins: 0,
+    wins: 0,
+    games: 2,
+    netWorth: 500,
+    isRegistered: true,
+    discordId: 'player_cat',
+    avatarUrl: null
+  }
+];
+
+// Version stamp — bump to wipe stale duplicated localStorage
+const LEADERBOARD_VERSION = 'v11';
+
+// Helper to verify if a player is registered (via Discord)
+export function isPlayerRegistered(p) {
+  if (!p) return false;
+  if (p.name === 'Гость' || p.name === 'Игрок') return false;
+  return Boolean(p.isRegistered === true || p.discordId || p.authProvider === 'discord' || String(p.id).startsWith('discord_'));
+}
+
+export function isHizuRecord(r) {
+  if (!r) return false;
+  const id = String(r.id || '');
+  const dId = String(r.discordId || '');
+  const dUser = String(r.discordUsername || '').toLowerCase();
+  const name = String(r.name || '').toLowerCase().replace(/\.+$/, '');
+  return id === 'discord_1472673126859935765' || 
+         id === 'discord_hizuhara' || 
+         dId === '1472673126859935765' || 
+         dId === 'hizuhara' || 
+         dUser === 'hizuhara' ||
+         name === 'hizuhara';
+}
+
+export function getRecordDedupeKey(r) {
+  if (!r) return '';
+  if (isHizuRecord(r)) {
+    return 'creator_hizuhara';
+  }
+  const cleanName = (r.name || '').trim().toLowerCase().replace(/\.+$/, '');
+  const discord = (r.discordId || r.discordUsername || '').trim().toLowerCase();
+  return discord || cleanName;
+}
+
+class LeaderboardManager {
+  constructor() {
+    this._migrateVersion();
+    this.records = this.loadRecords();
+    this.currentSort = 'wins';
+    this.syncMyRecord();
+  }
+
+  _migrateVersion() {
+    const stored = localStorage.getItem('monopoly_leaderboard_version');
+    if (stored !== LEADERBOARD_VERSION) {
+      localStorage.removeItem('monopoly_leaderboard');
+      localStorage.setItem('monopoly_leaderboard_version', LEADERBOARD_VERSION);
+    }
+  }
+
+  loadRecords() {
+    const saved = localStorage.getItem('monopoly_leaderboard');
+    let validRecords = [];
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          // Purge any fictional/bot players, empty guests, and non-registered players
+          validRecords = parsed.filter(r => 
+            r && 
+            r.id && 
+            !String(r.id).startsWith('champ_') && 
+            !FICTIONAL_NAMES.has(r.name) && 
+            !r.isBot &&
+            isPlayerRegistered(r) &&
+            r.name !== 'Гость' &&
+            r.name !== 'Игрок'
+          );
+        }
+      } catch (e) {
+        console.warn('Failed to parse leaderboard:', e);
+      }
+    }
+
+    // Ensure all known registered players from the official leaderboard are included
+    for (const def of DEFAULT_REGISTERED_PLAYERS) {
+      const exists = validRecords.some(r => 
+        String(r.id) === String(def.id) || 
+        (isHizuRecord(def) && isHizuRecord(r)) ||
+        (r.name && r.name.toLowerCase() === def.name.toLowerCase()) ||
+        (r.discordId && def.discordId && r.discordId.toLowerCase() === def.discordId.toLowerCase())
+      );
+      if (!exists) {
+        validRecords.push({ ...def });
+      }
+    }
+
+    // Strictly deduplicate by dedupe key
+    const seen = new Set();
+    const deduped = [];
+    for (const r of validRecords) {
+      const key = getRecordDedupeKey(r);
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      deduped.push(r);
+    }
+
+    this.saveRecords(deduped);
+    return deduped;
+  }
+
+  saveRecords(records = this.records) {
+    this.records = records;
+    try {
+      localStorage.setItem('monopoly_leaderboard', JSON.stringify(this.records));
+    } catch (e) {
+      console.warn('Failed to save leaderboard:', e);
+    }
+  }
+
+  syncMyRecord() {
+    const myProfile = (typeof window !== 'undefined' && window.profileManager?.profile) || (typeof profileManager !== 'undefined' && profileManager ? profileManager.profile : null);
+    if (!myProfile || !myProfile.id) return;
+    if (!isPlayerRegistered(myProfile)) return; // Only registered players get saved into leaderboard
+
+    const myStats = myProfile.stats || {};
+    const isMeHizu = isHizuRecord(myProfile);
+
+    // Find all records that match me (by id, discordId, or hizu identity)
+    const myMatches = this.records.filter(r => {
+      if (String(r.id) === String(myProfile.id)) return true;
+      if (myProfile.discordId && r.discordId && String(r.discordId) === String(myProfile.discordId)) return true;
+      if (isMeHizu && isHizuRecord(r)) return true;
+      return false;
+    });
+
+    let existing = myMatches[0];
+    if (myMatches.length > 1) {
+      const idsToRemove = new Set(myMatches.slice(1).map(r => r.id));
+      this.records = this.records.filter(r => !idsToRemove.has(r.id));
+    }
+
+    if (existing) {
+      existing.id = myProfile.id;
+      existing.name = myProfile.name;
+      existing.discordId = myProfile.discordId || existing.discordId;
+      existing.token = myProfile.token;
+      existing.customToken = myProfile.token === 'custom' ? myProfile.customToken : null;
+      existing.color = myProfile.color;
+      existing.bg = myProfile.bg || 'default';
+      existing.profileBg = myProfile.bg || 'default';
+      existing.title = myProfile.title || existing.title || 'creator';
+      existing.diceSkin = myProfile.diceSkin || existing.diceSkin || 'cosmic_void';
+      existing.coins = typeof myProfile.coins === 'number' ? myProfile.coins : (existing.coins || 0);
+      const bestWins = Math.max(existing.wins || 0, myStats.wins || 0);
+      existing.wins = bestWins;
+      if ((myStats.wins || 0) < bestWins) {
+        myStats.wins = bestWins;
+        profileManager.saveProfile(myProfile);
+      }
+      existing.games = Math.max(existing.games || 0, myStats.gamesPlayed || 0);
+      existing.netWorth = Math.max(existing.netWorth || 0, myStats.maxNetWorth || 0);
+      existing.isRegistered = true;
+      if (myProfile.discordId) existing.discordId = myProfile.discordId;
+      if (myProfile.avatarUrl) existing.avatarUrl = myProfile.avatarUrl;
+    } else {
+      this.records.push({
+        id: myProfile.id,
+        name: myProfile.name,
+        token: myProfile.token,
+        customToken: myProfile.token === 'custom' ? myProfile.customToken : null,
+        color: myProfile.color,
+        bg: myProfile.bg || 'default',
+        profileBg: myProfile.bg || 'default',
+        title: myProfile.title || 'creator',
+        diceSkin: myProfile.diceSkin || 'cosmic_void',
+        coins: myProfile.coins || 0,
+        wins: myStats.wins || 0,
+        games: myStats.gamesPlayed || 0,
+        netWorth: myStats.maxNetWorth || 0,
+        isRegistered: true,
+        discordId: myProfile.discordId || null,
+        avatarUrl: myProfile.avatarUrl || null
+      });
+    }
+
+    // Deduplicate entire records list
+    const seen = new Set();
+    this.records = this.records.filter(r => {
+      const k = getRecordDedupeKey(r);
+      if (!k || seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+
+    this.saveRecords();
+  }
+
+  // Alias for backward compatibility
+  syncMyRegisteredRecord() {
+    this.syncMyRecord();
+  }
+
+  registerPlayer(player) {
+    if (!player || player.isBot) return;
+    if (FICTIONAL_NAMES.has(player.name) || String(player.id).startsWith('champ_')) return;
+    if (!isPlayerRegistered(player)) return; // Only registered players
+
+    const myProfile = profileManager?.profile;
+    if (myProfile && (String(player.id) === String(myProfile.id) || (isHizuRecord(myProfile) && isHizuRecord(player)))) {
+      this.syncMyRecord();
+      return;
+    }
+
+    const stats = player.stats || {};
+    const wins = typeof stats.wins === 'number' ? stats.wins : (player.wins || 0);
+    const games = typeof stats.gamesPlayed === 'number' ? stats.gamesPlayed : (player.games || 0);
+    const netWorth = typeof stats.maxNetWorth === 'number' ? stats.maxNetWorth : (player.netWorth || 0);
+
+    const pName = (player.name || '').trim().toLowerCase();
+    const pDiscord = (player.discordId || player.discordUsername || '').trim().toLowerCase();
+    const isPlayerHizu = isHizuRecord(player);
+
+    // Match by ID, by Name, or by Discord ID
+    const existing = this.records.find(r => {
+      if (String(r.id) === String(player.id)) return true;
+      if (isPlayerHizu && isHizuRecord(r)) return true;
+      const rName = (r.name || '').trim().toLowerCase();
+      const rDiscord = (r.discordId || '').trim().toLowerCase();
+      if (pName && rName === pName) return true;
+      if (pDiscord && rDiscord && (rDiscord === pDiscord || rDiscord === pName)) return true;
+      return false;
+    });
+
+    if (existing) {
+      existing.name = player.name || existing.name;
+      if (player.token && player.token !== 'custom') existing.token = getTokenEmoji(player.token);
+      if (player.customToken) existing.customToken = player.customToken;
+      if (player.color) existing.color = player.color;
+      if (player.bg || player.profileBg) {
+        existing.bg = player.bg || player.profileBg;
+        existing.profileBg = player.bg || player.profileBg;
+      }
+      if (typeof player.coins === 'number') {
+        existing.coins = Math.max(existing.coins || 0, player.coins);
+      }
+      if (player.title) existing.title = player.title;
+      if (player.diceSkin) existing.diceSkin = player.diceSkin;
+      if (player.discordId) existing.discordId = player.discordId;
+      if (player.avatarUrl) existing.avatarUrl = player.avatarUrl;
+      existing.isRegistered = true;
+      if (wins > (existing.wins || 0)) existing.wins = wins;
+      if (games > (existing.games || 0)) existing.games = games;
+      if (netWorth > (existing.netWorth || 0)) existing.netWorth = netWorth;
+    } else {
+      this.records.push({
+        id: player.id,
+        name: player.name || 'Игрок',
+        token: getTokenEmoji(player.token || '🎩'),
+        customToken: player.customToken || null,
+        color: player.color || '#2563eb',
+        bg: player.bg || player.profileBg || 'default',
+        profileBg: player.bg || player.profileBg || 'default',
+        title: player.title || 'novice',
+        diceSkin: player.diceSkin || 'classic',
+        coins: typeof player.coins === 'number' ? player.coins : 0,
+        isRegistered: true,
+        discordId: player.discordId || null,
+        avatarUrl: player.avatarUrl || null,
+        wins: wins,
+        games: games || (wins ? wins : 0),
+        netWorth: netWorth
+      });
+    }
+
+    this.saveRecords();
+  }
+
+  recordGameFinished(players, winnerId) {
+    if (!players || !Array.isArray(players)) return;
+
+    players.forEach(p => {
+      if (p.isBot || FICTIONAL_NAMES.has(p.name) || String(p.id).startsWith('champ_')) return;
+
+      const isWinner = String(p.id) === String(winnerId);
+      const isMe = String(p.id) === String(profileManager?.profile?.id);
+
+      if (isMe) {
+        profileManager.recordGameResult(isWinner, p.cash || 0, p.netWorth || p.cash || 0);
+        this.syncMyRecord();
+        return;
+      }
+
+      if (!isPlayerRegistered(p)) return;
+
+      const pName = (p.name || '').trim().toLowerCase();
+      const pDiscord = (p.discordId || p.discordUsername || '').trim().toLowerCase();
+
+      const existing = this.records.find(r => {
+        if (String(r.id) === String(p.id)) return true;
+        const rName = (r.name || '').trim().toLowerCase();
+        const rDiscord = (r.discordId || '').trim().toLowerCase();
+        if (pName && rName === pName) return true;
+        if (pDiscord && rDiscord && (rDiscord === pDiscord || rDiscord === pName)) return true;
+        return false;
+      });
+
+      const currentNw = p.netWorth || p.cash || 0;
+      if (existing) {
+        existing.games = (existing.games || 0) + 1;
+        if (isWinner) {
+          existing.wins = (existing.wins || 0) + 1;
+          existing.coins = (existing.coins || 0) + 50;
+        }
+        if (typeof p.coins === 'number') {
+          existing.coins = Math.max(existing.coins || 0, p.coins);
+        }
+        if (currentNw > (existing.netWorth || 0)) existing.netWorth = currentNw;
+        existing.name = p.name;
+        existing.token = getTokenEmoji(p.token);
+        if (p.customToken) existing.customToken = p.customToken;
+        existing.color = p.color;
+        if (p.bg || p.profileBg) {
+          existing.bg = p.bg || p.profileBg;
+          existing.profileBg = p.bg || p.profileBg;
+        }
+        if (p.discordId) existing.discordId = p.discordId;
+        if (p.avatarUrl) existing.avatarUrl = p.avatarUrl;
+        existing.isRegistered = true;
+      } else {
+        this.records.push({
+          id: p.id,
+          name: p.name,
+          token: getTokenEmoji(p.token),
+          customToken: p.customToken || null,
+          color: p.color || '#2563eb',
+          bg: p.bg || p.profileBg || 'default',
+          profileBg: p.bg || p.profileBg || 'default',
+          coins: (typeof p.coins === 'number' ? p.coins : 0) + (isWinner ? 50 : 0),
+          isRegistered: true,
+          discordId: p.discordId || null,
+          avatarUrl: p.avatarUrl || null,
+          wins: isWinner ? 1 : 0,
+          games: 1,
+          netWorth: currentNw
+        });
+      }
+    });
+
+    this.saveRecords();
+  }
+
+  getRankings(sortBy = this.currentSort) {
+    this.currentSort = sortBy;
+    this.syncMyRecord();
+    const myProfile = (typeof window !== 'undefined' && window.profileManager?.profile) || (typeof profileManager !== 'undefined' && profileManager ? profileManager.profile : null);
+    const isMeRegistered = myProfile ? isPlayerRegistered(myProfile) : false;
+    const isMeHizu = isHizuRecord(myProfile);
+    const myName = (myProfile && myProfile.name) ? String(myProfile.name).trim().toLowerCase() : '';
+    const myDiscord = (myProfile && (myProfile.discordUsername || myProfile.discordId)) ? String(myProfile.discordUsername || myProfile.discordId).trim().toLowerCase() : '';
+
+    // Filter and strictly deduplicate list by name / discord
+    const seenKeys = new Set();
+    const list = [];
+
+    for (const r of this.records) {
+      if (!r || !r.id || String(r.id).startsWith('champ_') || FICTIONAL_NAMES.has(r.name) || r.isBot) {
+        continue;
+      }
+      if (!isPlayerRegistered(r)) {
+        continue;
+      }
+      if (r.name === 'Гость' || r.name === 'Игрок') {
+        continue;
+      }
+
+      const key = getRecordDedupeKey(r);
+
+      if (!key || seenKeys.has(key)) continue;
+      seenKeys.add(key);
+
+      const rName = (r.name || '').trim().toLowerCase();
+      const rDiscord = (r.discordId || '').trim().toLowerCase();
+
+      const isMe = isMeRegistered && (
+        String(r.id) === String(myProfile?.id) ||
+        (isMeHizu && isHizuRecord(r)) ||
+        (myName && rName === myName) ||
+        (myDiscord && rDiscord && (rDiscord === myDiscord || rDiscord === myName))
+      );
+
+      list.push({
+        ...r,
+        name: isMe ? (myProfile.name || r.name) : r.name,
+        isMe
+      });
+    }
+
+    if (sortBy === 'wins') {
+      list.sort((a, b) => (b.wins - a.wins) || (b.netWorth - a.netWorth) || (b.games - a.games));
+    } else if (sortBy === 'games' || sortBy === 'matches') {
+      list.sort((a, b) => (b.games - a.games) || (b.wins - a.wins) || (b.netWorth - a.netWorth));
+    } else if (sortBy === 'cash') {
+      list.sort((a, b) => (b.netWorth - a.netWorth) || (b.wins - a.wins));
+    } else if (sortBy === 'winrate') {
+      list.sort((a, b) => {
+        const rateA = a.games > 0 ? (a.wins / a.games) : 0;
+        const rateB = b.games > 0 ? (b.wins / b.games) : 0;
+        return (rateB - rateA) || (b.wins - a.wins) || (b.games - a.games);
+      });
+    }
+
+    return list.map((item, idx) => ({
+      rank: idx + 1,
+      ...item,
+      winRate: item.games > 0 ? Math.round((item.wins / item.games) * 100) : 0
+    }));
+  }
+
+  getPlayerRanks(playerId) {
+    if (!playerId) return { winsRank: null, matchesRank: null, cashRank: null, winrateRank: null };
+    const winsList = this.getRankings('wins');
+    const matchesList = this.getRankings('games');
+    const cashList = this.getRankings('cash');
+    const winrateList = this.getRankings('winrate');
+
+    const findRank = (list) => {
+      const found = list.find(p => String(p.id) === String(playerId));
+      return found ? found.rank : null;
+    };
+
+    return {
+      winsRank: findRank(winsList),
+      matchesRank: findRank(matchesList),
+      cashRank: findRank(cashList),
+      winrateRank: findRank(winrateList),
+      totalRanked: winsList.length
+    };
+  }
+}
+
+export const leaderboardManager = new LeaderboardManager();

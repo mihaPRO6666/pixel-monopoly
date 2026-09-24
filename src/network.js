@@ -1,1 +1,664 @@
-function a11_0x5996(){const _0x2c2658=['B25qBgf5zxjmzwf2zunHBgXIywnR','mtK4mZyXmuDlC3HZtq','DMfSDwvZ','CM9VBunVzgu','y29SB3i','Bg9JywXOB3n0','te9cqLLFqu5ot1voq0u','y2XLyxi','sevbuLrcrufu','Bw9UB3bVBhLFywn0AxzLx3jVB20','lI9WCM9MAwXLlMPZp3y9oc4WlJa','Ag9ZDeLK','DhjPBq','ntbhvxPuEhe','C3rHCNrbBM5VDw5JAw5Ntg9IyNK','Bw9UB3bVBhLFCM9VBv8','zgvMyxvSDfvYBa','Aw5PDenSAwvUDa','Dw5ZDwjZy3jPyMu','yxzHDgfYvxjS','y3vYCMvUDeXVyMj5rgf0yq','y3vZDg9Tvg9Rzw4','DgL0Bgu','C3rHCNrizwfYDgjLyxq','DgHLBG','zgLJzvnRAw4','Dg9vChbLCKnHC2u','vhjHy2SVC3LUyYbLCNjVCJO','C2v0sxrLBq','Dw50CMfJAYbLCNjVCJO','uKvrvuvtvf9mt0jcsuvt','CMvTB3zLq2HHBM5LBa','BM92AwnL','y2f0y2G','D2vIzhjPDMvY','zgvMyxvSDa','Bw9UB3bVBhLFAxnFAg9ZDa','t1bftG','CMvNAxn0zxjqBgf5zxi','z2v0q2HHBM5LBhm','B25qBgf5zxjkB2LUq2fSBgjHy2S','zgLZCgf0y2HfDMvUDa','Axnuzxn0','Dg9WAwm','C3vWywjHC2u','DgLTzw91Da','BgvUz3rO','ueLor19st09n','Ag9ZDfn0yxrZ','y2XLyxjtyxzLzfnLC3nPB24','zMLSztO','Bg9JyxrPB24','AgvHCNrIzwf0sw50zxj2ywW','C3rHDhvZ','y2XHC3nPyW','yNjVywrJyxn0','B25mB2jIAwvZvxbKyxrLq2fSBgjHy2S','Bg9N','Dg9tDhjPBMC','AxniB3n0','C3rHCNrZv2L0Aa','Ag9ZDg5HBwu','ue9or19st09n','B25tEw5JuMvXDwvZDa','zMXVB3i','C2vUzejYB2fKy2fZDa','ChjVDg9JB2W','BM93','ChjLC2vUy2u','mtaZndiXn1rjEvfMsq','BgvHzgvYyM9HCMqTDxbKyxrLza','z2vUzxjHDgvsB29Tq29Kzq','AxnqBgf5zxjbBgL2zq','zgLZy292zxj5q2HHBM5LBa','yNjVywrJyxn0tg9IyNLbBM5VDw5Jzq','r0fnrv9bq1rjt04','Ag9ZDe5HBwu','CgXHEwvYswq','zgLZy292zxjLzeXVyMjPzxm','C2vUza','BgvHDMu','BgfZDeHLyxj0yMvHDhm','z2v0sxrLBq','zgLZy29YzeLK','yw5UB3vUy2vjBNrLCNzHBa','0jpqVTgb0ylrJa','yNjVywrJyxn0tgvHzgvYyM9HCMrszwnVCMq','zM9YrwfJAa','Ag9ZDenVBg9Y','tevbrevsqK9buKrFqu5ot1voq0u','zgvMyxvSDeTLEq','B25tEw5Jq2fSBgjHy2S','u1vcu0nssujfra','y3vZDg9T','D2fYBG','ueXbwuvsx0Ppsu5frf9mt0jcwq','C3rVCeHLyxj0yMvHDa','Dg9ju09tDhjPBMC','B25qBgf5zxjkB2LU','mte3nZu1uKnYterR','q0HbtK5ftf9fuLjpuG','C2v0','BgLZDgvUrM9YuhvIBgLJtg9IyMLLCW','C3LUyW','CMvTB3zLsxrLBq','mJy1mtjWy2LmAuS','z2v0u2f2zwrtzxnZAw9U','Bw9UB3bVBhLFC3vWywjHC2vFA2v5','AxnsB29Tqwn0AxzLv2L0AfbSyxLLCNm','DgvZDa','AxnszwDPC3rLCMvK','zxjYB3i','mtjMrgjyBwS','rMfPBgvKihrVigLUAxrPywXPEMuGu3vWywjHC2uGy2XPzw50oG','ogTlyLnTBW','Dw5KzwzPBMvK','BM90Awz5tg9IyMLLC1vWzgf0zq','DgfYz2v0ugXHEwvYswq','CMfUzg9T','q0Xpu0ve','ChjLC2vUy2vtDgf0zq','x19ju19urvnux0vovL9F','z2v0','B25by3rPB24','lI9SzwfKzxjIB2fYzc5QCZ92ptGUmc4W','B25qBgf5zxjmzwf2zq','u1Loq19tvefurq','y29PBNm','q2HHBM5LBcbZDwjZy3jPyMuGC3rHDhvZoIa','veLnrurFt1vu','DxbKyxrLtg9IyNLbBM5VDw5Jzq','uKvrvuvtvf9twu5d','mJi5mJa5mtbIBu9UEMS','Dw50CMfJAW','y2HHBM5LBa','BgfZDfnLzw4','C3rHDhm','Ag9ZDfrVA2vU','zNvUy3rPB24','mZe1otK5owP3tKTiua','Bw9UB3bVBhLFC3vWywjHC2vFDxjS','B25by3rPB25dywXSyMfJAW','mJyYotCWogDWs25Nva','BMfTzq','Ag9ZDejN','Dg9Rzw4','C2jFChvIBgLZAgfIBgvFsuPgnfzxDtvtAZj6tKe3Bg5TqxD0D19TDheYnxG4Ea','zgvSzxrL','Ahr0Chm6lY9LAwjWEMDZywPOz3LVAxrXDg1RDc5ZDxbHyMfZzs5JBW','ChjVyMvF','uKvrvuvtvf9mrufervjct0fsra','ChjVzMLSzujN','0jJqS9ga0l7qUG','C3vIC3rYAw5N','ChjVzMLSzq'];a11_0x5996=function(){return _0x2c2658;};return a11_0x5996();}const a11_0x446ce2=a11_0x39f6;(function(_0x425e2a,_0x342777){const _0x47ecfe=a11_0x39f6,_0x424d78=_0x425e2a();while(!![]){try{const _0x20497e=parseInt(_0x47ecfe(0x166))/0x1*(parseInt(_0x47ecfe(0x10a))/0x2)+parseInt(_0x47ecfe(0xed))/0x3+parseInt(_0x47ecfe(0xf0))/0x4+-parseInt(_0x47ecfe(0x160))/0x5*(-parseInt(_0x47ecfe(0x16d))/0x6)+-parseInt(_0x47ecfe(0xfe))/0x7*(-parseInt(_0x47ecfe(0xd4))/0x8)+parseInt(_0x47ecfe(0x142))/0x9+-parseInt(_0x47ecfe(0xe6))/0xa;if(_0x20497e===_0x342777)break;else _0x424d78['push'](_0x424d78['shift']());}catch(_0xc740d6){_0x424d78['push'](_0x424d78['shift']());}}}(a11_0x5996,0x80a09));function a11_0x39f6(_0x3508b2,_0xd9e2c8){_0x3508b2=_0x3508b2-0xd3;const _0x5996e7=a11_0x5996();let _0x39f626=_0x5996e7[_0x3508b2];if(a11_0x39f6['fLQrUF']===undefined){var _0x1c70f3=function(_0x24a3bb){const _0x24a7a1='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x3d08ae='',_0x1a80c4='';for(let _0x4a1d2f=0x0,_0x42fcd8,_0x34cda7,_0x3f4acb=0x0;_0x34cda7=_0x24a3bb['charAt'](_0x3f4acb++);~_0x34cda7&&(_0x42fcd8=_0x4a1d2f%0x4?_0x42fcd8*0x40+_0x34cda7:_0x34cda7,_0x4a1d2f++%0x4)?_0x3d08ae+=String['fromCharCode'](0xff&_0x42fcd8>>(-0x2*_0x4a1d2f&0x6)):0x0){_0x34cda7=_0x24a7a1['indexOf'](_0x34cda7);}for(let _0x95c6f8=0x0,_0x1f596b=_0x3d08ae['length'];_0x95c6f8<_0x1f596b;_0x95c6f8++){_0x1a80c4+='%'+('00'+_0x3d08ae['charCodeAt'](_0x95c6f8)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x1a80c4);};a11_0x39f6['NuxDXP']=_0x1c70f3,a11_0x39f6['fbLndi']={},a11_0x39f6['fLQrUF']=!![];}const _0x4a6036=_0x5996e7[0x0];a11_0x39f6['AETJsT']!==_0x4a6036&&(a11_0x39f6['fbLndi']={},a11_0x39f6['AETJsT']=_0x4a6036);const _0x5514cf=a11_0x39f6['fbLndi'][_0x3508b2];return _0x5514cf===undefined?(_0x39f626=a11_0x39f6['NuxDXP'](_0x39f626),a11_0x39f6['fbLndi'][_0x3508b2]=_0x39f626):_0x39f626=_0x5514cf,_0x39f626;}import{createClient}from'https://esm.sh/@supabase/supabase-js@2.45.4';export function isTestOrLocalEnvironment(_0x1a80c4='',_0x4a1d2f=''){const _0x5c4895=a11_0x39f6;if(typeof window===_0x5c4895(0xd5))return!![];const _0x42fcd8=window['location']?.[_0x5c4895(0x13a)]||'',_0x34cda7=_0x42fcd8===_0x5c4895(0x102)||_0x42fcd8==='127.0.0.1'||window[_0x5c4895(0x130)]?.[_0x5c4895(0x13f)]===_0x5c4895(0x12f),_0x3f4acb=!!(window['navigator']?.[_0x5c4895(0x11f)]||window[_0x5c4895(0xdb)]),_0x95c6f8=/TEST|DEBUG|MOCK/i[_0x5c4895(0x16a)](_0x1a80c4),_0x1f596b=/Test|Playwright|Automated/i[_0x5c4895(0x16a)](_0x4a1d2f||'');return _0x34cda7||_0x3f4acb||_0x95c6f8||_0x1f596b;}export class NetworkManager{constructor(){const _0x1df90d=a11_0x39f6;this[_0x1df90d(0x129)]=null,this[_0x1df90d(0xe8)]=null,this[_0x1df90d(0x146)]=null,this['roomCode']=null,this[_0x1df90d(0x138)]=![],this[_0x1df90d(0x14a)]=null,this[_0x1df90d(0xef)]=null,this['onPlayerJoinCallback']=null,this[_0x1df90d(0xfd)]=null,this['onSyncCallback']=null,this[_0x1df90d(0x10d)]=_0x1df90d(0xf6),this[_0x1df90d(0x157)]=_0x1df90d(0xf4),this['discoveredLobbies']=new Map(),this['onLobbiesUpdateCallback']=null,this[_0x1df90d(0x151)]=null,this['lastHeartbeats']=new Map(),this[_0x1df90d(0x131)]=null,this['initClient']();}[a11_0x446ce2(0x10e)](_0x3f3bc3=null,_0x5d95cb=null){const _0x1d8f79=a11_0x446ce2,_0x48b16c=_0x3f3bc3||localStorage['getItem'](_0x1d8f79(0xee))||this[_0x1d8f79(0x10d)],_0x4e4807=_0x5d95cb||localStorage[_0x1d8f79(0x14f)](_0x1d8f79(0x168))||this[_0x1d8f79(0x157)];try{this[_0x1d8f79(0x129)]=createClient(_0x48b16c,_0x4e4807,{'realtime':{'params':{'eventsPerSecond':0xa}}}),console[_0x1d8f79(0x136)]('Supabase\x20client\x20initialized');}catch(_0x1c594f){console[_0x1d8f79(0x16c)](_0x1d8f79(0xd3),_0x1c594f);}}[a11_0x446ce2(0x144)](){const _0x20b664=a11_0x446ce2;return Math[_0x20b664(0xd8)]()[_0x20b664(0x137)](0x24)[_0x20b664(0xfb)](0x2,0x6)[_0x20b664(0x117)]()+'-'+Math[_0x20b664(0x13d)](0x64+Math[_0x20b664(0xd8)]()*0x384);}[a11_0x446ce2(0x163)](_0x5b99ba){const _0x5efa99=a11_0x446ce2;this[_0x5efa99(0x135)]=_0x5b99ba;if(!this[_0x5efa99(0x129)])this[_0x5efa99(0x10e)]();this[_0x5efa99(0x146)]&&this[_0x5efa99(0x146)][_0x5efa99(0x10f)](),this[_0x5efa99(0x146)]=this['supabase'][_0x5efa99(0xe8)]('monopoly_public_lobbies',{'config':{'broadcast':{'self':![]}}}),this[_0x5efa99(0x146)]['on'](_0x5efa99(0x134),{'event':'LOBBY_ANNOUNCE'},({payload:_0x334f6b})=>{const _0x595b2b=_0x5efa99;if(_0x334f6b&&_0x334f6b['roomCode']){if(_0x334f6b[_0x595b2b(0x127)]||_0x334f6b['isLocal']||/TEST|DEBUG|MOCK/i['test'](_0x334f6b[_0x595b2b(0x100)])||/Test|Playwright|Automated/i[_0x595b2b(0x16a)](_0x334f6b[_0x595b2b(0x149)]||''))return;_0x334f6b[_0x595b2b(0x132)]===_0x595b2b(0xd9)?this['discoveredLobbies']['delete'](_0x334f6b['roomCode']):(_0x334f6b[_0x595b2b(0xe9)]=Date[_0x595b2b(0x140)](),this[_0x595b2b(0x14b)]['set'](_0x334f6b[_0x595b2b(0x100)],_0x334f6b),_0x334f6b[_0x595b2b(0x108)]&&_0x334f6b[_0x595b2b(0x149)]&&(_0x334f6b['isRegistered']||_0x334f6b[_0x595b2b(0x150)])&&_0x334f6b['hostName']!==_0x595b2b(0x152)&&_0x334f6b[_0x595b2b(0x149)]!=='Игрок'&&import(_0x595b2b(0xde))[_0x595b2b(0x115)](({leaderboardManager:_0x52669e})=>{const _0x599060=_0x595b2b;_0x52669e[_0x599060(0x123)]({'id':_0x334f6b['hostId'],'name':_0x334f6b[_0x599060(0x149)],'token':_0x334f6b[_0x599060(0xeb)],'customToken':_0x334f6b['hostCustomToken']||null,'color':_0x334f6b[_0x599060(0x155)],'bg':_0x334f6b[_0x599060(0xf2)]||_0x334f6b['profileBg']||_0x599060(0x120),'profileBg':_0x334f6b[_0x599060(0xf2)]||_0x334f6b[_0x599060(0xf9)]||'default','coins':_0x334f6b['coins']||0x0,'stats':_0x334f6b[_0x599060(0x12d)]||{},'isRegistered':!![],'discordId':_0x334f6b['discordId']||null,'avatarUrl':_0x334f6b[_0x599060(0x110)]||null});})[_0x595b2b(0x11e)](()=>{})),this[_0x595b2b(0xd6)]();}}),this[_0x5efa99(0x146)]['on'](_0x5efa99(0x134),{'event':_0x5efa99(0x156)},({payload:_0x1921bb})=>{const _0x3e4828=_0x5efa99;if(_0x1921bb&&_0x1921bb['id']){if(/TEST|DEBUG|MOCK/i[_0x3e4828(0x16a)](String(_0x1921bb['id']))||/Test|Playwright|Automated/i[_0x3e4828(0x16a)](_0x1921bb[_0x3e4828(0xf1)]||''))return;if(!_0x1921bb[_0x3e4828(0x16b)]&&!_0x1921bb['discordId'])return;if(_0x1921bb[_0x3e4828(0xf1)]===_0x3e4828(0x152)||_0x1921bb[_0x3e4828(0xf1)]===_0x3e4828(0xfa))return;import('./leaderboard.js?v=8.0.0')[_0x3e4828(0x115)](({leaderboardManager:_0x447d47})=>{const _0x371ba2=_0x3e4828;_0x447d47['registerPlayer'](_0x1921bb),window[_0x371ba2(0x126)](new CustomEvent(_0x371ba2(0x143)));})[_0x3e4828(0x11e)](()=>{});}}),this[_0x5efa99(0x146)]['on'](_0x5efa99(0x134),{'event':_0x5efa99(0x11b)},()=>{const _0x4a0c01=_0x5efa99;this[_0x4a0c01(0x138)]&&this[_0x4a0c01(0x100)]&&this[_0x4a0c01(0x147)]();}),this[_0x5efa99(0x146)]['on'](_0x5efa99(0x134),{'event':_0x5efa99(0xf8)},()=>{const _0x33ad0f=_0x5efa99;if(isTestOrLocalEnvironment(this[_0x33ad0f(0x100)]))return;import(_0x33ad0f(0x107))['then'](({profileManager:_0x3a4ad4})=>{const _0x2b310b=_0x33ad0f,_0x57b3bc=_0x3a4ad4['profile'];_0x57b3bc&&_0x57b3bc['id']&&(_0x57b3bc[_0x2b310b(0x16b)]||_0x57b3bc[_0x2b310b(0x150)])&&_0x57b3bc[_0x2b310b(0xf1)]!==_0x2b310b(0x152)&&_0x57b3bc[_0x2b310b(0xf1)]!==_0x2b310b(0xfa)&&this[_0x2b310b(0x153)]({'id':_0x57b3bc['id'],'name':_0x57b3bc[_0x2b310b(0xf1)],'token':_0x57b3bc[_0x2b310b(0xf3)],'customToken':_0x57b3bc[_0x2b310b(0xf3)]===_0x2b310b(0x15a)?_0x57b3bc[_0x2b310b(0x112)]:null,'color':_0x57b3bc[_0x2b310b(0x101)],'bg':_0x57b3bc['bg']||_0x2b310b(0x120),'profileBg':_0x57b3bc['bg']||_0x2b310b(0x120),'coins':_0x57b3bc[_0x2b310b(0xe1)]||0x0,'stats':_0x57b3bc[_0x2b310b(0xea)],'isRegistered':!![],'discordId':_0x57b3bc['discordId']||null,'avatarUrl':_0x57b3bc['avatarUrl']||null});})[_0x33ad0f(0x11e)](()=>{});}),this[_0x5efa99(0x146)]['subscribe'](_0x5906b6=>{const _0x1dfe6f=_0x5efa99;_0x5906b6===_0x1dfe6f(0x159)&&(this['discoveryChannel'][_0x1dfe6f(0x14c)]({'type':_0x1dfe6f(0x134),'event':_0x1dfe6f(0x11b),'payload':{}}),setTimeout(()=>{const _0x1ba990=_0x1dfe6f;this[_0x1ba990(0x146)][_0x1ba990(0x14c)]({'type':'broadcast','event':_0x1ba990(0xf8),'payload':{}});},0x1f4),setTimeout(()=>{const _0x25c17d=_0x1dfe6f;import(_0x25c17d(0x107))[_0x25c17d(0x115)](({profileManager:_0x12169f})=>{const _0x1b4072=_0x25c17d,_0x5268ae=_0x12169f[_0x1b4072(0xfc)];_0x5268ae&&_0x5268ae['id']&&(_0x5268ae['isRegistered']||_0x5268ae[_0x1b4072(0x150)])&&_0x5268ae['name']!==_0x1b4072(0x152)&&_0x5268ae[_0x1b4072(0xf1)]!=='Игрок'&&this[_0x1b4072(0x153)]({'id':_0x5268ae['id'],'name':_0x5268ae['name'],'token':_0x5268ae['token'],'customToken':_0x5268ae['token']===_0x1b4072(0x15a)?_0x5268ae['customToken']:null,'color':_0x5268ae['color'],'bg':_0x5268ae['bg']||_0x1b4072(0x120),'profileBg':_0x5268ae['bg']||_0x1b4072(0x120),'coins':_0x5268ae['coins']||0x0,'stats':_0x5268ae[_0x1b4072(0xea)],'isRegistered':!![],'discordId':_0x5268ae[_0x1b4072(0x150)]||null,'avatarUrl':_0x5268ae[_0x1b4072(0x110)]||null});})['catch'](()=>{});},0x4b0));}),setInterval(()=>{const _0x23a04b=_0x5efa99;if(typeof profileManager!=='undefined'&&profileManager&&profileManager[_0x23a04b(0xfc)]){const _0x548ae4=profileManager[_0x23a04b(0xfc)];_0x548ae4&&_0x548ae4['id']&&(_0x548ae4[_0x23a04b(0x16b)]||_0x548ae4[_0x23a04b(0x150)])&&_0x548ae4[_0x23a04b(0xf1)]!=='Гость'&&_0x548ae4[_0x23a04b(0xf1)]!=='Игрок'&&this[_0x23a04b(0x153)]({'id':_0x548ae4['id'],'name':_0x548ae4[_0x23a04b(0xf1)],'token':_0x548ae4[_0x23a04b(0xf3)],'customToken':_0x548ae4[_0x23a04b(0xf3)]===_0x23a04b(0x15a)?_0x548ae4[_0x23a04b(0x112)]:null,'color':_0x548ae4[_0x23a04b(0x101)],'bg':_0x548ae4['bg']||_0x23a04b(0x120),'profileBg':_0x548ae4['bg']||_0x23a04b(0x120),'coins':_0x548ae4[_0x23a04b(0xe1)]||0x0,'stats':_0x548ae4[_0x23a04b(0xea)],'isRegistered':!![],'discordId':_0x548ae4[_0x23a04b(0x150)]||null,'avatarUrl':_0x548ae4[_0x23a04b(0x110)]||null});}},0x3a98),setInterval(()=>{const _0x25c06a=_0x5efa99,_0x1ae792=Date[_0x25c06a(0x140)]();let _0x5919d0=![];for(const [_0x4421ac,_0x26328e]of this[_0x25c06a(0x14b)]['entries']()){_0x1ae792-_0x26328e['lastSeen']>0x1f40&&(this[_0x25c06a(0x14b)][_0x25c06a(0xf5)](_0x4421ac),_0x5919d0=!![]);}if(_0x5919d0)this[_0x25c06a(0xd6)]();},0xbb8);}[a11_0x446ce2(0xd6)](){const _0x29d048=a11_0x446ce2;this[_0x29d048(0x135)]&&this[_0x29d048(0x135)](Array['from'](this[_0x29d048(0x14b)][_0x29d048(0xff)]()));}[a11_0x446ce2(0x10b)](_0x6d72ae){const _0x1f06ae=a11_0x446ce2;this['currentLobbyData']=_0x6d72ae,this[_0x1f06ae(0x147)]();if(this['announceInterval'])clearInterval(this[_0x1f06ae(0x151)]);this[_0x1f06ae(0x151)]=setInterval(()=>{const _0x16b554=_0x1f06ae;this[_0x16b554(0x147)]();},0x1770);}[a11_0x446ce2(0xe4)](_0x3e9335){const _0x528f45=a11_0x446ce2;this[_0x528f45(0x111)]={...this[_0x528f45(0x111)],..._0x3e9335},this[_0x528f45(0x147)]();}['broadcastLobbyAnnounce'](){const _0x57dab1=a11_0x446ce2;if(!this[_0x57dab1(0x146)]||!this[_0x57dab1(0x111)])return;if(isTestOrLocalEnvironment(this[_0x57dab1(0x100)],this['currentLobbyData']?.[_0x57dab1(0x149)]))return;this[_0x57dab1(0x146)]['send']({'type':'broadcast','event':_0x57dab1(0x103),'payload':{...this[_0x57dab1(0x111)],'roomCode':this[_0x57dab1(0x100)],'status':_0x57dab1(0x122)}});}['stopAnnouncingLobby'](){const _0x1112b2=a11_0x446ce2;this['announceInterval']&&(clearInterval(this[_0x1112b2(0x151)]),this[_0x1112b2(0x151)]=null),this['discoveryChannel']&&this['roomCode']&&!isTestOrLocalEnvironment(this[_0x1112b2(0x100)])&&this[_0x1112b2(0x146)]['send']({'type':_0x1112b2(0x134),'event':_0x1112b2(0x103),'payload':{'roomCode':this[_0x1112b2(0x100)],'status':_0x1112b2(0xd9)}}),this['currentLobbyData']=null;}[a11_0x446ce2(0x153)](_0x134490){const _0x25b16f=a11_0x446ce2;if(!this[_0x25b16f(0x146)]||!_0x134490||!_0x134490['id'])return;if(isTestOrLocalEnvironment('',_0x134490[_0x25b16f(0xf1)]))return;if(!_0x134490[_0x25b16f(0x16b)]&&!_0x134490['discordId'])return;if(_0x134490[_0x25b16f(0xf1)]===_0x25b16f(0x152)||_0x134490[_0x25b16f(0xf1)]===_0x25b16f(0xfa))return;this['discoveryChannel'][_0x25b16f(0x14c)]({'type':_0x25b16f(0x134),'event':_0x25b16f(0x156),'payload':_0x134490});}async['joinRoom'](_0x322379,_0x116546,_0x4f947c=![]){const _0x5efa74=a11_0x446ce2;this[_0x5efa74(0x100)]=_0x322379['trim']()['toUpperCase'](),this[_0x5efa74(0x138)]=_0x4f947c,this[_0x5efa74(0x14a)]=_0x116546['id'],localStorage[_0x5efa74(0x119)](_0x5efa74(0x106),this['roomCode']),localStorage[_0x5efa74(0x119)](_0x5efa74(0x121),this[_0x5efa74(0x138)]?'1':'0');!this['supabase']&&this[_0x5efa74(0x10e)]();this[_0x5efa74(0x15d)]();if(this[_0x5efa74(0xe8)]){try{await this[_0x5efa74(0xe8)][_0x5efa74(0xe7)]();if(this['supabase'])await this[_0x5efa74(0x129)][_0x5efa74(0x11c)](this['channel']);else await this['channel']['unsubscribe']();}catch(_0x35d9e2){}this[_0x5efa74(0xe8)]=null;}if(this[_0x5efa74(0x129)]&&typeof this[_0x5efa74(0x129)]['getChannels']===_0x5efa74(0xec))try{const _0x3bcbb0=this[_0x5efa74(0x129)][_0x5efa74(0x124)]();for(const _0x5d2b53 of _0x3bcbb0){_0x5d2b53['topic']&&(_0x5d2b53[_0x5efa74(0x128)][_0x5efa74(0x139)]('realtime:monopoly_room_')||_0x5d2b53[_0x5efa74(0x128)][_0x5efa74(0x139)]('monopoly_room_'))&&await this[_0x5efa74(0x129)][_0x5efa74(0x11c)](_0x5d2b53);}}catch(_0x12a1ad){}const _0x4c1b3b=_0x5efa74(0x10c)+this['roomCode'];return this[_0x5efa74(0xe8)]=this['supabase'][_0x5efa74(0xe8)](_0x4c1b3b,{'config':{'presence':{'key':this[_0x5efa74(0x14a)]},'broadcast':{'self':![]}}}),this[_0x5efa74(0xe8)]['on']('broadcast',{'event':'GAME_ACTION'},({payload:_0x5e7216})=>{const _0x301f9d=_0x5efa74;this[_0x301f9d(0xef)]&&this[_0x301f9d(0xef)](_0x5e7216);}),this[_0x5efa74(0xe8)]['on'](_0x5efa74(0x134),{'event':_0x5efa74(0x105)},({payload:_0x2fb728})=>{const _0x4a9397=_0x5efa74;_0x2fb728&&_0x2fb728[_0x4a9397(0x14a)]&&this[_0x4a9397(0x14e)][_0x4a9397(0x162)](String(_0x2fb728[_0x4a9397(0x14a)]),Date['now']());}),this['channel']['on'](_0x5efa74(0x134),{'event':_0x5efa74(0xe5)},({payload:_0x5a99a6})=>{const _0x5cf8ea=_0x5efa74;if(this[_0x5cf8ea(0x138)]&&this[_0x5cf8ea(0x158)]){const _0xfcb6cd=this[_0x5cf8ea(0x158)](_0x5a99a6['playerId']);this['sendBroadcast'](_0x5cf8ea(0xe0),{'targetPlayerId':_0x5a99a6['playerId'],..._0xfcb6cd});}}),this[_0x5efa74(0xe8)]['on'](_0x5efa74(0x134),{'event':_0x5efa74(0xe0)},({payload:_0x52d1b8})=>{const _0x1c4551=_0x5efa74;if(_0x52d1b8['targetPlayerId']&&_0x52d1b8[_0x1c4551(0xd7)]!==this[_0x1c4551(0x14a)])return;this[_0x1c4551(0xef)]&&this['onActionCallback']({'type':_0x1c4551(0xe0),..._0x52d1b8});}),this['channel']['on'](_0x5efa74(0x134),{'event':_0x5efa74(0x12c)},()=>{const _0x2bb9d6=_0x5efa74;this[_0x2bb9d6(0x13e)](_0x2bb9d6(0x13b),{'playerId':this[_0x2bb9d6(0x14a)],'isHost':this[_0x2bb9d6(0x138)],'roomCode':this[_0x2bb9d6(0x100)]});}),this['channel']['on'](_0x5efa74(0x141),{'event':_0x5efa74(0x164)},()=>{const _0x260a6e=_0x5efa74,_0x10fcab=this[_0x260a6e(0xe8)][_0x260a6e(0xda)]();if(this[_0x260a6e(0x125)]){const _0x24ad23=Object[_0x260a6e(0xff)](_0x10fcab)['flat']();this['onPlayerJoinCallback'](_0x24ad23);}}),this[_0x5efa74(0xe8)]['on'](_0x5efa74(0x141),{'event':_0x5efa74(0x14d)},({key:_0x4e7537,leftPresences:_0xa4083c})=>{const _0x91ad62=_0x5efa74;if(this[_0x91ad62(0xfd)]){if(_0xa4083c&&_0xa4083c[_0x91ad62(0x12b)]>0x0)_0xa4083c[_0x91ad62(0x154)](_0x2ffe82=>{const _0x450887=_0x91ad62;this['onPlayerLeaveCallback'](_0x2ffe82['id']||_0x4e7537,_0x2ffe82[_0x450887(0xf1)]);});else _0x4e7537&&this[_0x91ad62(0xfd)](_0x4e7537);}}),new Promise(_0x131514=>{let _0x32e999=![];const _0x349050=setTimeout(()=>{const _0x405388=a11_0x39f6;!_0x32e999&&(_0x32e999=!![],console[_0x405388(0x15b)]('Channel\x20subscribe\x20timed\x20out\x20for\x20room\x20'+this[_0x405388(0x100)]+',\x20proceeding\x20with\x20fallback.'),_0x131514({'success':!![],'roomCode':this[_0x405388(0x100)],'warning':_0x405388(0x12a)}));},0xdac);this['channel']['subscribe'](async _0x1efd1d=>{const _0x525e16=a11_0x39f6;if(_0x1efd1d==='SUBSCRIBED'&&!_0x32e999){_0x32e999=!![],clearTimeout(_0x349050);try{await this[_0x525e16(0xe8)]['track']({'id':_0x116546['id'],'name':_0x116546[_0x525e16(0xf1)],'title':_0x116546[_0x525e16(0x113)]||_0x525e16(0x11d),'diceSkin':_0x116546[_0x525e16(0x116)]||_0x525e16(0x133),'token':_0x116546[_0x525e16(0xf3)],'customToken':_0x116546[_0x525e16(0x112)]||null,'color':_0x116546[_0x525e16(0x101)],'bg':_0x116546['bg']||'default','profileBg':_0x116546['bg']||_0x525e16(0x120),'coins':_0x116546['coins']||0x0,'stats':_0x116546[_0x525e16(0xea)]||{},'isRegistered':Boolean(_0x116546[_0x525e16(0x16b)]||_0x116546[_0x525e16(0x150)]),'discordId':_0x116546[_0x525e16(0x150)]||null,'avatarUrl':_0x116546[_0x525e16(0x110)]||null,'isHost':this['isHost'],'joinedAt':new Date()[_0x525e16(0x15e)]()}),!this[_0x525e16(0x138)]&&(this[_0x525e16(0x13e)](_0x525e16(0x15c),{'player':{'id':_0x116546['id'],'name':_0x116546['name'],'title':_0x116546[_0x525e16(0x113)]||_0x525e16(0x11d),'diceSkin':_0x116546[_0x525e16(0x116)]||'classic','token':_0x116546[_0x525e16(0xf3)],'customToken':_0x116546[_0x525e16(0x112)]||null,'color':_0x116546['color'],'bg':_0x116546['bg']||_0x525e16(0x120),'profileBg':_0x116546['bg']||_0x525e16(0x120),'coins':_0x116546['coins']||0x0,'stats':_0x116546['stats']||{},'isRegistered':Boolean(_0x116546[_0x525e16(0x16b)]||_0x116546[_0x525e16(0x150)]),'discordId':_0x116546[_0x525e16(0x150)]||null,'avatarUrl':_0x116546[_0x525e16(0x110)]||null,'isHost':![]}}),this[_0x525e16(0x13e)](_0x525e16(0xe5),{'playerId':this[_0x525e16(0x14a)]}));}catch(_0x3a3b05){console[_0x525e16(0x15b)](_0x525e16(0x118),_0x3a3b05);}this[_0x525e16(0x114)](),_0x131514({'success':!![],'roomCode':this[_0x525e16(0x100)]});}else(_0x1efd1d===_0x525e16(0x161)||_0x1efd1d===_0x525e16(0xe3)||_0x1efd1d===_0x525e16(0xd9))&&!_0x32e999&&(console['warn'](_0x525e16(0xe2)+_0x1efd1d),_0x32e999=!![],clearTimeout(_0x349050),_0x131514({'success':![],'error':_0x1efd1d,'roomCode':this[_0x525e16(0x100)]}));});});}[a11_0x446ce2(0x114)](){const _0x562693=a11_0x446ce2;this[_0x562693(0x15d)](),this[_0x562693(0x131)]=setInterval(()=>{const _0x18fc62=_0x562693;this['channel']&&this['playerId']&&this['channel'][_0x18fc62(0x14c)]({'type':'broadcast','event':_0x18fc62(0x105),'payload':{'playerId':this[_0x18fc62(0x14a)],'timestamp':Date[_0x18fc62(0x140)]()}});},0x7d0);}[a11_0x446ce2(0x15d)](){const _0x45db8b=a11_0x446ce2;this['heartbeatInterval']&&(clearInterval(this[_0x45db8b(0x131)]),this['heartbeatInterval']=null),this[_0x45db8b(0x14e)][_0x45db8b(0x104)]();}[a11_0x446ce2(0x145)](_0x1aef15,_0x2f3388=0x1770){const _0x17798a=a11_0x446ce2;if(!_0x1aef15)return![];const _0x344541=this[_0x17798a(0x14e)][_0x17798a(0xdc)](String(_0x1aef15));if(!_0x344541)return![];return Date[_0x17798a(0x140)]()-_0x344541<_0x2f3388;}[a11_0x446ce2(0x13e)](_0x34899d,_0xaa63c0={}){const _0x3f9846=a11_0x446ce2;if(!this['channel'])return;this['channel'][_0x3f9846(0x14c)]({'type':_0x3f9846(0x134),'event':_0x34899d===_0x3f9846(0xe5)||_0x34899d==='SYNC_STATE'?_0x34899d:_0x3f9846(0x148),'payload':{'type':_0x34899d,'senderId':this['playerId'],'timestamp':Date[_0x3f9846(0x140)](),..._0xaa63c0}});}[a11_0x446ce2(0xdd)](_0x3f2fc2){const _0x36bfe0=a11_0x446ce2;this[_0x36bfe0(0xef)]=_0x3f2fc2;}[a11_0x446ce2(0x15f)](_0x381702){const _0x2d67d9=a11_0x446ce2;this[_0x2d67d9(0x125)]=_0x381702;}[a11_0x446ce2(0xdf)](_0x44fedc){const _0x3acc92=a11_0x446ce2;this[_0x3acc92(0xfd)]=_0x44fedc;}[a11_0x446ce2(0x13c)](_0x1812c9){const _0x5e298c=a11_0x446ce2;this[_0x5e298c(0x158)]=_0x1812c9;}[a11_0x446ce2(0x167)](){const _0x1250ea=a11_0x446ce2,_0x160e27=localStorage[_0x1250ea(0x14f)]('monopoly_active_room'),_0x28c800=localStorage[_0x1250ea(0x14f)](_0x1250ea(0x121))==='1';return _0x160e27?{'roomCode':_0x160e27,'isHost':_0x28c800}:null;}[a11_0x446ce2(0x12e)](){const _0x470ffe=a11_0x446ce2;localStorage['removeItem'](_0x470ffe(0x106)),localStorage[_0x470ffe(0x165)](_0x470ffe(0x121));}async[a11_0x446ce2(0x169)](_0xd71fc5){const _0x1ca0af=a11_0x446ce2;if(!_0xd71fc5)return![];const _0x42b77c=_0xd71fc5[_0x1ca0af(0x109)]()['toUpperCase'](),_0x2f08f3=this['discoveredLobbies'][_0x1ca0af(0xdc)](_0x42b77c);if(_0x2f08f3&&_0x2f08f3[_0x1ca0af(0x132)]===_0x1ca0af(0x122)&&Date['now']()-(_0x2f08f3[_0x1ca0af(0xe9)]||0x0)<0x2710)return!![];if(!this[_0x1ca0af(0x129)])this[_0x1ca0af(0x10e)]();if(!this[_0x1ca0af(0x129)])return![];return new Promise(_0x5add0d=>{const _0x1ec40b=_0x1ca0af;let _0x1b057f=![];const _0x4b2b4a=_0x1ec40b(0x10c)+_0x42b77c,_0x57d2a0='probe_'+Math[_0x1ec40b(0xd8)]()['toString'](0x24)[_0x1ec40b(0xfb)](0x2,0x7),_0x28eebf=this[_0x1ec40b(0x129)][_0x1ec40b(0xe8)](_0x1ec40b(0xf7)+_0x42b77c+'_'+Date[_0x1ec40b(0x140)](),{'config':{'broadcast':{'self':![]}}}),_0x463b1a=async _0x10a56f=>{const _0x49eece=_0x1ec40b;if(!_0x1b057f){_0x1b057f=!![],clearTimeout(_0x4cf6bc);try{if(this[_0x49eece(0x129)])await this[_0x49eece(0x129)][_0x49eece(0x11c)](_0x28eebf);else await _0x28eebf[_0x49eece(0x10f)]();}catch(_0x3634e1){}_0x5add0d(_0x10a56f);}},_0x4cf6bc=setTimeout(()=>{_0x463b1a(![]);},0x898);_0x28eebf['on'](_0x1ec40b(0x134),{'event':_0x1ec40b(0x13b)},({payload:_0x2a11b2})=>{const _0x39fccc=_0x1ec40b;_0x2a11b2&&_0x2a11b2[_0x39fccc(0x14a)]&&_0x463b1a(!![]);}),_0x28eebf['on'](_0x1ec40b(0x134),{'event':_0x1ec40b(0x148)},()=>{_0x463b1a(!![]);}),_0x28eebf['on'](_0x1ec40b(0x134),{'event':'LOBBY_UPDATE'},()=>{_0x463b1a(!![]);}),_0x28eebf['subscribe'](_0x3def4f=>{const _0x4f6dc4=_0x1ec40b;_0x3def4f===_0x4f6dc4(0x159)&&_0x28eebf[_0x4f6dc4(0x14c)]({'type':_0x4f6dc4(0x134),'event':'PING_ROOM','payload':{'probeKey':_0x57d2a0}});});});}async['leaveRoom'](){const _0x53fceb=a11_0x446ce2;this[_0x53fceb(0x15d)](),this['stopAnnouncingLobby'](),this[_0x53fceb(0x12e)]();if(this[_0x53fceb(0xe8)]){const _0x5b0848=this['channel'];this[_0x53fceb(0xe8)]=null;try{await _0x5b0848[_0x53fceb(0xe7)]();}catch(_0x3e15d6){console[_0x53fceb(0x15b)](_0x53fceb(0x11a),_0x3e15d6);}try{this[_0x53fceb(0x129)]?await this[_0x53fceb(0x129)][_0x53fceb(0x11c)](_0x5b0848):await _0x5b0848[_0x53fceb(0x10f)]();}catch(_0x12756b){try{await _0x5b0848[_0x53fceb(0x10f)]();}catch(_0x2788a8){}}}this[_0x53fceb(0x100)]=null,this[_0x53fceb(0x138)]=![];}}export const network=new NetworkManager();
+/**
+ * Supabase Realtime Multiplayer & Room Session Management
+ */
+
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.4';
+
+export function isTestOrLocalEnvironment(roomCode = '', hostName = '') {
+  if (typeof window === 'undefined') return true;
+  const host = window.location?.hostname || '';
+  const isLocal = host === 'localhost' || host === '127.0.0.1' || window.location?.protocol === 'file:';
+  const isAutomated = !!(window.navigator?.webdriver || window.__IS_TEST_ENV__);
+  const isTestCode = /TEST|DEBUG|MOCK/i.test(roomCode);
+  const isTestHost = /Test|Playwright|Automated/i.test(hostName || '');
+  return isLocal || isAutomated || isTestCode || isTestHost;
+}
+
+export class NetworkManager {
+  constructor() {
+    this.supabase = null;
+    this.channel = null;
+    this.discoveryChannel = null;
+    this.roomCode = null;
+    this.isHost = false;
+    this.playerId = null;
+    this.onActionCallback = null;
+    this.onPlayerJoinCallback = null;
+    this.onPlayerLeaveCallback = null;
+    this.onSyncCallback = null;
+
+    this.defaultUrl = 'https://eibpzgsajhgyoitqtmkt.supabase.co';
+    this.defaultKey = 'sb_publishable_IJF4VWu5Sk2zNA7lnmAwtw_mtq25x8x';
+
+    this.discoveredLobbies = new Map();
+    this.onLobbiesUpdateCallback = null;
+    this.announceInterval = null;
+
+    // Active connection heartbeats
+    this.lastHeartbeats = new Map();
+    this.heartbeatInterval = null;
+
+    this.initClient();
+  }
+
+  initClient(customUrl = null, customKey = null) {
+    const url = customUrl || localStorage.getItem('monopoly_supabase_url') || this.defaultUrl;
+    const key = customKey || localStorage.getItem('monopoly_supabase_key') || this.defaultKey;
+
+    try {
+      this.supabase = createClient(url, key, {
+        realtime: {
+          params: {
+            eventsPerSecond: 10
+          }
+        }
+      });
+      console.log('Supabase client initialized');
+    } catch (e) {
+      console.error('Failed to initialize Supabase client:', e);
+    }
+  }
+
+  generateRoomCode() {
+    return Math.random().toString(36).substring(2, 6).toUpperCase() + '-' + Math.floor(100 + Math.random() * 900);
+  }
+
+  // --- LOBBY DISCOVERY (PUBLIC ROOMS LIST) ---
+  listenForPublicLobbies(onUpdate) {
+    this.onLobbiesUpdateCallback = onUpdate;
+    if (!this.supabase) this.initClient();
+
+    if (this.discoveryChannel) {
+      this.discoveryChannel.unsubscribe();
+    }
+
+    this.discoveryChannel = this.supabase.channel('monopoly_public_lobbies', {
+      config: { broadcast: { self: false } }
+    });
+
+    this.discoveryChannel.on('broadcast', { event: 'LOBBY_ANNOUNCE' }, ({ payload }) => {
+      if (payload && payload.roomCode) {
+        // Filter out any test, local, or automated entries
+        if (
+          payload.isTest || 
+          payload.isLocal || 
+          /TEST|DEBUG|MOCK/i.test(payload.roomCode) || 
+          /Test|Playwright|Automated/i.test(payload.hostName || '')
+        ) {
+          return;
+        }
+
+        if (payload.status === 'CLOSED') {
+          this.discoveredLobbies.delete(payload.roomCode);
+        } else {
+          payload.lastSeen = Date.now();
+          this.discoveredLobbies.set(payload.roomCode, payload);
+          if (payload.hostId && payload.hostName && (payload.isRegistered || payload.discordId) && payload.hostName !== 'Гость' && payload.hostName !== 'Игрок') {
+            import('./leaderboard.js?v=8.0.0').then(({ leaderboardManager }) => {
+              leaderboardManager.registerPlayer({
+                id: payload.hostId,
+                name: payload.hostName,
+                token: payload.hostToken,
+                customToken: payload.hostCustomToken || null,
+                color: payload.hostColor,
+                bg: payload.hostBg || payload.profileBg || 'default',
+                profileBg: payload.hostBg || payload.profileBg || 'default',
+                coins: payload.coins || 0,
+                stats: payload.hostStats || {},
+                isRegistered: true,
+                discordId: payload.discordId || null,
+                avatarUrl: payload.avatarUrl || null
+              });
+            }).catch(() => {});
+          }
+        }
+        this.notifyLobbiesUpdate();
+      }
+    });
+
+    this.discoveryChannel.on('broadcast', { event: 'LEADERBOARD_ANNOUNCE' }, ({ payload }) => {
+      if (payload && payload.id) {
+        if (/TEST|DEBUG|MOCK/i.test(String(payload.id)) || /Test|Playwright|Automated/i.test(payload.name || '')) {
+          return;
+        }
+        if (!payload.isRegistered && !payload.discordId) {
+          return;
+        }
+        if (payload.name === 'Гость' || payload.name === 'Игрок') {
+          return;
+        }
+        import('./leaderboard.js?v=8.0.0').then(({ leaderboardManager }) => {
+          leaderboardManager.registerPlayer(payload);
+          // Notify the app to re-render the leaderboard UI
+          window.dispatchEvent(new CustomEvent('leaderboard-updated'));
+        }).catch(() => {});
+      }
+    });
+
+    this.discoveryChannel.on('broadcast', { event: 'REQUEST_LOBBIES' }, () => {
+      if (this.isHost && this.roomCode) {
+        this.broadcastLobbyAnnounce();
+      }
+    });
+
+    // When a new user connects and requests leaderboard, users respond with their record
+    this.discoveryChannel.on('broadcast', { event: 'REQUEST_LEADERBOARD' }, () => {
+      if (isTestOrLocalEnvironment(this.roomCode)) return;
+      import('./profile.js?v=8.0.0').then(({ profileManager }) => {
+        const p = profileManager.profile;
+        if (p && p.id && (p.isRegistered || p.discordId) && p.name !== 'Гость' && p.name !== 'Игрок') {
+          this.broadcastLeaderboardRecord({
+            id: p.id,
+            name: p.name,
+            token: p.token,
+            customToken: p.token === 'custom' ? p.customToken : null,
+            color: p.color,
+            bg: p.bg || 'default',
+            profileBg: p.bg || 'default',
+            coins: p.coins || 0,
+            stats: p.stats,
+            isRegistered: true,
+            discordId: p.discordId || null,
+            avatarUrl: p.avatarUrl || null
+          });
+        }
+      }).catch(() => {});
+    });
+
+    this.discoveryChannel.subscribe((status) => {
+      if (status === 'SUBSCRIBED') {
+        // Request existing lobbies
+        this.discoveryChannel.send({
+          type: 'broadcast',
+          event: 'REQUEST_LOBBIES',
+          payload: {}
+        });
+        // Request existing leaderboard records from all connected users across domains
+        setTimeout(() => {
+          this.discoveryChannel.send({
+            type: 'broadcast',
+            event: 'REQUEST_LEADERBOARD',
+            payload: {}
+          });
+        }, 500);
+
+        // Also announce own profile to ensure other peers get it (ONLY if registered)
+        setTimeout(() => {
+          import('./profile.js?v=8.0.0').then(({ profileManager }) => {
+            const p = profileManager.profile;
+            if (p && p.id && (p.isRegistered || p.discordId) && p.name !== 'Гость' && p.name !== 'Игрок') {
+              this.broadcastLeaderboardRecord({
+                id: p.id,
+                name: p.name,
+                token: p.token,
+                customToken: p.token === 'custom' ? p.customToken : null,
+                color: p.color,
+                bg: p.bg || 'default',
+                profileBg: p.bg || 'default',
+                coins: p.coins || 0,
+                stats: p.stats,
+                isRegistered: true,
+                discordId: p.discordId || null,
+                avatarUrl: p.avatarUrl || null
+              });
+            }
+          }).catch(() => {});
+        }, 1200);
+      }
+    });
+
+    // Periodic leaderboard sync across all open browser tabs and domains
+    setInterval(() => {
+      if (typeof profileManager !== 'undefined' && profileManager && profileManager.profile) {
+        const p = profileManager.profile;
+        if (p && p.id && (p.isRegistered || p.discordId) && p.name !== 'Гость' && p.name !== 'Игрок') {
+          this.broadcastLeaderboardRecord({
+            id: p.id,
+            name: p.name,
+            token: p.token,
+            customToken: p.token === 'custom' ? p.customToken : null,
+            color: p.color,
+            bg: p.bg || 'default',
+            profileBg: p.bg || 'default',
+            coins: p.coins || 0,
+            stats: p.stats,
+            isRegistered: true,
+            discordId: p.discordId || null,
+            avatarUrl: p.avatarUrl || null
+          });
+        }
+      }
+    }, 15000);
+
+    setInterval(() => {
+      const now = Date.now();
+      let changed = false;
+      for (const [code, info] of this.discoveredLobbies.entries()) {
+        if (now - info.lastSeen > 8000) {
+          this.discoveredLobbies.delete(code);
+          changed = true;
+        }
+      }
+      if (changed) this.notifyLobbiesUpdate();
+    }, 3000);
+  }
+
+  notifyLobbiesUpdate() {
+    if (this.onLobbiesUpdateCallback) {
+      this.onLobbiesUpdateCallback(Array.from(this.discoveredLobbies.values()));
+    }
+  }
+
+  startAnnouncingLobby(lobbyData) {
+    this.currentLobbyData = lobbyData;
+    this.broadcastLobbyAnnounce();
+
+    if (this.announceInterval) clearInterval(this.announceInterval);
+    this.announceInterval = setInterval(() => {
+      this.broadcastLobbyAnnounce();
+    }, 6000);
+  }
+
+  updateLobbyAnnounce(lobbyData) {
+    this.currentLobbyData = { ...this.currentLobbyData, ...lobbyData };
+    this.broadcastLobbyAnnounce();
+  }
+
+  broadcastLobbyAnnounce() {
+    if (!this.discoveryChannel || !this.currentLobbyData) return;
+    if (isTestOrLocalEnvironment(this.roomCode, this.currentLobbyData?.hostName)) {
+      return;
+    }
+    this.discoveryChannel.send({
+      type: 'broadcast',
+      event: 'LOBBY_ANNOUNCE',
+      payload: {
+        ...this.currentLobbyData,
+        roomCode: this.roomCode,
+        status: 'OPEN'
+      }
+    });
+  }
+
+  stopAnnouncingLobby() {
+    if (this.announceInterval) {
+      clearInterval(this.announceInterval);
+      this.announceInterval = null;
+    }
+    if (this.discoveryChannel && this.roomCode && !isTestOrLocalEnvironment(this.roomCode)) {
+      this.discoveryChannel.send({
+        type: 'broadcast',
+        event: 'LOBBY_ANNOUNCE',
+        payload: { roomCode: this.roomCode, status: 'CLOSED' }
+      });
+    }
+    this.currentLobbyData = null;
+  }
+
+  broadcastLeaderboardRecord(record) {
+    if (!this.discoveryChannel || !record || !record.id) return;
+    if (isTestOrLocalEnvironment('', record.name)) return;
+    if (!record.isRegistered && !record.discordId) return;
+    if (record.name === 'Гость' || record.name === 'Игрок') return;
+    this.discoveryChannel.send({
+      type: 'broadcast',
+      event: 'LEADERBOARD_ANNOUNCE',
+      payload: record
+    });
+  }
+
+  // --- JOIN / CREATE ROOM ---
+  async joinRoom(roomCode, playerProfile, isCreating = false) {
+    this.roomCode = roomCode.trim().toUpperCase();
+    this.isHost = isCreating;
+    this.playerId = playerProfile.id;
+
+    // Save session for reconnect
+    localStorage.setItem('monopoly_active_room', this.roomCode);
+    localStorage.setItem('monopoly_is_host', this.isHost ? '1' : '0');
+
+    if (!this.supabase) {
+      this.initClient();
+    }
+
+    // Clean up any existing channel before creating new one
+    this.stopHeartbeat();
+    if (this.channel) {
+      try {
+        await this.channel.untrack();
+        if (this.supabase) await this.supabase.removeChannel(this.channel);
+        else await this.channel.unsubscribe();
+      } catch (e) {}
+      this.channel = null;
+    }
+
+    if (this.supabase && typeof this.supabase.getChannels === 'function') {
+      try {
+        const allChannels = this.supabase.getChannels();
+        for (const ch of allChannels) {
+          if (ch.topic && (ch.topic.startsWith('realtime:monopoly_room_') || ch.topic.startsWith('monopoly_room_'))) {
+            await this.supabase.removeChannel(ch);
+          }
+        }
+      } catch (e) {}
+    }
+
+    const channelName = `monopoly_room_${this.roomCode}`;
+    this.channel = this.supabase.channel(channelName, {
+      config: {
+        presence: {
+          key: this.playerId
+        },
+        broadcast: {
+          self: false
+        }
+      }
+    });
+
+    // Listen for broadcast events
+    this.channel.on('broadcast', { event: 'GAME_ACTION' }, ({ payload }) => {
+      if (this.onActionCallback) {
+        this.onActionCallback(payload);
+      }
+    });
+
+    // Heartbeat tracking
+    this.channel.on('broadcast', { event: 'HEARTBEAT' }, ({ payload }) => {
+      if (payload && payload.playerId) {
+        this.lastHeartbeats.set(String(payload.playerId), Date.now());
+      }
+    });
+
+    this.channel.on('broadcast', { event: 'REQUEST_SYNC' }, ({ payload }) => {
+      if (this.isHost && this.onSyncCallback) {
+        const syncData = this.onSyncCallback(payload.playerId);
+        this.sendBroadcast('SYNC_STATE', {
+          targetPlayerId: payload.playerId,
+          ...syncData
+        });
+      }
+    });
+
+    this.channel.on('broadcast', { event: 'SYNC_STATE' }, ({ payload }) => {
+      if (payload.targetPlayerId && payload.targetPlayerId !== this.playerId) {
+        return; // Targeted to someone else during initial join
+      }
+      if (this.onActionCallback) {
+        this.onActionCallback({ type: 'SYNC_STATE', ...payload });
+      }
+    });
+
+    this.channel.on('broadcast', { event: 'PING_ROOM' }, () => {
+      this.sendBroadcast('PONG_ROOM', {
+        playerId: this.playerId,
+        isHost: this.isHost,
+        roomCode: this.roomCode
+      });
+    });
+
+    // Listen for presence
+    this.channel.on('presence', { event: 'sync' }, () => {
+      const state = this.channel.presenceState();
+      if (this.onPlayerJoinCallback) {
+        const playersInRoom = Object.values(state).flat();
+        this.onPlayerJoinCallback(playersInRoom);
+      }
+    });
+
+    this.channel.on('presence', { event: 'leave' }, ({ key, leftPresences }) => {
+      if (this.onPlayerLeaveCallback) {
+        if (leftPresences && leftPresences.length > 0) {
+          leftPresences.forEach(p => {
+            this.onPlayerLeaveCallback(p.id || key, p.name);
+          });
+        } else if (key) {
+          this.onPlayerLeaveCallback(key);
+        }
+      }
+    });
+
+    return new Promise((resolve) => {
+      let isSettled = false;
+      const timeoutId = setTimeout(() => {
+        if (!isSettled) {
+          isSettled = true;
+          console.warn(`Channel subscribe timed out for room ${this.roomCode}, proceeding with fallback.`);
+          resolve({ success: true, roomCode: this.roomCode, warning: 'timeout' });
+        }
+      }, 3500);
+
+      this.channel.subscribe(async (status) => {
+        if (status === 'SUBSCRIBED' && !isSettled) {
+          isSettled = true;
+          clearTimeout(timeoutId);
+
+          try {
+            await this.channel.track({
+              id: playerProfile.id,
+              name: playerProfile.name,
+              title: playerProfile.title || 'novice',
+              diceSkin: playerProfile.diceSkin || 'classic',
+              token: playerProfile.token,
+              customToken: playerProfile.customToken || null,
+              color: playerProfile.color,
+              bg: playerProfile.bg || 'default',
+              profileBg: playerProfile.bg || 'default',
+              coins: playerProfile.coins || 0,
+              stats: playerProfile.stats || {},
+              isRegistered: Boolean(playerProfile.isRegistered || playerProfile.discordId),
+              discordId: playerProfile.discordId || null,
+              avatarUrl: playerProfile.avatarUrl || null,
+              isHost: this.isHost,
+              joinedAt: new Date().toISOString()
+            });
+
+            if (!this.isHost) {
+              // Direct broadcast to host: "I joined the lobby"
+              this.sendBroadcast('PLAYER_JOINED_LOBBY', {
+                player: {
+                  id: playerProfile.id,
+                  name: playerProfile.name,
+                  title: playerProfile.title || 'novice',
+                  diceSkin: playerProfile.diceSkin || 'classic',
+                  token: playerProfile.token,
+                  customToken: playerProfile.customToken || null,
+                  color: playerProfile.color,
+                  bg: playerProfile.bg || 'default',
+                  profileBg: playerProfile.bg || 'default',
+                  coins: playerProfile.coins || 0,
+                  stats: playerProfile.stats || {},
+                  isRegistered: Boolean(playerProfile.isRegistered || playerProfile.discordId),
+                  discordId: playerProfile.discordId || null,
+                  avatarUrl: playerProfile.avatarUrl || null,
+                  isHost: false
+                }
+              });
+              // Request room state
+              this.sendBroadcast('REQUEST_SYNC', { playerId: this.playerId });
+            }
+          } catch (e) {
+            console.warn('Track/sync error:', e);
+          }
+
+          this.startHeartbeat();
+          resolve({ success: true, roomCode: this.roomCode });
+        } else if ((status === 'CHANNEL_ERROR' || status === 'TIMED_OUT' || status === 'CLOSED') && !isSettled) {
+          console.warn(`Channel subscribe status: ${status}`);
+          isSettled = true;
+          clearTimeout(timeoutId);
+          resolve({ success: false, error: status, roomCode: this.roomCode });
+        }
+      });
+    });
+  }
+
+  startHeartbeat() {
+    this.stopHeartbeat();
+    this.heartbeatInterval = setInterval(() => {
+      if (this.channel && this.playerId) {
+        this.channel.send({
+          type: 'broadcast',
+          event: 'HEARTBEAT',
+          payload: { playerId: this.playerId, timestamp: Date.now() }
+        });
+      }
+    }, 2000);
+  }
+
+  stopHeartbeat() {
+    if (this.heartbeatInterval) {
+      clearInterval(this.heartbeatInterval);
+      this.heartbeatInterval = null;
+    }
+    this.lastHeartbeats.clear();
+  }
+
+  isPlayerAlive(playerId, thresholdMs = 6000) {
+    if (!playerId) return false;
+    const last = this.lastHeartbeats.get(String(playerId));
+    if (!last) return false;
+    return (Date.now() - last) < thresholdMs;
+  }
+
+  // --- BROADCAST GAME ACTION ---
+  sendBroadcast(actionType, data = {}) {
+    if (!this.channel) return;
+    this.channel.send({
+      type: 'broadcast',
+      event: actionType === 'REQUEST_SYNC' || actionType === 'SYNC_STATE' ? actionType : 'GAME_ACTION',
+      payload: {
+        type: actionType,
+        senderId: this.playerId,
+        timestamp: Date.now(),
+        ...data
+      }
+    });
+  }
+
+  onAction(callback) {
+    this.onActionCallback = callback;
+  }
+
+  onPlayerJoin(callback) {
+    this.onPlayerJoinCallback = callback;
+  }
+
+  onPlayerLeave(callback) {
+    this.onPlayerLeaveCallback = callback;
+  }
+
+  onSyncRequest(callback) {
+    this.onSyncCallback = callback;
+  }
+
+  getSavedSession() {
+    const room = localStorage.getItem('monopoly_active_room');
+    const isHost = localStorage.getItem('monopoly_is_host') === '1';
+    return room ? { roomCode: room, isHost } : null;
+  }
+
+  clearSavedSession() {
+    localStorage.removeItem('monopoly_active_room');
+    localStorage.removeItem('monopoly_is_host');
+  }
+
+  async isRoomActiveWithPlayers(roomCode) {
+    if (!roomCode) return false;
+    const code = roomCode.trim().toUpperCase();
+
+    // 1. Check if found in actively announced lobbies
+    const lobby = this.discoveredLobbies.get(code);
+    if (lobby && lobby.status === 'OPEN' && (Date.now() - (lobby.lastSeen || 0) < 10000)) {
+      return true;
+    }
+
+    if (!this.supabase) this.initClient();
+    if (!this.supabase) return false;
+
+    // 2. Probe room channel to check if players are present or responding
+    return new Promise((resolve) => {
+      let settled = false;
+      const channelName = `monopoly_room_${code}`;
+
+      // Create a temporary probe channel
+      const probeKey = `probe_${Math.random().toString(36).substring(2, 7)}`;
+      const probeChannel = this.supabase.channel(`probe_${code}_${Date.now()}`, {
+        config: {
+          broadcast: { self: false }
+        }
+      });
+
+      const finish = async (result) => {
+        if (!settled) {
+          settled = true;
+          clearTimeout(timeoutId);
+          try {
+            if (this.supabase) await this.supabase.removeChannel(probeChannel);
+            else await probeChannel.unsubscribe();
+          } catch (e) {}
+          resolve(result);
+        }
+      };
+
+      const timeoutId = setTimeout(() => {
+        finish(false);
+      }, 2200);
+
+      // Listen for PONG responses on the room
+      probeChannel.on('broadcast', { event: 'PONG_ROOM' }, ({ payload }) => {
+        if (payload && payload.playerId) {
+          finish(true);
+        }
+      });
+
+      probeChannel.on('broadcast', { event: 'GAME_ACTION' }, () => {
+        finish(true);
+      });
+
+      probeChannel.on('broadcast', { event: 'LOBBY_UPDATE' }, () => {
+        finish(true);
+      });
+
+      probeChannel.subscribe((status) => {
+        if (status === 'SUBSCRIBED') {
+          // Send a broadcast ping to the room
+          probeChannel.send({
+            type: 'broadcast',
+            event: 'PING_ROOM',
+            payload: { probeKey }
+          });
+        }
+      });
+    });
+  }
+
+  async leaveRoom() {
+    this.stopHeartbeat();
+    this.stopAnnouncingLobby();
+    this.clearSavedSession();
+    if (this.channel) {
+      const ch = this.channel;
+      this.channel = null;
+      try {
+        await ch.untrack();
+      } catch (e) {
+        console.warn('untrack error:', e);
+      }
+      try {
+        if (this.supabase) {
+          await this.supabase.removeChannel(ch);
+        } else {
+          await ch.unsubscribe();
+        }
+      } catch (e) {
+        try {
+          await ch.unsubscribe();
+        } catch (e2) {}
+      }
+    }
+    this.roomCode = null;
+    this.isHost = false;
+  }
+}
+
+export const network = new NetworkManager();

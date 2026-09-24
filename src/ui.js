@@ -1,1 +1,1241 @@
-const a17_0x312672=a17_0x1998;(function(_0x5dfe8c,_0x4d753d){const _0x4fe8c3=a17_0x1998,_0x15b6a2=_0x5dfe8c();while(!![]){try{const _0x32a8c7=-parseInt(_0x4fe8c3(0x275))/0x1*(-parseInt(_0x4fe8c3(0x236))/0x2)+parseInt(_0x4fe8c3(0x290))/0x3*(-parseInt(_0x4fe8c3(0x227))/0x4)+parseInt(_0x4fe8c3(0x1da))/0x5*(-parseInt(_0x4fe8c3(0x288))/0x6)+parseInt(_0x4fe8c3(0x143))/0x7*(-parseInt(_0x4fe8c3(0x16d))/0x8)+-parseInt(_0x4fe8c3(0x166))/0x9+-parseInt(_0x4fe8c3(0x27f))/0xa*(-parseInt(_0x4fe8c3(0x130))/0xb)+parseInt(_0x4fe8c3(0x28a))/0xc;if(_0x32a8c7===_0x4d753d)break;else _0x15b6a2['push'](_0x15b6a2['shift']());}catch(_0x230430){_0x15b6a2['push'](_0x15b6a2['shift']());}}}(a17_0x2b84,0x1ef1a));import{BOARD_TILES,COLOR_GROUPS}from'./board-data.js';function a17_0x2b84(){const _0x1d17c7=['y2XHC3noyw1L','0j3qSnc20lZqUngc0luSingh0ylqVTcX0ySG0l7rGTc60ydrI9gc0yWG0l/rGnc+0ytqUnc70yWG0lJqS9ga0l7qUTcW','AxnnB3j0z2fNzwq','pc9ZCgfUpGOGicaGicaGidWVzgL2pGOGicaGicaGidXKAxyGy2XHC3m9iNjLBNqTCM93lwrHCMSG','zMLSDgvY','C2HVD1rPBgvezwvKtw9KywW','C2LKzwjHCLbSyxLLCNnfBa','C2v0DgLUz3m','Dg9dyxnO','Bw9KywWTzgvLza','cIaGicaGicaGpgrPDIbJBgfZCZ0IDhjHzguTAgLZDg9YEs1JyxjKiJ4kicaGicaGicaGidXKAxyGy2XHC3m9iNrYywrLlwHPC3rVCNKTAgvHzci+cIaGicaGicaGicaGidXZCgfUpVcFPj0G','CM93','DgLSzs0','DgfYz2v0','pc9KAxy+cIaGicaGicaGica8zgL2ignSyxnZpsj0AwXLlxbYAwnLiJ4K','0jRrG9c/0lJrGTgm','zgLJzs1MywnLigzHy2uT','CgXHEwvYCW','Aw5PDev2zw50tgLZDgvUzxjZ','CMvUzgvYu2LKzwjHCLbSyxLLCNm','BgfZDfn0yxrL','Aw5UzxjuzxH0','ywn0AxzLq2fYza','AgvPz2H0','pc9KAxy+','ohnItxnyCG','zgLJzs0Yzc1JB250ywLUzxi','iZm4yMrMoa','DxbKyxrLvgLSzuHVDMvYq2fYzfbVCW','yNrUlwnVBMzPCM0Ty2fUy2vS','yM9HCMrfBa','nhGG0lhrGnc+0yhqVTc6','0jlqV9c10ydrKDc0','lcbYz2jHkde1ldiZldqYldaUoduPktSIpGOGicaGicaGicaGpgrPDIbJBgfZCZ0IzgvLzc10AxrSzs1YB3CIpGOGicaGicaGicaGica8C3bHBIbJBgfZCZ0IzgvLzc10AxrSzsi+','AMfJA3bVDc1IywrNzq','iZnIodjMnG','pc9KAxy+cIaGicaGicaGpc9KAxy+cIaGicaGidWVzgL2pGOkicaGicaGpceTlsbdzw50zxiGqwn0Aw9UienHCMrZic0TpGOGicaGica8zgL2ignSyxnZpsjJzw50zxiTywn0Aw9UlwnHCMrZiJ4kicaGicaGica8yNv0Dg9UigLKpsjIDg4TCM9SBc1JyxjKiIbJBgfZCZ0Iywn0Aw9UlwnHCMqGy2fYzc1WCMLTyxj5ihjLywr5lxrVlxjVBgWIihrPDgXLpslqKDga0l7rGDc40ylrJcdqUTgd0lhqUnc60lGIpGOGicaGicaGicaGpgrPDIbJBgfZCZ0Iy2fYzc1Py29UiJ48AsbJBgfZCZ0ICgGGCgGTzgLJzs1MAxzLiJ48l2K+pc9KAxy+cIaGicaGicaGica8zgL2ignSyxnZpsjJyxjKlxrLEhqIpGOGicaGicaGicaGica8zgL2ignSyxnZpsjJyxjKlxrPDgXLiJ7qKDga0l7rGDc40ylrJcdqUTgd0lhqUnc60lG8l2rPDJ4kicaGicaGicaGicaGpgrPDIbJBgfZCZ0Iy2fYzc1ZDwj0AxrSzsiGAwq9iNjVBgWTy2fYzc1OAw50iJ7qKTcW0yGG0yxqVTc0pc9KAxy+cIaGicaGicaGica8l2rPDJ4kicaGicaGica8l2j1DhrVBJ4kcIaGicaGicaGpgj1DhrVBIbPzd0IyNrUlwvUzc10DxjUlwnHCMqIignSyxnZpsjHy3rPB24Ty2fYzciGzgLZywjSzwqGDgL0Bgu9iTcx0ldqSTc10ydrInc40ylrJcdrHDc+0lqIpGOGicaGicaGicaGpgrPDIbJBgfZCZ0Iy2fYzc1Py29UiJ48AsbJBgfZCZ0ICgGGCgGTyxjYB3CTy2LYy2XLlxjPz2H0iJ48l2K+pc9KAxy+cIaGicaGicaGica8zgL2ignSyxnZpsjJyxjKlxrLEhqIpGOGicaGicaGicaGica8zgL2ignSyxnZpsjJyxjKlxrPDgXLiIbPzd0Izw5Klxr1CM4TDgL0BguIpTcx0ldqSTc10ydrInc40ylrJcdrHDc+0lq8l2rPDJ4kicaGicaGicaGicaGpgrPDIbJBgfZCZ0Iy2fYzc1ZDwj0AxrSzsiGAwq9iMvUzc10DxjUlxn1yNrPDgXLiJ7qN9c10ydqTDc00ldrGTgmingf0l7qTdWVzgL2pGOGicaGicaGicaGpc9KAxy+cIaGicaGicaGpc9IDxr0B24+cGOGicaGicaGidXIDxr0B24GAwq9iMj0BI1Tyw5Hz2uTy2fYzciGy2XHC3m9iMfJDgLVBI1JyxjKiIb0AxrSzt0I0kpqV9ga0ldqSTc70lxqVDc40luG0l3qTDc00llqUnc20lJqVnc+0yhrGTgm0y4IpGOGicaGicaGicaGpgrPDIbJBgfZCZ0Iy2fYzc1Py29UiJ48AsbJBgfZCZ0ICgGGCgGTyNvPBgrPBMDZiJ48l2K+pc9KAxy+cIaGicaGicaGica8zgL2ignSyxnZpsjJyxjKlxrLEhqIpGOGicaGicaGicaGica8zgL2ignSyxnZpsjJyxjKlxrPDgXLiJ7qNDc10ltqSTc40lBqUnc80l7rGDgc0yW8l2rPDJ4kicaGicaGicaGicaGpgrPDIbJBgfZCZ0Iy2fYzc1ZDwj0AxrSzsi+0j/qVTgb0ylrGnc+0lNqUTcWinc4inc/0ydqVTc00ldqTTcWpc9KAxy+cIaGicaGicaGica8l2rPDJ4kicaGicaGica8l2j1DhrVBJ4kcIaGicaGicaGpgj1DhrVBIbPzd0IyNrUlxrYywrLlwnHCMqIignSyxnZpsjHy3rPB24Ty2fYzciGDgL0Bgu9iTcE0lhqVnc10l0G0lRqSnga0ylqVTgh0lRqSnc80lGIpGOGicaGicaGicaGpgrPDIbJBgfZCZ0Iy2fYzc1Py29UiJ48AsbJBgfZCZ0ICgGGCgGTAgfUzhnOywTLiJ48l2K+pc9KAxy+cIaGicaGicaGica8zgL2ignSyxnZpsjJyxjKlxrLEhqIpGOGicaGicaGicaGica8zgL2ignSyxnZpsjJyxjKlxrPDgXLiJ7qNTcX0lZqTDc9pc9KAxy+cIaGicaGicaGicaGidXKAxyGy2XHC3m9iMnHCMqTC3vIDgL0BguIpTcI0ydqTDc50lqG0lRqSnga0ylqVTgh0lRqSnc80lG8l2rPDJ4kicaGicaGicaGidWVzgL2pGOGicaGicaGidWVyNv0Dg9UpGOGicaGica8l2rPDJ4kcIaGicaGidWHls0Gqxv0BYbuDxjUie9WDgLVBIaTlt4kicaGicaGpgrPDIbJBgfZCZ0Iyxv0BY10DxjUlwnVBNrHAw5LCIi+cIaGicaGicaGpgj1DhrVBIbPzd0IyNrUlxrVz2DSzs1HDxrVlwvUzciGy2XHC3m9iMf1Dg8Tzw5KlwnOAxaGywn0AxzLiIb0ExbLpsjIDxr0B24IihrPDgXLpslqKncY0ylqVTc80ldrGTc40yFqTDgb0lRqUcdqV9c10ydqTDc00ldqSTcW0ylrJcdrHDc+0lqG0yFqTDga0lxqTYaZingb0lxqUIi+cIaGicaGicaGica8AsbJBgfZCZ0ICgGGCgGTBgLNAhrUAw5NiJ48l2K+cIaGicaGicaGica8C3bHBIbPzd0Iyxv0BY1LBMqTBgfIzwWIpTcq0llrGTc+lDgf0l7qTdOGpgi+0jlqMTcBpc9IpJWVC3bHBJ4kicaGicaGica8l2j1DhrVBJ4kicaGicaGpc9KAxy+cIaGica','0j3qSnc70l7qSW','DhjHBNnMB3jT','AwnVBG','nde5meDNrvDfDq','zMLYC3rdAgLSza','cIaGicaGicaGpgrPDIbZDhLSzt0ICgfKzgLUzZOGmtbWEca4ChG7igzVBNqTC2L6ztOGmc44nxjLBtSGy29SB3i6icnJyMq1zte7igXPBMuTAgvPz2H0oIaXlJq1oYi+cIaGicaGicaGica','cIaGicaGicaGica8zgL2ignSyxnZpsjKzwvKlw93BMvYlxn0yxr1CY1IyxiIpGOGicaGicaGicaGica8C3bHBIbZDhLSzt0Iy29SB3i6icm5ngeZyJG7iJ48AsbJBgfZCZ0ICgGGCgGTC2HVChbPBMCTyMfNiJ48l2K+incH0llqVTcX0l7qTnc90l48l3nWyw4+cIaGicaGicaGicaGidXZCgfUihn0EwXLpsjJB2XVCJOGiZrHzgu4mdSGzM9UDc13zwLNAhq6idCWmdSIpIq','CxvLCNLtzwXLy3rVCKfSBa','DhjHBNnWyxjLBNq','Dg9W','i2rPzs0YlxnSB3qGlMrPy2uTmMqTAxrLBq','BgvMDa','y3vZDg9TvgLSzxm','cIaGicaGicaGpgrPDIbJBgfZCZ0IzgvLzc1MB290zxiTzgfYAYi+cIaGicaGicaGica8zgL2pTcF0l7rGDgc0ydqVTc50lRqSdOGpgi+ja','jdaGkncsinc30ldqU9c+0lpqTsK','BwqTDg9HC3q','zg91yMXLCY1NBg93','iJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lwXHyMvSlwrHCMSIpTcHidiG0ltqVTc80ldqVnc4ipcFJ6dWN4+GoJWVC3bHBJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lxzHBc1KyxjRiJ4K','y29SB3i','cIaGicaGicaGicaGidWVzgL2pGOGicaGicaGicaGica8zgL2pGOGicaGicaGicaGicaGidXIihn0EwXLpsjJB2XVCJOGDMfYkc0TBwqTChjPBwfYEsK7iJ4','y2XVC2vZDa','y29S','Aw5kywLS','iJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lwXHyMvSlwrHCMSIpTcHinc+0ylqTDc70lxqVcdWN4+OoJWVC3bHBJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lxzHBc1KyxjRiJ4K','uK9mta','Axncyw5RCNvWDa','ywrK','yMfJA2DYB3vUzenVBg9Y','CM9SBgLUzY0X','zMXVB3i','Ag91C2vFna','cIaGicaGicaGpgrPDIbJBgfZCZ0ICgXHEwvYlwnHCMqTAgvHzci+cIaGicaGicaGica8zgL2ihn0EwXLpsjKAxnWBgf5oIbMBgv4oYbHBgLNBI1PDgvTCZOGy2vUDgvYoYbNyxa6idHWEdSIpGOGicaGicaGicaGica8C3bHBIbJBgfZCZ0IC2LKzwjHCI1WBgf5zxiTDg9Rzw4TC2XVDciGC3r5Bgu9iMrPC3bSyxK6igLUBgLUzs1MBgv4oYbHBgLNBI1PDgvTCZOGy2vUDgvYoYbQDxn0Awz5lwnVBNrLBNq6ignLBNrLCJSGD2LKDgG6idi4ChG7igHLAwDODdOGmJHWEdSGzM9UDc1ZAxPLoIaXlJnYzw07iJ4kicaGicaGicaGicaGica','icJqKTglkq','DhjHBNnPDgLVBG','CMvUzgvYvhjHzgviAxn0B3j5tw9KywW','cIaGicaGidXKAxyGy2XHC3m9iNbYB3bLCNr5lwrLzwqTzgfYAYi+cIaGicaGicaGpgrPDIbJBgfZCZ0IzgvLzc1OzwfKzxiTzgfYAYiGC3r5Bgu9iMjHy2TNCM91BMq6igXPBMvHCI1NCMfKAwvUDcGXmZvKzwCSia','cIaGicaGia','Dg9oyw1L','y2fYzc1KzxnJ','y29TBwLZC2LVBG','zM9YrwfJAa','yMfUA3j1Chq','mtb4incX0ydqVTgb0l7qUG','phnWyw4Gy2XHC3m9iNbSyxLLCI1ZDgf0DxmTDgfNihrHzY1QywLSiJ7qKIdrGTgo0ydrJnc80lu8l3nWyw4+','B25sB2XS','0j/qVTc70lu','y29UDgfPBNm','Bw9KywWTy29UzMLYBq','C3r5Bgu','y2XVBMvoB2rL','CgXHEwvYlwXLzNq','AM9PBG','Dgv4DenVBg9Y','z3jVDxa','Cg9ZAxrPB25tAw5NBgvuB2TLBG','0j7qSDc80lxqVsdqVDc10ltqVTgb0ylrG9c/0lxqVq','Aw5Uzxjive1m','iJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lwXHyMvSlwrHCMSIpTcHideG0ltqVTc80l7qVcdWN4+GoJWVC3bHBJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lxzHBc1KyxjRiJ4K','Bw9KywWTyNv5lxbYB3bLCNr5','yM9YzgvYu3r5Bgu','Dgf4','yNrUlw1HBMfNzs1JyxjK','zNjVBu5HBwu','y2XPy2S','zgLJzq','Dgv4Da','mtvqC1P3rhO','cIaGicaGidXKAxyGy2XHC3m9iMXVzY1LBNrYEsi+cIaGicaGicaGphnWyw4GC3r5Bgu9iM9WywnPDhK6idaUnJSGzM9UDc1ZAxPLoIaWlJDYzw07iJ5B','B25fBMruDxjU','ywn0AxzLlwXLDMvS','y3jLyxrLrwXLBwvUDa','DMfYkc0TBwqTzxjYB3iP','qLvzx0nit0Ldrq','B2zMC2v0sgvPz2H0','0kxqVTc00lJrGJOG','oYi+pc9ZCgfUpGOGicaGicaGicaGicaGia','mJyZmhvWrK1JCW','DMfYkc0TBwqTB3v0BgLUzsK','B25qyxnZ','cIaGicaGicaGica8zgL2ignSyxnZpsj0AwXLlw5HBwuIpG','rKLosvniruq','B25hyw1LrMLUAxnOzwq','Ag91C2vZ','cIaGicaGicaGicaGidWVC3bHBJ4kicaGicaGicaGicaGpgrPDJ4kicaGicaGicaGicaGica8zgL2ihn0EwXLpsjKAxnWBgf5oIbMBgv4oYbHBgLNBI1PDgvTCZOGy2vUDgvYoYbNyxa6idzWEdSGzMXLEc13CMfWoIb3CMfWoYi+cIaGicaGicaGicaGicaGica8C3bHBIbZDhLSzt0IzM9UDc13zwLNAhq6idCWmdSGzM9UDc1ZAxPLoIaWlJK1CMvToYbJB2XVCJOG','C3rHDgLVBL8X','odK0DxPQCfPq','Dg9Rzw4','nJmZntq5nMv6txrVuq','Cg9ZAxrPB24','cIaGicaGicaGpgrPDIbJBgfZCZ0IDgLSzs1VD25LCI1PBMrPy2f0B3iIigLKpsjVD25LCI1IyxiT','DMfYkc0TBwqTB24TC3vYzMfJzs12yxjPyw50kq','Aw5SAw5LlwzSzxG','iJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lwXHyMvSlwrHCMSIpTcHidqG0ltqVTc80ldqVnc4ipcFJ6dWN4+G8j+pOpcFJ6a6pc9ZCgfUpGOGicaGicaGicaGphnWyw4Gy2XHC3m9iNjLBNqTDMfSlwrHCMSIpIq','mtyYmdC1vgfbuev1','CMfUzg9T','cIaGicaGicaGpgrPDIbZDhLSzt0IDgv4Dc1HBgLNBJOGy2vUDgvYoYbJB2XVCJOGDMfYkc0TBwqTB24TC3vYzMfJzs12yxjPyw50ktSGCgfKzgLUzZOGmZzWEcaXnNb4oYi+cIaGicaGicaGica8AsbJBgfZCZ0ICgGGCgGTAgfUzhnOywTLiIbZDhLSzt0IzM9UDc1ZAxPLoIaYlJjYzw07ig9WywnPDhK6idaUndSGzgLZCgXHEtOGyMXVy2S7ig1HCMDPBI1IB3r0B206idHWEdSIpJWVAt4kicaGicaGicaGincsingn0ylqVTc5inc40lprGnc1inc/0l7qUTcWinc90luG0lhrI9c70l4G0lFqSnc60lVrJTgh0lxqVDc+inc90lGG0l7qTnc90l7qUsdrGDc00lxqU9c60lGkicaGicaGica8l2rPDJ4kicaGicaG','Aw5UzxjxAwr0Aa','zxzLCNK','Dg9Rzw5Zq29UDgfPBMvYrwW','pc9ZCgfUpGOGicaGicaGicaGpc9KAxy+cIaGicaGicaG','B25cDxK','iJ48l2rPDJ4kicaGicaGicaGidXKAxyGy2XHC3m9iNrPBguTBMfTzsi+','z2v0rwXLBwvUDej5swq','0j7rGDc+0lhqSngpinc60lVqTDgc0lRqScdqUncZ0ydqVTcY0l7qS9c+inc/0l7qU9gplG','C2HVD1rVyxn0','CMvWBgfJzunOAwXK','y3vZDg9Tvg9Rzw4','BwLU','z3jPzfjVDW','yw5PBwf0zvrVA2vUu3rLCej5u3rLCa','C3rYzwv0','i2y1owuWyG','CgXHEwvYlwnHCMqTC2LKzwjHCIa','iJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lwXHyMvSlwrHCMSIpJiG0llqVTc60lFqSnc70laG8j+AGVcFMOi6pc9ZCgfUpGOGicaGicaGicaGphnWyw4Gy2XHC3m9iNjLBNqTDMfSlwrHCMSIpIq1mdWVC3bHBJ4kicaGicaGica8l2rPDJ4kicaGicaGica8zgL2ignSyxnZpsjYzw50lxjVDY1KyxjRia','8j+oSIdqLngd0lhqU9gmisdqKDga0l7rGDc60laG0lxrIDgringa0ldqTYdqVTcX0y/qT9cW0ylqTDc70lxqVq','y2XHC3nPyW','pgrPDIbJBgfZCZ0IAg91C2uTCgLWiIb0AxrSzt0I0jtqVTc8iJ48l2rPDJ4','DgLTzq','ywn0Aw9Utg9NrwW','icJqOYdqSTcW0ye6icq','nda5mK1iz21WBG','CMvWzwf0Aw5NlwXPBMvHCI1NCMfKAwvUDcG0nwrLzYWGiZaWmcaWlcaJmdaWidnWEcWGDhjHBNnWyxjLBNqGm3b4lcb0CMfUC3bHCMvUDca2ChGP','oYi+cIaGicaGicaGicaGicaGicaGia','iZmZnde1nq','CMvTB3zL','y29SB3i6ia','CgXHEunHC2G','Bw9KywWTy2fYza','pc9KAxy+cIaGicaGicaGica8zgL2ignSyxnZpsj0AwXLlxbYAwnLihn1yI1WCMLJzsi+','q0fsrf9fvKvova','Bw9KywWTD2LUBMvY','0j3qSnc20lZqUngc0luG0ltqU9gpincX0ydqVTgb0lRqSa','0jRrG9cX0lJqUTc4incX0ydqVTgi0lxqVDgl','CMvUzgvYtg9NCW','C2HVD1DPBM5LCK1VzgfS','phnWyw4Gy2XHC3m9iNbSyxLLCI1ZDgf0DxmTDgfNihrHzY1Iyw5RCNvWDci+0jhqSnc90lRrGnc+0yi8l3nWyw4+','0jRqU9c10ylqUTcWoIa','DgL0Bgu','zgLJzs1ZDgfNzq','mtyZmZq1n0XLv3nMrq','pc9KAxy+cIaGicaGicaGica8zgL2igLKpsjKAwuTmI1ZBg90iJ4','z2v0sxrLBq','yM9HCMqTz3jPza','0jlqVTc60lFqSnc7','C3rHDgLVBL8Y','AxnbBMLTyxrPBMC','CMvUzgvYqM9HCMrhCMLK','yNrUlxjVBgWTy2fYza','ChjVCgvYDgLLCW','ywrKrxzLBNrmAxn0zw5LCG','zgL2','DxbKyxrLvg9Rzw5Z','B25JBgLJAW','zgf0ys12ywX1zq','0khqU9gd0lBqSDcW','BxLqBgf5zxjjza','0j3qTDgcinc00l7rGDgc0ypqV9c90yVrHsdqUncZ0ydqVTc60l7qSIdqTnc70y8G0l7qSDc80lxqVDcW','C3rHDhvZ','zNjVBunHC2G','pc9KAxy+cIaGicaGicaG','Aw5PDejVyxjKq2vUDgvYrxzLBNrmAxn0zw5LCNm','CgfYzw50tM9Kzq','y2HHBMnL','DgLSzs1OB3zLCI1WB3bVDMvY','AMfJA3bVDc1HBw91BNq','iJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lwXHyMvSlwrHCMSIpTcr0ldqT9c+0llqSngpincW0ydqTDc90ltqSdO8l3nWyw4+cIaGicaGicaGica8C3bHBIbJBgfZCZ0ICMvUDc12ywWTzgfYAYi+ja','yNrUlxrVz2DSzs1HDxrVlwvUza','yNrUlwrLy2XPBMuTyNv5','cIaGicaGicaGpgrPDIbJBgfZCZ0ICMvUDc1YB3CTzgfYAYa','DhjHBNnSyxrLwsGTmtvWEcKGC2nHBguOmc45kq','Dgf4qw1VDw50','y2HPBgrYzw4','C3rHDgLVBL8','CMvUDa','nZqWmtuXChD3zvzH','phm+','iZG4odG4oa','AxncB3q','CgHHC2u','0jRqSnc30l3qSa','Bw91C2vTB3zL','oenXuuPUtq','lM1Klw1VzgfSlwjHy2TKCM9W','DxrPBf8X','Dg9dyxjKtMfTzxm','ChjVzMLSzujN','AgLKzvrPBgviB3zLCKnHCMq','AgfZtgvMDa','pgjYpG','CgXHEvDPBG','cIaGicaGicaGica8zgL2ignSyxnZpsj0AwXLlwLTChjVDMvTzw50CYiGAwq9iMLTChjVDMvTzw50CY0','B3bHy2L0EtOGmc40ntS','BM92AwnL','z2v0qM91BMrPBMDdBgLLBNrszwn0','yxbWzw5Kq2HPBgq','yMfJA2DYB3vUza','y3vYC29Y','Bw91C2vSzwf2zq','BgfZDfjVBgXeB3vIBgvZ','zgLZCgXHEq','iJ4K','yM9HCMqTDg9Rzw4','ueXbwuLorW','Ag91C2vFmW','C2v0twfWvgHLBwu','DxbKyxrLq2vUDgvYqwn0Aw9Uq2fYzhm','Cg9PBNrLCG','B2zMC2v0v2LKDgG','yMfJA2DYB3vUzeLTywDL','B25nyw5Hz2vqCM9Wzxj0AwvZ','yM9YzgvY','x25VCM1HBc5WBMC','iIb0AxrSzt0I','zgvLzc1TB2rHBc1JB250zw50','C2v0qxr0CMLIDxrL','DhjHzguTAgLZDg9YEs1SAxn0','pgrPDIbZDhLSzt0IBwfYz2LUlxrVCdOGnNb4oYbJB2XVCJOGi2y4nZe3mtSGzM9UDc13zwLNAhq6idCWmdSIpTcD0ldqU9c+0lm6icq','Dg9Rzw4T','y29UzMLYBs1TB2rHBc1KzxnJ','BMfTzq','zw50CMLLCW','yNrUlwnHCMqTB2S','yNv5lxbYB3aTChjPy2u','yM9HCMqTy2vUDgvY','AgfZ','y29YBMvY','cIaGicaGicaGpgrPDIbJBgfZCZ0IzgvLzc1IB2r5lwrHCMSIpGOGicaGicaGicaG','DMLZAwjSzq','jdi1','phnWyw4GC3r5Bgu9iMzVBNqTC2L6ztOGmc43nxjLBtSGy29SB3i6ihzHCIGTlw1KlxbYAw1HCNKPoYbMB250lxDLAwDODdOGntaWoYi+kncs0ySPpc9ZCgfUpG','0j3qTDc00l7rGDgc0ldrGTc+0yFqVDc+inc00lxqVDc10lm','cIaGicaGicaGica8zgL2ignSyxnZpsj0AwXLlxbYAwnLiJ4K','D2LUBMvYlw5HBwu','i2rJmJyYnG','DxbKyxrL','cIaGicaGidXKAxyGy2XHC3m9iMnLBNrLCI1OzwfKzxiIihn0EwXLpsjQDxn0Awz5lwnVBNrLBNq6ignLBNrLCJSIpGOGicaGicaGidXKAxyGAwq9iNr1CM4TyMfKz2uIignSyxnZpsj0DxjUlxn0yxr1CY1IywrNzsi+0j7qTTc40ltqSnc90lJqTs4UlJWVzgL2pGOGicaGica8l2rPDJ4kicaGicaGcIaGicaGidXKAxyGy2XHC3m9iMPHy2TWB3qTCg9VBc1IywrNzsiGAwq9iMPHy2TWB3qTyMfKz2uIihn0EwXLpsjKAxnWBgf5oIbUB25LoYi+cIaGicaGicaGphnWyw4+0ktqVTc90lqG0yhrGTc+0y/qVDc60lG6pc9ZCgfUpGOGicaGicaGidXZCgfUigLKpsjQywnRCg90lwfTB3vUDci+jda8l3nWyw4+cIaGicaGidWVzgL2pGOkicaGicaGpceTlsaYrcbxAgvLBcbeAwnLifn0ywDLic0TpGOGicaGica8zgL2ignSyxnZpsjKAwnLlxn0ywDLiIbPzd0IzgLJzs1ZDgfNzsi+cIaGicaGicaGpgrPDIbJBgfZCZ0IzgLJzs0Yzc1JB250ywLUzxiIigLKpsjKAwnLltjKlwnVBNrHAw5LCIi+cIaGicaGicaGica8zgL2igLKpsjKAwuTms1ZBg90iJ4','y2XPzw50wa','zMLUza','BxKTDhvYBG','pc9IpJWVzgL2pGOGicaGicaGicaGpgrPDJ7qPTc10l3qScdqV9c+0lRrG9c/0lRqUdOGpgi+ja','cIaGicaGicaGicaGicaGpc9KAxy+cIaGicaGicaGicaGicaGpgrPDIbZDhLSzt0IzM9UDc1ZAxPLoIaWlJC1CMvToYbJB2XVCJOG','4OcIicq','D2LKDgG','ChjVzMLSzq','Ag90zwW','y2fZAa','zgvZyW','DgLSzs1JB3jUzxi','ChvZAa','yM9YzgvYq29SB3i','pc9KAxy+cIaGicaGicaGica8zgL2ignSyxnZpsj0AwXLlxbYAwnLihrHEc1WCMLJzsi+lsq','zgLJzvnRAw4','Bwf4','CMvHzhKTDg8TCM9SBa','ChjPy2u','ywn0AxzL','C3jJ','pc9ZCgfUpGOGicaGicaGidWVzgL2pGOGicaGica','w2rHDgeTy2XVC2uTBw9KywXD','B25uB2DNBgvbDxrVrw5K','y3vYCMvUDfr1CM4','i2rPzs0XlxnSB3qGlMrPy2uTmMqTAxrLBq','yNrUlwnVBMzPCM0TyNv5','qunusu9o','lMrPy2uTzMfJzq','DhLWzq','iZq3ntu2oq','iokhHca','z2v0vgLSzq','CMvUzgvYvgLSzurLzwrive1m','C2HVD1rPBgviB3zLCKnHCMq','pgrPDIbJBgfZCZ0IDgLSzs1OzwfKzxiTy29SB3iIihn0EwXLpsjIywnRz3jVDw5KlwnVBg9YoIa','Aw5UzxjizwLNAhq','yNrUlxrYywrLlwnHCMq','cIaGicaGidWVzgL2pGOGicaG','B3bHy2L0Eq','yM94u2HHzg93','y2fSBgjHy2TZ','y2XHC3nmAxn0','C2v0q3vZDg9TvgLSzxm','D2LUBMvY','DgLSzsb0AwXLlq','yNrUlwvUzc10DxjUlwnHCMq','pc9IpJWVzgL2pGOGicaGicaGidWVzgL2pGOGicaGica','Bw9YDgDHz2vK','pc9ZCgfUpGOGicaGicaGicaGica8C3bHBIbJBgfZCZ0IzgvLzc1NCM91Cc1WAwXSiJ4','y2HLy2TbDxrVrw5K','BM9Uzq','CgXHEurPy2vsB2XS','C3rHDgLVBG','mZu4nxLTr0X4rG','zNjVBunHCMroyw1LCW','BwfWvgHLBwu','CgXHEunSAwnR','cIaGicaGicaGica8zgL2ignSyxnZpsjKzwvKlw93BMvYlxn0yxr1CY1IyxiIpGOGicaGicaGicaGica8C3bHBIbJBgfZCZ0IzgvLzc1VD25LCI10ywCIihn0EwXLpsjJB2XVCJOG','iJ48l2rPDJ4kicaGicaG','B25tAg93ugXHEwvYuhjVzMLSzq','yNv5lxbYB3aTBMfTzq','cIaGicaGicaG','DhvYBI1IywrNzq','CgXHEvrVA2vUu3rLCa','inc+0ylqTncW0lS6pc9IpJXICJ4kicaGicaGicaGicaGica','0j3qTDc70yZqT9gpinc30ldqSTc10ydrInc40ylrJcdrHDc+0lqG0l/rGnc4inc00ldqSDc70luG4OcuincX0ydqVTgb0yZrGTc1inc60ypqSDc40lRqUcdqTDgj0zeG0ydqSnc3','CxvLCNLtzwXLy3rVCG','yxnZzxrZl2rPy2uVzgLJzv8','pc9KAxy+cIaGicaGicaGpc9KAxy+cIaGicaGicaG','cIaGicaGicaGicaGidWVzgL2pGOGicaGicaGicaGpc9KAxy+cIaGicaGicaGica','DxrPBf8Y','iokCJ++4JW','zgLLlxnSB3qTmG','B25dyxjKt2S','AxnmB2nHBe1Vzgu','zNjVBq','BgvUz3rO','pgrPDIbJBgfZCZ0Iy29SB3iTzg90iIbZDhLSzt0IyMfJA2DYB3vUzc1JB2XVCJOG','B3DUzxjjza','BgfUzgLUzY1WB3a','cIaGicaGicaGpgrPDIbJBgfZCZ0IzgvLzc1JDxjYzw50lxjLBNqTyMfUBMvYiJ4kicaGicaGicaGidXZCgfUignSyxnZpsjKzwvKlwn1CNjLBNqTCMvUDc1SywjLBci+0klqTDc60yprIDcW0y8G0ldrGnc10l3qTncWpc9ZCgfUpGOGicaGicaGicaGphnWyw4Gy2XHC3m9iMrLzwqTy3vYCMvUDc1Yzw50lxzHBhvLiJ4','B25uCMfKzq','BwfW','iJ48l2rPDJ4','pc9KAxy+cIaGicaGicaGica','Bg9NCW','Dg9Rzw5Zlw92zxjSyxK','z3jPzenVBhvTBG','Ag91C2vdB3n0','iJ4kicaGicaGicaGidXZCgfUignSyxnZpsjYzw50lwXHyMvSlwrHCMSIpJiG0l/rGnc10ltqV9ga0lJrJ9gc0lJrJYdWN5kH8j+ASdO8l3nWyw4+cIaGicaGicaGica8C3bHBIbJBgfZCZ0ICMvUDc12ywWTzgfYAYi+mtb4incX0ydqVTgb0lRqSdWVC3bHBJ4kicaGicaGica8l2rPDJ4kicaGicaG','C2HVD0nVBMzPCM0','DxrPBgL0Eq','yMfZzq','cIaGicaGicaGpgrPDIbJBgfZCZ0IzgvLzc1MB290zxiTzgfYAYi+cIaGicaGicaGica8zgL2pTcM0lxqVDcWinc/0l7qUTgd0l/qUTc4oIa8yJ4K','y2HLC3q','phnWyw4Gy2XHC3m9iNbSyxLLCI1ZDgf0DxmTDgfNihrHzY1Szwz0iJ48AsbJBgfZCZ0ICgGGCgGTC2LNBI1VDxqIpJWVAt4G0j/qVTc60lJqVDgd0lSG0lZqSngc0yC8l3nWyw4+','CM9SBgLUzY0Y','Bw9UB3bVBhLFzMfZDf9HBMLT','cIaGicaGicaGpc9KAxy+cIaGicaGicaG','cIaGicaGicaGica','zgLZywjSzwq','C2LKzwjHCI1WBgf5zxjZ','0j7qTTc40ltqSnc90lJqTsdrGDc+0l/qTDga0l3qUnc60la','lMrPy2uTCgL4zwWTAw1N','y2XPzw50wq'];a17_0x2b84=function(){return _0x1d17c7;};return a17_0x2b84();}import{AVAILABLE_TOKENS,PLAYER_COLORS,profileManager,getTokenEmoji,renderTokenHTML,getProfileBg}from'./profile.js';import{GAME_PRESETS,getPresetById}from'./presets.js';import{sound}from'./audio.js';import{applyDiceSkinToElement,getDiceSkin,create2DDiceHTML,renderDicePipsHTML}from'./dice-skins.js';import{formatTitleBadge}from'./titles.js';import{getThemedTileData,getMapThemeById}from'./map-themes.js';export function showToast(_0xf8f4db){const _0x3d6e8b=a17_0x1998,_0x5dc9f9=document[_0x3d6e8b(0x299)]('toast-container');if(!_0x5dc9f9)return;while(_0x5dc9f9[_0x3d6e8b(0x163)][_0x3d6e8b(0x1f1)]>=0x2){_0x5dc9f9[_0x3d6e8b(0x237)][_0x3d6e8b(0x134)]();}const _0x4252db=document[_0x3d6e8b(0x279)](_0x3d6e8b(0x14e));_0x4252db[_0x3d6e8b(0x20e)]=_0x3d6e8b(0x242),_0x4252db[_0x3d6e8b(0x223)]=_0xf8f4db,_0x5dc9f9['appendChild'](_0x4252db),setTimeout(()=>{const _0x1d84d4=_0x3d6e8b;_0x4252db['style'][_0x1d84d4(0x1cb)]='0',_0x4252db[_0x1d84d4(0x263)][_0x1d84d4(0x234)]=_0x1d84d4(0x161),_0x4252db['style'][_0x1d84d4(0x254)]='all\x200.2s\x20ease',setTimeout(()=>_0x4252db[_0x1d84d4(0x134)](),0xc8);},0xa28);}export function showConfirm(_0x1721ed,_0x4acfd9,_0x52410d){const _0x46e463=a17_0x1998,_0x56c411=document['getElementById'](_0x46e463(0x262));if(!_0x56c411){if(_0x52410d)_0x52410d();return;}document[_0x46e463(0x299)]('confirm-modal-title')[_0x46e463(0x223)]=_0x1721ed,document[_0x46e463(0x299)](_0x46e463(0x192))['innerText']=_0x4acfd9,_0x56c411[_0x46e463(0x1ce)][_0x46e463(0x24d)](_0x46e463(0x1b7));const _0x524266=document[_0x46e463(0x299)]('btn-confirm-ok'),_0x4f8242=document[_0x46e463(0x299)](_0x46e463(0x22b)),_0x17a45b=_0x524266['cloneNode'](!![]),_0x495655=_0x4f8242[_0x46e463(0x264)](!![]);_0x524266[_0x46e463(0x159)][_0x46e463(0x29c)](_0x17a45b,_0x524266),_0x4f8242[_0x46e463(0x159)][_0x46e463(0x29c)](_0x495655,_0x4f8242),_0x17a45b['onclick']=()=>{const _0x40fc0f=_0x46e463;_0x56c411[_0x40fc0f(0x1ce)][_0x40fc0f(0x134)]('active');if(_0x52410d)_0x52410d();},_0x495655['onclick']=()=>{_0x56c411['classList']['remove']('active');};}function a17_0x1998(_0x175b1e,_0x155f8e){_0x175b1e=_0x175b1e-0x12e;const _0x2b8465=a17_0x2b84();let _0x199891=_0x2b8465[_0x175b1e];if(a17_0x1998['jFsRHT']===undefined){var _0x1d120e=function(_0x207034){const _0x16cc9e='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x3d05d5='',_0xf8f4db='';for(let _0x5dc9f9=0x0,_0x4252db,_0x1721ed,_0x4acfd9=0x0;_0x1721ed=_0x207034['charAt'](_0x4acfd9++);~_0x1721ed&&(_0x4252db=_0x5dc9f9%0x4?_0x4252db*0x40+_0x1721ed:_0x1721ed,_0x5dc9f9++%0x4)?_0x3d05d5+=String['fromCharCode'](0xff&_0x4252db>>(-0x2*_0x5dc9f9&0x6)):0x0){_0x1721ed=_0x16cc9e['indexOf'](_0x1721ed);}for(let _0x52410d=0x0,_0x56c411=_0x3d05d5['length'];_0x52410d<_0x56c411;_0x52410d++){_0xf8f4db+='%'+('00'+_0x3d05d5['charCodeAt'](_0x52410d)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xf8f4db);};a17_0x1998['CtYBiW']=_0x1d120e,a17_0x1998['wGckzL']={},a17_0x1998['jFsRHT']=!![];}const _0x27f4bb=_0x2b8465[0x0];a17_0x1998['jHUjFA']!==_0x27f4bb&&(a17_0x1998['wGckzL']={},a17_0x1998['jHUjFA']=_0x27f4bb);const _0x22beab=a17_0x1998['wGckzL'][_0x175b1e];return _0x22beab===undefined?(_0x199891=a17_0x1998['CtYBiW'](_0x199891),a17_0x1998['wGckzL'][_0x175b1e]=_0x199891):_0x199891=_0x22beab,_0x199891;}export class UIRenderer{constructor(){const _0x269fe5=a17_0x1998;this['boardEl']=null,this[_0x269fe5(0x295)]=null,this['sidebarPlayersEl']=null,this[_0x269fe5(0x12e)]=null,this[_0x269fe5(0x1cd)]={},this['isAnimating']=![],this[_0x269fe5(0x222)]=null,this[_0x269fe5(0x153)]=null,this[_0x269fe5(0x23f)]={},this['mapTheme']=_0x269fe5(0x2a6);}[a17_0x312672(0x1cf)](_0x5af947){const _0x30aea8=a17_0x312672;this[_0x30aea8(0x23f)]=_0x5af947||{},this[_0x30aea8(0x14a)](),this['lastState']&&this[_0x30aea8(0x1a2)](this[_0x30aea8(0x222)],this[_0x30aea8(0x153)]);}[a17_0x312672(0x184)](_0x3c82a4){const _0x4d7eed=a17_0x312672;this[_0x4d7eed(0x1dc)]=_0x3c82a4||'classic',this['renderBoardGrid'](),this['lastState']&&this[_0x4d7eed(0x1a2)](this['lastState'],this['myPlayerId']);}['getTile'](_0x404e55){const _0x21dc60=a17_0x312672,_0x526855=BOARD_TILES[_0x404e55];if(!_0x526855)return _0x526855;return getThemedTileData(_0x526855,this[_0x21dc60(0x1dc)],this[_0x21dc60(0x23f)]);}['init'](_0x5ec9c6){const _0x3d2b36=a17_0x312672;this[_0x3d2b36(0x1cd)]=_0x5ec9c6,this[_0x3d2b36(0x22c)]=document['getElementById'](_0x3d2b36(0x146)),this[_0x3d2b36(0x295)]=document[_0x3d2b36(0x299)](_0x3d2b36(0x1fb)),this[_0x3d2b36(0x214)]=document[_0x3d2b36(0x299)](_0x3d2b36(0x20a)),this[_0x3d2b36(0x12e)]=document[_0x3d2b36(0x299)]('action-log'),this[_0x3d2b36(0x14a)](),this[_0x3d2b36(0x220)]();}[a17_0x312672(0x14a)](){const _0xcfb67d=a17_0x312672;if(!this[_0xcfb67d(0x22c)])return;this['boardEl']['innerHTML']='';const _0xdd18f0=this['calculateGridPositions']();BOARD_TILES[_0xcfb67d(0x25b)](_0x5bc1d2=>{const _0x40709f=_0xcfb67d,_0x5748b2=this[_0x40709f(0x1c4)](_0x5bc1d2['id']),_0x82f15f=_0xdd18f0[_0x5bc1d2['id']],_0x3c2273=document[_0x40709f(0x279)](_0x40709f(0x14e));_0x3c2273[_0x40709f(0x20e)]=_0x40709f(0x1d1)+_0x5748b2[_0x40709f(0x1c1)],_0x3c2273['id']=_0x40709f(0x21a)+_0x5748b2['id'],_0x3c2273[_0x40709f(0x263)][_0x40709f(0x1fc)]=_0x82f15f[_0x40709f(0x248)],_0x3c2273[_0x40709f(0x263)][_0x40709f(0x29f)]=_0x82f15f[_0x40709f(0x219)];const _0x2726d2=!!(this['customTiles'][_0x5748b2['id']]||this['customTiles'][String(_0x5748b2['id'])]);let _0x3506a1='';if(_0x5748b2['type']==='street'){const _0x520a22=COLOR_GROUPS[_0x5748b2[_0x40709f(0x268)]];_0x3506a1=_0x40709f(0x1c7)+_0x520a22[_0x40709f(0x245)]+'\x22>'+(_0x2726d2?'<span\x20class=\x22tile-custom-badge\x22>✏️</span>':'')+_0x40709f(0x226);}let _0xc177dd='';const _0x220bf4=_0x5748b2[_0x40709f(0x235)]?'<div\x20class=\x22tile-icon\x22>'+_0x5748b2[_0x40709f(0x235)]+'</div>':'';if(_0x5748b2['type']===_0x40709f(0x199))_0x3c2273['classList'][_0x40709f(0x24d)](_0x40709f(0x1af)),_0xc177dd='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x220bf4+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tile-name\x22>'+_0x5748b2['name']+_0x40709f(0x157);else{if(_0x5748b2['type']===_0x40709f(0x15a)||_0x5748b2[_0x40709f(0x1c1)]===_0x40709f(0x203))_0xc177dd=_0x40709f(0x208)+_0x220bf4+_0x40709f(0x282)+_0x5748b2[_0x40709f(0x193)]+_0x40709f(0x138)+(_0x5748b2['type']===_0x40709f(0x15a)?'Шанс':'Казна')+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20';else{if(_0x5748b2[_0x40709f(0x1c1)]===_0x40709f(0x26f))_0xc177dd=_0x40709f(0x208)+_0x220bf4+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tile-name\x22>'+_0x5748b2[_0x40709f(0x193)]+_0x40709f(0x1b2)+_0x5748b2[_0x40709f(0x162)]+_0x40709f(0x157);else{if(_0x5748b2[_0x40709f(0x1c1)]===_0x40709f(0x1d9))_0xc177dd=_0x40709f(0x208)+_0x220bf4+_0x40709f(0x282)+_0x5748b2[_0x40709f(0x193)]+(_0x2726d2?_0x40709f(0x1ec):'')+_0x40709f(0x21c)+_0x5748b2[_0x40709f(0x1b6)]+_0x40709f(0x157);else _0x5748b2[_0x40709f(0x1c1)]===_0x40709f(0x200)?_0xc177dd=_0x40709f(0x208)+_0x220bf4+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tile-name\x22>'+_0x5748b2[_0x40709f(0x193)]+(_0x2726d2?'\x20✏️':'')+_0x40709f(0x21c)+_0x5748b2['price']+_0x40709f(0x157):_0xc177dd=_0x40709f(0x208)+_0x3506a1+_0x40709f(0x176)+_0x5748b2['id']+_0x40709f(0x298)+_0x5748b2['name']+_0x40709f(0x1f9)+_0x220bf4+_0x40709f(0x19f)+_0x5748b2['price']+_0x40709f(0x157);}}}_0x3c2273['innerHTML']=_0x40709f(0x1e2)+_0xc177dd+_0x40709f(0x28c)+_0x5748b2['id']+_0x40709f(0x1df),_0x3c2273['addEventListener']('mouseenter',_0x13f8e8=>{const _0x639e4d=_0x40709f;this[_0x639e4d(0x1c6)](_0x5748b2['id'],_0x13f8e8);}),_0x3c2273[_0x40709f(0x14d)](_0x40709f(0x16c),_0x43aaf3=>{this['updateTileHoverCardPos'](_0x43aaf3);}),_0x3c2273['addEventListener'](_0x40709f(0x17d),()=>{this['hideTileHoverCard']();}),_0x3c2273['addEventListener'](_0x40709f(0x272),()=>{const _0x144e8d=_0x40709f;sound[_0x144e8d(0x1dd)](),this['hideTileHoverCard'](),this[_0x144e8d(0x213)](_0x5748b2['id']);}),this[_0x40709f(0x22c)]['appendChild'](_0x3c2273);});const _0x1144ee=document[_0xcfb67d(0x279)](_0xcfb67d(0x14e));_0x1144ee[_0xcfb67d(0x20e)]=_0xcfb67d(0x197),_0x1144ee['innerHTML']=_0xcfb67d(0x1a3)+create2DDiceHTML(_0xcfb67d(0x2a6),0x1,'die-slot-1')+_0xcfb67d(0x144)+create2DDiceHTML(_0xcfb67d(0x2a6),0x1,_0xcfb67d(0x1ed))+_0xcfb67d(0x232),this['boardEl']['appendChild'](_0x1144ee),this['initBoardCenterEventListeners']();}['calculateGridPositions'](){const _0x1d5d06={};_0x1d5d06[0x0]={'col':0xb,'row':0xb};for(let _0x484c9b=0x1;_0x484c9b<=0x9;_0x484c9b++)_0x1d5d06[_0x484c9b]={'col':0xb-_0x484c9b,'row':0xb};_0x1d5d06[0xa]={'col':0x1,'row':0xb};for(let _0x4f60c3=0xb;_0x4f60c3<=0x13;_0x4f60c3++)_0x1d5d06[_0x4f60c3]={'col':0x1,'row':0xb-(_0x4f60c3-0xa)};_0x1d5d06[0x14]={'col':0x1,'row':0x1};for(let _0x4edaac=0x15;_0x4edaac<=0x1d;_0x4edaac++)_0x1d5d06[_0x4edaac]={'col':_0x4edaac-0x14+0x1,'row':0x1};_0x1d5d06[0x1e]={'col':0xb,'row':0x1};for(let _0x242901=0x1f;_0x242901<=0x27;_0x242901++)_0x1d5d06[_0x242901]={'col':0xb,'row':_0x242901-0x1e+0x1};return _0x1d5d06;}['animateDiceRoll'](_0x420cff,_0x4f43eb,_0x58c8fd=null){const _0x5b34db=a17_0x312672,_0x124280=_0x58c8fd||profileManager[_0x5b34db(0x1ab)][_0x5b34db(0x1b3)]||_0x5b34db(0x2a6);this[_0x5b34db(0x149)]=!![],sound[_0x5b34db(0x1d8)]();const _0x4d5736=document[_0x5b34db(0x1e7)]('#die-1-slot\x20.dice-2d-item'),_0x3f0b97=document[_0x5b34db(0x1e7)](_0x5b34db(0x23d)),_0x6c0f99=document['getElementById'](_0x5b34db(0x228));if(!_0x4d5736||!_0x3f0b97){if(_0x4f43eb)_0x4f43eb();this[_0x5b34db(0x149)]=![];return;}applyDiceSkinToElement(_0x4d5736,_0x124280),applyDiceSkinToElement(_0x3f0b97,_0x124280),_0x4d5736[_0x5b34db(0x1ce)][_0x5b34db(0x134)](_0x5b34db(0x24f),_0x5b34db(0x1f4)),_0x3f0b97[_0x5b34db(0x1ce)][_0x5b34db(0x134)](_0x5b34db(0x205),'landing-pop');if(_0x6c0f99)_0x6c0f99['classList'][_0x5b34db(0x134)](_0x5b34db(0x243));void _0x4d5736['offsetWidth'],void _0x3f0b97[_0x5b34db(0x187)],_0x4d5736['classList']['add'](_0x5b34db(0x24f)),_0x3f0b97[_0x5b34db(0x1ce)]['add'](_0x5b34db(0x205));const _0x38745e=setInterval(()=>{const _0x267ae0=_0x5b34db,_0xb2377a=Math[_0x267ae0(0x250)](Math[_0x267ae0(0x291)]()*0x6)+0x1,_0x307cf1=Math[_0x267ae0(0x250)](Math['random']()*0x6)+0x1,_0x4dd11b=_0x4d5736[_0x267ae0(0x1e7)](_0x267ae0(0x20c)),_0x23ee34=_0x3f0b97['querySelector']('.dice-pixel-img');if(_0x4dd11b)_0x4dd11b[_0x267ae0(0x1b8)]=_0x267ae0(0x1e8)+_0xb2377a+_0x267ae0(0x18b);if(_0x23ee34)_0x23ee34[_0x267ae0(0x1b8)]=_0x267ae0(0x1e8)+_0x307cf1+_0x267ae0(0x18b);const _0x2912fe=_0x4d5736[_0x267ae0(0x1e7)]('.dice-face'),_0x2df46d=_0x3f0b97[_0x267ae0(0x1e7)]('.dice-face');_0x2912fe&&(_0x2912fe['className']=_0x267ae0(0x21e)+_0xb2377a,_0x2912fe[_0x267ae0(0x26b)]=renderDicePipsHTML(_0xb2377a)),_0x2df46d&&(_0x2df46d[_0x267ae0(0x20e)]='dice-face\x20face-'+_0x307cf1,_0x2df46d['innerHTML']=renderDicePipsHTML(_0x307cf1));},0x2d);setTimeout(()=>{const _0x5ba23b=_0x5b34db;clearInterval(_0x38745e);const _0x3c22ef=_0x4d5736[_0x5ba23b(0x1e7)]('.dice-pixel-img'),_0x45f5c7=_0x3f0b97[_0x5ba23b(0x1e7)](_0x5ba23b(0x20c));if(_0x3c22ef)_0x3c22ef[_0x5ba23b(0x1b8)]='assets/dice/dice_'+_0x420cff[0x0]+_0x5ba23b(0x18b);if(_0x45f5c7)_0x45f5c7['src']='assets/dice/dice_'+_0x420cff[0x1]+_0x5ba23b(0x18b);const _0x4ab652=_0x4d5736[_0x5ba23b(0x1e7)](_0x5ba23b(0x1c0)),_0x3690ab=_0x3f0b97['querySelector'](_0x5ba23b(0x1c0));_0x4ab652&&(_0x4ab652[_0x5ba23b(0x20e)]='dice-face\x20face-'+_0x420cff[0x0],_0x4ab652['innerHTML']=renderDicePipsHTML(_0x420cff[0x0])),_0x3690ab&&(_0x3690ab[_0x5ba23b(0x20e)]=_0x5ba23b(0x21e)+_0x420cff[0x1],_0x3690ab[_0x5ba23b(0x26b)]=renderDicePipsHTML(_0x420cff[0x1])),_0x4d5736[_0x5ba23b(0x18e)](_0x5ba23b(0x151),_0x420cff[0x0]),_0x3f0b97[_0x5ba23b(0x18e)](_0x5ba23b(0x151),_0x420cff[0x1]);},0x208),setTimeout(()=>{const _0x174f4e=_0x5b34db;_0x4d5736[_0x174f4e(0x1ce)][_0x174f4e(0x134)](_0x174f4e(0x24f)),_0x3f0b97['classList'][_0x174f4e(0x134)](_0x174f4e(0x205)),_0x4d5736[_0x174f4e(0x1ce)][_0x174f4e(0x24d)]('landing-pop'),_0x3f0b97['classList']['add'](_0x174f4e(0x1f4)),sound['playCash']();_0x420cff[0x0]===_0x420cff[0x1]&&_0x6c0f99&&_0x6c0f99[_0x174f4e(0x1ce)][_0x174f4e(0x24d)](_0x174f4e(0x243));this[_0x174f4e(0x149)]=![];if(_0x4f43eb)_0x4f43eb();},0x28a);}[a17_0x312672(0x2a0)](_0x97507,_0x25f63d,_0x135a10,_0x2a2c8b){const _0xaa7a19=a17_0x312672;if(_0x25f63d===_0x135a10){if(_0x2a2c8b)_0x2a2c8b();return;}this[_0xaa7a19(0x149)]=!![];const _0x38f3ad=(_0x135a10-_0x25f63d+0x28)%0x28;let _0x44472d=0x0,_0x15d23c=_0x25f63d;const _0x237435=localStorage['getItem'](_0xaa7a19(0x206))==='1',_0x4795f7=_0x237435?0x37:0x6e,_0x448402=_0x237435?0x50:0xb4,_0x5d190b=setInterval(()=>{const _0x3d2c00=_0xaa7a19;_0x44472d++,_0x15d23c=(_0x15d23c+0x1)%0x28,this[_0x3d2c00(0x269)](_0x97507,_0x15d23c),sound[_0x3d2c00(0x1e4)](),_0x44472d>=_0x38f3ad&&(clearInterval(_0x5d190b),this[_0x3d2c00(0x149)]=![],setTimeout(()=>{if(_0x2a2c8b)_0x2a2c8b();},_0x448402));},_0x4795f7);}[a17_0x312672(0x269)](_0x33da84,_0x27a07a){const _0x5025d8=a17_0x312672;if(!this['tokensContainerEl']||!this[_0x5025d8(0x22c)])return;const _0x19e218=this[_0x5025d8(0x22c)]['getBoundingClientRect'](),_0x4806a0=document[_0x5025d8(0x299)](_0x5025d8(0x21a)+_0x27a07a);if(!_0x4806a0)return;const _0x511663=_0x4806a0['getBoundingClientRect']();let _0x231493=document[_0x5025d8(0x299)]('token-'+_0x33da84['id']);!_0x231493&&(_0x231493=document['createElement'](_0x5025d8(0x14e)),_0x231493[_0x5025d8(0x20e)]=_0x5025d8(0x181),_0x231493['id']=_0x5025d8(0x191)+_0x33da84['id'],this['tokensContainerEl'][_0x5025d8(0x17a)](_0x231493)),_0x231493[_0x5025d8(0x26b)]=renderTokenHTML(_0x33da84[_0x5025d8(0x289)],_0x33da84[_0x5025d8(0x29d)]),_0x231493['style'][_0x5025d8(0x1b1)]=_0x33da84['color'],_0x231493[_0x5025d8(0x263)]['top']=_0x511663['top']-_0x19e218[_0x5025d8(0x23c)]+_0x511663[_0x5025d8(0x225)]/0x2-0xf+'px',_0x231493[_0x5025d8(0x263)][_0x5025d8(0x23e)]=_0x511663[_0x5025d8(0x23e)]-_0x19e218[_0x5025d8(0x23e)]+_0x511663[_0x5025d8(0x1aa)]/0x2-0xf+'px';}[a17_0x312672(0x1a2)](_0x344b75,_0x88801e){const _0x5a6930=a17_0x312672;if(!_0x344b75)return;this[_0x5a6930(0x222)]=_0x344b75,this[_0x5a6930(0x153)]=_0x88801e;const _0x96c23=document[_0x5a6930(0x299)](_0x5a6930(0x230)),_0x12d30a=document[_0x5a6930(0x299)](_0x5a6930(0x15c));if(_0x344b75[_0x5a6930(0x215)]?.['freeParkingJackpot']&&_0x96c23)_0x96c23[_0x5a6930(0x263)][_0x5a6930(0x17f)]=_0x5a6930(0x28e),_0x12d30a[_0x5a6930(0x223)]='$'+(_0x344b75['jackpotPool']||0x0);else _0x96c23&&(_0x96c23[_0x5a6930(0x263)][_0x5a6930(0x17f)]=_0x5a6930(0x1d7));for(const [_0x4ae8e5,_0x1db58f]of Object[_0x5a6930(0x194)](_0x344b75[_0x5a6930(0x14c)])){const _0x40f67d=document[_0x5a6930(0x299)]('owner-bar-'+_0x4ae8e5),_0x4f3f3f=document[_0x5a6930(0x299)]('improvements-'+_0x4ae8e5);if(_0x40f67d){if(_0x1db58f[_0x5a6930(0x1f3)]){const _0x415bc9=_0x344b75[_0x5a6930(0x21f)][_0x5a6930(0x1a5)](_0x15d4d0=>_0x15d4d0['id']===_0x1db58f[_0x5a6930(0x1f3)]);_0x40f67d[_0x5a6930(0x263)][_0x5a6930(0x24e)]=_0x415bc9?_0x415bc9[_0x5a6930(0x245)]:_0x5a6930(0x23b),_0x1db58f[_0x5a6930(0x210)]?_0x40f67d[_0x5a6930(0x263)][_0x5a6930(0x188)]=_0x5a6930(0x131):_0x40f67d[_0x5a6930(0x263)][_0x5a6930(0x188)]=_0x5a6930(0x1d7);}else _0x40f67d[_0x5a6930(0x263)]['backgroundColor']='transparent';}if(_0x4f3f3f){_0x4f3f3f['innerHTML']='';if(_0x1db58f[_0x5a6930(0x285)]===0x5)_0x4f3f3f[_0x5a6930(0x26b)]='<div\x20class=\x22hotel-pip\x22\x20title=\x22Отель\x22></div>';else{if(_0x1db58f['houses']>0x0)for(let _0x4b64d0=0x0;_0x4b64d0<_0x1db58f[_0x5a6930(0x285)];_0x4b64d0++){_0x4f3f3f[_0x5a6930(0x26b)]+=_0x5a6930(0x2a7);}}}}!this[_0x5a6930(0x149)]&&this['updateTokens'](_0x344b75[_0x5a6930(0x21f)]);if(_0x344b75[_0x5a6930(0x273)]&&!this[_0x5a6930(0x149)]){const _0x1b918a=_0x344b75[_0x5a6930(0x21f)]?_0x344b75[_0x5a6930(0x21f)][_0x344b75['currentTurn']]:null,_0x31359c=_0x1b918a?.['diceSkin']||profileManager[_0x5a6930(0x1ab)]['diceSkin']||'classic';let _0xe5e593=document['querySelector'](_0x5a6930(0x1bd)),_0x3b5b60=document['querySelector']('#die-2-slot\x20.dice-2d-item');if(_0xe5e593&&_0x3b5b60){applyDiceSkinToElement(_0xe5e593,_0x31359c),applyDiceSkinToElement(_0x3b5b60,_0x31359c);const _0x782733=_0xe5e593[_0x5a6930(0x1e7)](_0x5a6930(0x20c)),_0x54db5d=_0x3b5b60[_0x5a6930(0x1e7)](_0x5a6930(0x20c));if(_0x782733)_0x782733[_0x5a6930(0x1b8)]=_0x5a6930(0x1e8)+_0x344b75['dice'][0x0]+'_normal.png';if(_0x54db5d)_0x54db5d[_0x5a6930(0x1b8)]='assets/dice/dice_'+_0x344b75[_0x5a6930(0x273)][0x1]+_0x5a6930(0x18b);const _0x4a5f9d=_0xe5e593[_0x5a6930(0x1e7)](_0x5a6930(0x1c0)),_0x3c752b=_0x3b5b60[_0x5a6930(0x1e7)](_0x5a6930(0x1c0));_0x4a5f9d&&(_0x4a5f9d[_0x5a6930(0x20e)]=_0x5a6930(0x21e)+_0x344b75['dice'][0x0],_0x4a5f9d[_0x5a6930(0x26b)]=renderDicePipsHTML(_0x344b75['dice'][0x0])),_0x3c752b&&(_0x3c752b['className']=_0x5a6930(0x21e)+_0x344b75[_0x5a6930(0x273)][0x1],_0x3c752b['innerHTML']=renderDicePipsHTML(_0x344b75[_0x5a6930(0x273)][0x1])),_0xe5e593[_0x5a6930(0x18e)](_0x5a6930(0x151),_0x344b75[_0x5a6930(0x273)][0x0]),_0x3b5b60['setAttribute'](_0x5a6930(0x151),_0x344b75['dice'][0x1]);}}this[_0x5a6930(0x221)](_0x344b75,_0x88801e),this[_0x5a6930(0x13d)](_0x344b75[_0x5a6930(0x1fa)]),this[_0x5a6930(0x185)](_0x344b75,_0x88801e),!this['isAnimating']&&this['handleModals'](_0x344b75,_0x88801e);}[a17_0x312672(0x14f)](_0x136143){const _0x50fd0d=a17_0x312672;if(!this[_0x50fd0d(0x295)]||!this[_0x50fd0d(0x22c)])return;const _0x41862e=this['boardEl'][_0x50fd0d(0x179)]();if(_0x41862e[_0x50fd0d(0x1aa)]===0x0)return;const _0x1fb848={};_0x136143['forEach'](_0x505421=>{const _0x331c52=_0x50fd0d;if(_0x505421[_0x331c52(0x24c)])return;if(!_0x1fb848[_0x505421['position']])_0x1fb848[_0x505421[_0x331c52(0x28b)]]=[];_0x1fb848[_0x505421[_0x331c52(0x28b)]][_0x331c52(0x1b0)](_0x505421);});const _0x169134=new Set(_0x136143['filter'](_0x3b80b0=>!_0x3b80b0['isBankrupt'])['map'](_0x55e9ff=>_0x50fd0d(0x191)+_0x55e9ff['id']));Array[_0x50fd0d(0x1f0)](this[_0x50fd0d(0x295)][_0x50fd0d(0x163)])[_0x50fd0d(0x25b)](_0xe8eaab=>{const _0x325362=_0x50fd0d;if(!_0x169134[_0x325362(0x198)](_0xe8eaab['id']))_0xe8eaab[_0x325362(0x134)]();});for(const [_0x4f7629,_0x4bbb4e]of Object[_0x50fd0d(0x194)](_0x1fb848)){const _0x37030d=document['getElementById']('tile-'+_0x4f7629);if(!_0x37030d)continue;const _0xc2eaeb=_0x37030d[_0x50fd0d(0x179)](),_0x328f6f=_0xc2eaeb[_0x50fd0d(0x23c)]-_0x41862e[_0x50fd0d(0x23c)],_0x30509e=_0xc2eaeb[_0x50fd0d(0x23e)]-_0x41862e[_0x50fd0d(0x23e)];_0x4bbb4e[_0x50fd0d(0x25b)]((_0xd04b9f,_0x179a3e)=>{const _0x114eaa=_0x50fd0d;let _0x174f24=document[_0x114eaa(0x299)](_0x114eaa(0x191)+_0xd04b9f['id']);!_0x174f24&&(_0x174f24=document[_0x114eaa(0x279)](_0x114eaa(0x14e)),_0x174f24['className']=_0x114eaa(0x181),_0x174f24['id']='token-'+_0xd04b9f['id'],this[_0x114eaa(0x295)][_0x114eaa(0x17a)](_0x174f24));_0x174f24[_0x114eaa(0x26b)]=renderTokenHTML(_0xd04b9f[_0x114eaa(0x289)],_0xd04b9f[_0x114eaa(0x29d)]),_0x174f24[_0x114eaa(0x263)][_0x114eaa(0x1b1)]=_0xd04b9f['color'];const _0x278301=_0x179a3e%0x2*0xe,_0x491cf4=Math[_0x114eaa(0x250)](_0x179a3e/0x2)*0xe;_0x174f24[_0x114eaa(0x263)][_0x114eaa(0x23c)]=_0x328f6f+_0xc2eaeb['height']/0x2-0xf+_0x491cf4+'px',_0x174f24[_0x114eaa(0x263)][_0x114eaa(0x23e)]=_0x30509e+_0xc2eaeb[_0x114eaa(0x1aa)]/0x2-0xf+_0x278301+'px';});}}['renderSidebarPlayers'](_0x393bcc,_0x34698b){const _0x216198=a17_0x312672;if(!this[_0x216198(0x214)])return;this[_0x216198(0x214)][_0x216198(0x26b)]='',_0x393bcc[_0x216198(0x21f)]['forEach']((_0x41376,_0x550e4a)=>{const _0x288adb=_0x216198,_0x5a7660=_0x393bcc['currentTurn']===_0x550e4a,_0x32062d=_0x41376['id']===_0x34698b,_0x459073=document['createElement'](_0x288adb(0x14e));_0x459073[_0x288adb(0x20e)]=_0x288adb(0x2a3)+(_0x5a7660?'current-turn':'')+'\x20'+(_0x41376[_0x288adb(0x24c)]?_0x288adb(0x25c):'')+'\x20'+(_0x41376['hasLeft']?_0x288adb(0x265):'');const _0xda3cce=getProfileBg(_0x41376['bg']||_0x41376[_0x288adb(0x171)]),_0x593a29=_0xda3cce&&_0xda3cce['id']!=='default';if(_0x593a29&&!_0x41376[_0x288adb(0x173)]&&!_0x41376[_0x288adb(0x24c)]){_0x459073[_0x288adb(0x263)][_0x288adb(0x17b)]=_0xda3cce['bgStyle'],_0x459073[_0x288adb(0x263)][_0x288adb(0x18a)]=_0xda3cce[_0x288adb(0x26e)];if(_0xda3cce['glow'])_0x459073[_0x288adb(0x263)][_0x288adb(0x1cc)]=_0xda3cce['glow'];}let _0xf7731d='';Object[_0x288adb(0x194)](_0x393bcc[_0x288adb(0x14c)])[_0x288adb(0x25b)](([_0x40198f,_0x17f8e3])=>{const _0x33b785=_0x288adb;if(_0x17f8e3[_0x33b785(0x1f3)]===_0x41376['id']){const _0x570f0b=BOARD_TILES[_0x40198f],_0x14c585=COLOR_GROUPS[_0x570f0b[_0x33b785(0x268)]]?.[_0x33b785(0x245)]||_0x33b785(0x168);_0xf7731d+=_0x33b785(0x1f2)+_0x14c585+_0x33b785(0x18c)+_0x570f0b[_0x33b785(0x193)]+_0x33b785(0x1f8);}});let _0xafbf59='';if(_0x41376[_0x288adb(0x173)])_0xafbf59=_0x288adb(0x204);else{if(_0x41376['isBankrupt'])_0xafbf59=_0x288adb(0x13f);else{if(_0x41376[_0x288adb(0x249)])_0xafbf59=_0x288adb(0x25e);else{const _0x46c4fb=BOARD_TILES[_0x41376['position']];_0xafbf59=_0x288adb(0x140)+(_0x46c4fb?.[_0x288adb(0x235)]?_0x46c4fb[_0x288adb(0x235)]+'\x20':'')+(_0x46c4fb?.[_0x288adb(0x193)]||_0x288adb(0x22e));}}}const _0x1d1809=_0x41376[_0x288adb(0x173)]?_0x288adb(0x167)+_0x41376[_0x288adb(0x193)]+'</s>':_0x41376[_0x288adb(0x193)],_0x54f29b=_0x32062d?_0x288adb(0x19d):'',_0x171ece=formatTitleBadge(_0x41376[_0x288adb(0x141)]||_0x288adb(0x178));_0x459073['innerHTML']=_0x288adb(0x252)+renderTokenHTML(_0x41376[_0x288adb(0x289)],_0x41376[_0x288adb(0x29d)])+_0x288adb(0x286)+(_0x41376[_0x288adb(0x173)]?_0x288adb(0x280):_0x593a29?_0xda3cce[_0x288adb(0x267)]:_0x41376[_0x288adb(0x245)])+_0x288adb(0x132)+_0x1d1809+'\x20'+_0x54f29b+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x171ece+_0x288adb(0x1a8)+(_0x593a29?_0xda3cce['tagColor']:_0x288adb(0x28d))+';\x20margin-top:\x202px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0xafbf59+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22player-cash\x22\x20style=\x22'+(_0x41376['hasLeft']?_0x288adb(0x177):_0x593a29?_0x288adb(0x135)+_0xda3cce[_0x288adb(0x267)]+';':'')+_0x288adb(0x180)+_0x41376[_0x288adb(0x1ad)]+_0x288adb(0x1e9)+(_0xf7731d?'<div\x20class=\x22player-property-pills\x22>'+_0xf7731d+_0x288adb(0x226):'')+_0x288adb(0x257),_0x459073[_0x288adb(0x263)][_0x288adb(0x17c)]=_0x288adb(0x186),_0x459073['title']=_0x288adb(0x20f),_0x459073[_0x288adb(0x14d)](_0x288adb(0x272),()=>{const _0x143855=_0x288adb;this[_0x143855(0x1cd)][_0x143855(0x1e0)]&&this['callbacks']['onShowPlayerProfile'](_0x41376,_0x393bcc);}),this[_0x288adb(0x214)][_0x288adb(0x17a)](_0x459073);});}[a17_0x312672(0x13d)](_0x52535f){const _0x1d8b1a=a17_0x312672;if(!this[_0x1d8b1a(0x12e)]||!_0x52535f)return;this[_0x1d8b1a(0x12e)][_0x1d8b1a(0x26b)]=_0x52535f[_0x1d8b1a(0x1f7)](_0x574425=>_0x1d8b1a(0x276)+_0x574425[_0x1d8b1a(0x2a8)]+']</span>\x20'+_0x574425[_0x1d8b1a(0x274)]+_0x1d8b1a(0x1ca))[_0x1d8b1a(0x266)]('');}['updateCenterActionCards'](_0x40da9f,_0x4349ec){const _0x1b6fa7=a17_0x312672,_0x31011b=_0x40da9f[_0x1b6fa7(0x21f)][_0x40da9f[_0x1b6fa7(0x1bc)]],_0x27caa4=_0x31011b&&(_0x31011b['id']===_0x4349ec||_0x40da9f[_0x1b6fa7(0x1ef)]),_0x1454e1=document[_0x1b6fa7(0x299)](_0x1b6fa7(0x14b)),_0x3d058c=document[_0x1b6fa7(0x299)]('btn-end-turn-card'),_0x4c5d7a=document[_0x1b6fa7(0x299)](_0x1b6fa7(0x270)),_0x5c91d3=document[_0x1b6fa7(0x299)](_0x1b6fa7(0x1c9)),_0x412186=document[_0x1b6fa7(0x299)](_0x1b6fa7(0x1e3)),_0xc02e66=document[_0x1b6fa7(0x299)]('roll-card-hint');if(!_0x1454e1||!_0x3d058c)return;if(_0x5c91d3){const _0x3c275b=_0x40da9f['isLocalMode']&&_0x31011b?_0x31011b['id']:_0x4349ec,_0x1e05f6=_0x40da9f[_0x1b6fa7(0x21f)][_0x1b6fa7(0x1a5)](_0xf75afe=>_0xf75afe['id']===_0x3c275b),_0x272fe7=_0x40da9f[_0x1b6fa7(0x21f)][_0x1b6fa7(0x212)](_0x2ebdb9=>_0x2ebdb9['id']!==_0x3c275b&&!_0x2ebdb9[_0x1b6fa7(0x24c)]&&!_0x2ebdb9[_0x1b6fa7(0x173)]),_0x38777f=Boolean(_0x1e05f6&&!_0x1e05f6['isBankrupt']&&!_0x1e05f6[_0x1b6fa7(0x173)]&&_0x40da9f[_0x1b6fa7(0x155)]===_0x1b6fa7(0x182)&&_0x272fe7[_0x1b6fa7(0x1f1)]>0x0);_0x5c91d3[_0x1b6fa7(0x209)]=!_0x38777f,!_0x38777f?_0x5c91d3['title']=_0x272fe7[_0x1b6fa7(0x1f1)]===0x0?_0x1b6fa7(0x154):_0x1b6fa7(0x26a):_0x5c91d3['title']='Обмен\x20карточками';}if(!_0x27caa4||_0x40da9f[_0x1b6fa7(0x155)]!==_0x1b6fa7(0x182)){_0x1454e1[_0x1b6fa7(0x209)]=!![],_0x3d058c[_0x1b6fa7(0x209)]=!![],_0x1454e1[_0x1b6fa7(0x1ce)]['remove']('ready-to-roll');_0x412186&&(_0x412186[_0x1b6fa7(0x223)]=_0x31011b?_0x1b6fa7(0x27d)+_0x31011b[_0x1b6fa7(0x193)]:'',_0x412186[_0x1b6fa7(0x1ce)][_0x1b6fa7(0x134)](_0x1b6fa7(0x1a6)));if(_0xc02e66)_0xc02e66[_0x1b6fa7(0x223)]=_0x1b6fa7(0x20b);}else{_0x412186&&(_0x412186[_0x1b6fa7(0x223)]='Ваш\x20ход!',_0x412186['classList'][_0x1b6fa7(0x24d)](_0x1b6fa7(0x1a6)));if(_0x40da9f[_0x1b6fa7(0x16a)]===_0x1b6fa7(0x24b)){_0x1454e1[_0x1b6fa7(0x209)]=![],_0x3d058c[_0x1b6fa7(0x209)]=!![],_0x1454e1[_0x1b6fa7(0x1ce)][_0x1b6fa7(0x24d)](_0x1b6fa7(0x1b5));if(_0xc02e66)_0xc02e66[_0x1b6fa7(0x223)]=_0x1b6fa7(0x13b);}else{if(_0x40da9f[_0x1b6fa7(0x16a)]===_0x1b6fa7(0x1bf)){if(_0x40da9f[_0x1b6fa7(0x17e)]){_0x1454e1[_0x1b6fa7(0x209)]=![],_0x3d058c[_0x1b6fa7(0x209)]=!![],_0x1454e1[_0x1b6fa7(0x1ce)][_0x1b6fa7(0x24d)]('ready-to-roll');if(_0xc02e66)_0xc02e66[_0x1b6fa7(0x223)]=_0x1b6fa7(0x2a5);_0x3d058c&&(_0x3d058c[_0x1b6fa7(0x141)]=_0x1b6fa7(0x1e6));}else{_0x1454e1[_0x1b6fa7(0x209)]=!![],_0x3d058c['disabled']=![],_0x3d058c['title']='',_0x1454e1[_0x1b6fa7(0x1ce)]['remove']('ready-to-roll');if(_0xc02e66)_0xc02e66[_0x1b6fa7(0x223)]=_0x1b6fa7(0x13c);if(this[_0x1b6fa7(0x1cd)]['checkAutoEnd'])this[_0x1b6fa7(0x1cd)][_0x1b6fa7(0x1d6)]();}}else _0x1454e1[_0x1b6fa7(0x209)]=!![],_0x3d058c[_0x1b6fa7(0x209)]=!![],_0x1454e1[_0x1b6fa7(0x1ce)][_0x1b6fa7(0x134)](_0x1b6fa7(0x1b5));}}}['handleModals'](_0x6d08d,_0x18a847){const _0x277696=a17_0x312672,_0x44b924=_0x6d08d[_0x277696(0x21f)][_0x6d08d[_0x277696(0x1bc)]],_0x2f509c=_0x44b924&&(_0x44b924['id']===_0x18a847||!_0x44b924[_0x277696(0x169)]&&_0x6d08d[_0x277696(0x1ef)]),_0x1d5c45=document[_0x277696(0x299)](_0x277696(0x26d));if(_0x1d5c45){if(_0x6d08d[_0x277696(0x16a)]===_0x277696(0x27b)&&_0x2f509c){const _0x1e4152=this[_0x277696(0x1c4)](_0x44b924[_0x277696(0x28b)]),_0x5c2504=_0x44b924[_0x277696(0x1ad)]>=_0x1e4152[_0x277696(0x1b6)],_0x2ff3d2=document[_0x277696(0x299)](_0x277696(0x1e1)),_0x5c9ad6=document[_0x277696(0x299)](_0x277696(0x196)),_0x376652=document[_0x277696(0x299)]('btn-confirm-buy');if(_0x2ff3d2)_0x2ff3d2['innerText']=''+(_0x1e4152[_0x277696(0x235)]?_0x1e4152[_0x277696(0x235)]+'\x20':'')+_0x1e4152[_0x277696(0x193)];_0x5c9ad6&&(_0x5c9ad6['innerText']='$'+_0x1e4152[_0x277696(0x1b6)]+(!_0x5c2504?_0x277696(0x12f)+_0x44b924['cash']+')':''),_0x5c9ad6[_0x277696(0x263)][_0x277696(0x245)]=_0x5c2504?'var(--md-primary)':_0x277696(0x27a)),_0x376652&&(_0x376652[_0x277696(0x209)]=!_0x5c2504,_0x376652[_0x277696(0x223)]=_0x5c2504?_0x277696(0x21d):_0x277696(0x19e)),_0x1d5c45[_0x277696(0x1ce)][_0x277696(0x24d)](_0x277696(0x1b7));}else _0x1d5c45[_0x277696(0x1ce)]['remove'](_0x277696(0x1b7));}const _0x5f0c28=document[_0x277696(0x299)](_0x277696(0x137));_0x5f0c28&&(_0x6d08d[_0x277696(0x16a)]===_0x277696(0x139)&&_0x6d08d[_0x277696(0x224)]&&_0x2f509c?(document[_0x277696(0x299)]('card-title')[_0x277696(0x223)]=_0x6d08d['activeCard']['title'],document[_0x277696(0x299)](_0x277696(0x259))[_0x277696(0x223)]=_0x6d08d[_0x277696(0x224)][_0x277696(0x1ae)],_0x5f0c28[_0x277696(0x1ce)]['add']('active')):_0x5f0c28['classList']['remove']('active'));const _0x11fe8a=document[_0x277696(0x299)](_0x277696(0x13a));if(_0x11fe8a){if(_0x6d08d[_0x277696(0x155)]===_0x277696(0x283)&&_0x6d08d[_0x277696(0x1d0)]){const _0xcb240d=document['getElementById'](_0x277696(0x1a0));if(_0xcb240d)_0xcb240d[_0x277696(0x223)]=_0x6d08d[_0x277696(0x1d0)][_0x277696(0x193)]+'\x20победил!';!_0x11fe8a[_0x277696(0x1ce)][_0x277696(0x261)](_0x277696(0x1b7))&&(_0x11fe8a[_0x277696(0x1ce)]['add']('active'),sound[_0x277696(0x175)](),this[_0x277696(0x1cd)][_0x277696(0x284)]&&this[_0x277696(0x1cd)][_0x277696(0x284)](_0x6d08d));}else _0x11fe8a[_0x277696(0x1ce)][_0x277696(0x134)](_0x277696(0x1b7));}}[a17_0x312672(0x1c6)](_0x5c799a,_0x566204){const _0x1db194=a17_0x312672;if(localStorage[_0x1db194(0x145)]('monopoly_tooltips')==='0')return;const _0x39bb10=document[_0x1db194(0x299)](_0x1db194(0x15b));if(!_0x39bb10)return;_0x39bb10['innerHTML']=this[_0x1db194(0x1c5)](_0x5c799a,!![]),_0x39bb10[_0x1db194(0x263)][_0x1db194(0x17f)]='block',this[_0x1db194(0x22a)](_0x566204),requestAnimationFrame(()=>{const _0x577e33=_0x1db194;_0x39bb10[_0x577e33(0x1ce)][_0x577e33(0x24d)](_0x577e33(0x19b));});}[a17_0x312672(0x172)](){const _0x52b06b=a17_0x312672,_0x41a5ed=document['getElementById'](_0x52b06b(0x15b));if(!_0x41a5ed)return;_0x41a5ed[_0x52b06b(0x1ce)][_0x52b06b(0x134)](_0x52b06b(0x19b)),setTimeout(()=>{const _0x2b2f4f=_0x52b06b;!_0x41a5ed[_0x2b2f4f(0x1ce)]['contains'](_0x2b2f4f(0x19b))&&(_0x41a5ed[_0x2b2f4f(0x263)][_0x2b2f4f(0x17f)]='none');},0x96);}['updateTileHoverCardPos'](_0x5bb3d9){const _0x479823=a17_0x312672,_0x33a3d4=document[_0x479823(0x299)](_0x479823(0x15b));if(!_0x33a3d4||_0x33a3d4[_0x479823(0x263)][_0x479823(0x17f)]==='none')return;const _0x206ddf=0x122,_0x1032b7=_0x33a3d4[_0x479823(0x27c)]||0x140,_0x1be802=0x10;let _0x11d0ea=_0x5bb3d9['clientX']+0x10,_0x24bf34=_0x5bb3d9[_0x479823(0x20d)]+0x10;_0x11d0ea+_0x206ddf>window[_0x479823(0x293)]-_0x1be802&&(_0x11d0ea=_0x5bb3d9[_0x479823(0x1a4)]-_0x206ddf-0x10);_0x24bf34+_0x1032b7>window[_0x479823(0x1c8)]-_0x1be802&&(_0x24bf34=window[_0x479823(0x1c8)]-_0x1032b7-_0x1be802);if(_0x11d0ea<_0x1be802)_0x11d0ea=_0x1be802;if(_0x24bf34<_0x1be802)_0x24bf34=_0x1be802;_0x33a3d4[_0x479823(0x263)][_0x479823(0x23e)]=_0x11d0ea+'px',_0x33a3d4['style'][_0x479823(0x23c)]=_0x24bf34+'px';}[a17_0x312672(0x1c5)](_0x52d4dd,_0x3d74c2=![]){const _0xce22eb=a17_0x312672,_0x4aac9e=this[_0xce22eb(0x1c4)](_0x52d4dd);if(!_0x4aac9e)return'';const _0x360025=this[_0xce22eb(0x222)],_0xd1d904=_0x360025?.['properties']?_0x360025[_0xce22eb(0x14c)][_0x52d4dd]:null,_0x66ba7f=_0xd1d904?.[_0xce22eb(0x1f3)]?_0x360025[_0xce22eb(0x21f)]?.[_0xce22eb(0x1a5)](_0x5aba7b=>_0x5aba7b['id']===_0xd1d904['ownerId']):null,_0x3c2c12=Boolean(_0x66ba7f&&_0x66ba7f['id']===this['myPlayerId']);let _0x6321e9=_0xce22eb(0x133),_0x3a39c4='';if(_0x4aac9e[_0xce22eb(0x268)]&&COLOR_GROUPS[_0x4aac9e['group']])_0x6321e9=COLOR_GROUPS[_0x4aac9e[_0xce22eb(0x268)]][_0xce22eb(0x245)],_0x3a39c4=COLOR_GROUPS[_0x4aac9e['group']][_0xce22eb(0x193)];else{if(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x1d9))_0x6321e9=_0xce22eb(0x1c2),_0x3a39c4=_0xce22eb(0x147);else{if(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x200))_0x6321e9=_0xce22eb(0x133),_0x3a39c4=_0xce22eb(0x152);else{if(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x26f))_0x6321e9=_0xce22eb(0x1a1),_0x3a39c4=_0xce22eb(0x233);else{if(_0x4aac9e['type']===_0xce22eb(0x15a))_0x6321e9=_0xce22eb(0x2a2),_0x3a39c4='Шанс';else _0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x203)?(_0x6321e9=_0xce22eb(0x231),_0x3a39c4=_0xce22eb(0x16b)):(_0x6321e9='#1e293b',_0x3a39c4=_0xce22eb(0x260));}}}}let _0x37a062='';if(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x2a1)||_0x4aac9e['type']===_0xce22eb(0x1d9)||_0x4aac9e['type']===_0xce22eb(0x200)){if(_0x66ba7f){const _0x26315f=_0x3c2c12?_0x66ba7f[_0xce22eb(0x193)]+_0xce22eb(0x253):_0x66ba7f[_0xce22eb(0x193)],_0x1b6e8b=_0xd1d904?.[_0xce22eb(0x210)]?'\x20<span\x20style=\x22color:#f87171;\x20font-weight:700;\x22>[Заложено]</span>':'';_0x37a062=_0xce22eb(0x1de)+(_0x66ba7f[_0xce22eb(0x245)]||_0xce22eb(0x229))+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22deed-owner-dot\x22\x20style=\x22background-color:\x20'+(_0x66ba7f[_0xce22eb(0x245)]||'#38bdf8')+_0xce22eb(0x27e)+_0x26315f+_0x1b6e8b+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22color:\x20var(--md-on-surface-variant);\x20font-size:\x200.72rem;\x22>Куплено</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20';}else _0x37a062=_0xce22eb(0x239)+_0x4aac9e[_0xce22eb(0x1b6)]+_0xce22eb(0x296);}let _0x3c185c='',_0x9f26fd='';if(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x2a1)){if(_0xd1d904?.['isMortgaged'])_0x3c185c=_0xce22eb(0x241),_0x9f26fd='mortgaged';else{if(_0xd1d904&&_0xd1d904[_0xce22eb(0x285)]===0x5)_0x3c185c='$'+_0x4aac9e[_0xce22eb(0x165)][0x5],_0x9f26fd='hotel';else{if(_0xd1d904&&_0xd1d904[_0xce22eb(0x285)]>0x0)_0x3c185c='$'+_0x4aac9e[_0xce22eb(0x165)][_0xd1d904[_0xce22eb(0x285)]],_0x9f26fd='house_'+_0xd1d904[_0xce22eb(0x285)];else{if(_0xd1d904&&_0xd1d904[_0xce22eb(0x1f3)]){const _0x5b1523=COLOR_GROUPS[_0x4aac9e[_0xce22eb(0x268)]]?.['tiles']||[],_0x1acbef=_0x5b1523[_0xce22eb(0x1f1)]>0x0&&_0x5b1523[_0xce22eb(0x294)](_0x1d9a44=>_0x360025?.[_0xce22eb(0x14c)]?.[_0x1d9a44]?.[_0xce22eb(0x1f3)]===_0xd1d904[_0xce22eb(0x1f3)]&&!_0x360025?.['properties']?.[_0x1d9a44]?.[_0xce22eb(0x210)]);_0x1acbef?(_0x3c185c='$'+_0x4aac9e[_0xce22eb(0x165)][0x0]*0x2+'\x20(Монополия)',_0x9f26fd='monopoly'):(_0x3c185c='$'+_0x4aac9e[_0xce22eb(0x165)][0x0],_0x9f26fd='base');}else _0x3c185c='$'+_0x4aac9e[_0xce22eb(0x165)][0x0],_0x9f26fd=_0xce22eb(0x201);}}}}else{if(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x1d9)){if(_0xd1d904?.[_0xce22eb(0x210)])_0x3c185c=_0xce22eb(0x241),_0x9f26fd=_0xce22eb(0x1d4);else{if(_0xd1d904&&_0xd1d904['ownerId']){const _0x8d23b9=[0x5,0xf,0x19,0x23],_0x399640=_0x8d23b9[_0xce22eb(0x212)](_0xfe4cf5=>_0x360025?.[_0xce22eb(0x14c)]?.[_0xfe4cf5]?.[_0xce22eb(0x1f3)]===_0xd1d904[_0xce22eb(0x1f3)]&&!_0x360025?.['properties']?.[_0xfe4cf5]?.[_0xce22eb(0x210)])[_0xce22eb(0x1f1)],_0x5e3a6a=[0x19,0x32,0x64,0xc8],_0x3b6f31=_0x5e3a6a[Math[_0xce22eb(0x1b4)](0x0,Math[_0xce22eb(0x29e)](0x3,(_0x399640||0x1)-0x1))];_0x3c185c='$'+_0x3b6f31,_0x9f26fd=_0xce22eb(0x164)+(_0x399640||0x1);}else _0x3c185c=_0xce22eb(0x19c),_0x9f26fd='station_1';}}else{if(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x200)){if(_0xd1d904?.[_0xce22eb(0x210)])_0x3c185c='$0\x20(В\x20залоге)',_0x9f26fd=_0xce22eb(0x1d4);else{if(_0xd1d904&&_0xd1d904[_0xce22eb(0x1f3)]){const _0x8d4d04=[0xc,0x1c],_0xfcef16=_0x8d4d04[_0xce22eb(0x212)](_0x44f5c5=>_0x360025?.[_0xce22eb(0x14c)]?.[_0x44f5c5]?.[_0xce22eb(0x1f3)]===_0xd1d904[_0xce22eb(0x1f3)]&&!_0x360025?.[_0xce22eb(0x14c)]?.[_0x44f5c5]?.[_0xce22eb(0x210)])[_0xce22eb(0x1f1)];_0x3c185c=_0xfcef16>=0x2?_0xce22eb(0x25d):_0xce22eb(0x22d),_0x9f26fd=_0xfcef16>=0x2?_0xce22eb(0x1eb):_0xce22eb(0x16f);}else _0x3c185c='4x\x20бросок',_0x9f26fd=_0xce22eb(0x16f);}}}}let _0x2fabb4='';(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x2a1)||_0x4aac9e['type']==='station'||_0x4aac9e['type']===_0xce22eb(0x200))&&(_0x2fabb4=_0xce22eb(0x1f5)+_0x3c185c+_0xce22eb(0x1b9));let _0x228d5b='';if(_0x4aac9e[_0xce22eb(0x1c1)]==='street')_0x228d5b=_0xce22eb(0x160)+(_0x9f26fd==='base'?_0xce22eb(0x278):'')+_0xce22eb(0x15d)+_0x4aac9e[_0xce22eb(0x165)][0x0]+_0xce22eb(0x211)+(_0x9f26fd==='monopoly'?_0xce22eb(0x278):'')+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-label-dark\x22>С\x20монополией\x20(x2):</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-val-dark\x22>$'+_0x4aac9e[_0xce22eb(0x165)][0x0]*0x2+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22rent-row-dark\x20'+(_0x9f26fd==='house_1'?_0xce22eb(0x278):'')+_0xce22eb(0x26c)+_0x4aac9e[_0xce22eb(0x165)][0x1]+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22rent-row-dark\x20'+(_0x9f26fd==='house_2'?_0xce22eb(0x278):'')+_0xce22eb(0x244)+_0x4aac9e[_0xce22eb(0x165)][0x2]+_0xce22eb(0x211)+(_0x9f26fd===_0xce22eb(0x183)?_0xce22eb(0x278):'')+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-label-dark\x22>С\x203\x20домами\x20🏠🏠🏠:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-val-dark\x22>$'+_0x4aac9e[_0xce22eb(0x165)][0x3]+_0xce22eb(0x211)+(_0x9f26fd===_0xce22eb(0x251)?_0xce22eb(0x278):'')+_0xce22eb(0x28f)+_0x4aac9e[_0xce22eb(0x165)][0x4]+_0xce22eb(0x211)+(_0x9f26fd===_0xce22eb(0x1ac)?_0xce22eb(0x278):'')+_0xce22eb(0x24a)+_0x4aac9e[_0xce22eb(0x165)][0x5]+_0xce22eb(0x1b9);else{if(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x1d9))_0x228d5b='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22rent-row-dark\x20'+(_0x9f26fd===_0xce22eb(0x287)?_0xce22eb(0x278):'')+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-label-dark\x22>1\x20вокзал\x20🚂:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-val-dark\x22>$25</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22rent-row-dark\x20'+(_0x9f26fd===_0xce22eb(0x148)?_0xce22eb(0x278):'')+_0xce22eb(0x2a4)+(_0x9f26fd==='station_3'?'active-level':'')+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-label-dark\x22>3\x20вокзала\x20🚂🚂🚂:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-val-dark\x22>$100</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22rent-row-dark\x20'+(_0x9f26fd==='station_4'?'active-level':'')+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-label-dark\x22>4\x20вокзала\x20🚂🚂🚂🚂:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-val-dark\x22>$200</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20';else _0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x200)?_0x228d5b='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22rent-row-dark\x20'+(_0x9f26fd===_0xce22eb(0x16f)?_0xce22eb(0x278):'')+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-label-dark\x22>1\x20предприятие\x20💡:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22rent-val-dark\x22>4x\x20броска</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22rent-row-dark\x20'+(_0x9f26fd===_0xce22eb(0x1eb)?_0xce22eb(0x278):'')+_0xce22eb(0x1fe):_0x228d5b=_0xce22eb(0x238)+(_0x4aac9e[_0xce22eb(0x1ae)]||_0xce22eb(0x29a))+_0xce22eb(0x208)+(_0x4aac9e[_0xce22eb(0x162)]?_0xce22eb(0x190)+_0x4aac9e[_0xce22eb(0x162)]+_0xce22eb(0x226):'')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20';}let _0x236acf='';if(_0x4aac9e['type']===_0xce22eb(0x2a1))_0x236acf=_0xce22eb(0x240)+_0x4aac9e[_0xce22eb(0x1fd)]+_0xce22eb(0x1a7)+_0x4aac9e[_0xce22eb(0x1b6)]+_0xce22eb(0x1d3);else(_0x4aac9e[_0xce22eb(0x1c1)]===_0xce22eb(0x1d9)||_0x4aac9e[_0xce22eb(0x1c1)]==='utility')&&(_0x236acf=_0xce22eb(0x202)+_0x4aac9e[_0xce22eb(0x1b6)]+'</b></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20');return _0xce22eb(0x256)+_0x6321e9+_0xce22eb(0x22f)+(_0x4aac9e['icon']?_0x4aac9e[_0xce22eb(0x235)]+'\x20':'')+_0x4aac9e[_0xce22eb(0x193)]+_0xce22eb(0x1d5)+_0x3a39c4+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20'+_0x37a062+_0xce22eb(0x1e2)+_0x2fabb4+_0xce22eb(0x19a)+_0x228d5b+_0xce22eb(0x207)+_0x236acf+_0xce22eb(0x1ca);}[a17_0x312672(0x213)](_0x33ff6c){const _0x23606c=a17_0x312672,_0x2a52a2=BOARD_TILES[_0x33ff6c];if(!_0x2a52a2)return;const _0x63f24c=document[_0x23606c(0x299)](_0x23606c(0x217)),_0x538ed2=document['getElementById'](_0x23606c(0x18d));if(!_0x63f24c||!_0x538ed2)return;_0x538ed2['innerHTML']=this[_0x23606c(0x1c5)](_0x33ff6c,![]),_0x63f24c['classList']['add'](_0x23606c(0x1b7));}[a17_0x312672(0x158)](){const _0x34b9e9=a17_0x312672,_0x356fec=document[_0x34b9e9(0x299)](_0x34b9e9(0x14b));_0x356fec&&(_0x356fec['onclick']=()=>{const _0x5e228d=_0x34b9e9;if(this[_0x5e228d(0x149)])return;if(this[_0x5e228d(0x1cd)]['onRoll'])this[_0x5e228d(0x1cd)][_0x5e228d(0x25f)]();});const _0x4b9274=document[_0x34b9e9(0x299)](_0x34b9e9(0x142));_0x4b9274&&(_0x4b9274[_0x34b9e9(0x150)]=()=>{const _0xfbe03a=_0x34b9e9,_0x511214=document[_0xfbe03a(0x299)](_0xfbe03a(0x14b));_0x511214&&!_0x511214[_0xfbe03a(0x209)]&&!this[_0xfbe03a(0x149)]&&_0x511214[_0xfbe03a(0x272)]();});const _0x14ae54=document['getElementById'](_0x34b9e9(0x1d2));_0x14ae54&&(_0x14ae54[_0x34b9e9(0x150)]=()=>{const _0x1ec359=_0x34b9e9;if(this[_0x1ec359(0x149)])return;sound['playClick']();if(this[_0x1ec359(0x1cd)][_0x1ec359(0x277)])this[_0x1ec359(0x1cd)]['onEndTurn']();});const _0x670d1c=document[_0x34b9e9(0x299)](_0x34b9e9(0x270));_0x670d1c&&(_0x670d1c[_0x34b9e9(0x150)]=()=>{const _0x216cee=_0x34b9e9;sound[_0x216cee(0x1dd)]();if(this['callbacks'][_0x216cee(0x189)])this[_0x216cee(0x1cd)][_0x216cee(0x189)]();});const _0x3f96de=document[_0x34b9e9(0x299)](_0x34b9e9(0x1c9));_0x3f96de&&(_0x3f96de[_0x34b9e9(0x150)]=()=>{const _0x272b4e=_0x34b9e9;if(_0x3f96de[_0x272b4e(0x209)])return;sound[_0x272b4e(0x1dd)]();if(this[_0x272b4e(0x1cd)][_0x272b4e(0x1f6)])this[_0x272b4e(0x1cd)]['onTrade']();});const _0x399f94=document['getElementById'](_0x34b9e9(0x15e));_0x399f94&&(_0x399f94[_0x34b9e9(0x150)]=()=>{const _0x39ab8a=_0x34b9e9;sound[_0x39ab8a(0x1dd)]();if(this[_0x39ab8a(0x1cd)][_0x39ab8a(0x1bb)])this['callbacks'][_0x39ab8a(0x1bb)]();});}[a17_0x312672(0x220)](){const _0x3c7dc5=a17_0x312672;this[_0x3c7dc5(0x158)](),document[_0x3c7dc5(0x299)](_0x3c7dc5(0x1be))?.[_0x3c7dc5(0x14d)]('click',()=>{const _0x413720=_0x3c7dc5;sound[_0x413720(0x136)](),document['getElementById']('modal-buy-property')?.[_0x413720(0x1ce)]['remove'](_0x413720(0x1b7));if(this[_0x413720(0x1cd)][_0x413720(0x297)])this['callbacks'][_0x413720(0x297)]();}),document['getElementById'](_0x3c7dc5(0x15f))?.['addEventListener']('click',()=>{const _0x4433b4=_0x3c7dc5;sound[_0x4433b4(0x1dd)](),document[_0x4433b4(0x299)]('modal-buy-property')?.[_0x4433b4(0x1ce)]['remove'](_0x4433b4(0x1b7));if(this[_0x4433b4(0x1cd)][_0x4433b4(0x281)])this[_0x4433b4(0x1cd)][_0x4433b4(0x281)]();}),document['getElementById'](_0x3c7dc5(0x195))?.[_0x3c7dc5(0x14d)](_0x3c7dc5(0x272),()=>{const _0x3d16f4=_0x3c7dc5;sound[_0x3d16f4(0x1dd)](),document[_0x3d16f4(0x299)](_0x3d16f4(0x137))?.[_0x3d16f4(0x1ce)][_0x3d16f4(0x134)]('active');if(this[_0x3d16f4(0x1cd)]['onCardOk'])this[_0x3d16f4(0x1cd)][_0x3d16f4(0x1ee)]();}),document['querySelectorAll'](_0x3c7dc5(0x1ba))['forEach'](_0x1291f3=>{const _0x4b4a2a=_0x3c7dc5;_0x1291f3[_0x4b4a2a(0x14d)]('click',_0x31c24b=>{const _0xf88e77=_0x4b4a2a,_0xd846b1=_0x31c24b[_0xf88e77(0x21b)][_0xf88e77(0x247)](_0xf88e77(0x16e));if(_0xd846b1)_0xd846b1[_0xf88e77(0x1ce)][_0xf88e77(0x134)](_0xf88e77(0x1b7));});}),document[_0x3c7dc5(0x23a)](_0x3c7dc5(0x16e))['forEach'](_0x5ac3d1=>{const _0x18af88=_0x3c7dc5;_0x5ac3d1[_0x18af88(0x14d)](_0x18af88(0x272),_0x41a355=>{const _0x5eb021=_0x18af88;_0x41a355[_0x5eb021(0x21b)]===_0x5ac3d1&&_0x5ac3d1[_0x5eb021(0x1ce)][_0x5eb021(0x134)](_0x5eb021(0x1b7));});});}[a17_0x312672(0x255)](_0xbe205e=[]){const _0xbeac7b=a17_0x312672,_0x27a766=document['getElementById'](_0xbeac7b(0x18f));if(!_0x27a766)return;if(!_0xbe205e||_0xbe205e[_0xbeac7b(0x1f1)]===0x0){_0x27a766[_0xbeac7b(0x26b)]=_0xbeac7b(0x292);return;}_0x27a766[_0xbeac7b(0x26b)]=_0xbe205e[_0xbeac7b(0x1f7)](_0x1f99da=>{const _0x3dd3ca=_0xbeac7b,_0x1c1177=_0x1f99da['fromCardNames']&&_0x1f99da[_0x3dd3ca(0x1db)][_0x3dd3ca(0x1f1)]>0x0?_0x1f99da[_0x3dd3ca(0x1db)][_0x3dd3ca(0x1f7)](_0x455ba6=>'•\x20'+_0x455ba6)['join'](_0x3dd3ca(0x174)):'',_0x17358a=_0x1f99da[_0x3dd3ca(0x156)]>0x0?_0x3dd3ca(0x1a9)+_0x1f99da[_0x3dd3ca(0x156)]:'',_0x2fc67b=!_0x1c1177&&!_0x17358a?'<span\x20style=\x22opacity:0.6;\x22>Ничего</span>':'',_0x9a0a7a=_0x1f99da[_0x3dd3ca(0x170)]&&_0x1f99da[_0x3dd3ca(0x170)][_0x3dd3ca(0x1f1)]>0x0?_0x1f99da[_0x3dd3ca(0x170)][_0x3dd3ca(0x1f7)](_0x59c8b3=>'•\x20'+_0x59c8b3)[_0x3dd3ca(0x266)]('<br>'):'',_0xb1b7df=_0x1f99da[_0x3dd3ca(0x216)]>0x0?_0x3dd3ca(0x1a9)+_0x1f99da[_0x3dd3ca(0x216)]:'',_0x4cb8de=!_0x9a0a7a&&!_0xb1b7df?'<span\x20style=\x22opacity:0.6;\x22>Ничего</span>':'';return _0x3dd3ca(0x218)+_0x1f99da[_0x3dd3ca(0x271)]+_0x3dd3ca(0x1c3)+_0x1f99da[_0x3dd3ca(0x258)]+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22font-size:\x200.75rem;\x20opacity:\x200.7;\x20font-weight:\x20normal;\x22>'+(_0x1f99da[_0x3dd3ca(0x2a8)]||'')+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22trade-history-details\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<b\x20style=\x22color:\x20var(--md-primary);\x22>'+_0x1f99da['fromName']+_0x3dd3ca(0x1e5)+_0x1c1177+(_0x1c1177&&_0x17358a?_0x3dd3ca(0x174):'')+_0x17358a+_0x2fc67b+_0x3dd3ca(0x246)+_0x1f99da['toName']+_0x3dd3ca(0x1e5)+_0x9a0a7a+(_0x9a0a7a&&_0xb1b7df?_0x3dd3ca(0x174):'')+_0xb1b7df+_0x4cb8de+_0x3dd3ca(0x1ea)+(_0x1f99da[_0x3dd3ca(0x25a)]>0x0?'<div\x20style=\x22font-size:\x200.75rem;\x20color:\x20var(--md-error);\x20margin-top:\x206px;\x22>Уплачена\x20комиссия\x2010%:\x20$'+_0x1f99da[_0x3dd3ca(0x25a)]+'</div>':'')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20';})[_0xbeac7b(0x266)]('');}[a17_0x312672(0x29b)](_0x146447){showToast(_0x146447);}[a17_0x312672(0x1ff)](_0x223447,_0x9d3376,_0x2e7de5){showConfirm(_0x223447,_0x9d3376,_0x2e7de5);}[a17_0x312672(0x13e)](_0x39f1df){const _0x38dc65=a17_0x312672;sound[_0x38dc65(0x175)]();const _0x2dc149=document[_0x38dc65(0x299)](_0x38dc65(0x13a));_0x2dc149&&_0x2dc149[_0x38dc65(0x1ce)][_0x38dc65(0x24d)](_0x38dc65(0x1b7));}}export const ui=new UIRenderer();ui[a17_0x312672(0x29b)]=showToast,ui[a17_0x312672(0x1ff)]=showConfirm;
+/**
+ * UI Renderer and Event Handler for Monopoly
+ */
+
+import { BOARD_TILES, COLOR_GROUPS } from './board-data.js';
+import { AVAILABLE_TOKENS, PLAYER_COLORS, profileManager, getTokenEmoji, renderTokenHTML, getProfileBg } from './profile.js';
+import { GAME_PRESETS, getPresetById } from './presets.js';
+import { sound } from './audio.js';
+import { applyDiceSkinToElement, getDiceSkin, create2DDiceHTML, renderDicePipsHTML } from './dice-skins.js';
+import { formatTitleBadge } from './titles.js';
+import { getThemedTileData, getMapThemeById } from './map-themes.js';
+
+export function showToast(message) {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+  while (container.children.length >= 2) {
+    container.firstChild.remove();
+  }
+  const toast = document.createElement('div');
+  toast.className = 'md-toast';
+  toast.innerText = message;
+  container.appendChild(toast);
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(-15px) scale(0.9)';
+    toast.style.transition = 'all 0.2s ease';
+    setTimeout(() => toast.remove(), 200);
+  }, 2600);
+}
+
+export function showConfirm(title, desc, onOk) {
+  const modal = document.getElementById('modal-confirm');
+  if (!modal) {
+    if (onOk) onOk();
+    return;
+  }
+  document.getElementById('confirm-modal-title').innerText = title;
+  document.getElementById('confirm-modal-desc').innerText = desc;
+  modal.classList.add('active');
+
+  const btnOk = document.getElementById('btn-confirm-ok');
+  const btnCancel = document.getElementById('btn-confirm-cancel');
+
+  const newOk = btnOk.cloneNode(true);
+  const newCancel = btnCancel.cloneNode(true);
+  btnOk.parentNode.replaceChild(newOk, btnOk);
+  btnCancel.parentNode.replaceChild(newCancel, btnCancel);
+
+  newOk.onclick = () => {
+    modal.classList.remove('active');
+    if (onOk) onOk();
+  };
+
+  newCancel.onclick = () => {
+    modal.classList.remove('active');
+  };
+}
+
+export class UIRenderer {
+  constructor() {
+    this.boardEl = null;
+    this.tokensContainerEl = null;
+    this.sidebarPlayersEl = null;
+    this.actionLogEl = null;
+    this.callbacks = {};
+    this.isAnimating = false;
+    this.lastState = null;
+    this.myPlayerId = null;
+    this.customTiles = {}; // per-lobby tile name/desc overrides
+    this.mapTheme = 'classic'; // selected map theme
+  }
+
+  // Apply custom tile overrides and rebuild the board
+  setCustomTiles(customTiles) {
+    this.customTiles = customTiles || {};
+    this.renderBoardGrid();
+    if (this.lastState) {
+      this.update(this.lastState, this.myPlayerId);
+    }
+  }
+
+  // Apply map theme and rebuild the board
+  setMapTheme(mapThemeId) {
+    this.mapTheme = mapThemeId || 'classic';
+    this.renderBoardGrid();
+    if (this.lastState) {
+      this.update(this.lastState, this.myPlayerId);
+    }
+  }
+
+  // Get tile data with map theme and custom overrides applied
+  getTile(tileId) {
+    const base = BOARD_TILES[tileId];
+    if (!base) return base;
+    return getThemedTileData(base, this.mapTheme, this.customTiles);
+  }
+
+  init(callbacks) {
+    this.callbacks = callbacks;
+    this.boardEl = document.getElementById('board-grid');
+    this.tokensContainerEl = document.getElementById('tokens-overlay');
+    this.sidebarPlayersEl = document.getElementById('sidebar-players');
+    this.actionLogEl = document.getElementById('action-log');
+
+    this.renderBoardGrid();
+    this.initEventListeners();
+  }
+
+  // --- RENDER 11x11 BOARD GRID ---
+  renderBoardGrid() {
+    if (!this.boardEl) return;
+    this.boardEl.innerHTML = '';
+
+    const gridMap = this.calculateGridPositions();
+
+    BOARD_TILES.forEach((baseTile) => {
+      const tile = this.getTile(baseTile.id); // apply custom overrides
+      const pos = gridMap[baseTile.id];
+      const tileDiv = document.createElement('div');
+      tileDiv.className = `tile tile-${tile.type}`;
+      tileDiv.id = `tile-${tile.id}`;
+      tileDiv.style.gridColumn = pos.col;
+      tileDiv.style.gridRow = pos.row;
+
+      // Show custom badge if tile has been renamed
+      const isCustom = !!(this.customTiles[tile.id] || this.customTiles[String(tile.id)]);
+
+      let colorHeader = '';
+      if (tile.type === 'street') {
+        const groupInfo = COLOR_GROUPS[tile.group];
+        colorHeader = `<div class="tile-header-color" style="background-color: ${groupInfo.color}">${isCustom ? '<span class="tile-custom-badge">✏️</span>' : ''}</div>`;
+      }
+
+      let inner = '';
+      const tileIconHtml = tile.icon ? `<div class="tile-icon">${tile.icon}</div>` : '';
+
+      if (tile.type === 'corner') {
+        tileDiv.classList.add('tile-corner');
+        inner = `
+          ${tileIconHtml}
+          <div class="tile-name">${tile.name}</div>
+        `;
+      } else if (tile.type === 'chance' || tile.type === 'chest') {
+        inner = `
+          ${tileIconHtml}
+          <div class="tile-name">${tile.name}</div>
+          <div class="tile-price sub-price">${tile.type === 'chance' ? 'Шанс' : 'Казна'}</div>
+        `;
+      } else if (tile.type === 'tax') {
+        inner = `
+          ${tileIconHtml}
+          <div class="tile-name">${tile.name}</div>
+          <div class="tile-price tax-price">-$${tile.taxAmount}</div>
+        `;
+      } else if (tile.type === 'station') {
+        inner = `
+          ${tileIconHtml}
+          <div class="tile-name">${tile.name}${isCustom ? ' ✏️' : ''}</div>
+          <div class="tile-price">$${tile.price}</div>
+        `;
+      } else if (tile.type === 'utility') {
+        inner = `
+          ${tileIconHtml}
+          <div class="tile-name">${tile.name}${isCustom ? ' ✏️' : ''}</div>
+          <div class="tile-price">$${tile.price}</div>
+        `;
+      } else {
+        inner = `
+          ${colorHeader}
+          <div class="tile-improvements" id="improvements-${tile.id}"></div>
+          <div class="tile-name">${tile.name}</div>
+          ${tileIconHtml}
+          <div class="tile-price">$${tile.price}</div>
+        `;
+      }
+
+      tileDiv.innerHTML = `
+        ${inner}
+        <div class="tile-owner-indicator" id="owner-bar-${tile.id}"></div>
+      `;
+
+      tileDiv.addEventListener('mouseenter', (e) => {
+        this.showTileHoverCard(tile.id, e);
+      });
+      tileDiv.addEventListener('mousemove', (e) => {
+        this.updateTileHoverCardPos(e);
+      });
+      tileDiv.addEventListener('mouseleave', () => {
+        this.hideTileHoverCard();
+      });
+
+      tileDiv.addEventListener('click', () => {
+        sound.playClick();
+        this.hideTileHoverCard();
+        this.showTileDeedModal(tile.id);
+      });
+
+      this.boardEl.appendChild(tileDiv);
+    });
+
+    // Center area (Interactive Cockpit with 3D Dice and Action Cards)
+    const centerDiv = document.createElement('div');
+    centerDiv.className = 'board-center';
+    centerDiv.innerHTML = `
+      <div class="center-header" style="justify-content: center;">
+        <div id="turn-badge" class="turn-status-badge">Ожидание...</div>
+      </div>
+      
+      <div class="jackpot-pool-badge" id="jackpot-badge" style="display: none;">
+        <span>Фонд стоянки:</span>
+        <span id="jackpot-amount">$0</span>
+      </div>
+
+      <!-- 2D Wheel Dice Stage -->
+      <div class="dice-stage" id="dice-stage">
+        <div class="dice-2d-container" id="dice-2d-container">
+          <div id="die-1-slot">${create2DDiceHTML('classic', 1, 'die-slot-1')}</div>
+          <div id="die-2-slot">${create2DDiceHTML('classic', 1, 'die-slot-2')}</div>
+        </div>
+      </div>
+
+      <!-- Center Action Cards -->
+      <div class="center-action-cards">
+        <button id="btn-roll-card" class="action-card card-primary ready-to-roll" title="Бросить кубики">
+          <div class="card-icon"><i class="ph ph-dice-five"></i></div>
+          <div class="card-text">
+            <div class="card-title">Бросить кубики</div>
+            <div class="card-subtitle" id="roll-card-hint">Ваш ход</div>
+          </div>
+        </button>
+
+        <button id="btn-end-turn-card" class="action-card" disabled title="Завершить ход">
+          <div class="card-icon"><i class="ph ph-arrow-circle-right"></i></div>
+          <div class="card-text">
+            <div class="card-title" id="end-turn-title">Завершить ход</div>
+            <div class="card-subtitle" id="end-turn-subtitle">Передать ход</div>
+          </div>
+        </button>
+
+        <button id="btn-manage-card" class="action-card" title="Управление недвижимостью">
+          <div class="card-icon"><i class="ph ph-buildings"></i></div>
+          <div class="card-text">
+            <div class="card-title">Недвижимость</div>
+            <div class="card-subtitle">Постройка и продажа</div>
+          </div>
+        </button>
+
+        <button id="btn-trade-card" class="action-card" title="Обмен карточками">
+          <div class="card-icon"><i class="ph ph-handshake"></i></div>
+          <div class="card-text">
+            <div class="card-title">Обмен</div>
+            <div class="card-subtitle">Трейд карточками</div>
+          </div>
+        </button>
+      </div>
+
+      <!-- Auto Turn Option -->
+      <div class="auto-turn-container">
+        <button id="btn-toggle-auto-end" class="auto-end-chip active" type="button" title="Автоматически передавать ход через 3 сек">
+          <i class="ph ph-lightning"></i>
+          <span id="auto-end-label">Авто-ход: <b>ВКЛ</b></span>
+        </button>
+      </div>
+    `;
+    this.boardEl.appendChild(centerDiv);
+    this.initBoardCenterEventListeners();
+  }
+
+  calculateGridPositions() {
+    const map = {};
+    map[0] = { col: 11, row: 11 };
+    for (let i = 1; i <= 9; i++) map[i] = { col: 11 - i, row: 11 };
+    map[10] = { col: 1, row: 11 };
+    for (let i = 11; i <= 19; i++) map[i] = { col: 1, row: 11 - (i - 10) };
+    map[20] = { col: 1, row: 1 };
+    for (let i = 21; i <= 29; i++) map[i] = { col: (i - 20) + 1, row: 1 };
+    map[30] = { col: 11, row: 1 };
+    for (let i = 31; i <= 39; i++) map[i] = { col: 11, row: (i - 30) + 1 };
+    return map;
+  }
+
+  // --- STANDARD CLASSIC DICE ROLL ANIMATION ---
+  animateDiceRoll(finalDice, onComplete, skinId = null) {
+    const activeSkin = skinId || profileManager.profile.diceSkin || 'classic';
+    this.isAnimating = true;
+    sound.playDiceRoll();
+
+    const die1El = document.querySelector('#die-1-slot .dice-2d-item');
+    const die2El = document.querySelector('#die-2-slot .dice-2d-item');
+    const container = document.getElementById('dice-2d-container');
+
+    if (!die1El || !die2El) {
+      if (onComplete) onComplete();
+      this.isAnimating = false;
+      return;
+    }
+
+    applyDiceSkinToElement(die1El, activeSkin);
+    applyDiceSkinToElement(die2El, activeSkin);
+
+    die1El.classList.remove('rolling-1', 'landing-pop');
+    die2El.classList.remove('rolling-2', 'landing-pop');
+    if (container) container.classList.remove('doubles-glow');
+
+    // Force DOM reflow to cleanly restart animations
+    void die1El.offsetWidth;
+    void die2El.offsetWidth;
+
+    // Start classic shake/bounce animation
+    die1El.classList.add('rolling-1');
+    die2El.classList.add('rolling-2');
+
+    // Fast cycling through random values
+    const shuffleInterval = setInterval(() => {
+      const rand1 = Math.floor(Math.random() * 6) + 1;
+      const rand2 = Math.floor(Math.random() * 6) + 1;
+      const img1 = die1El.querySelector('.dice-pixel-img');
+      const img2 = die2El.querySelector('.dice-pixel-img');
+      if (img1) img1.src = `assets/dice/dice_${rand1}_normal.png`;
+      if (img2) img2.src = `assets/dice/dice_${rand2}_normal.png`;
+
+      const face1 = die1El.querySelector('.dice-face');
+      const face2 = die2El.querySelector('.dice-face');
+      if (face1) {
+        face1.className = `dice-face face-${rand1}`;
+        face1.innerHTML = renderDicePipsHTML(rand1);
+      }
+      if (face2) {
+        face2.className = `dice-face face-${rand2}`;
+        face2.innerHTML = renderDicePipsHTML(rand2);
+      }
+    }, 45);
+
+    // Stop shuffling and settle on final values
+    setTimeout(() => {
+      clearInterval(shuffleInterval);
+      const img1 = die1El.querySelector('.dice-pixel-img');
+      const img2 = die2El.querySelector('.dice-pixel-img');
+      if (img1) img1.src = `assets/dice/dice_${finalDice[0]}_normal.png`;
+      if (img2) img2.src = `assets/dice/dice_${finalDice[1]}_normal.png`;
+
+      const face1 = die1El.querySelector('.dice-face');
+      const face2 = die2El.querySelector('.dice-face');
+      if (face1) {
+        face1.className = `dice-face face-${finalDice[0]}`;
+        face1.innerHTML = renderDicePipsHTML(finalDice[0]);
+      }
+      if (face2) {
+        face2.className = `dice-face face-${finalDice[1]}`;
+        face2.innerHTML = renderDicePipsHTML(finalDice[1]);
+      }
+      die1El.setAttribute('data-value', finalDice[0]);
+      die2El.setAttribute('data-value', finalDice[1]);
+    }, 520);
+
+    // Finish roll with landing bounce pop
+    setTimeout(() => {
+      die1El.classList.remove('rolling-1');
+      die2El.classList.remove('rolling-2');
+      die1El.classList.add('landing-pop');
+      die2El.classList.add('landing-pop');
+
+      sound.playCash();
+
+      if (finalDice[0] === finalDice[1] && container) {
+        container.classList.add('doubles-glow');
+      }
+
+      this.isAnimating = false;
+      if (onComplete) onComplete();
+    }, 650);
+  }
+
+  // --- STEP-BY-STEP TOKEN HOPPING ANIMATION ---
+  animateTokenStepByStep(player, fromTile, toTile, onComplete) {
+    if (fromTile === toTile) {
+      if (onComplete) onComplete();
+      return;
+    }
+
+    this.isAnimating = true;
+    const totalSteps = (toTile - fromTile + 40) % 40;
+    let step = 0;
+    let currentPos = fromTile;
+
+    const isFast = localStorage.getItem('monopoly_fast_anim') === '1';
+    const stepDelay = isFast ? 55 : 110;
+    const finishDelay = isFast ? 80 : 180;
+
+    const interval = setInterval(() => {
+      step++;
+      currentPos = (currentPos + 1) % 40;
+      this.positionSingleToken(player, currentPos);
+      sound.playTokenStep();
+
+      if (step >= totalSteps) {
+        clearInterval(interval);
+        this.isAnimating = false;
+        setTimeout(() => {
+          if (onComplete) onComplete();
+        }, finishDelay);
+      }
+    }, stepDelay);
+  }
+
+  positionSingleToken(player, tilePos) {
+    if (!this.tokensContainerEl || !this.boardEl) return;
+    const boardRect = this.boardEl.getBoundingClientRect();
+    const tileEl = document.getElementById(`tile-${tilePos}`);
+    if (!tileEl) return;
+
+    const tileRect = tileEl.getBoundingClientRect();
+    let tokenEl = document.getElementById(`token-${player.id}`);
+    if (!tokenEl) {
+      tokenEl = document.createElement('div');
+      tokenEl.className = 'board-token';
+      tokenEl.id = `token-${player.id}`;
+      this.tokensContainerEl.appendChild(tokenEl);
+    }
+
+    tokenEl.innerHTML = renderTokenHTML(player.token, player.customToken);
+    tokenEl.style.borderColor = player.color;
+    tokenEl.style.top = `${tileRect.top - boardRect.top + (tileRect.height / 2) - 15}px`;
+    tokenEl.style.left = `${tileRect.left - boardRect.left + (tileRect.width / 2) - 15}px`;
+  }
+
+  // --- UPDATE BOARD STATE ---
+  update(state, myPlayerId) {
+    if (!state) return;
+    this.lastState = state;
+    this.myPlayerId = myPlayerId;
+
+    // 1. Update Jackpot badge
+    const jackpotBadge = document.getElementById('jackpot-badge');
+    const jackpotAmount = document.getElementById('jackpot-amount');
+    if (state.settings?.freeParkingJackpot && jackpotBadge) {
+      jackpotBadge.style.display = 'inline-flex';
+      jackpotAmount.innerText = `$${state.jackpotPool || 0}`;
+    } else if (jackpotBadge) {
+      jackpotBadge.style.display = 'none';
+    }
+
+    // 2. Update Properties on Board
+    for (const [tileId, prop] of Object.entries(state.properties)) {
+      const ownerBar = document.getElementById(`owner-bar-${tileId}`);
+      const improvementsEl = document.getElementById(`improvements-${tileId}`);
+
+      if (ownerBar) {
+        if (prop.ownerId) {
+          const owner = state.players.find(p => p.id === prop.ownerId);
+          ownerBar.style.backgroundColor = owner ? owner.color : 'transparent';
+          if (prop.isMortgaged) {
+            ownerBar.style.backgroundImage = 'repeating-linear-gradient(45deg, #000 0, #000 3px, transparent 3px, transparent 6px)';
+          } else {
+            ownerBar.style.backgroundImage = 'none';
+          }
+        } else {
+          ownerBar.style.backgroundColor = 'transparent';
+        }
+      }
+
+      if (improvementsEl) {
+        improvementsEl.innerHTML = '';
+        if (prop.houses === 5) {
+          improvementsEl.innerHTML = `<div class="hotel-pip" title="Отель"></div>`;
+        } else if (prop.houses > 0) {
+          for (let h = 0; h < prop.houses; h++) {
+            improvementsEl.innerHTML += `<div class="house-pip" title="Дом"></div>`;
+          }
+        }
+      }
+    }
+
+    // 3. Update Tokens (if not currently hopping)
+    if (!this.isAnimating) {
+      this.updateTokens(state.players);
+    }
+
+    // 4. Update Dice
+    if (state.dice && !this.isAnimating) {
+      const curPlayer = state.players ? state.players[state.currentTurn] : null;
+      const skin = curPlayer?.diceSkin || profileManager.profile.diceSkin || 'classic';
+
+      let d1 = document.querySelector('#die-1-slot .dice-2d-item');
+      let d2 = document.querySelector('#die-2-slot .dice-2d-item');
+      if (d1 && d2) {
+        applyDiceSkinToElement(d1, skin);
+        applyDiceSkinToElement(d2, skin);
+
+        const img1 = d1.querySelector('.dice-pixel-img');
+        const img2 = d2.querySelector('.dice-pixel-img');
+        if (img1) img1.src = `assets/dice/dice_${state.dice[0]}_normal.png`;
+        if (img2) img2.src = `assets/dice/dice_${state.dice[1]}_normal.png`;
+
+        const face1 = d1.querySelector('.dice-face');
+        const face2 = d2.querySelector('.dice-face');
+        if (face1) {
+          face1.className = `dice-face face-${state.dice[0]}`;
+          face1.innerHTML = renderDicePipsHTML(state.dice[0]);
+        }
+        if (face2) {
+          face2.className = `dice-face face-${state.dice[1]}`;
+          face2.innerHTML = renderDicePipsHTML(state.dice[1]);
+        }
+        d1.setAttribute('data-value', state.dice[0]);
+        d2.setAttribute('data-value', state.dice[1]);
+      }
+    }
+
+    // 5. Update Sidebar Players
+    this.renderSidebarPlayers(state, myPlayerId);
+
+    // 6. Update Action Logs
+    this.renderLogs(state.logs);
+
+    // 7. Update Center Action Cards
+    this.updateCenterActionCards(state, myPlayerId);
+
+    // 8. Handle Modals
+    if (!this.isAnimating) {
+      this.handleModals(state, myPlayerId);
+    }
+  }
+
+  updateTokens(players) {
+    if (!this.tokensContainerEl || !this.boardEl) return;
+    const boardRect = this.boardEl.getBoundingClientRect();
+    if (boardRect.width === 0) return;
+
+    const posGroups = {};
+    players.forEach((p) => {
+      if (p.isBankrupt) return;
+      if (!posGroups[p.position]) posGroups[p.position] = [];
+      posGroups[p.position].push(p);
+    });
+
+    const currentTokenIds = new Set(players.filter(p => !p.isBankrupt).map(p => `token-${p.id}`));
+    Array.from(this.tokensContainerEl.children).forEach(el => {
+      if (!currentTokenIds.has(el.id)) el.remove();
+    });
+
+    for (const [pos, list] of Object.entries(posGroups)) {
+      const tileEl = document.getElementById(`tile-${pos}`);
+      if (!tileEl) continue;
+
+      const tileRect = tileEl.getBoundingClientRect();
+      const relativeTop = tileRect.top - boardRect.top;
+      const relativeLeft = tileRect.left - boardRect.left;
+
+      list.forEach((player, offsetIdx) => {
+        let tokenEl = document.getElementById(`token-${player.id}`);
+        if (!tokenEl) {
+          tokenEl = document.createElement('div');
+          tokenEl.className = 'board-token';
+          tokenEl.id = `token-${player.id}`;
+          this.tokensContainerEl.appendChild(tokenEl);
+        }
+
+        tokenEl.innerHTML = renderTokenHTML(player.token, player.customToken);
+        tokenEl.style.borderColor = player.color;
+        const offsetX = (offsetIdx % 2) * 14;
+        const offsetY = Math.floor(offsetIdx / 2) * 14;
+
+        tokenEl.style.top = `${relativeTop + (tileRect.height / 2) - 15 + offsetY}px`;
+        tokenEl.style.left = `${relativeLeft + (tileRect.width / 2) - 15 + offsetX}px`;
+      });
+    }
+  }
+
+  renderSidebarPlayers(state, myPlayerId) {
+    if (!this.sidebarPlayersEl) return;
+    this.sidebarPlayersEl.innerHTML = '';
+
+    state.players.forEach((player, idx) => {
+      const isCurrentTurn = state.currentTurn === idx;
+      const isMe = player.id === myPlayerId;
+      const card = document.createElement('div');
+      card.className = `player-card-sidebar ${isCurrentTurn ? 'current-turn' : ''} ${player.isBankrupt ? 'bankrupt' : ''} ${player.hasLeft ? 'player-left' : ''}`;
+
+      const bgDef = getProfileBg(player.bg || player.profileBg);
+      const hasCustomBg = bgDef && bgDef.id !== 'default';
+      if (hasCustomBg && !player.hasLeft && !player.isBankrupt) {
+        card.style.background = bgDef.bgStyle;
+        card.style.border = bgDef.borderStyle;
+        if (bgDef.glow) card.style.boxShadow = bgDef.glow;
+      }
+
+      let propertyDots = '';
+      Object.entries(state.properties).forEach(([tileId, prop]) => {
+        if (prop.ownerId === player.id) {
+          const tile = BOARD_TILES[tileId];
+          const color = COLOR_GROUPS[tile.group]?.color || '#888888';
+          propertyDots += `<div class="color-dot" style="background-color: ${color}" title="${tile.name}"></div>`;
+        }
+      });
+
+      let statusHtml = '';
+      if (player.hasLeft) {
+        statusHtml = `<span class="player-status-tag tag-left"><i class="ph ph-sign-out"></i> Покинул матч</span>`;
+      } else if (player.isBankrupt) {
+        statusHtml = `<span class="player-status-tag tag-bankrupt">Банкрот</span>`;
+      } else if (player.inJail) {
+        statusHtml = `<span class="player-status-tag tag-jail">В тюрьме</span>`;
+      } else {
+        const curTile = BOARD_TILES[player.position];
+        statusHtml = `Клетка: ${curTile?.icon ? curTile.icon + ' ' : ''}${curTile?.name || 'Вперёд'}`;
+      }
+
+      const displayName = player.hasLeft ? `<s>${player.name}</s>` : player.name;
+      const meTag = isMe ? '<span style="font-size: 0.75rem; color: var(--md-primary); font-weight: 500;">(Вы)</span>' : '';
+      const titleBadgeHtml = formatTitleBadge(player.title || 'novice');
+
+      card.innerHTML = `
+        <div class="player-card-head">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="sidebar-player-token-slot" style="display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; font-size: 1.3rem;">
+              ${renderTokenHTML(player.token, player.customToken)}
+            </span>
+            <div>
+              <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+                <span style="font-weight: 700; font-size: 0.95rem; color: ${player.hasLeft ? 'var(--md-outline)' : (hasCustomBg ? bgDef.textColor : player.color)};">
+                  ${displayName} ${meTag}
+                </span>
+                ${titleBadgeHtml}
+              </div>
+              <div style="font-size: 0.75rem; color: ${hasCustomBg ? bgDef.tagColor : 'var(--md-on-surface-variant)'}; margin-top: 2px;">
+                ${statusHtml}
+              </div>
+            </div>
+          </div>
+          <div class="player-cash" style="${player.hasLeft ? 'opacity: 0.45;' : (hasCustomBg ? `color: ${bgDef.textColor};` : '')}">$${player.cash}</div>
+        </div>
+        ${propertyDots ? `<div class="player-property-pills">${propertyDots}</div>` : ''}
+      `;
+
+      card.style.cursor = 'pointer';
+      card.title = 'Нажмите, чтобы открыть профиль игрока';
+      card.addEventListener('click', () => {
+        if (this.callbacks.onShowPlayerProfile) {
+          this.callbacks.onShowPlayerProfile(player, state);
+        }
+      });
+
+      this.sidebarPlayersEl.appendChild(card);
+    });
+  }
+
+  renderLogs(logs) {
+    if (!this.actionLogEl || !logs) return;
+    this.actionLogEl.innerHTML = logs.map(l => `
+      <div class="log-entry">
+        <span style="opacity: 0.6; font-size: 0.7rem;">[${l.time}]</span> ${l.text}
+      </div>
+    `).join('');
+  }
+
+  // --- UPDATE CENTER ACTION CARDS ---
+  updateCenterActionCards(state, myPlayerId) {
+    const curPlayer = state.players[state.currentTurn];
+    const isMyTurn = curPlayer && (curPlayer.id === myPlayerId || state.isLocalMode);
+
+    const btnRollCard = document.getElementById('btn-roll-card');
+    const btnEndTurnCard = document.getElementById('btn-end-turn-card');
+    const btnManageCard = document.getElementById('btn-manage-card');
+    const btnTradeCard = document.getElementById('btn-trade-card');
+    const turnBadge = document.getElementById('turn-badge');
+    const rollHint = document.getElementById('roll-card-hint');
+
+    if (!btnRollCard || !btnEndTurnCard) return;
+
+    if (btnTradeCard) {
+      const activeMeId = (state.isLocalMode && curPlayer) ? curPlayer.id : myPlayerId;
+      const me = state.players.find(p => p.id === activeMeId);
+      const otherActivePlayers = state.players.filter(p => p.id !== activeMeId && !p.isBankrupt && !p.hasLeft);
+      const canTrade = Boolean(me && !me.isBankrupt && !me.hasLeft && state.status === 'PLAYING' && otherActivePlayers.length > 0);
+      btnTradeCard.disabled = !canTrade;
+      if (!canTrade) {
+        btnTradeCard.title = (otherActivePlayers.length === 0) ? 'Нет доступных игроков для обмена' : 'Обмен недоступен';
+      } else {
+        btnTradeCard.title = 'Обмен карточками';
+      }
+    }
+
+    if (!isMyTurn || state.status !== 'PLAYING') {
+      btnRollCard.disabled = true;
+      btnEndTurnCard.disabled = true;
+      btnRollCard.classList.remove('ready-to-roll');
+      if (turnBadge) {
+        turnBadge.innerText = curPlayer ? `Ходит: ${curPlayer.name}` : '';
+        turnBadge.classList.remove('my-turn');
+      }
+      if (rollHint) rollHint.innerText = 'Ожидание соперника';
+    } else {
+      if (turnBadge) {
+        turnBadge.innerText = 'Ваш ход!';
+        turnBadge.classList.add('my-turn');
+      }
+
+      if (state.phase === 'ROLL') {
+        btnRollCard.disabled = false;
+        btnEndTurnCard.disabled = true;
+        btnRollCard.classList.add('ready-to-roll');
+        if (rollHint) rollHint.innerText = 'Нажмите для броска';
+      } else if (state.phase === 'ACTION') {
+        if (state.lastRollDoubles) {
+          // Doubles: must roll again — block End Turn, enable Roll
+          btnRollCard.disabled = false;
+          btnEndTurnCard.disabled = true;
+          btnRollCard.classList.add('ready-to-roll');
+          if (rollHint) rollHint.innerText = '🎲 Дубль! Броска ещё раз обязателен';
+          if (btnEndTurnCard) {
+            btnEndTurnCard.title = 'Нельзя завершить ход при дабле — бросьте кубики ещё раз';
+          }
+        } else {
+          btnRollCard.disabled = true;
+          btnEndTurnCard.disabled = false;
+          btnEndTurnCard.title = '';
+          btnRollCard.classList.remove('ready-to-roll');
+          if (rollHint) rollHint.innerText = 'Кубики брошены';
+          if (this.callbacks.checkAutoEnd) this.callbacks.checkAutoEnd();
+        }
+      } else {
+        btnRollCard.disabled = true;
+        btnEndTurnCard.disabled = true;
+        btnRollCard.classList.remove('ready-to-roll');
+      }
+    }
+  }
+
+  handleModals(state, myPlayerId) {
+    const curPlayer = state.players[state.currentTurn];
+    const isMyTurn = curPlayer && (curPlayer.id === myPlayerId || (!curPlayer.isBot && state.isLocalMode));
+
+    const buyModal = document.getElementById('modal-buy-property');
+    if (buyModal) {
+      if (state.phase === 'BUY_CHOICE' && isMyTurn) {
+        const tile = this.getTile(curPlayer.position);
+        const canAfford = curPlayer.cash >= tile.price;
+        const buyName = document.getElementById('buy-prop-name');
+        const buyPrice = document.getElementById('buy-prop-price');
+        const btnBuy = document.getElementById('btn-confirm-buy');
+        if (buyName) buyName.innerText = `${tile.icon ? tile.icon + ' ' : ''}${tile.name}`;
+        if (buyPrice) {
+          buyPrice.innerText = `$${tile.price}${!canAfford ? ` (У вас: $${curPlayer.cash})` : ''}`;
+          buyPrice.style.color = canAfford ? 'var(--md-primary)' : 'var(--md-error)';
+        }
+        if (btnBuy) {
+          btnBuy.disabled = !canAfford;
+          btnBuy.innerText = canAfford ? 'Купить' : 'Недостаточно денег';
+        }
+        buyModal.classList.add('active');
+      } else {
+        buyModal.classList.remove('active');
+      }
+    }
+
+    const cardModal = document.getElementById('modal-card');
+    if (cardModal) {
+      if (state.phase === 'CARD_EVENT' && state.activeCard && isMyTurn) {
+        document.getElementById('card-title').innerText = state.activeCard.title;
+        document.getElementById('card-desc').innerText = state.activeCard.desc;
+        cardModal.classList.add('active');
+      } else {
+        cardModal.classList.remove('active');
+      }
+    }
+
+    const winModal = document.getElementById('modal-winner');
+    if (winModal) {
+      if (state.status === 'FINISHED' && state.winner) {
+        const winNameEl = document.getElementById('winner-name');
+        if (winNameEl) winNameEl.innerText = `${state.winner.name} победил!`;
+        if (!winModal.classList.contains('active')) {
+          winModal.classList.add('active');
+          sound.playWin();
+          if (this.callbacks.onGameFinished) {
+            this.callbacks.onGameFinished(state);
+          }
+        }
+      } else {
+        winModal.classList.remove('active');
+      }
+    }
+  }
+
+  showTileHoverCard(tileId, e) {
+    if (localStorage.getItem('monopoly_tooltips') === '0') return;
+    const popover = document.getElementById('tile-hover-popover');
+    if (!popover) return;
+    popover.innerHTML = this.renderTileDeedHTML(tileId, true);
+    popover.style.display = 'block';
+    this.updateTileHoverCardPos(e);
+    requestAnimationFrame(() => {
+      popover.classList.add('visible');
+    });
+  }
+
+  hideTileHoverCard() {
+    const popover = document.getElementById('tile-hover-popover');
+    if (!popover) return;
+    popover.classList.remove('visible');
+    setTimeout(() => {
+      if (!popover.classList.contains('visible')) {
+        popover.style.display = 'none';
+      }
+    }, 150);
+  }
+
+  updateTileHoverCardPos(e) {
+    const popover = document.getElementById('tile-hover-popover');
+    if (!popover || popover.style.display === 'none') return;
+    const cardWidth = 290;
+    const cardHeight = popover.offsetHeight || 320;
+    const padding = 16;
+
+    let x = e.clientX + 16;
+    let y = e.clientY + 16;
+
+    if (x + cardWidth > window.innerWidth - padding) {
+      x = e.clientX - cardWidth - 16;
+    }
+    if (y + cardHeight > window.innerHeight - padding) {
+      y = window.innerHeight - cardHeight - padding;
+    }
+    if (x < padding) x = padding;
+    if (y < padding) y = padding;
+
+    popover.style.left = `${x}px`;
+    popover.style.top = `${y}px`;
+  }
+
+  renderTileDeedHTML(tileId, isPopover = false) {
+    const tile = this.getTile(tileId);
+    if (!tile) return '';
+
+    const state = this.lastState;
+    const prop = state?.properties ? state.properties[tileId] : null;
+    const owner = prop?.ownerId ? state.players?.find(p => p.id === prop.ownerId) : null;
+    const isMe = Boolean(owner && owner.id === this.myPlayerId);
+
+    let groupColor = '#334155';
+    let groupName = '';
+    if (tile.group && COLOR_GROUPS[tile.group]) {
+      groupColor = COLOR_GROUPS[tile.group].color;
+      groupName = COLOR_GROUPS[tile.group].name;
+    } else if (tile.type === 'station') {
+      groupColor = '#475569';
+      groupName = 'Вокзал';
+    } else if (tile.type === 'utility') {
+      groupColor = '#334155';
+      groupName = 'Служба';
+    } else if (tile.type === 'tax') {
+      groupColor = '#dc2626';
+      groupName = 'Налог';
+    } else if (tile.type === 'chance') {
+      groupColor = '#f59e0b';
+      groupName = 'Шанс';
+    } else if (tile.type === 'chest') {
+      groupColor = '#3b82f6';
+      groupName = 'Казна';
+    } else {
+      groupColor = '#1e293b';
+      groupName = 'Поле';
+    }
+
+    // Owner Status HTML
+    let ownerStatusHtml = '';
+    if (tile.type === 'street' || tile.type === 'station' || tile.type === 'utility') {
+      if (owner) {
+        const ownerName = isMe ? `${owner.name} (Вы)` : owner.name;
+        const mortgagedTag = prop?.isMortgaged ? ' <span style="color:#f87171; font-weight:700;">[Заложено]</span>' : '';
+        ownerStatusHtml = `
+          <div class="deed-owner-status-bar">
+            <span class="deed-owner-tag" style="color: ${owner.color || '#38bdf8'}">
+              <span class="deed-owner-dot" style="background-color: ${owner.color || '#38bdf8'};"></span>
+              ${ownerName}${mortgagedTag}
+            </span>
+            <span style="color: var(--md-on-surface-variant); font-size: 0.72rem;">Куплено</span>
+          </div>
+        `;
+      } else {
+        ownerStatusHtml = `
+          <div class="deed-owner-status-bar">
+            <span style="color: #94a3b8;"><i class="ph ph-shopping-bag"></i> Свободно</span>
+            <span style="color: #4ade80; font-weight: 700;">$${tile.price}</span>
+          </div>
+        `;
+      }
+    }
+
+    // Determine current active level & active rent
+    let currentRentText = '';
+    let activeLevelKey = '';
+
+    if (tile.type === 'street') {
+      if (prop?.isMortgaged) {
+        currentRentText = '$0 (В залоге)';
+        activeLevelKey = 'mortgaged';
+      } else if (prop && prop.houses === 5) {
+        currentRentText = `$${tile.rent[5]}`;
+        activeLevelKey = 'hotel';
+      } else if (prop && prop.houses > 0) {
+        currentRentText = `$${tile.rent[prop.houses]}`;
+        activeLevelKey = `house_${prop.houses}`;
+      } else if (prop && prop.ownerId) {
+        const groupProps = COLOR_GROUPS[tile.group]?.tiles || [];
+        const hasMonopoly = groupProps.length > 0 && groupProps.every(id => state?.properties?.[id]?.ownerId === prop.ownerId && !state?.properties?.[id]?.isMortgaged);
+        if (hasMonopoly) {
+          currentRentText = `$${tile.rent[0] * 2} (Монополия)`;
+          activeLevelKey = 'monopoly';
+        } else {
+          currentRentText = `$${tile.rent[0]}`;
+          activeLevelKey = 'base';
+        }
+      } else {
+        currentRentText = `$${tile.rent[0]}`;
+        activeLevelKey = 'base';
+      }
+    } else if (tile.type === 'station') {
+      if (prop?.isMortgaged) {
+        currentRentText = '$0 (В залоге)';
+        activeLevelKey = 'mortgaged';
+      } else if (prop && prop.ownerId) {
+        const stationIds = [5, 15, 25, 35];
+        const ownedStations = stationIds.filter(id => state?.properties?.[id]?.ownerId === prop.ownerId && !state?.properties?.[id]?.isMortgaged).length;
+        const rentTiers = [25, 50, 100, 200];
+        const rentVal = rentTiers[Math.max(0, Math.min(3, (ownedStations || 1) - 1))];
+        currentRentText = `$${rentVal}`;
+        activeLevelKey = `station_${ownedStations || 1}`;
+      } else {
+        currentRentText = '$25';
+        activeLevelKey = 'station_1';
+      }
+    } else if (tile.type === 'utility') {
+      if (prop?.isMortgaged) {
+        currentRentText = '$0 (В залоге)';
+        activeLevelKey = 'mortgaged';
+      } else if (prop && prop.ownerId) {
+        const utilIds = [12, 28];
+        const ownedUtils = utilIds.filter(id => state?.properties?.[id]?.ownerId === prop.ownerId && !state?.properties?.[id]?.isMortgaged).length;
+        currentRentText = ownedUtils >= 2 ? '10x бросок' : '4x бросок';
+        activeLevelKey = ownedUtils >= 2 ? 'util_2' : 'util_1';
+      } else {
+        currentRentText = '4x бросок';
+        activeLevelKey = 'util_1';
+      }
+    }
+
+    let currentRentBanner = '';
+    if (tile.type === 'street' || tile.type === 'station' || tile.type === 'utility') {
+      currentRentBanner = `
+        <div class="deed-current-rent-banner">
+          <span class="deed-current-rent-label">Текущая аренда</span>
+          <span class="deed-current-rent-value">${currentRentText}</span>
+        </div>
+      `;
+    }
+
+    let bodyHtml = '';
+    if (tile.type === 'street') {
+      bodyHtml = `
+        <div class="rent-row-dark ${activeLevelKey === 'base' ? 'active-level' : ''}">
+          <span class="rent-label-dark">Базовая аренда:</span>
+          <span class="rent-val-dark">$${tile.rent[0]}</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'monopoly' ? 'active-level' : ''}">
+          <span class="rent-label-dark">С монополией (x2):</span>
+          <span class="rent-val-dark">$${tile.rent[0] * 2}</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'house_1' ? 'active-level' : ''}">
+          <span class="rent-label-dark">С 1 домом 🏠:</span>
+          <span class="rent-val-dark">$${tile.rent[1]}</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'house_2' ? 'active-level' : ''}">
+          <span class="rent-label-dark">С 2 домами 🏠🏠:</span>
+          <span class="rent-val-dark">$${tile.rent[2]}</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'house_3' ? 'active-level' : ''}">
+          <span class="rent-label-dark">С 3 домами 🏠🏠🏠:</span>
+          <span class="rent-val-dark">$${tile.rent[3]}</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'house_4' ? 'active-level' : ''}">
+          <span class="rent-label-dark">С 4 домами 🏠🏠🏠🏠:</span>
+          <span class="rent-val-dark">$${tile.rent[4]}</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'hotel' ? 'active-level' : ''}">
+          <span class="rent-label-dark">С отелем 🏨:</span>
+          <span class="rent-val-dark">$${tile.rent[5]}</span>
+        </div>
+      `;
+    } else if (tile.type === 'station') {
+      bodyHtml = `
+        <div class="rent-row-dark ${activeLevelKey === 'station_1' ? 'active-level' : ''}">
+          <span class="rent-label-dark">1 вокзал 🚂:</span>
+          <span class="rent-val-dark">$25</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'station_2' ? 'active-level' : ''}">
+          <span class="rent-label-dark">2 вокзала 🚂🚂:</span>
+          <span class="rent-val-dark">$50</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'station_3' ? 'active-level' : ''}">
+          <span class="rent-label-dark">3 вокзала 🚂🚂🚂:</span>
+          <span class="rent-val-dark">$100</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'station_4' ? 'active-level' : ''}">
+          <span class="rent-label-dark">4 вокзала 🚂🚂🚂🚂:</span>
+          <span class="rent-val-dark">$200</span>
+        </div>
+      `;
+    } else if (tile.type === 'utility') {
+      bodyHtml = `
+        <div class="rent-row-dark ${activeLevelKey === 'util_1' ? 'active-level' : ''}">
+          <span class="rent-label-dark">1 предприятие 💡:</span>
+          <span class="rent-val-dark">4x броска</span>
+        </div>
+        <div class="rent-row-dark ${activeLevelKey === 'util_2' ? 'active-level' : ''}">
+          <span class="rent-label-dark">2 предприятия 💡🚰:</span>
+          <span class="rent-val-dark">10x броска</span>
+        </div>
+      `;
+    } else {
+      bodyHtml = `
+        <div style="padding: 10px 8px; font-size: 0.85rem; color: #cbd5e1; line-height: 1.45;">
+          ${tile.desc || 'Особая клетка игрового поля.'}
+          ${tile.taxAmount ? `<div style="margin-top: 6px; color: #f87171; font-weight: 700;">Налог: $${tile.taxAmount}</div>` : ''}
+        </div>
+      `;
+    }
+
+    let footerHtml = '';
+    if (tile.type === 'street') {
+      footerHtml = `
+        <div class="deed-footer-dark">
+          <div>Постройка: <b>$${tile.houseCost}</b></div>
+          <div>Цена покупки: <b>$${tile.price}</b></div>
+        </div>
+      `;
+    } else if (tile.type === 'station' || tile.type === 'utility') {
+      footerHtml = `
+        <div class="deed-footer-dark">
+          <div>Цена покупки: <b>$${tile.price}</b></div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="property-deed-dark">
+        <div class="deed-header-dark" style="background: linear-gradient(135deg, ${groupColor}, rgba(15,23,42,0.85));">
+          <div class="deed-title-row">
+            <span class="deed-title">${tile.icon ? tile.icon + ' ' : ''}${tile.name}</span>
+            <span class="deed-group-pill">${groupName}</span>
+          </div>
+        </div>
+        ${ownerStatusHtml}
+        ${currentRentBanner}
+        <div class="deed-body-dark">
+          ${bodyHtml}
+        </div>
+        ${footerHtml}
+      </div>
+    `;
+  }
+
+  showTileDeedModal(tileId) {
+    const tile = BOARD_TILES[tileId];
+    if (!tile) return;
+
+    const modal = document.getElementById('modal-deed');
+    const content = document.getElementById('deed-modal-content');
+    if (!modal || !content) return;
+
+    content.innerHTML = this.renderTileDeedHTML(tileId, false);
+    modal.classList.add('active');
+  }
+
+  initBoardCenterEventListeners() {
+    // Primary Action Card: Roll Dice
+    const btnRollCard = document.getElementById('btn-roll-card');
+    if (btnRollCard) {
+      btnRollCard.onclick = () => {
+        if (this.isAnimating) return;
+        if (this.callbacks.onRoll) this.callbacks.onRoll();
+      };
+    }
+
+    // Dice Stage click to roll
+    const diceStage = document.getElementById('dice-stage');
+    if (diceStage) {
+      diceStage.onclick = () => {
+        const btnRoll = document.getElementById('btn-roll-card');
+        if (btnRoll && !btnRoll.disabled && !this.isAnimating) {
+          btnRoll.click();
+        }
+      };
+    }
+
+    // Secondary Action Card: End Turn
+    const btnEndTurnCard = document.getElementById('btn-end-turn-card');
+    if (btnEndTurnCard) {
+      btnEndTurnCard.onclick = () => {
+        if (this.isAnimating) return;
+        sound.playClick();
+        if (this.callbacks.onEndTurn) this.callbacks.onEndTurn();
+      };
+    }
+
+    // Tertiary Action Card: Manage Properties
+    const btnManageCard = document.getElementById('btn-manage-card');
+    if (btnManageCard) {
+      btnManageCard.onclick = () => {
+        sound.playClick();
+        if (this.callbacks.onManageProperties) this.callbacks.onManageProperties();
+      };
+    }
+
+    // Quaternary Action Card: Trade Cards
+    const btnTradeCard = document.getElementById('btn-trade-card');
+    if (btnTradeCard) {
+      btnTradeCard.onclick = () => {
+        if (btnTradeCard.disabled) return;
+        sound.playClick();
+        if (this.callbacks.onTrade) this.callbacks.onTrade();
+      };
+    }
+
+    // Auto-End Turn Toggle Chip
+    const btnToggleAutoEnd = document.getElementById('btn-toggle-auto-end');
+    if (btnToggleAutoEnd) {
+      btnToggleAutoEnd.onclick = () => {
+        sound.playClick();
+        if (this.callbacks.onToggleAutoEnd) this.callbacks.onToggleAutoEnd();
+      };
+    }
+  }
+
+  initEventListeners() {
+    this.initBoardCenterEventListeners();
+
+    document.getElementById('btn-confirm-buy')?.addEventListener('click', () => {
+      sound.playCash();
+      document.getElementById('modal-buy-property')?.classList.remove('active');
+      if (this.callbacks.onBuy) this.callbacks.onBuy();
+    });
+
+    document.getElementById('btn-decline-buy')?.addEventListener('click', () => {
+      sound.playClick();
+      document.getElementById('modal-buy-property')?.classList.remove('active');
+      if (this.callbacks.onPass) this.callbacks.onPass();
+    });
+
+    document.getElementById('btn-card-ok')?.addEventListener('click', () => {
+      sound.playClick();
+      document.getElementById('modal-card')?.classList.remove('active');
+      if (this.callbacks.onCardOk) this.callbacks.onCardOk();
+    });
+
+    document.querySelectorAll('[data-close-modal]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const modal = e.target.closest('.md-modal-backdrop');
+        if (modal) modal.classList.remove('active');
+      });
+    });
+
+    document.querySelectorAll('.md-modal-backdrop').forEach(backdrop => {
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) {
+          backdrop.classList.remove('active');
+        }
+      });
+    });
+  }
+
+  renderTradeHistoryModal(tradeHistory = []) {
+    const listEl = document.getElementById('trade-history-list');
+    if (!listEl) return;
+
+    if (!tradeHistory || tradeHistory.length === 0) {
+      listEl.innerHTML = `
+        <div style="text-align: center; color: var(--md-on-surface-variant); padding: 36px 16px;">
+          <i class="ph ph-handshake" style="font-size: 2.2rem; opacity: 0.4; display: block; margin-bottom: 8px;"></i>
+          В этой игре пока не было заключено ни одной сделки
+        </div>
+      `;
+      return;
+    }
+
+    listEl.innerHTML = tradeHistory.map(r => {
+      const fromCardsHtml = (r.fromCardNames && r.fromCardNames.length > 0)
+        ? r.fromCardNames.map(n => `• ${n}`).join('<br>')
+        : '';
+      const fromCashHtml = r.fromCash > 0 ? `• $${r.fromCash}` : '';
+      const fromEmpty = !fromCardsHtml && !fromCashHtml ? '<span style="opacity:0.6;">Ничего</span>' : '';
+
+      const toCardsHtml = (r.toCardNames && r.toCardNames.length > 0)
+        ? r.toCardNames.map(n => `• ${n}`).join('<br>')
+        : '';
+      const toCashHtml = r.toCash > 0 ? `• $${r.toCash}` : '';
+      const toEmpty = !toCardsHtml && !toCashHtml ? '<span style="opacity:0.6;">Ничего</span>' : '';
+
+      return `
+        <div class="trade-history-card">
+          <div class="trade-history-head">
+            <span>🤝 ${r.fromName} ⇄ ${r.toName}</span>
+            <span style="font-size: 0.75rem; opacity: 0.7; font-weight: normal;">${r.time || ''}</span>
+          </div>
+          <div class="trade-history-details">
+            <div>
+              <b style="color: var(--md-primary);">${r.fromName} отдал:</b><br>
+              ${fromCardsHtml}${fromCardsHtml && fromCashHtml ? '<br>' : ''}${fromCashHtml}${fromEmpty}
+            </div>
+            <div>
+              <b style="color: var(--md-primary);">${r.toName} отдал:</b><br>
+              ${toCardsHtml}${toCardsHtml && toCashHtml ? '<br>' : ''}${toCashHtml}${toEmpty}
+            </div>
+          </div>
+          ${r.commission > 0 ? `<div style="font-size: 0.75rem; color: var(--md-error); margin-top: 6px;">Уплачена комиссия 10%: $${r.commission}</div>` : ''}
+        </div>
+      `;
+    }).join('');
+  }
+
+  showToast(message) {
+    showToast(message);
+  }
+
+  showConfirm(title, desc, onOk) {
+    showConfirm(title, desc, onOk);
+  }
+
+  showWinnerModal(winner) {
+    sound.playWin();
+    const modal = document.getElementById('modal-winner');
+    if (modal) {
+      modal.classList.add('active');
+    }
+  }
+}
+
+export const ui = new UIRenderer();
+ui.showToast = showToast;
+ui.showConfirm = showConfirm;

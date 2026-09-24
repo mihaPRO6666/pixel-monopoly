@@ -1,1 +1,398 @@
-function a4_0x479d(_0x4ab6b3,_0x40bf48){_0x4ab6b3=_0x4ab6b3-0x1e5;const _0x2b6df2=a4_0x2b6d();let _0x479da7=_0x2b6df2[_0x4ab6b3];if(a4_0x479d['QuJamk']===undefined){var _0x3e6053=function(_0x4ca1d0){const _0x35eb1b='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x5bb412='',_0x36ed15='';for(let _0xb134d6=0x0,_0x5b0e72,_0x3c10e9,_0x1570f1=0x0;_0x3c10e9=_0x4ca1d0['charAt'](_0x1570f1++);~_0x3c10e9&&(_0x5b0e72=_0xb134d6%0x4?_0x5b0e72*0x40+_0x3c10e9:_0x3c10e9,_0xb134d6++%0x4)?_0x5bb412+=String['fromCharCode'](0xff&_0x5b0e72>>(-0x2*_0xb134d6&0x6)):0x0){_0x3c10e9=_0x35eb1b['indexOf'](_0x3c10e9);}for(let _0x2cff31=0x0,_0x5babab=_0x5bb412['length'];_0x2cff31<_0x5babab;_0x2cff31++){_0x36ed15+='%'+('00'+_0x5bb412['charCodeAt'](_0x2cff31)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x36ed15);};a4_0x479d['vYAILl']=_0x3e6053,a4_0x479d['qcvDEQ']={},a4_0x479d['QuJamk']=!![];}const _0xe709b2=_0x2b6df2[0x0];a4_0x479d['tAprYG']!==_0xe709b2&&(a4_0x479d['qcvDEQ']={},a4_0x479d['tAprYG']=_0xe709b2);const _0x1e7a30=a4_0x479d['qcvDEQ'][_0x4ab6b3];return _0x1e7a30===undefined?(_0x479da7=a4_0x479d['vYAILl'](_0x479da7),a4_0x479d['qcvDEQ'][_0x4ab6b3]=_0x479da7):_0x479da7=_0x1e7a30,_0x479da7;}function a4_0x2b6d(){const _0x4edacd=['0kdqVTgb0ylqVTcY0yhqUTcW0y8G0l3qSncXlG','0k3qU9c10lRrGTga0l7rGDc10ylqUcdqS9c+0ydqVTc00laG0l3qScdqNDc10llqTq','0jdrJDga0l7qV9c+0ydrGIbewei','0j/rGnc+0yhqV9c10lRrGIdqN9c+0lhqTDc00lJrGTc10lVqTDc5','0jlqVTc30ltrG9gi0l3rI9c1incY0l7rGnc+0ylqSca','0khrGTcW0ydqTDc50yJqSngpinc/0lVqVTgj0ldqTngmincF0ldrGnc40lBqScdqUcdqTnc+0lWG0jprJTcZ0l4','oIdqOnc10lFqUnc00lxqVDgg0lJrJW','0khqSnc80yVqUsdqUTga0ldrGDc40llrI9c5inc/0ydqVTgb0l/qTDc60yiG0lZqUnga0la','0klqVTga0lpqVTcY0l4T0ydqSnc30llqU9c10lRqSngc0lxqU9gm0l3rI9c5ingf0ldqSsa','0j/qTDgi0lxrHDc+0ltqVDcW0y8G0lVqTDcZ0lxqVDc00laG0jZqVTgb0lRqSTgl','0jtqTTgd0lZqTDc50ydqScdqKDc40yC','0kpqU9c40yBqScdqVnc+0lVqVTc00lxqTTc90l7qUsdqVnc+0ltrIYdqOTcW0lRrJDgb0lJrGTcW','0khrGTcW0ydqTDc50yJqTDc1inc80lxrGTga0l4G0lZqUnga0laGkfrOzsbuDwjLkq','0j3qTDcX0l7rGDc60ydqTDcX0ySG0llqVTc60ydrG9cZinc/0ydqUngb0ylqSnc90lGG0ltqU9gpingb0ypqV9c10ydrJ9gf0yi','0khqSnc80ldrJYdqS9c70ypqSDc+0lRqSngpingb0ylqSnc90yBqUngpimkR0jdrGngb0lxqVDcW0lVrJnc90ldrJ8k7','0j/qU9c+0yNqSnc00yWG0khqVTcZ0lVqSngb0lJrJW','0jZrG9c30lxqUcdqUcdqUTc+0ydqVTc70lxqSTgb0lRqUnc5inc00llqVTga0lxrHG','0jtrG9cX0ldqUsdqNncW0ydqUnc90la','0jdqU9c80ldrGTgl0k3qVDc10ydqS9c+0khqSDgl0yi','oIdqN9cv0j3qOTcL0jdqO9cH','0jRrGngd0l/qVDc10lNrInc40lKG0ylrGncW0l3qT9c40ylqVDgl0lKG0ypqT9c10lSG0l/qVTc0incC0y3qTnc40yhqVTc9incH0lRqSTc10ya','0jVqUnc90lJrJYdqR9c80ldqVDc+0ylrJq','mJu3mtCWowvcCfjcEa','0jpqVTga0l3rI9c5inct0lJqS9cW0l3rGG','0kJrGTcW0leT0lRqSTcW0ydrGTc40ydrIYdqUTga0ypqV9c90lxqUDgi0lJrHsdqUTc+0ydqV9c+0ydqSngg0lJqUq','0kpqUY4G0kNrG9gb0lxqSTcW','0j/qTDgh0lxrGngb0lO','0j/qSnga0lOG0l3qScdqSDgl0llrInc10lKG0y3rGDgc0ldqUTcW0ltqTsdqTTc10lVqTDc30l3qVTc5inc00l7rGnc+0lpqUa','0jFqSncY0l7qTcdqVnc+0ydrGDc60l7qS9c+inc+0l/rGnc10yhqVDc10l3qUngpincY0l7qTngl','0jBqUncY0l7qV9c40yhqVDcW0y8G0l3qSncX0lxrGnc10lBqVDcW0y8G0jtqVDc10l/rGncW','0kxrGncW0lWG0khrJDc90yhqVI3qTnc30lGG0lGG0ylrGncW0ltqUngg0lJqUa','oIdqODgc0ldrGngclIdqO9c70lJrHTcW','0klrGnc+0lRqSnc00lxrGnc+','0jZqTDc00lxrGW','0j/qVTc10lFqTncWifrhvIdqVDcWincB0ldqT9gd0ydqVDgl0lKG0lhqTDga0lxqSW','0jRqTDc90yhqUnc90lprGTc+0l0','0jlqTDga0yxqVDc40lKG0jpqVTga0l7qTa','0khqSnc00l7qSTc+0luG0lRqVTc70yZrHTc+inc4inc+0yhqVTcX0l3rJ9c60lG','DhjPBq','nda5nxjpt3bcsa','0kpqUY4G0jZqSnc70ldrJYdqKDga0l7qVDc90ldrJW','0khrGTcW0l3rHTc40y8GWQVqN9c70l7rIDcW0ltrJcdqM9c10l3qUnc90ldcUW','oIdqN9ga0l7rGDc/0lxqUTgc','0jZqUnc90yhqUTc+0luG0jZqTDgc0ydqVG','0khrGTcW0l3rHTc40y8G0khqUnc90ltqT9go0lRrGW','odKZotbRqwrrCg8','0jRqSnc90ldqUYdqODc10l0T0jZqSnga0ylqTDc9','0khrGTga0lJrGI3qSnga0yiSincY0lJqVDgc0ldqTIdqUcdqUTcW0ydrGnc4','0j/qUY4G0khqSTc+0lhqVTc00yS','0khrGTc10lRqU9gp0l3qVDcW0y8G0l/qUnga0ldqVnc40ltqScdqUcdqNnc+0l3qScdqM9c40lFqSa','0jVqVTc90ltqVTc90yhqUTc40lKGvw5KzxjNCM91BMq','0khqVnc+0lVqTDc90yhqUTcW0y8G0l/qUY4','0khqV9cW0yeG0l3qScdqMTga0l7qSTc4inc4incr0ldqVDc60l7qSTgb0lRqUnc5inc80l7rGDgc','0kprJDc90l4','0jRqVTc6lDcI0l7qSDc1','0jJqVnc/0lxrGncW0ylqVTga0yhqUTc40lKG0jtqSTc+0ydqTDgg','0jtrGnc+0lFqTngl','0jZqUnc90yhqUI3qKnga0lxqVDcW','0jdrGDcW0lRrG9gb0la','oIdqPTc10l3rGTga','0jJrGDgc0l7rGnc40yFqTDgb0lRqUnc5inga0ldqUDc+0l0G0jFqSnc80l7rGDc60llqVTga0lxrH9gm0y8','rw1PCMf0zxmGsgLSBhm','ugvUBIbtDgf0Aw9U','0j/qUnc60ldqTnc40lVqU9c4','0jRqSTcW0ydrGTcW0lSG0yxrG9c00l7qTTc90lJqUTc+0liG0lGG0l/qSnc90l7rGncW0lZqVDgl0lKG0l/qSnga0lO','0jhqVTga0lJrGDc/0l7qU9gm','0jpqU9cW0llqVDcW0y8G0lhqSnga0l3qSngpingd0lVqUngg0laG0lpqVTga0l7qTncW','0j3qTDc+0l3qVTcY0yVqTsdrJDc60ydqSnc90ySG0lGG0k3rGnc+0ye','0j/rGnc+0yhqV9c10lRrGIdqKnc70yWT0ktqSnga0ldqSDc4','0jhqVTgc0ldqVDc40yFqTDgb0lRqUnc5ingb0ldqTcdqUcdqKTc70ldqTnc40lZqUnga0yhqUTc40lKG0yhqVTcX0l7rGa','nZGWoda4mhv2ww1LsG','0jhqTDgb0l/qUnc70l7rGTc90yVqUsdqV9c+0lxqT9c0ingh0lxrGnc10lCG0kdqSnc00ypqTTc90yVqUsdqVnc+0yhrGG','0j/qSngainc4ingn0lVqTDc60ylrGnc40yFqTDgb0ylqSTc+incD0yZrJI3qMDc+0ydqUTcW','0khqSnc80ldqUW','0jZqUnc90yhqUI3qN9cW0yhrGDcW0lBqUnga0yhqUTc40lK','mtyWmZq3oxf0zLjKsG','0jpqU9cW0llqVDgl0lKG0lZqTDc20ltrG9c90ldrGnc+0ltqVDgl0lKG0ldrJDga0l7qV9c+0ydrGG','0jhrGnc+0ltqSTc10lK','0kJqTDc00lxqSTgaincW0yaT0ltqTDc60l4G0yeG0l7rGnc70ldqVnc4','0jRqUnc10liT0j/qSngb0ye','0jlqSngb0lJqU9gm0lxqSTgb0lRqUnc5inc+lDcY','0jhqTDc50lRqTDgalDcH0ylrGnc40yiGmJiXqG','0jlqU9cW0ltqUnc80lJrGngb0lRqUnc5inc/0ydqVTgb0l8U','0jlqLncD0jmG0jRqUnc10li','0jpqVTga0llqVTc00l7qUTcW0l3qSnc7incq0lVqVncW0ylrIW','0jhqSngi0l3rJYdqODcY0l7qSDc+0ltrIYaXnZC2inge0yprGTc+0li','0jpqU9cW0llqVDgl0luG0llqVTga0l7rGTcWincYincH0ldqVDc60yiT0j/qTDgc0lxrGncX0yprGncZ','0jFqTDc70lxqVDgl0lKG0ydqSnc50l7qVsdqMnc30lZqSnc50lVqVTcY0l4','0j/qSnc70yZqVncWincu0lBrG9c80lxqUDga0la','0jhqTDcY0lxrGnc70lGT0kxqUnc70lVqTYdqKDc70lJqTTc90lxqS9c+incs0l7rGDgc0l7qUTcW','0jdqUTcW0ltqTDc80lJrH9c10yhqUTc40lKG0ydqSnc50l7qVsdqUnc90yhrGTc40ylrG9gc0l7qSG','odyXodaZmMH2qwXMCa','0jhrG9gaincu0ypqSDcW0lK','0jBrG9c70y/qVDgl','0jFqVTc70l7rGTgl0luG0jlqVTga0l7rGTcW','oIdqNDcW0lhqTDga0lxqTTc90ldrJW','0khqSnc80l7qTsdqSDc+0lVrJngi0l7qTsdqUTc+0lVqTDgb0l4G0l7qSDc+0lFrGnc10l3qUngp','0j/qU9cW0ylrHnc+0ydqVncWidKGmY80inc4incv0llrGnc+0yhrGTcW0ya','0jRqSnc90ldrGTc90ldrJYdqTnc+0ydqVTcZ0laSingp0lhqU9c+0lRqVIdqUcdrGTc10lVqTDcX0ldrInc90y8','0jpqU9cW0llqVDcW0y8G0l/qSnga0ldqTnc90ldrJYdrG9c70lJrHTcWincC0l7rGDc60llrIW','0jhqTDc70l7rGDc90lxqTTc90yVqTsdqV9c70y/qTTc4ingi0lxqUDgf0l7qSG','oIdqLncY0l7rGnc10yy','0jlqUnc00l7qSTcW0y8G0l/qU9c+0yNqSnc00lRqScaZnJaG0lprGncW0ltrG9gb0l7qSG','rurgiezYyw5Jzq','0jhqUnga0lBqScbowvnfinc4incq0ylqSnc60yprJTgj0lJqUsdqSDgl0lO','0jtqVTgb0ylqVTc10llrGDc60lJqUsdqUcdrGDc+0lhqVTga','0jBqUnc70l7qUsdqVncW0yhrGDc40liG','0jZqTDcZ0yprGnc+','0jRqVTc70l7rGnc40ylqVDgl0lKG0ylqVTga0lpqVTcY0yVqUsdrGncW0lNqVTc9','0jJrGDgc0l7rGnc40yFqTDgb0lRqVTc1incH0ldqTnc+0llqVTc1inc60l7qU9gm0yBqVG','0kJqTDc50yuG0jFqSnc10lqG0kdqVTgd0lq','0k3qVDc10ydqS9c10ylqUnc60laG0ktrGncW0l3rHTc40lG','0jpqVTcZ0l7qU9c10llrGDc60lJqUsdqSDgd0lSU','0khqUTc+0ydqVTgb0ylqVDcW0y8G0lVqUnc90lJrJYa','0khqUncX0yprJYbtA3K','0j/rG9gi0lRqUnc90yhqUTcW0y8G0l/qUY4','0kxqSnga0ldqTnc30y7qUTgd','incs0l7qTnc+0lRqSnc90ldqUW','0khqSnc80yVqUsdqT9cW0lprGngd0lBqTDc90l3rI9c5incY0l7qUTc30ldqUYdqVnc40ydqSa','0jtqTTc10l3rGTc70yZqVnc10l3rGDc60lJqTsdqUTc70ypqSDglinc4incH0lxqVDgclDcu0lBqTDc50lZrGq','0jxrGDc10l3rGTcW0lKG0jZqVTc70lSGkevZzw50ywKP','0jhqSnc30lJqU9c40lRqScdqODcW0lRrGnc1lDcA0zhrGcdqUcdqUTcW0lhqSnga0luG0jZrG9c70lxqVsdqOngd0ly','0jhqUnc30l3qTDgbincr0y3qUq','0jBqUncY0l7qV9c40yhqVDgl0lKG0jVqVTgi0lJrHTc60lJqUsdqV9cW0ydqUG','0j/qUY4G0jZqSngp0lRqVTcY0yhqUTc+0lpqVG','0j3qSncXlIdqPnc+0l3rGTcW0l3qUTc4','0jRqVTc90lGT0jdqUDc70lxqVDc0','0jRqUnc10liG0jZqTDgc0ydqVG','0jRrGngd0l/qVDc10lNrInc40lKG0l/qTDga0lxrGDcW0ltqVTgh0l3rI9c5ingd0lFqTDc7inc80lxrGTga0l4','0kpqUY4G0kdrG9cX0lJqVDgi0ylqTDc50l3qSa','0jlqUnc0inc90laG0jZqSnc90yxrJDgc0ylqTDc90yhqUTc40lKG0lZqVTgb0yiG0lZqTDc20ltrGYdqT9c00ldqVDc40y/qVnc4','0khqVTge0lJqUDgb0lRqUnc5ingb0l7qSDc+0yaG0lGG0j7qV9c10ydqVDgl0lKG0ylqTDcW0ylrGa','0j3qSncXlIdqNnc+0lNqUTc4','0jFqVDcW0lZqTDc90lJrGTgl0lKG0ydrI9cX0l3rI9c5inga0yVqVDc+0lOG0lGG0yhrG9gi0lG','0jRqVTc90yBqTDga0ylqVDgl0lKG0lFqSnc7inc4incZ0l7rGDgc0lJqVDc40yBqScdqN9c10lRqUnc9','0j3qTDcY0yhqUTc40lKG0l/rGnc+0yhqV9c10lRrGG','0khqVTgb0l3qVTcY0yVqUsdqSDc+0yaG0lGG0ldrGTgc0ydqSnc60yBqUnc+0l3rIW','0j/qSnga0lOG0lRqSnc80l3qTDc5inc4ieLulDc60lVqSngb0ylqTDga','0jlqVTc30l3qTDgb0lxqVDgb0lRqUnc5ingb0l7qSDc+0yaG0lhqTDc3inc10ltqUnc90l7qS9c+incZ0llqVTc30ltrJW','0j/qSnga0lOG0khqU9cW0llrIW','0k3qU9c40ylqVDgl0lKG0yxqVTc70lZqUngb0ylrI9c5inga0ldqUDc+0l0','0jZqVTgb0lRqVTcY0yhqUTc40lKG0llqVTc60lFqSnc7','0jVqUnc/0lRqUcaO0jhqSnc90lRqVTcY0ldrJYK','0jRrG9c70yZrGTgd0ydqVDgl0lKG0yBqTDc90ylrGcdqUcdrGTc10ldrGTga0yS','0jRrGngd0l/qVDcW0y8G0ylrGncW0l3rGDc/0l7rGngc0l3qSngpincW0ydrGTc10ydqUngp','0kdqVTgb0lRqVTgi0yWSincX0yprGTc40lRqUcdqUcdrGDcW0lZrI9c1inc00l7rGnc+0lpqUnc1inc60llqSnc00ydqSngc0l3rI9c1inc80lxrGTga0yS','oIdqKDgd0lVrJncY0ldrGa','0kdrG9gb0ldqVDc+0llqUTcW','0jVqUnc+0l3rGDc60lJqUsdqSTc+0lRqT9cW0lS','0jZqSnc50ltqSnc9','0jhrGnc40lOT0jVqTDc50l0','0khqTDga0ltrHTc1inc4inc00yprIncWincH0ldqVDc60yiT0j/qTDgc0lxrGncX0yprGncZ0la','oIdqODc60llqTDga','q2L0EsbxywXR','ntK2z0DYs25b','0jZqUnc90yhqUIdWN4EN8j+hVG','0khqVTgf0l4GkfnVsg8P','0k7qS9c+lDcY0l7rGDgc0l7rH9c90yVqUsdqV9ga0l7rGDc/0lxqUTgc','0kBqTDc90ylrGncW0lVrJnc90yVqUsdqSTc+0lRqT9cW0lSG0liG0yhqTDga0ltrHTc1incZ0l7rGnc+0ltqSa','0jBqUncY0l7qV9c40yhqVDgl0lKG0l/qSnga0lOG','0jlqVTc00l7rGDc90ldqSDc20lxqVDc40luG','oIdqPDcW0lKT0klqTDc6','0k3qVDc10ydqS9c+0yhqTDgc0yWG0jRqSnc90ylqVG','0jZqUnga0l7qSTcW0y8G0yhrGTc+0lVqUngg0laG0lZrJTc30lJqUTc70l7qSG','0khqTDcY0lxrGnc90yVqTsdqTTc10lVqTDc30l3qVTc00l7rGnc+0lBqVDgl0luG0llqVTga0l7rGTcW','0khrGTcW0ydqUnc90l3rI9c5inc60llqSnga0ylqSnc7incq0lVrJc3qPncW0yxqUnc00lG','C3rYzwv0CW','0kFqUnc20l7qSTc60laT0jdrGnc10l3qScdqUcdqSTc+0ltqVTgf0ydqSnc90lJqU9c40yNqTq','0kxqSnc5lDcB0ldqUDc9inc/0ldrGnc6','0jRqSTcW0ydrGTcW0lSG0lRrGncW0yhqVDgl0yuG0ytqVTc90ldrGnc10lKG0lGG0jpqVTc00lFqUnc70lVqSa','0klrGnc+0lJrHTc60l7qTsdqV9ga0lxqTnc80lxrGDgc0yZqTq','0jpqSnc30l/rGnc+0lWG0jdrGnc10l3qScdqUcdrJDc70lJrGTc90yVqTsdqV9cW0ydqUTc4','0jRrGnc10yhrGTc+0llrGDc60lJqUsdqVI3qSG','0jtqVTc8incO0lxrGnc70l7qUTcWincL0l7qU9c80yhqSa','0khrGTcW0ydqUnc90l3rI9c1inc60ypqV9c10yFqTDgb0lRqUnc1ingd0lVqVTgh0lRqUa','0jZqTDc20ltrG9c90ldrGnc+0ltqVDgl0lKG0yxqSncXincu0lBqVTc90laG0jRqTDc90l3qTDc00lG','0jVrG9cY0ya','0jpqU9cW0llqVDcW0y8G0ypqU9c40yBqScdrGDgc0l7qU9c40yBrIYdqO9c60ydqSnc40l3rIW','0jZqSnc70ldrJYdqKDc10lVqVTga0yprGDgb0lRqSngpinc20lxqU9c10lFqVDcW0y8G0ltqVTga0l7qS9cW','0khqSnc00l7qSTcW0y8G0ypqUY4','0jRrGncW0yhqUncY0lxqUDgi0lJqTsdrGDgc0ldqVDgg0lJqUcdqUnc3inc80ydqSnc80l7rGncW','0k3qVDc10ydqS9c+0yhqVDcW0lhqTTc10l3qUnc1inc/0ydqTDc00lpqVTga0lJqUq','0khqVTga0lhqVTc90l3qScWG0j/qSnc90ylqTDc+0l0G0lGG0lRqVDc40lBqVDgl0luG0lVqSncY0lRqUa','0j/qTDgi0lxrHDc+0ltqVDcW0y8G0ypqU9c40yBqScdrHDgd0ltqVTc20l3qUnc60l7qSIdqUcdqVngd0lFrI9c60ldqVDgc0l7qSG','0jlqVTga0l7rGTcWinc90laG0klrGncW0l3rGDgb0lJqSq','0jZqUnc90yhqUI3qNnc40ya','0khqTDga0ltrHTc1incZ0l7rGnc+0ltqScdqUcdrHnc+0l3rGTcW0l3rIW','0kpqU9c40yBqScdrHDgd0ltqVTc20l3qUnc60l7qSIdqUcdqKnc90ltrGnc10lxqSTgb0lRqSngpingg0lxrGnc60l7qSTgm','0j/qSnc90lOT0ydqVTc6lcdrGngl0l3qUTc4inc4inc60ldqVDcW0lVrIW','0jVqSngc0lJqVDgb0lRqUnc5inc60llqSnga0ylqSnc7','0jpqU9cW0llqVDcW0y8G0ylqVTga0lpqVTcY0ldrJYdqVnc40lVrJYdqLDcY0ydqVTc/0yS','0j/qSnc90l7rGncW0lZqVDgl0lKG0l/qVTc10lFqTcdqVDcW0lqG0lZqVTga0lxqVa','0jZqSnga0ypqVDc+0yprGTc4','0j7qSnc30lJrGsdrGnc10ltqUTc40yuG0ydqSngb0ylqTDc90lJqUq','0jVrJTc60yhqTDc80lhrG9ga0lprGDc60lJqUsdrGDcW0lq','0jRrGncW0yhqVDc+lDcX0lxqU9cW0y8G0llqUnc30lJrGTc90ldrJYdqUTcW0ydrGTc+0yFqUTcW','0jdqU9c80ldrGTgllte','0kJqVTgb0yhqTsdrHngd0ylrG9ga0lJrGDgc0lJrH9c10yhqUTc40yuG0l3qTDcX0l7rGDc60ydqTDcX0l7qSG','incT0l3qTDga0lpqVTgb0lxrGTgm','0khrGTcW0l3rHTc40y8G0klqVTc60lJqVG','0k3qU9c10lpqSnc90ylqVDgl0lKG0lJqT9cZ0lJqSsdqUcdqVncW0lpqSnc30lJqVDgl','0khqVTcY0ydqTDc80lxqVDc90yVqUsdqT9c10lVqTDc90yVqUsdqV9cW0ydqUIdrGYdqSTc+0ltrIW','0jVqTDc00l3qUnc60l7qSTcW0y8G0yFqUngb0ylqSngpincY0l7qTncW','0kprJTgc0l3rI9c5incs0ldrInc40l3qS9gc0l7qVs3rGDc60llqTDgainc4incX0l7qS9c10lZqSa','0kdqTDc80lJqT9c+0llqUTcW','C3rYAw5N','0khqSnc80yVqUsdqSDc+0lVrJngi0l7qUsdqVnc+0lVqUYdqVnc40ydqScdqUcdqSnc60llqSnga0lJrG9c8','0jlqUnc0inc90laG0jZqVTgb0lRqSTgdlDga0lxqUTgdinc4incH0lJrGTc4','0jtrG9cX0ldqUsdqNnc+0lVqUW','0jdrGngf0lJrGTc10lRrGTgd0ydqVDcW0y8G0ltqVTgb0ylqVTc/0ydqUnc80lxrH9cW0ylqTDc70yZqVDc+0yhrGTgmia','0khqTDcY0lxrGnc90yVqUsdqVnc+0ltqTDga0l0G0lGG0j/qTDgc0ydqVTc/0ldqSTc70l7qSTc60la','0jhrG9ga0ltqTIdqKnc70yWG0jdrGncW0le','0ktqVTc90ylqSnc90ySG0lGG0yhqUTcY0lxrGa','0jlqTDgb0ylqVnc40l3rGDgc0lxrGa','0j/qVTc/0ypqU9gp0ydqVDgl0lKG0l/rGnc+0lZqTDc90ldqTcdrGsdqUTc+0ytqTDc50l3rJ9c80lG','0jVqVTc90ltqVTc90yhqUTc40lKG0khqUngc0lG','0khrGTcW0l3rHTc40y8Gvw5PB24Gtwv0CM8','0jtrG9c80yhqUTcW0y8G0ypqUY4','0jtqUnc90ldqVnc40yFqVDgl0lKG0lVqTDcY0l7qSDc10ydqTDc20l3rI9c5inga0ldqUDc+0l0','0jRrGncW0lNrGDc70lxrGcdqKDc40lVqTnc40l3qSW','0kdqSngc0yprIncWlcdrGDc+0lhqVTga0ySG0lGG0lZqVTgj0lxqVDgl0luG0ypqU9c+0yFqUTc4','0k3qU9c40ylqVDgl0lKG0lRqVTgc0ylqTDc00lBqVDgl0lKG0lZqSngb0yhqUncY','0kpqUY4G0jBqUncX0lxqUIdqLTc+0lVrIYaO0jdrGncX0ldrGIK','0jZqUnc90yhqUTcs0l7qTnc+0lRqSnc90ldqUW','0jlqSnga0yJqSncY0yhqUTc+0luG0yJqVTgb0yhqTq','oIdqKncY0lxqVDgo','0j3qVTcY0lJqVDgb0lRqUnc5incX0ypqUY4','0j/qTDgi0lxrHDc+0ltqVDcW0y8G0ypqU9c40yBqScdrGsdqUTc+0ylqSnc80lG','BMfTzq','0kpqV9ga0ldqSTc70lxqVDc40luG0y3qU9c10lRrGTga0l4Tinc4incY0l7qTnc+0yhqVDcW0lhqTTc10l3qUngp','0jVqTDc90lJqVDcZ0ydqSnc00yhqUTc40lKG0llqVTc60lFqSnc7','0j/rGnc10yhrGTc40lBqVDcW0y8G0lRrGnc10l/qVTgb0ylrJca','0jVqSncY0ydrGDc60ldrJYdrG9c7lG','0jxqSTga0l7qV9c10lNrGDc60lJqUsdqV9ga0l7qVnc10l3qSnc0ingbinc/0ldqU9gm0lZqSnc80lG','0j/rGncW0llqUngc0lxqU9gm0yhrGTcY0lxqVDc90yVqUsdqUcdrGDcW0lZrI9c5inc00l7rGnc+0lpqVTc5inga0ldqUDc+0l0','zw50CMLLCW','0jZqVTc90l7rGnc10lVrJngbincU0ydqUnc60ldqVnc+0lZrJq','0jhqSngb0ylqUnc70lJrJW','0kpqUY4G0jRqSnga0lVqScdqNncW0ydqUTgb0la','0j/rGnc+0lZqTDc90ldqTcWG0l/qU9gp0lBqUcdqUcdrJ9gf0yiT0lRqU9gd0le','0jtqVTga0l7qS9cWinc6incA0lJqTDcY0l4T0j/qTDgh0lxrGngb0lRqVTc5incB0ldqSTga0lu','0jpqUnc90ltqT9cW','0k3rGnc80lJrGTcW0lyG0lGG0lZqVTgb0ylrIYdqVDcW0lqG0j3qTDcY0l7qUq','0jtrGnc10llqVDc10lNrInc10luG0lZqTDgb0ylqVIdqVTgb0l3qVTcY0ldqVDc40y8G0lpqVTga0l7qTncW','0jlrHDc+0ltrIYdqSIdrGDgc0lJqU9c1incW0yaT0l3rG9cY0l4G0k3qUTgc0l7rGncWinct0lJqVncW0ydqSa','0j7rGDc+0lRqVTga0lRqUa','0jtrG9cX0ldqUDgb0lRqUnc1incK0l7qVDgc0ldqVDgl','0khqSnc50ydqSnc9','0j7qS9c+0ydqVTc00l3rI9c5inc/0ydqVTc10lFqTa','0jdqU9c10lRrGDcW0l3qTnga0l7qSTgb0lRqSngpinc60l7qU9c+0l3qVDcWinc4incx0lJqVnc90lJqUsdqTncY0l7rGnc10yy','0j/qTDga0llqSngpincF0ldrGnc60l7qSTcW0y8','0jlrI9gb0yJqSngpingc0l7rH9c60laG0jFqSnc40lVqUnc50yhqUTc+0lpqVIdqKnc70ldrGTcW0ymGndK3osdqVa','0klqVTc60lJqVIdWN4EV8j+hTq','0kFqUngb0ylqTDc50yJqSngpincW0lRqSTc10ltrG9c60l3qSngpincY0l7qTncW','0j3qTDcX0l7rGDc60ydqTDcXifn1BNnOAw5LidyW','qxrSyw50AxmGvgHLifjVEwfS','0jtrG9cX0ldqUsdWN4EM8j+hQG','0kBqTDc90ylrGncW0lVrJnc90yVqUsdrGDgc0lxqUTc70y/qVDc90yVqUsdqSTc+0lRqT9cW0lS','0khqSnc00ySG0jRqVTc60zeG0lGG0lZqVTgb0yiG0j3qUnc00lFrJTcX0ldrGDc4','Dg9vChbLCKnHC2u','mtCWnZnPwKzltKq','0jlqVTc00l7qV9cW0ltrIYWG0llqVTc00l7rHDga0ldqVDc40lVqUngj0luG0lGG0y3qU9c40ylqVDgl0lKG0ydqSnc50l7qVq','0j3qSngg0lJqVTc90ldqU9gm0l3rI9c5incW0y3rGnc+0l/qVTga0yi','0jtqVTga0l7qS9cWinc6incY0yVrGDc+0lRqVTcZ0l7rGngm0y4G0jZqTDc00lxrGW','0jhrGnc40ylqSnc90yhqUTcW0y8G0y3qVDc10ydqS9c+0yhqUngb0ylqTDc80la','0jlrI9gb0l7rH9cW0lNrInc10luG0lFqTncW0l3qUnc1inc/0lVqSnc90lxrGTglidGYocdqVnc10ylrGnc+0li','0khqUnc80llqVTc7ingb0llqVTcX0l7qTnglinc90laG0l7rGDgc0ydqVTcY0luG0khqSTc+0lhqVTc00yS','0jhqSngi0l3rJYbfC2vUDgfPifrVD2vYinc4incX0yprGTc40lRqUa','0j3qVTgc0ylqUnc90lmT0kxqUnc70lS','0jRqSnc90y3rGnc4lDcJ0l7rGnge','0kprJTgc0l3rI9c5inc/0lxrGnc10ypqU9c+0lOG','0kpqUY4G0j/qVTc70y/qVDc60la','0kJqTDc00lxqSTgaincW0ydrHDc40ylqTDc60ylqVTga0laG0kNrG9gb0lxqSTcW','0kpqUnc70yZrJ9c80yhqSDgd0ydqSW','0jRqSnc30ldqVDgb0lRqUnc5incY0l7qUTc30ldqUW','0jZqTDgc0ydqVTc/0l7qU9c40ylqTDc9ia','0khrGTcW0ylrG9gpincH0llqVTcX0l7qTngl','0j3rJngolDcz0l7rGnc60yhqUTc+0luG0jZqTDgc0ydqVG','0jtqTDga0lxqSTgp0l3qVDgl0lKG0l/rGnc+0lZqTDc90ldqTcdqUcdqUTc+0lVqTDgb0l4G0l7qSDc+0lFrGnc10l3qUngp','0jJrGDgc0l7rGnc40yFqTDgb0lRqUnc5incy0yhrGI3qRDc90lq','0jlqVTc00l7qUTcW0l3qSnc7incH0j/qSq','0k3qUDge0lxqU9c10llqScdqKDcW0yJqVDgp','0j7qS9c90lGG0l3qVTgh0l3qVTcZ0l4G0j/qSnga0lJqTTcW','oIdqKDcW0yJqVDgp','0k3qUTgb0l/qVTgg0lxqVDgc0yaG0lGG0ytqTDgb0ylqUncY0ldqU9gm0l3rI9c5ingf0ldqSq','0j7qTTc40llqU9c10l3qVDcW0y8G0ypqU9c40yBqSca','0jZqVTc90lZqSnga0ylrGa','0jRqUnc10llrGDc60ldrJYdqKTc10l3qTDgg0lJrJYdrGsdrHnc+0l3rGTcW0l3qSnc80lGG0l3qScdqUTcW0l3qSnc70lu','0jdrGnc60ldqTnglinc4ingb0ldqTcdqOTgo0lJqU9gm0ydqUa','0j7qVnc+0ylrJDgb0ldqVDc00l4','0khqTDcY0lxrGnc90yVqUsdqSTc+0lRqT9cW0lS','0jZqVTc90ypqVnc10l3rGIdqN9c+0lhqTDc00ySG0lGG0llqTDgh0l3rI9c5inc+0lpqVTc90yW','0j7qTnc40l0G0lJqTYdrGDcW0lZrI9gfinc30ldqS9ga0ypqTTc10l3qVDgl0yuG0yxqSncX0l7qSIdqVnc40ydqSa','0kBqSTc10ylrG9gj0ldrJYdrGDcW0lRrG9ga0laG0llqTnc+0lVrJcdrGnc10lRqUa','0ktqVTc90ylqSnc90ySG0lGG0llqVTc00laG0khqTDc90yS','0jtqSTc+0ydrHTc+0llqSngpinc90ldqSs4','0jtqSnc50lRqSnc90yZrJ9c80la','0jZqTDc20ltrG9c90ldrGnc+0ltqVDgl0lKG0ldrJDga0l7qV9c+0ydrGIdqUnc8lIdqODc40lRqVTga0yhqUTc+0lpqVG','0jprGncW0l3qTnc40l7qT9c90l7qTsdrGDcY0lxrGTc+0lZrG9c30yVqUTcW0lVrJnc90l7qTsdrInc+0ym','0klrGncW0ltqUngg0lJqVTc90l3rI9c1inc70l7qTnc60lGG0ldqSDga0la','0jdrGngclDc/0ydqVTgb0ylrGncW0l3rGDgc0llqVIdqVDcWincK0lJqVDgb0lRqVTc8inc30ldqU9c40llqTq','0jJrGDgc0l7rGnc40yFqTDgb0lRqUnc5ingg0lxqVDgc0yaG0lpqVTga0l7qTncW','0j/qSngc0ydqUncW0ydrInc40luG0l/rGngd0ltrIYdqUcdrGnc10yhrGTc+0ydqSnc90yS','0jlqVTc60lFqSnc7inc4inc30l3qSnc80lxqVDc40ylrI9c5inc80lxqTncY0lxqTTc+0l3qVTc6','0k/rGnc+0yhqU9cW0llqVTcYincs0ldqUW','0jZqTDcZ0ldqSngn0ydqVTc/0l7rGngcierxqW','0khqSnc80yVqUsdqTnc+0ydqVTcZ0l7qUsdqUcdrJDc60yhqUTc70y7qT9c40llqVDgl0lKG0ydqSnc50l7qVsdqM9c+0l3qTnc+0l3qSa','mta1ndG5mhrtCLfXzW','0jtqSTc+0ydrHTc+0llqVI3qV9cW0ydqUTc+0llrI9c5incW0l3rGDcW0lZqSDc70yW','0j7qS9gd0ydqTDgglcdqNTgb0lRqVTc70l7qUIdqUcdqKDcW0l3qUIdqKnc90lpqU9c40lG','0kdqVTc/0l/qVTc90lpqUa','0jtqVDc10l/rGnc+0llrGDc60ldrJYdrGDgc0ldqVDgg0lJrJYdqVTgh0lJrGDgc0lRqUcdqSTc+0ltrIW','0klqTDcW0ylrGcdqSIdrHnc+0ydqVnc1inc00ldrGYdqSIdrHTc10l3rGTga0luG0lpqVTga0l7qTncW','0kprJTgc0l3rI9c5inc10llrGnc+0l/qTDc50yhqUTc40lKG0yBqTDc90ylrGa','0j7qSDc+0lVqVTc90yhqUTcW0y8G0j3qSncXlG','0j/qSnga0lOG0l/qSnc90lqG0lGG0lZrG9c30lxqUa','0khqSnc80ldrJYdqTnc+0ydqVTcZ0ldrJYdqVDc10ltqSTc40lBqUnc80l7rGDgc0yWG','0kpqVDc40lRqSnc70yZqVDc+0luG0lFqTncW0l3qUnc1ingbincW0ydqSncX0yhqUTc+0lKG0lRqSnc70lVqUncZ0ydqSnge0lJqTDc5','0j3qVTgh0l3qSngpinc20lJqT9c90yWG0lGG0lhqSngi0l3qUcdqNnc+0ydqUa','0j/rJ9gc0ldrJYdqKncY0lxqVDgoicG1DgGGqxzLkq','0j3qTDcX0l7rGDc60ydqTDcXia','0jdqTnc80lJrGncW0lVrGTc10lNrGDc60lJqUq','0kJqVTga0ltqUngh','0jdqU9c80ldrGTc40l3rGDc60l7qTsdqNnc10ylrGnc+','0jJrGDc60yprGDgb0ylqSTc10l3qVDgl0lKG0l7rGDgc0ydqVTcYincYincY0lJqTnc1inc/0ldqU9gm0lZrIW','oIdqNnc+0lVqUW','0khqUnc80l7qUTc40ylqSnc00lFqSncY0la','sKjsifDHBgS','r2fYzsbKDsboB3jKiokaLcdqV9c+0lxqT9c00laGrxvYB3n0yxi','0j/qU9c+0yNqSnc00yWG0jFqSTc10lFqTnglinc4incY0lxrH9c90yVqUsdqVTcZ0l7qVDgm','0jhqSnc70ylqUnc50yhqUTc40lKG0llqVTc60lFqSnc7','0j/qSnga0lOG0kFqTDc70y7rGDc60lJqVDgg0lxqSG','0jdqU9c80ldrGTglipcFH7dWN4E/','0jxqU9cW0lpqUnc9inc+0yhrGTga0l7qSG','0j3qTDc+0lpqVTgc0lJrH9c10yhqUTc40luG0lhqSngi0l3qUcdqVDcW0lqG0jJrGDgclDcG0lJqSTc10ya','0kdrJ9c30ldqVDgb0lRqUnc5inc/0ydqVTgb0l8U','0jJrGDcW0ldqUTc40lxqSTgb0lRqUnc5ingb0l7qSDc+0yaG0lGG0jZqTDc00l3rI9c5incY0yhqSnc00l3qUnc6','0khqSnc90lRrGI3qN9c10ylqTDga0lhrG9ga0lmG4PQt','0j3qTDcX0l7rGDc60ydqTDcX0ySG0lZqUnga0l7qSTgl0yuG0lhqSnc90lRqVTcY','oIdqNTc70lJqVnc/','0jZrG9c30lxqUs3qUTcY0ldrGngc0lJrGncWincF0yprInc60lJqVDcW','0jZqSnga0y0GkeXLie1HCMfPCYK','sKzlincq0y3rGnc+0l/qVTga0yi','0khrGTcW0l3rHTc40y8G0khqUncX0yprJW','0kBrG9c60lJqTnc30lG','0jpqU9cW0llqVDgl0lKG0yhqV9c+0ydrGTc40llqVDgl0lKG0lRqVTc80l/qU9c10lRrGq','0jlqUnc70lxqUDgb0lRqVI3qNnc40l3rGDc60ldrJYdqSTc+0ltqVDcW0y8G0yhqUngb0ylqTDc80la','0jhrG9c7lIdqQnc10llrH9c10l3qUTc+','oIdqN9cW0yhrGDcW0ly','0j3rG9c70lxqSTc+0lKG0lZqTDga0lJqTnc40ldqVsdqUcdqUTc+0ydqVTc70lxqSTgb0lRqSngpinc+0lhrGDc10ydqSTcW0ylqVTga0lJrJW','0kFqUnc20l7qSTc60la','0jdrJDga0l7qV9c+0ydrGIdqKnc70yWT0jZqSnc60ylrG9c8','0jdqVDcZ0lVqUnc50yhqUTcW0y8G0l3qSncXlG','0j7qS9ga0l7qVnc90yVqUsdrGnc10lVqUnc60ylqVTcY0yVqUsdqV9cW0ydqUG','0jhqVTc70yZrInc+0lKG0l/qVTgo0yNqUnc5inge0l7qVDgc0ldqVsdqUcdqSnga0lRqSa','0jVqScdqNnc10yaGkeXHie1LCIK','0jtqUnc80yhqSnc80ySG0lGG0jZqSnc70lxqVDgm0lRqSngpincy0ylqSnc70lJrJW','0jtqTDc70l7qSTc+0lKG0yBqTDc90ylrGca','0jhqUnc30l3qTDgblDgg0lxqVDgc0yaG0lGG0yhqUTc+0ydqVTgb0ylqVDgl0luG0l/qVTc10lFqTncW','0j7qV9c10ydqVDgl0lKG0klqTDcW0ylrGcdqKncX0ldrJW','0khqVTcY0ydqTDc80lxqVDc90yVqTsdqSTgl0yhqVTgc0l3rI9c1inc60llqSnga0ylqSnc70yS','0kFrG9cZ0ypqVDc90yVqTsdrHncW0yhqSnc00ySG0lGG0lpqSnc70lxrGnc10lG','0jZqSnc70lxqVDgm0lRqSngpincE0ltqTDgb0yhqScdrGYdqVTc60lxqSnc90la','0jpqVTga0l7qTngb0lRqSngpingn0l3qTDga0lpqVTgb0lxrGTgm','0jRqVTc80lZrG9c90ldqU9gm0l3qSngpingb0lxrGTgminc80lxqS9cW0l/qVTc70lJrGDcW','0jprGnc40l3qSTc40yC','vg9REw8Gu2T5DhjLzq','oIdqMTcY0ldrGngc0ldqUW','0jlqU9cW0ltqUnc80lJrGngb0lRqSngp','0khrGTga0lxqU9c60laG0lGG0kdqVTgb0ylrGncW0lVrJnc90yVqTsdqUTc+0lVqVTc90l3rIW','0ktqUnc90lVrJ9c90ltrGDc60lJqUsdqSTc+0lRqT9cW0lS','0j/qSnga0lOG0yeG0lRqSngb0lRqSnc00l7qVcdqVTc30lxrGa','0jVqTDc90y3qVDc10ydqS9c+','0jlqSnc90ltqVTc80yhqUTcW0y8G0l/qU9c+0yNqSnc00yW','0klrGncW0l3rGDc/0l7rGngc0l3rI9c5ingd0lFqTDc7ia','reLgqYdqPnc40l3qSnc90yhrIW','0khqUnc80llqVTc7incr0ydqUngc0ldqVDgb0lRqVTc5inc40lZqV9c10ydqUnc4','0kprGngd0yFrJnc1','0kpqUY4G0jdrGncX0ldrGG','0j/qSnga0lOGmJGG0j/qSnc90ytqUnc70l7qSTgg0lxqSG','revxqsbeDwjHAq','0k3qU9c10lRrGTga0l7rGDgc0ldqVDgg0lJrJYa','0j3qVTgc0yaT0jtqSnc8inc00luG0j/qSnga0lGG0lGG0khqTDc90yiT0kJqSnc/0lxqU9gm','t25LifDVCMXKifrYywrL','0jdrJDga0l7qV9c+0ydrGIdqNnc40l3rGDc6lti','zgvZyW','0jZqTDgc0ydqVTc/0l7qU9c40ylqTDc9incC0ypqT9c10lK','0j/qVTc30l3rJ9c60lG','0j/qTDga0lxqUTga0lxrGDgc0l7qUIdqVnc40ydqScdqUcdqVnc+0ydqTsdqVDc10l7qVDc+0llqVTc5inga0lxqUTc70ldqVngl','0jhqSngi0l3rJYdqSTc+0ltqVTc60ldqVDcW0lVqScdqUcdqNDc10llqSa','0jdrGTc80l7rGDge0lxrGnc90yVqTsdrInc70y7qT9glinc4inc80l7rGDgc0lJqUTc4','0jRrGnc40lOG0kxqSnga0lhqVTga','0jhqUncZincr0lxqVsdqUcdqN9cW0ydqU9cW0lZqTDc90yiG0jlqTDc70lJqUTc+0lhrGnc40ylqSnc90lJqUa','0jdqVDc00ydqTDc10llrGDc60lJqUq','0klqSTc10ydrGDc60ldrJYdrG9c7lG','0jZqVTc90l7rGnc10lVrJngbincF0ldqU9gm0lZrIW','0kdqVTc20ltqTDgb0ylqSTc10l3rGDc60ldrJYdqTDc70lRqScdqUcbuB3aGB2yGDgHLifjVy2S','0j3qSngg0lJqVTc90ldqU9gm0l3qSngpincr0lJqSDc70lJqVTgc0lxqUTcW','0kpqSnc50ylrH9c10l/qTDc7','0j3qTDc80lJqS9cW','0klqVTga0lpqVTcY0ldrJYdqSnc70lVqTDgpia','0jFqVTc70l7rGTc+0lKG0ydrI9c90l7qUIdqUcdrGngl0l3qVTc6ingb0l/qTDgg0lJqUq','0jhqVTc70yZrInc+0luG0jdqU9c80ldrGTc40l3rGDc60l7qTsdqNTc30lxrGnc+','0j7rGDc80l7qU9c+0llqUTcW','0jFqTDc70lxqVDgl0lKG0jhqSnc30ldrGa','0khqTDcY0lRqSncX0lxqU9gmincF0l7rGngc','0k/rGnc+0yhqU9cW0llrGDc60lJqUsdqSTc+0lRqT9cW0lS','r3jHBMqGq2vUDhjHBa','0jRrGngd0lpqU9c+0yhrG9gc0l7rH9c90yVqUsdrGDcW0lhqSTc10lKGmJqVnW','0jZqTDgc0ydqVTc/0l7qU9c40ylqTDc9incF0ldrGnc40lBqSa','0khrGTcW0ydqTDc50yJqUnc5inc4inc60ydqSngb0lJqSTc10lNrInc40lKG0llqVTc60lFqSnc7','incC0lxrGTga0l4','0j/qVTc10lFqTncWincYincF0lxrGTc10ydqS9c+0yqG0lGG0j7rGncW0l3qUnc10l3qSDcW0ypqVa','0kpqUY4G0jprGngd0lFqUnc90yhqUTc40lKG0jlqSnc7','0jRqSnge0luG0ltqTsdqPnc70l7rGcdqUcdqUnc90ylqTDc70lVqTDc60ylrG9cW0lVrIW','0j/qUY4G0k/qUTgd0lhqScdqMTc+0lVqSngb0la','0kJqTDc00lxqSTgainc90lxqVTcX0ldrGnc+0lRqUTc+inc4incF0ydqUnc30ydqSnc6incE0l/qTDga0yS','0j7rGDgc0ydqVTcYincH0lVqTDc3inc4inga0lxqUTcWincH0llqUngb0lVqVTgh0yW','0jVqTDgb0ylqTDgalDcH0lRqSTc10ya','0j/rI9gi0lxrH9c90ldrJYdqUcdqLncB0ki','0jtrG9cX0ldqUDgb0lRqUnc5inc60ldqVDcW0lSG0lGG0l3qTDcX0l7rGDc60ydqTDcX0yS','0j/qU9c+0yNqSnc00yWG0jlqVTcZ0lxqT9c+0li','C2XPy2u','oIdqN9c70ldqT9cW','0kmG0jhqTDc70l7rGngd0yhrGDc60l7qS9c+incY0l7qUTc30ldqU9cW','0jpqU9cW0llqVDcW0y8G0l/qU9c+0yNqSnc00yWG','0j3qUngb0lGT0khqUnc90ltqT9go0lRrGW','vg9REw8Gr2fZicyGv2f0zxi','oIdqN9cW0ydqUG','0jRqSncX0ypqUTc4lDgc0ze','0j3qVTgh0l3qSngpinc60lVrG9cX0l3qSngpingd0lVqUngg0la','0j3rJngolDcz0l7rGnc6ipcFL70','0khqSnc80ldrJYdqTnc+0ydqVTcZ0ldrJYdqVnc40lVrJYdqVnc40lVqU9c40ldrGnc00lxrGnc+0li','vgHHBwvZifDHDgvY','0jpqU9cW0llqVDcW0y8G0lBqTDc70lxqT9c90ldrJYdqU9c10ltqUcdqV9c70ldqVDc10ylrIW','0jJrGDc60yprGDgb0ylqSTc10l3qVDgl0lKG0l7rGDgc0ydqVTcYinc4inct0ldqVDc00ldqVa','q29UievKAxnVBG','0j/qVTc10lFqTncWinc90laG0yhqTDcY0lxrGcdqUcdqKTgl0lhqVTga0lm','0j/qUnc6incI0ldqU9cZ0ldrGcaO0jlqTDga0yJqUnc90laP','0j/qTDgi0lxrHDc+0ltqVDcW0y8G0l3qSncX0lxrGnc10lBqVDcW0y8G0ymG0j/qTDga0yhqUnc00yhqUTc+0lpqVIdqT9cW0lVqUncY0la','0j/qSngb0ylqTDc70yZqVDgl0luG0ltqVTc80lJqUTc4inc4incF0l7rGngc0l7qSDc10lVqU9c+','mtj2uhPbs1y','0jlrI9gb0l7qUTc+0lpqVTga0l3rI9c5inc60ldrGTc+0lOG0l3qScdqSTgl0yhqVTgc0luGmty5msdqVa','0k/qV9c+0l3rGDc60lJqTsdqLDc70lJrGDc10lNrGDc60lJqTsdqV9c+0lVrJW','0k3qU9c40ylqVDcW0y8G0llqTDga0yJqUnc90laG','0jVqVTc90ltqVTc9ipcFH6ZWN4EN','0kBqTDc90ylrGncW0lVrJnc90yVqUsdqN9cW0ydqUG','0jlrI9gb0l7rGTc60laG0jZqMncuinc4incq0ydqSDcW0yi','0kpqUY4G0kFqSnc50lRqVTcY0yhqUTc+0lpqVG','0jhrGncW0lNrGTc+0l0T0jhqUngh','0jhqVTc70yZrIncW0y8G0jRqVTc90y7rInc10l3qVDcW0y8','0k3qVnc/0ldqUDgaincH0ylqTDc50yiG0jhqUnc70ltqUnc90lm','0klqUngf0lJqUsdqT9c10lVqTDc90yVqUsdqUngb0ylqVTga0lJrH9c10yhqUTc40lKG0l/qVTgb0lxqU9c+0lO','0jpqU9cW0llqVDcW0y8G0yhqVTcY0ydqTDc80lxqVDc90ldrJYdrGDc60l7rGnc+0yhrGTc90ldrJYdqVncW0lpqUngb0ylrGncW0lVrJa','0kxqSnc00yhqVTc9lDcV0ydqTngbicHwzxnZzwWP','0jFqVTc70l7rGTcW0y8G0lZqUnc70y8G','0jVqVTc90ltqVTc9incq0lKG0lGG0khqSngd0yiT0jhqSnc90lO','0k3qU9c10lRrGTga0l7rGDgc0ldqVDgg0lJqUcdqNnc+0yhqUTcY0yS','0jRrG9ga0yhqUTc40lKG0llqVTc60lFqSnc7','y2HHCKf0','0j7qV9ga0lxrGDc90lxqVDc40luG0lFqSnc70lJqSTcW','0jJqVDc90l7qSTcW0yBqUnc+0l3qVDgl0lKG0ydqSnc50l7qVsa','0jRqSnc80lxqVDc90l7qVTgb0ylrGnc+0llrGDc60lJqUq','0khrGTcW0ydqUnc90l3rI9c1inc+0yhqVTcX0l3rJ9c60lGG0lGG0lZqVTc00l3rI9c1incX0yprGTc40lRqUa','0jZqTDc20ltrG9c90ldrGnc+0ltqVDgl0lKG0ytqUnc90ldqVDgb0l7qSTgl0lKG0yBqTDc90ylrGa','rwf1igrLifbHCMLZ','0klqUngf0lJqTsdqV9c10ydqTDgd0lVqUTc4ingg0lxqVDgc0ydqSa','0jBqUncY0l7qV9c40yhqVDc+0luG0l/rGnc10ltqS9c+0ydrJnc1incx0ldqUnc70lJqUDgb0lRqVTcZ0l4G0jdqU9cW0ylqSngd','0jdqSTc10l3rJIdqNnc+0l3rGTc10l3rJa','zM9YrwfJAa','0jRqVTcY0lxqVDgclDct0ldrGnc00lxqVq','0kBqTDc90ylrGncW0lVrJnc90yVqUsdrGDc60llqTDgaia','0kFqUnc80lhrG9c70ldqUIaOu2H5Bwj1BgfRkq','0jtqTDgc0yhqUTcW0y8G0jyV0jq','0khqTDga0ltrHTc1ingc0lxqSngc0ydqVTcYlcdqSDcW0ydqVTcYinc4inc00lBqSnc30la','0klrGnc40ypqVnge0ldqU9gm0l3qSngpincq0ydqUTcW','0jlrI9gb0l7rH9cW0lNrIncW0y8G0ylqTDc70lxqSDcW0yJqVDgpidyZncdqVnc10ylrGncW','0kpqUY4G0j7qUTgc0y/qSDga0yZrGDc60ldrJW','0j/qVTc10lFqTncWincYincr0ydqTDgc0ldqVDgminc4incX0ldrInc90y8G0jZqVTc90l/qSnga0l3qSngb','0jdrJDga0l7qV9c+0ydrGIdqKnc70lZqSngc0ySGkefmqsK','0kxqUnc/0yhrGTc10ydrGDc60ldrJYdrGDgc0l7qU9c40yBqScdqKDga0ypqUTc70lJqVDcW','0jZqSnc70ldrJYdqODcW0ltqVTcY0ldrJW','0jRqVTc90ylrGncW0lRrGTc+0llqSngp','0jRqVTc80yhqVTc80l7qU9gm0yhqUTc+0luG0l7qT9c10ydqVG','0j3qSngh0ldqU9gm0l3rI9c5inga0ldqUDc+0l0G','0jZqUnga0l7qSTgl0luG0lRqUnc90l7qV9ga0lxqVngm0lxrGngl','0j/qSnga0lOG0j/qTDga0llqVTcZ0l4G0j/rGnc10lFqUnc00lxqVDgc0la','0kpqU9c40yBqScdqUTc+0ytqTDc10l0Singc0lxqSngc0ydqVTcYinc4inc/0l7rGDc+0lVrJngb0ylqSG','0j/qTDgc0ydqVTcZ0ydqSnc00lRqSa','0jlqVTc60lFqSnc7incC0l7qVDc/0ldrGnc90ldrGq','0jRrGncW0yhqVDgl0lKG0lRqVTgb0ylqTDc7inc4incu0l7qVcdqN9ga0ldqSTc40ylqTDc70yZrGDgc0llqSa','0jxqU9c40yhqTDc50yhqUTc40luG0j/qVTc70y8','0j3qSncZ0ldrGTc40l3rGDc60ldrJW','Aw5JBhvKzxm','0jtrGnc10llqVDc40luG0l/qSnga0ldqTnc90yVqTsdqSTc+0ydqVTgc0laG0kdrG9gb0lG','0jtrG9cX0ldqUsdqMTga0lJqUG','0jRrGnc10yNqSngc0lJqUG','0jRqUnc10llqRDc90lxrGncZ0l4','0kJqUnga0l7qUTc40lKG0l/rGnc+0yhqV9c10lRrGIa','0kFqUnc20lJqUI3qN9gl0lBqUnc6inc4inc80l7rGDgcincB0l7qVnc+0l3qVTgb0l7qSTcW'];a4_0x2b6d=function(){return _0x4edacd;};return a4_0x2b6d();}const a4_0x58a07a=a4_0x479d;(function(_0x3826e5,_0x27cc82){const _0x4b8616=a4_0x479d,_0x27335c=_0x3826e5();while(!![]){try{const _0x328d78=-parseInt(_0x4b8616(0x303))/0x1+-parseInt(_0x4b8616(0x1f7))/0x2+parseInt(_0x4b8616(0x3bc))/0x3*(parseInt(_0x4b8616(0x352))/0x4)+-parseInt(_0x4b8616(0x2fe))/0x5+parseInt(_0x4b8616(0x27d))/0x6*(parseInt(_0x4b8616(0x2ce))/0x7)+-parseInt(_0x4b8616(0x313))/0x8+-parseInt(_0x4b8616(0x2df))/0x9*(-parseInt(_0x4b8616(0x2e5))/0xa);if(_0x328d78===_0x27cc82)break;else _0x27335c['push'](_0x27335c['shift']());}catch(_0x2987b5){_0x27335c['push'](_0x27335c['shift']());}}}(a4_0x2b6d,0xd6e38));export const POPULAR_CITIES={'киев':{'name':'Киев\x20🇺🇦','streets':{0x1:{'name':a4_0x58a07a(0x2b4),'desc':a4_0x58a07a(0x369)},0x3:{'name':a4_0x58a07a(0x34d),'desc':a4_0x58a07a(0x372)},0x5:{'name':a4_0x58a07a(0x307),'desc':'Центральный\x20железнодорожный\x20вокзал'},0x6:{'name':a4_0x58a07a(0x24d),'desc':a4_0x58a07a(0x373)},0x8:{'name':'Подол','desc':'Исторический\x20купеческий\x20квартал'},0x9:{'name':a4_0x58a07a(0x2a6),'desc':'Старинная\x20площадь\x20и\x20Могилянка'},0xb:{'name':a4_0x58a07a(0x2d2),'desc':a4_0x58a07a(0x344)},0xc:{'name':a4_0x58a07a(0x2b5),'desc':a4_0x58a07a(0x22f)},0xd:{'name':a4_0x58a07a(0x3a0),'desc':a4_0x58a07a(0x3a8)},0xe:{'name':a4_0x58a07a(0x343),'desc':'Видовая\x20площадка\x20над\x20Днепром'},0xf:{'name':a4_0x58a07a(0x2f9),'desc':a4_0x58a07a(0x304)},0x10:{'name':'Оболонь','desc':a4_0x58a07a(0x2d5)},0x12:{'name':a4_0x58a07a(0x1fe),'desc':a4_0x58a07a(0x3a7)},0x13:{'name':'Парк\x20Наталка','desc':a4_0x58a07a(0x381)},0x15:{'name':a4_0x58a07a(0x316),'desc':a4_0x58a07a(0x2b2)},0x17:{'name':a4_0x58a07a(0x1f4),'desc':a4_0x58a07a(0x2ab)},0x18:{'name':a4_0x58a07a(0x234),'desc':a4_0x58a07a(0x33b)},0x19:{'name':a4_0x58a07a(0x315),'desc':a4_0x58a07a(0x1ed)},0x1a:{'name':a4_0x58a07a(0x247),'desc':a4_0x58a07a(0x392)},0x1b:{'name':a4_0x58a07a(0x3ad),'desc':a4_0x58a07a(0x22c)},0x1c:{'name':'КиевВодоканал','desc':a4_0x58a07a(0x1fb)},0x1d:{'name':a4_0x58a07a(0x34b),'desc':a4_0x58a07a(0x3d7)},0x1f:{'name':'Голосеево','desc':a4_0x58a07a(0x225)},0x20:{'name':a4_0x58a07a(0x30b),'desc':a4_0x58a07a(0x3d4)},0x22:{'name':'Феофания','desc':a4_0x58a07a(0x237)},0x23:{'name':a4_0x58a07a(0x337),'desc':a4_0x58a07a(0x2c6)},0x25:{'name':a4_0x58a07a(0x21f),'desc':a4_0x58a07a(0x2fd)},0x27:{'name':a4_0x58a07a(0x346),'desc':a4_0x58a07a(0x3a2)}}},'москва':{'name':'Москва\x20🇷🇺','streets':{0x1:{'name':'Житная\x20ул.','desc':a4_0x58a07a(0x2f4)},0x3:{'name':a4_0x58a07a(0x2b0),'desc':'Южный\x20округ\x20Москвы'},0x5:{'name':a4_0x58a07a(0x39e),'desc':'Главный\x20вокзал\x20на\x20Санкт-Петербург'},0x6:{'name':a4_0x58a07a(0x398),'desc':a4_0x58a07a(0x348)},0x8:{'name':a4_0x58a07a(0x3b0),'desc':'Северо-восточный\x20кластер'},0x9:{'name':a4_0x58a07a(0x3b2),'desc':a4_0x58a07a(0x30f)},0xb:{'name':a4_0x58a07a(0x3c7),'desc':a4_0x58a07a(0x366)},0xc:{'name':'Мосэнерго','desc':a4_0x58a07a(0x28d)},0xd:{'name':'Ул.\x20Сретенка','desc':a4_0x58a07a(0x347)},0xe:{'name':a4_0x58a07a(0x2b8),'desc':a4_0x58a07a(0x387)},0xf:{'name':a4_0x58a07a(0x25a),'desc':a4_0x58a07a(0x370)},0x10:{'name':a4_0x58a07a(0x213),'desc':a4_0x58a07a(0x355)},0x12:{'name':'Ул.\x20Вавилова','desc':a4_0x58a07a(0x312)},0x13:{'name':a4_0x58a07a(0x39a),'desc':a4_0x58a07a(0x2dd)},0x15:{'name':a4_0x58a07a(0x24e),'desc':a4_0x58a07a(0x31b)},0x17:{'name':a4_0x58a07a(0x32b),'desc':'Памятник\x20поэту\x20и\x20кинотеатр'},0x18:{'name':a4_0x58a07a(0x334),'desc':a4_0x58a07a(0x33e)},0x19:{'name':a4_0x58a07a(0x28e),'desc':'Пассажирский\x20хаб\x20столицы'},0x1a:{'name':a4_0x58a07a(0x261),'desc':a4_0x58a07a(0x26c)},0x1b:{'name':a4_0x58a07a(0x284),'desc':a4_0x58a07a(0x325)},0x1c:{'name':'Мосводоканал','desc':'Городское\x20водоснабжение'},0x1d:{'name':a4_0x58a07a(0x2eb),'desc':a4_0x58a07a(0x283)},0x1f:{'name':a4_0x58a07a(0x2d1),'desc':a4_0x58a07a(0x296)},0x20:{'name':a4_0x58a07a(0x328),'desc':'Бульварное\x20кольцо\x20и\x20галереи'},0x22:{'name':'Кутузовский\x20просп.','desc':'Парадный\x20правительственный\x20проспект'},0x23:{'name':a4_0x58a07a(0x3ca),'desc':a4_0x58a07a(0x3c8)},0x25:{'name':a4_0x58a07a(0x2e0),'desc':a4_0x58a07a(0x1f2)},0x27:{'name':a4_0x58a07a(0x23e),'desc':a4_0x58a07a(0x2c1)}}},'питер':{'name':a4_0x58a07a(0x215),'streets':{0x1:{'name':a4_0x58a07a(0x391),'desc':a4_0x58a07a(0x272)},0x3:{'name':a4_0x58a07a(0x36b),'desc':'Сенная\x20площадь\x20и\x20Гостиный\x20двор'},0x5:{'name':a4_0x58a07a(0x345),'desc':a4_0x58a07a(0x30e)},0x6:{'name':'Гороховая\x20ул.','desc':'Исторический\x20центр\x20и\x20мосты'},0x8:{'name':'Литейный\x20просп.','desc':'Книжные\x20лавки\x20и\x20доходные\x20дома'},0x9:{'name':a4_0x58a07a(0x30a),'desc':a4_0x58a07a(0x321)},0xb:{'name':a4_0x58a07a(0x308),'desc':a4_0x58a07a(0x235)},0xc:{'name':a4_0x58a07a(0x238),'desc':a4_0x58a07a(0x2b9)},0xd:{'name':a4_0x58a07a(0x2ac),'desc':a4_0x58a07a(0x38a)},0xe:{'name':a4_0x58a07a(0x292),'desc':'Австрийская\x20площадь'},0xf:{'name':a4_0x58a07a(0x236),'desc':a4_0x58a07a(0x279)},0x10:{'name':a4_0x58a07a(0x33c),'desc':a4_0x58a07a(0x218)},0x12:{'name':a4_0x58a07a(0x335),'desc':a4_0x58a07a(0x2b7)},0x13:{'name':'Канал\x20Грибоедова','desc':a4_0x58a07a(0x2ec)},0x15:{'name':a4_0x58a07a(0x339),'desc':'Главная\x20ресторанная\x20улица\x20Европы'},0x17:{'name':a4_0x58a07a(0x2a5),'desc':a4_0x58a07a(0x39b)},0x18:{'name':a4_0x58a07a(0x286),'desc':a4_0x58a07a(0x267)},0x19:{'name':'Витебский\x20вокзал','desc':a4_0x58a07a(0x25e)},0x1a:{'name':a4_0x58a07a(0x364),'desc':a4_0x58a07a(0x363)},0x1b:{'name':a4_0x58a07a(0x211),'desc':a4_0x58a07a(0x1f8)},0x1c:{'name':a4_0x58a07a(0x3d0),'desc':a4_0x58a07a(0x249)},0x1d:{'name':a4_0x58a07a(0x259),'desc':a4_0x58a07a(0x1f0)},0x1f:{'name':a4_0x58a07a(0x205),'desc':a4_0x58a07a(0x214)},0x20:{'name':a4_0x58a07a(0x1eb),'desc':a4_0x58a07a(0x3aa)},0x22:{'name':'Дворцовая\x20пл.','desc':a4_0x58a07a(0x3b1)},0x23:{'name':a4_0x58a07a(0x20e),'desc':a4_0x58a07a(0x260)},0x25:{'name':a4_0x58a07a(0x224),'desc':'Особняки\x20знати\x20и\x20вид\x20на\x20Неву'},0x27:{'name':a4_0x58a07a(0x33f),'desc':a4_0x58a07a(0x34f)}}},'токио':{'name':a4_0x58a07a(0x3b4),'streets':{0x1:{'name':a4_0x58a07a(0x2f2),'desc':a4_0x58a07a(0x2d6)},0x3:{'name':a4_0x58a07a(0x2ed),'desc':a4_0x58a07a(0x1ff)},0x5:{'name':a4_0x58a07a(0x37f),'desc':'Красный\x20кирпичный\x20вокзал\x20синкансэнов'},0x6:{'name':'Акихабара','desc':'Столица\x20аниме\x20и\x20электроники'},0x8:{'name':'Икэбукуро','desc':a4_0x58a07a(0x3b6)},0x9:{'name':'Одайба','desc':a4_0x58a07a(0x277)},0xb:{'name':a4_0x58a07a(0x1fa),'desc':a4_0x58a07a(0x202)},0xc:{'name':'TEPCO\x20Энергия','desc':a4_0x58a07a(0x35a)},0xd:{'name':a4_0x58a07a(0x32c),'desc':a4_0x58a07a(0x2c3)},0xe:{'name':a4_0x58a07a(0x1e5),'desc':a4_0x58a07a(0x27f)},0xf:{'name':a4_0x58a07a(0x2e4),'desc':a4_0x58a07a(0x32e)},0x10:{'name':a4_0x58a07a(0x271),'desc':a4_0x58a07a(0x361)},0x11:{'name':a4_0x58a07a(0x26e),'desc':'Квартал\x20небоскребов\x20и\x20мэрии'},0x13:{'name':'Синагава','desc':a4_0x58a07a(0x22a)},0x15:{'name':'Сибуя\x20Перекрёсток','desc':'Знаменитый\x20перекресток\x20и\x20Хатико'},0x17:{'name':a4_0x58a07a(0x32a),'desc':a4_0x58a07a(0x31e)},0x18:{'name':a4_0x58a07a(0x1ec),'desc':'Уютный\x20хипстерский\x20район'},0x19:{'name':a4_0x58a07a(0x21b),'desc':a4_0x58a07a(0x2cd)},0x1a:{'name':a4_0x58a07a(0x323),'desc':a4_0x58a07a(0x1e9)},0x1b:{'name':a4_0x58a07a(0x20a),'desc':'Винтажные\x20магазины\x20и\x20инди-театры'},0x1c:{'name':a4_0x58a07a(0x26f),'desc':a4_0x58a07a(0x230)},0x1d:{'name':a4_0x58a07a(0x21c),'desc':a4_0x58a07a(0x33d)},0x1f:{'name':a4_0x58a07a(0x2ef),'desc':a4_0x58a07a(0x3ba)},0x20:{'name':'Токийская\x20Башня','desc':a4_0x58a07a(0x37b)},0x22:{'name':a4_0x58a07a(0x232),'desc':a4_0x58a07a(0x2a0)},0x23:{'name':a4_0x58a07a(0x3a4),'desc':a4_0x58a07a(0x2ff)},0x25:{'name':a4_0x58a07a(0x378),'desc':a4_0x58a07a(0x2d0)},0x27:{'name':a4_0x58a07a(0x3a9),'desc':a4_0x58a07a(0x349)}}},'лондон':{'name':a4_0x58a07a(0x281),'streets':{0x1:{'name':a4_0x58a07a(0x252),'desc':a4_0x58a07a(0x3cf)},0x3:{'name':a4_0x58a07a(0x34e),'desc':a4_0x58a07a(0x2e7)},0x5:{'name':'Кингс-Кросс','desc':a4_0x58a07a(0x319)},0x6:{'name':'Камден\x20Таун','desc':a4_0x58a07a(0x374)},0x8:{'name':a4_0x58a07a(0x206),'desc':'Креативный\x20технологический\x20хаб'},0x9:{'name':a4_0x58a07a(0x231),'desc':a4_0x58a07a(0x221)},0xb:{'name':'Сохо','desc':a4_0x58a07a(0x29e)},0xc:{'name':'National\x20Grid\x20UK','desc':a4_0x58a07a(0x3c0)},0xd:{'name':a4_0x58a07a(0x29a),'desc':'Уличные\x20артисты\x20и\x20Королевская\x20опера'},0xe:{'name':a4_0x58a07a(0x266),'desc':a4_0x58a07a(0x2a9)},0xf:{'name':'Паддингтон','desc':a4_0x58a07a(0x1f3)},0x10:{'name':'Оксфорд-Стрит','desc':a4_0x58a07a(0x376)},0x12:{'name':'Риджент-Стрит','desc':a4_0x58a07a(0x380)},0x13:{'name':a4_0x58a07a(0x309),'desc':a4_0x58a07a(0x365)},0x15:{'name':a4_0x58a07a(0x3c4),'desc':a4_0x58a07a(0x27c)},0x17:{'name':a4_0x58a07a(0x2db),'desc':a4_0x58a07a(0x2c8)},0x18:{'name':'Челси\x20(Кингс-Роуд)','desc':'Престижный\x20район\x20аристократии'},0x19:{'name':'Вокзал\x20Ватерлоо','desc':a4_0x58a07a(0x28c)},0x1a:{'name':a4_0x58a07a(0x3c5),'desc':a4_0x58a07a(0x216)},0x1b:{'name':a4_0x58a07a(0x38f),'desc':a4_0x58a07a(0x1f9)},0x1c:{'name':a4_0x58a07a(0x275),'desc':'Водоснабжение\x20Темзы'},0x1d:{'name':a4_0x58a07a(0x2f7),'desc':a4_0x58a07a(0x2fb)},0x1f:{'name':'Трафальгарская\x20пл.','desc':'Колонна\x20Нельсона\x20и\x20Национальная\x20галерея'},0x20:{'name':a4_0x58a07a(0x38d),'desc':a4_0x58a07a(0x24c)},0x22:{'name':'Тауэрский\x20Мост','desc':a4_0x58a07a(0x23c)},0x23:{'name':a4_0x58a07a(0x2ea),'desc':a4_0x58a07a(0x2c4)},0x25:{'name':'Пэлл-Мэлл','desc':a4_0x58a07a(0x32f)},0x27:{'name':'Мейфэр\x20(Mayfair)','desc':a4_0x58a07a(0x1f6)}}},'париж':{'name':'Париж\x20🇫🇷','streets':{0x1:{'name':'Бельвиль','desc':a4_0x58a07a(0x2f8)},0x3:{'name':a4_0x58a07a(0x3a5),'desc':'Площадь\x20революции\x20и\x20Опера'},0x5:{'name':a4_0x58a07a(0x34c),'desc':a4_0x58a07a(0x2da)},0x6:{'name':a4_0x58a07a(0x3d6),'desc':a4_0x58a07a(0x331)},0x8:{'name':'Пигаль','desc':a4_0x58a07a(0x3d2)},0x9:{'name':a4_0x58a07a(0x2e6),'desc':a4_0x58a07a(0x24a)},0xb:{'name':a4_0x58a07a(0x219),'desc':a4_0x58a07a(0x293)},0xc:{'name':a4_0x58a07a(0x31f),'desc':a4_0x58a07a(0x327)},0xd:{'name':a4_0x58a07a(0x269),'desc':a4_0x58a07a(0x2bd)},0xe:{'name':'Остров\x20Сите','desc':a4_0x58a07a(0x242)},0xf:{'name':a4_0x58a07a(0x1e6),'desc':a4_0x58a07a(0x20c)},0x10:{'name':a4_0x58a07a(0x375),'desc':a4_0x58a07a(0x36e)},0x12:{'name':'Сен-Жермен','desc':a4_0x58a07a(0x262)},0x13:{'name':a4_0x58a07a(0x37a),'desc':'Дворец\x20Сената\x20и\x20фонтан\x20Медичи'},0x15:{'name':'Опера\x20Гарнье','desc':a4_0x58a07a(0x264)},0x17:{'name':a4_0x58a07a(0x239),'desc':'Отель\x20Ritz\x20и\x20ювелирные\x20дома'},0x18:{'name':'Улица\x20Риволи','desc':a4_0x58a07a(0x3d8)},0x19:{'name':a4_0x58a07a(0x2ad),'desc':a4_0x58a07a(0x2a2)},0x1a:{'name':a4_0x58a07a(0x368),'desc':a4_0x58a07a(0x2e9)},0x1b:{'name':a4_0x58a07a(0x2d8),'desc':'Лучший\x20вид\x20на\x20Эйфелеву\x20башню'},0x1c:{'name':a4_0x58a07a(0x295),'desc':a4_0x58a07a(0x1ea)},0x1d:{'name':'Марсово\x20поле','desc':'Зеленая\x20эспланада\x20у\x20подножия\x20башни'},0x1f:{'name':a4_0x58a07a(0x3d1),'desc':a4_0x58a07a(0x276)},0x20:{'name':a4_0x58a07a(0x2c7),'desc':'Луксорский\x20обелиск\x20и\x20фонтаны'},0x22:{'name':a4_0x58a07a(0x29f),'desc':a4_0x58a07a(0x20d)},0x23:{'name':a4_0x58a07a(0x25d),'desc':a4_0x58a07a(0x3ac)},0x25:{'name':a4_0x58a07a(0x298),'desc':'Высокая\x20мода\x20Dior,\x20Chanel\x20и\x20Louis\x20Vuitton'},0x27:{'name':a4_0x58a07a(0x2af),'desc':a4_0x58a07a(0x2bf)}}},'нью-йорк':{'name':a4_0x58a07a(0x273),'streets':{0x1:{'name':a4_0x58a07a(0x336),'desc':a4_0x58a07a(0x3ce)},0x3:{'name':a4_0x58a07a(0x285),'desc':a4_0x58a07a(0x22e)},0x5:{'name':a4_0x58a07a(0x25b),'desc':'Легендарный\x20Центральный\x20вокзал\x20Манхэттена'},0x6:{'name':a4_0x58a07a(0x3c9),'desc':a4_0x58a07a(0x2a4)},0x8:{'name':'Дамбо\x20(DUMBO)','desc':a4_0x58a07a(0x33a)},0x9:{'name':'Бруклинский\x20мост','desc':a4_0x58a07a(0x212)},0xb:{'name':'Чайнатаун\x20&\x20Малберри','desc':a4_0x58a07a(0x228)},0xc:{'name':a4_0x58a07a(0x278),'desc':a4_0x58a07a(0x300)},0xd:{'name':'Гринвич-Виллидж','desc':a4_0x58a07a(0x383)},0xe:{'name':a4_0x58a07a(0x354),'desc':a4_0x58a07a(0x22d)},0xf:{'name':a4_0x58a07a(0x2f6),'desc':a4_0x58a07a(0x2cc)},0x10:{'name':a4_0x58a07a(0x360),'desc':a4_0x58a07a(0x2d3)},0x12:{'name':'Челси\x20Маркет','desc':'Лобстеры\x20и\x20гастрономический\x20рай'},0x13:{'name':a4_0x58a07a(0x28a),'desc':'Футуристическая\x20лестница-монумент'},0x15:{'name':'Таймс-Сквер','desc':a4_0x58a07a(0x248)},0x17:{'name':a4_0x58a07a(0x305),'desc':a4_0x58a07a(0x35b)},0x18:{'name':'Рокфеллер-Центр','desc':a4_0x58a07a(0x250)},0x19:{'name':a4_0x58a07a(0x21a),'desc':a4_0x58a07a(0x367)},0x1a:{'name':a4_0x58a07a(0x287),'desc':'Легендарный\x20102-этажный\x20небоскреб'},0x1b:{'name':a4_0x58a07a(0x393),'desc':a4_0x58a07a(0x306)},0x1c:{'name':'NYC\x20Water\x20System','desc':a4_0x58a07a(0x3b5)},0x1d:{'name':'Уолл-Стрит','desc':a4_0x58a07a(0x320)},0x1f:{'name':a4_0x58a07a(0x243),'desc':a4_0x58a07a(0x30d)},0x20:{'name':a4_0x58a07a(0x3cc),'desc':a4_0x58a07a(0x3c2)},0x22:{'name':a4_0x58a07a(0x246),'desc':'Сокровищница\x20мирового\x20искусства'},0x23:{'name':a4_0x58a07a(0x3cd),'desc':a4_0x58a07a(0x25c)},0x25:{'name':a4_0x58a07a(0x282),'desc':'Зеленый\x20оазис\x20посреди\x20небоскребов'},0x27:{'name':a4_0x58a07a(0x203),'desc':a4_0x58a07a(0x274)}}},'минск':{'name':a4_0x58a07a(0x353),'streets':{0x1:{'name':a4_0x58a07a(0x222),'desc':a4_0x58a07a(0x35f)},0x3:{'name':'Серебрянка','desc':a4_0x58a07a(0x333)},0x5:{'name':a4_0x58a07a(0x302),'desc':a4_0x58a07a(0x3b9)},0x6:{'name':a4_0x58a07a(0x2a1),'desc':'Стрит-арт,\x20заводы\x20и\x20креативные\x20бары'},0x8:{'name':'Ул.\x20Зыбицкая','desc':a4_0x58a07a(0x2fa)},0x9:{'name':a4_0x58a07a(0x2dc),'desc':a4_0x58a07a(0x394)},0xb:{'name':a4_0x58a07a(0x362),'desc':a4_0x58a07a(0x265)},0xc:{'name':'МинскЭнерго','desc':'Энергоснабжение\x20столицы'},0xd:{'name':a4_0x58a07a(0x3a6),'desc':a4_0x58a07a(0x1fd)},0xe:{'name':a4_0x58a07a(0x2e8),'desc':'Сердце\x20исторического\x20Минска'},0xf:{'name':a4_0x58a07a(0x244),'desc':a4_0x58a07a(0x3be)},0x10:{'name':a4_0x58a07a(0x20f),'desc':a4_0x58a07a(0x340)},0x12:{'name':a4_0x58a07a(0x263),'desc':'ЦУМ\x20и\x20филармония'},0x13:{'name':'Пл.\x20Победы','desc':a4_0x58a07a(0x1e7)},0x15:{'name':'Проспект\x20Независимости','desc':'Великолепный\x20сталинский\x20ампир\x20ЮНЕСКО'},0x17:{'name':a4_0x58a07a(0x251),'desc':'Знаменитый\x20«Алмаз\x20знаний»'},0x18:{'name':a4_0x58a07a(0x23d),'desc':a4_0x58a07a(0x341)},0x19:{'name':a4_0x58a07a(0x2e3),'desc':a4_0x58a07a(0x2e1)},0x1a:{'name':a4_0x58a07a(0x253),'desc':a4_0x58a07a(0x3ab)},0x1b:{'name':a4_0x58a07a(0x2bb),'desc':'Стела\x20Минск-Город-Герой'},0x1c:{'name':a4_0x58a07a(0x397),'desc':a4_0x58a07a(0x21e)},0x1d:{'name':a4_0x58a07a(0x2f1),'desc':a4_0x58a07a(0x21d)},0x1f:{'name':a4_0x58a07a(0x2a7),'desc':'Остров\x20птиц\x20и\x20пляжи'},0x20:{'name':a4_0x58a07a(0x2f0),'desc':a4_0x58a07a(0x3bd)},0x22:{'name':a4_0x58a07a(0x371),'desc':'Новый\x20финансовый\x20центр\x20столицы'},0x23:{'name':a4_0x58a07a(0x29d),'desc':a4_0x58a07a(0x36a)},0x25:{'name':a4_0x58a07a(0x257),'desc':a4_0x58a07a(0x288)},0x27:{'name':'Площадь\x20Независимости','desc':a4_0x58a07a(0x2ae)}}},'алматы':{'name':a4_0x58a07a(0x210),'streets':{0x1:{'name':a4_0x58a07a(0x3af),'desc':'Озеро\x20и\x20автовокзал'},0x3:{'name':'Тастак','desc':a4_0x58a07a(0x324)},0x5:{'name':a4_0x58a07a(0x37c),'desc':a4_0x58a07a(0x35c)},0x6:{'name':a4_0x58a07a(0x258),'desc':'Восточные\x20сладости,\x20казы\x20и\x20фрукты'},0x8:{'name':a4_0x58a07a(0x23f),'desc':a4_0x58a07a(0x342)},0x9:{'name':a4_0x58a07a(0x396),'desc':a4_0x58a07a(0x36f)},0xb:{'name':'Ул.\x20Панфилова','desc':a4_0x58a07a(0x38e)},0xc:{'name':a4_0x58a07a(0x2ca),'desc':a4_0x58a07a(0x36d)},0xd:{'name':'Старая\x20Площадь\x20(КБТУ)','desc':a4_0x58a07a(0x1f1)},0xe:{'name':a4_0x58a07a(0x22b),'desc':a4_0x58a07a(0x38c)},0xf:{'name':a4_0x58a07a(0x2a3),'desc':'Международный\x20аэропорт\x20у\x20гор'},0x10:{'name':'Проспект\x20Абылай\x20Хана','desc':'Центральный\x20проспект'},0x12:{'name':'Проспект\x20Достык','desc':a4_0x58a07a(0x3bf)},0x13:{'name':'Ботанический\x20Сад','desc':a4_0x58a07a(0x379)},0x15:{'name':a4_0x58a07a(0x2ee),'desc':a4_0x58a07a(0x31a)},0x17:{'name':a4_0x58a07a(0x2aa),'desc':a4_0x58a07a(0x226)},0x18:{'name':a4_0x58a07a(0x384),'desc':a4_0x58a07a(0x297)},0x19:{'name':a4_0x58a07a(0x207),'desc':a4_0x58a07a(0x36c)},0x1a:{'name':a4_0x58a07a(0x2cf),'desc':a4_0x58a07a(0x395)},0x1b:{'name':a4_0x58a07a(0x301),'desc':'Современный\x20бизнес-район'},0x1c:{'name':a4_0x58a07a(0x30c),'desc':a4_0x58a07a(0x382)},0x1d:{'name':a4_0x58a07a(0x330),'desc':a4_0x58a07a(0x3c3)},0x1f:{'name':a4_0x58a07a(0x2d9),'desc':a4_0x58a07a(0x27e)},0x20:{'name':a4_0x58a07a(0x29c),'desc':'Горнолыжный\x20курорт\x20мирового\x20уровня'},0x22:{'name':a4_0x58a07a(0x256),'desc':'Бирюзовое\x20чудо\x20в\x20горах\x20Тянь-Шаня'},0x23:{'name':'Алматы-2','desc':a4_0x58a07a(0x356)},0x25:{'name':a4_0x58a07a(0x2fc),'desc':a4_0x58a07a(0x289)},0x27:{'name':a4_0x58a07a(0x27a),'desc':a4_0x58a07a(0x3b3)}}},'дубай':{'name':a4_0x58a07a(0x3b8),'streets':{0x1:{'name':'Дейра','desc':a4_0x58a07a(0x255)},0x3:{'name':a4_0x58a07a(0x314),'desc':a4_0x58a07a(0x35d)},0x5:{'name':a4_0x58a07a(0x390),'desc':a4_0x58a07a(0x338)},0x6:{'name':a4_0x58a07a(0x2b3),'desc':a4_0x58a07a(0x1ef)},0x8:{'name':a4_0x58a07a(0x24b),'desc':'Футуристический\x20район\x20на\x20заливе'},0x9:{'name':a4_0x58a07a(0x388),'desc':a4_0x58a07a(0x386)},0xb:{'name':a4_0x58a07a(0x332),'desc':a4_0x58a07a(0x268)},0xc:{'name':a4_0x58a07a(0x240),'desc':a4_0x58a07a(0x39d)},0xd:{'name':a4_0x58a07a(0x351),'desc':a4_0x58a07a(0x3a1)},0xe:{'name':a4_0x58a07a(0x227),'desc':'Пляжный\x20курорт\x20с\x20граффити'},0xf:{'name':a4_0x58a07a(0x2ba),'desc':a4_0x58a07a(0x1e8)},0x10:{'name':a4_0x58a07a(0x2c9),'desc':a4_0x58a07a(0x2c5)},0x12:{'name':a4_0x58a07a(0x20b),'desc':a4_0x58a07a(0x27b)},0x13:{'name':'Ain\x20Dubai','desc':a4_0x58a07a(0x318)},0x15:{'name':a4_0x58a07a(0x326),'desc':a4_0x58a07a(0x37d)},0x17:{'name':'Музей\x20Будущего','desc':a4_0x58a07a(0x201)},0x18:{'name':a4_0x58a07a(0x23b),'desc':a4_0x58a07a(0x294)},0x19:{'name':a4_0x58a07a(0x24f),'desc':a4_0x58a07a(0x377)},0x1a:{'name':a4_0x58a07a(0x310),'desc':a4_0x58a07a(0x208)},0x1b:{'name':a4_0x58a07a(0x3b7),'desc':'Сверхроскошный\x20курортный\x20комплекс'},0x1c:{'name':a4_0x58a07a(0x290),'desc':a4_0x58a07a(0x2d4)},0x1d:{'name':a4_0x58a07a(0x38b),'desc':'Семизвездочный\x20отель-парус\x20в\x20море'},0x1f:{'name':a4_0x58a07a(0x3ae),'desc':a4_0x58a07a(0x1ee)},0x20:{'name':'Дубай\x20Опера','desc':a4_0x58a07a(0x1fc)},0x22:{'name':a4_0x58a07a(0x2f5),'desc':a4_0x58a07a(0x311)},0x23:{'name':a4_0x58a07a(0x223),'desc':a4_0x58a07a(0x1f5)},0x25:{'name':a4_0x58a07a(0x2c2),'desc':a4_0x58a07a(0x31c)},0x27:{'name':'Бурдж-Халифа\x20(Burj)','desc':a4_0x58a07a(0x3c1)}}}};export function generateThematicTiles(_0x36ed15){const _0x300eee=a4_0x58a07a;if(!_0x36ed15||typeof _0x36ed15!==_0x300eee(0x385))return{};const _0xb134d6=_0x36ed15[_0x300eee(0x2de)]()['toLowerCase']();if(POPULAR_CITIES[_0xb134d6])return POPULAR_CITIES[_0xb134d6][_0x300eee(0x35e)];for(const [_0x2cff31,_0x5babab]of Object[_0x300eee(0x3a3)](POPULAR_CITIES)){if(_0xb134d6[_0x300eee(0x2b1)](_0x2cff31)||_0x2cff31[_0x300eee(0x2b1)](_0xb134d6))return _0x5babab[_0x300eee(0x35e)];}const _0x5b0e72=_0x36ed15[_0x300eee(0x2de)]()[_0x300eee(0x28f)](0x0)[_0x300eee(0x3bb)]()+_0x36ed15[_0x300eee(0x2de)]()[_0x300eee(0x26a)](0x1),_0x3c10e9=[{'id':0x1,'name':_0x5b0e72+_0x300eee(0x2d7),'desc':_0x300eee(0x2a8)+_0x5b0e72},{'id':0x3,'name':_0x5b0e72+':\x20Переулок','desc':_0x300eee(0x3c6)+_0x5b0e72},{'id':0x5,'name':_0x5b0e72+'\x20Вокзал-1','desc':_0x300eee(0x23a)+_0x5b0e72},{'id':0x6,'name':_0x5b0e72+_0x300eee(0x399),'desc':_0x300eee(0x3d5)+_0x5b0e72},{'id':0x8,'name':_0x5b0e72+_0x300eee(0x34a),'desc':'Зеленый\x20променад\x20'+_0x5b0e72},{'id':0x9,'name':_0x5b0e72+_0x300eee(0x350),'desc':_0x300eee(0x29b)+_0x5b0e72},{'id':0xb,'name':_0x5b0e72+_0x300eee(0x233),'desc':_0x300eee(0x322)+_0x5b0e72},{'id':0xc,'name':_0x5b0e72+_0x300eee(0x37e),'desc':_0x300eee(0x241)+_0x5b0e72},{'id':0xd,'name':_0x5b0e72+_0x300eee(0x270),'desc':_0x300eee(0x357)+_0x5b0e72},{'id':0xe,'name':_0x5b0e72+_0x300eee(0x317),'desc':'Прибрежная\x20зона\x20'+_0x5b0e72},{'id':0xf,'name':_0x5b0e72+'\x20Экспресс','desc':_0x300eee(0x329)+_0x5b0e72},{'id':0x10,'name':_0x5b0e72+':\x20Галерея','desc':'Культурный\x20кластер\x20'+_0x5b0e72},{'id':0x12,'name':_0x5b0e72+_0x300eee(0x220),'desc':_0x300eee(0x254)+_0x5b0e72},{'id':0x13,'name':_0x5b0e72+_0x300eee(0x2e2),'desc':_0x300eee(0x2b6)+_0x5b0e72},{'id':0x15,'name':_0x5b0e72+_0x300eee(0x2f3),'desc':_0x300eee(0x229)+_0x5b0e72},{'id':0x17,'name':_0x5b0e72+_0x300eee(0x26b),'desc':_0x300eee(0x26d)+_0x5b0e72},{'id':0x18,'name':_0x5b0e72+':\x20Сити','desc':'Высотный\x20квартал\x20'+_0x5b0e72},{'id':0x19,'name':_0x5b0e72+'\x20Аэропорт','desc':_0x300eee(0x2bc)+_0x5b0e72},{'id':0x1a,'name':_0x5b0e72+_0x300eee(0x359),'desc':_0x300eee(0x291)+_0x5b0e72},{'id':0x1b,'name':_0x5b0e72+_0x300eee(0x3d3),'desc':_0x300eee(0x204)+_0x5b0e72},{'id':0x1c,'name':_0x5b0e72+_0x300eee(0x32d),'desc':_0x300eee(0x358)+_0x5b0e72},{'id':0x1d,'name':_0x5b0e72+_0x300eee(0x209),'desc':_0x300eee(0x2c0)+_0x5b0e72},{'id':0x1f,'name':_0x5b0e72+_0x300eee(0x31d),'desc':_0x300eee(0x389)+_0x5b0e72},{'id':0x20,'name':_0x5b0e72+':\x20Цитадель','desc':_0x300eee(0x39f)+_0x5b0e72},{'id':0x22,'name':_0x5b0e72+_0x300eee(0x217),'desc':_0x300eee(0x280)+_0x5b0e72},{'id':0x23,'name':_0x5b0e72+_0x300eee(0x25f),'desc':_0x300eee(0x3cb)+_0x5b0e72},{'id':0x25,'name':_0x5b0e72+_0x300eee(0x2be),'desc':_0x300eee(0x28b)+_0x5b0e72},{'id':0x27,'name':_0x5b0e72+_0x300eee(0x2cb),'desc':_0x300eee(0x200)+_0x5b0e72}],_0x1570f1={};return _0x3c10e9[_0x300eee(0x299)](_0x306375=>{const _0x5a5990=_0x300eee;_0x1570f1[_0x306375['id']]={'name':_0x306375[_0x5a5990(0x39c)],'desc':_0x306375[_0x5a5990(0x245)]};}),_0x1570f1;}
+/**
+ * City & Thematic Map Generator
+ * Generates custom tile sets based on city name or theme query
+ */
+
+export const POPULAR_CITIES = {
+  'киев': {
+    name: 'Киев 🇺🇦',
+    streets: {
+      1: { name: 'Крещатик', desc: 'Главная улица столицы Украины' },
+      3: { name: 'Майдан', desc: 'Сердце города и фонтаны' },
+      5: { name: 'Киев-Пасс', desc: 'Центральный железнодорожный вокзал' },
+      6: { name: 'Андреевский', desc: 'Улица художников и Андреевская церковь' },
+      8: { name: 'Подол', desc: 'Исторический купеческий квартал' },
+      9: { name: 'Контрактовая', desc: 'Старинная площадь и Могилянка' },
+      11: { name: 'Печерск', desc: 'Элитный холмистый район' },
+      12: { name: 'КиевЭнерго', desc: 'Городская энергосеть' },
+      13: { name: 'Лаврская ул.', desc: 'Дорога к Киево-Печерской Лавре' },
+      14: { name: 'Парк Славы', desc: 'Видовая площадка над Днепром' },
+      15: { name: 'Борисполь', desc: 'Главный международный аэропорт' },
+      16: { name: 'Оболонь', desc: 'Живописная набережная Днепра' },
+      18: { name: 'Оболонская Наб.', desc: 'Променад, пляжи и яхт-клуб' },
+      19: { name: 'Парк Наталка', desc: 'Современный зеленый парк у воды' },
+      21: { name: 'Золотые Ворота', desc: 'Древние парадные ворота Руси' },
+      23: { name: 'Ярославов Вал', desc: 'Улица кофеен, театров и посольств' },
+      24: { name: 'Владимирская', desc: 'Софийский собор и Оперный театр' },
+      25: { name: 'Жуляны', desc: 'Международный аэропорт им. Сикорского' },
+      26: { name: 'Позняки', desc: 'Динамичный левобережный район' },
+      27: { name: 'Осокорки', desc: 'Современные высотные кварталы' },
+      28: { name: 'КиевВодоканал', desc: 'Днепровская станция очистки воды' },
+      29: { name: 'Русановка', desc: 'Киевская Венеция с фонтанами на канале' },
+      31: { name: 'Голосеево', desc: 'Огромный реликтовый парк' },
+      32: { name: 'ВДНГ Киев', desc: 'Экспоцентр и фестивальный хаб' },
+      34: { name: 'Феофания', desc: 'Парк с каскадом озер' },
+      35: { name: 'Киев Метро', desc: 'Самая глубокая станция «Арсенальная»' },
+      37: { name: 'Бул. Шевченко', desc: 'Ботанический сад и Владимирский собор' },
+      39: { name: 'Липки (Банковая)', desc: 'Правительственный и самый дорогой район' }
+    }
+  },
+  'москва': {
+    name: 'Москва 🇷🇺',
+    streets: {
+      1: { name: 'Житная ул.', desc: 'Исторический район Замоскворечья' },
+      3: { name: 'Нагатинская', desc: 'Южный округ Москвы' },
+      5: { name: 'Ленинградский вокзал', desc: 'Главный вокзал на Санкт-Петербург' },
+      6: { name: 'Варшавское шоссе', desc: 'Крупная транспортная артерия' },
+      8: { name: 'Огородный проезд', desc: 'Северо-восточный кластер' },
+      9: { name: 'Первая Парковая', desc: 'Зеленый район Измайлово' },
+      11: { name: 'Ул. Полянка', desc: 'Старинные купеческие улочки' },
+      12: { name: 'Мосэнерго', desc: 'Электростанции Москвы' },
+      13: { name: 'Ул. Сретенка', desc: 'Культурный центр и театры' },
+      14: { name: 'Ростовская наб.', desc: 'Вид на Москву-реку и Сити' },
+      15: { name: 'Ярославский вокзал', desc: 'Ворота на Транссиб' },
+      16: { name: 'Рязанский просп.', desc: 'Юго-восточный проспект' },
+      18: { name: 'Ул. Вавилова', desc: 'Академический район институтов' },
+      19: { name: 'Новинский бул.', desc: 'Садовое кольцо и особняки' },
+      21: { name: 'Тверская ул.', desc: 'Главная парадная улица Москвы' },
+      23: { name: 'Пушкинская пл.', desc: 'Памятник поэту и кинотеатр' },
+      24: { name: 'Пл. Маяковского', desc: 'Концертный зал и гостиница Пекин' },
+      25: { name: 'Курский вокзал', desc: 'Пассажирский хаб столицы' },
+      26: { name: 'Ул. Грузинский Вал', desc: 'У Белорусского вокзала' },
+      27: { name: 'Ул. Чайковского', desc: 'Историческое Садовое кольцо' },
+      28: { name: 'Мосводоканал', desc: 'Городское водоснабжение' },
+      29: { name: 'Смоленская пл.', desc: 'Высотка МИД и Арбат' },
+      31: { name: 'Ул. Щусева', desc: 'Тихие переулки центра' },
+      32: { name: 'Гоголевский бул.', desc: 'Бульварное кольцо и галереи' },
+      34: { name: 'Кутузовский просп.', desc: 'Парадный правительственный проспект' },
+      35: { name: 'Казанский вокзал', desc: 'Шедевр архитектора Щусева' },
+      37: { name: 'Ул. Малая Бронная', desc: 'Патриаршие пруды и рестораны' },
+      39: { name: 'Ул. Арбат', desc: 'Пешеходная легенда Москвы' }
+    }
+  },
+  'питер': {
+    name: 'Санкт-Петербург ⚓',
+    streets: {
+      1: { name: 'Думская ул.', desc: 'Ночная клубная улица' },
+      3: { name: 'Садовая ул.', desc: 'Сенная площадь и Гостиный двор' },
+      5: { name: 'Московский вокзал', desc: 'Главные ворота в Санкт-Петербург' },
+      6: { name: 'Гороховая ул.', desc: 'Исторический центр и мосты' },
+      8: { name: 'Литейный просп.', desc: 'Книжные лавки и доходные дома' },
+      9: { name: 'Владимирский просп.', desc: 'Достоевский и собор' },
+      11: { name: 'Васильевский о-в', desc: 'Стрелка и Ростральные колонны' },
+      12: { name: 'Ленэнерго', desc: 'Электросети города на Неве' },
+      13: { name: 'Петроградка', desc: 'Северный модерн и Петропавловка' },
+      14: { name: 'Каменноостровский', desc: 'Австрийская площадь' },
+      15: { name: 'Финляндский вокзал', desc: 'Поезда на север и Выборг' },
+      16: { name: 'Наб. Мойки', desc: 'Музей-квартира Пушкина' },
+      18: { name: 'Наб. Фонтанки', desc: 'Чижик-Пыжик и мост Ломоносова' },
+      19: { name: 'Канал Грибоедова', desc: 'Спас на Крови и Банковский мост' },
+      21: { name: 'Ул. Рубинштейна', desc: 'Главная ресторанная улица Европы' },
+      23: { name: 'Малая Садовая', desc: 'Пешеходная улица с котами' },
+      24: { name: 'Большая Конюшенная', desc: 'Пышечная и ДЛТ' },
+      25: { name: 'Витебский вокзал', desc: 'Старейший и красивейший вокзал' },
+      26: { name: 'Крестовский о-в', desc: 'Газпром Арена и элитные парки' },
+      27: { name: 'Елагин остров', desc: 'Дворцово-парковый ансамбль' },
+      28: { name: 'Водоканал СПб', desc: 'Башня водоканала и Нева' },
+      29: { name: 'Севкабель Порт', desc: 'Арт-пространство на Финском заливе' },
+      31: { name: 'Адмиралтейский', desc: 'Исаакиевский собор и Медный всадник' },
+      32: { name: 'Дворцовая наб.', desc: 'Эрмитаж и мосты над Невой' },
+      34: { name: 'Дворцовая пл.', desc: 'Александровская колонна и Зимний дворец' },
+      35: { name: 'Балтийский вокзал', desc: 'Поезда в Петергоф и Ораниенбаум' },
+      37: { name: 'Английская наб.', desc: 'Особняки знати и вид на Неву' },
+      39: { name: 'Невский проспект', desc: 'Сердце и душа Санкт-Петербурга' }
+    }
+  },
+  'токио': {
+    name: 'Токио 🇯🇵',
+    streets: {
+      1: { name: 'Асакуса', desc: 'Храм Сэнсо-дзи и традиции' },
+      3: { name: 'Уэно', desc: 'Парк панд и музеи' },
+      5: { name: 'Станция Токио', desc: 'Красный кирпичный вокзал синкансэнов' },
+      6: { name: 'Акихабара', desc: 'Столица аниме и электроники' },
+      8: { name: 'Икэбукуро', desc: 'Небоскреб Sunshine 60' },
+      9: { name: 'Одайба', desc: 'Искусственный остров и Гандам' },
+      11: { name: 'Роппонги', desc: 'Ночная жизнь и башни Мори' },
+      12: { name: 'TEPCO Энергия', desc: 'Энергосеть Канто' },
+      13: { name: 'Харадзюку', desc: 'Улица молодежной моды Такэсита' },
+      14: { name: 'Омотэсандо', desc: 'Японские Елисейские поля' },
+      15: { name: 'Станция Синдзюку', desc: 'Самый загруженный вокзал мира' },
+      16: { name: 'Кабуки-тё', desc: 'Квартал красных фонарей и Годзилла' },
+      17: { name: 'Ниси-Синдзюку', desc: 'Квартал небоскребов и мэрии' },
+      19: { name: 'Синагава', desc: 'Бизнес-центр и скоростные поезда' },
+      21: { name: 'Сибуя Перекрёсток', desc: 'Знаменитый перекресток и Хатико' },
+      23: { name: 'Сибуя Sky', desc: 'Видовая площадка 360 градусов' },
+      24: { name: 'Дайканьяма', desc: 'Уютный хипстерский район' },
+      25: { name: 'Станция Сибуя', desc: 'Линия Яманотэ' },
+      26: { name: 'Мегуро', desc: 'Цветущая сакура вдоль реки' },
+      27: { name: 'Симокитадзава', desc: 'Винтажные магазины и инди-театры' },
+      28: { name: 'Tokyo Gas & Water', desc: 'Коммунальная сеть мегаполиса' },
+      29: { name: 'Цукидзи', desc: 'Знаменитый рыбный рынок и суши' },
+      31: { name: 'Императорский Дворец', desc: 'Сады Кокё и мост Нидзюбаси' },
+      32: { name: 'Токийская Башня', desc: 'Красно-белая визитная карточка' },
+      34: { name: 'Tokyo Skytree', desc: 'Высочайшая телебашня 634 метра' },
+      35: { name: 'Монорельс Юрикамомэ', desc: 'Беспилотный поезд через Радужный мост' },
+      37: { name: 'Маруноути', desc: 'Штаб-квартиры крупнейших корпораций' },
+      39: { name: 'Гиндза', desc: 'Роскошь, бутики и самые дорогие квадратные метры' }
+    }
+  },
+  'лондон': {
+    name: 'Лондон 🇬🇧',
+    streets: {
+      1: { name: 'Уайтчепел', desc: 'Исторический Ист-Энд' },
+      3: { name: 'Брик-Лейн', desc: 'Стрит-арт, винтаж и карри' },
+      5: { name: 'Кингс-Кросс', desc: 'Платформа 9 3/4 и Евростар' },
+      6: { name: 'Камден Таун', desc: 'Панк-рок, рынки и каналы' },
+      8: { name: 'Шордич', desc: 'Креативный технологический хаб' },
+      9: { name: 'Гринвич', desc: 'Нулевой меридиан и королевская обсерватория' },
+      11: { name: 'Сохо', desc: 'Сердце театров, баров и джаза' },
+      12: { name: 'National Grid UK', desc: 'Британская энергосистема' },
+      13: { name: 'Ковент-Гарден', desc: 'Уличные артисты и Королевская опера' },
+      14: { name: 'Лестер-Сквер', desc: 'Мировые кинопремьеры' },
+      15: { name: 'Паддингтон', desc: 'Вокзал и знаменитый медвежонок' },
+      16: { name: 'Оксфорд-Стрит', desc: 'Главная торговая миля Европы' },
+      18: { name: 'Риджент-Стрит', desc: 'Элегантный изгиб и магазины' },
+      19: { name: 'Бейкер-Стрит 221B', desc: 'Дом Шерлока Холмса' },
+      21: { name: 'Ноттинг-Хилл', desc: 'Пастельные домики и Портобелло' },
+      23: { name: 'Кенсингтон', desc: 'Музеи и королевский дворец' },
+      24: { name: 'Челси (Кингс-Роуд)', desc: 'Престижный район аристократии' },
+      25: { name: 'Вокзал Ватерлоо', desc: 'Лондон Ай и Саут-Банк' },
+      26: { name: 'Канэри-Уорф', desc: 'Небоскребы мировых банков' },
+      27: { name: 'Лондонский Сити', desc: 'Огурец, Осколок и Банк Англии' },
+      28: { name: 'Thames Water', desc: 'Водоснабжение Темзы' },
+      29: { name: 'Пикадилли', desc: 'Неоновые экраны и Эрос' },
+      31: { name: 'Трафальгарская пл.', desc: 'Колонна Нельсона и Национальная галерея' },
+      32: { name: 'Вестминстер', desc: 'Биг Бен и Парламент Великобритании' },
+      34: { name: 'Тауэрский Мост', desc: 'Символ Британской империи' },
+      35: { name: 'Лондонский Underground', desc: 'Старейшее метро мира (The Tube)' },
+      37: { name: 'Пэлл-Мэлл', desc: 'Джентльменские клубы и Сент-Джеймс' },
+      39: { name: 'Мейфэр (Mayfair)', desc: 'Самый дорогой и эксклюзивный район Лондона' }
+    }
+  },
+  'париж': {
+    name: 'Париж 🇫🇷',
+    streets: {
+      1: { name: 'Бельвиль', desc: 'Квартал художников и панорамный парк' },
+      3: { name: 'Бастилия', desc: 'Площадь революции и Опера' },
+      5: { name: 'Лионский вокзал', desc: 'Поезда TGV на Лазурный берег' },
+      6: { name: 'Монмартр', desc: 'Базилика Сакре-Кёр и кабаре Мулен Руж' },
+      8: { name: 'Пигаль', desc: 'Огни ночного Парижа' },
+      9: { name: 'Канал Сен-Мартен', desc: 'Атмосферные шлюзы и мостики' },
+      11: { name: 'Марэ (Le Marais)', desc: 'Старинные особняки и модные бутики' },
+      12: { name: 'EDF France', desc: 'Энергетика Франции' },
+      13: { name: 'Площадь Вогезов', desc: 'Старейшая площадь Парижа и дом Гюго' },
+      14: { name: 'Остров Сите', desc: 'Нотр-Дам де Пари и Сент-Шапель' },
+      15: { name: 'Северный вокзал', desc: 'Gare du Nord — поезда Eurostar' },
+      16: { name: 'Латинский квартал', desc: 'Сорбонна, Пантеон и книжные лавки' },
+      18: { name: 'Сен-Жермен', desc: 'Кафе де Флор и интеллектуалы' },
+      19: { name: 'Люксембургский сад', desc: 'Дворец Сената и фонтан Медичи' },
+      21: { name: 'Опера Гарнье', desc: 'Шедевр необарокко и Призрак Оперы' },
+      23: { name: 'Вандомская площадь', desc: 'Отель Ritz и ювелирные дома' },
+      24: { name: 'Улица Риволи', desc: 'Аркады и сад Тюильри' },
+      25: { name: 'Вокзал Монпарнас', desc: 'Поезда в Бретань и башня Монпарнас' },
+      26: { name: 'Лувр', desc: 'Стеклянная пирамида и Мона Лиза' },
+      27: { name: 'Трокадеро', desc: 'Лучший вид на Эйфелеву башню' },
+      28: { name: 'Eau de Paris', desc: 'Фонтаны и вода Сены' },
+      29: { name: 'Марсово поле', desc: 'Зеленая эспланада у подножия башни' },
+      31: { name: 'Эйфелева Башня', desc: 'Главная железная леди планеты' },
+      32: { name: 'Площадь Согласия', desc: 'Луксорский обелиск и фонтаны' },
+      34: { name: 'Триумфальная Арка', desc: 'Площадь Звезды и вечный огонь' },
+      35: { name: 'Метрополитен Парижа', desc: 'Входы в стиле ар-нуво Эктора Гимара' },
+      37: { name: 'Авеню Монтень', desc: 'Высокая мода Dior, Chanel и Louis Vuitton' },
+      39: { name: 'Елисейские Поля', desc: 'Самый красивый проспект мира' }
+    }
+  },
+  'нью-йорк': {
+    name: 'Нью-Йорк 🗽',
+    streets: {
+      1: { name: 'Кони-Айленд', desc: 'Деревянный променад и колесо обозрения' },
+      3: { name: 'Брайтон-Бич', desc: 'Маленькая Одесса у океана' },
+      5: { name: 'Grand Central', desc: 'Легендарный Центральный вокзал Манхэттена' },
+      6: { name: 'Уильямсбург', desc: 'Хипстерская столица Бруклина' },
+      8: { name: 'Дамбо (DUMBO)', desc: 'Вид на Манхэттенский мост между зданиями' },
+      9: { name: 'Бруклинский мост', desc: 'Неоготические башни над Ист-Ривер' },
+      11: { name: 'Чайнатаун & Малберри', desc: 'Димсамы и Маленькая Италия' },
+      12: { name: 'Con Edison', desc: 'Пар и электричество Нью-Йорка' },
+      13: { name: 'Гринвич-Виллидж', desc: 'Уютный Вашингтон-сквер и богема' },
+      14: { name: 'Сохо (SoHo)', desc: 'Чугунные фасады и галереи' },
+      15: { name: 'Penn Station', desc: 'Крупнейший транзитный узел под Мэдисон Сквер' },
+      16: { name: 'Хай-Лайн парк', desc: 'Парк на бывшей эстакаде железной дороги' },
+      18: { name: 'Челси Маркет', desc: 'Лобстеры и гастрономический рай' },
+      19: { name: 'Хадсон-Ярдс (Vessel)', desc: 'Футуристическая лестница-монумент' },
+      21: { name: 'Таймс-Сквер', desc: 'Перекресток мира и море неоновой рекламы' },
+      23: { name: 'Бродвей', desc: 'Мировая столица мюзиклов' },
+      24: { name: 'Рокфеллер-Центр', desc: 'Рождественская елка и Top of the Rock' },
+      25: { name: 'JFK Аэропорт', desc: 'Международный хаб Джона Кеннеди' },
+      26: { name: 'Эмпайр Стейт Билдинг', desc: 'Легендарный 102-этажный небоскреб' },
+      27: { name: 'Крайслер Билдинг', desc: 'Шедевр ар-деко с орлами' },
+      28: { name: 'NYC Water System', desc: 'Чистейшая акведукная вода' },
+      29: { name: 'Уолл-Стрит', desc: 'Биржа NYSE и Атакующий бык' },
+      31: { name: 'One World Trade', desc: 'Башня Свободы 1776 футов' },
+      32: { name: 'Статуя Свободы', desc: 'Символ свободы на острове Свободы' },
+      34: { name: 'Метрополитен Музей', desc: 'Сокровищница мирового искусства' },
+      35: { name: 'Нью-Йоркское Метро', desc: 'Круглосуточный сабвей 24/7' },
+      37: { name: 'Центральный Парк', desc: 'Зеленый оазис посреди небоскребов' },
+      39: { name: 'Пятая Авеню (5th Ave)', desc: 'Самая дорогая миля миллиардеров' }
+    }
+  },
+  'минск': {
+    name: 'Минск 🇧🇾',
+    streets: {
+      1: { name: 'Чижовка', desc: 'Чижовка-Арена и водохранилище' },
+      3: { name: 'Серебрянка', desc: 'Живописный Лошицкий парк' },
+      5: { name: 'Минск-Пассажирский', desc: 'Центральный стеклянный вокзал' },
+      6: { name: 'Ул. Октябрьская', desc: 'Стрит-арт, заводы и креативные бары' },
+      8: { name: 'Ул. Зыбицкая', desc: 'Главная барная улица города' },
+      9: { name: 'Верхний Город', desc: 'Ратуша, соборы и мощеные улочки' },
+      11: { name: 'Троицкое предместье', desc: 'Остров Слез и река Свислочь' },
+      12: { name: 'МинскЭнерго', desc: 'Энергоснабжение столицы' },
+      13: { name: 'Ул. Карла Маркса', desc: 'Уютный европейский центр' },
+      14: { name: 'Пл. Свободы', desc: 'Сердце исторического Минска' },
+      15: { name: 'Аэропорт Минск-2', desc: 'Национальный аэропорт' },
+      16: { name: 'Парк Челюскинцев', desc: 'Сосновый бор и аттракционы' },
+      18: { name: 'Пл. Якуба Коласа', desc: 'ЦУМ и филармония' },
+      19: { name: 'Пл. Победы', desc: 'Монумент Победы и вечный огонь' },
+      21: { name: 'Проспект Независимости', desc: 'Великолепный сталинский ампир ЮНЕСКО' },
+      23: { name: 'Национальная Библиотека', desc: 'Знаменитый «Алмаз знаний»' },
+      24: { name: 'Уручье', desc: 'Парк камней и IT-кластер' },
+      25: { name: 'Минское Метро', desc: 'Станция «Площадь Ленина»' },
+      26: { name: 'Немига', desc: 'Древнейшее место основания города' },
+      27: { name: 'Проспект Победителей', desc: 'Стела Минск-Город-Герой' },
+      28: { name: 'МинскВодоканал', desc: 'Вилейско-Минская водная система' },
+      29: { name: 'Минск-Арена', desc: 'Главный спортивный комплекс' },
+      31: { name: 'Комсомольское озеро', desc: 'Остров птиц и пляжи' },
+      32: { name: 'Дрозды', desc: 'Водопады, водохранилище и элитный район' },
+      34: { name: 'Минск-Мир', desc: 'Новый финансовый центр столицы' },
+      35: { name: 'Детская Ж/Д', desc: 'Малая Белорусская железная дорога' },
+      37: { name: 'Осмоловка', desc: 'Тихий зеленый исторический поселок' },
+      39: { name: 'Площадь Независимости', desc: 'Красный костел и Дом Правительства' }
+    }
+  },
+  'алматы': {
+    name: 'Алматы 🇰🇿',
+    streets: {
+      1: { name: 'Сайран', desc: 'Озеро и автовокзал' },
+      3: { name: 'Тастак', desc: 'Колоритный торговый район' },
+      5: { name: 'Алматы-1', desc: 'Северные железнодорожные ворота' },
+      6: { name: 'Зеленый Базар', desc: 'Восточные сладости, казы и фрукты' },
+      8: { name: 'Парк 28 Панфиловцев', desc: 'Вознесенский собор без единого гвоздя' },
+      9: { name: 'Ул. Жибек Жолы (Арбат)', desc: 'Пешеходная улица художников и музыкантов' },
+      11: { name: 'Ул. Панфилова', desc: 'Популярный променад с кофейнями' },
+      12: { name: 'АлматыЭнергоСбыт', desc: 'Энергоснабжение предгорий' },
+      13: { name: 'Старая Площадь (КБТУ)', desc: 'Исторический центр города' },
+      14: { name: 'Оперный Театр Абая', desc: 'Фонтаны и сквер' },
+      15: { name: 'Аэропорт Алматы (ALA)', desc: 'Международный аэропорт у гор' },
+      16: { name: 'Проспект Абылай Хана', desc: 'Центральный проспект' },
+      18: { name: 'Проспект Достык', desc: 'Дорога к высокогорью Медеу' },
+      19: { name: 'Ботанический Сад', desc: 'Оазис редких растений' },
+      21: { name: 'Кок-Тобе', desc: 'Канатная дорога, яблоко и телебашня' },
+      23: { name: 'Парк Первого Президента', desc: 'Большой поющий фонтан и арка' },
+      24: { name: 'Ремизовка', desc: 'Живописное предгорье Заилийского Алатау' },
+      25: { name: 'Алматинское Метро', desc: 'Красивейшие станции из мрамора' },
+      26: { name: 'Горный Гигант', desc: 'Элитный коттеджный массив' },
+      27: { name: 'Самал', desc: 'Современный бизнес-район' },
+      28: { name: 'Горводоканал Алматы', desc: 'Ледниковая чистая вода' },
+      29: { name: 'Есентай Молл (Esentai)', desc: 'Башня Esentai Tower и бутики' },
+      31: { name: 'Медеу', desc: 'Высокогорный каток на высоте 1691 м' },
+      32: { name: 'Чимбулак (Shymbulak)', desc: 'Горнолыжный курорт мирового уровня' },
+      34: { name: 'Большое Алматинское Озеро', desc: 'Бирюзовое чудо в горах Тянь-Шаня' },
+      35: { name: 'Алматы-2', desc: 'Центральный вокзал в сердце города' },
+      37: { name: 'Проспект Аль-Фараби', desc: 'Главная современная скоростная магистраль' },
+      39: { name: 'Пик Талгар (Вершина)', desc: 'Высшая точка Заилийского Алатау 4979 м' }
+    }
+  },
+  'дубай': {
+    name: 'Дубай 🇦🇪',
+    streets: {
+      1: { name: 'Дейра', desc: 'Золотой рынок и рынок специй' },
+      3: { name: 'Бур Дубай', desc: 'Старинный квартал Аль-Фахиди' },
+      5: { name: 'Станция Union Metro', desc: 'Крупнейший пересадочный узел метро' },
+      6: { name: 'Дубай Крик', desc: 'Традиционные лодки абра' },
+      8: { name: 'Крик Харбор', desc: 'Футуристический район на заливе' },
+      9: { name: 'Дубай Молл', desc: 'Самый большой молл мира и аквариум' },
+      11: { name: 'Бизнес Бэй', desc: 'Дубайский канал и небоскребы' },
+      12: { name: 'DEWA Dubai', desc: 'Управление электро- и водоснабжения' },
+      13: { name: 'City Walk', desc: 'Европейский променад с пальмами' },
+      14: { name: 'Ла Мер (La Mer)', desc: 'Пляжный курорт с граффити' },
+      15: { name: 'Аэропорт DXB', desc: 'Один из самых загруженных хабов мира' },
+      16: { name: 'Дубай Марина', desc: 'Небоскребы вокруг пристани для суперяхт' },
+      18: { name: 'JBR Walk', desc: 'Пешеходная набережная у Персидского залива' },
+      19: { name: 'Ain Dubai', desc: 'Самое большое колесо обозрения' },
+      21: { name: 'Шейх Заед Роуд', desc: 'Шоссе футуристических небоскребов' },
+      23: { name: 'Музей Будущего', desc: 'Уникальное здание с арабской каллиграфией' },
+      24: { name: 'DIFC Финансы', desc: 'Международный финансовый центр' },
+      25: { name: 'Монорельс Пальмы', desc: 'Панорамный поезд над морем' },
+      26: { name: 'Пальма Джумейра', desc: 'Искусственный остров в виде пальмы' },
+      27: { name: 'Atlantis The Royal', desc: 'Сверхроскошный курортный комплекс' },
+      28: { name: 'Опреснение залива', desc: 'Завод морского опреснения воды' },
+      29: { name: 'Бурдж Аль Араб', desc: 'Семизвездочный отель-парус в море' },
+      31: { name: 'Дубайские Фонтаны', desc: 'Грандиозное светомузыкальное шоу' },
+      32: { name: 'Дубай Опера', desc: 'Театр в форме дау в центре города' },
+      34: { name: 'Emirates Hills', desc: 'Беверли-Хиллз Ближнего Востока' },
+      35: { name: 'Аэропорт Аль-Мактум', desc: 'Мегааэропорт DWC' },
+      37: { name: 'Джумейра Бич', desc: 'Белоснежные пляжи шейхов' },
+      39: { name: 'Бурдж-Халифа (Burj)', desc: 'Высочайшее здание планеты 828 метров' }
+    }
+  }
+};
+
+/**
+ * Procedural generator for ANY custom query (e.g. game, anime, city, movie)
+ */
+export function generateThematicTiles(query) {
+  if (!query || typeof query !== 'string') return {};
+  const clean = query.trim().toLowerCase();
+
+  // 1. Direct match in curated popular cities
+  if (POPULAR_CITIES[clean]) {
+    return POPULAR_CITIES[clean].streets;
+  }
+
+  // 2. Partial match in curated popular cities
+  for (const [key, data] of Object.entries(POPULAR_CITIES)) {
+    if (clean.includes(key) || key.includes(clean)) {
+      return data.streets;
+    }
+  }
+
+  // 3. Procedural generator for any word / city / concept
+  const title = query.trim().charAt(0).toUpperCase() + query.trim().slice(1);
+  
+  const streetTypes = [
+    { id: 1, name: `${title}: Старт. Улица`, desc: `Начальный район ${title}` },
+    { id: 3, name: `${title}: Переулок`, desc: `Уютный переулок ${title}` },
+    { id: 5, name: `${title} Вокзал-1`, desc: `Транспортный узел ${title}` },
+    { id: 6, name: `${title}: Авеню`, desc: `Оживленная улица ${title}` },
+    { id: 8, name: `${title}: Бульвар`, desc: `Зеленый променад ${title}` },
+    { id: 9, name: `${title}: Сквер`, desc: `Центральный сквер ${title}` },
+    { id: 11, name: `${title}: Квартал`, desc: `Жилой массив ${title}` },
+    { id: 12, name: `${title} Энергосеть`, desc: `Электростанция ${title}` },
+    { id: 13, name: `${title}: Парк`, desc: `Живописный парк ${title}` },
+    { id: 14, name: `${title}: Набережная`, desc: `Прибрежная зона ${title}` },
+    { id: 15, name: `${title} Экспресс`, desc: `Скоростная линия ${title}` },
+    { id: 16, name: `${title}: Галерея`, desc: `Культурный кластер ${title}` },
+    { id: 18, name: `${title}: Пассаж`, desc: `Торговая аллея ${title}` },
+    { id: 19, name: `${title}: Проспект`, desc: `Широкий проспект ${title}` },
+    { id: 21, name: `${title}: Центр`, desc: `Деловой центр ${title}` },
+    { id: 23, name: `${title}: Плаза`, desc: `Главная площадь ${title}` },
+    { id: 24, name: `${title}: Сити`, desc: `Высотный квартал ${title}` },
+    { id: 25, name: `${title} Аэропорт`, desc: `Воздушные ворота ${title}` },
+    { id: 26, name: `${title}: Хай-Тек`, desc: `Инновационный район ${title}` },
+    { id: 27, name: `${title}: Башня`, desc: `Небоскреб ${title}` },
+    { id: 28, name: `${title} Водоканал`, desc: `Водоснабжение ${title}` },
+    { id: 29, name: `${title}: Молл`, desc: `Торгово-развлекательный хаб ${title}` },
+    { id: 31, name: `${title}: Дворец`, desc: `Архитектурная достопримечательность ${title}` },
+    { id: 32, name: `${title}: Цитадель`, desc: `Престижная крепость ${title}` },
+    { id: 34, name: `${title}: Олимп`, desc: `Элитная вершина ${title}` },
+    { id: 35, name: `${title} Метро`, desc: `Метрополитен ${title}` },
+    { id: 37, name: `${title}: Резиденция`, desc: `Золотая миля ${title}` },
+    { id: 39, name: `${title}: ПЕНТХАУС`, desc: `Самая дорогая недвижимость ${title}` }
+  ];
+
+  const result = {};
+  streetTypes.forEach(st => {
+    result[st.id] = { name: st.name, desc: st.desc };
+  });
+
+  return result;
+}

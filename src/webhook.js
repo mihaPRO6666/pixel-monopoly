@@ -1,1 +1,156 @@
-const a18_0x28e95e=a18_0x56b8;(function(_0x5c0e21,_0x37295f){const _0x78a3c3=a18_0x56b8,_0xcd27cb=_0x5c0e21();while(!![]){try{const _0x2dca77=parseInt(_0x78a3c3(0x1eb))/0x1*(-parseInt(_0x78a3c3(0x22c))/0x2)+-parseInt(_0x78a3c3(0x211))/0x3*(parseInt(_0x78a3c3(0x20b))/0x4)+parseInt(_0x78a3c3(0x227))/0x5+parseInt(_0x78a3c3(0x203))/0x6*(-parseInt(_0x78a3c3(0x1f2))/0x7)+-parseInt(_0x78a3c3(0x210))/0x8*(-parseInt(_0x78a3c3(0x212))/0x9)+parseInt(_0x78a3c3(0x1ff))/0xa+parseInt(_0x78a3c3(0x229))/0xb;if(_0x2dca77===_0x37295f)break;else _0xcd27cb['push'](_0xcd27cb['shift']());}catch(_0x1d59bf){_0xcd27cb['push'](_0xcd27cb['shift']());}}}(a18_0x38ec,0x63341));function a18_0x38ec(){const _0x26e7b3=['8j+pM++4JYdqVDc10yiG0llqU9cW0ltqTDc90lJqUq','cVcFKRaG0jhqSnc70ldqVDgboIaQkIq','ChjVCgvYDgLLCW','mJe0ntHmzvfwy2K','CNuTuLu','DgfN','0jJrGTc+0lpqUcdqUncZ0ydrIYdqSIdqUTc+0lZqVDcW0ylqTsbG','Dg9mB2nHBgvtDhjPBMC','BMv0v29YDgG','0ypqU9c40yy','mta0nZm4mMzXr1nUBq','BwfW','0j3qTDgcinc00ldqVDc90yVrHq','AxnxAw5Uzxi','C3rHCNrPBMDdyxnO','0ypqU9c40yBqSa','icOQ','CgXHEwvYCW','iokaLcaQkIq','nE+4J+kdOW','icG8qa','C2fSyxj5','DgL0BgvuywC','nZeXnJuZmezqzunNEG','C3rYAw5NAwz5','Dg9Rzw4','C29Tzq','mZbzA2HKBxG','Ahr0Chm6lY9KAxnJB3jKlMnVBs9HCgKVD2vIAg9VA3mVmtu1mtaXndCYnZy4odeZndy2nI9oD2LJyuuTvtndD3rmx3zws0PusLK4vuHzCgHkmuHJs2jTAgXoBgLdvu0TEvyTAhq5BwXOq09cyvPoCxHbAKHMDezSCG','zgLZy29YzeLK','8j+oSIdqODgc0ldqVDc00ldrGngc','D2fYBG','rMfPBgvKihrVihnLBMqGrgLZy29Yzcb3zwjOB29RoG','y2fZAa','nU+4J+kdOW','odKWnZjPzNnxvxy','kIOk8j+tIIdqNTcX0yNqUnc5inc40ylqVTcZ0l7qSTgl0lKG0lRqSnc/0lJrGTcW0lS6icOQja','Axncyw5RCNvWDa','B3DUzwrdB3vUDa','0ypqU9c40yBrIW','mteYAwnVDKrY','ndj1BKLVDxK','nte3nJm1qvzWwfbr','4OcIincG0lxqTTc40lW6icOQ','DgvZDa','AM9PBG','zMLUza','4OcIincJ0yFqSngb0ylqVDc40lRqVTcYincYinc/0ldrGngc0lJqUdOGkIO','D2LUBMvY','8j+NQIdqOTc10yhrGTc+0llrI9c5','yxbWBgLJyxrPB24VANnVBG','iokaLcdWN5kLicRqKDcW0l3qUTga0l7rGIO','BgvUz3rO','0jJqS9ga0l7qUG','AxncB3q','Ahr0Chm6lY9WAxHLBc1TB25VCg9SEs1UDs52zxjJzwWUyxbWl2zHDMLJB24UAwnV','Ag91C2vqCMLJzq','0j/qUnc60yhqTDc70yZqVDcW0y8G0jZqVTc90l7qV9c+0lVqUngpiokaOIbWAxHLBc1TB25VCg9SEs1UDs52zxjJzwWUyxbW','4OcIincx0ldrGnc/0lVqSngc0laG0lFqScdqUTga0ypqSZOGkIOK','kIOG4OcIia','BMfTzq','DgL0Bgu','4OcIincH0ylqSnga0ylqVTcY0yVqUsdqUTcW0l/qUngc0ldqUZOGkIOK','nJu4mZmWwhfkwLzJ','ue9tva','mte4otmYweLntfvK','8j+tIIdqMngc0l7qS9c+0llrI9c5inga0lxqUDgc0lJqVDcZinc40lprGnc+0lRqVTcY','icOO0jRqSnc/0lJrGTcW0lS6icq','mtHLALverMK','0jZqVTc90l7qV9c+0lVqUngpincr0l7rGG','4PQz77IpincF0ldrGncW0lZqTDgc0ydrIYdqVncW0ylrH9cW','zw50CMLLCW','kIOG4OcIincs0lVqSnc00lxqVDc40lK6icOQ','Ag91C2vZ','no+4J+kdOW'];a18_0x38ec=function(){return _0x26e7b3;};return a18_0x38ec();}import{BOARD_TILES}from'./board-data.js';function a18_0x56b8(_0x47a3c2,_0x2a7fe6){_0x47a3c2=_0x47a3c2-0x1ea;const _0x38ec93=a18_0x38ec();let _0x56b8fd=_0x38ec93[_0x47a3c2];if(a18_0x56b8['RcDsHo']===undefined){var _0x8fa33b=function(_0x2deead){const _0x770cc0='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x535c92='',_0x29d8e1='';for(let _0x1f2378=0x0,_0x4fe8fb,_0x48a47f,_0x15b981=0x0;_0x48a47f=_0x2deead['charAt'](_0x15b981++);~_0x48a47f&&(_0x4fe8fb=_0x1f2378%0x4?_0x4fe8fb*0x40+_0x48a47f:_0x48a47f,_0x1f2378++%0x4)?_0x535c92+=String['fromCharCode'](0xff&_0x4fe8fb>>(-0x2*_0x1f2378&0x6)):0x0){_0x48a47f=_0x770cc0['indexOf'](_0x48a47f);}for(let _0x23e551=0x0,_0x553321=_0x535c92['length'];_0x23e551<_0x553321;_0x23e551++){_0x29d8e1+='%'+('00'+_0x535c92['charCodeAt'](_0x23e551)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x29d8e1);};a18_0x56b8['STlvKz']=_0x8fa33b,a18_0x56b8['QDFLoc']={},a18_0x56b8['RcDsHo']=!![];}const _0x551d62=_0x38ec93[0x0];a18_0x56b8['jPfFGp']!==_0x551d62&&(a18_0x56b8['QDFLoc']={},a18_0x56b8['jPfFGp']=_0x551d62);const _0x4edccb=a18_0x56b8['QDFLoc'][_0x47a3c2];return _0x4edccb===undefined?(_0x56b8fd=a18_0x56b8['STlvKz'](_0x56b8fd),a18_0x56b8['QDFLoc'][_0x47a3c2]=_0x56b8fd):_0x56b8fd=_0x4edccb,_0x56b8fd;}import{getTitleById}from'./titles.js';export const DISCORD_WEBHOOK_URL=a18_0x28e95e(0x204);export async function sendMatchFinishedWebhook(_0x29d8e1,_0x1f2378={}){const _0x297000=a18_0x28e95e;if(!_0x29d8e1||!_0x29d8e1[_0x297000(0x218)])return;const {roomCode:roomCode='Одиночная/Локальная\x20игра',isTestMode:isTestMode=![]}=_0x1f2378;if(isTestMode||/TEST|DEBUG|MOCK/i[_0x297000(0x214)](roomCode)||_0x29d8e1[_0x297000(0x1f9)]&&_0x29d8e1['players'][_0x297000(0x202)](_0x3aef96=>/Test|Playwright|Automated/i['test'](_0x3aef96[_0x297000(0x224)]||'')))return;const _0x4fe8fb=_0x29d8e1[_0x297000(0x1ea)]||{},_0x48a47f=_0x29d8e1[_0x297000(0x218)],_0x15b981=(_0x29d8e1[_0x297000(0x1f9)]||[])[_0x297000(0x1f3)](_0x9757a1=>{const _0x4d5df9=_0x297000;let _0x2c9612=0x0,_0x4bb9f5=0x0,_0x1fad77=0x0;Object[_0x4d5df9(0x22f)](_0x4fe8fb)['forEach'](([_0x4f3b4b,_0x3ed73d])=>{const _0x230df8=_0x4d5df9;if(_0x3ed73d&&String(_0x3ed73d['ownerId'])===String(_0x9757a1['id'])){_0x2c9612++;const _0x2c7882=BOARD_TILES[parseInt(_0x4f3b4b,0xa)];if(_0x2c7882){_0x4bb9f5+=_0x2c7882['price']||0x0;const _0x5b8c01=_0x3ed73d[_0x230df8(0x231)]||0x0;_0x1fad77+=_0x5b8c01,_0x5b8c01>0x0&&_0x2c7882[_0x230df8(0x220)]&&(_0x4bb9f5+=_0x5b8c01*_0x2c7882[_0x230df8(0x220)]);}}});const _0x3a967c=(_0x9757a1[_0x4d5df9(0x20d)]?0x0:_0x9757a1[_0x4d5df9(0x209)]||0x0)+_0x4bb9f5,_0xe83170=getTitleById(_0x9757a1[_0x4d5df9(0x225)]||'novice');return{'id':_0x9757a1['id'],'name':_0x9757a1['name']||_0x4d5df9(0x21d),'token':_0x9757a1[_0x4d5df9(0x201)]||'🎩','titleTag':_0xe83170?_0xe83170[_0x4d5df9(0x1ed)]:'','isBot':Boolean(_0x9757a1[_0x4d5df9(0x21e)]),'isBankrupt':Boolean(_0x9757a1[_0x4d5df9(0x20d)]),'cash':_0x9757a1[_0x4d5df9(0x209)]||0x0,'ownedCount':_0x2c9612,'housesCount':_0x1fad77,'totalPropValue':_0x4bb9f5,'netWorth':_0x3a967c,'discordId':_0x9757a1['discordId']||null,'isWinner':String(_0x9757a1['id'])===String(_0x48a47f['id'])};});_0x15b981['sort']((_0x5cfb5a,_0x3c76ff)=>{const _0x25129c=_0x297000;if(_0x5cfb5a[_0x25129c(0x1f5)])return-0x1;if(_0x3c76ff[_0x25129c(0x1f5)])return 0x1;if(_0x5cfb5a[_0x25129c(0x20d)]&&!_0x3c76ff[_0x25129c(0x20d)])return 0x1;if(!_0x5cfb5a[_0x25129c(0x20d)]&&_0x3c76ff['isBankrupt'])return-0x1;return _0x3c76ff[_0x25129c(0x1f0)]-_0x5cfb5a[_0x25129c(0x1f0)];});const _0x23e551=['🥇','🥈','🥉',_0x297000(0x232),_0x297000(0x1fb),_0x297000(0x20a)],_0x553321=_0x15b981[_0x297000(0x1f3)]((_0x5cb2a0,_0x26e309)=>{const _0x326a9c=_0x297000,_0x5a8fe8=_0x23e551[_0x26e309]||_0x26e309+0x1+'.',_0xc03617=_0x5cb2a0[_0x326a9c(0x1fe)]?'\x20['+_0x5cb2a0[_0x326a9c(0x1fe)]+']':'',_0x12b66d=_0x5cb2a0[_0x326a9c(0x205)]?_0x5cb2a0[_0x326a9c(0x201)]+_0x326a9c(0x1f8)+_0x5cb2a0[_0x326a9c(0x224)]+'**'+_0xc03617+_0x326a9c(0x1fc)+_0x5cb2a0['discordId']+'>)':_0x5cb2a0[_0x326a9c(0x201)]+_0x326a9c(0x1f8)+_0x5cb2a0[_0x326a9c(0x224)]+'**'+_0xc03617;if(_0x5cb2a0['isBankrupt'])return _0x5a8fe8+'\x20'+_0x12b66d+_0x326a9c(0x21b);const _0x1c1763=_0x5cb2a0['ownedCount']>0x0?'🏛️\x20'+_0x5cb2a0[_0x326a9c(0x20e)]+'\x20'+getPluralProps(_0x5cb2a0[_0x326a9c(0x20e)]):_0x326a9c(0x233);return _0x5a8fe8+'\x20'+_0x12b66d+_0x326a9c(0x1fa)+_0x5cb2a0[_0x326a9c(0x209)][_0x326a9c(0x1ef)](_0x326a9c(0x1ec))+_0x326a9c(0x223)+_0x1c1763+_0x326a9c(0x22b)+_0x5cb2a0[_0x326a9c(0x1f0)][_0x326a9c(0x1ef)]('ru-RU')+')*';})[_0x297000(0x215)]('\x0a'),_0x129a42=_0x15b981[_0x297000(0x216)](_0x111fae=>_0x111fae[_0x297000(0x1f5)])||_0x15b981[0x0],_0x3c3b60=_0x129a42[_0x297000(0x205)]?_0x297000(0x1fc)+_0x129a42[_0x297000(0x205)]+'>)':'',_0x9587c1=_0x129a42[_0x297000(0x1fe)]?'\x20['+_0x129a42['titleTag']+']':'',_0x49fb60=_0x129a42[_0x297000(0x20e)]+'\x20'+getPluralProps(_0x129a42[_0x297000(0x20e)]),_0x4b1619=_0x29d8e1['settings']||{},_0x3a0fd3=[_0x297000(0x213)+(isTestMode?_0x297000(0x219):_0x297000(0x206))+'**',_0x297000(0x226)+(_0x4b1619[_0x297000(0x1f6)]||0x5dc)['toLocaleString']('ru-RU')+'**',_0x297000(0x222)+(_0x4b1619[_0x297000(0x1fd)]||0xc8)[_0x297000(0x1ef)](_0x297000(0x1ec))+'**',_0x297000(0x217)+_0x15b981[_0x297000(0x21c)]+'**']['join']('\x0a'),_0x3261c4={'title':'🏆\x20Партия\x20завершена\x20|\x20Монополия','description':_0x297000(0x1ee)+roomCode+'`','color':isTestMode?0xd946ef:0xf59e0b,'fields':[{'name':'👑\x20Победитель\x20матча','value':_0x129a42[_0x297000(0x201)]+'\x20**'+_0x129a42[_0x297000(0x224)]+'**'+_0x3c3b60+_0x297000(0x234)+_0x129a42[_0x297000(0x209)][_0x297000(0x1ef)](_0x297000(0x1ec))+_0x297000(0x230)+_0x49fb60+_0x297000(0x20c)+_0x129a42['netWorth'][_0x297000(0x1ef)]('ru-RU')+'**','inline':![]},{'name':_0x297000(0x22a),'value':_0x553321||_0x297000(0x1f4),'inline':![]},{'name':_0x297000(0x22e),'value':_0x3a0fd3,'inline':![]}],'footer':{'text':_0x297000(0x221),'icon_url':_0x297000(0x21f)},'timestamp':new Date()['toISOString']()},_0x43205e={'username':_0x297000(0x22d),'avatar_url':_0x297000(0x21f),'embeds':[_0x3261c4]};try{await fetch(DISCORD_WEBHOOK_URL,{'method':_0x297000(0x228),'headers':{'Content-Type':_0x297000(0x21a)},'body':JSON[_0x297000(0x200)](_0x43205e)});}catch(_0x30cdaf){console[_0x297000(0x207)](_0x297000(0x208),_0x30cdaf);}}function getPluralProps(_0x4b934a){const _0xedb3c1=a18_0x28e95e,_0x897915=_0x4b934a%0xa,_0xce0ec2=_0x4b934a%0x64;if(_0xce0ec2>=0xb&&_0xce0ec2<=0x13)return _0xedb3c1(0x1f1);if(_0x897915===0x1)return _0xedb3c1(0x1f7);if(_0x897915>=0x2&&_0x897915<=0x4)return _0xedb3c1(0x20f);return _0xedb3c1(0x1f1);}
+/**
+ * Discord Webhook Match Stats Dispatcher
+ */
+
+import { BOARD_TILES } from './board-data.js';
+import { getTitleById } from './titles.js';
+
+export const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1551014727688134666/NwicaE-U3CwtL_vVKJTJY8UHYphJ1HcKbmhlNliCUM-yV-ht9mlhCOBaZNqxAjHftFlr';
+
+export async function sendMatchFinishedWebhook(state, options = {}) {
+  if (!state || !state.winner) return;
+
+  const { roomCode = 'Одиночная/Локальная игра', isTestMode = false } = options;
+
+  // Do not send test matches or automated/debug rooms
+  if (
+    isTestMode || 
+    /TEST|DEBUG|MOCK/i.test(roomCode) || 
+    (state.players && state.players.some(p => /Test|Playwright|Automated/i.test(p.name || '')))
+  ) {
+    return;
+  }
+
+  const properties = state.properties || {};
+  const winner = state.winner;
+
+  // Calculate detailed stats for each player
+  const playersStats = (state.players || []).map(p => {
+    let ownedCount = 0;
+    let totalPropValue = 0;
+    let housesCount = 0;
+
+    Object.entries(properties).forEach(([tileIdStr, prop]) => {
+      if (prop && String(prop.ownerId) === String(p.id)) {
+        ownedCount++;
+        const tile = BOARD_TILES[parseInt(tileIdStr, 10)];
+        if (tile) {
+          totalPropValue += tile.price || 0;
+          const houses = prop.houses || 0;
+          housesCount += houses;
+          if (houses > 0 && tile.housePrice) {
+            totalPropValue += houses * tile.housePrice;
+          }
+        }
+      }
+    });
+
+    const netWorth = (p.isBankrupt ? 0 : (p.cash || 0)) + totalPropValue;
+    const titleObj = getTitleById(p.title || 'novice');
+
+    return {
+      id: p.id,
+      name: p.name || 'Игрок',
+      token: p.token || '🎩',
+      titleTag: titleObj ? titleObj.tag : '',
+      isBot: Boolean(p.isBot),
+      isBankrupt: Boolean(p.isBankrupt),
+      cash: p.cash || 0,
+      ownedCount,
+      housesCount,
+      totalPropValue,
+      netWorth,
+      discordId: p.discordId || null,
+      isWinner: String(p.id) === String(winner.id)
+    };
+  });
+
+  // Sort players: winner first, then active by netWorth desc, then bankrupts
+  playersStats.sort((a, b) => {
+    if (a.isWinner) return -1;
+    if (b.isWinner) return 1;
+    if (a.isBankrupt && !b.isBankrupt) return 1;
+    if (!a.isBankrupt && b.isBankrupt) return -1;
+    return b.netWorth - a.netWorth;
+  });
+
+  const medals = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣', '6️⃣'];
+  const playersSummaryLines = playersStats.map((p, idx) => {
+    const medal = medals[idx] || `${idx + 1}.`;
+    const titlePart = p.titleTag ? ` [${p.titleTag}]` : '';
+    const userDisplay = p.discordId ? `${p.token} **${p.name}**${titlePart} (<@${p.discordId}>)` : `${p.token} **${p.name}**${titlePart}`;
+    
+    if (p.isBankrupt) {
+      return `${medal} ${userDisplay} — 💥 *Банкрот*`;
+    }
+    
+    const propsInfo = p.ownedCount > 0 ? `🏛️ ${p.ownedCount} ${getPluralProps(p.ownedCount)}` : '🏛️ нет владений';
+    return `${medal} ${userDisplay} — **$${p.cash.toLocaleString('ru-RU')}** • ${propsInfo} *(Капитал: $${p.netWorth.toLocaleString('ru-RU')})*`;
+  }).join('\n');
+
+  const winnerData = playersStats.find(p => p.isWinner) || playersStats[0];
+  const winnerDiscord = winnerData.discordId ? ` (<@${winnerData.discordId}>)` : '';
+  const winnerTitlePart = winnerData.titleTag ? ` [${winnerData.titleTag}]` : '';
+  const winnerPropsText = `${winnerData.ownedCount} ${getPluralProps(winnerData.ownedCount)}`;
+
+  const settings = state.settings || {};
+  const settingsText = [
+    `• Режим: **${isTestMode ? '🧪 Тестовый' : '🎲 Стандарт'}**`,
+    `• Стартовый капитал: **$${(settings.startingCash || 1500).toLocaleString('ru-RU')}**`,
+    `• Зарплата за круг: **$${(settings.salary || 200).toLocaleString('ru-RU')}**`,
+    `• Участников в партии: **${playersStats.length}**`
+  ].join('\n');
+
+  const embed = {
+    title: '🏆 Партия завершена | Монополия',
+    description: `Итоги игры в комнате \`${roomCode}\``,
+    color: isTestMode ? 0xD946EF : 0xF59E0B, // Magenta for test, Amber for standard
+    fields: [
+      {
+        name: '👑 Победитель матча',
+        value: `${winnerData.token} **${winnerData.name}**${winnerDiscord}\n💰 Баланс: **$${winnerData.cash.toLocaleString('ru-RU')}** • Владений: **${winnerPropsText}**\n📊 Общий итоговый капитал: **$${winnerData.netWorth.toLocaleString('ru-RU')}**`,
+        inline: false
+      },
+      {
+        name: '📊 Итоговый рейтинг игроков',
+        value: playersSummaryLines || 'Нет данных',
+        inline: false
+      },
+      {
+        name: '⚙️ Параметры матча',
+        value: settingsText,
+        inline: false
+      }
+    ],
+    footer: {
+      text: 'Пиксельная Монополия • pixel-monopoly-nu.vercel.app',
+      icon_url: 'https://pixel-monopoly-nu.vercel.app/favicon.ico'
+    },
+    timestamp: new Date().toISOString()
+  };
+
+  const payload = {
+    username: 'Монополия Бот',
+    avatar_url: 'https://pixel-monopoly-nu.vercel.app/favicon.ico',
+    embeds: [embed]
+  };
+
+  try {
+    await fetch(DISCORD_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.warn('Failed to send Discord webhook:', err);
+  }
+}
+
+function getPluralProps(n) {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod100 >= 11 && mod100 <= 19) return 'улиц';
+  if (mod10 === 1) return 'улица';
+  if (mod10 >= 2 && mod10 <= 4) return 'улицы';
+  return 'улиц';
+}

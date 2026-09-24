@@ -1,1 +1,989 @@
-function a7_0x3dc7(){const _0x2c5493=['AxnnB3j0z2fNzwq','8j+KNsdqN9ga0lxqTnc70l7qTTc10l3qScdrGDc00lxqU9c60laG0lZqTDc20ltrGYdqUncZ0ydqVTc60ldqVnc4lG','yxbWBhLby3rPDMvdyxjK','z2fPBG','zxzHBhvHDgvcB3ruCMfKzq','y3vYCMvUDfr1CM4','8j+oQYbB','z2v0q3vYCMvUDfbSyxLLCG','0jJqS9ga0l7qUIdqVDc1inc90ldqUDc00lxqVq','zMLUza','8j+sUca','BwvKAxvT','DgfYz2v0r3jVDxa','BMv1DhjHBa','z2L2zu1VBMv5','0j3qTDc00l7rGDgc0ldrGTc+0yFqVDc+inc00lxqVDc10lmG0ltqU9gpincY0yVqUTgd0l/qSa','ChjVCgvYDgLLCW','y2HLy2Thyw1Lv2LUBMvY','BwLU','CMfUzg9T','0j3qTDc70yZqT9gpinc/0ydqVTc00ldrGTgminc90lxqTncY0lJqTTc40lZqVTgb0ylrJcdrGsdqV9c+0yhrGTga0l7qUDc60ldqVnc4inc40lVqUcdrH9gd0lBrG9go','ueXbwuLorW','8j+pHIa','inc+0yhrGTcW0l3qVTcY0lJqU9gb0y8G0l3qScdqV9c+0lVqTsdcQ9cs0l/qTDga0zhqTmk7inc4inc/0l7qU9gd0yFqUnc7idj4inc30ldrGnc/0lVqSngc0ym6icSK','CM91BMq','C3rHDhvZ','CM9SBerPy2u','inc30laGWQS','ChjVCgvYDhLFCMvWywLY','Cg9ZAxrPB24','4PYfincH0ltqTDc70lRqScdrG9gb0l/qTDgi0l3qVIdqT9cW0lRqU9go0yFqTDc90laH','Bg9Hzfn0yxrL','8j+tJsdcQW','yw1VDw50','C2fSyxj5','Cgf5sMfPBezPBMu','mI1KAwDPDa','mtGXoda5ogLxz1bmwG','Dgf4txvSDgLWBgLLCG','DgLTzuXLzNq','BMfTzq','0kJqSnc90ye','8j+rRIbB','AgfZuM9SBgvK','C2v0DgLUz3m','y2XHC3nPyW','Bw92zv90BW','incY0yVqSDga0l7rGDc40lSG','BwfW','C3rYAw5N','Ag91C2vdB3n0','Aw5PDgLHBePHy2TWB3q','CMvUDe11BhrPCgXPzxi','0khqVDcW0yFqSnc70laG0lhrGnc+0yhrJngc0luG0lRrG9cX0lJqUTc4','ingd0yhqV9c10yJqVDc+inc30ldqSTc10ydrInc10l3qSc4','y2HLC3q','8j+pPIa','y29PBNm','yM90rgLMzMLJDwX0Eq','y3vZDg9TvgLSzxm','zgLJzq','inc/0l7qV9cW0lSG0l3qScdqV9c+0lVqTsdcQW','mtyWshbIs2He','Bg9NCW','zMLSDgvY','C3rHDhm','Dw5ZAgLMDa','ywn0AxzLvhjHzgu','zw5KvhvYBG','8j+tNca','inc+0l/qU9cW0ylqUnc7ingi0ylrGncW0yqGjduWinc/0l7rGDc70luGmYdqVDc10ypqTncW0yFqVDgl0yuG0l/qVTc/0yVrGTc+0lOG0lGG0llrI9gi0lxqUYdqVDcWingb0llqVTcX0l7qTngdlG','C2vUzfrVsMfPBa','z3jVDxa','inc60ypqV9c40lSGWQS','BgvUz3rO','mtzWD0Tpyuy','Bw9YDgDHz2u','incY0yVqV9c70ldrGTc40lSGlsq','ywn0Aw9U','ywrKtg9N','incY0yVqUTgd0l/qUnc7inc40lCG0lFqSnc70l7qS9cWimkR','C3rYzwv0','D2LUBMvY','yMfSyw5Jzwq','inc00l7qVnc+0liG0l/qVIaK','Dgf4','C2vSBfbYB3bLCNr5','0j3qTDc60l7rGTc+0ydrI9c1inc60ldrGngc0l7rH9c60lGG0l3qTDc70yZqT9gpinc+0lhqVnc10l3rJ9gc0yW','DhjHBNnMzxjdyxnO','zgvKDwn0q2fZAa','0j3qTDc70yZqT9gpinc30ldqU9c+0lBqUngc0yWG0l3qTDc00llqUnc20lJqVnc+0yhrGTgm','mte2ota3tLvTqNzw','CMvJzwL2zu1VBMv5','ChjVzMLSzujN','Dw5TB3j0z2fNzvbYB3bLCNr5','lZmPlG','y29SB3i','C3bLy2LHBa','CMvZzxq','incY0yVrGTgp0l3rG9c7inc60ldrGngc0l7rH9c60ym6ici','8j+uQca','ywnJzxb0vhjHzgu','DxrPBgL0Eq','4O+Pincy0lprGnc+0lOG0l7rGTc60ldqT9cW0lVrGDgpinc+0yiG0l/qVTc60ypqV9c60lGU','AgfZtgvMDa','0j3qTsdqSTga0lxqVngpincX0ydqVTgb0ldrGTgminc60ypqSDc40lRqUa','BM92AwnL','zNvUy3rPB24','C3rHCNrPBMDdyxnO','DgLSzuLK','inc4ia','AxncB3q','incX0ydqVTgb0ldqTDgcinc10yNrKsdrGncW0lCU','qunusu9o','incY0yVqSDga0l7rGDc40lSG0ltrG9cX0lVrJcdqUcdqSTgl0yxqVTc00lJrGIdqUnc3ingc0y7rGngm0lZrIY4','DxnLsMfPBenHCMq','8j+sTsa','C3rHDgLVBG','q0fsrf9fvKvova','inc+0yiG0lRqSnc20ltqVTcZ0l4G0lJqS9ga0l7qUTcWicJqSTgb0lxqS9c+icSK','icJrGDgd0lZqVncWia','8j+fV++4JYa','y2fUqNvPBgriB3vZzq','inc/0l7qU9gd0yFqUnc7inc/0l4Gja','AMfJA3bVDfbVB2W','inc+0ylqV9ga0ldqSTc70lxqVsdqSIdrGTgo0ydrJnc80ymHicJcQW','zxHLy3v0zvrYywrL','8j+oSIdqMncZ0ydqScdqVDcW0yFqSnc70ldrGDgmisdqN9c10ydqSTgl0lKG0yxqVTc00lJrGJOG','Aw5PDeDHBwu','inc+0ylqTDc70lxqUsdqV9c+icq','8j+oSIdqKTgl0l/qSnc7inc00ypqSDc70yWHia','icJcQW','Axncyw5RCNvWDa','DhjHzgviAxn0B3j5','B3DUzxjjza','ChjVy2vZC0jVDfr1CM4','AMfPBf9MCMvLx2nHCMq','Aw5kywLS','zgLZy29YzfvZzxjUyw1L','8j+sScbB','B25mB2DdywXSyMfJAW','Bwf4','0jlrIYdqVDc1incY0lVqSnc00lxqTDgc0luG0y3rGTc+0lKG0l3qTDc00llqUnc20lJqVnc+0yhrGTgm0y4','0j3qTDc00l7rGDgc0ldrGTc+0yFqVDc+inc00lxqVDc10lmG0ymG0l7qTnc90l7qUsdqUnc3ingb0ylqVTga0l7qVq','ksaOWQS','zgvMyxvSDa','inc/0ydqVTc00ldqUYdqUTcW0ydrGTc+0yFqUTgdimkR','inc/0ydqVTgi0zhqUYdcQ9cs0l/qTDga0zhqTmk7inc4inc/0l7qU9gd0yFqUnc7icSK','Bw92zv90B19UzwfYzxn0','yNvPBgrPBMDdB3n0txvSDgLWBgLLCG','zwfZEq','8j+oGsbB','AMfPBfr1CM5Z','Ag90zwXdB3n0','AMfPBenHCMrZ','zM9YrwfJAa','incF0j7qKDcv0jtqMncBincsincC0j7qNDcE0j/qNTcB0jJqMce','C3vJy2vZCW','inc+0l/qU9cW0ylqUnc7inga0lxqVnc+0l3rGIaTja','WRSGkngb0llqVTcX0l7qTnc90l4G0lFqScaK','Ag91C2vZ','lcdqSnga0lxqVDc00laG0l3qTsdqSTc30lJqVncW0lxrGTgb0y8U','Cgf5x21VBMv5','incY0yVqSDga0l7rGDc40lSGmYdqTngd0lhqU9gpinc/0l7qTnga0y/qTcdqUcdqVTgc0l/rGncW0llqU9c10l0G0liG0ylrJTga0yZqVngdiq','C29YDa','y29SBgvJDf9MCM9Tx2fSBa','inc90laGWQS','0jZqSnc60yhqUnc80ldqU9gm0l3rI9c5ingd0ydqVTcY0lxqVDgmicJqNTgc0lxqU9gmksdrG9c20luG0l/qVTgb0ylrGnc+0lxqVq','qLvzx0nit0Ldrq','ywn0AxzLq2fYza','zg91yMXLu2fSyxj5t25hB0XHBMrPBMC','yNv5uhjVCgvYDhK','Aw5JBhvKzxm','zg91yMXLC1n0CMvHAW','inc+0ylqV9ga0ldqSTc70lxqVsdqSIdrGTgo0ydrJnc80ymH','mZuWmZeWruvbDfnY','mZGXmtm5menzA0XlyG','yM90ugvYC29UywXPDhK','uK9mta','y2fSy3vSyxrLuMvUDa','8j+uKYa','mtjMyMTusgW','AgfZrNvSBenVBg9Yr3jVDxa','CgfZC1bYB3bLCNr5','8j+sTsbB','0j3qTDc00l7rGDgc0ldrGTc+0yFqVDc+ingb0ydqTDc00yhrGTcYinc00lVrJYdqV9c+0yhrGTga0l7qUDc60lGGknc90ypqTTc90l4Gja','WRSG0liG0lFqSnc70l7qS9c1ingdia','BgfZDfjVBgXeB3vIBgvZ','DhLWzq','Bw9YDgDHz2vqCM9Wzxj0Eq','mtm1mdC1nM1kq1HNqq','0j3qTDc00l7rGDgc0ldrGTc+0yFqVDc+inc00lxqVDc10lm','inc40yhqV9c+0lVrJnc30l7qSTcW0lSG0lRqSnga0ylqVTgh0lRrGYdqVTgb0llqVTcX0l7qTTc00lxqVDc40y8G0lJqTYdrGTgo0ydrJnc80ySU','8j+pT++4JYa','y2HLy2Tcyw5RCNvWDgn5','8j+sUcbB','C29Tzq','WRSG0lFqScaK','0j3qTDc00llqUnc20lJqVnc+0yhrGTgminc90luG0liG0lFqSnc70l7qS9c1','8j+rRIa','0jtqU9gpinc/0l7rGDgc0ydqVTc50lRqUcdqVDc10l7qSDgf0l7qTnc40lZqVIdqSTc70ldqTnc10ylrJcdqSTgb0lxqVnc4ingd0lVqUngg0ldqVnc4ingn0ylqVTc5incZ0ydrG9c/0l/rIYe','DMfSDwvZ','zhjHD0nHCMq','inc+0ylqTngl0yxqSnc10yiG0l3qScdrGDcY0l7qTDc5ingb0l7qSDgb0ylqSTc10l3qVDc+0yhrGTc4imkR','ingb0l7rGncY0ldqUYdqLncw0jxqMTcF0j7qOIdqVDcWingb0ylqVTgp0l3qUTc1oIaRja','ChjPy2u','zMXVB3i','Cg9W','CNuTuLu','AgfYza','y2fZAa','inc/0lVqSngc0lJqUYdqVDcW0lVqVTcZoIaTja','inc+0l/qU9cW0ylqUnc7ingi0ylrGncW0yqGjduWinc4inc+0yhqSTc+0lhqVTc00lJqU9gb0y8G0lJqTYdrGTgo0ydrJnc80ySU','y29SBgvJDfnHBgfYEq','8j+uQcbB','ChjVCg9ZzvrYywrL','z2v0u3rHDgu','Bw92zvbSyxLLCG','DgL0Bgu','8j+tJsdqKTc70ldqTnc10lVqTDggimkR','mJjJAwz0u0e','yNvPBgriB3vZzq','CMvQzwn0vhjHzgu','mteYmdq5ndjIENLjAu4','Bg9ZCW','CgXHEwvYCW','8j+rIsdqPDc+0lqG0l/qTDga0lxrHDc+0ltqUngcinc6oIa','Dg9mB2nHBgvuAw1Lu3rYAw5N','ndy1otnuvxbYEwy','z2fPBL9TB25LEq','CgHHC2u','zw50CMLLCW','CMvUDa','iZi1nJnLyG','y2HHBMnL','4P2mincH0ltqTDc70lRqScdqVTgc0lRqU9c+0l3qTDc90laU','inc30ldqU9c+0lBqUnc7imkR','8j+oIsa','zNjLzvbHCMTPBMDkywnRCg90','AgfUzgXLvgLSzuXHBMrPBMC'];a7_0x3dc7=function(){return _0x2c5493;};return a7_0x3dc7();}const a7_0x2a9695=a7_0x20ab;(function(_0x20b74e,_0x2b1ac7){const _0x2ef0ba=a7_0x20ab,_0x95eeef=_0x20b74e();while(!![]){try{const _0x5c5d89=-parseInt(_0x2ef0ba(0xe0))/0x1+-parseInt(_0x2ef0ba(0x137))/0x2+parseInt(_0x2ef0ba(0x16d))/0x3*(-parseInt(_0x2ef0ba(0x15d))/0x4)+-parseInt(_0x2ef0ba(0xd2))/0x5*(-parseInt(_0x2ef0ba(0xd7))/0x6)+parseInt(_0x2ef0ba(0x101))/0x7+parseInt(_0x2ef0ba(0x150))/0x8*(parseInt(_0x2ef0ba(0x106))/0x9)+parseInt(_0x2ef0ba(0xd1))/0xa*(parseInt(_0x2ef0ba(0xfe))/0xb);if(_0x5c5d89===_0x2b1ac7)break;else _0x95eeef['push'](_0x95eeef['shift']());}catch(_0x5d28ba){_0x95eeef['push'](_0x95eeef['shift']());}}}(a7_0x3dc7,0xd79ef));import{BOARD_TILES,COLOR_GROUPS}from'./board-data.js';import{CHANCE_CARDS,CHEST_CARDS}from'./cards-data.js';import{getPresetById}from'./presets.js';export class MonopolyEngine{constructor(){const _0x2d2a45=a7_0x20ab;this[_0x2d2a45(0x174)]();}[a7_0x2a9695(0x174)](){const _0x53f9e9=a7_0x2a9695;this[_0x53f9e9(0x12b)]='IDLE',this[_0x53f9e9(0x103)]=[],this[_0x53f9e9(0x122)]={},this[_0x53f9e9(0x117)]=0x0,this[_0x53f9e9(0x14e)]=[0x1,0x1],this[_0x53f9e9(0xdd)]=![],this[_0x53f9e9(0xcf)]=0x0,this[_0x53f9e9(0x13d)]=![],this['phase']=_0x53f9e9(0xd4),this[_0x53f9e9(0x9e)]=0x0,this['settings']=getPresetById(_0x53f9e9(0x13f))[_0x53f9e9(0x13e)],this[_0x53f9e9(0x14d)]={},this[_0x53f9e9(0xa7)]=[],this[_0x53f9e9(0x151)]=[],this[_0x53f9e9(0xcb)]=null,this[_0x53f9e9(0x155)]=null,this[_0x53f9e9(0x164)]=null,this['turnTimer']=null,this[_0x53f9e9(0x139)]=0x3c;}[a7_0x2a9695(0xa2)](_0x3d65dc,_0x32beed,_0x4141fa={}){const _0x308feb=a7_0x2a9695;this[_0x308feb(0x174)](),this[_0x308feb(0x12b)]=_0x308feb(0x127),this[_0x308feb(0x14d)]=_0x4141fa||{};if(typeof _0x32beed===_0x308feb(0x143))this[_0x308feb(0x13e)]={...getPresetById(_0x32beed)['settings']};else _0x32beed&&(this[_0x308feb(0x13e)]={..._0x32beed});this[_0x308feb(0x9e)]=this[_0x308feb(0x13e)][_0x308feb(0x145)]||0x0,this[_0x308feb(0x103)]=_0x3d65dc[_0x308feb(0x142)]((_0x117f13,_0x2a292d)=>({'id':_0x117f13['id']||'p_'+_0x2a292d,'name':_0x117f13['name']||'Игрок\x20'+(_0x2a292d+0x1),'token':_0x117f13['token']||'🎩','title':_0x117f13[_0x308feb(0xfc)]||_0x308feb(0x8c),'diceSkin':_0x117f13['diceSkin']||_0x308feb(0x13f),'color':_0x117f13[_0x308feb(0x172)]||_0x308feb(0x10b),'bg':_0x117f13['bg']||_0x117f13[_0x308feb(0x16f)]||_0x308feb(0xb3),'profileBg':_0x117f13['bg']||_0x117f13[_0x308feb(0x16f)]||_0x308feb(0xb3),'coins':_0x117f13[_0x308feb(0x14b)]||0x0,'stats':_0x117f13[_0x308feb(0x153)]||{},'avatarUrl':_0x117f13['avatarUrl']||null,'discordId':_0x117f13['discordId']||null,'discordUsername':_0x117f13[_0x308feb(0xac)]||null,'isRegistered':!!_0x117f13['isRegistered'],'cash':this[_0x308feb(0x13e)][_0x308feb(0x8e)]||0x5dc,'position':0x0,'inJail':![],'jailTurns':0x0,'jailCards':0x0,'isBankrupt':![],'isBot':!!_0x117f13['isBot'],'botPersonality':_0x117f13[_0x308feb(0xd3)]||_0x308feb(0x165),'botDifficulty':_0x117f13[_0x308feb(0x14c)]||this['settings'][_0x308feb(0x14c)]||_0x308feb(0x11d)})),BOARD_TILES[_0x308feb(0xbd)](_0x5a436c=>{const _0x43a360=_0x308feb;[_0x43a360(0x163),_0x43a360(0x97),_0x43a360(0x88)][_0x43a360(0xce)](_0x5a436c[_0x43a360(0xde)])&&(this[_0x43a360(0x122)][_0x5a436c['id']]={'ownerId':null,'houses':0x0,'isMortgaged':![]});});if(this[_0x308feb(0x13e)]['initialRandomStreets']>0x0){const _0x3fabfa=BOARD_TILES['filter'](_0xf728f9=>[_0x308feb(0x163),_0x308feb(0x97)][_0x308feb(0xce)](_0xf728f9[_0x308feb(0xde)]))[_0x308feb(0x142)](_0x53dbe1=>_0x53dbe1['id']),_0x2b783e=[..._0x3fabfa][_0x308feb(0xc6)](()=>Math['random']()-0.5);let _0x20b095=0x0;for(let _0x4e76bc=0x0;_0x4e76bc<this[_0x308feb(0x13e)]['initialRandomStreets'];_0x4e76bc++){for(const _0x59c697 of this['players']){if(_0x20b095<_0x2b783e[_0x308feb(0x15c)]){const _0x415a17=_0x2b783e[_0x20b095++];this[_0x308feb(0x122)][_0x415a17][_0x308feb(0xa8)]=_0x59c697['id'];}}}}return this[_0x308feb(0x117)]=0x0,this['phase']='ROLL',this[_0x308feb(0x161)](_0x308feb(0xa1)+this[_0x308feb(0x119)]()[_0x308feb(0x13a)]),this['getState']();}[a7_0x2a9695(0x119)](){const _0x32d769=a7_0x2a9695;return this['players'][this[_0x32d769(0x117)]];}[a7_0x2a9695(0x161)](_0x3d2365,_0x2b622b=null){const _0x183428=a7_0x2a9695,_0x2f1cf5=new Date()[_0x183428(0x105)](_0x183428(0xf2),{'hour':'2-digit','minute':_0x183428(0x136)}),_0xca7b18={'time':_0x2f1cf5,'text':_0x3d2365,'meta':_0x2b622b};this[_0x183428(0x151)]['unshift'](_0xca7b18);if(this[_0x183428(0x151)][_0x183428(0x15c)]>0x32)this[_0x183428(0x151)][_0x183428(0xf1)]();typeof this['onLogCallback']===_0x183428(0x8d)&&this[_0x183428(0xae)](_0xca7b18);}['rollDice'](_0x5eea7d=null){const _0x4fa006=a7_0x2a9695;if(this[_0x4fa006(0x108)]!==_0x4fa006(0xd4)&&!(this['phase']==='ACTION'&&this['lastRollDoubles']))return{'success':![],'reason':_0x4fa006(0x8b)};const _0x217dab=_0x5eea7d?_0x5eea7d[0x0]:Math['floor'](Math['random']()*0x6)+0x1,_0xde8965=_0x5eea7d?_0x5eea7d[0x1]:Math[_0x4fa006(0xf0)](Math['random']()*0x6)+0x1;this[_0x4fa006(0x14e)]=[_0x217dab,_0xde8965];const _0x3b8684=_0x217dab===_0xde8965;this[_0x4fa006(0xdd)]=_0x3b8684,this[_0x4fa006(0x13d)]=!![];const _0x481a72=this[_0x4fa006(0x119)](),_0x1b7dd0=_0x481a72[_0x4fa006(0x12f)];this[_0x4fa006(0x161)](_0x481a72[_0x4fa006(0x13a)]+_0x4fa006(0x141)+_0x217dab+_0x4fa006(0x90)+_0xde8965+_0x4fa006(0x9a)+(_0x217dab+_0xde8965)+')');if(_0x481a72[_0x4fa006(0xab)])return _0x3b8684?(_0x481a72['inJail']=![],_0x481a72[_0x4fa006(0xba)]=0x0,this[_0x4fa006(0xcf)]=0x0,this['addLog'](_0x481a72[_0x4fa006(0x13a)]+_0x4fa006(0x94)),this[_0x4fa006(0xfb)](_0x481a72['id'],_0x217dab+_0xde8965),{'success':!![],'doubles':!![],'inJail':![],'dice':this[_0x4fa006(0x14e)],'oldPos':_0x1b7dd0,'newPos':_0x481a72[_0x4fa006(0x12f)]}):(_0x481a72['jailTurns']+=0x1,_0x481a72[_0x4fa006(0xba)]>=0x3?(this[_0x4fa006(0x16b)](_0x481a72,0x32),_0x481a72[_0x4fa006(0xab)]=![],_0x481a72[_0x4fa006(0xba)]=0x0,this[_0x4fa006(0x161)](_0x4fa006(0xd6)+_0x481a72[_0x4fa006(0x13a)]+_0x4fa006(0x158),{'type':_0x4fa006(0x102),'amount':0x32}),this[_0x4fa006(0xfb)](_0x481a72['id'],_0x217dab+_0xde8965)):(this[_0x4fa006(0x161)](_0x481a72[_0x4fa006(0x13a)]+'\x20остаётся\x20в\x20тюрьме\x20(попытка\x20'+_0x481a72[_0x4fa006(0xba)]+_0x4fa006(0x171)),this[_0x4fa006(0x108)]=_0x4fa006(0x93)),{'success':!![],'doubles':![],'inJail':_0x481a72[_0x4fa006(0xab)],'dice':this['dice'],'oldPos':_0x1b7dd0,'newPos':_0x481a72[_0x4fa006(0x12f)]});if(_0x3b8684){this[_0x4fa006(0xcf)]+=0x1;if(this[_0x4fa006(0xcf)]>=0x3)return this[_0x4fa006(0x159)](_0x481a72),this[_0x4fa006(0xcf)]=0x0,this['addLog'](_0x4fa006(0xe9)+_0x481a72[_0x4fa006(0x13a)]+_0x4fa006(0xc5),{'type':_0x4fa006(0x173)}),{'success':!![],'doubles':!![],'inJail':!![],'dice':this['dice'],'oldPos':_0x1b7dd0,'newPos':_0x481a72['position']};}else this[_0x4fa006(0xcf)]=0x0;return this[_0x4fa006(0xfb)](_0x481a72['id'],_0x217dab+_0xde8965),{'success':!![],'doubles':_0x3b8684,'dice':this['dice'],'oldPos':_0x1b7dd0,'newPos':_0x481a72[_0x4fa006(0x12f)]};}[a7_0x2a9695(0xfb)](_0x3c6891,_0x6e4c2a,_0x37366f=!![]){const _0x4d5872=a7_0x2a9695,_0x252190=this['players'][_0x4d5872(0x11b)](_0x5f13e5=>_0x5f13e5['id']===_0x3c6891);if(!_0x252190||_0x252190['isBankrupt'])return{'oldPos':0x0,'newPos':0x0};const _0x4d13cb=_0x252190[_0x4d5872(0x12f)];let _0x4d5d79=(_0x4d13cb+_0x6e4c2a)%0x28;if(_0x4d5d79<0x0)_0x4d5d79+=0x28;if(_0x37366f&&_0x4d13cb+_0x6e4c2a>=0x28){const _0x5d8c5f=_0x4d5d79===0x0&&this[_0x4d5872(0x13e)]['doubleSalaryOnGoLanding']?this[_0x4d5872(0x13e)][_0x4d5872(0x134)]*0x2:this[_0x4d5872(0x13e)][_0x4d5872(0x134)];_0x252190[_0x4d5872(0xf4)]+=_0x5d8c5f,_0x4d5d79===0x0&&this[_0x4d5872(0x13e)][_0x4d5872(0xcc)]?this[_0x4d5872(0x161)](_0x4d5872(0x10f)+_0x252190[_0x4d5872(0x13a)]+_0x4d5872(0x129)+_0x5d8c5f,{'type':_0x4d5872(0x115),'amount':_0x5d8c5f}):this[_0x4d5872(0x161)](_0x4d5872(0x96)+_0x252190[_0x4d5872(0x13a)]+'\x20прошёл\x20поле\x20«Вперёд»\x20и\x20получил\x20зарплату:\x20+$'+_0x5d8c5f,{'type':'gain','amount':_0x5d8c5f});}return _0x252190[_0x4d5872(0x12f)]=_0x4d5d79,this['handleTileLanding'](_0x252190,_0x4d5d79),{'oldPos':_0x4d13cb,'newPos':_0x4d5d79};}[a7_0x2a9695(0x111)](_0x1fa0fb,_0x1ff3ea){const _0x596e8c=a7_0x2a9695,_0x1520d1=BOARD_TILES[_0x1ff3ea];switch(_0x1520d1[_0x596e8c(0xde)]){case _0x596e8c(0x163):case'station':case _0x596e8c(0x88):{const _0x5b0013=this['properties'][_0x1ff3ea];if(!_0x5b0013[_0x596e8c(0xa8)])this[_0x596e8c(0x108)]='BUY_CHOICE',this[_0x596e8c(0x161)]('📍\x20'+_0x1fa0fb[_0x596e8c(0x13a)]+_0x596e8c(0x14f)+_0x1520d1[_0x596e8c(0x13a)]+_0x596e8c(0xc1)+_0x1520d1[_0x596e8c(0xef)]+')');else{if(_0x5b0013['ownerId']===_0x1fa0fb['id'])this[_0x596e8c(0x108)]='ACTION',this[_0x596e8c(0x161)]('📍\x20'+_0x1fa0fb['name']+_0x596e8c(0xed)+_0x1520d1[_0x596e8c(0x13a)]+'»');else{const _0x2345b1=this[_0x596e8c(0x103)][_0x596e8c(0x11b)](_0x3214b6=>_0x3214b6['id']===_0x5b0013[_0x596e8c(0xa8)]);if(_0x5b0013[_0x596e8c(0x112)])this['phase']='ACTION',this[_0x596e8c(0x161)](_0x596e8c(0x132)+_0x1520d1[_0x596e8c(0x13a)]+_0x596e8c(0xdc)+_0x2345b1[_0x596e8c(0x13a)]+_0x596e8c(0xc3));else{if(_0x2345b1[_0x596e8c(0xab)]&&!this['settings']['rentInJail'])this[_0x596e8c(0x108)]=_0x596e8c(0x93),this[_0x596e8c(0x161)](_0x596e8c(0xfd)+_0x1520d1[_0x596e8c(0x13a)]+'»\x20в\x20тюрьме,\x20аренда\x20не\x20платится.');else{const _0x124033=this[_0x596e8c(0xd5)](_0x1ff3ea);this[_0x596e8c(0x108)]=_0x596e8c(0x93),this[_0x596e8c(0x161)](_0x596e8c(0x11c)+_0x1fa0fb[_0x596e8c(0x13a)]+'\x20заплатил\x20аренду\x20$'+_0x124033+'\x20игроку\x20'+_0x2345b1['name']+_0x596e8c(0x12d)+_0x1520d1['name']+'»',{'type':_0x596e8c(0x102),'amount':_0x124033}),this[_0x596e8c(0x16a)](_0x1fa0fb,_0x2345b1,_0x124033);}}}}break;}case _0x596e8c(0x167):{const _0xad5ddd=Math[_0x596e8c(0x12a)]((_0x1520d1['taxAmount']||0x64)*(this['settings'][_0x596e8c(0x138)]||0x1));this[_0x596e8c(0x108)]=_0x596e8c(0x93),this[_0x596e8c(0x161)]('💸\x20'+_0x1fa0fb[_0x596e8c(0x13a)]+_0x596e8c(0xf5)+_0xad5ddd,{'type':_0x596e8c(0x102),'amount':_0xad5ddd}),this[_0x596e8c(0x16b)](_0x1fa0fb,_0xad5ddd);this[_0x596e8c(0x13e)][_0x596e8c(0x110)]&&(this['jackpotPool']+=_0xad5ddd);break;}case _0x596e8c(0x10c):{this['drawCard'](_0x1fa0fb,_0x596e8c(0x10c));break;}case _0x596e8c(0x149):{this[_0x596e8c(0xec)](_0x1fa0fb,_0x596e8c(0x149));break;}case'corner':{this[_0x596e8c(0x108)]='ACTION';if(_0x1ff3ea===0x1e)this['sendToJail'](_0x1fa0fb),this[_0x596e8c(0x161)](_0x596e8c(0xe9)+_0x1fa0fb['name']+_0x596e8c(0xd0),{'type':'special'});else{if(_0x1ff3ea===0x14){if(this[_0x596e8c(0x13e)][_0x596e8c(0x110)]&&this[_0x596e8c(0x9e)]>0x0){const _0x405ff6=this[_0x596e8c(0x9e)];_0x1fa0fb[_0x596e8c(0xf4)]+=_0x405ff6,this['addLog'](_0x596e8c(0x10f)+_0x1fa0fb[_0x596e8c(0x13a)]+_0x596e8c(0xee)+_0x405ff6+'!',{'type':_0x596e8c(0x115),'amount':_0x405ff6}),this[_0x596e8c(0x9e)]=0x0;}else this['addLog'](_0x596e8c(0x9b)+_0x1fa0fb[_0x596e8c(0x13a)]+'\x20отдыхает\x20на\x20бесплатной\x20стоянке.');}}break;}}}['buyProperty'](_0x57c731=null,_0x5be887=null){const _0x2c3dfb=a7_0x2a9695,_0x1fd7a1=_0x57c731?this[_0x2c3dfb(0x103)]['find'](_0x3df552=>_0x3df552['id']===_0x57c731):this[_0x2c3dfb(0x119)](),_0x186a27=_0x5be887!==null?_0x5be887:_0x1fd7a1[_0x2c3dfb(0x12f)],_0x2293f4=BOARD_TILES[_0x186a27],_0x5ab5c5=this[_0x2c3dfb(0x122)][_0x186a27];if(!_0x2293f4||!_0x5ab5c5||_0x5ab5c5['ownerId'])return{'success':![],'reason':'Недвижимость\x20уже\x20куплена\x20или\x20недоступна'};if(_0x1fd7a1['cash']<_0x2293f4['price'])return{'success':![],'reason':_0x2c3dfb(0xe1)};return _0x1fd7a1[_0x2c3dfb(0xf4)]-=_0x2293f4[_0x2c3dfb(0xef)],_0x5ab5c5['ownerId']=_0x1fd7a1['id'],this[_0x2c3dfb(0x108)]=_0x2c3dfb(0x93),this['addLog']('🏠\x20'+_0x1fd7a1[_0x2c3dfb(0x13a)]+_0x2c3dfb(0x15b)+_0x2293f4[_0x2c3dfb(0x13a)]+_0x2c3dfb(0xe7)+_0x2293f4[_0x2c3dfb(0xef)]),{'success':!![],'tileId':_0x186a27};}[a7_0x2a9695(0xd9)](){const _0x29cd81=a7_0x2a9695;this[_0x29cd81(0x108)]=_0x29cd81(0x93),this['addLog'](_0x29cd81(0x89));}[a7_0x2a9695(0xd5)](_0x39bcb3){const _0x436820=a7_0x2a9695,_0x2c0f70=BOARD_TILES[_0x39bcb3],_0x2d0fea=this['properties'][_0x39bcb3];if(!_0x2c0f70||!_0x2d0fea||!_0x2d0fea[_0x436820(0xa8)]||_0x2d0fea['isMortgaged'])return 0x0;let _0x4ceb70=0x0;const _0x2a460e=this[_0x436820(0x13e)][_0x436820(0x146)]||0x1;if(_0x2c0f70[_0x436820(0xde)]===_0x436820(0x163)){const _0x53c820=_0x2d0fea[_0x436820(0xc2)]||0x0;if(_0x53c820>0x0)_0x4ceb70=_0x2c0f70[_0x436820(0x10a)][_0x53c820];else{const _0x43742f=this[_0x436820(0xd8)](_0x2d0fea[_0x436820(0xa8)],_0x2c0f70[_0x436820(0x15a)]);_0x4ceb70=_0x43742f?_0x2c0f70['rent'][0x0]*0x2:_0x2c0f70[_0x436820(0x10a)][0x0];}}else{if(_0x2c0f70[_0x436820(0xde)]==='station'){const _0x275ae3=BOARD_TILES[_0x436820(0x152)](_0x516bef=>_0x516bef['type']==='station')[_0x436820(0x152)](_0x3e0fbe=>this['properties'][_0x3e0fbe['id']][_0x436820(0xa8)]===_0x2d0fea[_0x436820(0xa8)])[_0x436820(0x15c)];_0x4ceb70=_0x2c0f70[_0x436820(0x10a)][Math[_0x436820(0x124)](_0x275ae3-0x1,0x3)]||0x19;}else{if(_0x2c0f70['type']===_0x436820(0x88)){const _0x3c419c=BOARD_TILES[_0x436820(0x152)](_0x4408e4=>_0x4408e4[_0x436820(0xde)]==='utility')['filter'](_0x90cfaa=>this[_0x436820(0x122)][_0x90cfaa['id']]['ownerId']===_0x2d0fea[_0x436820(0xa8)])['length'],_0x3f7613=this['dice'][0x0]+this[_0x436820(0x14e)][0x1];_0x4ceb70=_0x3c419c>=0x2?_0x3f7613*0xa:_0x3f7613*0x4;}}}return Math['round'](_0x4ceb70*_0x2a460e);}['hasFullColorGroup'](_0x905863,_0x13264c){const _0xa66546=a7_0x2a9695;if(!_0x13264c||[_0xa66546(0x97),'utility'][_0xa66546(0xce)](_0x13264c))return![];const _0x39cb3f=BOARD_TILES[_0xa66546(0x152)](_0x5cc26f=>_0x5cc26f['group']===_0x13264c);return _0x39cb3f['every'](_0x3656d1=>this[_0xa66546(0x122)][_0x3656d1['id']]?.[_0xa66546(0xa8)]===_0x905863);}['canBuildHouse'](_0x323f9a,_0x3b3491){const _0x58ada9=a7_0x2a9695,_0x325208=BOARD_TILES[_0x3b3491],_0x2a8de8=this['properties'][_0x3b3491];if(!_0x325208||_0x325208[_0x58ada9(0xde)]!==_0x58ada9(0x163)||_0x2a8de8[_0x58ada9(0xa8)]!==_0x323f9a)return![];if(_0x2a8de8['isMortgaged']||_0x2a8de8[_0x58ada9(0xc2)]>=0x5)return![];if(!this[_0x58ada9(0xd8)](_0x323f9a,_0x325208['group']))return![];const _0x51e42d=Math[_0x58ada9(0x12a)](_0x325208[_0x58ada9(0x144)]*(this[_0x58ada9(0x13e)][_0x58ada9(0xb7)]||0x1)),_0x271ea8=this[_0x58ada9(0x103)][_0x58ada9(0x11b)](_0x150942=>_0x150942['id']===_0x323f9a);return!!_0x271ea8&&_0x271ea8['cash']>=_0x51e42d;}[a7_0x2a9695(0xff)](_0x3b131f,_0x4cfb65){const _0x1328ff=a7_0x2a9695,_0x2b08a7=BOARD_TILES[_0x4cfb65],_0x3d94ef=this[_0x1328ff(0x122)][_0x4cfb65];if(!_0x2b08a7||!_0x3d94ef||_0x3d94ef['ownerId']!==_0x3b131f)return{'success':![],'reason':_0x1328ff(0xb0)};if(!this[_0x1328ff(0xd8)](_0x3b131f,_0x2b08a7[_0x1328ff(0x15a)]))return{'success':![],'reason':_0x1328ff(0xea)};if(_0x3d94ef[_0x1328ff(0xc2)]>=0x5)return{'success':![],'reason':_0x1328ff(0xc9)};const _0x2e88cf=Math['round'](_0x2b08a7[_0x1328ff(0x144)]*(this[_0x1328ff(0x13e)][_0x1328ff(0xb7)]||0x1)),_0x1e89cf=this[_0x1328ff(0x103)][_0x1328ff(0x11b)](_0x187deb=>_0x187deb['id']===_0x3b131f);if(!_0x1e89cf||_0x1e89cf[_0x1328ff(0xf4)]<_0x2e88cf)return{'success':![],'reason':_0x1328ff(0xdb)+_0x2e88cf+')'};_0x1e89cf[_0x1328ff(0xf4)]-=_0x2e88cf,_0x3d94ef['houses']+=0x1;const _0x4547c0=_0x3d94ef['houses']===0x5?'Отель':'Дом\x20№'+_0x3d94ef['houses'];return this[_0x1328ff(0x161)](_0x1328ff(0x86)+_0x1e89cf['name']+'\x20построил\x20'+_0x4547c0+_0x1328ff(0xc8)+_0x2b08a7[_0x1328ff(0x13a)]+'»\x20за\x20$'+_0x2e88cf),{'success':!![],'houses':_0x3d94ef[_0x1328ff(0xc2)],'cost':_0x2e88cf};}[a7_0x2a9695(0xdf)](_0x327003,_0x1bb194){const _0x3592a6=a7_0x2a9695,_0x37db0c=BOARD_TILES[_0x1bb194],_0x50458d=this[_0x3592a6(0x122)][_0x1bb194];if(!_0x37db0c||!_0x50458d||_0x50458d['ownerId']!==_0x327003||_0x50458d['isMortgaged']||_0x50458d[_0x3592a6(0xc2)]>0x0)return{'success':![],'reason':_0x3592a6(0x16c)};const _0x1cad8c=this[_0x3592a6(0x103)]['find'](_0x3c01fc=>_0x3c01fc['id']===_0x327003);return _0x50458d[_0x3592a6(0x112)]=!![],_0x1cad8c[_0x3592a6(0xf4)]+=_0x37db0c['mortgage'],this[_0x3592a6(0x161)](_0x3592a6(0x14a)+_0x1cad8c[_0x3592a6(0x13a)]+_0x3592a6(0x10e)+_0x37db0c['name']+'»\x20и\x20получил\x20$'+_0x37db0c[_0x3592a6(0x15e)]),{'success':!![]};}[a7_0x2a9695(0x170)](_0x30342b,_0x19e821){const _0x1f8aa7=a7_0x2a9695,_0x29e911=BOARD_TILES[_0x19e821],_0x574b73=this['properties'][_0x19e821];if(!_0x29e911||!_0x574b73||_0x574b73[_0x1f8aa7(0xa8)]!==_0x30342b||!_0x574b73[_0x1f8aa7(0x112)])return{'success':![],'reason':_0x1f8aa7(0xe8)};const _0x4204a7=Math[_0x1f8aa7(0x12a)](_0x29e911[_0x1f8aa7(0x15e)]*1.1),_0x31e717=this[_0x1f8aa7(0x103)][_0x1f8aa7(0x11b)](_0x45c9b8=>_0x45c9b8['id']===_0x30342b);if(_0x31e717[_0x1f8aa7(0xf4)]<_0x4204a7)return{'success':![],'reason':_0x1f8aa7(0x121)};return _0x31e717[_0x1f8aa7(0xf4)]-=_0x4204a7,_0x574b73[_0x1f8aa7(0x112)]=![],this[_0x1f8aa7(0x161)](_0x1f8aa7(0xd6)+_0x31e717[_0x1f8aa7(0x13a)]+_0x1f8aa7(0x162)+_0x29e911[_0x1f8aa7(0x13a)]+'»\x20за\x20$'+_0x4204a7),{'success':!![]};}[a7_0x2a9695(0x168)](_0x3b9edb,_0x696c2e){const _0x5229e3=a7_0x2a9695,_0x295396=BOARD_TILES[_0x696c2e],_0x518576=this[_0x5229e3(0x122)][_0x696c2e];if(!_0x295396||!_0x518576||_0x518576[_0x5229e3(0xa8)]!==_0x3b9edb||_0x518576[_0x5229e3(0xc2)]>0x0)return{'success':![],'reason':_0x5229e3(0x126)};const _0x25a80f=this[_0x5229e3(0x103)][_0x5229e3(0x11b)](_0x5d19db=>_0x5d19db['id']===_0x3b9edb);if(!_0x25a80f)return{'success':![],'reason':_0x5229e3(0x11a)};const _0x1955d2=0.1,_0xa4f8e0=_0x518576['isMortgaged']?_0x295396['mortgage']:_0x295396[_0x5229e3(0xef)],_0x55b1d1=Math[_0x5229e3(0x12a)](_0xa4f8e0*_0x1955d2),_0x2b4da2=_0xa4f8e0-_0x55b1d1;return _0x25a80f['cash']+=_0x2b4da2,this[_0x5229e3(0x13e)][_0x5229e3(0x110)]&&(this[_0x5229e3(0x9e)]+=_0x55b1d1),_0x518576[_0x5229e3(0xa8)]=null,_0x518576[_0x5229e3(0xc2)]=0x0,_0x518576[_0x5229e3(0x112)]=![],this[_0x5229e3(0x161)](_0x5229e3(0xe3)+_0x25a80f[_0x5229e3(0x13a)]+_0x5229e3(0xb4)+_0x295396[_0x5229e3(0x13a)]+_0x5229e3(0xe7)+_0x2b4da2+'\x20(комиссия\x2010%:\x20$'+_0x55b1d1+')'),{'success':!![],'payout':_0x2b4da2,'commission':_0x55b1d1};}[a7_0x2a9695(0x116)]({fromId:_0x5db585,toId:_0x2c037a,fromCardIds:fromCardIds=[],toCardIds:toCardIds=[],fromCash:fromCash=0x0,toCash:toCash=0x0}){const _0x55f930=a7_0x2a9695,_0x4ab5e5=this[_0x55f930(0x103)][_0x55f930(0x11b)](_0x1e8b9d=>_0x1e8b9d['id']===_0x2c037a),_0x17044c=_0x4ab5e5?.[_0x55f930(0x14c)]||this[_0x55f930(0x13e)]?.['botDifficulty']||_0x55f930(0x11d);let _0x3a84a4=parseInt(toCash)||0x0,_0x228069=parseInt(fromCash)||0x0;toCardIds[_0x55f930(0xbd)](_0x486264=>{_0x3a84a4+=(BOARD_TILES[_0x486264]?.['price']||0x64)*1.1;}),fromCardIds[_0x55f930(0xbd)](_0x52548e=>{const _0x5443b1=_0x55f930;let _0x1b9240=BOARD_TILES[_0x52548e]?.[_0x5443b1(0xef)]||0x64;const _0x73461a=BOARD_TILES[_0x52548e];if(_0x73461a&&_0x73461a[_0x5443b1(0x15a)]&&_0x4ab5e5){const _0x353839=BOARD_TILES[_0x5443b1(0x152)](_0x3da7c0=>_0x3da7c0[_0x5443b1(0x15a)]===_0x73461a[_0x5443b1(0x15a)]),_0x49ce0a=_0x353839[_0x5443b1(0x152)](_0x389129=>this[_0x5443b1(0x122)][_0x389129['id']]?.[_0x5443b1(0xa8)]===_0x4ab5e5['id'])[_0x5443b1(0x15c)];_0x49ce0a===_0x353839[_0x5443b1(0x15c)]-0x1&&(_0x1b9240*=_0x17044c===_0x5443b1(0xf3)?2.5:1.8);}_0x228069+=_0x1b9240;});if(_0x17044c===_0x55f930(0xb8))return _0x228069>=_0x3a84a4*0.75;else return _0x17044c===_0x55f930(0xf3)?_0x228069>=_0x3a84a4*1.2:_0x228069>=_0x3a84a4;}[a7_0x2a9695(0xa0)]({fromId:_0x3160f4,toId:_0x156d33,fromCardIds:fromCardIds=[],toCardIds:toCardIds=[],fromCash:fromCash=0x0,toCash:toCash=0x0}){const _0x1db6f3=a7_0x2a9695,_0x3d59a5=this['players']['find'](_0x1717e6=>_0x1717e6['id']===_0x3160f4),_0x6c331e=this[_0x1db6f3(0x103)][_0x1db6f3(0x11b)](_0x2d86d6=>_0x2d86d6['id']===_0x156d33);if(!_0x3d59a5||!_0x6c331e)return{'success':![],'reason':'Игрок\x20не\x20найден'};fromCash=Math['max'](0x0,parseInt(fromCash)||0x0),toCash=Math[_0x1db6f3(0xaf)](0x0,parseInt(toCash)||0x0);if(_0x3d59a5[_0x1db6f3(0xf4)]<fromCash)return{'success':![],'reason':'У\x20'+_0x3d59a5[_0x1db6f3(0x13a)]+'\x20недостаточно\x20средств'};if(_0x6c331e[_0x1db6f3(0xf4)]<toCash)return{'success':![],'reason':'У\x20'+_0x6c331e[_0x1db6f3(0x13a)]+'\x20недостаточно\x20средств'};for(const _0xa30c52 of fromCardIds){const _0x17a32c=this[_0x1db6f3(0x122)][_0xa30c52];if(!_0x17a32c||_0x17a32c['ownerId']!==_0x3160f4||_0x17a32c[_0x1db6f3(0xc2)]>0x0)return{'success':![],'reason':_0x1db6f3(0x169)};}for(const _0x33ae3a of toCardIds){const _0x3d30d1=this[_0x1db6f3(0x122)][_0x33ae3a];if(!_0x3d30d1||_0x3d30d1[_0x1db6f3(0xa8)]!==_0x156d33||_0x3d30d1[_0x1db6f3(0xc2)]>0x0)return{'success':![],'reason':_0x1db6f3(0x169)};}let _0x4758d6=fromCash+toCash;fromCardIds[_0x1db6f3(0xbd)](_0x2a65d7=>{const _0x3a7cab=_0x1db6f3;_0x4758d6+=BOARD_TILES[_0x2a65d7]?.[_0x3a7cab(0xef)]||0x0;}),toCardIds[_0x1db6f3(0xbd)](_0x317283=>{const _0x4ea1aa=_0x1db6f3;_0x4758d6+=BOARD_TILES[_0x317283]?.[_0x4ea1aa(0xef)]||0x0;}),fromCardIds[_0x1db6f3(0xbd)](_0x523721=>{const _0x26015d=_0x1db6f3;this[_0x26015d(0x122)][_0x523721][_0x26015d(0xa8)]=_0x156d33;}),toCardIds[_0x1db6f3(0xbd)](_0x3d0458=>{const _0x20e5e1=_0x1db6f3;this[_0x20e5e1(0x122)][_0x3d0458][_0x20e5e1(0xa8)]=_0x3160f4;}),_0x3d59a5[_0x1db6f3(0xf4)]=_0x3d59a5['cash']-fromCash+toCash,_0x6c331e[_0x1db6f3(0xf4)]=_0x6c331e[_0x1db6f3(0xf4)]-toCash+fromCash;const _0x509f57={'id':'trade_'+Date['now'](),'time':new Date()['toLocaleTimeString']('ru-RU',{'hour':'2-digit','minute':_0x1db6f3(0x136)}),'fromName':_0x3d59a5[_0x1db6f3(0x13a)],'toName':_0x6c331e[_0x1db6f3(0x13a)],'fromCards':fromCardIds[_0x1db6f3(0x142)](_0x530a72=>BOARD_TILES[_0x530a72]?.[_0x1db6f3(0x13a)]||'Карта\x20#'+_0x530a72),'toCards':toCardIds['map'](_0x4df67a=>BOARD_TILES[_0x4df67a]?.['name']||'Карта\x20#'+_0x4df67a),'fromCash':fromCash,'toCash':toCash,'commission':0x0};if(!this[_0x1db6f3(0xa7)])this[_0x1db6f3(0xa7)]=[];this['tradeHistory'][_0x1db6f3(0x154)](_0x509f57);if(this['tradeHistory'][_0x1db6f3(0x15c)]>0x1e)this[_0x1db6f3(0xa7)][_0x1db6f3(0xf1)]();return this[_0x1db6f3(0x161)]('🤝\x20Сделка\x20между\x20'+_0x3d59a5['name']+_0x1db6f3(0x90)+_0x6c331e[_0x1db6f3(0x13a)]+_0x1db6f3(0x148)),{'success':!![],'commission':0x0};}[a7_0x2a9695(0xec)](_0x2f3a8b,_0x248b04){const _0x4e59ba=a7_0x2a9695,_0x45ff69=_0x248b04===_0x4e59ba(0x10c)?CHANCE_CARDS:CHEST_CARDS,_0xc5e8fd=_0x45ff69[Math[_0x4e59ba(0xf0)](Math['random']()*_0x45ff69[_0x4e59ba(0x15c)])];return this[_0x4e59ba(0xcb)]={..._0xc5e8fd,'deckType':_0x248b04},this[_0x4e59ba(0x108)]=_0x4e59ba(0x98),this['addLog'](_0x4e59ba(0x157)+_0x2f3a8b['name']+_0x4e59ba(0x175)+_0xc5e8fd['title']+'\x22'),this['activeCard'];}[a7_0x2a9695(0x114)](){const _0x3361eb=a7_0x2a9695;if(!this[_0x3361eb(0xcb)])return;const _0x5b01e0=this['activeCard'],_0x38dd3d=this[_0x3361eb(0x119)](),_0x11fe2f=_0x5b01e0['deckType']===_0x3361eb(0x10c),_0x51a4b1=_0x11fe2f?_0x3361eb(0x13b):'Казна';switch(_0x5b01e0['action'][_0x3361eb(0xde)]){case _0x3361eb(0x107):{const _0x33f4a8=_0x5b01e0[_0x3361eb(0x160)][_0x3361eb(0x133)]||0x0;_0x38dd3d[_0x3361eb(0xf4)]+=_0x33f4a8,this['addLog'](_0x3361eb(0xad)+_0x51a4b1+']\x20'+_0x38dd3d['name']+'\x20получил\x20+$'+_0x33f4a8+_0x3361eb(0xa5)+_0x5b01e0[_0x3361eb(0xfc)]+'»)',{'type':'gain','amount':_0x33f4a8});break;}case _0x3361eb(0xc4):{const _0x274dd7=_0x5b01e0[_0x3361eb(0x160)][_0x3361eb(0x133)]||0x0;this[_0x3361eb(0x16b)](_0x38dd3d,_0x274dd7);this[_0x3361eb(0x13e)][_0x3361eb(0x110)]&&(this[_0x3361eb(0x9e)]+=_0x274dd7);this[_0x3361eb(0x161)](_0x3361eb(0xe5)+_0x51a4b1+']\x20'+_0x38dd3d[_0x3361eb(0x13a)]+_0x3361eb(0x15f)+_0x274dd7+'\x20(«'+_0x5b01e0['title']+'»)',{'type':_0x3361eb(0x102),'amount':_0x274dd7});break;}case _0x3361eb(0x140):{const _0x5e02b5=_0x38dd3d[_0x3361eb(0x12f)];_0x38dd3d['position']=_0x5b01e0[_0x3361eb(0x160)][_0x3361eb(0x8f)];_0x5b01e0[_0x3361eb(0x160)][_0x3361eb(0xf7)]&&_0x5b01e0[_0x3361eb(0x160)]['tileId']<_0x5e02b5&&(_0x38dd3d[_0x3361eb(0xf4)]+=this[_0x3361eb(0x13e)]['salary'],this[_0x3361eb(0x161)](_0x3361eb(0xda)+_0x51a4b1+']\x20'+_0x38dd3d[_0x3361eb(0x13a)]+'\x20прошёл\x20«Вперёд»\x20и\x20получил\x20+$'+this[_0x3361eb(0x13e)][_0x3361eb(0x134)],{'type':_0x3361eb(0x115),'amount':this[_0x3361eb(0x13e)][_0x3361eb(0x134)]}));this[_0x3361eb(0x111)](_0x38dd3d,_0x5b01e0[_0x3361eb(0x160)]['tileId']);break;}case _0x3361eb(0xb6):{const _0x38438b=_0x38dd3d[_0x3361eb(0x12f)],_0x556e4d=BOARD_TILES[_0x3361eb(0x152)](_0x5218d5=>_0x5218d5['type']===_0x5b01e0[_0x3361eb(0x160)][_0x3361eb(0x11e)]||_0x5218d5[_0x3361eb(0x15a)]===_0x5b01e0[_0x3361eb(0x160)]['targetGroup']);if(_0x556e4d['length']>0x0){let _0x5c68fb=_0x556e4d[_0x3361eb(0x11b)](_0x3928d2=>_0x3928d2['id']>_0x38438b);if(!_0x5c68fb)_0x5c68fb=_0x556e4d[0x0];_0x5c68fb['id']<_0x38438b&&(_0x38dd3d[_0x3361eb(0xf4)]+=this[_0x3361eb(0x13e)][_0x3361eb(0x134)],this['addLog'](_0x3361eb(0xda)+_0x51a4b1+']\x20'+_0x38dd3d[_0x3361eb(0x13a)]+_0x3361eb(0xb5)+this[_0x3361eb(0x13e)][_0x3361eb(0x134)],{'type':'gain','amount':this[_0x3361eb(0x13e)][_0x3361eb(0x134)]})),_0x38dd3d[_0x3361eb(0x12f)]=_0x5c68fb['id'],this['handleTileLanding'](_0x38dd3d,_0x5c68fb['id']);}break;}case _0x3361eb(0x12e):{let _0x504f2d=0x0,_0x3d4880=0x0;Object[_0x3361eb(0xeb)](this['properties'])[_0x3361eb(0xbd)](_0x461327=>{const _0x47b4bb=_0x3361eb;if(_0x461327[_0x47b4bb(0xa8)]===_0x38dd3d['id']){if(_0x461327[_0x47b4bb(0xc2)]===0x5)_0x3d4880+=0x1;else _0x461327[_0x47b4bb(0xc2)]>0x0&&(_0x504f2d+=_0x461327['houses']);}});const _0x18b48e=_0x5b01e0[_0x3361eb(0x160)][_0x3361eb(0x144)]||0x19,_0x3db3b2=_0x5b01e0[_0x3361eb(0x160)][_0x3361eb(0xbb)]||0x64,_0x51e544=_0x504f2d*_0x18b48e+_0x3d4880*_0x3db3b2;_0x51e544>0x0?(this['deductCash'](_0x38dd3d,_0x51e544),this[_0x3361eb(0x13e)][_0x3361eb(0x110)]&&(this[_0x3361eb(0x9e)]+=_0x51e544),this[_0x3361eb(0x161)](_0x3361eb(0xf8)+_0x51a4b1+']\x20'+_0x38dd3d[_0x3361eb(0x13a)]+_0x3361eb(0xc0)+_0x51e544+'\x20('+_0x504f2d+_0x3361eb(0x166)+_0x18b48e+',\x20'+_0x3d4880+_0x3361eb(0xa3)+_0x3db3b2+_0x3361eb(0xb2)+_0x5b01e0[_0x3361eb(0xfc)]+'»)',{'type':_0x3361eb(0x102),'amount':_0x51e544})):this[_0x3361eb(0x161)]('🔨\x20['+_0x51a4b1+']\x20'+_0x38dd3d[_0x3361eb(0x13a)]+'\x20не\x20имеет\x20построек\x20для\x20ремонта\x20(расход\x20$0).',{'type':_0x3361eb(0x11f)});break;}case'go_to_jail':{this[_0x3361eb(0x159)](_0x38dd3d),this[_0x3361eb(0x161)](_0x3361eb(0x13c)+_0x51a4b1+']\x20'+_0x38dd3d[_0x3361eb(0x13a)]+_0x3361eb(0x9f)+_0x5b01e0[_0x3361eb(0xfc)]+'»)',{'type':'special'});break;}case _0x3361eb(0xaa):{_0x38dd3d[_0x3361eb(0xbc)]+=0x1,this['addLog'](_0x3361eb(0x118)+_0x51a4b1+']\x20'+_0x38dd3d[_0x3361eb(0x13a)]+'\x20получил\x20карту\x20бесплатного\x20выхода\x20из\x20тюрьмы\x20(«'+_0x5b01e0[_0x3361eb(0xfc)]+'»)',{'type':'special'});break;}case _0x3361eb(0xc7):{const _0xb28d69=_0x5b01e0[_0x3361eb(0x160)]['amount']||0x14;let _0x536ec7=0x0;for(const _0x49f631 of this[_0x3361eb(0x103)]){_0x49f631['id']!==_0x38dd3d['id']&&!_0x49f631[_0x3361eb(0xa6)]&&(this[_0x3361eb(0x16a)](_0x49f631,_0x38dd3d,_0xb28d69),_0x536ec7+=_0xb28d69);}this['addLog'](_0x3361eb(0xb9)+_0x51a4b1+']\x20'+_0x38dd3d[_0x3361eb(0x13a)]+_0x3361eb(0x9d)+_0xb28d69+_0x3361eb(0x99)+_0x536ec7+_0x3361eb(0xb2)+_0x5b01e0[_0x3361eb(0xfc)]+'»)',{'type':_0x3361eb(0x115),'amount':_0x536ec7});break;}}this[_0x3361eb(0xcb)]=null,this[_0x3361eb(0x108)]===_0x3361eb(0x98)&&(this[_0x3361eb(0x108)]='ACTION');}[a7_0x2a9695(0x159)](_0x2fb1da){const _0x331d4a=a7_0x2a9695;_0x2fb1da[_0x331d4a(0x12f)]=0xa,_0x2fb1da[_0x331d4a(0xab)]=!![],_0x2fb1da[_0x331d4a(0xba)]=0x0,this['doublesStreak']=0x0,this['phase']=_0x331d4a(0x93);}['payJailFine'](_0x144068=null){const _0x5d5b37=a7_0x2a9695,_0x306e8d=_0x144068?this[_0x5d5b37(0x103)][_0x5d5b37(0x11b)](_0x3f607b=>_0x3f607b['id']===_0x144068):this[_0x5d5b37(0x119)]();if(!_0x306e8d['inJail']||_0x306e8d[_0x5d5b37(0xf4)]<0x32)return![];return _0x306e8d[_0x5d5b37(0xf4)]-=0x32,_0x306e8d[_0x5d5b37(0xab)]=![],_0x306e8d['jailTurns']=0x0,this[_0x5d5b37(0x161)](_0x5d5b37(0xd6)+_0x306e8d[_0x5d5b37(0x13a)]+_0x5d5b37(0xf6),{'type':_0x5d5b37(0x102),'amount':0x32}),this[_0x5d5b37(0x13e)][_0x5d5b37(0x110)]&&(this[_0x5d5b37(0x9e)]+=0x32),!![];}[a7_0x2a9695(0x95)](_0x1f5504=null){const _0x3f40eb=a7_0x2a9695,_0x54e8e6=_0x1f5504?this[_0x3f40eb(0x103)][_0x3f40eb(0x11b)](_0x58e2e8=>_0x58e2e8['id']===_0x1f5504):this['getCurrentPlayer']();if(!_0x54e8e6['inJail']||_0x54e8e6[_0x3f40eb(0xbc)]<=0x0)return![];return _0x54e8e6['jailCards']-=0x1,_0x54e8e6[_0x3f40eb(0xab)]=![],_0x54e8e6[_0x3f40eb(0xba)]=0x0,this[_0x3f40eb(0x161)]('🎟️\x20'+_0x54e8e6[_0x3f40eb(0x13a)]+_0x3f40eb(0xe2)),!![];}[a7_0x2a9695(0x16a)](_0x225f1c,_0x2d5fe9,_0x2a8fc1){const _0x89d810=a7_0x2a9695;_0x225f1c['cash']<_0x2a8fc1?(_0x2d5fe9[_0x89d810(0xf4)]+=_0x225f1c[_0x89d810(0xf4)],_0x225f1c[_0x89d810(0xf4)]=0x0,this[_0x89d810(0xe4)](_0x225f1c,_0x2d5fe9)):(_0x225f1c['cash']-=_0x2a8fc1,_0x2d5fe9[_0x89d810(0xf4)]+=_0x2a8fc1);}[a7_0x2a9695(0x16b)](_0x5b21e6,_0x388b29){const _0x4a29d0=a7_0x2a9695;_0x5b21e6[_0x4a29d0(0xf4)]<_0x388b29?(_0x5b21e6[_0x4a29d0(0xf4)]=0x0,this['checkBankruptcy'](_0x5b21e6,null)):_0x5b21e6['cash']-=_0x388b29;}[a7_0x2a9695(0xe4)](_0x8f09aa,_0x234651){const _0x59d08d=a7_0x2a9695;let _0xfbd6f0=_0x8f09aa[_0x59d08d(0xf4)];for(const [_0x3b9859,_0x128635]of Object['entries'](this['properties'])){if(_0x128635[_0x59d08d(0xa8)]===_0x8f09aa['id']){const _0x2bbf18=BOARD_TILES[_0x3b9859];_0xfbd6f0+=_0x128635['isMortgaged']?0x0:_0x2bbf18[_0x59d08d(0x15e)],_0xfbd6f0+=(_0x128635[_0x59d08d(0xc2)]||0x0)*Math[_0x59d08d(0x12a)](_0x2bbf18['houseCost']*0.5);}}_0xfbd6f0<=0x0&&this['declareBankruptcy'](_0x8f09aa,_0x234651);}['declareBankruptcy'](_0x57f58d,_0x26a291){const _0x2f3f0a=a7_0x2a9695;_0x57f58d[_0x2f3f0a(0xa6)]=!![],this[_0x2f3f0a(0x161)]('💥\x20'+_0x57f58d[_0x2f3f0a(0x13a)]+'\x20ОБЪЯВИЛ\x20СЕБЯ\x20БАНКРОТОМ!');for(const [_0x3adb8c,_0x5ab300]of Object[_0x2f3f0a(0x109)](this[_0x2f3f0a(0x122)])){_0x5ab300['ownerId']===_0x57f58d['id']&&(_0x5ab300[_0x2f3f0a(0xa8)]=_0x26a291?_0x26a291['id']:null,_0x5ab300['houses']=0x0);}this[_0x2f3f0a(0x123)]();}['checkGameWinner'](){const _0x1c8c76=a7_0x2a9695,_0x5bf248=this[_0x1c8c76(0x103)][_0x1c8c76(0x152)](_0x52b7be=>!_0x52b7be[_0x1c8c76(0xa6)]&&!_0x52b7be[_0x1c8c76(0x8a)]);if(_0x5bf248[_0x1c8c76(0x15c)]===0x1&&this[_0x1c8c76(0x103)][_0x1c8c76(0x15c)]>0x1)return this[_0x1c8c76(0x164)]=_0x5bf248[0x0],this[_0x1c8c76(0x12b)]='FINISHED',this[_0x1c8c76(0x161)](_0x1c8c76(0x128)+this[_0x1c8c76(0x164)]['name']+_0x1c8c76(0xbe)),this['winner'];return null;}[a7_0x2a9695(0xf9)](_0x3a6d21,_0x30988a,_0xc2f655){const _0x30fb2c=a7_0x2a9695;return this[_0x30fb2c(0x155)]={'fromPlayerId':_0x3a6d21,'toPlayerId':_0x30988a,'offer':_0xc2f655},this['addLog'](_0x30fb2c(0x113)),this[_0x30fb2c(0x155)];}[a7_0x2a9695(0x87)](){const _0x242c8b=a7_0x2a9695;if(!this[_0x242c8b(0x155)])return![];const {fromPlayerId:_0x114cb3,toPlayerId:_0x550bb1,offer:_0x3c8ec1}=this[_0x242c8b(0x155)],_0x10f331=this[_0x242c8b(0x103)][_0x242c8b(0x11b)](_0x5486b3=>_0x5486b3['id']===_0x114cb3),_0x2386af=this[_0x242c8b(0x103)]['find'](_0x27758a=>_0x27758a['id']===_0x550bb1);if(_0x10f331[_0x242c8b(0xf4)]<_0x3c8ec1[_0x242c8b(0x120)]||_0x2386af[_0x242c8b(0xf4)]<_0x3c8ec1[_0x242c8b(0x16e)])return{'success':![],'reason':_0x242c8b(0xb1)};return _0x10f331[_0x242c8b(0xf4)]=_0x10f331[_0x242c8b(0xf4)]-_0x3c8ec1[_0x242c8b(0x120)]+_0x3c8ec1['receiveMoney'],_0x2386af[_0x242c8b(0xf4)]=_0x2386af[_0x242c8b(0xf4)]-_0x3c8ec1[_0x242c8b(0x16e)]+_0x3c8ec1['giveMoney'],_0x3c8ec1['giveTiles']['forEach'](_0x173c06=>{const _0x3f8825=_0x242c8b;if(this['properties'][_0x173c06])this[_0x3f8825(0x122)][_0x173c06][_0x3f8825(0xa8)]=_0x2386af['id'];}),_0x3c8ec1['receiveTiles'][_0x242c8b(0xbd)](_0x28dee0=>{const _0x3ffb4d=_0x242c8b;if(this[_0x3ffb4d(0x122)][_0x28dee0])this[_0x3ffb4d(0x122)][_0x28dee0][_0x3ffb4d(0xa8)]=_0x10f331['id'];}),this[_0x242c8b(0x155)]=null,this['addLog'](_0x242c8b(0x130)),{'success':!![]};}[a7_0x2a9695(0x100)](){const _0x4f3685=a7_0x2a9695;this[_0x4f3685(0x155)]=null,this['addLog'](_0x4f3685(0x10d));}[a7_0x2a9695(0x156)](){const _0x22165c=a7_0x2a9695;if(this[_0x22165c(0x108)]===_0x22165c(0xd4)&&!this[_0x22165c(0x119)]()[_0x22165c(0xa6)])return{'success':![],'reason':_0x22165c(0x147)};if(this['lastRollDoubles']&&!this[_0x22165c(0x119)]()[_0x22165c(0xab)]&&!this[_0x22165c(0x119)]()[_0x22165c(0xa6)])return this['phase']='ROLL',this[_0x22165c(0x13d)]=![],this['addLog'](_0x22165c(0xa4)+this['getCurrentPlayer']()[_0x22165c(0x13a)]+_0x22165c(0x92)),{'success':!![],'rollAgain':!![]};let _0x5c9632=(this[_0x22165c(0x117)]+0x1)%this[_0x22165c(0x103)][_0x22165c(0x15c)],_0x4e407c=0x0;while(this[_0x22165c(0x103)][_0x5c9632][_0x22165c(0xa6)]&&_0x4e407c<this[_0x22165c(0x103)][_0x22165c(0x15c)]){_0x5c9632=(_0x5c9632+0x1)%this[_0x22165c(0x103)][_0x22165c(0x15c)],_0x4e407c++;}this['currentTurn']=_0x5c9632,this[_0x22165c(0x108)]='ROLL',this[_0x22165c(0x13d)]=![],this[_0x22165c(0xdd)]=![],this[_0x22165c(0xcf)]=0x0;const _0x32cd07=this[_0x22165c(0x119)]();return this['addLog'](_0x22165c(0x104)+_0x32cd07[_0x22165c(0x13a)]),{'success':!![],'currentPlayer':_0x32cd07};}[a7_0x2a9695(0xa9)](){const _0xbc5d1=a7_0x2a9695,_0x56490a=this['getCurrentPlayer']();if(!_0x56490a||!_0x56490a[_0xbc5d1(0x91)]||this[_0xbc5d1(0x12b)]!=='PLAYING')return;const _0x562895=_0x56490a[_0xbc5d1(0x14c)]||this['settings'][_0xbc5d1(0x14c)]||_0xbc5d1(0x11d);if(_0x56490a[_0xbc5d1(0xab)]){if(_0x56490a[_0xbc5d1(0xbc)]>0x0)this[_0xbc5d1(0x95)](_0x56490a['id']);else{if(_0x562895===_0xbc5d1(0xb8))_0x56490a[_0xbc5d1(0xba)]>=0x2&&_0x56490a['cash']>0x12c&&this['payJailFine'](_0x56490a['id']);else{if(_0x562895===_0xbc5d1(0xf3)){const _0x21fef6=Object['entries'](this[_0xbc5d1(0x122)])[_0xbc5d1(0xe6)](([_0x5140e7,_0x421568])=>!_0x421568[_0xbc5d1(0xa8)]&&BOARD_TILES[_0x5140e7]?.[_0xbc5d1(0xde)]===_0xbc5d1(0x163));if(_0x21fef6&&_0x56490a[_0xbc5d1(0xf4)]>=0x32)this[_0xbc5d1(0x135)](_0x56490a['id']);else _0x56490a[_0xbc5d1(0xf4)]>0x190&&_0x56490a[_0xbc5d1(0xba)]>=0x2&&this[_0xbc5d1(0x135)](_0x56490a['id']);}else _0x56490a['cash']>0xfa&&this['payJailFine'](_0x56490a['id']);}}}this[_0xbc5d1(0x108)]===_0xbc5d1(0xd4)&&this[_0xbc5d1(0x12c)]();if(this[_0xbc5d1(0x108)]===_0xbc5d1(0xca)){const _0x2588d3=BOARD_TILES[_0x56490a[_0xbc5d1(0x12f)]];if(!_0x2588d3)this['passProperty']();else{if(_0x562895===_0xbc5d1(0xb8))_0x56490a[_0xbc5d1(0xf4)]>=_0x2588d3['price']+0x15e&&Math[_0xbc5d1(0x125)]()<0.65?this[_0xbc5d1(0xcd)](_0x56490a['id']):this['passProperty']();else _0x562895===_0xbc5d1(0xf3)?_0x56490a[_0xbc5d1(0xf4)]>=_0x2588d3[_0xbc5d1(0xef)]+0x14?this[_0xbc5d1(0xcd)](_0x56490a['id']):this[_0xbc5d1(0xd9)]():_0x56490a[_0xbc5d1(0xf4)]>=_0x2588d3[_0xbc5d1(0xef)]+0x64?this['buyProperty'](_0x56490a['id']):this['passProperty']();}}this[_0xbc5d1(0x108)]===_0xbc5d1(0x98)&&this[_0xbc5d1(0x114)]();const _0x1c4f11=_0x562895==='hard'?0x28:_0x562895==='easy'?0x1f4:0xfa;if(_0x56490a[_0xbc5d1(0xf4)]>_0x1c4f11){const _0x3b0877=Object[_0xbc5d1(0x109)](this[_0xbc5d1(0x122)])[_0xbc5d1(0x152)](([_0x3c964f,_0x1996eb])=>_0x1996eb['ownerId']===_0x56490a['id']&&this[_0xbc5d1(0x9c)](_0x56490a['id'],parseInt(_0x3c964f)))[_0xbc5d1(0x142)](([_0x457fd7])=>parseInt(_0x457fd7)),_0x287707=_0x562895===_0xbc5d1(0xf3)?0x4:_0x562895===_0xbc5d1(0xb8)?0x1:0x2;let _0x5bedd7=0x0;for(const _0x5d2d36 of _0x3b0877){if(_0x5bedd7>=_0x287707)break;const _0x2ecb00=BOARD_TILES[_0x5d2d36],_0x38a89f=Math[_0xbc5d1(0x12a)]((_0x2ecb00['houseCost']||0x64)*(this[_0xbc5d1(0x13e)]['buildingCostMultiplier']||0x1));if(_0x56490a[_0xbc5d1(0xf4)]>=_0x38a89f+_0x1c4f11){const _0x43cf91=this[_0xbc5d1(0xff)](_0x56490a['id'],_0x5d2d36);_0x43cf91&&_0x43cf91[_0xbc5d1(0xbf)]&&_0x5bedd7++;}}}this[_0xbc5d1(0x108)]===_0xbc5d1(0x93)&&setTimeout(()=>this[_0xbc5d1(0x156)](),0x2bc);}[a7_0x2a9695(0xfa)](){const _0x5fa749=a7_0x2a9695;return{'status':this[_0x5fa749(0x12b)],'players':this['players'],'properties':this[_0x5fa749(0x122)],'currentTurn':this['currentTurn'],'dice':this[_0x5fa749(0x14e)],'lastRollDoubles':this[_0x5fa749(0xdd)],'hasRolled':this[_0x5fa749(0x13d)],'phase':this[_0x5fa749(0x108)],'jackpotPool':this[_0x5fa749(0x9e)],'settings':this[_0x5fa749(0x13e)],'customTiles':this[_0x5fa749(0x14d)]||{},'logs':this[_0x5fa749(0x151)],'tradeHistory':this['tradeHistory']||[],'activeCard':this[_0x5fa749(0xcb)],'activeTrade':this['activeTrade'],'winner':this[_0x5fa749(0x164)]};}[a7_0x2a9695(0x131)](_0x133124){const _0x31098c=a7_0x2a9695;if(!_0x133124)return;this['status']=_0x133124[_0x31098c(0x12b)],this[_0x31098c(0x103)]=_0x133124['players'],this[_0x31098c(0x122)]=_0x133124[_0x31098c(0x122)],this[_0x31098c(0x117)]=_0x133124['currentTurn'],this[_0x31098c(0x14e)]=_0x133124['dice'],this['lastRollDoubles']=_0x133124[_0x31098c(0xdd)],this['hasRolled']=_0x133124[_0x31098c(0x13d)],this[_0x31098c(0x108)]=_0x133124['phase'],this['jackpotPool']=_0x133124[_0x31098c(0x9e)],this[_0x31098c(0x13e)]=_0x133124[_0x31098c(0x13e)],this[_0x31098c(0x14d)]=_0x133124[_0x31098c(0x14d)]||{},this[_0x31098c(0x151)]=_0x133124['logs'],this[_0x31098c(0xa7)]=_0x133124['tradeHistory']||[],this['activeCard']=_0x133124[_0x31098c(0xcb)],this[_0x31098c(0x155)]=_0x133124[_0x31098c(0x155)],this[_0x31098c(0x164)]=_0x133124[_0x31098c(0x164)];}}function a7_0x20ab(_0x45ba05,_0x4d29a2){_0x45ba05=_0x45ba05-0x86;const _0x3dc710=a7_0x3dc7();let _0x20abff=_0x3dc710[_0x45ba05];if(a7_0x20ab['hSdGzy']===undefined){var _0x3c0cc8=function(_0xc66828){const _0x588687='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x4959d5='',_0x3d65dc='';for(let _0x32beed=0x0,_0x4141fa,_0x117f13,_0x2a292d=0x0;_0x117f13=_0xc66828['charAt'](_0x2a292d++);~_0x117f13&&(_0x4141fa=_0x32beed%0x4?_0x4141fa*0x40+_0x117f13:_0x117f13,_0x32beed++%0x4)?_0x4959d5+=String['fromCharCode'](0xff&_0x4141fa>>(-0x2*_0x32beed&0x6)):0x0){_0x117f13=_0x588687['indexOf'](_0x117f13);}for(let _0x5a436c=0x0,_0x3fabfa=_0x4959d5['length'];_0x5a436c<_0x3fabfa;_0x5a436c++){_0x3d65dc+='%'+('00'+_0x4959d5['charCodeAt'](_0x5a436c)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x3d65dc);};a7_0x20ab['Fuuomg']=_0x3c0cc8,a7_0x20ab['JFAxYI']={},a7_0x20ab['hSdGzy']=!![];}const _0x3f395f=_0x3dc710[0x0];a7_0x20ab['RhaHRc']!==_0x3f395f&&(a7_0x20ab['JFAxYI']={},a7_0x20ab['RhaHRc']=_0x3f395f);const _0x22191b=a7_0x20ab['JFAxYI'][_0x45ba05];return _0x22191b===undefined?(_0x20abff=a7_0x20ab['Fuuomg'](_0x20abff),a7_0x20ab['JFAxYI'][_0x45ba05]=_0x20abff):_0x20abff=_0x22191b,_0x20abff;}export const engine=new MonopolyEngine();
+/**
+ * Monopoly Game Engine
+ * Pure state machine handling all rules, movement, transactions, improvements & AI logic
+ */
+
+import { BOARD_TILES, COLOR_GROUPS } from './board-data.js';
+import { CHANCE_CARDS, CHEST_CARDS } from './cards-data.js';
+import { getPresetById } from './presets.js';
+
+export class MonopolyEngine {
+  constructor() {
+    this.reset();
+  }
+
+  reset() {
+    this.status = 'IDLE'; // IDLE, LOBBY, PLAYING, FINISHED
+    this.players = [];
+    this.properties = {}; // tileId -> { ownerId, houses: 0..5, isMortgaged: false }
+    this.currentTurn = 0;
+    this.dice = [1, 1];
+    this.lastRollDoubles = false;
+    this.doublesStreak = 0;
+    this.hasRolled = false;
+    this.phase = 'ROLL'; // ROLL, ACTION, BUY_CHOICE, CARD_EVENT, TRADE, BANKRUPT
+    this.jackpotPool = 0;
+    this.settings = getPresetById('classic').settings;
+    this.customTiles = {}; // { tileId: { name, desc } } — per-lobby overrides
+    this.tradeHistory = [];
+    this.logs = [];
+    this.activeCard = null;
+    this.activeTrade = null;
+    this.winner = null;
+    this.turnTimer = null;
+    this.timeLeft = 60;
+  }
+
+  // --- INITIALIZATION ---
+  initGame(playersList, presetOrSettings, customTiles = {}) {
+    this.reset();
+    this.status = 'PLAYING';
+    this.customTiles = customTiles || {};
+    
+    if (typeof presetOrSettings === 'string') {
+      this.settings = { ...getPresetById(presetOrSettings).settings };
+    } else if (presetOrSettings) {
+      this.settings = { ...presetOrSettings };
+    }
+
+    this.jackpotPool = this.settings.initialJackpot || 0;
+
+    // Initialize players
+    this.players = playersList.map((p, idx) => ({
+      id: p.id || `p_${idx}`,
+      name: p.name || `Игрок ${idx + 1}`,
+      token: p.token || '🎩',
+      title: p.title || 'novice',
+      diceSkin: p.diceSkin || 'classic',
+      color: p.color || '#2563eb',
+      bg: p.bg || p.profileBg || 'default',
+      profileBg: p.bg || p.profileBg || 'default',
+      coins: p.coins || 0,
+      stats: p.stats || {},
+      avatarUrl: p.avatarUrl || null,
+      discordId: p.discordId || null,
+      discordUsername: p.discordUsername || null,
+      isRegistered: !!p.isRegistered,
+      cash: this.settings.startingCash || 1500,
+      position: 0,
+      inJail: false,
+      jailTurns: 0,
+      jailCards: 0,
+      isBankrupt: false,
+      isBot: !!p.isBot,
+      botPersonality: p.botPersonality || 'balanced',
+      botDifficulty: p.botDifficulty || this.settings.botDifficulty || 'medium'
+    }));
+
+    // Initialize all properties
+    BOARD_TILES.forEach(tile => {
+      if (['street', 'station', 'utility'].includes(tile.type)) {
+        this.properties[tile.id] = {
+          ownerId: null,
+          houses: 0,
+          isMortgaged: false
+        };
+      }
+    });
+
+    // Deal random streets if blitz preset active
+    if (this.settings.initialRandomStreets > 0) {
+      const purchasableTiles = BOARD_TILES.filter(t => ['street', 'station'].includes(t.type)).map(t => t.id);
+      // Shuffle
+      const shuffled = [...purchasableTiles].sort(() => Math.random() - 0.5);
+      let tileIdx = 0;
+      for (let r = 0; r < this.settings.initialRandomStreets; r++) {
+        for (const player of this.players) {
+          if (tileIdx < shuffled.length) {
+            const tileId = shuffled[tileIdx++];
+            this.properties[tileId].ownerId = player.id;
+          }
+        }
+      }
+    }
+
+    this.currentTurn = 0;
+    this.phase = 'ROLL';
+    this.addLog(`🎲 Игра началась! Первый ходит: ${this.getCurrentPlayer().name}`);
+    return this.getState();
+  }
+
+  getCurrentPlayer() {
+    return this.players[this.currentTurn];
+  }
+
+  addLog(message, meta = null) {
+    const time = new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+    const logItem = { time, text: message, meta };
+    this.logs.unshift(logItem);
+    if (this.logs.length > 50) this.logs.pop();
+    if (typeof this.onLogCallback === 'function') {
+      this.onLogCallback(logItem);
+    }
+  }
+
+  // --- DICE ROLLING & MOVEMENT ---
+  rollDice(forcedValues = null) {
+    if (this.phase !== 'ROLL' && !(this.phase === 'ACTION' && this.lastRollDoubles)) {
+      return { success: false, reason: 'Не время бросать кубики' };
+    }
+
+    const d1 = forcedValues ? forcedValues[0] : Math.floor(Math.random() * 6) + 1;
+    const d2 = forcedValues ? forcedValues[1] : Math.floor(Math.random() * 6) + 1;
+    this.dice = [d1, d2];
+    const isDoubles = d1 === d2;
+    this.lastRollDoubles = isDoubles;
+    this.hasRolled = true;
+
+    const player = this.getCurrentPlayer();
+    const oldPos = player.position;
+    this.addLog(`${player.name} выбросил ${d1} и ${d2} (сумма ${d1 + d2})`);
+
+    // Handle Jail status
+    if (player.inJail) {
+      if (isDoubles) {
+        player.inJail = false;
+        player.jailTurns = 0;
+        this.doublesStreak = 0;
+        this.addLog(`${player.name} выбросил дубль и выходит из тюрьмы.`);
+        this.movePlayer(player.id, d1 + d2);
+        return { success: true, doubles: true, inJail: false, dice: this.dice, oldPos, newPos: player.position };
+      } else {
+        player.jailTurns += 1;
+        if (player.jailTurns >= 3) {
+          this.deductCash(player, 50);
+          player.inJail = false;
+          player.jailTurns = 0;
+          this.addLog(`🔓 ${player.name} оплатил штраф $50 после 3 неудачных попыток и вышел на свободу.`, { type: 'loss', amount: 50 });
+          this.movePlayer(player.id, d1 + d2);
+        } else {
+          this.addLog(`${player.name} остаётся в тюрьме (попытка ${player.jailTurns}/3).`);
+          this.phase = 'ACTION';
+        }
+        return { success: true, doubles: false, inJail: player.inJail, dice: this.dice, oldPos, newPos: player.position };
+      }
+    }
+
+    // Handle 3 consecutive doubles rule
+    if (isDoubles) {
+      this.doublesStreak += 1;
+      if (this.doublesStreak >= 3) {
+        this.sendToJail(player);
+        this.doublesStreak = 0;
+        this.addLog(`👮 ${player.name} выбросил 3 дубля подряд и отправлен в тюрьму!`, { type: 'special' });
+        return { success: true, doubles: true, inJail: true, dice: this.dice, oldPos, newPos: player.position };
+      }
+    } else {
+      this.doublesStreak = 0;
+    }
+
+    // Move player
+    this.movePlayer(player.id, d1 + d2);
+    return { success: true, doubles: isDoubles, dice: this.dice, oldPos, newPos: player.position };
+  }
+
+  movePlayer(playerId, steps, allowSalary = true) {
+    const player = this.players.find(p => p.id === playerId);
+    if (!player || player.isBankrupt) return { oldPos: 0, newPos: 0 };
+
+    const oldPos = player.position;
+    let newPos = (oldPos + steps) % 40;
+    if (newPos < 0) newPos += 40;
+
+    // Passed GO
+    if (allowSalary && (oldPos + steps >= 40)) {
+      const salary = (newPos === 0 && this.settings.doubleSalaryOnGoLanding) 
+        ? this.settings.salary * 2 
+        : this.settings.salary;
+      player.cash += salary;
+      if (newPos === 0 && this.settings.doubleSalaryOnGoLanding) {
+        this.addLog(`🎉 ${player.name} остановился на поле «Вперёд» и получил 2x зарплату: +$${salary}`, { type: 'gain', amount: salary });
+      } else {
+        this.addLog(`💵 ${player.name} прошёл поле «Вперёд» и получил зарплату: +$${salary}`, { type: 'gain', amount: salary });
+      }
+    }
+
+    player.position = newPos;
+    this.handleTileLanding(player, newPos);
+    return { oldPos, newPos };
+  }
+
+  handleTileLanding(player, tileId) {
+    const tile = BOARD_TILES[tileId];
+
+    switch (tile.type) {
+      case 'street':
+      case 'station':
+      case 'utility': {
+        const prop = this.properties[tileId];
+        if (!prop.ownerId) {
+          // Unowned - offer to buy
+          this.phase = 'BUY_CHOICE';
+          this.addLog(`📍 ${player.name} попал на поле «${tile.name}» (свободно за $${tile.price})`);
+        } else if (prop.ownerId === player.id) {
+          this.phase = 'ACTION';
+          this.addLog(`📍 ${player.name} отдыхает на своей собственности «${tile.name}»`);
+        } else {
+          // Owned by someone else
+          const owner = this.players.find(p => p.id === prop.ownerId);
+          if (prop.isMortgaged) {
+            this.phase = 'ACTION';
+            this.addLog(`📍 «${tile.name}» в залоге у ${owner.name}, аренда не взимается.`);
+          } else if (owner.inJail && !this.settings.rentInJail) {
+            this.phase = 'ACTION';
+            this.addLog(`📍 Владелец «${tile.name}» в тюрьме, аренда не платится.`);
+          } else {
+            const rent = this.calculateRent(tileId);
+            this.phase = 'ACTION';
+            this.addLog(`💸 ${player.name} заплатил аренду $${rent} игроку ${owner.name} за «${tile.name}»`, { type: 'loss', amount: rent });
+            this.transferCash(player, owner, rent);
+          }
+        }
+        break;
+      }
+
+      case 'tax': {
+        const tax = Math.round((tile.taxAmount || 100) * (this.settings.taxMultiplier || 1.0));
+        this.phase = 'ACTION';
+        this.addLog(`💸 ${player.name} платил налог: -$${tax}`, { type: 'loss', amount: tax });
+        this.deductCash(player, tax);
+        if (this.settings.freeParkingJackpot) {
+          this.jackpotPool += tax;
+        }
+        break;
+      }
+
+      case 'chance': {
+        this.drawCard(player, 'chance');
+        break;
+      }
+
+      case 'chest': {
+        this.drawCard(player, 'chest');
+        break;
+      }
+
+      case 'corner': {
+        this.phase = 'ACTION';
+        if (tileId === 30) {
+          // Go to jail
+          this.sendToJail(player);
+          this.addLog(`👮 ${player.name} отправлен в тюрьму!`, { type: 'special' });
+        } else if (tileId === 20) {
+          // Free parking
+          if (this.settings.freeParkingJackpot && this.jackpotPool > 0) {
+            const pool = this.jackpotPool;
+            player.cash += pool;
+            this.addLog(`🎉 ${player.name} сорвал ДЖЕКПОТ на стоянке: +$${pool}!`, { type: 'gain', amount: pool });
+            this.jackpotPool = 0;
+          } else {
+            this.addLog(`🅿️ ${player.name} отдыхает на бесплатной стоянке.`);
+          }
+        }
+        break;
+      }
+    }
+  }
+
+  // --- BUY & IMPROVE PROPERTIES ---
+  buyProperty(playerId = null, tileId = null) {
+    const player = playerId ? this.players.find(p => p.id === playerId) : this.getCurrentPlayer();
+    const targetTileId = tileId !== null ? tileId : player.position;
+    const tile = BOARD_TILES[targetTileId];
+    const prop = this.properties[targetTileId];
+
+    if (!tile || !prop || prop.ownerId) {
+      return { success: false, reason: 'Недвижимость уже куплена или недоступна' };
+    }
+
+    if (player.cash < tile.price) {
+      return { success: false, reason: 'Недостаточно денег' };
+    }
+
+    player.cash -= tile.price;
+    prop.ownerId = player.id;
+    this.phase = 'ACTION';
+    this.addLog(`🏠 ${player.name} купил «${tile.name}» за $${tile.price}`);
+    return { success: true, tileId: targetTileId };
+  }
+
+  passProperty() {
+    this.phase = 'ACTION';
+    this.addLog(`⏩ Игрок отказался от покупки.`);
+  }
+
+  calculateRent(tileId) {
+    const tile = BOARD_TILES[tileId];
+    const prop = this.properties[tileId];
+    if (!tile || !prop || !prop.ownerId || prop.isMortgaged) return 0;
+
+    let rent = 0;
+    const mult = this.settings.rentMultiplier || 1.0;
+
+    if (tile.type === 'street') {
+      const houses = prop.houses || 0;
+      if (houses > 0) {
+        rent = tile.rent[houses];
+      } else {
+        const hasMonopoly = this.hasFullColorGroup(prop.ownerId, tile.group);
+        rent = hasMonopoly ? (tile.rent[0] * 2) : tile.rent[0];
+      }
+    } else if (tile.type === 'station') {
+      const stationsOwned = BOARD_TILES
+        .filter(t => t.type === 'station')
+        .filter(t => this.properties[t.id].ownerId === prop.ownerId).length;
+      rent = tile.rent[Math.min(stationsOwned - 1, 3)] || 25;
+    } else if (tile.type === 'utility') {
+      const utilsOwned = BOARD_TILES
+        .filter(t => t.type === 'utility')
+        .filter(t => this.properties[t.id].ownerId === prop.ownerId).length;
+      const diceSum = this.dice[0] + this.dice[1];
+      rent = utilsOwned >= 2 ? diceSum * 10 : diceSum * 4;
+    }
+
+    return Math.round(rent * mult);
+  }
+
+  hasFullColorGroup(playerId, group) {
+    if (!group || ['station', 'utility'].includes(group)) return false;
+    const groupTiles = BOARD_TILES.filter(t => t.group === group);
+    return groupTiles.every(t => this.properties[t.id]?.ownerId === playerId);
+  }
+
+  canBuildHouse(playerId, tileId) {
+    const tile = BOARD_TILES[tileId];
+    const prop = this.properties[tileId];
+    if (!tile || tile.type !== 'street' || prop.ownerId !== playerId) return false;
+    if (prop.isMortgaged || prop.houses >= 5) return false;
+
+    // Check monopoly rule - player must own the entire color group
+    if (!this.hasFullColorGroup(playerId, tile.group)) {
+      return false;
+    }
+
+    const cost = Math.round(tile.houseCost * (this.settings.buildingCostMultiplier || 1.0));
+    const player = this.players.find(p => p.id === playerId);
+    return !!player && player.cash >= cost;
+  }
+
+  buildHouse(playerId, tileId) {
+    const tile = BOARD_TILES[tileId];
+    const prop = this.properties[tileId];
+    if (!tile || !prop || prop.ownerId !== playerId) {
+      return { success: false, reason: 'Вы не владеете этой недвижимостью' };
+    }
+    if (!this.hasFullColorGroup(playerId, tile.group)) {
+      return { success: false, reason: 'Для постройки необходимо владеть всеми улицами этой группы!' };
+    }
+    if (prop.houses >= 5) {
+      return { success: false, reason: 'Максимальный уровень (Отель) уже построен' };
+    }
+    const cost = Math.round(tile.houseCost * (this.settings.buildingCostMultiplier || 1.0));
+    const player = this.players.find(p => p.id === playerId);
+    if (!player || player.cash < cost) {
+      return { success: false, reason: `Недостаточно средств для постройки (нужно $${cost})` };
+    }
+
+    player.cash -= cost;
+    prop.houses += 1;
+    const label = prop.houses === 5 ? 'Отель' : `Дом №${prop.houses}`;
+    this.addLog(`🔨 ${player.name} построил ${label} на «${tile.name}» за $${cost}`);
+    return { success: true, houses: prop.houses, cost };
+  }
+
+  mortgageProperty(playerId, tileId) {
+    const tile = BOARD_TILES[tileId];
+    const prop = this.properties[tileId];
+    if (!tile || !prop || prop.ownerId !== playerId || prop.isMortgaged || prop.houses > 0) {
+      return { success: false, reason: 'Нельзя заложить недвижимость' };
+    }
+
+    const player = this.players.find(p => p.id === playerId);
+    prop.isMortgaged = true;
+    player.cash += tile.mortgage;
+    this.addLog(`🏦 ${player.name} заложил «${tile.name}» и получил $${tile.mortgage}`);
+    return { success: true };
+  }
+
+  unmortgageProperty(playerId, tileId) {
+    const tile = BOARD_TILES[tileId];
+    const prop = this.properties[tileId];
+    if (!tile || !prop || prop.ownerId !== playerId || !prop.isMortgaged) {
+      return { success: false, reason: 'Недвижимость не в залоге' };
+    }
+
+    const cost = Math.round(tile.mortgage * 1.1);
+    const player = this.players.find(p => p.id === playerId);
+    if (player.cash < cost) {
+      return { success: false, reason: 'Недостаточно денег для выкупа' };
+    }
+
+    player.cash -= cost;
+    prop.isMortgaged = false;
+    this.addLog(`🔓 ${player.name} выкупил из залога «${tile.name}» за $${cost}`);
+    return { success: true };
+  }
+
+  // --- SELL PROPERTY (WITH 10% COMMISSION) ---
+  sellProperty(playerId, tileId) {
+    const tile = BOARD_TILES[tileId];
+    const prop = this.properties[tileId];
+    if (!tile || !prop || prop.ownerId !== playerId || prop.houses > 0) {
+      return { success: false, reason: 'Нельзя продать недвижимость с постройками или чужую' };
+    }
+
+    const player = this.players.find(p => p.id === playerId);
+    if (!player) return { success: false, reason: 'Игрок не найден' };
+
+    const commissionRate = 0.10; // 10% комиссия на продажу
+    const basePrice = prop.isMortgaged ? tile.mortgage : tile.price;
+    const commission = Math.round(basePrice * commissionRate);
+    const payout = basePrice - commission;
+
+    player.cash += payout;
+    if (this.settings.freeParkingJackpot) {
+      this.jackpotPool += commission;
+    }
+
+    prop.ownerId = null;
+    prop.houses = 0;
+    prop.isMortgaged = false;
+
+    this.addLog(`🏷️ ${player.name} продал карточку «${tile.name}» за $${payout} (комиссия 10%: $${commission})`);
+    return { success: true, payout, commission };
+  }
+
+  // --- CARD & ASSET TRADING (WITH 10% COMMISSION) ---
+  evaluateBotTrade({ fromId, toId, fromCardIds = [], toCardIds = [], fromCash = 0, toCash = 0 }) {
+    const bot = this.players.find(p => p.id === toId);
+    const difficulty = bot?.botDifficulty || this.settings?.botDifficulty || 'medium';
+
+    let giveValue = parseInt(toCash) || 0;
+    let receiveValue = parseInt(fromCash) || 0;
+
+    toCardIds.forEach(id => {
+      giveValue += (BOARD_TILES[id]?.price || 100) * 1.1;
+    });
+    fromCardIds.forEach(id => {
+      let val = BOARD_TILES[id]?.price || 100;
+      const tile = BOARD_TILES[id];
+      if (tile && tile.group && bot) {
+        const groupTiles = BOARD_TILES.filter(t => t.group === tile.group);
+        const ownedCount = groupTiles.filter(t => this.properties[t.id]?.ownerId === bot.id).length;
+        if (ownedCount === groupTiles.length - 1) {
+          val *= (difficulty === 'hard' ? 2.5 : 1.8);
+        }
+      }
+      receiveValue += val;
+    });
+
+    if (difficulty === 'easy') {
+      return receiveValue >= giveValue * 0.75;
+    } else if (difficulty === 'hard') {
+      return receiveValue >= giveValue * 1.2;
+    } else {
+      return receiveValue >= giveValue;
+    }
+  }
+
+  executeTrade({ fromId, toId, fromCardIds = [], toCardIds = [], fromCash = 0, toCash = 0 }) {
+    const fromPlayer = this.players.find(p => p.id === fromId);
+    const toPlayer = this.players.find(p => p.id === toId);
+
+    if (!fromPlayer || !toPlayer) {
+      return { success: false, reason: 'Игрок не найден' };
+    }
+
+    fromCash = Math.max(0, parseInt(fromCash) || 0);
+    toCash = Math.max(0, parseInt(toCash) || 0);
+
+    if (fromPlayer.cash < fromCash) {
+      return { success: false, reason: `У ${fromPlayer.name} недостаточно средств` };
+    }
+    if (toPlayer.cash < toCash) {
+      return { success: false, reason: `У ${toPlayer.name} недостаточно средств` };
+    }
+
+    for (const tId of fromCardIds) {
+      const prop = this.properties[tId];
+      if (!prop || prop.ownerId !== fromId || prop.houses > 0) {
+        return { success: false, reason: 'Некоторые карточки нельзя обменять' };
+      }
+    }
+    for (const tId of toCardIds) {
+      const prop = this.properties[tId];
+      if (!prop || prop.ownerId !== toId || prop.houses > 0) {
+        return { success: false, reason: 'Некоторые карточки нельзя обменять' };
+      }
+    }
+
+    let totalValue = fromCash + toCash;
+    fromCardIds.forEach(id => {
+      totalValue += BOARD_TILES[id]?.price || 0;
+    });
+    toCardIds.forEach(id => {
+      totalValue += BOARD_TILES[id]?.price || 0;
+    });
+
+    fromCardIds.forEach(id => {
+      this.properties[id].ownerId = toId;
+    });
+    toCardIds.forEach(id => {
+      this.properties[id].ownerId = fromId;
+    });
+
+    fromPlayer.cash = fromPlayer.cash - fromCash + toCash;
+    toPlayer.cash = toPlayer.cash - toCash + fromCash;
+
+    const tradeRecord = {
+      id: 'trade_' + Date.now(),
+      time: new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' }),
+      fromName: fromPlayer.name,
+      toName: toPlayer.name,
+      fromCards: fromCardIds.map(id => BOARD_TILES[id]?.name || `Карта #${id}`),
+      toCards: toCardIds.map(id => BOARD_TILES[id]?.name || `Карта #${id}`),
+      fromCash,
+      toCash,
+      commission: 0
+    };
+    if (!this.tradeHistory) this.tradeHistory = [];
+    this.tradeHistory.unshift(tradeRecord);
+    if (this.tradeHistory.length > 30) this.tradeHistory.pop();
+
+    this.addLog(`🤝 Сделка между ${fromPlayer.name} и ${toPlayer.name} успешно завершена.`);
+    return { success: true, commission: 0 };
+  }
+
+
+  // --- CARDS ---
+  drawCard(player, cardType) {
+    const deck = cardType === 'chance' ? CHANCE_CARDS : CHEST_CARDS;
+    const card = deck[Math.floor(Math.random() * deck.length)];
+    this.activeCard = { ...card, deckType: cardType };
+    this.phase = 'CARD_EVENT';
+    this.addLog(`📜 ${player.name} вытянул карточку: "${card.title}"`);
+    return this.activeCard;
+  }
+
+  applyActiveCard() {
+    if (!this.activeCard) return;
+    const card = this.activeCard;
+    const player = this.getCurrentPlayer();
+    const isChance = card.deckType === 'chance';
+    const deckLabel = isChance ? 'Шанс' : 'Казна';
+
+    switch (card.action.type) {
+      case 'gain_money': {
+        const gain = card.action.amount || 0;
+        player.cash += gain;
+        this.addLog(`💰 [${deckLabel}] ${player.name} получил +$${gain} («${card.title}»)`, { type: 'gain', amount: gain });
+        break;
+      }
+
+      case 'pay_money': {
+        const loss = card.action.amount || 0;
+        this.deductCash(player, loss);
+        if (this.settings.freeParkingJackpot) {
+          this.jackpotPool += loss;
+        }
+        this.addLog(`💸 [${deckLabel}] ${player.name} выплатил -$${loss} («${card.title}»)`, { type: 'loss', amount: loss });
+        break;
+      }
+
+      case 'move_to': {
+        const oldPos = player.position;
+        player.position = card.action.tileId;
+        if (card.action.collectSalary && card.action.tileId < oldPos) {
+          player.cash += this.settings.salary;
+          this.addLog(`💵 [${deckLabel}] ${player.name} прошёл «Вперёд» и получил +$${this.settings.salary}`, { type: 'gain', amount: this.settings.salary });
+        }
+        this.handleTileLanding(player, card.action.tileId);
+        break;
+      }
+
+      case 'move_to_nearest': {
+        const currentPos = player.position;
+        const targets = BOARD_TILES.filter(t => t.type === card.action.targetGroup || t.group === card.action.targetGroup);
+        if (targets.length > 0) {
+          let nextTile = targets.find(t => t.id > currentPos);
+          if (!nextTile) nextTile = targets[0];
+          if (nextTile.id < currentPos) {
+            player.cash += this.settings.salary;
+            this.addLog(`💵 [${deckLabel}] ${player.name} прошёл «Вперёд» и получил +$${this.settings.salary}`, { type: 'gain', amount: this.settings.salary });
+          }
+          player.position = nextTile.id;
+          this.handleTileLanding(player, nextTile.id);
+        }
+        break;
+      }
+
+      case 'property_repair': {
+        let houseCount = 0;
+        let hotelCount = 0;
+        Object.values(this.properties).forEach(prop => {
+          if (prop.ownerId === player.id) {
+            if (prop.houses === 5) {
+              hotelCount += 1;
+            } else if (prop.houses > 0) {
+              houseCount += prop.houses;
+            }
+          }
+        });
+        const houseCost = card.action.houseCost || 25;
+        const hotelCost = card.action.hotelCost || 100;
+        const totalRepair = (houseCount * houseCost) + (hotelCount * hotelCost);
+        if (totalRepair > 0) {
+          this.deductCash(player, totalRepair);
+          if (this.settings.freeParkingJackpot) {
+            this.jackpotPool += totalRepair;
+          }
+          this.addLog(`🔨 [${deckLabel}] ${player.name} оплатил ремонт -$${totalRepair} (${houseCount} домов по $${houseCost}, ${hotelCount} отелей по $${hotelCost}) («${card.title}»)`, { type: 'loss', amount: totalRepair });
+        } else {
+          this.addLog(`🔨 [${deckLabel}] ${player.name} не имеет построек для ремонта (расход $0).`, { type: 'neutral' });
+        }
+        break;
+      }
+
+      case 'go_to_jail': {
+        this.sendToJail(player);
+        this.addLog(`👮 [${deckLabel}] ${player.name} отправлен в тюрьму! («${card.title}»)`, { type: 'special' });
+        break;
+      }
+
+      case 'jail_free_card': {
+        player.jailCards += 1;
+        this.addLog(`🎫 [${deckLabel}] ${player.name} получил карту бесплатного выхода из тюрьмы («${card.title}»)`, { type: 'special' });
+        break;
+      }
+
+      case 'collect_from_all': {
+        const eachAmount = card.action.amount || 20;
+        let totalCollected = 0;
+        for (const other of this.players) {
+          if (other.id !== player.id && !other.isBankrupt) {
+            this.transferCash(other, player, eachAmount);
+            totalCollected += eachAmount;
+          }
+        }
+        this.addLog(`🎁 [${deckLabel}] ${player.name} получил по $${eachAmount} от каждого игрока (всего +$${totalCollected}) («${card.title}»)`, { type: 'gain', amount: totalCollected });
+        break;
+      }
+    }
+
+    this.activeCard = null;
+    if (this.phase === 'CARD_EVENT') {
+      this.phase = 'ACTION';
+    }
+  }
+
+  // --- JAIL & TRANSFERS ---
+  sendToJail(player) {
+    player.position = 10;
+    player.inJail = true;
+    player.jailTurns = 0;
+    this.doublesStreak = 0;
+    this.phase = 'ACTION';
+  }
+
+  payJailFine(playerId = null) {
+    const player = playerId ? this.players.find(p => p.id === playerId) : this.getCurrentPlayer();
+    if (!player.inJail || player.cash < 50) return false;
+
+    player.cash -= 50;
+    player.inJail = false;
+    player.jailTurns = 0;
+    this.addLog(`🔓 ${player.name} оплатил штраф $50 и освободился из тюрьмы.`, { type: 'loss', amount: 50 });
+    if (this.settings.freeParkingJackpot) {
+      this.jackpotPool += 50;
+    }
+    return true;
+  }
+
+  useJailCard(playerId = null) {
+    const player = playerId ? this.players.find(p => p.id === playerId) : this.getCurrentPlayer();
+    if (!player.inJail || player.jailCards <= 0) return false;
+
+    player.jailCards -= 1;
+    player.inJail = false;
+    player.jailTurns = 0;
+    this.addLog(`🎟️ ${player.name} использовал карточку освобождения из тюрьмы.`);
+    return true;
+  }
+
+  transferCash(fromPlayer, toPlayer, amount) {
+    if (fromPlayer.cash < amount) {
+      toPlayer.cash += fromPlayer.cash;
+      fromPlayer.cash = 0;
+      this.checkBankruptcy(fromPlayer, toPlayer);
+    } else {
+      fromPlayer.cash -= amount;
+      toPlayer.cash += amount;
+    }
+  }
+
+  deductCash(player, amount) {
+    if (player.cash < amount) {
+      player.cash = 0;
+      this.checkBankruptcy(player, null);
+    } else {
+      player.cash -= amount;
+    }
+  }
+
+  checkBankruptcy(player, creditor) {
+    // Calculate total net worth
+    let assetValue = player.cash;
+    for (const [tileId, prop] of Object.entries(this.properties)) {
+      if (prop.ownerId === player.id) {
+        const tile = BOARD_TILES[tileId];
+        assetValue += prop.isMortgaged ? 0 : tile.mortgage;
+        assetValue += (prop.houses || 0) * Math.round(tile.houseCost * 0.5);
+      }
+    }
+
+    if (assetValue <= 0) {
+      this.declareBankruptcy(player, creditor);
+    }
+  }
+
+  declareBankruptcy(player, creditor) {
+    player.isBankrupt = true;
+    this.addLog(`💥 ${player.name} ОБЪЯВИЛ СЕБЯ БАНКРОТОМ!`);
+
+    // Transfer all assets
+    for (const [tileId, prop] of Object.entries(this.properties)) {
+      if (prop.ownerId === player.id) {
+        prop.ownerId = creditor ? creditor.id : null;
+        prop.houses = 0;
+      }
+    }
+
+    this.checkGameWinner();
+  }
+
+  checkGameWinner() {
+    const active = this.players.filter(p => !p.isBankrupt && !p.hasLeft);
+    if (active.length === 1 && this.players.length > 1) {
+      this.winner = active[0];
+      this.status = 'FINISHED';
+      this.addLog(`🏆 ${this.winner.name} ПОБЕДИЛ В МОНОПОЛИИ!`);
+      return this.winner;
+    }
+    return null;
+  }
+
+  // --- TRADING SYSTEM ---
+  proposeTrade(fromPlayerId, toPlayerId, offer) {
+    // offer: { giveMoney: 100, receiveMoney: 50, giveTiles: [1, 3], receiveTiles: [6], giveJailCards: 0, receiveJailCards: 0 }
+    this.activeTrade = {
+      fromPlayerId,
+      toPlayerId,
+      offer
+    };
+    this.addLog(`🤝 Предложена сделка между игроками.`);
+    return this.activeTrade;
+  }
+
+  acceptTrade() {
+    if (!this.activeTrade) return false;
+    const { fromPlayerId, toPlayerId, offer } = this.activeTrade;
+    const p1 = this.players.find(p => p.id === fromPlayerId);
+    const p2 = this.players.find(p => p.id === toPlayerId);
+
+    // Validate cash
+    if (p1.cash < offer.giveMoney || p2.cash < offer.receiveMoney) {
+      return { success: false, reason: 'Недостаточно денег у одной из сторон' };
+    }
+
+    // Exchange cash
+    p1.cash = p1.cash - offer.giveMoney + offer.receiveMoney;
+    p2.cash = p2.cash - offer.receiveMoney + offer.giveMoney;
+
+    // Exchange tiles
+    offer.giveTiles.forEach(tileId => {
+      if (this.properties[tileId]) this.properties[tileId].ownerId = p2.id;
+    });
+    offer.receiveTiles.forEach(tileId => {
+      if (this.properties[tileId]) this.properties[tileId].ownerId = p1.id;
+    });
+
+    this.activeTrade = null;
+    this.addLog(`✅ Сделка успешно заключена!`);
+    return { success: true };
+  }
+
+  rejectTrade() {
+    this.activeTrade = null;
+    this.addLog(`❌ Сделка отклонена.`);
+  }
+
+  // --- TURN MANAGEMENT ---
+  endTurn() {
+    if (this.phase === 'ROLL' && !this.getCurrentPlayer().isBankrupt) {
+      return { success: false, reason: 'Сначала бросьте кубики' };
+    }
+
+    // If rolled doubles and not in jail, player can roll again!
+    if (this.lastRollDoubles && !this.getCurrentPlayer().inJail && !this.getCurrentPlayer().isBankrupt) {
+      this.phase = 'ROLL';
+      this.hasRolled = false;
+      this.addLog(`🎲 Выпал дубль! ${this.getCurrentPlayer().name} бросает ещё раз.`);
+      return { success: true, rollAgain: true };
+    }
+
+    // Next active player
+    let nextIdx = (this.currentTurn + 1) % this.players.length;
+    let attempts = 0;
+    while (this.players[nextIdx].isBankrupt && attempts < this.players.length) {
+      nextIdx = (nextIdx + 1) % this.players.length;
+      attempts++;
+    }
+
+    this.currentTurn = nextIdx;
+    this.phase = 'ROLL';
+    this.hasRolled = false;
+    this.lastRollDoubles = false;
+    this.doublesStreak = 0;
+
+    const nextPlayer = this.getCurrentPlayer();
+    this.addLog(`👉 Ход переходит к: ${nextPlayer.name}`);
+
+    return { success: true, currentPlayer: nextPlayer };
+  }
+
+  // --- BOT LOGIC ---
+  processBotTurn() {
+    const bot = this.getCurrentPlayer();
+    if (!bot || !bot.isBot || this.status !== 'PLAYING') return;
+    const diff = bot.botDifficulty || this.settings.botDifficulty || 'medium';
+
+    // 1. Jail handling based on difficulty
+    if (bot.inJail) {
+      if (bot.jailCards > 0) {
+        this.useJailCard(bot.id);
+      } else if (diff === 'easy') {
+        if (bot.jailTurns >= 2 && bot.cash > 300) {
+          this.payJailFine(bot.id);
+        }
+      } else if (diff === 'hard') {
+        const hasUnownedStreets = Object.entries(this.properties).some(([tId, p]) => !p.ownerId && BOARD_TILES[tId]?.type === 'street');
+        if (hasUnownedStreets && bot.cash >= 50) {
+          this.payJailFine(bot.id);
+        } else if (bot.cash > 400 && bot.jailTurns >= 2) {
+          this.payJailFine(bot.id);
+        }
+      } else {
+        if (bot.cash > 250) {
+          this.payJailFine(bot.id);
+        }
+      }
+    }
+
+    // 2. Roll
+    if (this.phase === 'ROLL') {
+      this.rollDice();
+    }
+
+    // 3. Buy choice based on difficulty
+    if (this.phase === 'BUY_CHOICE') {
+      const tile = BOARD_TILES[bot.position];
+      if (!tile) {
+        this.passProperty();
+      } else if (diff === 'easy') {
+        if (bot.cash >= tile.price + 350 && Math.random() < 0.65) {
+          this.buyProperty(bot.id);
+        } else {
+          this.passProperty();
+        }
+      } else if (diff === 'hard') {
+        if (bot.cash >= tile.price + 20) {
+          this.buyProperty(bot.id);
+        } else {
+          this.passProperty();
+        }
+      } else {
+        if (bot.cash >= tile.price + 100) {
+          this.buyProperty(bot.id);
+        } else {
+          this.passProperty();
+        }
+      }
+    }
+
+    // 4. Card event
+    if (this.phase === 'CARD_EVENT') {
+      this.applyActiveCard();
+    }
+
+    // 5. Try building houses based on difficulty
+    const minReserve = diff === 'hard' ? 40 : (diff === 'easy' ? 500 : 250);
+    if (bot.cash > minReserve) {
+      const ownedMonopolyTiles = Object.entries(this.properties)
+        .filter(([tileId, prop]) => prop.ownerId === bot.id && this.canBuildHouse(bot.id, parseInt(tileId)))
+        .map(([tileId]) => parseInt(tileId));
+
+      const maxBuildAttempts = diff === 'hard' ? 4 : (diff === 'easy' ? 1 : 2);
+      let buildsDone = 0;
+      for (const tileId of ownedMonopolyTiles) {
+        if (buildsDone >= maxBuildAttempts) break;
+        const tile = BOARD_TILES[tileId];
+        const cost = Math.round((tile.houseCost || 100) * (this.settings.buildingCostMultiplier || 1.0));
+        if (bot.cash >= cost + minReserve) {
+          const res = this.buildHouse(bot.id, tileId);
+          if (res && res.success) {
+            buildsDone++;
+          }
+        }
+      }
+    }
+
+    // 6. End turn
+    if (this.phase === 'ACTION') {
+      setTimeout(() => this.endTurn(), 700);
+    }
+  }
+
+  // --- STATE SNAPSHOT ---
+  getState() {
+    return {
+      status: this.status,
+      players: this.players,
+      properties: this.properties,
+      currentTurn: this.currentTurn,
+      dice: this.dice,
+      lastRollDoubles: this.lastRollDoubles,
+      hasRolled: this.hasRolled,
+      phase: this.phase,
+      jackpotPool: this.jackpotPool,
+      settings: this.settings,
+      customTiles: this.customTiles || {},
+      logs: this.logs,
+      tradeHistory: this.tradeHistory || [],
+      activeCard: this.activeCard,
+      activeTrade: this.activeTrade,
+      winner: this.winner
+    };
+  }
+
+  loadState(state) {
+    if (!state) return;
+    this.status = state.status;
+    this.players = state.players;
+    this.properties = state.properties;
+    this.currentTurn = state.currentTurn;
+    this.dice = state.dice;
+    this.lastRollDoubles = state.lastRollDoubles;
+    this.hasRolled = state.hasRolled;
+    this.phase = state.phase;
+    this.jackpotPool = state.jackpotPool;
+    this.settings = state.settings;
+    this.customTiles = state.customTiles || {};
+    this.logs = state.logs;
+    this.tradeHistory = state.tradeHistory || [];
+    this.activeCard = state.activeCard;
+    this.activeTrade = state.activeTrade;
+    this.winner = state.winner;
+  }
+}
+
+export const engine = new MonopolyEngine();

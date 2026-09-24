@@ -1,1 +1,171 @@
-const a1_0x68b2dd=a1_0x4cf1;(function(_0x42c93f,_0xc31408){const _0x2cb323=a1_0x4cf1,_0x100a41=_0x42c93f();while(!![]){try{const _0x55a16d=parseInt(_0x2cb323(0xb4))/0x1*(-parseInt(_0x2cb323(0xa4))/0x2)+parseInt(_0x2cb323(0xd5))/0x3+-parseInt(_0x2cb323(0xbd))/0x4+-parseInt(_0x2cb323(0xce))/0x5+-parseInt(_0x2cb323(0xab))/0x6+parseInt(_0x2cb323(0xd6))/0x7+parseInt(_0x2cb323(0xba))/0x8*(parseInt(_0x2cb323(0xc6))/0x9);if(_0x55a16d===_0xc31408)break;else _0x100a41['push'](_0x100a41['shift']());}catch(_0x1516dd){_0x100a41['push'](_0x100a41['shift']());}}}(a1_0x5203,0x8c855));function a1_0x4cf1(_0x223111,_0x38d0f8){_0x223111=_0x223111-0xa0;const _0x5203f5=a1_0x5203();let _0x4cf119=_0x5203f5[_0x223111];if(a1_0x4cf1['cpztih']===undefined){var _0x27be4b=function(_0x134370){const _0x3faf33='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x22c4ec='',_0x128957='';for(let _0x1bab26=0x0,_0x233474,_0xb6e0a3,_0xee6fe3=0x0;_0xb6e0a3=_0x134370['charAt'](_0xee6fe3++);~_0xb6e0a3&&(_0x233474=_0x1bab26%0x4?_0x233474*0x40+_0xb6e0a3:_0xb6e0a3,_0x1bab26++%0x4)?_0x22c4ec+=String['fromCharCode'](0xff&_0x233474>>(-0x2*_0x1bab26&0x6)):0x0){_0xb6e0a3=_0x3faf33['indexOf'](_0xb6e0a3);}for(let _0x500d77=0x0,_0x28d490=_0x22c4ec['length'];_0x500d77<_0x28d490;_0x500d77++){_0x128957+='%'+('00'+_0x22c4ec['charCodeAt'](_0x500d77)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x128957);};a1_0x4cf1['IvLTxM']=_0x27be4b,a1_0x4cf1['jmbJrw']={},a1_0x4cf1['cpztih']=!![];}const _0x4c8298=_0x5203f5[0x0];a1_0x4cf1['aAuMRW']!==_0x4c8298&&(a1_0x4cf1['jmbJrw']={},a1_0x4cf1['aAuMRW']=_0x4c8298);const _0x490087=a1_0x4cf1['jmbJrw'][_0x223111];return _0x490087===undefined?(_0x4cf119=a1_0x4cf1['IvLTxM'](_0x4cf119),a1_0x4cf1['jmbJrw'][_0x223111]=_0x4cf119):_0x4cf119=_0x490087,_0x4cf119;}const STORAGE_KEYS={'master':a1_0x68b2dd(0xb3),'muted':a1_0x68b2dd(0xa6),'dice':a1_0x68b2dd(0xcc),'buy':a1_0x68b2dd(0xb0),'win':a1_0x68b2dd(0xcf),'ui':a1_0x68b2dd(0xe3),'card':a1_0x68b2dd(0xdc)};class SoundEngine{constructor(){const _0x5dd75e=a1_0x68b2dd;this['ctx']=null,this[_0x5dd75e(0xaf)]=parseFloat(localStorage[_0x5dd75e(0xa9)](STORAGE_KEYS[_0x5dd75e(0xd1)])??_0x5dd75e(0xc1)),this[_0x5dd75e(0xac)]=localStorage[_0x5dd75e(0xa9)](STORAGE_KEYS['muted'])==='1',this[_0x5dd75e(0xc0)]={'dice':parseFloat(localStorage[_0x5dd75e(0xa9)](STORAGE_KEYS[_0x5dd75e(0xe6)])??_0x5dd75e(0xc5)),'buy':parseFloat(localStorage['getItem'](STORAGE_KEYS[_0x5dd75e(0xca)])??_0x5dd75e(0xe4)),'win':parseFloat(localStorage['getItem'](STORAGE_KEYS['win'])??'0.75'),'ui':parseFloat(localStorage[_0x5dd75e(0xa9)](STORAGE_KEYS['ui'])??'0.5'),'card':parseFloat(localStorage[_0x5dd75e(0xa9)](STORAGE_KEYS[_0x5dd75e(0xe2)])??_0x5dd75e(0xc8))},this[_0x5dd75e(0xb2)]();}[a1_0x68b2dd(0xb2)](){const _0x425d4a=a1_0x68b2dd;try{const _0x128957=window['AudioContext']||window[_0x425d4a(0xe5)];if(_0x128957)this['ctx']=new _0x128957();}catch(_0x1bab26){console[_0x425d4a(0xbc)](_0x425d4a(0xb5),_0x1bab26);}}[a1_0x68b2dd(0xda)](){const _0x2d09dd=a1_0x68b2dd;if(this[_0x2d09dd(0xdf)]&&this[_0x2d09dd(0xdf)]['state']===_0x2d09dd(0xd8))this[_0x2d09dd(0xdf)][_0x2d09dd(0xb8)]();}['setVolume'](_0x233474){const _0x7a078f=a1_0x68b2dd;this[_0x7a078f(0xaf)]=Math[_0x7a078f(0xa7)](0x0,Math[_0x7a078f(0xdd)](0x1,parseFloat(_0x233474))),localStorage[_0x7a078f(0xc4)](STORAGE_KEYS[_0x7a078f(0xd1)],this[_0x7a078f(0xaf)]);}[a1_0x68b2dd(0xb7)](_0xb6e0a3){const _0x439a0c=a1_0x68b2dd;this[_0x439a0c(0xac)]=!!_0xb6e0a3,localStorage[_0x439a0c(0xc4)](STORAGE_KEYS[_0x439a0c(0xd9)],this[_0x439a0c(0xac)]?'1':'0');}[a1_0x68b2dd(0xc7)](){const _0x3fbc70=a1_0x68b2dd;return this['setMuted'](!this[_0x3fbc70(0xac)]),this[_0x3fbc70(0xac)];}['setCatVolume'](_0xee6fe3,_0x500d77){const _0x445366=a1_0x68b2dd;if(!(_0xee6fe3 in this[_0x445366(0xc0)]))return;this[_0x445366(0xc0)][_0xee6fe3]=Math[_0x445366(0xa7)](0x0,Math['min'](0x1,parseFloat(_0x500d77))),localStorage[_0x445366(0xc4)](STORAGE_KEYS[_0xee6fe3],this[_0x445366(0xc0)][_0xee6fe3]);}['setSfxMuted'](_0x28d490){}['setUiMuted'](_0x5256c1){const _0x22c9f0=a1_0x68b2dd;if(_0x5256c1)this[_0x22c9f0(0xe0)]('ui',0x0);}[a1_0x68b2dd(0xc9)](_0x3743ad='buy'){const _0xcc4d7a=a1_0x68b2dd;if(this['isMuted'])return 0x0;const _0x322272=this[_0xcc4d7a(0xc0)][_0x3743ad]??0x1;return this[_0xcc4d7a(0xaf)]*_0x322272;}[a1_0x68b2dd(0xd7)](_0x8611e1,_0x4db50d=a1_0x68b2dd(0xd3),_0x5b8e0c=0.1,_0x4b38bb=0x0,_0x5d66f7=a1_0x68b2dd(0xca)){const _0x23227f=a1_0x68b2dd,_0xe2d366=this[_0x23227f(0xc9)](_0x5d66f7);if(!this[_0x23227f(0xdf)]||_0xe2d366<=0x0)return;this[_0x23227f(0xda)]();const _0x9c82b6=this[_0x23227f(0xdf)][_0x23227f(0xe7)](),_0x199ad3=this[_0x23227f(0xdf)][_0x23227f(0xa5)]();_0x9c82b6[_0x23227f(0xd0)]=_0x4db50d,_0x9c82b6[_0x23227f(0xd2)]['setValueAtTime'](_0x8611e1,this['ctx'][_0x23227f(0xa2)]+_0x4b38bb);const _0x3938ad=this[_0x23227f(0xdf)]['currentTime']+_0x4b38bb,_0x3762d8=_0xe2d366*0.25;_0x199ad3[_0x23227f(0xbe)][_0x23227f(0xde)](0.001,_0x3938ad),_0x199ad3[_0x23227f(0xbe)][_0x23227f(0xa3)](_0x3762d8,_0x3938ad+0.02),_0x199ad3[_0x23227f(0xbe)][_0x23227f(0xa3)](0.0001,_0x3938ad+_0x5b8e0c),_0x9c82b6['connect'](_0x199ad3),_0x199ad3[_0x23227f(0xae)](this[_0x23227f(0xdf)]['destination']);try{_0x9c82b6[_0x23227f(0xe1)](_0x3938ad),_0x9c82b6[_0x23227f(0xd4)](_0x3938ad+_0x5b8e0c+0.05);}catch(_0x3d6562){}}[a1_0x68b2dd(0xa1)](){const _0x3b217a=a1_0x68b2dd;this[_0x3b217a(0xd7)](0x320,_0x3b217a(0xd3),0.04,0x0,'ui');}[a1_0x68b2dd(0xa0)](){const _0x2643a0=a1_0x68b2dd;this[_0x2643a0(0xd7)](0x1e0,_0x2643a0(0xc2),0.06,0x0,'buy');}[a1_0x68b2dd(0xdb)](){const _0x54112f=a1_0x68b2dd;if(this[_0x54112f(0xc9)]('dice')<=0x0||!this['ctx'])return;for(let _0x35e2f2=0x0;_0x35e2f2<0x6;_0x35e2f2++){const _0x5954e6=0x12c+Math[_0x54112f(0xb9)]()*0xc8;this[_0x54112f(0xd7)](_0x5954e6,'square',0.03,_0x35e2f2*0.05,_0x54112f(0xe6));}}[a1_0x68b2dd(0xa8)](){const _0x48daef=a1_0x68b2dd;this[_0x48daef(0xdb)]();}['playCash'](){const _0xc60cd8=a1_0x68b2dd;this[_0xc60cd8(0xd7)](987.77,_0xc60cd8(0xd3),0.12,0x0,_0xc60cd8(0xca)),this['playTone'](1318.51,'sine',0.25,0.08,'buy');}['playMoney'](){const _0x33e3bf=a1_0x68b2dd;this[_0x33e3bf(0xbf)]();}[a1_0x68b2dd(0xbb)](){const _0x10e3d6=a1_0x68b2dd;this[_0x10e3d6(0xd7)](523.25,_0x10e3d6(0xd3),0.1,0x0,_0x10e3d6(0xca)),this[_0x10e3d6(0xd7)](659.25,_0x10e3d6(0xd3),0.1,0.08,_0x10e3d6(0xca)),this[_0x10e3d6(0xd7)](783.99,_0x10e3d6(0xd3),0.2,0.16,'buy');}[a1_0x68b2dd(0xad)](){const _0x43ee69=a1_0x68b2dd;this['playTone'](0x1b8,_0x43ee69(0xc2),0.08,0x0,'buy'),this['playTone'](0x370,'sine',0.18,0.06,_0x43ee69(0xca));}[a1_0x68b2dd(0xb6)](){const _0x510785=a1_0x68b2dd;this[_0x510785(0xd7)](0x258,_0x510785(0xc2),0.08,0x0,_0x510785(0xe2)),this[_0x510785(0xd7)](0x384,'sine',0.12,0.05,'card');}['playJail'](){const _0x368c50=a1_0x68b2dd;this[_0x368c50(0xd7)](0xa0,'sawtooth',0.35,0x0,_0x368c50(0xcb)),this[_0x368c50(0xd7)](0x5a,_0x368c50(0xaa),0.45,0.05,'win');}[a1_0x68b2dd(0xcd)](){const _0x1b964c=a1_0x68b2dd;this[_0x1b964c(0xd7)](0x190,_0x1b964c(0xaa),0.2,0x0,_0x1b964c(0xcb)),this[_0x1b964c(0xd7)](0x168,_0x1b964c(0xaa),0.2,0.15,_0x1b964c(0xcb)),this['playTone'](0x12c,_0x1b964c(0xaa),0.4,0.3,_0x1b964c(0xcb));}[a1_0x68b2dd(0xc3)](){const _0x43e678=a1_0x68b2dd,_0x105a75=[523.25,659.25,783.99,1046.5];_0x105a75[_0x43e678(0xb1)]((_0x501686,_0x17398a)=>{const _0x2a8dff=_0x43e678;this[_0x2a8dff(0xd7)](_0x501686,_0x2a8dff(0xd3),0.25,_0x17398a*0.12,_0x2a8dff(0xcb));});}}export const sound=new SoundEngine();function a1_0x5203(){const _0x461313=['CMfUzg9T','oenvv2vkCG','CgXHEuj1Eq','D2fYBG','ndq2odG0nhPLs21Hra','z2fPBG','CgXHEunHC2G','y2f0vM9S','mc41','DhjPyw5NBgu','CgXHEvDPBG','C2v0sxrLBq','mc44','mJKYntG3mZbuwMDYyMe','Dg9Nz2XLtxv0zwq','mc42nq','z2v0rwzMzwn0AxzLvM9SDw1L','yNv5','D2LU','Bw9UB3bVBhLFDM9Sx2rPy2u','CgXHEujHBMTYDxb0','ntyXoduWnvvjEM93Bq','Bw9UB3bVBhLFDM9Sx3DPBG','DhLWzq','BwfZDgvY','zNjLCxvLBMn5','C2LUzq','C3rVCa','mti5nJq2oe9msM1IuG','mZa1nJu0m3bKAePjqG','CgXHEvrVBMu','C3vZCgvUzgvK','Bxv0zwq','zw5ZDxjLqxvKAw8','CgXHEurPy2vsB2XS','Bw9UB3bVBhLFDM9Sx2nHCMq','BwLU','C2v0vMfSDwvbDfrPBwu','y3r4','C2v0q2f0vM9SDw1L','C3rHCNq','y2fYza','Bw9UB3bVBhLFDM9Sx3vP','mc44nq','D2vIA2L0qxvKAw9dB250zxH0','zgLJzq','y3jLyxrLt3nJAwXSyxrVCG','CgXHEvrVA2vUu3rLCa','CgXHEunSAwnR','y3vYCMvUDfrPBwu','zxHWB25LBNrPywXsyw1Wvg9wywX1zuf0vgLTzq','odK0offdu2PfrW','y3jLyxrLr2fPBG','Bw9UB3bVBhLFBxv0zwq','Bwf4','CgXHEurPy2u','z2v0sxrLBq','C2f3Dg9VDgG','ntm1mda5mMDmrNPXAW','AxnnDxrLza','CgXHEuj1AwXK','y29UBMvJDa','DM9SDw1L','Bw9UB3bVBhLFDM9Sx2j1Eq','zM9YrwfJAa','Aw5PDef1zgLVq29UDgv4Da','Bw9UB3bVBhLFDM9SDw1L','otjsBhv1zNm','v2vIief1zgLViefqssbUB3qGC3vWCg9YDgvKoG','CgXHEunHCMq','C2v0txv0zwq','CMvZDw1L'];a1_0x5203=function(){return _0x461313;};return a1_0x5203();}
+/**
+ * Web Audio API Sound Engine with Granular Volume & Category Controls
+ * Supports per-category volume sliders (master, dice, buy, win, ui, card)
+ */
+
+const STORAGE_KEYS = {
+  master:  'monopoly_volume',
+  muted:   'monopoly_muted',
+  dice:    'monopoly_vol_dice',
+  buy:     'monopoly_vol_buy',
+  win:     'monopoly_vol_win',
+  ui:      'monopoly_vol_ui',
+  card:    'monopoly_vol_card',
+};
+
+class SoundEngine {
+  constructor() {
+    this.ctx = null;
+
+    // volumes: 0..1
+    this.volume     = parseFloat(localStorage.getItem(STORAGE_KEYS.master) ?? '0.5');
+    this.isMuted    = localStorage.getItem(STORAGE_KEYS.muted) === '1';
+    this.catVol     = {
+      dice: parseFloat(localStorage.getItem(STORAGE_KEYS.dice) ?? '0.8'),
+      buy:  parseFloat(localStorage.getItem(STORAGE_KEYS.buy)  ?? '0.85'),
+      win:  parseFloat(localStorage.getItem(STORAGE_KEYS.win)  ?? '0.75'),
+      ui:   parseFloat(localStorage.getItem(STORAGE_KEYS.ui)   ?? '0.5'),
+      card: parseFloat(localStorage.getItem(STORAGE_KEYS.card) ?? '0.65'),
+    };
+
+    this.initAudioContext();
+  }
+
+  initAudioContext() {
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtx) this.ctx = new AudioCtx();
+    } catch (e) {
+      console.warn('Web Audio API not supported:', e);
+    }
+  }
+
+  ensureAudio() {
+    if (this.ctx && this.ctx.state === 'suspended') this.ctx.resume();
+  }
+
+  // ── Setters ──────────────────────────────────────────────────────────────
+
+  setVolume(val) {
+    this.volume = Math.max(0, Math.min(1, parseFloat(val)));
+    localStorage.setItem(STORAGE_KEYS.master, this.volume);
+  }
+
+  setMuted(muted) {
+    this.isMuted = !!muted;
+    localStorage.setItem(STORAGE_KEYS.muted, this.isMuted ? '1' : '0');
+  }
+
+  toggleMuted() {
+    this.setMuted(!this.isMuted);
+    return this.isMuted;
+  }
+
+  setCatVolume(cat, val) {
+    if (!(cat in this.catVol)) return;
+    this.catVol[cat] = Math.max(0, Math.min(1, parseFloat(val)));
+    localStorage.setItem(STORAGE_KEYS[cat], this.catVol[cat]);
+  }
+
+  // Legacy compat
+  setSfxMuted(muted)  { /* no-op, use catVol */ }
+  setUiMuted(muted)   { if (muted) this.setCatVolume('ui', 0); }
+
+  // ── Volume resolver ───────────────────────────────────────────────────────
+
+  getEffectiveVolume(cat = 'buy') {
+    if (this.isMuted) return 0;
+    const catMult = this.catVol[cat] ?? 1;
+    return this.volume * catMult;
+  }
+
+  // ── Core tone player ─────────────────────────────────────────────────────
+
+  playTone(freq, type = 'sine', duration = 0.1, delay = 0, cat = 'buy') {
+    const effVol = this.getEffectiveVolume(cat);
+    if (!this.ctx || effVol <= 0) return;
+    this.ensureAudio();
+
+    const osc  = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, this.ctx.currentTime + delay);
+
+    const now = this.ctx.currentTime + delay;
+    const vol = effVol * 0.25;
+
+    gain.gain.setValueAtTime(0.001, now);
+    gain.gain.exponentialRampToValueAtTime(vol, now + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+
+    try {
+      osc.start(now);
+      osc.stop(now + duration + 0.05);
+    } catch (e) {}
+  }
+
+  // ── Named sounds ─────────────────────────────────────────────────────────
+
+  playClick() {
+    this.playTone(800, 'sine', 0.04, 0, 'ui');
+  }
+
+  playTokenStep() {
+    this.playTone(480, 'triangle', 0.06, 0, 'buy');
+  }
+
+  playDiceRoll() {
+    if (this.getEffectiveVolume('dice') <= 0 || !this.ctx) return;
+    for (let i = 0; i < 6; i++) {
+      const freq = 300 + Math.random() * 200;
+      this.playTone(freq, 'square', 0.03, i * 0.05, 'dice');
+    }
+  }
+  playDice() { this.playDiceRoll(); }
+
+  playCash() {
+    this.playTone(987.77,  'sine', 0.12, 0,    'buy');
+    this.playTone(1318.51, 'sine', 0.25, 0.08, 'buy');
+  }
+  playMoney() { this.playCash(); }
+
+  playBuy() {
+    this.playTone(523.25, 'sine', 0.1,  0,    'buy');
+    this.playTone(659.25, 'sine', 0.1,  0.08, 'buy');
+    this.playTone(783.99, 'sine', 0.2,  0.16, 'buy');
+  }
+
+  playBuild() {
+    this.playTone(440, 'triangle', 0.08, 0,    'buy');
+    this.playTone(880, 'sine',     0.18, 0.06, 'buy');
+  }
+
+  playCard() {
+    this.playTone(600, 'triangle', 0.08, 0,    'card');
+    this.playTone(900, 'sine',     0.12, 0.05, 'card');
+  }
+
+  playJail() {
+    this.playTone(160, 'sawtooth', 0.35, 0,    'win');
+    this.playTone(90,  'sawtooth', 0.45, 0.05, 'win');
+  }
+
+  playBankrupt() {
+    this.playTone(400, 'sawtooth', 0.2, 0,    'win');
+    this.playTone(360, 'sawtooth', 0.2, 0.15, 'win');
+    this.playTone(300, 'sawtooth', 0.4, 0.3,  'win');
+  }
+
+  playWin() {
+    const notes = [523.25, 659.25, 783.99, 1046.50];
+    notes.forEach((freq, idx) => {
+      this.playTone(freq, 'sine', 0.25, idx * 0.12, 'win');
+    });
+  }
+}
+
+export const sound = new SoundEngine();

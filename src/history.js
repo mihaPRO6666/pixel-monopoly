@@ -1,1 +1,294 @@
-const a8_0x3190e8=a8_0x3411;function a8_0xfc95(){const _0xb639e7=['Bwf0y2HFmtCYnJG2mdaWmdaWmq','m1LpENjlDW','odqXnJu5nLjIAKvRsG','Bwf0y2HLCW','Axncyw5RCNvWDa','iZi1nJnLyG','Bg9JyxrPB24','CgfKu3rHCNq','mte1nta4mtbYqwvzA0S','mZnpDNPHDue','zgvMzwf0CW','AgL6DwHHCMeU','y3vZDg9T','Dw5KzwzPBMvK','0l7qUTgc','AxnnzvDPBM5LCG','revgrufu','tu9otY03nZC','z2v0sg91CNm','Bg9JywXOB3n0','rMfPBgvKihrVihnHDMuGBwf0y2GGAgLZDg9YEtO','BwLOyxbYBZy2nJy','v0Lo','C2v0sxrLBq','C2XPy2u','CMvJB3jKtwf0y2G','B3DUzxjjza','zMLSDgvY','DMfSDwvZ','z2v0twf0y2HLCW','0j7qVDc70ldqUDc9icG','mtuXndK3ofjNvu9tra','ndm0mduZnMXsrMr3zG','Dg9Rzw4','D2LUCW','mtuYmJK5mffxwu1AAq','zM9YrwfJAa','y2fZAa','rMfPBgvKihrVigXVywqGBwf0y2GGAgLZDg9YEtO','ChjVCenVDw50','y3vZDg9Tvg9Rzw4','Ag9ZDg5HBwu','ChjVCgvYDgLLCW','Bwf0y2HtDgfYDfrPBwu','CMfUzg9T','CgXHEwvYCW','0j7qVDc70ldqUDc9','mteG0lZqUnc9ide4ingb0lxqUG','Bwf0y2HFmtCYnJG2mdaWmdaWmG','D2fYBG','Bg9Hze1HDgnOzxm','Ag91C2vZ','mJaG0yhqTDc90yiSidiXoJqW','0ytqTDcY','0yhqTDc9','0lZqSnc5','qKfos1jvufq','C3rYAw5NAwz5','zMLUza','C3vIC3rYAw5N','C3rHCNrnyxrJAfrPBwvY','mJC3oxLer29XAq','z2v0rgvMyxvSDe93BMvYtwf0y2HLCW','0lJrJTc9','inc80lJqVsa','CM91BMq','mJyWnJe1qwPzuu15','Ag91C2vZq291BNq','BMv0v29YDgG','Aw5JBhvKzxm','BM93','Dg9tDhjPBMC','0ltqTDc6','mJaG0yhqTDc90yiSidiZoJe1','0jVqVTc60ldqU9gm0l3qSngp','BwfW','z2v0sxrLBq','zMXVB3i','Bg9NCW','y2XLyxjiAxn0B3j5','otKZmgfxwNvvyq','zgLZy29Yzf8XndCYnJCZmti2odu5otm1nZy1','BMfTzq','BgvUz3rO','Bwf4','CgL4zwWTBw9UB3bVBhK','0khqQ9cDincO0jVqRTcL0jG','y29SB3i','ndrIChj0txK','C2f2zu1HDgnOzxm','mti3lJaUmc4X','0ldqV9ga','mtqG0lZqUnc9idmYingb0lxqUG','0y/qVDcY','AgfZtgvMDa','z2v0twLUDxrLCW','ow53t1bYzW','zgLZy29Yzf9WBgf5zxjFy2f0','ingb0lxqUG'];a8_0xfc95=function(){return _0xb639e7;};return a8_0xfc95();}(function(_0xb22242,_0x22f9df){const _0x2e0b31=a8_0x3411,_0x3b24d7=_0xb22242();while(!![]){try{const _0x53c563=parseInt(_0x2e0b31(0x177))/0x1+parseInt(_0x2e0b31(0x17b))/0x2*(parseInt(_0x2e0b31(0x159))/0x3)+-parseInt(_0x2e0b31(0x14d))/0x4*(parseInt(_0x2e0b31(0x137))/0x5)+parseInt(_0x2e0b31(0x145))/0x6*(parseInt(_0x2e0b31(0x132))/0x7)+parseInt(_0x2e0b31(0x178))/0x8*(-parseInt(_0x2e0b31(0x155))/0x9)+parseInt(_0x2e0b31(0x160))/0xa+-parseInt(_0x2e0b31(0x161))/0xb*(parseInt(_0x2e0b31(0x15a))/0xc);if(_0x53c563===_0x22f9df)break;else _0x3b24d7['push'](_0x3b24d7['shift']());}catch(_0x3ad050){_0x3b24d7['push'](_0x3b24d7['shift']());}}}(a8_0xfc95,0xd40a8));import{getTokenEmoji,renderTokenHTML}from'./profile.js';const STORAGE_KEY='monopoly_match_history',MAX_HISTORY=0x28;export class MatchHistoryManager{constructor(){const _0x2a0266=a8_0x3411;this[_0x2a0266(0x15b)]=this[_0x2a0266(0x18a)](),this[_0x2a0266(0x183)]=null,this['matchStartTurn']=0x0;}[a8_0x3190e8(0x194)](_0x2345ef=0x0){const _0x4f71c2=a8_0x3190e8;this['matchStartTime']=Date[_0x4f71c2(0x13b)](),this['matchStartTurn']=_0x2345ef;}[a8_0x3190e8(0x133)](){const _0x150bea=a8_0x3190e8,_0x163e81='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABmUlEQVR4AUySS3LjMAxEG9rFc724rJzQcsVzvImXmPcgyRUWIHwaaIKklrgq2T5frVYqih88TUoHRfK4UofGAF1Kr5P170dVde7XH6LM6sIYHXpi6/dHhZzw0uPVTNCS0eMkG0TgAAAABJRU5ErkJggg==';return[{'id':_0x150bea(0x158),'timestamp':Date[_0x150bea(0x13b)]()-0x36ee80*0x2,'dateStr':_0x150bea(0x13e),'mode':_0x150bea(0x186),'roomCode':_0x150bea(0x169),'isLocal':![],'durationStr':_0x150bea(0x151),'turnsCount':0x1c,'winner':{'id':'discord_1472673126859935765','name':_0x150bea(0x163),'token':_0x150bea(0x164),'customToken':_0x163e81,'color':'#2563eb'},'isMeWinner':!![],'myResult':_0x150bea(0x16e),'coinsEarned':0x32,'myCash':0x9c4,'myNetWorth':0x9c4,'myPropCount':0x6,'myHousesCount':0x4,'playersCount':0x2,'players':[{'id':_0x150bea(0x146),'name':_0x150bea(0x163),'token':_0x150bea(0x164),'customToken':_0x163e81,'color':_0x150bea(0x15d),'cash':0x9c4,'netWorth':0x9c4,'propCount':0x6,'housesCount':0x4,'isBankrupt':![],'hasLeft':![],'isWinner':!![],'isMe':!![]},{'id':_0x150bea(0x156),'name':_0x150bea(0x14b),'token':'🐱','customToken':null,'color':'#3b82f6','cash':0x0,'netWorth':0x0,'propCount':0x1,'housesCount':0x0,'isBankrupt':!![],'hasLeft':![],'isWinner':![],'isMe':![]}]},{'id':_0x150bea(0x188),'timestamp':Date['now']()-0x36ee80*0x5,'dateStr':_0x150bea(0x18c),'mode':_0x150bea(0x186),'roomCode':'PIXEL-42','isLocal':![],'durationStr':_0x150bea(0x187),'turnsCount':0x16,'winner':{'id':_0x150bea(0x146),'name':_0x150bea(0x163),'token':'custom','customToken':_0x163e81,'color':'#2563eb'},'isMeWinner':!![],'myResult':'WIN','coinsEarned':0x32,'myCash':0x898,'myNetWorth':0x9c4,'myPropCount':0x5,'myHousesCount':0x2,'playersCount':0x2,'players':[{'id':'discord_1472673126859935765','name':_0x150bea(0x163),'token':_0x150bea(0x164),'customToken':_0x163e81,'color':_0x150bea(0x15d),'cash':0x898,'netWorth':0x9c4,'propCount':0x5,'housesCount':0x2,'isBankrupt':![],'hasLeft':![],'isWinner':!![],'isMe':!![]},{'id':_0x150bea(0x156),'name':_0x150bea(0x14b),'token':'🐱','customToken':null,'color':'#3b82f6','cash':0x0,'netWorth':0x0,'propCount':0x2,'housesCount':0x0,'isBankrupt':!![],'hasLeft':![],'isWinner':![],'isMe':![]}]}];}['loadMatches'](){const _0x43f8f0=a8_0x3190e8;try{if(typeof localStorage!=='undefined'){const _0x5b5f93=localStorage[_0x43f8f0(0x141)](STORAGE_KEY);if(_0x5b5f93){const _0x29ea3b=JSON['parse'](_0x5b5f93);if(Array['isArray'](_0x29ea3b)&&_0x29ea3b['length']>0x0)return _0x29ea3b;}}}catch(_0x2f9ea6){console[_0x43f8f0(0x189)](_0x43f8f0(0x17e),_0x2f9ea6);}const _0x2ddf7d=typeof window!==_0x43f8f0(0x165)&&(window[_0x43f8f0(0x15e)][_0x43f8f0(0x181)]['includes'](_0x43f8f0(0x16d))||window[_0x43f8f0(0x15e)]['hostname'][_0x43f8f0(0x13a)](_0x43f8f0(0x14a))||window[_0x43f8f0(0x15e)][_0x43f8f0(0x181)]===_0x43f8f0(0x16b)||window[_0x43f8f0(0x15e)]['hostname']===_0x43f8f0(0x14f));if(_0x2ddf7d){const _0x1ca0cd=this[_0x43f8f0(0x133)]();try{typeof localStorage!==_0x43f8f0(0x165)&&localStorage[_0x43f8f0(0x16f)](STORAGE_KEY,JSON[_0x43f8f0(0x191)](_0x1ca0cd));}catch(_0x578a92){}return _0x1ca0cd;}return[];}[a8_0x3190e8(0x14e)](){const _0x409030=a8_0x3190e8;try{typeof localStorage!==_0x409030(0x165)&&localStorage['setItem'](STORAGE_KEY,JSON[_0x409030(0x191)](this[_0x409030(0x15b)]));}catch(_0x1e6bc9){console['warn'](_0x409030(0x16c),_0x1e6bc9);}}[a8_0x3190e8(0x171)]({state:_0x51266c,myPlayerId:_0x72747c,isLocalMode:_0x4cd6ab,roomCode:_0x357b61}){const _0x3c66a8=a8_0x3190e8;if(!_0x51266c||!_0x51266c['winner'])return null;const _0x47e5cc=Date[_0x3c66a8(0x13b)](),_0x2b70f8=this[_0x3c66a8(0x183)]||_0x47e5cc-0xea60,_0x228f4c=Math[_0x3c66a8(0x149)](0x1,Math['round']((_0x47e5cc-_0x2b70f8)/0x3e8)),_0x285753=Math[_0x3c66a8(0x142)](_0x228f4c/0x3c),_0x54adae=_0x228f4c%0x3c,_0x99257=_0x285753>0x0?_0x285753+_0x3c66a8(0x135)+_0x54adae+_0x3c66a8(0x157):_0x54adae+_0x3c66a8(0x157),_0x149c51=_0x51266c['winner'],_0x4af51a=String(_0x149c51['id'])===String(_0x72747c),_0x238099=_0x51266c['players'][_0x3c66a8(0x192)](_0x550ed3=>String(_0x550ed3['id'])===String(_0x72747c))||{},_0x22ccc0={};_0x51266c[_0x3c66a8(0x185)][_0x3c66a8(0x17c)](_0x2427e4=>{_0x22ccc0[_0x2427e4['id']]={'propCount':0x0,'housesCount':0x0};});_0x51266c[_0x3c66a8(0x182)]&&Object[_0x3c66a8(0x174)](_0x51266c[_0x3c66a8(0x182)])['forEach'](_0x3e54ba=>{const _0x3b46fe=_0x3c66a8;_0x3e54ba[_0x3b46fe(0x172)]&&_0x22ccc0[_0x3e54ba[_0x3b46fe(0x172)]]&&(_0x22ccc0[_0x3e54ba['ownerId']][_0x3b46fe(0x17f)]+=0x1,_0x22ccc0[_0x3e54ba[_0x3b46fe(0x172)]][_0x3b46fe(0x138)]+=_0x3e54ba[_0x3b46fe(0x18b)]||0x0);});const _0x526400=_0x51266c[_0x3c66a8(0x185)][_0x3c66a8(0x140)](_0x154c17=>{const _0x518dda=_0x3c66a8,_0x59c148=_0x22ccc0[_0x154c17['id']]||{'propCount':0x0,'housesCount':0x0},_0x216a98=String(_0x154c17['id'])===String(_0x149c51['id']),_0x1eb517=String(_0x154c17['id'])===String(_0x72747c);return{'id':_0x154c17['id'],'name':_0x154c17[_0x518dda(0x147)],'token':_0x154c17[_0x518dda(0x179)],'customToken':_0x154c17[_0x518dda(0x180)]||null,'color':_0x154c17[_0x518dda(0x14c)]||'#2563eb','cash':_0x154c17[_0x518dda(0x17d)]||0x0,'netWorth':_0x154c17[_0x518dda(0x139)]||_0x154c17['cash']||0x0,'propCount':_0x59c148[_0x518dda(0x17f)],'housesCount':_0x59c148['housesCount'],'isBankrupt':Boolean(_0x154c17[_0x518dda(0x15c)]),'hasLeft':Boolean(_0x154c17[_0x518dda(0x153)]),'isWinner':_0x216a98,'isMe':_0x1eb517};}),_0x26c532=new Date(),_0x4f939a=[_0x3c66a8(0x152),_0x3c66a8(0x18d),'мар',_0x3c66a8(0x150),_0x3c66a8(0x18f),_0x3c66a8(0x134),'июл','авг',_0x3c66a8(0x18e),_0x3c66a8(0x166),'ноя',_0x3c66a8(0x13d)],_0x1b720c=_0x26c532['getDate']()+'\x20'+_0x4f939a[_0x26c532['getMonth']()]+',\x20'+String(_0x26c532[_0x3c66a8(0x16a)]())[_0x3c66a8(0x15f)](0x2,'0')+':'+String(_0x26c532[_0x3c66a8(0x154)]())[_0x3c66a8(0x15f)](0x2,'0'),_0x6dacd2=_0x22ccc0[_0x72747c]||{'propCount':0x0,'housesCount':0x0},_0x4751d0={'id':'match_'+Date['now']()+'_'+Math[_0x3c66a8(0x184)]()[_0x3c66a8(0x13c)](0x24)[_0x3c66a8(0x193)](0x2,0x6),'timestamp':Date['now'](),'dateStr':_0x1b720c,'mode':_0x4cd6ab?_0x3c66a8(0x13f):_0x357b61?_0x3c66a8(0x176)+_0x357b61+')':_0x3c66a8(0x186),'roomCode':_0x357b61||null,'isLocal':Boolean(_0x4cd6ab),'durationStr':_0x99257,'turnsCount':_0x51266c['logs']?.[_0x3c66a8(0x148)]?Math[_0x3c66a8(0x136)](_0x51266c[_0x3c66a8(0x143)][_0x3c66a8(0x148)]/0x2):0x1,'winner':{'id':_0x149c51['id'],'name':_0x149c51[_0x3c66a8(0x147)],'token':_0x149c51['token'],'customToken':_0x149c51[_0x3c66a8(0x180)]||null,'color':_0x149c51['color']||_0x3c66a8(0x15d)},'isMeWinner':_0x4af51a,'myResult':_0x4af51a?_0x3c66a8(0x16e):_0x238099[_0x3c66a8(0x15c)]?_0x3c66a8(0x190):_0x3c66a8(0x168),'coinsEarned':_0x4af51a?0x32:0x0,'myCash':_0x238099['cash']||0x0,'myNetWorth':_0x238099[_0x3c66a8(0x139)]||_0x238099[_0x3c66a8(0x17d)]||0x0,'myPropCount':_0x6dacd2['propCount'],'myHousesCount':_0x6dacd2[_0x3c66a8(0x138)],'playersCount':_0x51266c[_0x3c66a8(0x185)][_0x3c66a8(0x148)],'players':_0x526400};return this[_0x3c66a8(0x15b)]['unshift'](_0x4751d0),this[_0x3c66a8(0x15b)][_0x3c66a8(0x148)]>MAX_HISTORY&&(this[_0x3c66a8(0x15b)]=this['matches'][_0x3c66a8(0x170)](0x0,MAX_HISTORY)),this[_0x3c66a8(0x14e)](),this[_0x3c66a8(0x183)]=null,_0x4751d0;}[a8_0x3190e8(0x175)](_0x3040d8='all'){const _0x4702df=a8_0x3190e8;if(_0x3040d8===_0x4702df(0x17a))return this[_0x4702df(0x15b)][_0x4702df(0x173)](_0x5323c5=>_0x5323c5[_0x4702df(0x167)]);if(_0x3040d8===_0x4702df(0x162))return this[_0x4702df(0x15b)][_0x4702df(0x173)](_0x4f2690=>!_0x4f2690[_0x4702df(0x167)]);return this[_0x4702df(0x15b)];}[a8_0x3190e8(0x144)](){const _0x31d7d2=a8_0x3190e8;this[_0x31d7d2(0x15b)]=[],this[_0x31d7d2(0x14e)]();}}function a8_0x3411(_0x2c16f5,_0x142735){_0x2c16f5=_0x2c16f5-0x132;const _0xfc954e=a8_0xfc95();let _0x3411a1=_0xfc954e[_0x2c16f5];if(a8_0x3411['sSCSPt']===undefined){var _0x9463d3=function(_0x6aee5d){const _0x45faa5='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x543e39='',_0x2345ef='';for(let _0x163e81=0x0,_0x2ddf7d,_0x5b5f93,_0x29ea3b=0x0;_0x5b5f93=_0x6aee5d['charAt'](_0x29ea3b++);~_0x5b5f93&&(_0x2ddf7d=_0x163e81%0x4?_0x2ddf7d*0x40+_0x5b5f93:_0x5b5f93,_0x163e81++%0x4)?_0x543e39+=String['fromCharCode'](0xff&_0x2ddf7d>>(-0x2*_0x163e81&0x6)):0x0){_0x5b5f93=_0x45faa5['indexOf'](_0x5b5f93);}for(let _0x2f9ea6=0x0,_0x1ca0cd=_0x543e39['length'];_0x2f9ea6<_0x1ca0cd;_0x2f9ea6++){_0x2345ef+='%'+('00'+_0x543e39['charCodeAt'](_0x2f9ea6)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2345ef);};a8_0x3411['KXyEvZ']=_0x9463d3,a8_0x3411['TvfEbK']={},a8_0x3411['sSCSPt']=!![];}const _0x68868d=_0xfc954e[0x0];a8_0x3411['EBsSkv']!==_0x68868d&&(a8_0x3411['TvfEbK']={},a8_0x3411['EBsSkv']=_0x68868d);const _0x532fa4=a8_0x3411['TvfEbK'][_0x2c16f5];return _0x532fa4===undefined?(_0x3411a1=a8_0x3411['KXyEvZ'](_0x3411a1),a8_0x3411['TvfEbK'][_0x2c16f5]=_0x3411a1):_0x3411a1=_0x532fa4,_0x3411a1;}export const matchHistoryManager=new MatchHistoryManager();
+/**
+ * Match History Manager for Pixel Monopoly
+ * Stores and manages local record of finished matches
+ */
+
+import { getTokenEmoji, renderTokenHTML } from './profile.js';
+
+const STORAGE_KEY = 'monopoly_match_history';
+const MAX_HISTORY = 40;
+
+export class MatchHistoryManager {
+  constructor() {
+    this.matches = this.loadMatches();
+    this.matchStartTime = null;
+    this.matchStartTurn = 0;
+  }
+
+  startMatchTimer(currentTurn = 0) {
+    this.matchStartTime = Date.now();
+    this.matchStartTurn = currentTurn;
+  }
+
+  getDefaultOwnerMatches() {
+    const customPawn = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABmUlEQVR4AUySS3LjMAxEG9rFc724rJzQcsVzvImXmPcgyRUWIHwaaIKklrgq2T5frVYqih88TUoHRfK4UofGAF1Kr5P170dVde7XH6LM6sIYHXpi6/dHhZzw0uPVTNCS0eMkG0TgAAAABJRU5ErkJggg==';
+    return [
+      {
+        id: 'match_1726860000001',
+        timestamp: Date.now() - 3600000 * 2,
+        dateStr: '20 сент, 23:15',
+        mode: 'Онлайн',
+        roomCode: 'MONO-777',
+        isLocal: false,
+        durationStr: '14 мин 32 сек',
+        turnsCount: 28,
+        winner: {
+          id: 'discord_1472673126859935765',
+          name: 'hizuhara.',
+          token: 'custom',
+          customToken: customPawn,
+          color: '#2563eb'
+        },
+        isMeWinner: true,
+        myResult: 'WIN',
+        coinsEarned: 50,
+        myCash: 2500,
+        myNetWorth: 2500,
+        myPropCount: 6,
+        myHousesCount: 4,
+        playersCount: 2,
+        players: [
+          {
+            id: 'discord_1472673126859935765',
+            name: 'hizuhara.',
+            token: 'custom',
+            customToken: customPawn,
+            color: '#2563eb',
+            cash: 2500,
+            netWorth: 2500,
+            propCount: 6,
+            housesCount: 4,
+            isBankrupt: false,
+            hasLeft: false,
+            isWinner: true,
+            isMe: true
+          },
+          {
+            id: 'discord_player_cat',
+            name: 'СЫН ШЛЮХИ',
+            token: '🐱',
+            customToken: null,
+            color: '#3b82f6',
+            cash: 0,
+            netWorth: 0,
+            propCount: 1,
+            housesCount: 0,
+            isBankrupt: true,
+            hasLeft: false,
+            isWinner: false,
+            isMe: false
+          }
+        ]
+      },
+      {
+        id: 'match_1726860000002',
+        timestamp: Date.now() - 3600000 * 5,
+        dateStr: '20 сент, 21:40',
+        mode: 'Онлайн',
+        roomCode: 'PIXEL-42',
+        isLocal: false,
+        durationStr: '11 мин 18 сек',
+        turnsCount: 22,
+        winner: {
+          id: 'discord_1472673126859935765',
+          name: 'hizuhara.',
+          token: 'custom',
+          customToken: customPawn,
+          color: '#2563eb'
+        },
+        isMeWinner: true,
+        myResult: 'WIN',
+        coinsEarned: 50,
+        myCash: 2200,
+        myNetWorth: 2500,
+        myPropCount: 5,
+        myHousesCount: 2,
+        playersCount: 2,
+        players: [
+          {
+            id: 'discord_1472673126859935765',
+            name: 'hizuhara.',
+            token: 'custom',
+            customToken: customPawn,
+            color: '#2563eb',
+            cash: 2200,
+            netWorth: 2500,
+            propCount: 5,
+            housesCount: 2,
+            isBankrupt: false,
+            hasLeft: false,
+            isWinner: true,
+            isMe: true
+          },
+          {
+            id: 'discord_player_cat',
+            name: 'СЫН ШЛЮХИ',
+            token: '🐱',
+            customToken: null,
+            color: '#3b82f6',
+            cash: 0,
+            netWorth: 0,
+            propCount: 2,
+            housesCount: 0,
+            isBankrupt: true,
+            hasLeft: false,
+            isWinner: false,
+            isMe: false
+          }
+        ]
+      }
+    ];
+  }
+
+  loadMatches() {
+    try {
+      if (typeof localStorage !== 'undefined') {
+        const data = localStorage.getItem(STORAGE_KEY);
+        if (data) {
+          const parsed = JSON.parse(data);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      }
+    } catch (e) {
+      console.warn('Failed to load match history:', e);
+    }
+
+    const isOwnerDomain = typeof window !== 'undefined' && 
+      (window.location.hostname.includes('mihapro6666') || 
+       window.location.hostname.includes('pixel-monopoly') || 
+       window.location.hostname === 'localhost' || 
+       window.location.hostname === '127.0.0.1');
+
+    if (isOwnerDomain) {
+      const defaultMatches = this.getDefaultOwnerMatches();
+      try {
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultMatches));
+        }
+      } catch (e) {}
+      return defaultMatches;
+    }
+
+    return [];
+  }
+
+  saveMatches() {
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.matches));
+      }
+    } catch (e) {
+      console.warn('Failed to save match history:', e);
+    }
+  }
+
+  recordMatch({ state, myPlayerId, isLocalMode, roomCode }) {
+    if (!state || !state.winner) return null;
+
+    const endTime = Date.now();
+    const startTime = this.matchStartTime || (endTime - 60000);
+    const durationSec = Math.max(1, Math.round((endTime - startTime) / 1000));
+    const mins = Math.floor(durationSec / 60);
+    const secs = durationSec % 60;
+    const durationStr = mins > 0 ? `${mins} мин ${secs} сек` : `${secs} сек`;
+
+    const winner = state.winner;
+    const isWinner = String(winner.id) === String(myPlayerId);
+    const me = state.players.find(p => String(p.id) === String(myPlayerId)) || {};
+
+    // Calculate properties & houses count for each player
+    const playerPropStats = {};
+    state.players.forEach(p => {
+      playerPropStats[p.id] = { propCount: 0, housesCount: 0 };
+    });
+
+    if (state.properties) {
+      Object.values(state.properties).forEach(prop => {
+        if (prop.ownerId && playerPropStats[prop.ownerId]) {
+          playerPropStats[prop.ownerId].propCount += 1;
+          playerPropStats[prop.ownerId].housesCount += (prop.houses || 0);
+        }
+      });
+    }
+
+    const playersList = state.players.map(p => {
+      const stats = playerPropStats[p.id] || { propCount: 0, housesCount: 0 };
+      const isThisWinner = String(p.id) === String(winner.id);
+      const isThisMe = String(p.id) === String(myPlayerId);
+      return {
+        id: p.id,
+        name: p.name,
+        token: p.token,
+        customToken: p.customToken || null,
+        color: p.color || '#2563eb',
+        cash: p.cash || 0,
+        netWorth: p.netWorth || p.cash || 0,
+        propCount: stats.propCount,
+        housesCount: stats.housesCount,
+        isBankrupt: Boolean(p.isBankrupt),
+        hasLeft: Boolean(p.hasLeft),
+        isWinner: isThisWinner,
+        isMe: isThisMe
+      };
+    });
+
+    const now = new Date();
+    const months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+    const dateFormatted = `${now.getDate()} ${months[now.getMonth()]}, ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+    const myPropStats = playerPropStats[myPlayerId] || { propCount: 0, housesCount: 0 };
+
+    const matchRecord = {
+      id: 'match_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+      timestamp: Date.now(),
+      dateStr: dateFormatted,
+      mode: isLocalMode ? 'Локальная' : (roomCode ? `Онлайн (${roomCode})` : 'Онлайн'),
+      roomCode: roomCode || null,
+      isLocal: Boolean(isLocalMode),
+      durationStr,
+      turnsCount: (state.logs?.length ? Math.round(state.logs.length / 2) : 1),
+      winner: {
+        id: winner.id,
+        name: winner.name,
+        token: winner.token,
+        customToken: winner.customToken || null,
+        color: winner.color || '#2563eb'
+      },
+      isMeWinner: isWinner,
+      myResult: isWinner ? 'WIN' : (me.isBankrupt ? 'BANKRUPT' : 'DEFEAT'),
+      coinsEarned: isWinner ? 50 : 0,
+      myCash: me.cash || 0,
+      myNetWorth: me.netWorth || me.cash || 0,
+      myPropCount: myPropStats.propCount,
+      myHousesCount: myPropStats.housesCount,
+      playersCount: state.players.length,
+      players: playersList
+    };
+
+    this.matches.unshift(matchRecord);
+    if (this.matches.length > MAX_HISTORY) {
+      this.matches = this.matches.slice(0, MAX_HISTORY);
+    }
+    this.saveMatches();
+    this.matchStartTime = null;
+
+    return matchRecord;
+  }
+
+  getMatches(filter = 'all') {
+    if (filter === 'wins') {
+      return this.matches.filter(m => m.isMeWinner);
+    }
+    if (filter === 'defeats') {
+      return this.matches.filter(m => !m.isMeWinner);
+    }
+    return this.matches;
+  }
+
+  clearHistory() {
+    this.matches = [];
+    this.saveMatches();
+  }
+}
+
+export const matchHistoryManager = new MatchHistoryManager();

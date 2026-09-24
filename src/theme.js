@@ -1,1 +1,75 @@
-const a15_0x2a105c=a15_0x2a28;function a15_0x2a28(_0x2fba6a,_0x50283d){_0x2fba6a=_0x2fba6a-0xb8;const _0x46e507=a15_0x46e5();let _0x2a2858=_0x46e507[_0x2fba6a];if(a15_0x2a28['bvBNFv']===undefined){var _0x3a5b27=function(_0x11f093){const _0x1b138f='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x123a02='',_0x4abed8='';for(let _0x12223a=0x0,_0x22542f,_0x2f120a,_0x55974d=0x0;_0x2f120a=_0x11f093['charAt'](_0x55974d++);~_0x2f120a&&(_0x22542f=_0x12223a%0x4?_0x22542f*0x40+_0x2f120a:_0x2f120a,_0x12223a++%0x4)?_0x123a02+=String['fromCharCode'](0xff&_0x22542f>>(-0x2*_0x12223a&0x6)):0x0){_0x2f120a=_0x1b138f['indexOf'](_0x2f120a);}for(let _0x3e777d=0x0,_0x52f523=_0x123a02['length'];_0x3e777d<_0x52f523;_0x3e777d++){_0x4abed8+='%'+('00'+_0x123a02['charCodeAt'](_0x3e777d)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x4abed8);};a15_0x2a28['SPQyYH']=_0x3a5b27,a15_0x2a28['qKyVqV']={},a15_0x2a28['bvBNFv']=!![];}const _0x59efbb=_0x46e507[0x0];a15_0x2a28['TZgygf']!==_0x59efbb&&(a15_0x2a28['qKyVqV']={},a15_0x2a28['TZgygf']=_0x59efbb);const _0x2e4403=a15_0x2a28['qKyVqV'][_0x2fba6a];return _0x2e4403===undefined?(_0x2a2858=a15_0x2a28['SPQyYH'](_0x2a2858),a15_0x2a28['qKyVqV'][_0x2fba6a]=_0x2a2858):_0x2a2858=_0x2e4403,_0x2a2858;}(function(_0x816323,_0x23e1ed){const _0x2795bc=a15_0x2a28,_0x19f7a6=_0x816323();while(!![]){try{const _0x35b98b=-parseInt(_0x2795bc(0x103))/0x1*(-parseInt(_0x2795bc(0xb9))/0x2)+-parseInt(_0x2795bc(0x10d))/0x3+parseInt(_0x2795bc(0x113))/0x4*(-parseInt(_0x2795bc(0xe5))/0x5)+-parseInt(_0x2795bc(0xee))/0x6*(-parseInt(_0x2795bc(0xdc))/0x7)+-parseInt(_0x2795bc(0xe6))/0x8*(parseInt(_0x2795bc(0xf5))/0x9)+parseInt(_0x2795bc(0xbc))/0xa+parseInt(_0x2795bc(0xce))/0xb*(parseInt(_0x2795bc(0x10b))/0xc);if(_0x35b98b===_0x23e1ed)break;else _0x19f7a6['push'](_0x19f7a6['shift']());}catch(_0x4bf60a){_0x19f7a6['push'](_0x19f7a6['shift']());}}}(a15_0x46e5,0xd60db));export const THEMES=[{'id':a15_0x2a105c(0x110),'name':a15_0x2a105c(0xe4),'label':'Полночь','color':a15_0x2a105c(0xea),'preview':a15_0x2a105c(0xcd),'icon':'🌑','dotColor':a15_0x2a105c(0xea)},{'id':a15_0x2a105c(0xdf),'name':a15_0x2a105c(0xfa),'label':a15_0x2a105c(0xd9),'color':a15_0x2a105c(0xcc),'preview':a15_0x2a105c(0xcc),'icon':'⚡','dotColor':'#22d3ee'},{'id':a15_0x2a105c(0xd5),'name':a15_0x2a105c(0xbf),'label':a15_0x2a105c(0xfd),'color':a15_0x2a105c(0xfe),'preview':a15_0x2a105c(0xfe),'icon':'🌌','dotColor':a15_0x2a105c(0xf2)},{'id':a15_0x2a105c(0xf1),'name':a15_0x2a105c(0xc0),'label':a15_0x2a105c(0xc8),'color':a15_0x2a105c(0xde),'preview':a15_0x2a105c(0xde),'icon':'🌲','dotColor':a15_0x2a105c(0xbe)},{'id':a15_0x2a105c(0xd8),'name':'Pixel\x20Ocean','label':'Океан','color':a15_0x2a105c(0x102),'preview':'#2d5a88','icon':'🌊','dotColor':a15_0x2a105c(0xc5)},{'id':a15_0x2a105c(0x104),'name':'Pixel\x20Purple','label':a15_0x2a105c(0xcf),'color':a15_0x2a105c(0x10f),'preview':a15_0x2a105c(0x10f),'icon':'🔮','dotColor':a15_0x2a105c(0xf4)},{'id':a15_0x2a105c(0x107),'name':'Pixel\x20Sunset','label':a15_0x2a105c(0xf3),'color':a15_0x2a105c(0xd6),'preview':a15_0x2a105c(0xd6),'icon':'🌅','dotColor':a15_0x2a105c(0xd2)},{'id':a15_0x2a105c(0xef),'name':a15_0x2a105c(0xc7),'label':a15_0x2a105c(0xdd),'color':a15_0x2a105c(0xd1),'preview':'#ca8a04','icon':'👑','dotColor':a15_0x2a105c(0xe3)},{'id':a15_0x2a105c(0xdb),'name':a15_0x2a105c(0xf9),'label':'Сакура','color':a15_0x2a105c(0xd4),'preview':a15_0x2a105c(0xd4),'icon':'🌸','dotColor':a15_0x2a105c(0xd2)},{'id':a15_0x2a105c(0xcb),'name':a15_0x2a105c(0xec),'label':'Лаванда','color':a15_0x2a105c(0xe9),'preview':a15_0x2a105c(0xe9),'icon':'🪻','dotColor':a15_0x2a105c(0xf6)},{'id':a15_0x2a105c(0xc1),'name':a15_0x2a105c(0xd0),'label':a15_0x2a105c(0xe0),'color':a15_0x2a105c(0xed),'preview':a15_0x2a105c(0xed),'icon':'☕','dotColor':a15_0x2a105c(0xba)},{'id':a15_0x2a105c(0xc9),'name':a15_0x2a105c(0x111),'label':a15_0x2a105c(0xe1),'color':a15_0x2a105c(0x10e),'preview':a15_0x2a105c(0x10e),'icon':'❄️','dotColor':'#38bdf8'},{'id':'crimson','name':a15_0x2a105c(0x106),'label':a15_0x2a105c(0xf7),'color':a15_0x2a105c(0xbb),'preview':a15_0x2a105c(0xbb),'icon':'🩸','dotColor':'#f43f5e'},{'id':a15_0x2a105c(0xda),'name':'Pixel\x20Solar','label':'Огонь','color':'#ea580c','preview':a15_0x2a105c(0x100),'icon':'🔥','dotColor':a15_0x2a105c(0xe7)},{'id':'mint','name':a15_0x2a105c(0x10a),'label':a15_0x2a105c(0xfc),'color':a15_0x2a105c(0xf8),'preview':'#2d6a4f','icon':'🌿','dotColor':'#52b788'},{'id':a15_0x2a105c(0x101),'name':a15_0x2a105c(0xb8),'label':a15_0x2a105c(0xe2),'color':a15_0x2a105c(0x10c),'preview':'#b84a39','icon':'🪸','dotColor':a15_0x2a105c(0x105)}];export class ThemeManager{constructor(){const _0x517e27=a15_0x2a105c;let _0x4abed8=_0x517e27(0xdf);try{if(typeof localStorage!=='undefined'){localStorage['getItem']('monopoly_theme_sync_v8_4_3')!==_0x517e27(0xd3)&&((!localStorage['getItem'](_0x517e27(0xeb))||localStorage['getItem'](_0x517e27(0xeb))===_0x517e27(0x110))&&localStorage['setItem'](_0x517e27(0xeb),_0x517e27(0xdf)),localStorage[_0x517e27(0xf0)](_0x517e27(0xc3),'done'));const _0x12223a=localStorage['getItem'](_0x517e27(0xeb));_0x12223a&&_0x12223a!==_0x517e27(0x108)&&THEMES['some'](_0x22542f=>_0x22542f['id']===_0x12223a)?_0x4abed8=_0x12223a:_0x4abed8=_0x517e27(0xdf);}}catch(_0x2f120a){}this[_0x517e27(0xc6)]=_0x4abed8,this[_0x517e27(0xc2)](this[_0x517e27(0xc6)]);}[a15_0x2a105c(0xc2)](_0x55974d){const _0x3705e6=a15_0x2a105c;!THEMES[_0x3705e6(0xc4)](_0x3e777d=>_0x3e777d['id']===_0x55974d)&&(_0x55974d=_0x3705e6(0xdf));this[_0x3705e6(0xc6)]=_0x55974d;typeof document!=='undefined'&&document[_0x3705e6(0x112)]&&document['documentElement'][_0x3705e6(0xbd)]('data-theme',_0x55974d);try{typeof localStorage!=='undefined'&&localStorage[_0x3705e6(0xf0)]('monopoly_theme',_0x55974d);}catch(_0x52f523){}}[a15_0x2a105c(0x109)](){const _0x312799=a15_0x2a105c;return this[_0x312799(0xc6)];}[a15_0x2a105c(0xff)](){const _0x52c9cc=a15_0x2a105c;return THEMES[_0x52c9cc(0xfb)](_0x90b0f=>_0x90b0f['id']===this[_0x52c9cc(0xc6)])||THEMES[0x0];}[a15_0x2a105c(0xe8)](){const _0x3d0240=a15_0x2a105c,_0x4d0a75=THEMES[_0x3d0240(0xd7)](_0x351ae4=>_0x351ae4['id']===this[_0x3d0240(0xc6)]),_0x4ad033=(_0x4d0a75+0x1)%THEMES[_0x3d0240(0xca)];return this[_0x3d0240(0xc2)](THEMES[_0x4ad033]['id']),THEMES[_0x4ad033];}}function a15_0x46e5(){const _0x5ea7c7=['ugL4zwWGr29Sza','0jJqT9gd0lZrGngd0lq','BM9YzgLJ','BgvUz3rO','Bgf2zw5Kzxi','iZa2yJzKna','iZa5mdKWyG','mJC1q2nqq2Tz','0jdqVnc10ylqUngb0yi','ugL4zwWGq29MzMvL','i2nHogeWna','i2y0m2y1zq','zg9Uzq','i2uXmwq0oa','zhvZAW','i2rImJC3nW','zMLUzeLUzgv4','B2nLyw4','0jRqUncX0lxrGnc/0ldqVDc6','C29Syxi','y2HLCNj5','n0HZyNPyvq','0jFqVTc70l7rGTc+','iZa1oty2oq','y3LIzxjWDw5R','0jRqVTge0lu','0jVqTDc00l3qUnc6','0jRqVTga0ldqU9c7','i2vHyJmWoa','ugL4zwWGtwLKBMLNAhq','ndK4mtu2nw1uyMPNCa','ndK0odb6y21uz1y','i2y5nZmXnG','BMv4DfrOzw1L','iZyZnJzMmq','iZm4yMrMoa','Bw9UB3bVBhLFDgHLBwu','ugL4zwWGtgf2zw5Kzxi','iZC4mZuWzG','otm5ntm2nenozKHUCG','z29Sza','C2v0sxrLBq','zw1LCMfSza','iZHKotLHzq','0jFqSnc60ldrGG','i2e4ntvMnW','mti1munoter6sG','iZGXognMoa','0kdrG9cX0lJqVq','iZjKnMe0zG','ugL4zwWGu2fRDxjH','ugL4zwWGq3LIzxjWDw5R','zMLUza','0jZrJ9gc0la','0khqU9cW0l3qTDgg','iZjImMq0mG','z2v0q3vYCMvUDfrOzw1Lt2jQ','i2vHntGWyW','y29YywW','iZjKnwe4oa','mJnNr3jdu1G','ChvYCgXL','i2uWn2e1zG','ugL4zwWGq3jPBxnVBG','C3vUC2v0','BwLUDa','z2v0vgHLBwu','ugL4zwWGtwLUDa','mtmWmJK2Dhf3AenU','i2i4ngeZoq','mJmZnZi2n3zHEeXYAW','iZaYodrJnW','iZDLmJjJzq','BwLKBMLNAhq','ugL4zwWGrNjVC3q','zg9JDw1LBNrfBgvTzw50','nev5BxLvAG','ugL4zwWGq29YywW','mZuXotrjtwrcvMO','i2i0ntmWoq','i2jLmtiZyW','mti2otGWntbsrw9TveK','C2v0qxr0CMLIDxrL','iZeWyJK4mq','ugL4zwWGrhvZAW','ugL4zwWGrw1LCMfSza','y29MzMvL','yxbWBhLuAgvTzq','Bw9UB3bVBhLFDgHLBwvFC3LUy192of80xZm','C29Tzq','iZrLytHKzq','y3vYCMvUDfrOzw1L'];a15_0x46e5=function(){return _0x5ea7c7;};return a15_0x46e5();}export const themeManager=new ThemeManager();
+export const THEMES = [
+  { id: 'midnight', name: 'Pixel Midnight', label: 'Полночь', color: '#38bdf8', preview: '#09090b', icon: '🌑', dotColor: '#38bdf8' },
+  { id: 'cyberpunk', name: 'Pixel Cyberpunk', label: 'Киберпанк', color: '#06b6d4', preview: '#06b6d4', icon: '⚡', dotColor: '#22d3ee' },
+  { id: 'dusk', name: 'Pixel Dusk', label: 'Сланец', color: '#2b2d42', preview: '#2b2d42', icon: '🌌', dotColor: '#8d99ae' },
+  { id: 'emerald', name: 'Pixel Emerald', label: 'Изумруд', color: '#059669', preview: '#059669', icon: '🌲', dotColor: '#10b981' },
+  { id: 'ocean', name: 'Pixel Ocean', label: 'Океан', color: '#2d5a88', preview: '#2d5a88', icon: '🌊', dotColor: '#4ea8de' },
+  { id: 'purple', name: 'Pixel Purple', label: 'Аметист', color: '#7e22ce', preview: '#7e22ce', icon: '🔮', dotColor: '#a855f7' },
+  { id: 'sunset', name: 'Pixel Sunset', label: 'Закат', color: '#db2777', preview: '#db2777', icon: '🌅', dotColor: '#f43f5e' },
+  { id: 'gold', name: 'Pixel Gold', label: 'Золото', color: '#ca8a04', preview: '#ca8a04', icon: '👑', dotColor: '#eab308' },
+  { id: 'cherry', name: 'Pixel Sakura', label: 'Сакура', color: '#e11d48', preview: '#e11d48', icon: '🌸', dotColor: '#f43f5e' },
+  { id: 'lavender', name: 'Pixel Lavender', label: 'Лаванда', color: '#6366f1', preview: '#6366f1', icon: '🪻', dotColor: '#818cf8' },
+  { id: 'coffee', name: 'Pixel Coffee', label: 'Кофе', color: '#78350f', preview: '#78350f', icon: '☕', dotColor: '#b45309' },
+  { id: 'nordic', name: 'Pixel Frost', label: 'Ледник', color: '#0284c7', preview: '#0284c7', icon: '❄️', dotColor: '#38bdf8' },
+  { id: 'crimson', name: 'Pixel Crimson', label: 'Рубин', color: '#be123c', preview: '#be123c', icon: '🩸', dotColor: '#f43f5e' },
+  { id: 'solar', name: 'Pixel Solar', label: 'Огонь', color: '#ea580c', preview: '#ea580c', icon: '🔥', dotColor: '#f97316' },
+  { id: 'mint', name: 'Pixel Mint', label: 'Мята', color: '#2d6a4f', preview: '#2d6a4f', icon: '🌿', dotColor: '#52b788' },
+  { id: 'coral', name: 'Pixel Coral', label: 'Коралл', color: '#b84a39', preview: '#b84a39', icon: '🪸', dotColor: '#e07a5f' }
+];
+
+export class ThemeManager {
+  constructor() {
+    let saved = 'cyberpunk';
+    try {
+      if (typeof localStorage !== 'undefined') {
+        if (localStorage.getItem('monopoly_theme_sync_v8_4_3') !== 'done') {
+          // Sync theme from midnight to cyberpunk
+          if (!localStorage.getItem('monopoly_theme') || localStorage.getItem('monopoly_theme') === 'midnight') {
+            localStorage.setItem('monopoly_theme', 'cyberpunk');
+          }
+          localStorage.setItem('monopoly_theme_sync_v8_4_3', 'done');
+        }
+        const stored = localStorage.getItem('monopoly_theme');
+        if (stored && stored !== 'mint' && THEMES.some(t => t.id === stored)) {
+          saved = stored;
+        } else {
+          saved = 'cyberpunk';
+        }
+      }
+    } catch (e) {}
+    this.currentTheme = saved;
+    this.applyTheme(this.currentTheme);
+  }
+
+  applyTheme(themeId) {
+    if (!THEMES.some(t => t.id === themeId)) {
+      themeId = 'cyberpunk';
+    }
+    this.currentTheme = themeId;
+    if (typeof document !== 'undefined' && document.documentElement) {
+      document.documentElement.setAttribute('data-theme', themeId);
+    }
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.setItem('monopoly_theme', themeId);
+      }
+    } catch (e) {}
+  }
+
+  getTheme() {
+    return this.currentTheme;
+  }
+
+  getCurrentThemeObj() {
+    return THEMES.find(t => t.id === this.currentTheme) || THEMES[0];
+  }
+
+  nextTheme() {
+    const idx = THEMES.findIndex(t => t.id === this.currentTheme);
+    const nextIdx = (idx + 1) % THEMES.length;
+    this.applyTheme(THEMES[nextIdx].id);
+    return THEMES[nextIdx];
+  }
+}
+
+export const themeManager = new ThemeManager();

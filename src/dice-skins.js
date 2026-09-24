@@ -1,1 +1,212 @@
-const a6_0x4044aa=a6_0x471d;function a6_0x471d(_0x5c6fd7,_0x404bf5){_0x5c6fd7=_0x5c6fd7-0xbd;const _0x1650f4=a6_0x1650();let _0x471d97=_0x1650f4[_0x5c6fd7];if(a6_0x471d['iXNmvX']===undefined){var _0x27651d=function(_0x28552c){const _0x1117ef='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x65f01b='',_0xf3543e='';for(let _0x54310f=0x0,_0x3285d5,_0x112576,_0x1d1b93=0x0;_0x112576=_0x28552c['charAt'](_0x1d1b93++);~_0x112576&&(_0x3285d5=_0x54310f%0x4?_0x3285d5*0x40+_0x112576:_0x112576,_0x54310f++%0x4)?_0x65f01b+=String['fromCharCode'](0xff&_0x3285d5>>(-0x2*_0x54310f&0x6)):0x0){_0x112576=_0x1117ef['indexOf'](_0x112576);}for(let _0x2bcff6=0x0,_0x4fe238=_0x65f01b['length'];_0x2bcff6<_0x4fe238;_0x2bcff6++){_0xf3543e+='%'+('00'+_0x65f01b['charCodeAt'](_0x2bcff6)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xf3543e);};a6_0x471d['mpNKoT']=_0x27651d,a6_0x471d['xEcgok']={},a6_0x471d['iXNmvX']=!![];}const _0x5389b5=_0x1650f4[0x0];a6_0x471d['FLJZpO']!==_0x5389b5&&(a6_0x471d['xEcgok']={},a6_0x471d['FLJZpO']=_0x5389b5);const _0x1e255b=a6_0x471d['xEcgok'][_0x5c6fd7];return _0x1e255b===undefined?(_0x471d97=a6_0x471d['mpNKoT'](_0x471d97),a6_0x471d['xEcgok'][_0x5c6fd7]=_0x471d97):_0x471d97=_0x1e255b,_0x471d97;}(function(_0xccd10,_0x47601e){const _0x5c17cb=a6_0x471d,_0x10de66=_0xccd10();while(!![]){try{const _0x459866=-parseInt(_0x5c17cb(0xf2))/0x1+-parseInt(_0x5c17cb(0x105))/0x2*(-parseInt(_0x5c17cb(0x109))/0x3)+-parseInt(_0x5c17cb(0xff))/0x4*(parseInt(_0x5c17cb(0xbf))/0x5)+parseInt(_0x5c17cb(0x11f))/0x6*(-parseInt(_0x5c17cb(0xc5))/0x7)+parseInt(_0x5c17cb(0xd4))/0x8+-parseInt(_0x5c17cb(0x10b))/0x9*(parseInt(_0x5c17cb(0xd7))/0xa)+parseInt(_0x5c17cb(0xf4))/0xb;if(_0x459866===_0x47601e)break;else _0x10de66['push'](_0x10de66['shift']());}catch(_0x1ea149){_0x10de66['push'](_0x10de66['shift']());}}}(a6_0x1650,0xc1d91));export const DICE_SKINS=[{'id':'classic','name':a6_0x4044aa(0xfe),'icon':'🎲','rarity':a6_0x4044aa(0x114),'rarityName':a6_0x4044aa(0xc9),'rarityColor':a6_0x4044aa(0x11b),'weight':0x0,'bgStyle':a6_0x4044aa(0xf8),'textColor':a6_0x4044aa(0x108),'borderStyle':a6_0x4044aa(0xd5),'glow':'0\x208px\x2020px\x20rgba(0,\x200,\x200,\x200.14)','desc':a6_0x4044aa(0x118)},{'id':a6_0x4044aa(0xdc),'name':a6_0x4044aa(0x112),'icon':'🔴','rarity':a6_0x4044aa(0xc2),'rarityName':a6_0x4044aa(0x117),'rarityColor':'#f43f5e','weight':0x1e,'bgStyle':'linear-gradient(135deg,\x20#4c0519\x200%,\x20#9f1239\x2050%,\x20#e11d48\x20100%)','textColor':a6_0x4044aa(0x11a),'borderStyle':'2px\x20solid\x20#f43f5e','glow':'0\x200\x2020px\x20rgba(244,\x2063,\x2094,\x200.55),\x20inset\x200\x200\x2010px\x20rgba(255,\x20255,\x20255,\x200.2)','desc':a6_0x4044aa(0x103)},{'id':'cyber_emerald','name':a6_0x4044aa(0xd2),'icon':'🟢','rarity':a6_0x4044aa(0xc2),'rarityName':a6_0x4044aa(0x117),'rarityColor':a6_0x4044aa(0xbd),'weight':0x1e,'bgStyle':a6_0x4044aa(0xc6),'textColor':'#a7f3d0','borderStyle':a6_0x4044aa(0xc8),'glow':a6_0x4044aa(0xf1),'desc':a6_0x4044aa(0xeb)},{'id':a6_0x4044aa(0xde),'name':a6_0x4044aa(0xed),'icon':'🟣','rarity':a6_0x4044aa(0x107),'rarityName':a6_0x4044aa(0xca),'rarityColor':a6_0x4044aa(0xec),'weight':0xf,'bgStyle':'linear-gradient(135deg,\x20#2e1065\x200%,\x20#581c87\x2050%,\x20#7e22ce\x20100%)','textColor':a6_0x4044aa(0xc4),'borderStyle':'2px\x20solid\x20#c084fc','glow':a6_0x4044aa(0xfc),'desc':a6_0x4044aa(0xc1)},{'id':a6_0x4044aa(0xcf),'name':'Ледяной\x20Кристалл','icon':'❄️','rarity':a6_0x4044aa(0x107),'rarityName':'Эпический','rarityColor':a6_0x4044aa(0xe2),'weight':0xf,'bgStyle':a6_0x4044aa(0xcc),'textColor':'#ffffff','borderStyle':a6_0x4044aa(0xe1),'glow':'0\x200\x2022px\x20rgba(56,\x20189,\x20248,\x200.65),\x20inset\x200\x200\x2012px\x20rgba(255,\x20255,\x20255,\x200.4)','desc':a6_0x4044aa(0xef)},{'id':a6_0x4044aa(0xcb),'name':a6_0x4044aa(0xd0),'icon':'🟡','rarity':a6_0x4044aa(0x10e),'rarityName':a6_0x4044aa(0x116),'rarityColor':a6_0x4044aa(0x113),'weight':0x4,'bgStyle':a6_0x4044aa(0xf9),'textColor':a6_0x4044aa(0x104),'borderStyle':'2px\x20solid\x20#fde047','glow':a6_0x4044aa(0x10f),'desc':a6_0x4044aa(0xdd)},{'id':a6_0x4044aa(0xfd),'name':a6_0x4044aa(0x11c),'icon':'🔥','rarity':a6_0x4044aa(0x10e),'rarityName':a6_0x4044aa(0x116),'rarityColor':a6_0x4044aa(0xe7),'weight':0x4,'bgStyle':a6_0x4044aa(0xe0),'textColor':'#fff7ed','borderStyle':a6_0x4044aa(0x10d),'glow':'0\x200\x2025px\x20rgba(249,\x20115,\x2022,\x200.8),\x20inset\x200\x200\x2014px\x20rgba(255,\x20237,\x20213,\x200.5)','desc':a6_0x4044aa(0xf0)},{'id':a6_0x4044aa(0xda),'name':a6_0x4044aa(0xc3),'icon':'🌌','rarity':a6_0x4044aa(0x10e),'rarityName':a6_0x4044aa(0x116),'rarityColor':a6_0x4044aa(0xf3),'weight':0x2,'bgStyle':a6_0x4044aa(0xc0),'textColor':a6_0x4044aa(0x11a),'borderStyle':a6_0x4044aa(0xe9),'glow':a6_0x4044aa(0xcd),'desc':a6_0x4044aa(0xbe)}];export const CASE_PRICE=0x32;export const DUPLICATE_COINS_REFUND=0x14;export const CASE_DROPPABLE_SKINS=DICE_SKINS['filter'](_0xf3543e=>_0xf3543e['id']!==a6_0x4044aa(0xdb));export function getDiceSkin(_0x54310f){const _0x5df412=a6_0x4044aa;return DICE_SKINS[_0x5df412(0x106)](_0x3285d5=>_0x3285d5['id']===_0x54310f)||DICE_SKINS[0x0];}export function rollDiceSkinFromCase(){const _0x31c370=a6_0x4044aa,_0x112576=CASE_DROPPABLE_SKINS,_0x1d1b93=_0x112576[_0x31c370(0xea)]((_0x4fe238,_0x3c304c)=>_0x4fe238+_0x3c304c['weight'],0x0);let _0x2bcff6=Math['random']()*_0x1d1b93;for(const _0x1e669b of _0x112576){if(_0x2bcff6<_0x1e669b[_0x31c370(0xc7)])return _0x1e669b;_0x2bcff6-=_0x1e669b[_0x31c370(0xc7)];}return _0x112576[0x0];}export function getDiceFaceRotations(_0x1a22f3){switch(parseInt(_0x1a22f3)){case 0x1:return{'x':0x0,'y':0x0};case 0x2:return{'x':-0x5a,'y':0x0};case 0x3:return{'x':0x0,'y':-0x5a};case 0x4:return{'x':0x0,'y':0x5a};case 0x5:return{'x':0x5a,'y':0x0};case 0x6:return{'x':0xb4,'y':0x0};default:return{'x':0x0,'y':0x0};}}export function renderDicePipsHTML(_0x1af9c0){const _0xc5592e=a6_0x4044aa,_0x24b674=Math['max'](0x1,Math[_0xc5592e(0xd6)](0x6,parseInt(_0x1af9c0)||0x1));let _0xe227b1='';for(let _0x1727c2=0x0;_0x1727c2<_0x24b674;_0x1727c2++){_0xe227b1+='<span\x20class=\x22dice-pip\x22></span>';}return _0xe227b1;}function a6_0x1650(){const _0x3468d7=['mNb4ihnVBgLKicm3zgqZzMm','iZm4yMrMoa','C2TPBI0','y29SB3i','CxvLCNLtzwXLy3rVCG','iJ4kicaGicaGpgrPDIbJBgfZCZ0IzgLJzs1WAxHLBc1IB3GIpGOGicaGicaGidXPBwCGy2XHC3m9iMrPy2uTCgL4zwWTAw1NiIbZCMm9iMfZC2v0CY9KAwnLl2rPy2vF','i2y5nZmXnG','iIbKyxrHlwzHy2u9iG','mNb4ihnVBgLKicm4mtHJzJG','CMvKDwnL','0khqSTc10ylrJ9gj0lJqTDgb0y8G0lZqSngc0ydqUngh0l3rI9c1inc60l7rGDgc0lGG0lJqTYdqUTc40lhqTDga0l/qSnc90lOT0lhrG9c00yprIDc10lpqVI4','i2e4ntvMnW','0jdqVnc10ylqUngb0ylqVTcY0ldrJYdqNDc+0yFrJa','Dgv4DenVBg9Y','0jFqSnc80zhrGnc30yJqUnc5incW0ydqUTgc0lJrH9c10yhqUTc40lKG0lVrKDc0incY0lxrH9c90l7qUsdqVnc10ydqT9c70l7rGTgllG','0kdqSngb0lRqSnc70zhqVDc90ldrJYdqSTgd0lVqUTcW0l3qUngh0lxrGDc60ldrJYdqU9cW0llqScdqV9ga0y/qVnc+inc40lCG0l3qTDc00yaG0llrG9c70lRqSnc90laU','mcaWidiWChGGCMDIysGXnIWGmtG1lcaXmJKSidaUntuPlcbPBNnLDcaWidaGmtbWEcbYz2jHkde2nYWGmJqZlcaYmdGSidaUmJuP','mJe4oda2vwjStLDJ','iZGXognMoa','nJCWmZe4mhLxBhbytq','yMDtDhLSzq','CMvTB3zL','C3r5Bgu','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGi2zMzMzMzIaWjsWGi2uYztHMmcaXmdaLkq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZCXm2yXmIaWjsWGi2nHogeWnca0mcuSicnMzwyWogeGnZaLlcaJzwfImZa4ideWmcuP','zgLJzs0Zzc1JDwjL','y29UDgfPBNm','mcaWidiYChGGCMDIysGXnJGSidG1lcaYndCSidaUnIKSigLUC2v0idaGmcaXmNb4ihjNyMeOmJqZlcaYmZiSidi1nsWGmc4Zkq','BwfNBwfFzMXHBwu','0jRqU9cW0yhrGDc40yFqTDgb0lRqUnc1','mZjWy0jmueO','Bwf4','iIbZDhLSzt0IDhjHBNnMB3jToIbYB3rHDgvyka','cIaGica8zgL2ignSyxnZpsjKAwnLltjKlwL0zw0GC2TPBI0','0j/rI9c70ldrJTgj0lJqUsdqVDc10l7qVDc+0llrI9c8ingb0llqTDgc0l7qVcdqTnga0ldqS9c+0yBqTDc90l3rI9c5inc60ydqUngb0ylqSnc70lSG0ydrG9cX0lJqVDcWlG','iZqYmJaWnG','mZaWmJq4mNjur1vvCW','zMLUza','zxbPyW','iZbMmtCYyq','m2neyxDNuW','lMrPy2uTm2qTy3vIzq','mteYnwvlvNvZDa','iJ4kicaGicaGpgrPDIbJBgfZCZ0IzgLJzs0Zzc1JDwjLihnRAw4T','mNb4ihnVBgLKicnMyJKYm2m','BgvNzw5Kyxj5','mcaWidi1ChGGCMDIysGYmZqSide3osWGocWGmc44ksWGAw5ZzxqGmcaWide0ChGGCMDIysGYntuSidi1nsWGmJu1lcaWlJyP','zM9YrwfJAa','cIaGica8zgL2ignSyxnZpsjKAwnLltnKlxDYyxbWzxiG','0j3qTDc+0l3qVTcY0yVqUsdqOngd0lhqUnc9','i2vHyJmWoa','y29TBw9U','lMrPy2uTmMqTAxrLBq','0jVqTDcZ0lxqVDc00ldrGnc90yVqUq','0kdqTDc00lRqUnc5','0klrGncW0ltqUngg0lJqVTc90l3rI9c1incX0lxqU9gl0luG0lJqS9ga0ldqU9gm0l3rI9c1inc60l7rGDgc0lGG0yeG0lVqSnc60lJrGnc+0llqSnc90l3rI9c80lGG0yFrKDga0l3rI9c80lGG0ylqVTgh0lRqSnc80lGGknc00l7rGDgc0ypqV9c90ySG0llrGDc10lWG0l/qVIdrG9c80l7qU9gh0ldqVDc40y4PlG','zgvNktSIpGOGicaGicaGidXKAxyGy2XHC3m9iMrPy2uTzMfJzsbMywnLlwzYB250igzHy2uTmsiGDgL0Bgu9iJeIpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJWVzgL2pGOGicaGicaGidXKAxyGy2XHC3m9iMrPy2uTzMfJzsbMywnLlxrVCcbMywnLltiIihrPDgXLpsiYiJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48l2rPDJ4kicaGicaGica8zgL2ignSyxnZpsjKAwnLlwzHy2uGzMfJzs1YAwDODcbMywnLltmIihrPDgXLpsiZiJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48l2rPDJ4kicaGicaGica8zgL2ignSyxnZpsjKAwnLlwzHy2uGzMfJzs1Szwz0igzHy2uTnciGDgL0Bgu9iJqIpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJWVzgL2pGOGicaGicaGidXKAxyGy2XHC3m9iMrPy2uTzMfJzsbMywnLlwjVDhrVBsbMywnLltuIihrPDgXLpsi1iJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48C3bHBIbJBgfZCZ0IzgLJzs1WAxaIpJWVC3bHBJ48l2rPDJ4kicaGicaGica8zgL2ignSyxnZpsjKAwnLlwzHy2uGzMfJzs1IywnRigzHy2uTnIiGDgL0Bgu9iJyIpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJXZCgfUignSyxnZpsjKAwnLlxbPCci+pc9ZCgfUpJWVzgL2pGOGicaGica8l2rPDJ4kicaGidWVzgL2pGOGia','i2zMzMzMzG','iZK0ytnIoa','0j7qS9c90lxqVDc90ldrJYdqM9cW0llqSa','y2XHC3nmAxn0','iIbKyxrHlxzHBhvLpsi','mJCWmdC2mMrVtM1lEa','x25VCM1HBc5WBMCIigfSDd0IrgLJzsa','iZeWyJK4mq','0k3qV9c40yBqTDc90ylrGcdqUTc+0yhqVnc40yFqTDgb0lRqVTc5ingh0zhrGnc90l7qUsdqTngl0ydrIYWG0l/rGnc10lVqVTc80lVrJ9go0yNqUnc5ingb0ldqVnc+inc/0ydqVTgb0ylrGncW0l3rGDgc0llqVI4','mJyXnZeWsvrRz01i','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa5mdKWyIaWjsWGiZfLmwi0yIa0mcuSicm0mZm4y2eGnZaLlcaJyZa4ngzJideWmcuP','0jZqSncZ0lJrH9c10yhqUTc40lKG0ytqUnc+0lVqTDgc0l7qSTgl0lKG0ldqVnc10ylqUngb0yiSinc80lxrGngg0ldrJTgj0lJqUsdqT9cY0zhqT9c00l3rI9c8ingb0lJrJ9c90lJqTDc8lG','CMfYzq','0khqUnc90lprG9c70y/rGnc90l7rGDgc0yW','i2yZztHMzG','n2nOyxngyq','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZaYmMmYmIaWjsWGiZa2nwy0nIa1mcuSicmWntK2nJKGmtaWjsK','D2vPz2H0','mNb4ihnVBgLKicmXmgi5ode','0j7qSDgl0yFqVDgl0lK','0k3qV9c40yFqTDgb0lRqUnc5','z29SzgvUx3r5y29VBG','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZa4mMy0osaWjsWGiZaZnJLHmsa1mcuSicmZogjKzJGGmtaWjsK','mcaWidi4ChGGCMDIysGXmJKSide0mcWGmJq4lcaWlJG1ksWGAw5ZzxqGmcaWide0ChGGCMDIysGXotiSideZmIWGmJuYlcaWlJuP','yM9YzgvY','zNjVC3rFy3j5C3rHBa','0jFqVTc70l7rGTc+0lKG0jZqSncZ0l3qSngc','ywrK','0jRqUncX0lxrGc3qMnc30ypqVnga0ypqTa','yM9YzgvYu3r5Bgu','nJmXndm5mLflCe14qG','mNb4ihnVBgLKihjNyMeOmcWGmcWGmcWGmc4XmIK','BwLU','ode0nJbcy0TYuhu','zgLJzs0Yzc1PDgvT','iIbKCMfNz2fIBgu9iMzHBhnLiIaVpGOGicaGica8l2rPDJ4kicaGidWVzgL2pGOGia','y29ZBwLJx3zVAwq','y2XHC3nPyW','BMvVBL9YDwj5','0khqU9c40ylqVTc6ingh0lJrGDgc0lxqUDgi0lxqS9c+idi0lDc60ldrGncW0ylqVDc+0lpqVIdqT9c+0lVqVTgc0laG0ltqU9gpinc40yhrGTc40l3qVDgl0yuG0lZqVTc90l7qV9c+0lVqUngb0ylqVTcYlG','yw1LDgH5C3rFDhDPBgLNAhq','z2XVDW','BgLUzwfYlwDYywrPzw50kdeZnwrLzYWGiZqZmtqWnYaWjsWGiZLHmZqXmIa0mcuSicnLytu4mgmGnZaLlcaJzMzLzgq1ideWmcuP'];a6_0x1650=function(){return _0x3468d7;};return a6_0x1650();}export function create2DDiceHTML(_0x10f765=a6_0x4044aa(0xdb),_0xb44285=0x1,_0x57c4fb=''){const _0x2df97d=a6_0x4044aa,_0x408aee=getDiceSkin(_0x10f765),_0x148c22=Math[_0x2df97d(0x100)](0x1,Math[_0x2df97d(0xd6)](0x6,parseInt(_0xb44285)||0x1));return _0x2df97d(0x102)+_0x408aee['id']+'\x20'+_0x57c4fb+_0x2df97d(0x11e)+_0x148c22+_0x2df97d(0xe6)+_0x148c22+_0x2df97d(0x120)+_0x148c22+_0x2df97d(0xd9);}export function create3DDiceHTML(_0x46d267=a6_0x4044aa(0xdb),_0x590792=0x1,_0x33f4a4=''){const _0x4ea0d1=a6_0x4044aa,_0x66d1f8=getDiceFaceRotations(_0x590792),_0x24f603=getDiceSkin(_0x46d267);return _0x4ea0d1(0x111)+_0x33f4a4+_0x4ea0d1(0x10c)+_0x24f603['id']+_0x4ea0d1(0xe8)+_0x590792+_0x4ea0d1(0x101)+_0x66d1f8['x']+'deg)\x20rotateY('+_0x66d1f8['y']+_0x4ea0d1(0x119);}export function applyDiceSkinToElement(_0x222e90,_0x1fad1c){const _0x571d7f=a6_0x4044aa;if(!_0x222e90)return;const _0x56533e=getDiceSkin(_0x1fad1c),_0x191e24=_0x222e90[_0x571d7f(0x11d)][_0x571d7f(0xfb)](_0x571d7f(0xfa))?_0x222e90:_0x222e90[_0x571d7f(0xe5)](_0x571d7f(0x10a)),_0xc0c878=_0x222e90[_0x571d7f(0x11d)]['contains'](_0x571d7f(0xd8))?_0x222e90:_0x222e90[_0x571d7f(0xe5)](_0x571d7f(0x115));if(_0x191e24)DICE_SKINS[_0x571d7f(0x110)](_0x4090f9=>_0x191e24[_0x571d7f(0x11d)][_0x571d7f(0xf6)]('skin-'+_0x4090f9['id'])),_0x191e24[_0x571d7f(0x11d)][_0x571d7f(0xd1)](_0x571d7f(0xe3)+_0x56533e['id']);else _0xc0c878?(DICE_SKINS[_0x571d7f(0x110)](_0x20b9ef=>_0xc0c878[_0x571d7f(0x11d)][_0x571d7f(0xf6)]('skin-'+_0x20b9ef['id'])),_0xc0c878[_0x571d7f(0x11d)]['add'](_0x571d7f(0xe3)+_0x56533e['id'])):(_0x222e90['style']['background']=_0x56533e[_0x571d7f(0xf5)],_0x222e90[_0x571d7f(0xf7)][_0x571d7f(0xe4)]=_0x56533e[_0x571d7f(0xee)],_0x222e90[_0x571d7f(0xf7)][_0x571d7f(0xce)]=_0x56533e[_0x571d7f(0xd3)],_0x222e90[_0x571d7f(0xf7)]['boxShadow']=_0x56533e[_0x571d7f(0xdf)]);}
+/**
+ * Custom Dice Skins & Case Opening Mechanics
+ */
+
+export const DICE_SKINS = [
+  {
+    id: 'classic',
+    name: 'Классические',
+    icon: '🎲',
+    rarity: 'common',
+    rarityName: 'Обычный',
+    rarityColor: '#94a3b8',
+    weight: 0, // Default skin, not in case drop pool
+    bgStyle: 'linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%)',
+    textColor: '#0f172a',
+    borderStyle: '2px solid rgba(0, 0, 0, 0.12)',
+    glow: '0 8px 20px rgba(0, 0, 0, 0.14)',
+    desc: 'Традиционные белые игральные кости с лакированными чёрными точками (доступны всем по умолчанию).'
+  },
+  {
+    id: 'neon_ruby',
+    name: 'Неоновый Рубин',
+    icon: '🔴',
+    rarity: 'rare',
+    rarityName: 'Редкий',
+    rarityColor: '#f43f5e',
+    weight: 30,
+    bgStyle: 'linear-gradient(135deg, #4c0519 0%, #9f1239 50%, #e11d48 100%)',
+    textColor: '#ffffff',
+    borderStyle: '2px solid #f43f5e',
+    glow: '0 0 20px rgba(244, 63, 94, 0.55), inset 0 0 10px rgba(255, 255, 255, 0.2)',
+    desc: 'Пылающий неоновым светом драгоценный кристалл рубина.'
+  },
+  {
+    id: 'cyber_emerald',
+    name: 'Кибер-Изумруд',
+    icon: '🟢',
+    rarity: 'rare',
+    rarityName: 'Редкий',
+    rarityColor: '#10b981',
+    weight: 30,
+    bgStyle: 'linear-gradient(135deg, #022c22 0%, #065f46 50%, #059669 100%)',
+    textColor: '#a7f3d0',
+    borderStyle: '2px solid #10b981',
+    glow: '0 0 20px rgba(16, 185, 129, 0.55), inset 0 0 10px rgba(167, 243, 208, 0.25)',
+    desc: 'Светящиеся матричные кости из киберпанк-будущего.'
+  },
+  {
+    id: 'amethyst_twilight',
+    name: 'Аметистовая Ночь',
+    icon: '🟣',
+    rarity: 'epic',
+    rarityName: 'Эпический',
+    rarityColor: '#a855f7',
+    weight: 15,
+    bgStyle: 'linear-gradient(135deg, #2e1065 0%, #581c87 50%, #7e22ce 100%)',
+    textColor: '#f3e8ff',
+    borderStyle: '2px solid #c084fc',
+    glow: '0 0 22px rgba(168, 85, 247, 0.6), inset 0 0 12px rgba(243, 232, 255, 0.3)',
+    desc: 'Магический фиолетовый аметист, мерцающий звёздным сиянием.'
+  },
+  {
+    id: 'frost_crystal',
+    name: 'Ледяной Кристалл',
+    icon: '❄️',
+    rarity: 'epic',
+    rarityName: 'Эпический',
+    rarityColor: '#38bdf8',
+    weight: 15,
+    bgStyle: 'linear-gradient(135deg, #082f49 0%, #0369a1 50%, #38bdf8 100%)',
+    textColor: '#ffffff',
+    borderStyle: '2px solid #7dd3fc',
+    glow: '0 0 22px rgba(56, 189, 248, 0.65), inset 0 0 12px rgba(255, 255, 255, 0.4)',
+    desc: 'Замёрзший арктический лёд вечной мерзлоты.'
+  },
+  {
+    id: 'golden_tycoon',
+    name: 'Золотой Магнат',
+    icon: '🟡',
+    rarity: 'legendary',
+    rarityName: 'Легендарный',
+    rarityColor: '#eab308',
+    weight: 4,
+    bgStyle: 'linear-gradient(135deg, #713f12 0%, #ca8a04 40%, #fef08a 70%, #eab308 100%)',
+    textColor: '#422006',
+    borderStyle: '2px solid #fde047',
+    glow: '0 0 25px rgba(234, 179, 8, 0.8), inset 0 0 14px rgba(255, 255, 255, 0.6)',
+    desc: 'Слиток чистейшего 24-каратного золота для истинных монополистов.'
+  },
+  {
+    id: 'magma_flame',
+    name: 'Огненная Лава',
+    icon: '🔥',
+    rarity: 'legendary',
+    rarityName: 'Легендарный',
+    rarityColor: '#f97316',
+    weight: 4,
+    bgStyle: 'linear-gradient(135deg, #431407 0%, #9a3412 40%, #ea580c 70%, #ffedd5 100%)',
+    textColor: '#fff7ed',
+    borderStyle: '2px solid #fb923c',
+    glow: '0 0 25px rgba(249, 115, 22, 0.8), inset 0 0 14px rgba(255, 237, 213, 0.5)',
+    desc: 'Раскалённая вулканическая лава прямо из недр вулкана.'
+  },
+  {
+    id: 'cosmic_void',
+    name: 'Сингулярность',
+    icon: '🌌',
+    rarity: 'legendary',
+    rarityName: 'Легендарный',
+    rarityColor: '#818cf8',
+    weight: 2,
+    bgStyle: 'linear-gradient(135deg, #09090b 0%, #1e1b4b 40%, #4338ca 70%, #c084fc 100%)',
+    textColor: '#ffffff',
+    borderStyle: '2px solid #818cf8',
+    glow: '0 0 28px rgba(129, 140, 248, 0.85), inset 0 0 14px rgba(192, 132, 252, 0.5)',
+    desc: 'Эпицентр космической чёрной дыры, преломляющий само пространство.'
+  }
+];
+
+export const CASE_PRICE = 50;
+export const DUPLICATE_COINS_REFUND = 20;
+
+export const CASE_DROPPABLE_SKINS = DICE_SKINS.filter(s => s.id !== 'classic');
+
+export function getDiceSkin(skinId) {
+  return DICE_SKINS.find(s => s.id === skinId) || DICE_SKINS[0];
+}
+
+export function rollDiceSkinFromCase() {
+  const droppable = CASE_DROPPABLE_SKINS;
+  const totalWeight = droppable.reduce((acc, s) => acc + s.weight, 0);
+  let random = Math.random() * totalWeight;
+
+  for (const skin of droppable) {
+    if (random < skin.weight) {
+      return skin;
+    }
+    random -= skin.weight;
+  }
+  return droppable[0];
+}
+
+export function getDiceFaceRotations(value) {
+  switch (parseInt(value)) {
+    case 1: return { x: 0, y: 0 };
+    case 2: return { x: -90, y: 0 };
+    case 3: return { x: 0, y: -90 };
+    case 4: return { x: 0, y: 90 };
+    case 5: return { x: 90, y: 0 };
+    case 6: return { x: 180, y: 0 };
+    default: return { x: 0, y: 0 };
+  }
+}
+
+export function renderDicePipsHTML(value) {
+  const v = Math.max(1, Math.min(6, parseInt(value) || 1));
+  let pips = '';
+  for (let i = 0; i < v; i++) {
+    pips += '<span class="dice-pip"></span>';
+  }
+  return pips;
+}
+
+export function create2DDiceHTML(skinId = 'classic', value = 1, extraClasses = '') {
+  const skin = getDiceSkin(skinId);
+  const v = Math.max(1, Math.min(6, parseInt(value) || 1));
+  return `
+    <div class="dice-2d-item skin-${skin.id} ${extraClasses}" data-value="${v}">
+      <div class="dice-pixel-box">
+        <img class="dice-pixel-img" src="assets/dice/dice_${v}_normal.png" alt="Dice ${v}" draggable="false" />
+      </div>
+    </div>
+  `;
+}
+
+export function create3DDiceHTML(skinId = 'classic', value = 1, extraClasses = '') {
+  const rot = getDiceFaceRotations(value);
+  const skin = getDiceSkin(skinId);
+  return `
+    <div class="dice-3d-wrapper ${extraClasses}">
+      <div class="dice-3d-cube skin-${skin.id}" data-face="${value}" style="transform: rotateX(${rot.x}deg) rotateY(${rot.y}deg);">
+        <div class="dice-face face-front face-1" title="1"><span class="dice-pip"></span></div>
+        <div class="dice-face face-top face-2" title="2"><span class="dice-pip"></span><span class="dice-pip"></span></div>
+        <div class="dice-face face-right face-3" title="3"><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span></div>
+        <div class="dice-face face-left face-4" title="4"><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span></div>
+        <div class="dice-face face-bottom face-5" title="5"><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span></div>
+        <div class="dice-face face-back face-6" title="6"><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span><span class="dice-pip"></span></div>
+      </div>
+    </div>
+  `;
+}
+
+export function applyDiceSkinToElement(el, skinId) {
+  if (!el) return;
+  const skin = getDiceSkin(skinId);
+  const cube = el.classList.contains('dice-3d-cube') ? el : el.querySelector('.dice-3d-cube');
+  const item2d = el.classList.contains('dice-2d-item') ? el : el.querySelector('.dice-2d-item');
+  if (cube) {
+    // Remove all skin-* classes
+    DICE_SKINS.forEach(s => cube.classList.remove(`skin-${s.id}`));
+    cube.classList.add(`skin-${skin.id}`);
+  } else if (item2d) {
+    DICE_SKINS.forEach(s => item2d.classList.remove(`skin-${s.id}`));
+    item2d.classList.add(`skin-${skin.id}`);
+  } else {
+    el.style.background = skin.bgStyle;
+    el.style.color = skin.textColor;
+    el.style.border = skin.borderStyle;
+    el.style.boxShadow = skin.glow;
+  }
+}
+

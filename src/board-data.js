@@ -1,1 +1,434 @@
-const a2_0x544688=a2_0x4152;(function(_0x23c9ad,_0x546ef6){const _0x19feb5=a2_0x4152,_0x1a04c3=_0x23c9ad();while(!![]){try{const _0x5791b8=parseInt(_0x19feb5(0x210))/0x1+-parseInt(_0x19feb5(0x1f9))/0x2+-parseInt(_0x19feb5(0x23b))/0x3*(-parseInt(_0x19feb5(0x1ee))/0x4)+-parseInt(_0x19feb5(0x225))/0x5+parseInt(_0x19feb5(0x239))/0x6*(parseInt(_0x19feb5(0x238))/0x7)+parseInt(_0x19feb5(0x1f8))/0x8*(-parseInt(_0x19feb5(0x1ef))/0x9)+-parseInt(_0x19feb5(0x229))/0xa;if(_0x5791b8===_0x546ef6)break;else _0x1a04c3['push'](_0x1a04c3['shift']());}catch(_0x5a1b25){_0x1a04c3['push'](_0x1a04c3['shift']());}}}(a2_0x23ef,0xc83b0));export const BOARD_TILES=[{'id':0x0,'name':a2_0x544688(0x230),'type':a2_0x544688(0x247),'icon':'🚀','desc':a2_0x544688(0x219)},{'id':0x1,'name':a2_0x544688(0x24a),'type':a2_0x544688(0x1ed),'group':'brown','icon':a2_0x544688(0x20c),'price':0x3c,'rent':[0x2,0xa,0x1e,0x5a,0xa0,0xfa],'houseCost':0x32,'mortgage':0x1e},{'id':0x2,'name':'Общественная\x20казна','type':'chest','icon':'🎁','desc':a2_0x544688(0x209)},{'id':0x3,'name':a2_0x544688(0x1fb),'type':a2_0x544688(0x1ed),'group':'brown','icon':'🌴','price':0x3c,'rent':[0x4,0x14,0x3c,0xb4,0x140,0x1c2],'houseCost':0x32,'mortgage':0x1e},{'id':0x4,'name':a2_0x544688(0x1f4),'type':a2_0x544688(0x232),'icon':'💸','taxAmount':0xc8,'desc':a2_0x544688(0x21e)},{'id':0x5,'name':a2_0x544688(0x222),'type':a2_0x544688(0x20a),'group':a2_0x544688(0x20a),'icon':'🚆','price':0xc8,'rent':[0x19,0x32,0x64,0xc8],'mortgage':0x64},{'id':0x6,'name':a2_0x544688(0x22c),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x1ea),'icon':'🏙️','price':0x64,'rent':[0x6,0x1e,0x5a,0x10e,0x190,0x226],'houseCost':0x32,'mortgage':0x32},{'id':0x7,'name':a2_0x544688(0x223),'type':'chance','icon':'❓','desc':'Возьмите\x20карточку\x20Шанса'},{'id':0x8,'name':a2_0x544688(0x21c),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x1ea),'icon':'🌲','price':0x64,'rent':[0x6,0x1e,0x5a,0x10e,0x190,0x226],'houseCost':0x32,'mortgage':0x32},{'id':0x9,'name':a2_0x544688(0x20e),'type':a2_0x544688(0x1ed),'group':'lightblue','icon':'🇺🇦','price':0x78,'rent':[0x8,0x28,0x64,0x12c,0x1c2,0x258],'houseCost':0x32,'mortgage':0x3c},{'id':0xa,'name':a2_0x544688(0x1ec),'type':a2_0x544688(0x247),'icon':'🔒','desc':a2_0x544688(0x23d)},{'id':0xb,'name':a2_0x544688(0x1f7),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x234),'icon':'🏰','price':0x8c,'rent':[0xa,0x32,0x96,0x1c2,0x271,0x2ee],'houseCost':0x64,'mortgage':0x46},{'id':0xc,'name':a2_0x544688(0x20f),'type':a2_0x544688(0x23a),'group':a2_0x544688(0x23a),'icon':'⚡','price':0x96,'desc':a2_0x544688(0x1eb),'mortgage':0x4b},{'id':0xd,'name':a2_0x544688(0x233),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x234),'icon':'🐉','price':0x8c,'rent':[0xa,0x32,0x96,0x1c2,0x271,0x2ee],'houseCost':0x64,'mortgage':0x46},{'id':0xe,'name':a2_0x544688(0x227),'type':'street','group':a2_0x544688(0x234),'icon':'⛵','price':0xa0,'rent':[0xc,0x3c,0xb4,0x1f4,0x2bc,0x384],'houseCost':0x64,'mortgage':0x50},{'id':0xf,'name':a2_0x544688(0x212),'type':'station','group':a2_0x544688(0x20a),'icon':'✈️','price':0xc8,'rent':[0x19,0x32,0x64,0xc8],'mortgage':0x64},{'id':0x10,'name':a2_0x544688(0x1f1),'type':a2_0x544688(0x1ed),'group':'orange','icon':a2_0x544688(0x200),'price':0xb4,'rent':[0xe,0x46,0xc8,0x226,0x2ee,0x3b6],'houseCost':0x64,'mortgage':0x5a},{'id':0x11,'name':'Общественная\x20казна','type':'chest','icon':'🎁','desc':a2_0x544688(0x209)},{'id':0x12,'name':a2_0x544688(0x1f3),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x1e8),'icon':'🍺','price':0xb4,'rent':[0xe,0x46,0xc8,0x226,0x2ee,0x3b6],'houseCost':0x64,'mortgage':0x5a},{'id':0x13,'name':a2_0x544688(0x207),'type':'street','group':a2_0x544688(0x1e8),'icon':'⚓','price':0xc8,'rent':[0x10,0x50,0xdc,0x258,0x320,0x3e8],'houseCost':0x64,'mortgage':0x64},{'id':0x14,'name':'Бесплатная\x20стоянка','type':a2_0x544688(0x247),'icon':'🅿️','desc':a2_0x544688(0x243)},{'id':0x15,'name':a2_0x544688(0x23c),'type':'street','group':'red','icon':'🗼','price':0xdc,'rent':[0x12,0x5a,0xfa,0x2bc,0x36b,0x41a],'houseCost':0x96,'mortgage':0x6e},{'id':0x16,'name':a2_0x544688(0x223),'type':a2_0x544688(0x246),'icon':'❓','desc':a2_0x544688(0x22b)},{'id':0x17,'name':a2_0x544688(0x201),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x202),'icon':'🌴','price':0xdc,'rent':[0x12,0x5a,0xfa,0x2bc,0x36b,0x41a],'houseCost':0x96,'mortgage':0x6e},{'id':0x18,'name':a2_0x544688(0x1f2),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x202),'icon':'🎨','price':0xf0,'rent':[0x14,0x64,0x12c,0x2ee,0x39d,0x44c],'houseCost':0x96,'mortgage':0x78},{'id':0x19,'name':a2_0x544688(0x228),'type':a2_0x544688(0x20a),'group':'station','icon':'🚆','price':0xc8,'rent':[0x19,0x32,0x64,0xc8],'mortgage':0x64},{'id':0x1a,'name':a2_0x544688(0x235),'type':'street','group':a2_0x544688(0x224),'icon':'🎡','price':0x104,'rent':[0x16,0x6e,0x14a,0x320,0x3cf,0x47e],'houseCost':0x96,'mortgage':0x82},{'id':0x1b,'name':a2_0x544688(0x21a),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x224),'icon':'🎓','price':0x104,'rent':[0x16,0x6e,0x14a,0x320,0x3cf,0x47e],'houseCost':0x96,'mortgage':0x82},{'id':0x1c,'name':a2_0x544688(0x22f),'type':a2_0x544688(0x23a),'group':a2_0x544688(0x23a),'icon':'🚰','price':0x96,'desc':a2_0x544688(0x1eb),'mortgage':0x4b},{'id':0x1d,'name':'Ливерпуль','type':a2_0x544688(0x1ed),'group':'yellow','icon':'🎸','price':0x118,'rent':[0x18,0x78,0x168,0x352,0x401,0x4b0],'houseCost':0x96,'mortgage':0x8c},{'id':0x1e,'name':a2_0x544688(0x1fa),'type':a2_0x544688(0x247),'icon':'👮','desc':a2_0x544688(0x205)},{'id':0x1f,'name':a2_0x544688(0x211),'type':a2_0x544688(0x1ed),'group':'green','icon':'🗼','price':0x12c,'rent':[0x1a,0x82,0x186,0x384,0x44c,0x4fb],'houseCost':0xc8,'mortgage':0x96},{'id':0x20,'name':a2_0x544688(0x23e),'type':'street','group':a2_0x544688(0x237),'icon':'⛩️','price':0x12c,'rent':[0x1a,0x82,0x186,0x384,0x44c,0x4fb],'houseCost':0xc8,'mortgage':0x96},{'id':0x21,'name':a2_0x544688(0x244),'type':'chest','icon':'🎁','desc':'Возьмите\x20карточку\x20Казны'},{'id':0x22,'name':a2_0x544688(0x217),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x237),'icon':'🏯','price':0x140,'rent':[0x1c,0x96,0x1c2,0x3e8,0x4b0,0x578],'houseCost':0xc8,'mortgage':0xa0},{'id':0x23,'name':a2_0x544688(0x208),'type':'station','group':a2_0x544688(0x20a),'icon':'🚢','price':0xc8,'rent':[0x19,0x32,0x64,0xc8],'mortgage':0x64},{'id':0x24,'name':a2_0x544688(0x223),'type':a2_0x544688(0x246),'icon':'❓','desc':a2_0x544688(0x22b)},{'id':0x25,'name':'Крещатик','type':'street','group':'darkblue','icon':a2_0x544688(0x200),'price':0x15e,'rent':[0x23,0xaf,0x1f4,0x44c,0x514,0x5dc],'houseCost':0xc8,'mortgage':0xaf},{'id':0x26,'name':'Налог\x20на\x20роскошь','type':a2_0x544688(0x232),'icon':'💎','taxAmount':0x64,'desc':a2_0x544688(0x204)},{'id':0x27,'name':a2_0x544688(0x20e),'type':a2_0x544688(0x1ed),'group':a2_0x544688(0x21f),'icon':'👑','price':0x190,'rent':[0x32,0xc8,0x258,0x578,0x6a4,0x7d0],'houseCost':0xc8,'mortgage':0xc8}];export const COLOR_GROUPS={'brown':{'name':a2_0x544688(0x241),'count':0x2,'color':a2_0x544688(0x24b)},'lightblue':{'name':a2_0x544688(0x203),'count':0x3,'color':a2_0x544688(0x1f5)},'pink':{'name':'Польша','count':0x3,'color':a2_0x544688(0x23f)},'orange':{'name':'Германия','count':0x3,'color':'#f97316'},'red':{'name':a2_0x544688(0x1f0),'count':0x3,'color':a2_0x544688(0x1f6)},'yellow':{'name':'Великобритания','count':0x3,'color':a2_0x544688(0x216)},'green':{'name':a2_0x544688(0x245),'count':0x3,'color':'#10b981'},'darkblue':{'name':a2_0x544688(0x242),'count':0x2,'color':'#3b82f6'},'station':{'name':a2_0x544688(0x22e),'count':0x4,'color':a2_0x544688(0x226)},'utility':{'name':a2_0x544688(0x249),'count':0x2,'color':'#94a3b8'}};function a2_0x4152(_0x187b5f,_0xcb250e){_0x187b5f=_0x187b5f-0x1e7;const _0x23ef7d=a2_0x23ef();let _0x415276=_0x23ef7d[_0x187b5f];if(a2_0x4152['dvnClG']===undefined){var _0x2c7881=function(_0x3c6d8a){const _0x338184='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xe9e4ca='',_0x4c4fa4='';for(let _0x54f6e7=0x0,_0x2d9bd0,_0x3f8670,_0x12c4df=0x0;_0x3f8670=_0x3c6d8a['charAt'](_0x12c4df++);~_0x3f8670&&(_0x2d9bd0=_0x54f6e7%0x4?_0x2d9bd0*0x40+_0x3f8670:_0x3f8670,_0x54f6e7++%0x4)?_0xe9e4ca+=String['fromCharCode'](0xff&_0x2d9bd0>>(-0x2*_0x54f6e7&0x6)):0x0){_0x3f8670=_0x338184['indexOf'](_0x3f8670);}for(let _0x522eff=0x0,_0x2443e6=_0xe9e4ca['length'];_0x522eff<_0x2443e6;_0x522eff++){_0x4c4fa4+='%'+('00'+_0xe9e4ca['charCodeAt'](_0x522eff)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x4c4fa4);};a2_0x4152['KaDHmV']=_0x2c7881,a2_0x4152['dDXFek']={},a2_0x4152['dvnClG']=!![];}const _0x55caba=_0x23ef7d[0x0];a2_0x4152['KQePaW']!==_0x55caba&&(a2_0x4152['dDXFek']={},a2_0x4152['KQePaW']=_0x55caba);const _0x526da6=a2_0x4152['dDXFek'][_0x187b5f];return _0x526da6===undefined?(_0x415276=a2_0x4152['KaDHmV'](_0x415276),a2_0x4152['dDXFek'][_0x187b5f]=_0x415276):_0x415276=_0x526da6,_0x415276;}function a2_0x23ef(){const _0x5757ed=['0klqVTc/incH0ylqVTc70lJrHTgl','0j7rGTc00yVrHsdqUnc70lGG0jtqTTc10lRqV9c+0yi','0j7qSDgj0lxrGDgc0llqTDc90l3qSngpinc60ldqT9c90la','0k/qV9c+0l3qUngp','y2HHBMnL','y29YBMvY','y2HFmq','0khqU9gd0lBqSDgl','0jdqVDcW0l/qSa','iZHcnduXmW','y2HFmG','CMvJzwL2zv9JyxnO','B3jHBMDL','Cgf5x2nHC2G','BgLNAhrIBhvL','nhGG0lJqU9c4ideWEcdqSDga0l7rGDc60laG0lRrG9cX0lJqUTc+0li','0klrJTga0yZqVncWic8G0jlqUnc30lJrGG','C3rYzwv0','mta4oty1mKrPAhjNyG','mZz2BgLnEgC','0ktrGncW0l3rHTc40y8','0jhqTDga0lVqUnc9','0jVqUnc+0l0','0jZrJTc90yxqTDc9','0j/qVTc00l7rHDc+0ltqVDgl0lKG0l3qSnc70l7qSW','iZm4yMrMoa','i2vMndq0na','0jlqSnga0yJqSncY0la','nZG1otG0yxrpA3jw','mtqZmta0tu5NDvrW','0jiG0ylrJTga0yZqVngdiq','0khqVTgh0lG','0jhqSnc90lOG0llrI9c/0lVqSngh0lJqSTcW0lxrGIdqSTcW0lWG0ltqUncY0lJqTnc10l3qTnglicq1mc4','0jlrIYdqSTgl0lJqS9ga0ldqU9c4incYinc70l7rGTc10ydqTDgooIdqV9c+0lVrG9gh0lJrGTc1icqXmdaU','0j7rGTc/0ydqSncY0lVrJ9c50ylqTDgb0yWG0l3qScdqUTc70lxrGTc60ymG0jlqN9cv0kdqGDculIdqN9c+0lVrG9gh0lJrGTc1inc/0ydqTDc80lJrJIaKmJaWlG','0jhqTDgb0l/qU9cW0ylqVDc+0luG0l7rGDcY0l7qSDc+0lBqTnc10l3qUnc1inc40lCG0klrJTga0yZqVngllG','8j+pM++4JW','0j3qUngg0yBqSa','CMvK','0kpqUTga0ldqUnc90la','0jFqSnc/0lVqSngc0lJrGTc1icqXmda','0j/rGngp0lZqUnc60l7qVcdqT9cWinga0lxrIngr0ylqUTgd','y2HFmW','0jpqSnc80lhrG9ga0lm','0jFqSnc/0ldqTnc90yVqUsdqSTc+0lRqT9cW0lS','0jlqVTc30yZqVnc40ylqTsdqUTcW0ydrGTc+0yFqUTgdincA0ldqT9c90yS','C3rHDgLVBG','y2nFmW','8j+pLU+4JW','0khqSDc+0yaG0l3qScdrGnc10lZqVTc90yiG0ltqVTga0l7qSZOG0lFqSnc/0lVqSngc0lJrGTc1icqYns4','0jRqUnc10li','0k3qVDc10ydqS9c+0yhqTDgc0yW','mti4mJm5oeLkquPyAa','0klqVTc60lJqVG','0k7qTTc90yVqUsdqSTc+0lRqT9cW0lS','z29FDg9FAMfPBa','0jlqSnc8inc90ldrH9c40yhqU9c10l3rIYdqV9ga0l7rHTc10l3rGTglinc/0l4G0llqUTc70ldqTngdoIdqV9c+0lVrG9gh0lJrGTc1icqXmdaU','y2nFmG','i2vHyJmWoa','0j7rGDcW0lRqSa','ywr2yw5Jzv9NBW','0j/qVTc70yprH9c40ylqTsdqV9ga0lxqVnc40y4G0lFqScdqV9ga0l7rHDc+0lBqTnc10l3qUnc1','0j7qUTgb0ytqVTga0lq','0j7rGTc/0ydqSncY0lVrJ9c50ylqTDgb0yWG0l/rGngp0lZqUnc60l7qVcdqSIdqOTgo0ydrJnc80ymU','0jhrGnc+0llqSnga0yS','0jhqSnc90lRqVTcY0yhqUTcW0y8G0l7rInc40lhqUTcWincYincY0ldrIngdinc/0l7qU9gm0lFrGY4G0j/qVTc70yprH9c40ylqTsaKmJaWlG','0jFqSnc/0lVqSngc0lJrGTc1icqYmdaG0l3qSnc70l7qS9cW','zgfYA2jSDwu','0kJrGTga0ldrHcdqT9cWinc/0ldrGnc60l7qSTc60ym6inc30ldqV9c70ldrGTc40ylqTsaKmJaU','y2nFmq','0khqTDcY0lxrGnc90yVqUsdqSTc+0lRqT9cW0lS','0kJqSnc90ye','EwvSBg93','ndK3ndu0nw5kuhLytW','iZy0nZq4yG','0jpqTncW0l3rJngb0lO','0jlqVTgb0ylqVTgh0l3rI9c5incY0l7qUTc30ldqUW','nZm0mZu0mfr1B01dqW','0j7qV9c70ldrGTcWingb0ylrGncW0yxqVTcY0lRqUc4G0jFqSnc/0lVqSngc0lJrGTc1icq1mc4','0jlqVTc30yZqVnc40ylqTsdqUTcW0ydrGTc+0yFqUTgdincO0ldqVDgb0la','0klrGnc+0lxrIDc40l3qSa','y2nFnq','0klrGncW0l3rGDc/0l7rGngc','0jlqVTc00l7qUTcW0l3qSnc7','0jlqN9cv0kdqGDcu','y2HFna','Dgf4','0jRrGncW0lRqVTcY','CgLUAW','0jVqVTc90ltqVTc9','y2HFnG','z3jLzw4','odmWnZa4ow5UCgfQtG','nKPmBMXsvq','DxrPBgL0Eq','nK1NAuzoqG','0j/qSnga0lJqTG','0j/rGnc+0yhrGTc+0luG0l/qVTgb0lxrIDc10l3qUnc1inc40lVqUcdqVTgc0lhrI9cY0ldqVDc40lu','0jRqUnc+0ylqVG','i2vJndG5oq','0kJrGTga0ldrHcdqT9cWinc/0ydqTDcY0yVrInc10l3qUnc1ingb0lRqVTga0l7rGDgc0lG6inc30ldqV9c70ldrGTc40ylqTsaKmtuU','0kFqTDga0l3qVTc80l7rGngm0lu'];a2_0x23ef=function(){return _0x5757ed;};return a2_0x23ef();}export const CHANCE_CARDS=[{'id':a2_0x544688(0x248),'text':a2_0x544688(0x1fe),'action':a2_0x544688(0x218)},{'id':a2_0x544688(0x24c),'text':a2_0x544688(0x1fc),'action':a2_0x544688(0x1e7),'amount':0x32},{'id':a2_0x544688(0x206),'text':a2_0x544688(0x240),'action':a2_0x544688(0x1e9),'amount':0xf},{'id':a2_0x544688(0x231),'text':a2_0x544688(0x21b),'action':a2_0x544688(0x213)},{'id':'ch_5','text':a2_0x544688(0x1fd),'action':a2_0x544688(0x1e7),'amount':0x64},{'id':a2_0x544688(0x236),'text':'Оплата\x20услуг\x20врача:\x20заплатите\x20$50.','action':a2_0x544688(0x1e9),'amount':0x32},{'id':'ch_7','text':a2_0x544688(0x1ff),'action':'jail_free_card'}];export const CHEST_CARDS=[{'id':a2_0x544688(0x221),'text':a2_0x544688(0x21d),'action':a2_0x544688(0x1e7),'amount':0xc8},{'id':a2_0x544688(0x215),'text':a2_0x544688(0x22a),'action':a2_0x544688(0x1e9),'amount':0x32},{'id':a2_0x544688(0x20b),'text':'Возврат\x20подоходного\x20налога.\x20Получите\x20$20.','action':a2_0x544688(0x1e7),'amount':0x14},{'id':'cc_4','text':a2_0x544688(0x20d),'action':a2_0x544688(0x1e9),'amount':0x19},{'id':a2_0x544688(0x22d),'text':a2_0x544688(0x214),'action':a2_0x544688(0x1e7),'amount':0x64},{'id':'cc_6','text':a2_0x544688(0x220),'action':a2_0x544688(0x1e9),'amount':0x14}];
+/**
+ * 40 Board Tiles & Configuration — Countries & Cities Edition
+ * Organized by Countries with iconic, concise names that fit all screen sizes!
+ */
+
+export const BOARD_TILES = [
+  // Bottom Row: 0 -> 10 (Right to Left / Bottom side of board)
+  {
+    id: 0,
+    name: 'ВПЕРЁД',
+    type: 'corner',
+    icon: '🚀',
+    desc: 'Получите премию за прохождение'
+  },
+  {
+    id: 1,
+    name: 'Анапа',
+    type: 'street',
+    group: 'brown',
+    icon: '🏖️',
+    price: 60,
+    rent: [2, 10, 30, 90, 160, 250],
+    houseCost: 50,
+    mortgage: 30
+  },
+  {
+    id: 2,
+    name: 'Общественная казна',
+    type: 'chest',
+    icon: '🎁',
+    desc: 'Возьмите карточку Казны'
+  },
+  {
+    id: 3,
+    name: 'Сочи',
+    type: 'street',
+    group: 'brown',
+    icon: '🌴',
+    price: 60,
+    rent: [4, 20, 60, 180, 320, 450],
+    houseCost: 50,
+    mortgage: 30
+  },
+  {
+    id: 4,
+    name: 'Подоходный налог',
+    type: 'tax',
+    icon: '💸',
+    taxAmount: 200,
+    desc: 'Заплатите $200 налога'
+  },
+  {
+    id: 5,
+    name: 'Северный вокзал',
+    type: 'station',
+    group: 'station',
+    icon: '🚆',
+    price: 200,
+    rent: [25, 50, 100, 200],
+    mortgage: 100
+  },
+  {
+    id: 6,
+    name: 'Троещина',
+    type: 'street',
+    group: 'lightblue',
+    icon: '🏙️',
+    price: 100,
+    rent: [6, 30, 90, 270, 400, 550],
+    houseCost: 50,
+    mortgage: 50
+  },
+  {
+    id: 7,
+    name: 'Шанс',
+    type: 'chance',
+    icon: '❓',
+    desc: 'Возьмите карточку Шанса'
+  },
+  {
+    id: 8,
+    name: 'Бровары',
+    type: 'street',
+    group: 'lightblue',
+    icon: '🌲',
+    price: 100,
+    rent: [6, 30, 90, 270, 400, 550],
+    houseCost: 50,
+    mortgage: 50
+  },
+  {
+    id: 9,
+    name: 'Киев',
+    type: 'street',
+    group: 'lightblue',
+    icon: '🇺🇦',
+    price: 120,
+    rent: [8, 40, 100, 300, 450, 600],
+    houseCost: 50,
+    mortgage: 60
+  },
+  {
+    id: 10,
+    name: 'Тюрьма / Визит',
+    type: 'corner',
+    icon: '🔒',
+    desc: 'Простое посещение или отбывание'
+  },
+
+  // Left Row: 11 -> 19 (Bottom to Top)
+  {
+    id: 11,
+    name: 'Варшава',
+    type: 'street',
+    group: 'pink',
+    icon: '🏰',
+    price: 140,
+    rent: [10, 50, 150, 450, 625, 750],
+    houseCost: 100,
+    mortgage: 70
+  },
+  {
+    id: 12,
+    name: 'Энергосеть',
+    type: 'utility',
+    group: 'utility',
+    icon: '⚡',
+    price: 150,
+    desc: '4x или 10x броска кубиков',
+    mortgage: 75
+  },
+  {
+    id: 13,
+    name: 'Краков',
+    type: 'street',
+    group: 'pink',
+    icon: '🐉',
+    price: 140,
+    rent: [10, 50, 150, 450, 625, 750],
+    houseCost: 100,
+    mortgage: 70
+  },
+  {
+    id: 14,
+    name: 'Гданьск',
+    type: 'street',
+    group: 'pink',
+    icon: '⛵',
+    price: 160,
+    rent: [12, 60, 180, 500, 700, 900],
+    houseCost: 100,
+    mortgage: 80
+  },
+  {
+    id: 15,
+    name: 'Южный вокзал',
+    type: 'station',
+    group: 'station',
+    icon: '✈️',
+    price: 200,
+    rent: [25, 50, 100, 200],
+    mortgage: 100
+  },
+  {
+    id: 16,
+    name: 'Берлин',
+    type: 'street',
+    group: 'orange',
+    icon: '🏛️',
+    price: 180,
+    rent: [14, 70, 200, 550, 750, 950],
+    houseCost: 100,
+    mortgage: 90
+  },
+  {
+    id: 17,
+    name: 'Общественная казна',
+    type: 'chest',
+    icon: '🎁',
+    desc: 'Возьмите карточку Казны'
+  },
+  {
+    id: 18,
+    name: 'Мюнхен',
+    type: 'street',
+    group: 'orange',
+    icon: '🍺',
+    price: 180,
+    rent: [14, 70, 200, 550, 750, 950],
+    houseCost: 100,
+    mortgage: 90
+  },
+  {
+    id: 19,
+    name: 'Гамбург',
+    type: 'street',
+    group: 'orange',
+    icon: '⚓',
+    price: 200,
+    rent: [16, 80, 220, 600, 800, 1000],
+    houseCost: 100,
+    mortgage: 100
+  },
+  {
+    id: 20,
+    name: 'Бесплатная стоянка',
+    type: 'corner',
+    icon: '🅿️',
+    desc: 'Отдых или Джекпот'
+  },
+
+  // Top Row: 21 -> 29 (Left to Right)
+  {
+    id: 21,
+    name: 'Париж',
+    type: 'street',
+    group: 'red',
+    icon: '🗼',
+    price: 220,
+    rent: [18, 90, 250, 700, 875, 1050],
+    houseCost: 150,
+    mortgage: 110
+  },
+  {
+    id: 22,
+    name: 'Шанс',
+    type: 'chance',
+    icon: '❓',
+    desc: 'Возьмите карточку Шанса'
+  },
+  {
+    id: 23,
+    name: 'Ницца',
+    type: 'street',
+    group: 'red',
+    icon: '🌴',
+    price: 220,
+    rent: [18, 90, 250, 700, 875, 1050],
+    houseCost: 150,
+    mortgage: 110
+  },
+  {
+    id: 24,
+    name: 'Лион',
+    type: 'street',
+    group: 'red',
+    icon: '🎨',
+    price: 240,
+    rent: [20, 100, 300, 750, 925, 1100],
+    houseCost: 150,
+    mortgage: 120
+  },
+  {
+    id: 25,
+    name: 'Восточный вокзал',
+    type: 'station',
+    group: 'station',
+    icon: '🚆',
+    price: 200,
+    rent: [25, 50, 100, 200],
+    mortgage: 100
+  },
+  {
+    id: 26,
+    name: 'Лондон',
+    type: 'street',
+    group: 'yellow',
+    icon: '🎡',
+    price: 260,
+    rent: [22, 110, 330, 800, 975, 1150],
+    houseCost: 150,
+    mortgage: 130
+  },
+  {
+    id: 27,
+    name: 'Оксфорд',
+    type: 'street',
+    group: 'yellow',
+    icon: '🎓',
+    price: 260,
+    rent: [22, 110, 330, 800, 975, 1150],
+    houseCost: 150,
+    mortgage: 130
+  },
+  {
+    id: 28,
+    name: 'Водоканал',
+    type: 'utility',
+    group: 'utility',
+    icon: '🚰',
+    price: 150,
+    desc: '4x или 10x броска кубиков',
+    mortgage: 75
+  },
+  {
+    id: 29,
+    name: 'Ливерпуль',
+    type: 'street',
+    group: 'yellow',
+    icon: '🎸',
+    price: 280,
+    rent: [24, 120, 360, 850, 1025, 1200],
+    houseCost: 150,
+    mortgage: 140
+  },
+  {
+    id: 30,
+    name: 'В тюрьму!',
+    type: 'corner',
+    icon: '👮',
+    desc: 'Прямиком за решётку'
+  },
+
+  // Right Row: 31 -> 39 (Top to Bottom)
+  {
+    id: 31,
+    name: 'Токио',
+    type: 'street',
+    group: 'green',
+    icon: '🗼',
+    price: 300,
+    rent: [26, 130, 390, 900, 1100, 1275],
+    houseCost: 200,
+    mortgage: 150
+  },
+  {
+    id: 32,
+    name: 'Киото',
+    type: 'street',
+    group: 'green',
+    icon: '⛩️',
+    price: 300,
+    rent: [26, 130, 390, 900, 1100, 1275],
+    houseCost: 200,
+    mortgage: 150
+  },
+  {
+    id: 33,
+    name: 'Общественная казна',
+    type: 'chest',
+    icon: '🎁',
+    desc: 'Возьмите карточку Казны'
+  },
+  {
+    id: 34,
+    name: 'Осака',
+    type: 'street',
+    group: 'green',
+    icon: '🏯',
+    price: 320,
+    rent: [28, 150, 450, 1000, 1200, 1400],
+    houseCost: 200,
+    mortgage: 160
+  },
+  {
+    id: 35,
+    name: 'Западный вокзал',
+    type: 'station',
+    group: 'station',
+    icon: '🚢',
+    price: 200,
+    rent: [25, 50, 100, 200],
+    mortgage: 100
+  },
+  {
+    id: 36,
+    name: 'Шанс',
+    type: 'chance',
+    icon: '❓',
+    desc: 'Возьмите карточку Шанса'
+  },
+  {
+    id: 37,
+    name: 'Крещатик',
+    type: 'street',
+    group: 'darkblue',
+    icon: '🏛️',
+    price: 350,
+    rent: [35, 175, 500, 1100, 1300, 1500],
+    houseCost: 200,
+    mortgage: 175
+  },
+  {
+    id: 38,
+    name: 'Налог на роскошь',
+    type: 'tax',
+    icon: '💎',
+    taxAmount: 100,
+    desc: 'Заплатите $100'
+  },
+  {
+    id: 39,
+    name: 'Киев',
+    type: 'street',
+    group: 'darkblue',
+    icon: '👑',
+    price: 400,
+    rent: [50, 200, 600, 1400, 1700, 2000],
+    houseCost: 200,
+    mortgage: 200
+  }
+];
+
+export const COLOR_GROUPS = {
+  brown: { name: 'Черноморье', count: 2, color: '#8B4513' },
+  lightblue: { name: 'Украина', count: 3, color: '#38bdf8' },
+  pink: { name: 'Польша', count: 3, color: '#ec4899' },
+  orange: { name: 'Германия', count: 3, color: '#f97316' },
+  red: { name: 'Франция', count: 3, color: '#ef4444' },
+  yellow: { name: 'Великобритания', count: 3, color: '#eab308' },
+  green: { name: 'Япония', count: 3, color: '#10b981' },
+  darkblue: { name: 'Топ Столицы', count: 2, color: '#3b82f6' },
+  station: { name: 'Транспорт', count: 4, color: '#64748b' },
+  utility: { name: 'Службы', count: 2, color: '#94a3b8' }
+};
+
+export const CHANCE_CARDS = [
+  { id: 'ch_1', text: 'Отправляйтесь на клетку ВПЕРЁД. Получите премию $200.', action: 'advance_go' },
+  { id: 'ch_2', text: 'Банк выплачивает вам дивиденды $50.', action: 'receive_cash', amount: 50 },
+  { id: 'ch_3', text: 'Штраф за превышение скорости: заплатите $15.', action: 'pay_cash', amount: 15 },
+  { id: 'ch_4', text: 'Отправляйтесь прямиком в Тюрьму.', action: 'go_to_jail' },
+  { id: 'ch_5', text: 'Вы выиграли в лотерею: получите $100.', action: 'receive_cash', amount: 100 },
+  { id: 'ch_6', text: 'Оплата услуг врача: заплатите $50.', action: 'pay_cash', amount: 50 },
+  { id: 'ch_7', text: 'Бесплатное освобождение из Тюрьмы.', action: 'jail_free_card' }
+];
+
+export const CHEST_CARDS = [
+  { id: 'cc_1', text: 'Банковская ошибка в вашу пользу. Получите $200.', action: 'receive_cash', amount: 200 },
+  { id: 'cc_2', text: 'Оплата страховки. Заплатите $50.', action: 'pay_cash', amount: 50 },
+  { id: 'cc_3', text: 'Возврат подоходного налога. Получите $20.', action: 'receive_cash', amount: 20 },
+  { id: 'cc_4', text: 'Сбор на ремонт дорог: заплатите $25.', action: 'pay_cash', amount: 25 },
+  { id: 'cc_5', text: 'Вам начислены проценты по вкладу: получите $100.', action: 'receive_cash', amount: 100 },
+  { id: 'cc_6', text: 'Штраф за парковку: заплатите $20.', action: 'pay_cash', amount: 20 }
+];
