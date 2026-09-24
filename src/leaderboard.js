@@ -2,7 +2,7 @@
  * Leaderboard & Ranking Manager for Pixel Monopoly
  * Tracks strictly real players (local profile, peers from multiplayer, games played)
  */
-import { profileManager, getTokenEmoji } from './profile.js?v=8.5.0';
+import { profileManager, getTokenEmoji } from './profile.js?v=8.5.1';
 
 // List of legacy fictional names and test accounts to permanently filter out
 const FICTIONAL_NAMES = new Set([

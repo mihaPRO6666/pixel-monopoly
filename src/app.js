@@ -2,23 +2,23 @@
  * Main Application Orchestrator
  */
 
-import { engine } from './engine.js?v=8.5.0';
-import { ui, showToast, showConfirm } from './ui.js?v=8.5.0';
-import { network } from './network.js?v=8.5.0';
-import { sound } from './audio.js?v=8.5.0';
-import { themeManager, THEMES } from './theme.js?v=8.5.0';
-import { profileManager, AVAILABLE_TOKENS, PLAYER_COLORS, NICKNAME_COLORS, PROFILE_BACKGROUNDS, getProfileBg, getTokenEmoji, getTokenName, renderTokenHTML, isDevUser } from './profile.js?v=8.5.0';
-import { GAME_PRESETS, getPresetById } from './presets.js?v=8.5.0';
-import { BOARD_TILES, COLOR_GROUPS } from './board-data.js?v=8.5.0';
-import { leaderboardManager, isPlayerRegistered } from './leaderboard.js?v=8.5.0';
-import { DICE_SKINS, CASE_DROPPABLE_SKINS, CASE_PRICE, DUPLICATE_COINS_REFUND, getDiceSkin, rollDiceSkinFromCase, applyDiceSkinToElement, create2DDiceHTML, create3DDiceHTML, getDiceFaceRotations } from './dice-skins.js?v=8.5.0';
-import { sendMatchFinishedWebhook } from './webhook.js?v=8.5.0';
-import { TITLES, getTitleById, formatTitleBadge, getTitleProgressRatio } from './titles.js?v=8.5.0';
-import { pawnEditor } from './pawn-editor.js?v=8.5.0';
-import { matchHistoryManager } from './history.js?v=8.5.0';
-import { MAP_THEMES, getMapThemeById, getThemedTileData } from './map-themes.js?v=8.5.0';
-import { generateThematicTiles } from './city-generator.js?v=8.5.0';
-import { cloudSync } from './cloud-sync.js?v=8.5.0';
+import { engine } from './engine.js?v=8.5.1';
+import { ui, showToast, showConfirm } from './ui.js?v=8.5.1';
+import { network } from './network.js?v=8.5.1';
+import { sound } from './audio.js?v=8.5.1';
+import { themeManager, THEMES } from './theme.js?v=8.5.1';
+import { profileManager, AVAILABLE_TOKENS, PLAYER_COLORS, NICKNAME_COLORS, PROFILE_BACKGROUNDS, getProfileBg, getTokenEmoji, getTokenName, renderTokenHTML, isDevUser } from './profile.js?v=8.5.1';
+import { GAME_PRESETS, getPresetById } from './presets.js?v=8.5.1';
+import { BOARD_TILES, COLOR_GROUPS } from './board-data.js?v=8.5.1';
+import { leaderboardManager, isPlayerRegistered } from './leaderboard.js?v=8.5.1';
+import { DICE_SKINS, CASE_DROPPABLE_SKINS, CASE_PRICE, DUPLICATE_COINS_REFUND, getDiceSkin, rollDiceSkinFromCase, applyDiceSkinToElement, create2DDiceHTML, create3DDiceHTML, getDiceFaceRotations } from './dice-skins.js?v=8.5.1';
+import { sendMatchFinishedWebhook } from './webhook.js?v=8.5.1';
+import { TITLES, getTitleById, formatTitleBadge, getTitleProgressRatio } from './titles.js?v=8.5.1';
+import { pawnEditor } from './pawn-editor.js?v=8.5.1';
+import { matchHistoryManager } from './history.js?v=8.5.1';
+import { MAP_THEMES, getMapThemeById, getThemedTileData } from './map-themes.js?v=8.5.1';
+import { generateThematicTiles } from './city-generator.js?v=8.5.1';
+import { cloudSync } from './cloud-sync.js?v=8.5.1';
 
 class App {
   constructor() {
@@ -1820,7 +1820,14 @@ class App {
 
     const cardName = document.getElementById('profile-card-name');
     if (cardName) {
-      cardName.innerText = (p.name && p.name !== 'Гость') ? p.name : (isRegistered ? p.name : 'Гость');
+      // Always prefer the explicitly saved custom nickname over whatever is in profile.name
+      const savedNick = (() => { try { return localStorage.getItem('monopoly_custom_nickname'); } catch(e) { return null; } })();
+      if (savedNick && savedNick.trim()) {
+        p.name = savedNick.trim();
+        p.customName = savedNick.trim();
+      }
+      const displayName = (p.name && p.name !== 'Гость') ? p.name : (isRegistered ? p.name : 'Гость');
+      cardName.innerText = displayName;
       if (p.nameColor || p.color) {
         cardName.style.color = p.nameColor || p.color;
       }

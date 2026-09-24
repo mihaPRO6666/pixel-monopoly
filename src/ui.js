@@ -3,7 +3,7 @@
  */
 
 import { BOARD_TILES, COLOR_GROUPS } from './board-data.js';
-import { AVAILABLE_TOKENS, PLAYER_COLORS, profileManager, getTokenEmoji, renderTokenHTML, getProfileBg } from './profile.js?v=8.5.0';
+import { AVAILABLE_TOKENS, PLAYER_COLORS, profileManager, getTokenEmoji, renderTokenHTML, getProfileBg } from './profile.js?v=8.5.1';
 import { GAME_PRESETS, getPresetById } from './presets.js';
 import { sound } from './audio.js';
 import { applyDiceSkinToElement, getDiceSkin, create2DDiceHTML, renderDicePipsHTML } from './dice-skins.js';
