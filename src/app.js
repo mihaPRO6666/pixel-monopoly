@@ -2858,7 +2858,10 @@ class App {
       e.preventDefault();
       const newName = document.getElementById('input-profile-name')?.value;
       if (newName && newName.trim()) {
-        profileManager.updateName(newName.trim());
+        const clean = profileManager.updateName(newName.trim());
+        if (window.cloudSync) {
+          window.cloudSync.push({ name: clean, customName: clean, timestamp: Date.now() });
+        }
       }
       const customTokenVal = profileManager.profile.token === 'custom' ? profileManager.profile.customToken : null;
       leaderboardManager.syncMyRecord();
@@ -4761,6 +4764,12 @@ class App {
       chip.addEventListener('click', () => {
         sound.playClick();
         const selectedToken = chip.getAttribute('data-token');
+        const nameInput = document.getElementById('input-profile-name');
+        if (nameInput && nameInput.value && nameInput.value.trim()) {
+          profileManager.profile.name = nameInput.value.trim();
+          profileManager.profile.customName = nameInput.value.trim();
+          try { localStorage.setItem('monopoly_custom_nickname', nameInput.value.trim()); } catch (e) {}
+        }
         profileManager.updateToken(selectedToken);
         leaderboardManager.syncMyRecord();
         this.renderTokenPicker();
@@ -4819,6 +4828,12 @@ class App {
       item.addEventListener('click', () => {
         sound.playClick();
         const bgId = item.getAttribute('data-bg-id');
+        const nameInput = document.getElementById('input-profile-name');
+        if (nameInput && nameInput.value && nameInput.value.trim()) {
+          profileManager.profile.name = nameInput.value.trim();
+          profileManager.profile.customName = nameInput.value.trim();
+          try { localStorage.setItem('monopoly_custom_nickname', nameInput.value.trim()); } catch (e) {}
+        }
         profileManager.updateBg(bgId);
         this.renderBgPicker();
         this.renderProfileCard();
@@ -4877,6 +4892,12 @@ class App {
       item.addEventListener('click', () => {
         sound.playClick();
         const titleId = item.getAttribute('data-title-id');
+        const nameInput = document.getElementById('input-profile-name');
+        if (nameInput && nameInput.value && nameInput.value.trim()) {
+          profileManager.profile.name = nameInput.value.trim();
+          profileManager.profile.customName = nameInput.value.trim();
+          try { localStorage.setItem('monopoly_custom_nickname', nameInput.value.trim()); } catch (e) {}
+        }
         profileManager.equipTitle(titleId);
         this.renderTitlePicker();
         this.renderProfileCard();
@@ -4920,7 +4941,7 @@ class App {
       if (triggerBtn) triggerBtn.style.background = color;
       if (previewText) {
         previewText.style.color = color;
-        previewText.innerText = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (profileManager.profile.name || 'hizuhara.');
+        previewText.innerText = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (profileManager.profile.name || 'Игрок');
       }
       if (summaryColor) {
         const found = NICKNAME_COLORS.find(c => c.color.toLowerCase() === color.toLowerCase());
@@ -4938,8 +4959,16 @@ class App {
 
     if (nameInput) {
       nameInput.oninput = () => {
+        const val = nameInput.value.trim();
         if (previewText) {
-          previewText.innerText = nameInput.value.trim() || 'hizuhara.';
+          previewText.innerText = val || profileManager.profile.name || 'Игрок';
+        }
+        if (val) {
+          profileManager.profile.name = val;
+          profileManager.profile.customName = val;
+          try {
+            localStorage.setItem('monopoly_custom_nickname', val);
+          } catch (e) {}
         }
       };
     }
@@ -4956,6 +4985,11 @@ class App {
         btn.addEventListener('click', () => {
           sound.playClick();
           const chosen = btn.getAttribute('data-color');
+          if (nameInput && nameInput.value && nameInput.value.trim()) {
+            profileManager.profile.name = nameInput.value.trim();
+            profileManager.profile.customName = nameInput.value.trim();
+            try { localStorage.setItem('monopoly_custom_nickname', nameInput.value.trim()); } catch (e) {}
+          }
           profileManager.updateNameColor(chosen);
           updateDisplay(chosen);
           leaderboardManager.syncMyRecord();
@@ -4993,6 +5027,11 @@ class App {
 
     const handleCustomColorChange = (newVal) => {
       if (!newVal) return;
+      if (nameInput && nameInput.value && nameInput.value.trim()) {
+        profileManager.profile.name = nameInput.value.trim();
+        profileManager.profile.customName = nameInput.value.trim();
+        try { localStorage.setItem('monopoly_custom_nickname', nameInput.value.trim()); } catch (e) {}
+      }
       profileManager.updateNameColor(newVal);
       updateDisplay(newVal);
       leaderboardManager.syncMyRecord();

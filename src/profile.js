@@ -399,6 +399,7 @@ class ProfileManager {
     });
 
     const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('monopoly_player_profile') : null;
+    const customNick = typeof localStorage !== 'undefined' ? localStorage.getItem('monopoly_custom_nickname') : null;
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -406,8 +407,15 @@ class ProfileManager {
         // If on owner domain and not logged out, sync canonical owner data
         if (isOwnerDomain && !isLoggedOut) {
           parsed.id = parsed.id || 'discord_1472673126859935765';
-          parsed.name = parsed.name || 'hizuhara.';
-          parsed.discordUsername = parsed.discordUsername || parsed.name || 'hizuhara.';
+          if (customNick && customNick.trim()) {
+            parsed.name = customNick.trim();
+            parsed.customName = customNick.trim();
+          } else if (parsed.customName && parsed.customName.trim()) {
+            parsed.name = parsed.customName.trim();
+          } else if (!parsed.name || parsed.name === 'Гость') {
+            parsed.name = 'hizuhara.';
+          }
+          parsed.discordUsername = parsed.customName || parsed.name || 'hizuhara.';
           parsed.discordId = parsed.discordId || '1472673126859935765';
           parsed.avatarUrl = parsed.avatarUrl || 'https://cdn.discordapp.com/avatars/1472673126859935765/8819b4f951abe3f4f76a1646dee1ba9d.png';
           parsed.authProvider = 'discord';
@@ -464,7 +472,12 @@ class ProfileManager {
         parsed.title = parsed.title || 'novice';
         const isReg = Boolean(parsed.isRegistered || parsed.discordId || parsed.authProvider === 'discord');
         parsed.isRegistered = isReg;
-        if (!parsed.name || parsed.name === 'Гость') {
+        if (customNick && customNick.trim()) {
+          parsed.name = customNick.trim();
+          parsed.customName = customNick.trim();
+        } else if (parsed.customName && parsed.customName.trim()) {
+          parsed.name = parsed.customName.trim();
+        } else if (!parsed.name || parsed.name === 'Гость') {
           parsed.name = isReg ? (parsed.discordUsername || 'Игрок') : (parsed.name || 'Игрок');
         }
         return parsed;
@@ -475,6 +488,10 @@ class ProfileManager {
 
     if (isOwnerDomain && !isLoggedOut) {
       const owner = getOwnerProfile();
+      if (customNick && customNick.trim()) {
+        owner.name = customNick.trim();
+        owner.customName = customNick.trim();
+      }
       this.saveProfile(owner);
       return owner;
     }
@@ -567,10 +584,12 @@ class ProfileManager {
   logout() {
     if (typeof localStorage !== 'undefined') {
       localStorage.setItem('monopoly_user_logged_out', '1');
+      localStorage.removeItem('monopoly_custom_nickname');
     }
     const randomId = 'usr_' + Math.random().toString(36).substring(2, 9);
     this.profile.id = randomId;
     this.profile.name = 'Гость';
+    this.profile.customName = null;
     this.profile.isRegistered = false;
     this.profile.authProvider = null;
     this.profile.discordId = null;
@@ -591,10 +610,26 @@ class ProfileManager {
     if (newName && newName.trim()) {
       const clean = newName.trim().substring(0, 20);
       this.profile.name = clean;
+      this.profile.customName = clean;
       if (this.profile.discordUsername) {
         this.profile.discordUsername = clean;
       }
-      this.saveProfile();
+      try {
+        localStorage.setItem('monopoly_custom_nickname', clean);
+      } catch (e) {}
+      const now = Date.now();
+      try {
+        localStorage.setItem('monopoly_sync_timestamp', String(now));
+      } catch (e) {}
+      this.saveProfile(this.profile, false);
+      if (typeof window !== 'undefined' && window.cloudSync) {
+        if (window.cloudSync.pushDebounceTimer) {
+          clearTimeout(window.cloudSync.pushDebounceTimer);
+          window.cloudSync.pushDebounceTimer = null;
+        }
+        window.cloudSync.lastSyncedTimestamp = now;
+        window.cloudSync.push({ name: clean, customName: clean, timestamp: now });
+      }
       return clean;
     }
     return this.profile.name;

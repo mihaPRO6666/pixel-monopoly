@@ -51,6 +51,8 @@ export class CloudSyncManager {
     const p = (typeof window !== 'undefined' && window.profileManager?.profile) || profileManager.profile || {};
     const theme = themeManager.getTheme() || 'cyberpunk';
     const timestamp = Date.now();
+    const customNick = typeof localStorage !== 'undefined' ? localStorage.getItem('monopoly_custom_nickname') : null;
+    const currentName = overrideData.name || customNick || p.customName || p.name || 'hizuhara.';
 
     return {
       version: 1,
@@ -63,7 +65,8 @@ export class CloudSyncManager {
       customToken: p.customToken || null,
       color: p.color || '#2563eb',
       nameColor: p.nameColor || p.color || '#2563eb',
-      name: p.name || 'hizuhara.',
+      name: currentName,
+      customName: currentName,
       title: p.title || 'creator',
       unlockedTitles: Array.isArray(p.unlockedTitles) ? p.unlockedTitles : [],
       diceSkin: p.diceSkin || 'cosmic_void',
@@ -181,7 +184,13 @@ export class CloudSyncManager {
     const pm = (typeof window !== 'undefined' && window.profileManager) || profileManager;
     const p = pm?.profile;
     if (p) {
-      if (data.name) p.name = data.name;
+      if (data.name && data.name !== 'Гость') {
+        p.name = data.name;
+        if (data.customName) p.customName = data.customName;
+        try {
+          localStorage.setItem('monopoly_custom_nickname', data.name);
+        } catch (e) {}
+      }
       if (data.color) p.color = data.color;
       if (data.nameColor) p.nameColor = data.nameColor;
       else if (data.color) p.nameColor = data.color;
@@ -220,7 +229,8 @@ export class CloudSyncManager {
       if (window.app) {
         try {
           window.app.renderProfileCard?.();
-          window.app.renderLeaderboard?.();
+          window.app.renderLeaderboard?.('wins', 'inline-leaderboard-list');
+          window.app.renderLeaderboard?.('wins', 'modal-leaderboard-list');
           window.app.renderBgPicker?.();
           window.app.renderTitlePicker?.();
           window.app.renderTokenPicker?.();

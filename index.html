@@ -329,7 +329,7 @@
         <div class="brand-icon">M</div>
       </div>
       <button id="btn-open-changelog" class="badge-changelog-btn" title="Журнал обновлений (Update Log)" onclick="window.openChangelogModal?.()">
-        v5.1
+        v5.2
       </button>
     </div>
 
@@ -1536,12 +1536,23 @@
       </div>
 
       <div class="changelog-list" style="max-height: 420px; overflow-y: auto; padding-right: 4px; display: flex; flex-direction: column; gap: 14px; margin-top: 8px;">
+        <!-- v5.2 -->
+        <div class="changelog-entry">
+          <div class="changelog-entry-header">
+            <span class="changelog-ver-pill current">v5.2</span>
+            <span class="changelog-date">24 сентября 2026</span>
+            <span class="changelog-tag-new">Новое</span>
+          </div>
+          <ul class="changelog-items">
+            <li>🏷️ <b>Надежная смена никнейма:</b> Исправлена проблема со сбросом никнейма к стандартному. Теперь при изменении никнейма в профиле новый ник мгновенно сохраняется, применяется во всем интерфейсе (хедер, профиль, таблица лидеров, лобби, чат) и моментально синхронизируется между GitHub Pages и Vercel без отката!</li>
+          </ul>
+        </div>
+
         <!-- v5.1 -->
         <div class="changelog-entry">
           <div class="changelog-entry-header">
-            <span class="changelog-ver-pill current">v5.1</span>
+            <span class="changelog-ver-pill">v5.1</span>
             <span class="changelog-date">24 сентября 2026</span>
-            <span class="changelog-tag-new">Новое</span>
           </div>
           <ul class="changelog-items">
             <li>🎨 <b>Выбор цвета ника:</b> Добавлена возможность выбирать цвет своего ника! Доступна палитра из 13 сочных оттенков (Золото, Изумруд, Сакура, Неон, Циан, Лазурный, Рубин и др.) плюс свободный выбор любого цвета из палитры. Ник подсвечивается выбранным цветом в таблице лидеров, профиле, чате и карточке игрока!</li>
