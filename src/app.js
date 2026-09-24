@@ -3391,12 +3391,15 @@ class App {
       const rankBadge = p.rank === 1 ? '🥇' : (p.rank === 2 ? '🥈' : (p.rank === 3 ? '🥉' : p.rank));
       const rankClass = p.rank <= 3 ? `rank-${p.rank}` : '';
 
+      // Always show game pawn/token (not Discord avatar — Discord badge shows next to name)
+      const tokenHtml = renderTokenHTML(p.token, p.customToken);
+
       return `
         <div class="leaderboard-item ${p.isMe ? 'is-me' : ''}" data-player-id="${p.id}" style="cursor: pointer;" title="Нажмите, чтобы просмотреть профиль игрока">
           <div class="lb-left">
             <span class="lb-rank ${rankClass}">${rankBadge}</span>
-            <span class="lb-token" style="display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; overflow: hidden;">
-              ${p.avatarUrl ? `<img src="${p.avatarUrl}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" />` : renderTokenHTML(p.token, p.customToken)}
+            <span class="lb-token" style="display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; overflow: hidden; background: rgba(255,255,255,0.06); flex-shrink: 0;">
+              ${tokenHtml}
             </span>
             <div class="lb-info">
               <div class="lb-name">

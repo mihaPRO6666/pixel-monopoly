@@ -2610,6 +2610,20 @@ body {
 .lb-token {
   font-size: 1.35rem;
   line-height: 1;
+  flex-shrink: 0;
+}
+
+.lb-token .board-token-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  display: block;
+}
+
+.lb-token .token-emoji {
+  font-size: 1.3rem;
+  line-height: 1;
 }
 
 .lb-info {
