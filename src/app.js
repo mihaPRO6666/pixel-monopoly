@@ -5160,14 +5160,16 @@ class App {
           const res = engine.executeTrade(offer);
           if (res.success) {
             sound.playCash();
-            ui.showToast(`Бот ${partner.name} принял сделку!`);
+            ui.showToast(`🤝 Бот ${partner.name} принял сделку!`);
             ui.update(engine.getState(), myId);
+            this.saveActiveGameSession();
             this.broadcastAction('SYNC_STATE', { state: engine.getState() });
           } else {
             ui.showToast(res.reason || 'Сделка не удалась');
           }
         } else {
-          ui.showToast(`Бот ${partner.name} посчитал сделку невыгодной и отклонил её`);
+          const reason = engine.lastBotTradeReason || `Бот ${partner.name} посчитал сделку невыгодной и отклонил её`;
+          ui.showToast(`⚠️ ${reason}`);
         }
       } else if (this.isLocalMode) {
         engine.proposeTrade(myId, partnerId, offer);

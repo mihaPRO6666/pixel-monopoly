@@ -455,35 +455,137 @@ export class MonopolyEngine {
 
   // --- CARD & ASSET TRADING (WITH 10% COMMISSION) ---
   evaluateBotTrade({ fromId, toId, fromCardIds = [], toCardIds = [], fromCash = 0, toCash = 0 }) {
+    this.lastBotTradeReason = null;
     const bot = this.players.find(p => p.id === toId);
-    const difficulty = bot?.botDifficulty || this.settings?.botDifficulty || 'medium';
+    if (!bot || !bot.isBot) {
+      this.lastBotTradeReason = 'Получатель не является ботом';
+      return false;
+    }
 
-    let giveValue = parseInt(toCash) || 0;
-    let receiveValue = parseInt(fromCash) || 0;
+    const difficulty = bot.botDifficulty || this.settings?.botDifficulty || 'medium';
+    const giveCash = Math.max(0, parseInt(toCash) || 0);
+    const receiveCash = Math.max(0, parseInt(fromCash) || 0);
 
-    toCardIds.forEach(id => {
-      giveValue += (BOARD_TILES[id]?.price || 100) * 1.1;
-    });
-    fromCardIds.forEach(id => {
-      let val = BOARD_TILES[id]?.price || 100;
+    // 1. Bot liquidity check
+    if (bot.cash < giveCash) {
+      this.lastBotTradeReason = `У ${bot.name} недостаточно денег (есть $${bot.cash}, запрошено $${giveCash})`;
+      return false;
+    }
+    if (giveCash > 0 && bot.cash - giveCash < 40) {
+      this.lastBotTradeReason = `${bot.name} не хочет отдавать последние деньги (нужен резерв)`;
+      return false;
+    }
+
+    // 2. Base nominal valuation (actual street prices & money)
+    let botGiveStreetsBase = 0;
+    for (const id of toCardIds) {
       const tile = BOARD_TILES[id];
-      if (tile && tile.group && bot) {
+      const prop = this.properties[id];
+      if (!tile || !prop || prop.ownerId !== toId) {
+        this.lastBotTradeReason = 'Карточка не принадлежит боту';
+        return false;
+      }
+      if (prop.houses > 0) {
+        this.lastBotTradeReason = `На улице «${tile.name}» построены дома, сначала продайте их`;
+        return false;
+      }
+      botGiveStreetsBase += (tile.price || 100);
+    }
+
+    let botReceiveStreetsBase = 0;
+    for (const id of fromCardIds) {
+      const tile = BOARD_TILES[id];
+      const prop = this.properties[id];
+      if (!tile || !prop || prop.ownerId !== fromId) {
+        this.lastBotTradeReason = 'Предложенная карточка не принадлежит отправителю';
+        return false;
+      }
+      if (prop.houses > 0) {
+        this.lastBotTradeReason = `На улице «${tile.name}» есть дома`;
+        return false;
+      }
+      botReceiveStreetsBase += (tile.price || 100);
+    }
+
+    const totalGiveNominal = botGiveStreetsBase + giveCash;
+    const totalReceiveNominal = botReceiveStreetsBase + receiveCash;
+
+    // Nothing requested from bot -> pure gift
+    if (totalGiveNominal === 0) {
+      return totalReceiveNominal > 0;
+    }
+
+    // 3. STRICT RULE:
+    // "боты не принимали сделки ниже чем их улица или кол-во денег чтоб минимум одинаково было"
+    // The total value received by the bot MUST be at least equal to the total value given by the bot.
+    if (totalReceiveNominal < totalGiveNominal) {
+      this.lastBotTradeReason = `${bot.name} отклонил: предложение ($${totalReceiveNominal}) ниже стоимости его улицы/денег ($${totalGiveNominal})`;
+      return false;
+    }
+
+    // If bot is asked to give cash, player's total offer must be at least that cash
+    if (giveCash > 0 && totalReceiveNominal < giveCash) {
+      this.lastBotTradeReason = `${bot.name} отклонил: запрошено $${giveCash} наличными, а предложено всего $${totalReceiveNominal}`;
+      return false;
+    }
+
+    // If bot is asked to give street(s), player's total offer must be at least the base price of those streets
+    if (botGiveStreetsBase > 0 && totalReceiveNominal < botGiveStreetsBase) {
+      this.lastBotTradeReason = `${bot.name} отклонил: стоимость предложенного ($${totalReceiveNominal}) ниже цены улицы ($${botGiveStreetsBase})`;
+      return false;
+    }
+
+    // 4. Strategic valuation (monopolies, difficulty)
+    let strategicGive = giveCash;
+    for (const id of toCardIds) {
+      const tile = BOARD_TILES[id];
+      const basePrice = tile?.price || 100;
+      let multiplier = 1.0;
+
+      if (tile?.group) {
         const groupTiles = BOARD_TILES.filter(t => t.group === tile.group);
-        const ownedCount = groupTiles.filter(t => this.properties[t.id]?.ownerId === bot.id).length;
-        if (ownedCount === groupTiles.length - 1) {
-          val *= (difficulty === 'hard' ? 2.5 : 1.8);
+        const botCount = groupTiles.filter(t => this.properties[t.id]?.ownerId === bot.id).length;
+        if (botCount === groupTiles.length) {
+          // Breaks an active full monopoly!
+          multiplier = difficulty === 'hard' ? 3.0 : (difficulty === 'medium' ? 2.4 : 1.8);
+        } else if (botCount >= 2) {
+          // Breaks a near monopoly
+          multiplier = difficulty === 'hard' ? 2.0 : (difficulty === 'medium' ? 1.6 : 1.3);
         }
       }
-      receiveValue += val;
-    });
-
-    if (difficulty === 'easy') {
-      return receiveValue >= giveValue * 0.75;
-    } else if (difficulty === 'hard') {
-      return receiveValue >= giveValue * 1.2;
-    } else {
-      return receiveValue >= giveValue;
+      strategicGive += basePrice * multiplier;
     }
+
+    let strategicReceive = receiveCash;
+    for (const id of fromCardIds) {
+      const tile = BOARD_TILES[id];
+      const basePrice = tile?.price || 100;
+      let multiplier = 1.0;
+
+      if (tile?.group) {
+        const groupTiles = BOARD_TILES.filter(t => t.group === tile.group);
+        const botCount = groupTiles.filter(t => this.properties[t.id]?.ownerId === bot.id).length;
+        if (botCount === groupTiles.length - 1) {
+          // Completes a monopoly for the bot!
+          multiplier = difficulty === 'hard' ? 2.2 : (difficulty === 'medium' ? 1.8 : 1.5);
+        } else if (botCount >= 1) {
+          multiplier = 1.2;
+        }
+      }
+      strategicReceive += basePrice * multiplier;
+    }
+
+    // Multipliers based on difficulty
+    let requiredRatio = 1.0; // minimum identical
+    if (difficulty === 'medium') requiredRatio = 1.05;
+    if (difficulty === 'hard') requiredRatio = 1.20;
+
+    if (strategicReceive < strategicGive * requiredRatio) {
+      this.lastBotTradeReason = `${bot.name} отклонил: сделка стратегически невыгодна (сложность: ${difficulty})`;
+      return false;
+    }
+
+    return true;
   }
 
   executeTrade({ fromId, toId, fromCardIds = [], toCardIds = [], fromCash = 0, toCash = 0 }) {
