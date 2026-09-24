@@ -2726,14 +2726,24 @@ class App {
       if (modal) {
         modal.classList.add('active');
         pawnEditor.init((customTokenDataUrl) => {
+          if (customTokenDataUrl) {
+            profileManager.setCustomToken(customTokenDataUrl);
+          } else {
+            profileManager.profile.customToken = null;
+            profileManager.profile.token = '💎';
+            profileManager.saveProfile();
+          }
+          leaderboardManager.syncMyRecord();
           this.renderTokenPicker();
           this.renderProfileCard();
+          this.renderLeaderboard('wins', 'inline-leaderboard-list');
+          this.renderLeaderboard('wins', 'modal-leaderboard-list');
 
           if (this.currentScreen === 'lobby' && network && network.isHost) {
             this.lobbyPlayers = this.lobbyPlayers.map(p => String(p.id) === String(profileManager.profile.id) ? { 
               ...p, 
-              token: 'custom', 
-              customToken: customTokenDataUrl 
+              token: profileManager.profile.token, 
+              customToken: profileManager.profile.customToken 
             } : p);
             this.renderLobbyPlayers();
             this.broadcastAction('LOBBY_UPDATE', { players: this.lobbyPlayers });
@@ -2744,8 +2754,8 @@ class App {
               playerId: profileManager.profile.id,
               name: profileManager.profile.name,
               title: profileManager.profile.title || 'novice',
-              token: 'custom',
-              customToken: customTokenDataUrl,
+              token: profileManager.profile.token,
+              customToken: profileManager.profile.customToken,
               bg: profileManager.profile.bg || 'default',
               profileBg: profileManager.profile.bg || 'default',
               color: profileManager.profile.color,
@@ -4615,7 +4625,8 @@ class App {
     if (!container) return;
 
     const currentToken = profileManager.profile.token;
-    const hasCustom = Boolean(profileManager.profile.customToken);
+    const customTokenData = profileManager.profile.customToken;
+    const hasCustom = Boolean(customTokenData && typeof customTokenData === 'string' && customTokenData.startsWith('data:image'));
     const isCustomActive = currentToken === 'custom' || (typeof currentToken === 'string' && currentToken.startsWith('data:image'));
 
     let html = AVAILABLE_TOKENS.map(t => {
@@ -4630,9 +4641,9 @@ class App {
 
     if (hasCustom) {
       html = `
-        <div class="md-chip ${isCustomActive ? 'active' : ''}" data-token="custom" style="cursor: pointer; border-color: #22c55e;">
+        <div class="md-chip ${isCustomActive ? 'active' : ''}" data-token="custom" style="cursor: pointer; ${isCustomActive ? 'border-color: #38bdf8; box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);' : 'border-color: rgba(56, 189, 248, 0.5);'}">
           <span style="display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px;">
-            ${renderTokenHTML('custom', profileManager.profile.customToken, 'token-custom-img')}
+            ${renderTokenHTML('custom', customTokenData, 'token-custom-img')}
           </span>
           <span>Моя пешка</span>
         </div>
@@ -4644,8 +4655,8 @@ class App {
     // Update accordion summary pill
     const summaryToken = document.getElementById('profile-summary-token');
     if (summaryToken) {
-      if (isCustomActive && profileManager.profile.customToken) {
-        summaryToken.innerHTML = `<span style="display:inline-flex;align-items:center;gap:4px;">${renderTokenHTML('custom', profileManager.profile.customToken, 'token-pill-img')} Моя пешка</span>`;
+      if (isCustomActive && customTokenData) {
+        summaryToken.innerHTML = `<span style="display:inline-flex;align-items:center;gap:4px;">${renderTokenHTML('custom', customTokenData, 'token-pill-img')} Моя пешка</span>`;
       } else {
         const emoji = getTokenEmoji(currentToken);
         const name = getTokenName(currentToken);
@@ -4658,10 +4669,11 @@ class App {
         sound.playClick();
         const selectedToken = chip.getAttribute('data-token');
         profileManager.updateToken(selectedToken);
-        leaderboardManager.syncMyRegisteredRecord();
+        leaderboardManager.syncMyRecord();
         this.renderTokenPicker();
         this.renderProfileCard();
-        this.renderLeaderboard();
+        this.renderLeaderboard('wins', 'inline-leaderboard-list');
+        this.renderLeaderboard('wins', 'modal-leaderboard-list');
 
         const customSrc = selectedToken === 'custom' ? profileManager.profile.customToken : null;
 

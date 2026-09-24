@@ -3,7 +3,7 @@
  * Stores and manages local record of finished matches
  */
 
-import { getTokenEmoji, renderTokenHTML } from './profile.js';
+import { getTokenEmoji, renderTokenHTML } from './profile.js?v=8.0.0';
 
 const STORAGE_KEY = 'monopoly_match_history';
 const MAX_HISTORY = 40;

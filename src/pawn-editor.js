@@ -2,9 +2,11 @@
  * Pawn Pixel Art Canvas Drawing Editor
  */
 
-import { profileManager, renderTokenHTML } from './profile.js';
-import { sound } from './audio.js';
-import { showToast } from './ui.js';
+import { profileManager as importedProfileManager, renderTokenHTML } from './profile.js?v=8.0.0';
+import { sound } from './audio.js?v=8.0.0';
+import { showToast } from './ui.js?v=8.0.0';
+
+const getProfileManager = () => (typeof window !== 'undefined' && window.profileManager) || importedProfileManager;
 
 export const PAWN_GRID_SIZE = 16;
 
@@ -250,6 +252,7 @@ export class PawnEditor {
     this.undoStack = [];
     this.redoStack = [];
     this.onSaveCallback = null;
+    this.eventsBound = false;
   }
 
   createEmptyGrid() {
@@ -269,9 +272,12 @@ export class PawnEditor {
     if (!this.canvas) return;
     this.ctx = this.canvas.getContext('2d');
 
-    this.bindEvents();
-    this.renderPalette();
-    this.renderTemplates();
+    if (!this.eventsBound) {
+      this.bindEvents();
+      this.renderPalette();
+      this.renderTemplates();
+      this.eventsBound = true;
+    }
     this.loadFromProfile();
     this.render();
   }
@@ -501,8 +507,9 @@ export class PawnEditor {
   }
 
   loadFromProfile() {
-    const customToken = profileManager.profile.customToken;
-    if (customToken && customToken.startsWith('data:image')) {
+    const pm = getProfileManager();
+    const customToken = pm?.profile?.customToken;
+    if (customToken && typeof customToken === 'string' && customToken.startsWith('data:image')) {
       this.loadFromDataURL(customToken);
     } else {
       this.loadTemplate('pawn');
@@ -612,11 +619,12 @@ export class PawnEditor {
 
   updatePreviews() {
     const dataUrl = this.getPNGDataURL();
+    const pm = getProfileManager();
 
     const previewBoard = document.getElementById('pawn-preview-board');
     if (previewBoard) {
       previewBoard.innerHTML = `<img src="${dataUrl}" class="board-token-img" alt="Pawn" draggable="false" />`;
-      previewBoard.style.borderColor = profileManager.profile.color || '#2563eb';
+      previewBoard.style.borderColor = pm?.profile?.color || '#2563eb';
     }
 
     const previewSidebar = document.getElementById('pawn-preview-sidebar');
@@ -627,7 +635,17 @@ export class PawnEditor {
 
   saveAndEquip() {
     const dataUrl = this.getPNGDataURL();
-    profileManager.setCustomToken(dataUrl);
+    const pm = getProfileManager();
+    if (pm) {
+      pm.setCustomToken(dataUrl);
+    }
+    try {
+      const raw = localStorage.getItem('monopoly_player_profile');
+      const p = raw ? JSON.parse(raw) : {};
+      p.token = 'custom';
+      p.customToken = dataUrl;
+      localStorage.setItem('monopoly_player_profile', JSON.stringify(p));
+    } catch (e) {}
 
     sound.playCash();
     showToast('✨ Ваша собственная пешка сохранена и надета!');
@@ -642,9 +660,19 @@ export class PawnEditor {
 
   resetToDefault() {
     sound.playClick();
-    profileManager.profile.customToken = null;
-    profileManager.profile.token = '💎';
-    profileManager.saveProfile();
+    const pm = getProfileManager();
+    if (pm) {
+      pm.profile.customToken = null;
+      pm.profile.token = '💎';
+      pm.saveProfile();
+    }
+    try {
+      const raw = localStorage.getItem('monopoly_player_profile');
+      const p = raw ? JSON.parse(raw) : {};
+      p.token = '💎';
+      p.customToken = null;
+      localStorage.setItem('monopoly_player_profile', JSON.stringify(p));
+    } catch (e) {}
     showToast('Сброшено к стандартной фишке 💎');
 
     if (typeof this.onSaveCallback === 'function') {

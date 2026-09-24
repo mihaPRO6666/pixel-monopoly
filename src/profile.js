@@ -3,7 +3,6 @@ import { TITLES, getTitleById } from './titles.js';
 export const AVAILABLE_TOKENS = [
   { id: 'diamond', emoji: '💎', name: 'Алмаз' },
   { id: 'hat', emoji: '🎩', name: 'Шляпа' },
-  { id: 'tophat', emoji: '🎩', name: 'Шляпа' },
   { id: 'moneybag', emoji: '💰', name: 'Мешок денег' },
   { id: 'car', emoji: '🚗', name: 'Авто' },
   { id: 'dog', emoji: '🐕', name: 'Пёс' },
@@ -277,7 +276,7 @@ export function renderTokenHTML(token, customToken = null, extraClass = '') {
   if (isCustomToken) {
     const src = (typeof token === 'string' && token.startsWith('data:image')) 
       ? token 
-      : (customToken || (typeof profileManager !== 'undefined' ? profileManager?.profile?.customToken : null));
+      : (customToken || (typeof window !== 'undefined' && window.profileManager?.profile?.customToken) || (typeof profileManager !== 'undefined' ? profileManager?.profile?.customToken : null));
     if (src) {
       return `<img class="board-token-img ${extraClass}" src="${src}" alt="Token" draggable="false" />`;
     }
@@ -403,8 +402,12 @@ class ProfileManager {
             localStorage.setItem('monopoly_coins_reset_v8_4_2', 'done');
           }
           parsed.coins = typeof parsed.coins === 'number' ? parsed.coins : 0;
+          if (parsed.customToken && typeof parsed.customToken === 'string' && parsed.customToken.startsWith('data:image')) {
+            parsed.customToken = parsed.customToken;
+          } else {
+            parsed.customToken = parsed.customToken || customPawnData;
+          }
           parsed.token = parsed.token || 'custom';
-          parsed.customToken = parsed.customToken || customPawnData;
           parsed.color = parsed.color || '#2563eb';
           parsed.bg = parsed.bg || 'space';
           parsed.profileBg = parsed.profileBg || 'space';
@@ -560,9 +563,19 @@ class ProfileManager {
   }
 
   setCustomToken(dataUrl) {
+    if (!dataUrl) return;
     this.profile.customToken = dataUrl;
     this.profile.token = 'custom';
     this.saveProfile();
+    if (typeof window !== 'undefined') {
+      try {
+        const raw = localStorage.getItem('monopoly_player_profile');
+        const p = raw ? JSON.parse(raw) : {};
+        p.token = 'custom';
+        p.customToken = dataUrl;
+        localStorage.setItem('monopoly_player_profile', JSON.stringify(p));
+      } catch (e) {}
+    }
   }
 
   updateToken(tokenVal) {
@@ -719,7 +732,11 @@ class ProfileManager {
   }
 }
 
-export const profileManager = new ProfileManager();
+export const profileManager = (typeof window !== 'undefined' && window.__monopoly_profile_instance)
+  ? window.__monopoly_profile_instance
+  : new ProfileManager();
+
 if (typeof window !== 'undefined') {
+  window.__monopoly_profile_instance = profileManager;
   window.profileManager = profileManager;
 }

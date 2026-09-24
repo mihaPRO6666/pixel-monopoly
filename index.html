@@ -87,8 +87,12 @@
             localStorage.setItem('monopoly_coins_reset_v8_4_2', 'done');
           }
           p.coins = typeof p.coins === 'number' ? p.coins : 0;
+          if (p.customToken && typeof p.customToken === 'string' && p.customToken.startsWith('data:image')) {
+            p.customToken = p.customToken;
+          } else {
+            p.customToken = p.customToken || customPawnData;
+          }
           p.token = p.token || 'custom';
-          p.customToken = p.customToken || customPawnData;
           p.color = p.color || '#2563eb';
           p.bg = p.bg || 'space';
           p.profileBg = p.profileBg || 'space';
@@ -2317,6 +2321,6 @@
   <div id="toast-container" class="toast-container"></div>
 
   <!-- SCRIPTS -->
-  <script type="module" src="src/app.js?v=8.4.5"></script>
+  <script type="module" src="src/app.js?v=8.4.6"></script>
 </body>
 </html>
