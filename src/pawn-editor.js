@@ -2,9 +2,9 @@
  * Pawn Pixel Art Canvas Drawing Editor
  */
 
-import { profileManager as importedProfileManager, renderTokenHTML } from './profile.js?v=8.0.0';
-import { sound } from './audio.js?v=8.0.0';
-import { showToast } from './ui.js?v=8.0.0';
+import { profileManager as importedProfileManager, renderTokenHTML } from './profile.js?v=8.5.0';
+import { sound } from './audio.js?v=8.5.0';
+import { showToast } from './ui.js?v=8.5.0';
 
 const getProfileManager = () => (typeof window !== 'undefined' && window.profileManager) || importedProfileManager;
 

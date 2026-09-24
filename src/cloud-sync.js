@@ -15,8 +15,8 @@
  * 2. Instant cross-tab & cross-origin broadcast via Supabase Realtime discovery channel (<50ms latency)
  */
 
-import { themeManager } from './theme.js?v=8.0.0';
-import { profileManager, isDevUser } from './profile.js?v=8.0.0';
+import { themeManager } from './theme.js?v=8.5.0';
+import { profileManager, isDevUser } from './profile.js?v=8.5.0';
 
 export class CloudSyncManager {
   constructor() {
@@ -218,7 +218,7 @@ export class CloudSyncManager {
 
     // Sync leaderboard with my updated record
     try {
-      import('./leaderboard.js?v=8.0.0').then(({ leaderboardManager }) => {
+      import('./leaderboard.js?v=8.5.0').then(({ leaderboardManager }) => {
         leaderboardManager.syncMyRecord();
       }).catch(() => {});
     } catch (e) {}

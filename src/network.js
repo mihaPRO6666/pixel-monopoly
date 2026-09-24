@@ -94,7 +94,7 @@ export class NetworkManager {
           payload.lastSeen = Date.now();
           this.discoveredLobbies.set(payload.roomCode, payload);
           if (payload.hostId && payload.hostName && (payload.isRegistered || payload.discordId) && payload.hostName !== 'Гость' && payload.hostName !== 'Игрок') {
-            import('./leaderboard.js?v=8.0.0').then(({ leaderboardManager }) => {
+            import('./leaderboard.js?v=8.5.0').then(({ leaderboardManager }) => {
               leaderboardManager.registerPlayer({
                 id: payload.hostId,
                 name: payload.hostName,
@@ -127,7 +127,7 @@ export class NetworkManager {
         if (payload.name === 'Гость' || payload.name === 'Игрок') {
           return;
         }
-        import('./leaderboard.js?v=8.0.0').then(({ leaderboardManager }) => {
+        import('./leaderboard.js?v=8.5.0').then(({ leaderboardManager }) => {
           leaderboardManager.registerPlayer(payload);
           // Notify the app to re-render the leaderboard UI
           window.dispatchEvent(new CustomEvent('leaderboard-updated'));
@@ -144,7 +144,7 @@ export class NetworkManager {
     // When a new user connects and requests leaderboard, users respond with their record
     this.discoveryChannel.on('broadcast', { event: 'REQUEST_LEADERBOARD' }, () => {
       if (isTestOrLocalEnvironment(this.roomCode)) return;
-      import('./profile.js?v=8.0.0').then(({ profileManager }) => {
+      import('./profile.js?v=8.5.0').then(({ profileManager }) => {
         const p = profileManager.profile;
         if (p && p.id && (p.isRegistered || p.discordId) && p.name !== 'Гость' && p.name !== 'Игрок') {
           this.broadcastLeaderboardRecord({
@@ -184,7 +184,7 @@ export class NetworkManager {
 
         // Also announce own profile to ensure other peers get it (ONLY if registered)
         setTimeout(() => {
-          import('./profile.js?v=8.0.0').then(({ profileManager }) => {
+          import('./profile.js?v=8.5.0').then(({ profileManager }) => {
             const p = profileManager.profile;
             if (p && p.id && (p.isRegistered || p.discordId) && p.name !== 'Гость' && p.name !== 'Игрок') {
               this.broadcastLeaderboardRecord({
