@@ -616,6 +616,7 @@ class ProfileManager {
       }
       try {
         localStorage.setItem('monopoly_custom_nickname', clean);
+        localStorage.setItem('monopoly_nickname_timestamp', String(Date.now()));
       } catch (e) {}
       const now = Date.now();
       try {

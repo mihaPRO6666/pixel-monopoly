@@ -185,11 +185,27 @@ export class CloudSyncManager {
     const p = pm?.profile;
     if (p) {
       if (data.name && data.name !== 'Гость') {
-        p.name = data.name;
-        if (data.customName) p.customName = data.customName;
+        // Only apply cloud name if local nickname wasn't saved MORE RECENTLY than cloud data
+        let localNickTs = 0;
+        let localNick = null;
         try {
-          localStorage.setItem('monopoly_custom_nickname', data.name);
+          localNickTs = parseInt(localStorage.getItem('monopoly_nickname_timestamp') || '0', 10);
+          localNick = localStorage.getItem('monopoly_custom_nickname');
         } catch (e) {}
+        const cloudTs = data.timestamp || 0;
+        const localIsNewer = localNick && localNickTs > 0 && localNickTs >= cloudTs;
+        if (!localIsNewer) {
+          p.name = data.name;
+          if (data.customName) p.customName = data.customName;
+          try {
+            localStorage.setItem('monopoly_custom_nickname', data.name);
+            localStorage.setItem('monopoly_nickname_timestamp', String(cloudTs));
+          } catch (e) {}
+        } else {
+          // Local nickname is newer — restore it to profile in case it was overwritten
+          p.name = localNick;
+          p.customName = localNick;
+        }
       }
       if (data.color) p.color = data.color;
       if (data.nameColor) p.nameColor = data.nameColor;
