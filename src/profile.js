@@ -29,6 +29,22 @@ export const PLAYER_COLORS = [
   '#0891b2'  // Cyan
 ];
 
+export const NICKNAME_COLORS = [
+  { id: 'blue', name: 'Синий', color: '#2563eb' },
+  { id: 'sky', name: 'Лазурный', color: '#38bdf8' },
+  { id: 'cyan', name: 'Циан', color: '#06b6d4' },
+  { id: 'emerald', name: 'Изумруд', color: '#10b981' },
+  { id: 'lime', name: 'Лайм', color: '#84cc16' },
+  { id: 'amber', name: 'Золото', color: '#f59e0b' },
+  { id: 'orange', name: 'Пламя', color: '#f97316' },
+  { id: 'red', name: 'Рубин', color: '#ef4444' },
+  { id: 'pink', name: 'Сакура', color: '#ec4899' },
+  { id: 'purple', name: 'Аметист', color: '#a855f7' },
+  { id: 'magenta', name: 'Неон', color: '#d946ef' },
+  { id: 'mint', name: 'Мята', color: '#2dd4bf' },
+  { id: 'white', name: 'Белый', color: '#ffffff' }
+];
+
 export const PROFILE_BACKGROUNDS = [
   {
     id: 'default',
@@ -382,7 +398,7 @@ class ProfileManager {
       }
     });
 
-    const saved = localStorage.getItem('monopoly_player_profile');
+    const saved = typeof localStorage !== 'undefined' ? localStorage.getItem('monopoly_player_profile') : null;
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -409,8 +425,9 @@ class ProfileManager {
           }
           parsed.token = parsed.token || 'custom';
           parsed.color = parsed.color || '#2563eb';
+          parsed.nameColor = parsed.nameColor || parsed.color || '#2563eb';
           parsed.bg = parsed.bg || 'space';
-          parsed.profileBg = parsed.profileBg || 'space';
+          parsed.profileBg = parsed.profileBg || parsed.bg || 'space';
           parsed.title = parsed.title || 'creator';
           parsed.diceSkin = parsed.diceSkin || 'cosmic_void';
           parsed.unlockedTitles = [...ALL_TITLE_IDS];
@@ -421,7 +438,7 @@ class ProfileManager {
           parsed.stats.losses = parsed.stats.losses || 0;
           parsed.stats.totalEarned = Math.max(parsed.stats.totalEarned || 0, 2700);
           parsed.stats.maxNetWorth = Math.max(parsed.stats.maxNetWorth || 0, 2500);
-          this.saveProfile(parsed);
+          this.saveProfile(parsed, false);
           return parsed;
         }
 
@@ -491,9 +508,30 @@ class ProfileManager {
     return defaultProfile;
   }
 
-  saveProfile(profile = this.profile) {
+  saveProfile(profile = this.profile, pushToSync = true) {
     this.profile = profile;
-    localStorage.setItem('monopoly_player_profile', JSON.stringify(this.profile));
+    try {
+      localStorage.setItem('monopoly_player_profile', JSON.stringify(this.profile));
+    } catch (e) {}
+    if (pushToSync && typeof window !== 'undefined' && window.cloudSync) {
+      window.cloudSync.syncProfile();
+    }
+  }
+
+  updateColor(newColor) {
+    if (!newColor) return this.profile.color;
+    this.profile.color = newColor;
+    this.profile.nameColor = newColor;
+    this.saveProfile();
+    return newColor;
+  }
+
+  updateNameColor(newColor) {
+    if (!newColor) return this.profile.nameColor || this.profile.color;
+    this.profile.nameColor = newColor;
+    this.profile.color = newColor;
+    this.saveProfile();
+    return newColor;
   }
 
   setDiscordUser({ id, discordId, name, username, avatarUrl, isRegistered = true, authProvider = 'discord' }) {

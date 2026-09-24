@@ -2627,7 +2627,7 @@ body {
 }
 
 .lb-name > span:first-child {
-  color: var(--md-on-surface, #ffffff) !important;
+  color: inherit;
 }
 
 .lb-me-tag {
@@ -5841,5 +5841,48 @@ body {
   background: rgba(255,255,255,0.06);
   margin: 3px 0;
 }
+
+/* Nickname Color Picker */
+.name-color-option-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--md-outline-variant, rgba(255, 255, 255, 0.1));
+  background: var(--md-surface-container-low, rgba(30, 41, 59, 0.5));
+  color: var(--md-on-surface, #ffffff);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.name-color-option-btn:hover {
+  background: var(--md-surface-container-high, rgba(51, 65, 85, 0.8));
+  border-color: var(--md-outline, rgba(255, 255, 255, 0.3));
+  transform: translateY(-1px);
+}
+
+.name-color-option-btn.active {
+  border-color: var(--md-primary, #38bdf8);
+  background: rgba(56, 189, 248, 0.15);
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.25);
+}
+
+.name-color-swatch {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#btn-name-color-trigger:hover {
+  transform: scale(1.06);
+  filter: brightness(1.1);
+}
+
 
 

@@ -41,7 +41,7 @@ export class ThemeManager {
     this.applyTheme(this.currentTheme);
   }
 
-  applyTheme(themeId) {
+  applyTheme(themeId, pushToSync = true) {
     if (!THEMES.some(t => t.id === themeId)) {
       themeId = 'cyberpunk';
     }
@@ -54,6 +54,10 @@ export class ThemeManager {
         localStorage.setItem('monopoly_theme', themeId);
       }
     } catch (e) {}
+
+    if (pushToSync && typeof window !== 'undefined' && window.cloudSync) {
+      window.cloudSync.syncTheme(themeId);
+    }
   }
 
   getTheme() {
@@ -73,3 +77,6 @@ export class ThemeManager {
 }
 
 export const themeManager = new ThemeManager();
+if (typeof window !== 'undefined') {
+  window.themeManager = themeManager;
+}

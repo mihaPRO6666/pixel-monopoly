@@ -199,6 +199,7 @@ class LeaderboardManager {
       existing.token = myProfile.token;
       existing.customToken = myProfile.token === 'custom' ? myProfile.customToken : null;
       existing.color = myProfile.color;
+      existing.nameColor = myProfile.nameColor || myProfile.color;
       existing.bg = myProfile.bg || 'default';
       existing.profileBg = myProfile.bg || 'default';
       existing.title = myProfile.title || existing.title || 'creator';
@@ -222,6 +223,7 @@ class LeaderboardManager {
         token: myProfile.token,
         customToken: myProfile.token === 'custom' ? myProfile.customToken : null,
         color: myProfile.color,
+        nameColor: myProfile.nameColor || myProfile.color,
         bg: myProfile.bg || 'default',
         profileBg: myProfile.bg || 'default',
         title: myProfile.title || 'creator',
@@ -289,6 +291,7 @@ class LeaderboardManager {
       if (player.token && player.token !== 'custom') existing.token = getTokenEmoji(player.token);
       if (player.customToken) existing.customToken = player.customToken;
       if (player.color) existing.color = player.color;
+      if (player.nameColor || player.color) existing.nameColor = player.nameColor || player.color;
       if (player.bg || player.profileBg) {
         existing.bg = player.bg || player.profileBg;
         existing.profileBg = player.bg || player.profileBg;
@@ -311,6 +314,7 @@ class LeaderboardManager {
         token: getTokenEmoji(player.token || '🎩'),
         customToken: player.customToken || null,
         color: player.color || '#2563eb',
+        nameColor: player.nameColor || player.color || '#2563eb',
         bg: player.bg || player.profileBg || 'default',
         profileBg: player.bg || player.profileBg || 'default',
         title: player.title || 'novice',
@@ -444,6 +448,8 @@ class LeaderboardManager {
       list.push({
         ...r,
         name: isMe ? (myProfile.name || r.name) : r.name,
+        color: isMe ? (myProfile.color || r.color) : r.color,
+        nameColor: isMe ? (myProfile.nameColor || myProfile.color || r.nameColor || r.color) : (r.nameColor || r.color || '#2563eb'),
         isMe
       });
     }

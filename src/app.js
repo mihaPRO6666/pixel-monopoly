@@ -7,7 +7,7 @@ import { ui, showToast, showConfirm } from './ui.js?v=8.0.0';
 import { network } from './network.js?v=8.0.0';
 import { sound } from './audio.js?v=8.0.0';
 import { themeManager, THEMES } from './theme.js?v=8.0.0';
-import { profileManager, AVAILABLE_TOKENS, PLAYER_COLORS, PROFILE_BACKGROUNDS, getProfileBg, getTokenEmoji, getTokenName, renderTokenHTML, isDevUser } from './profile.js?v=8.0.0';
+import { profileManager, AVAILABLE_TOKENS, PLAYER_COLORS, NICKNAME_COLORS, PROFILE_BACKGROUNDS, getProfileBg, getTokenEmoji, getTokenName, renderTokenHTML, isDevUser } from './profile.js?v=8.0.0';
 import { GAME_PRESETS, getPresetById } from './presets.js?v=8.0.0';
 import { BOARD_TILES, COLOR_GROUPS } from './board-data.js?v=8.0.0';
 import { leaderboardManager, isPlayerRegistered } from './leaderboard.js?v=8.0.0';
@@ -18,6 +18,7 @@ import { pawnEditor } from './pawn-editor.js?v=8.0.0';
 import { matchHistoryManager } from './history.js?v=8.0.0';
 import { MAP_THEMES, getMapThemeById, getThemedTileData } from './map-themes.js?v=8.0.0';
 import { generateThematicTiles } from './city-generator.js?v=8.0.0';
+import { cloudSync } from './cloud-sync.js?v=8.0.0';
 
 class App {
   constructor() {
@@ -104,6 +105,14 @@ class App {
 
     // Listen for public lobbies on the main page
     network.listenForPublicLobbies((lobbies) => this.renderLobbiesList(lobbies));
+
+    // Cloud Synchronization across origins (GitHub Pages, Vercel, localhost)
+    cloudSync.init(network);
+    window.addEventListener('cloud-sync-applied', () => {
+      this.renderProfileCard();
+      this.renderLeaderboard();
+      this.renderNameColorPicker();
+    });
 
     // Setup DOM Listeners & UI
     this.initDOMListeners();
@@ -1812,6 +1821,9 @@ class App {
     const cardName = document.getElementById('profile-card-name');
     if (cardName) {
       cardName.innerText = (p.name && p.name !== 'Гость') ? p.name : (isRegistered ? p.name : 'Гость');
+      if (p.nameColor || p.color) {
+        cardName.style.color = p.nameColor || p.color;
+      }
     }
 
     const cardTitle = document.getElementById('profile-card-title-badge');
@@ -1888,7 +1900,8 @@ class App {
         btnOpenProfile.setAttribute('title', `Профиль: ${p.name} (Discord)`);
       }
       if (btnCardLogout) btnCardLogout.style.display = 'inline-flex';
-      if (headerName) headerName.innerHTML = `${renderTokenHTML(p.token, p.customToken, 'token-custom-img')} ${p.name}`;
+      const nameCol = p.nameColor || p.color || '#38bdf8';
+      if (headerName) headerName.innerHTML = `${renderTokenHTML(p.token, p.customToken, 'token-custom-img')} <span style="color: ${nameCol}; font-weight: 600;">${p.name}</span>`;
     } else {
       if (btnHeaderDiscord) {
         btnHeaderDiscord.style.display = 'inline-flex';
@@ -1899,7 +1912,8 @@ class App {
       }
       if (btnCardLogout) btnCardLogout.style.display = 'none';
       const displayName = (p.name && p.name !== 'Гость') ? p.name : 'Гость';
-      if (headerName) headerName.innerHTML = `${renderTokenHTML(p.token, p.customToken, 'token-custom-img')} ${displayName}`;
+      const nameCol = p.nameColor || p.color || '#38bdf8';
+      if (headerName) headerName.innerHTML = `${renderTokenHTML(p.token, p.customToken, 'token-custom-img')} <span style="color: ${nameCol}; font-weight: 600;">${displayName}</span>`;
     }
 
     // Header Coins Display
@@ -2030,7 +2044,10 @@ class App {
     const vpName = document.getElementById('vp-name');
     if (vpName) {
       vpName.innerText = name;
-      if (playerBg && playerBg.id !== 'default') {
+      const customNameColor = profile.nameColor || playerData.nameColor || profile.color || playerData.color;
+      if (customNameColor) {
+        vpName.style.color = customNameColor;
+      } else if (playerBg && playerBg.id !== 'default') {
         vpName.style.color = playerBg.textColor;
       } else {
         vpName.style.color = '';
@@ -2765,6 +2782,7 @@ class App {
       this.renderTokenPicker();
       this.renderBgPicker();
       this.renderTitlePicker();
+      this.renderNameColorPicker();
       modal.classList.add('active');
     };
     this.openProfileModal = openProfile;
@@ -2876,7 +2894,11 @@ class App {
         });
       }
 
-      document.getElementById('modal-profile').classList.remove('active');
+      const profModal = document.getElementById('modal-profile');
+      if (profModal) {
+        profModal.classList.remove('active');
+        profModal.style.display = '';
+      }
       sound.playClick();
       showToast('Профиль сохранен');
     });
@@ -3219,6 +3241,7 @@ class App {
       title: myProfile.title || 'novice',
       token: getTokenEmoji(myProfile.token),
       color: myProfile.color,
+      nameColor: myProfile.nameColor || myProfile.color,
       bg: myProfile.bg || 'default',
       text: cleanText,
       time: timeStr
@@ -3289,7 +3312,7 @@ class App {
     wrap.innerHTML = `
       <div class="chat-sender-row" style="${isMe ? 'justify-content: flex-end;' : ''}">
         <span style="font-size: 0.9rem;">${getTokenEmoji(msg.token)}</span>
-        <span class="chat-sender-name" style="color: ${msg.color || 'var(--md-primary)'};">${isMe ? 'Вы' : (msg.senderName || 'Игрок')}</span>
+        <span class="chat-sender-name" style="color: ${msg.nameColor || msg.color || 'var(--md-primary)'};">${isMe ? 'Вы' : (msg.senderName || 'Игрок')}</span>
         ${msg.title ? formatTitleBadge(msg.title) : ''}
         <span class="chat-time">${msg.time || ''}</span>
       </div>
@@ -3366,7 +3389,7 @@ class App {
             </span>
             <div class="lb-info">
               <div class="lb-name">
-                <span style="color: var(--md-on-surface, #ffffff); font-weight: 600;">${p.name}</span>
+                <span style="color: ${p.nameColor || p.color || 'var(--md-on-surface, #ffffff)'}; font-weight: 600;">${p.name}</span>
                 ${p.isRegistered ? `
                   <span class="lb-discord-badge" title="Подтверждённый аккаунт Discord">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="#5865F2"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.078.078 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
@@ -4878,6 +4901,137 @@ class App {
         }
       });
     });
+  }
+
+  renderNameColorPicker() {
+    const container = document.getElementById('name-color-preset-grid');
+    const colorInput = document.getElementById('input-profile-color-picker');
+    const colorInputCustom = document.getElementById('input-profile-color-picker-custom');
+    const triggerBtn = document.getElementById('btn-name-color-trigger');
+    const previewText = document.getElementById('preview-nickname-text');
+    const nameInput = document.getElementById('input-profile-name');
+    const summaryColor = document.getElementById('profile-summary-color');
+
+    const currentColor = profileManager.profile.nameColor || profileManager.profile.color || '#2563eb';
+
+    const updateDisplay = (color) => {
+      if (colorInput) colorInput.value = color;
+      if (colorInputCustom) colorInputCustom.value = color;
+      if (triggerBtn) triggerBtn.style.background = color;
+      if (previewText) {
+        previewText.style.color = color;
+        previewText.innerText = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : (profileManager.profile.name || 'hizuhara.');
+      }
+      if (summaryColor) {
+        const found = NICKNAME_COLORS.find(c => c.color.toLowerCase() === color.toLowerCase());
+        const label = found ? found.name : 'Свой цвет';
+        summaryColor.innerHTML = `<span class="color-dot" style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${color};margin-right:4px;"></span>${label}`;
+      }
+      if (container) {
+        container.querySelectorAll('.name-color-option-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.getAttribute('data-color').toLowerCase() === color.toLowerCase());
+        });
+      }
+    };
+
+    updateDisplay(currentColor);
+
+    if (nameInput) {
+      nameInput.oninput = () => {
+        if (previewText) {
+          previewText.innerText = nameInput.value.trim() || 'hizuhara.';
+        }
+      };
+    }
+
+    if (container) {
+      container.innerHTML = NICKNAME_COLORS.map(c => `
+        <button type="button" class="name-color-option-btn ${currentColor.toLowerCase() === c.color.toLowerCase() ? 'active' : ''}" data-color="${c.color}">
+          <span class="name-color-swatch" style="background: ${c.color};"></span>
+          <span>${c.name}</span>
+        </button>
+      `).join('');
+
+      container.querySelectorAll('.name-color-option-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          sound.playClick();
+          const chosen = btn.getAttribute('data-color');
+          profileManager.updateNameColor(chosen);
+          updateDisplay(chosen);
+          leaderboardManager.syncMyRecord();
+          this.renderProfileCard();
+          this.renderLeaderboard('wins', 'inline-leaderboard-list');
+          this.renderLeaderboard('wins', 'modal-leaderboard-list');
+
+          if (network && network.channel) {
+            this.broadcastAction('PLAYER_PROFILE_UPDATED', {
+              playerId: profileManager.profile.id,
+              name: profileManager.profile.name,
+              color: chosen,
+              nameColor: chosen,
+              token: profileManager.profile.token,
+              customToken: profileManager.profile.customToken,
+              bg: profileManager.profile.bg || 'default',
+              profileBg: profileManager.profile.bg || 'default'
+            });
+          }
+
+          if (this.currentScreen === 'lobby' && this.lobbyPlayers) {
+            this.lobbyPlayers = this.lobbyPlayers.map(p => String(p.id) === String(profileManager.profile.id) ? {
+              ...p,
+              color: chosen,
+              nameColor: chosen
+            } : p);
+            this.renderLobbyPlayers();
+            if (network && network.isHost) {
+              this.broadcastAction('LOBBY_UPDATE', { players: this.lobbyPlayers });
+            }
+          }
+        });
+      });
+    }
+
+    const handleCustomColorChange = (newVal) => {
+      if (!newVal) return;
+      profileManager.updateNameColor(newVal);
+      updateDisplay(newVal);
+      leaderboardManager.syncMyRecord();
+      this.renderProfileCard();
+      this.renderLeaderboard('wins', 'inline-leaderboard-list');
+      this.renderLeaderboard('wins', 'modal-leaderboard-list');
+
+      if (network && network.channel) {
+        this.broadcastAction('PLAYER_PROFILE_UPDATED', {
+          playerId: profileManager.profile.id,
+          name: profileManager.profile.name,
+          color: newVal,
+          nameColor: newVal,
+          token: profileManager.profile.token,
+          customToken: profileManager.profile.customToken,
+          bg: profileManager.profile.bg || 'default',
+          profileBg: profileManager.profile.bg || 'default'
+        });
+      }
+
+      if (this.currentScreen === 'lobby' && this.lobbyPlayers) {
+        this.lobbyPlayers = this.lobbyPlayers.map(p => String(p.id) === String(profileManager.profile.id) ? {
+          ...p,
+          color: newVal,
+          nameColor: newVal
+        } : p);
+        this.renderLobbyPlayers();
+        if (network && network.isHost) {
+          this.broadcastAction('LOBBY_UPDATE', { players: this.lobbyPlayers });
+        }
+      }
+    };
+
+    if (colorInput) {
+      colorInput.oninput = (e) => handleCustomColorChange(e.target.value);
+    }
+    if (colorInputCustom) {
+      colorInputCustom.oninput = (e) => handleCustomColorChange(e.target.value);
+    }
   }
 
   openPropertyManager() {
