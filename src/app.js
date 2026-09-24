@@ -38,6 +38,16 @@ class App {
     this.hasSentMatchWebhook = false;
   }
 
+  isBotController() {
+    return Boolean(
+      this.isSoloMode || 
+      this.isLocalMode || 
+      this.isTestMode || 
+      network.isHost || 
+      (network.roomCode && (network.roomCode.startsWith('SOLO-') || network.roomCode.startsWith('TEST-')))
+    );
+  }
+
   init() {
     console.log('Initializing Monopoly...');
 
@@ -193,6 +203,14 @@ class App {
       this.lobbyPlayers = session.lobbyPlayers || [];
       this.hasSentMatchWebhook = false;
 
+      // Ensure network.isHost is set so bot controller logic works immediately
+      if (this.isSoloMode || this.isLocalMode || this.isTestMode || session.isHost) {
+        network.isHost = true;
+      }
+      if (session.roomCode) {
+        network.roomCode = session.roomCode;
+      }
+
       // Load state directly into engine
       engine.loadState(session.state);
 
@@ -232,7 +250,7 @@ class App {
 
       // If it's a bot's turn, continue bot execution after short delay
       const curPlayer = engine.getCurrentPlayer();
-      if (curPlayer && curPlayer.isBot && (session.isHost || this.isLocalMode || this.isSoloMode)) {
+      if (curPlayer && curPlayer.isBot && this.isBotController()) {
         setTimeout(() => this.runBotTurnStep(), 1000);
       }
 
@@ -343,7 +361,7 @@ class App {
     const botDiffChips = document.querySelectorAll('#setting-bot-diff-chips .md-chip');
     botDiffChips.forEach(chip => {
       chip.onclick = () => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         const diff = chip.getAttribute('data-diff') || 'medium';
         this.setBotDifficulty(diff);
@@ -354,7 +372,7 @@ class App {
     const bannerBotDiffChips = document.querySelectorAll('#banner-bot-diff-chips .banner-bot-diff-chip');
     bannerBotDiffChips.forEach(chip => {
       chip.onclick = () => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         const diff = chip.getAttribute('data-diff') || 'medium';
         this.setBotDifficulty(diff);
@@ -365,7 +383,7 @@ class App {
     const maxChips = document.querySelectorAll('#max-players-chips .md-chip');
     maxChips.forEach(chip => {
       chip.onclick = () => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.maxPlayers = parseInt(chip.getAttribute('data-max'));
         this.renderLobbySettingsControls();
@@ -377,7 +395,7 @@ class App {
     const cashChips = document.querySelectorAll('#setting-starting-cash-chips .md-chip');
     cashChips.forEach(chip => {
       chip.onclick = () => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.customSettings.startingCash = parseInt(chip.getAttribute('data-val'));
         this.renderLobbySettingsControls();
@@ -389,7 +407,7 @@ class App {
     const salaryChips = document.querySelectorAll('#setting-salary-chips .md-chip');
     salaryChips.forEach(chip => {
       chip.onclick = () => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.customSettings.salary = parseInt(chip.getAttribute('data-val'));
         this.renderLobbySettingsControls();
@@ -401,7 +419,7 @@ class App {
     const timerChips = document.querySelectorAll('#setting-timer-chips .md-chip');
     timerChips.forEach(chip => {
       chip.onclick = () => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.customSettings.turnTimerSeconds = parseInt(chip.getAttribute('data-val'));
         this.renderLobbySettingsControls();
@@ -413,7 +431,7 @@ class App {
     const streetChips = document.querySelectorAll('#setting-streets-chips .md-chip');
     streetChips.forEach(chip => {
       chip.onclick = () => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.customSettings.initialRandomStreets = parseInt(chip.getAttribute('data-val'));
         this.renderLobbySettingsControls();
@@ -425,7 +443,7 @@ class App {
     const tJackpot = document.getElementById('toggle-jackpot');
     if (tJackpot) {
       tJackpot.onchange = (e) => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.customSettings.freeParkingJackpot = e.target.checked;
         this.broadcastLobbySettings();
@@ -435,7 +453,7 @@ class App {
     const tDoubleSalary = document.getElementById('toggle-double-salary');
     if (tDoubleSalary) {
       tDoubleSalary.onchange = (e) => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.customSettings.doubleSalaryOnGoLanding = e.target.checked;
         this.broadcastLobbySettings();
@@ -445,7 +463,7 @@ class App {
     const tRentJail = document.getElementById('toggle-rent-jail');
     if (tRentJail) {
       tRentJail.onchange = (e) => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.customSettings.rentInJail = e.target.checked;
         this.broadcastLobbySettings();
@@ -455,7 +473,7 @@ class App {
     const tBuildNoMonopoly = document.getElementById('toggle-build-no-monopoly');
     if (tBuildNoMonopoly) {
       tBuildNoMonopoly.onchange = (e) => {
-        if (!network.isHost) return;
+        if (!this.isBotController()) return;
         sound.playClick();
         this.customSettings.allowBuildingWithoutMonopoly = e.target.checked;
         this.broadcastLobbySettings();
@@ -466,7 +484,7 @@ class App {
   }
 
   renderLobbySettingsControls() {
-    const isHost = network.isHost;
+    const isHost = this.isBotController();
     const badge = document.getElementById('lobby-host-only-badge');
     if (badge) {
       badge.style.display = 'inline-block';
@@ -663,9 +681,14 @@ class App {
     const roomCode = 'SOLO-' + Math.floor(1000 + Math.random() * 9000);
     const profile = profileManager.profile;
 
+    // Immediately claim host authority so bots and lobby actions are instant and reliable offline
+    network.isHost = true;
+    network.roomCode = roomCode;
+
     sound.playClick();
     this.showScreen('lobby');
-    document.getElementById('lobby-room-code').innerText = roomCode;
+    const roomCodeEl = document.getElementById('lobby-room-code');
+    if (roomCodeEl) roomCodeEl.innerText = roomCode;
 
     const lBanner = document.getElementById('lobby-test-banner');
     if (lBanner) lBanner.style.display = 'none';
@@ -677,8 +700,6 @@ class App {
     // Show host controls
     const startBtn = document.getElementById('btn-start-game');
     if (startBtn) startBtn.style.display = 'inline-flex';
-
-    await network.joinRoom(roomCode, profile, true);
 
     const botArchetypes = [
       { name: 'Илон Бот', token: 'robot', color: '#06b6d4', botPersonality: 'aggressive' },
@@ -710,6 +731,11 @@ class App {
     this.renderLobbySettingsControls();
 
     ui.showToast('🤖 Создано соло-лобби с ботами!');
+
+    // Background join for multiplayer compatibility if online
+    network.joinRoom(roomCode, profile, true).catch(err => {
+      console.warn('Solo room offline fallback / network join notice:', err);
+    });
   }
 
   setBotDifficulty(diff) {
@@ -719,13 +745,15 @@ class App {
     this.lobbyPlayers = this.lobbyPlayers.map(p => p.isBot ? { ...p, botDifficulty: diff } : p);
     this.renderLobbyPlayers();
     this.renderLobbySettingsControls();
-    this.broadcastLobbySettings();
+    if (network.channel) {
+      this.broadcastLobbySettings();
+    }
     const diffNames = { easy: '🟢 Лёгкий', medium: '🟡 Средний', hard: '🔴 Сложный' };
     ui.showToast(`Установлена сложность ботов: ${diffNames[diff] || diff}`);
   }
 
   addBotToLobby() {
-    if (!network.isHost) return;
+    if (!this.isBotController()) return;
     if (this.lobbyPlayers.length >= this.maxPlayers) {
       ui.showToast(`В лобби уже максимум игроков (${this.maxPlayers})`);
       return;
@@ -764,12 +792,14 @@ class App {
 
     this.lobbyPlayers.push(botPlayer);
     this.renderLobbyPlayers();
-    this.broadcastLobbySettings();
+    if (network.channel) {
+      this.broadcastLobbySettings();
+    }
     ui.showToast(`🤖 Добавлен бот: ${botPlayer.name}`);
   }
 
   removeBotFromLobby() {
-    if (!network.isHost) return;
+    if (!this.isBotController()) return;
     const botIdx = this.lobbyPlayers.map(p => p.isBot).lastIndexOf(true);
     if (botIdx === -1) {
       ui.showToast('В лобби нет ботов');
@@ -778,7 +808,9 @@ class App {
     sound.playClick();
     const removed = this.lobbyPlayers.splice(botIdx, 1)[0];
     this.renderLobbyPlayers();
-    this.broadcastLobbySettings();
+    if (network.channel) {
+      this.broadcastLobbySettings();
+    }
     ui.showToast(`Удален бот: ${removed.name}`);
   }
 
@@ -1047,6 +1079,10 @@ class App {
     this.hasSentMatchWebhook = false;
     network.stopAnnouncingLobby();
 
+    if (this.isSoloMode || this.isLocalMode || this.isTestMode) {
+      network.isHost = true;
+    }
+
     const state = engine.initGame(this.lobbyPlayers, this.customSettings, this.customTiles);
     matchHistoryManager.startMatchTimer(0);
     this.showScreen('game');
@@ -1055,7 +1091,7 @@ class App {
     ui.update(state, profileManager.profile.id);
     this.saveActiveGameSession();
 
-    if (network.isHost) {
+    if (network.isHost && network.channel) {
       network.sendBroadcast('GAME_STARTED', { 
         state, 
         customTiles: this.customTiles,
@@ -1064,7 +1100,7 @@ class App {
     }
 
     const firstPlayer = engine.getCurrentPlayer();
-    if (firstPlayer && firstPlayer.isBot && (network.isHost || this.isLocalMode || this.isSoloMode)) {
+    if (firstPlayer && firstPlayer.isBot && this.isBotController()) {
       setTimeout(() => this.runBotTurnStep(), 1000);
     }
   }
@@ -1174,14 +1210,48 @@ class App {
     }
   }
 
-  // --- GAMEPLAY WATCHDOG (HEARTBEAT DISCONNECT MONITOR) ---
+  // --- GAMEPLAY WATCHDOG (BOT TURN & HEARTBEAT MONITOR) ---
   startGameWatchdog() {
     this.stopGameWatchdog();
-    this.gameWatchdogInterval = setInterval(() => {
-      if (this.currentScreen !== 'game' || engine.status !== 'PLAYING') return;
+    let botWaitTicks = 0;
+    let botRunningTicks = 0;
 
-      // Check for disconnected remote players via heartbeats
-      if (!this.isLocalMode && network.roomCode) {
+    this.gameWatchdogInterval = setInterval(() => {
+      if (this.currentScreen !== 'game' || engine.status !== 'PLAYING') {
+        botWaitTicks = 0;
+        botRunningTicks = 0;
+        return;
+      }
+
+      // 1. Bot Turn Watchdog & Auto-unfreeze
+      const curPlayer = engine.getCurrentPlayer();
+      if (curPlayer && curPlayer.isBot && this.isBotController()) {
+        if (!this.isBotTurnRunning) {
+          botRunningTicks = 0;
+          botWaitTicks++;
+          // If a bot is the active player and hasn't started its turn within ~1.2s, trigger it
+          if (botWaitTicks >= 1) {
+            console.log(`🤖 Watchdog: bot ${curPlayer.name} turn auto-trigger (tick: ${botWaitTicks})`);
+            this.runBotTurnStep();
+          }
+        } else {
+          botWaitTicks = 0;
+          botRunningTicks++;
+          // If bot turn has been running for > 6s (e.g. animation hang or stalled promise), force-release lock and retrigger
+          if (botRunningTicks >= 5) {
+            console.warn(`⚠️ Watchdog: bot ${curPlayer.name} turn was locked for ${botRunningTicks * 1.2}s, unfreezing lock`);
+            this.isBotTurnRunning = false;
+            botRunningTicks = 0;
+            this.runBotTurnStep();
+          }
+        }
+      } else {
+        botWaitTicks = 0;
+        botRunningTicks = 0;
+      }
+
+      // 2. Check for disconnected remote players via heartbeats
+      if (!this.isLocalMode && !this.isSoloMode && network.roomCode && network.channel) {
         engine.players.forEach(p => {
           if (!p.isBot && !p.hasLeft && !p.isBankrupt && String(p.id) !== String(profileManager.profile.id)) {
             const isAlive = network.isPlayerAlive(p.id, 6500);
@@ -1191,7 +1261,7 @@ class App {
           }
         });
       }
-    }, 2000);
+    }, 1200);
   }
 
   stopGameWatchdog() {
@@ -1258,7 +1328,7 @@ class App {
 
     const curPlayer = engine.getCurrentPlayer();
     if (curPlayer && (curPlayer.id === playerId || curPlayer.hasLeft || curPlayer.isBankrupt)) {
-      if (network.isHost || this.isLocalMode) {
+      if (this.isBotController()) {
         engine.endTurn();
         this.broadcastAction('SYNC_STATE', { state: engine.getState() });
       }
@@ -1308,7 +1378,7 @@ class App {
       this.broadcastAction('END_TURN', { state });
 
       const nextPlayer = engine.getCurrentPlayer();
-      if (nextPlayer && nextPlayer.isBot && (network.isHost || this.isLocalMode)) {
+      if (nextPlayer && nextPlayer.isBot && this.isBotController()) {
         setTimeout(() => this.runBotTurnStep(), 800);
       }
     }
@@ -1678,7 +1748,7 @@ class App {
         ui.update(engine.getState(), profileManager.profile.id);
         this.saveActiveGameSession();
         const nextCur = engine.getCurrentPlayer();
-        if (nextCur && nextCur.isBot && (network.isHost || this.isLocalMode)) {
+        if (nextCur && nextCur.isBot && this.isBotController()) {
           setTimeout(() => this.runBotTurnStep(), 800);
         }
         break;
@@ -5192,21 +5262,36 @@ class App {
 
       // 2. Roll dice if in ROLL phase
       if (engine.phase === 'ROLL' && engine.status === 'PLAYING') {
-        await new Promise(r => setTimeout(r, 700));
+        await new Promise(r => setTimeout(r, 600));
         const curDiceSkin = curPlayer.diceSkin || 'classic';
         const res = engine.rollDice();
         if (res && res.success) {
           sound.playDice();
           await new Promise(resolve => {
-            ui.animateDiceRoll(res.dice, () => {
-              ui.animateTokenStepByStep(curPlayer, res.oldPos, res.newPos, () => {
+            let done = false;
+            const timer = setTimeout(() => {
+              if (!done) {
+                done = true;
                 const state = engine.getState();
                 ui.update(state, profileManager.profile.id);
                 resolve();
+              }
+            }, 3500);
+
+            ui.animateDiceRoll(res.dice, () => {
+              ui.animateTokenStepByStep(curPlayer, res.oldPos, res.newPos, () => {
+                if (!done) {
+                  done = true;
+                  clearTimeout(timer);
+                  const state = engine.getState();
+                  ui.update(state, profileManager.profile.id);
+                  resolve();
+                }
               });
             }, curDiceSkin);
           });
 
+          this.saveActiveGameSession();
           this.broadcastAction('ROLL', {
             forcedValues: res.dice,
             oldPos: res.oldPos,
@@ -5219,7 +5304,7 @@ class App {
 
       // 3. Handle Buy Choice
       if (engine.phase === 'BUY_CHOICE' && engine.status === 'PLAYING') {
-        await new Promise(r => setTimeout(r, 800));
+        await new Promise(r => setTimeout(r, 700));
         const tile = BOARD_TILES[curPlayer.position];
         let willBuy = false;
         if (tile && tile.price) {
@@ -5239,27 +5324,31 @@ class App {
             ui.showToast(`🤖 ${curPlayer.name} приобрёл «${tile.name}» за $${tile.price}`);
             const state = engine.getState();
             ui.update(state, profileManager.profile.id);
+            this.saveActiveGameSession();
             this.broadcastAction('BUY', { tileId: buyRes.tileId, state });
           } else {
             engine.passProperty();
             const state = engine.getState();
             ui.update(state, profileManager.profile.id);
+            this.saveActiveGameSession();
             this.broadcastAction('PASS', { state });
           }
         } else {
           engine.passProperty();
           const state = engine.getState();
           ui.update(state, profileManager.profile.id);
+          this.saveActiveGameSession();
           this.broadcastAction('PASS', { state });
         }
       }
 
       // 4. Handle Card Event
       if (engine.phase === 'CARD_EVENT' && engine.status === 'PLAYING') {
-        await new Promise(r => setTimeout(r, 800));
+        await new Promise(r => setTimeout(r, 700));
         engine.applyActiveCard();
         const state = engine.getState();
         ui.update(state, profileManager.profile.id);
+        this.saveActiveGameSession();
         this.broadcastAction('APPLY_CARD', { state });
       }
 
@@ -5287,21 +5376,23 @@ class App {
             }
           }
           ui.update(engine.getState(), profileManager.profile.id);
+          this.saveActiveGameSession();
         }
       }
 
       // 6. End turn
       if ((engine.phase === 'ACTION' || engine.phase === 'BUY_CHOICE' || engine.phase === 'CARD_EVENT') && engine.status === 'PLAYING') {
-        await new Promise(r => setTimeout(r, 700));
+        await new Promise(r => setTimeout(r, 600));
         const endRes = engine.endTurn();
         if (endRes.success) {
           const state = engine.getState();
           ui.update(state, profileManager.profile.id);
+          this.saveActiveGameSession();
           this.broadcastAction('END_TURN', { state });
 
           const nextP = engine.getCurrentPlayer();
-          if (nextP && nextP.isBot && engine.status === 'PLAYING') {
-            setTimeout(() => this.runBotTurnStep(), 800);
+          if (nextP && nextP.isBot && engine.status === 'PLAYING' && this.isBotController()) {
+            setTimeout(() => this.runBotTurnStep(), 700);
           }
         }
       }
@@ -5316,6 +5407,7 @@ class App {
 // Instantiate and start
 const app = new App();
 window.app = app;
+window.engine = engine;
 window.profileManager = profileManager;
 window.leaderboardManager = leaderboardManager;
 
