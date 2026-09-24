@@ -2769,7 +2769,8 @@ class App {
       const nameInput = document.getElementById('input-profile-name');
 
       if (nameInput) {
-        nameInput.value = profileManager.profile.name || 'Игрок';
+        const savedNick = (() => { try { return localStorage.getItem('monopoly_custom_nickname'); } catch(e) { return null; } })();
+        nameInput.value = savedNick || profileManager.profile.name || 'Игрок';
         nameInput.disabled = false;
         nameInput.placeholder = 'Ваш никнейм';
       }
