@@ -4627,16 +4627,21 @@ class App {
       return;
     }
 
-    // Send Discord Webhook for real matches (only once per match by Host, or single player / winner fallback)
-    const isOnline = !this.isLocalMode && Boolean(network.roomCode);
-    const shouldSendWebhook = (!isOnline || network.isHost || isWinner) && !this.hasSentMatchWebhook;
+    // Send Discord bot notification ONLY for real online multiplayer matches
+    // Conditions: online room, not local/solo/test, at least 2 real players, host sends once
+    const isRealOnline = !this.isLocalMode && !this.isSoloMode && !this.isTestMode && Boolean(network.roomCode);
+    const realPlayers = (state.players || []).filter(p => !p.isBot);
+    const hasEnoughRealPlayers = realPlayers.length >= 2;
+    const shouldSendWebhook = isRealOnline && hasEnoughRealPlayers && network.isHost && !this.hasSentMatchWebhook;
+
     if (shouldSendWebhook) {
       this.hasSentMatchWebhook = true;
       sendMatchFinishedWebhook(state, {
-        roomCode: network.roomCode || 'Одиночная/Локальная игра',
+        roomCode: network.roomCode,
         isTestMode: false
       });
     }
+
 
     leaderboardManager.recordGameFinished(state.players, state.winner.id);
 
