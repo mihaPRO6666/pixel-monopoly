@@ -7,24 +7,119 @@ import { Resvg } from '@resvg/resvg-js';
 import { ROBOTO_BOLD, ROBOTO_REGULAR } from './fonts-data.js';
 
 const NTFY_BASE = 'https://ntfy.sh/pixel_monopoly_sync_';
+const HISTORY_URL = 'https://raw.githubusercontent.com/mihaPRO6666/pixel-monopoly/main/data/match-history.json';
 
-async function fetchPlayerStats(discordId) {
-  if (!discordId) return null;
+async function getPlayerFullData(userId, rawName) {
+  const isOwner = userId === '1472673126859935765' || (rawName && rawName.toLowerCase().includes('hizuhara'));
+
+  let stats = {
+    wins: isOwner ? 2 : 0,
+    games: isOwner ? 2 : 0,
+    maxNetWorth: isOwner ? 3200 : 1500,
+    losses: 0,
+    title: isOwner ? 'Создатель' : 'Новичок',
+    titleColor: isOwner ? '#f43f5e' : '#94a3b8',
+    token: 'Шляпа 🎩',
+    coins: isOwner ? 1500 : 100,
+    nameColor: isOwner ? '#14b8a6' : '#38bdf8',
+    diceSkin: isOwner ? 'Космос' : 'Классика',
+    playerName: rawName || 'Игрок'
+  };
+
+  // 1. Calculate from persistent match history
   try {
-    const res = await fetch(`${NTFY_BASE}${discordId}/json?since=all&limit=10`, {
-      signal: AbortSignal.timeout(1500)
-    });
-    if (!res.ok) return null;
-    const text = await res.text();
-    for (const line of text.trim().split('\n').reverse()) {
-      try {
-        const msg = JSON.parse(line);
-        const data = msg.message ? JSON.parse(msg.message) : null;
-        if (data && (data.name || data.stats)) return data;
-      } catch (e) {}
+    const histRes = await fetch(HISTORY_URL + '?t=' + Date.now(), { signal: AbortSignal.timeout(2000) });
+    if (histRes.ok) {
+      const histData = await histRes.json();
+      const matches = histData?.matches || [];
+      let matchWins = 0;
+      let matchGames = 0;
+      let matchLosses = 0;
+      let highestNet = 1500;
+
+      matches.forEach(m => {
+        const found = (m.players || []).find(p =>
+          (userId && p.discordId === userId) ||
+          (rawName && p.name && p.name.toLowerCase() === rawName.toLowerCase())
+        );
+        if (found) {
+          matchGames++;
+          if (found.isWinner || (m.winner && (m.winner.discordId === userId || m.winner.name === rawName))) {
+            matchWins++;
+          }
+          if (found.isBankrupt || found.hasLeft) {
+            matchLosses++;
+          }
+          if ((found.netWorth || found.cash || 0) > highestNet) {
+            highestNet = found.netWorth || found.cash || 0;
+          }
+          if (found.token) stats.token = found.token;
+          if (found.name) stats.playerName = found.name;
+        }
+      });
+
+      if (matchGames > 0) {
+        stats.games = matchGames;
+        stats.wins = matchWins;
+        stats.losses = matchLosses;
+        stats.maxNetWorth = highestNet;
+      }
     }
-    return null;
-  } catch (e) { return null; }
+  } catch (e) {
+    console.warn('History read error in profile card:', e);
+  }
+
+  // 2. Fetch from ntfy cloud sync with poll=1 (instant)
+  try {
+    if (userId) {
+      const ntfyRes = await fetch(`${NTFY_BASE}${userId}/json?poll=1&since=all`, {
+        signal: AbortSignal.timeout(1500)
+      });
+      if (ntfyRes.ok) {
+        const text = await ntfyRes.text();
+        for (const line of text.trim().split('\n').reverse()) {
+          try {
+            const msg = JSON.parse(line);
+            const data = msg.message ? JSON.parse(msg.message) : null;
+            if (data) {
+              if (data.coins !== undefined) stats.coins = data.coins;
+              if (data.title) stats.title = data.title;
+              if (data.nameColor) stats.nameColor = data.nameColor;
+              if (data.token) stats.token = data.token;
+              if (data.customName || data.name) stats.playerName = data.customName || data.name;
+              if (data.diceSkin) stats.diceSkin = data.diceSkin;
+              if (data.stats?.wins !== undefined) stats.wins = Math.max(stats.wins, data.stats.wins);
+              if (data.stats?.gamesPlayed !== undefined) stats.games = Math.max(stats.games, data.stats.gamesPlayed);
+              break;
+            }
+          } catch (e) {}
+        }
+      }
+    }
+  } catch (e) {}
+
+  // 3. Dynamic Title mapping & styling
+  if (isOwner) {
+    stats.title = 'Создатель';
+    stats.titleColor = '#f43f5e';
+    stats.nameColor = stats.nameColor || '#14b8a6';
+  } else {
+    if (stats.wins >= 10) {
+      stats.title = 'Магнат';
+      stats.titleColor = '#f59e0b';
+    } else if (stats.wins >= 5) {
+      stats.title = 'Монополист';
+      stats.titleColor = '#a855f7';
+    } else if (stats.wins >= 3) {
+      stats.title = 'Акула бизнеса';
+      stats.titleColor = '#38bdf8';
+    } else {
+      stats.title = 'Новичок';
+      stats.titleColor = '#94a3b8';
+    }
+  }
+
+  return stats;
 }
 
 async function fetchAvatarBase64(url) {
@@ -52,22 +147,23 @@ export default async function handler(req, res) {
   const { userId, name = 'Hizuhara', avatarUrl, discordTag = 'Hizuhara', color = '#14b8a6' } = req.query || {};
 
   // Fetch player stats and avatar in parallel
-  const [syncData, avatarBase64] = await Promise.all([
-    userId ? fetchPlayerStats(userId) : null,
+  const [playerData, avatarBase64] = await Promise.all([
+    getPlayerFullData(userId, name),
     avatarUrl ? fetchAvatarBase64(avatarUrl) : null
   ]);
 
-  const stats = syncData?.stats || {};
-  const wins = stats.wins ?? syncData?.wins ?? 2;
-  const games = stats.gamesPlayed ?? syncData?.games ?? 2;
-  const winRate = games > 0 ? Math.round((wins / games) * 100) : 100;
-  const coins = syncData?.coins ?? 0;
-  const title = syncData?.title || 'Создатель';
-  const diceSkin = syncData?.diceSkin || 'Космос';
-  const tokenName = syncData?.token || 'Шляпа';
-  const playerName = escapeXml(syncData?.customName || syncData?.name || name || 'Игрок');
-  const userColor = syncData?.nameColor || syncData?.color || color || '#f59e0b';
-  const maxNetWorth = stats.maxNetWorth || 3200;
+  const wins = playerData.wins;
+  const games = playerData.games;
+  const winRate = games > 0 ? Math.round((wins / games) * 100) : 0;
+  const coins = playerData.coins;
+  const title = playerData.title;
+  const diceSkin = playerData.diceSkin;
+  const tokenName = playerData.token;
+  const playerName = escapeXml(playerData.playerName || name);
+  const userColor = playerData.nameColor || color || '#14b8a6';
+  const titleColor = playerData.titleColor || '#f43f5e';
+  const maxNetWorth = playerData.maxNetWorth || 1500;
+  const losses = playerData.losses || Math.max(0, games - wins);
 
   const width = 900;
   const height = 540;
@@ -131,18 +227,18 @@ export default async function handler(req, res) {
   <text x="130" y="58" fill="${userColor}" font-size="28" font-family="Roboto" font-weight="bold">${playerName}</text>
 
   <!-- Title Badge (e.g. [ Создатель ]) -->
-  <rect x="130" y="70" width="115" height="22" rx="6" fill="#e11d48" fill-opacity="0.25" stroke="#f43f5e" stroke-width="1"/>
-  <text x="187" y="85" text-anchor="middle" fill="#fda4af" font-size="12" font-family="Roboto" font-weight="bold">[ ${escapeXml(title)} ]</text>
+  <rect x="130" y="70" width="130" height="22" rx="6" fill="${titleColor}" fill-opacity="0.2" stroke="${titleColor}" stroke-width="1"/>
+  <text x="195" y="85" text-anchor="middle" fill="${titleColor}" font-size="12" font-family="Roboto" font-weight="bold">[ ${escapeXml(title)} ]</text>
 
   <!-- Discord Tag Badge -->
-  <rect x="252" y="70" width="130" height="22" rx="6" fill="#5865f2" fill-opacity="0.2" stroke="#5865f2" stroke-width="1"/>
-  <text x="317" y="85" text-anchor="middle" fill="#c7d2fe" font-size="12" font-family="Roboto">@${escapeXml(discordTag)}</text>
+  <rect x="268" y="70" width="130" height="22" rx="6" fill="#5865f2" fill-opacity="0.2" stroke="#5865f2" stroke-width="1"/>
+  <text x="333" y="85" text-anchor="middle" fill="#c7d2fe" font-size="12" font-family="Roboto">@${escapeXml(discordTag)}</text>
 
   <!-- Header Right Stats Pill -->
   <g transform="translate(${width - 240}, 35)">
     <rect x="0" y="0" width="210" height="70" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
     <text x="15" y="26" fill="#94a3b8" font-size="11" font-family="Roboto" font-weight="bold">СТАТУС ИГРОКА</text>
-    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Roboto" font-weight="bold">ЧЕМПИОН</text>
+    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Roboto" font-weight="bold">${winRate >= 50 ? 'ЧЕМПИОН ⭐' : 'ИГРОК 🎲'}</text>
     <text x="195" y="48" text-anchor="end" fill="#10b981" font-size="12" font-family="Roboto" font-weight="bold">ONLINE</text>
     <circle cx="132" cy="44" r="4" fill="#10b981"/>
   </g>
@@ -205,18 +301,18 @@ export default async function handler(req, res) {
 
     <!-- Row 4 -->
     <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Roboto">Поражений / Выходов</text>
-    <text x="390" y="185" text-anchor="end" fill="#f87171" font-size="14" font-family="Roboto" font-weight="bold">${Math.max(0, games - wins)}</text>
+    <text x="390" y="185" text-anchor="end" fill="#f87171" font-size="14" font-family="Roboto" font-weight="bold">${losses}</text>
     <line x1="18" y1="198" x2="390" y2="198" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 5 -->
     <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Roboto">Ранг на сервере</text>
-    <text x="390" y="225" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Roboto" font-weight="bold">#1 Лидер</text>
+    <text x="390" y="225" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Roboto" font-weight="bold">${wins > 0 ? '#1 Лидер' : 'Участник'}</text>
     <line x1="18" y1="238" x2="390" y2="238" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Mini Progress Bar -->
     <text x="18" y="258" fill="#64748b" font-size="11" font-family="Roboto">ПРОГРЕСС ВИНРЕЙТА</text>
     <rect x="160" y="248" width="230" height="12" rx="6" fill="#1e293b"/>
-    <rect x="160" y="248" width="${Math.round(230 * (winRate / 100))}" height="12" rx="6" fill="url(#barGrad)"/>
+    <rect x="160" y="248" width="${Math.max(4, Math.round(230 * (winRate / 100)))}" height="12" rx="6" fill="url(#barGrad)"/>
   </g>
 
   <!-- Right Box: ПЕРСОНАЛИЗАЦИЯ И ИНВЕНТАРЬ -->
@@ -233,7 +329,7 @@ export default async function handler(req, res) {
 
     <!-- Item 2 -->
     <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Roboto">Титул профиля</text>
-    <text x="390" y="105" text-anchor="end" fill="#f43f5e" font-size="14" font-family="Roboto" font-weight="bold">${escapeXml(title)}</text>
+    <text x="390" y="105" text-anchor="end" fill="${titleColor}" font-size="14" font-family="Roboto" font-weight="bold">${escapeXml(title)}</text>
     <line x1="18" y1="118" x2="390" y2="118" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 3 -->
@@ -273,7 +369,7 @@ export default async function handler(req, res) {
     const pngBuffer = resvg.render().asPng();
 
     res.setHeader('Content-Type', 'image/png');
-    res.setHeader('Cache-Control', 'public, max-age=60, s-maxage=60');
+    res.setHeader('Cache-Control', 'public, max-age=10, s-maxage=10');
     return res.status(200).send(pngBuffer);
   } catch (err) {
     console.error('Profile card render error:', err);
