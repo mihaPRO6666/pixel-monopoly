@@ -5,6 +5,7 @@
  */
 
 import { verifyKey, InteractionType, InteractionResponseType } from 'discord-interactions';
+import { generateProfileCard } from './profile-card.js';
 
 const PUBLIC_KEY = process.env.DISCORD_PUBLIC_KEY;
 const NTFY_BASE = 'https://ntfy.sh/pixel_monopoly_sync_';
@@ -181,39 +182,65 @@ export default async function handler(req, res) {
         ? `https://cdn.discordapp.com/avatars/${userId}/${avatarHash}.png?size=128`
         : `https://cdn.discordapp.com/embed/avatars/${Number(BigInt(userId || '0') % 6n)}.png`;
 
-      const cardImageUrl = `https://pixel-monopoly-nu.vercel.app/api/profile-card?userId=${userId}&name=${encodeURIComponent(globalName)}&discordTag=${encodeURIComponent(globalName)}&avatarUrl=${encodeURIComponent(avatarUrl)}&t=${Date.now()}`;
+      // 1. Immediately acknowledge with deferred message (shows thinking... without gray box)
+      res.status(200).json({
+        type: InteractionResponseType.DEFERRED_CHANNEL_MESSAGE_WITH_SOURCE
+      });
 
-      const embed = {
-        color: 0xf59e0b,
-        image: {
-          url: cardImageUrl
-        }
-      };
+      // 2. Generate PNG buffer and attach directly to message
+      try {
+        const pngBuffer = await generateProfileCard({
+          userId,
+          name: globalName,
+          discordTag: globalName,
+          avatarUrl
+        });
 
-      const components = [
-        {
-          type: 1,
+        const appId = interaction.application_id || process.env.DISCORD_APP_ID || '1553411801884926023';
+        const token = interaction.token;
+
+        const formData = new FormData();
+        const blob = new Blob([pngBuffer], { type: 'image/png' });
+        formData.append('files[0]', blob, 'profile.png');
+
+        const payload = {
+          embeds: [
+            {
+              color: 0xf59e0b,
+              image: { url: 'attachment://profile.png' }
+            }
+          ],
           components: [
             {
-              type: 2,
-              style: 2,
-              label: '🎨 Персонализация',
-              custom_id: `profile_gear_${userId}`
-            },
-            {
-              type: 2,
-              style: 5,
-              label: '🎲 Играть в Монополию',
-              url: 'https://pixel-monopoly-nu.vercel.app'
+              type: 1,
+              components: [
+                {
+                  type: 2,
+                  style: 2,
+                  label: '🎨 Персонализация',
+                  custom_id: `profile_gear_${userId}`
+                },
+                {
+                  type: 2,
+                  style: 5,
+                  label: '🎲 Играть в Монополию',
+                  url: 'https://pixel-monopoly-nu.vercel.app'
+                }
+              ]
             }
           ]
-        }
-      ];
+        };
 
-      return res.status(200).json({
-        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-        data: { embeds: [embed], components }
-      });
+        formData.append('payload_json', JSON.stringify(payload));
+
+        await fetch(`https://discord.com/api/v10/webhooks/${appId}/${token}/messages/@original`, {
+          method: 'PATCH',
+          body: formData
+        });
+      } catch (err) {
+        console.error('Deferred profile card error:', err);
+      }
+      return;
     }
 
     // ===== /история =====

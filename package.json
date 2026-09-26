@@ -1,5 +1,6 @@
 {
   "name": "pixel-monopoly",
+  "type": "module",
   "version": "1.0.0",
   "description": "Material You (Pixel style) Multiplayer Monopoly with Supabase Realtime",
   "main": "index.html",

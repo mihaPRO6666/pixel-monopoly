@@ -143,9 +143,7 @@ function escapeXml(str) {
     .replace(/'/g, '&apos;');
 }
 
-export default async function handler(req, res) {
-  const { userId, name = 'Hizuhara', avatarUrl, discordTag = 'Hizuhara', color = '#14b8a6' } = req.query || {};
-
+export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl, discordTag = 'Hizuhara', color = '#14b8a6' }) {
   // Fetch player stats and avatar in parallel
   const [playerData, avatarBase64] = await Promise.all([
     getPlayerFullData(userId, name),
@@ -357,17 +355,21 @@ export default async function handler(req, res) {
 </svg>
   `;
 
-  try {
-    const resvg = new Resvg(svg, {
-      fitTo: { mode: 'width', value: width },
-      font: {
-        fontBuffers: [ROBOTO_BOLD, ROBOTO_REGULAR],
-        defaultFontFamily: 'Roboto',
-        loadSystemFonts: false
-      }
-    });
-    const pngBuffer = resvg.render().asPng();
+  const resvg = new Resvg(svg, {
+    fitTo: { mode: 'width', value: width },
+    font: {
+      fontBuffers: [ROBOTO_BOLD, ROBOTO_REGULAR],
+      defaultFontFamily: 'Roboto',
+      loadSystemFonts: false
+    }
+  });
 
+  return resvg.render().asPng();
+}
+
+export default async function handler(req, res) {
+  try {
+    const pngBuffer = await generateProfileCard(req.query || {});
     res.setHeader('Content-Type', 'image/png');
     res.setHeader('Cache-Control', 'public, max-age=10, s-maxage=10');
     return res.status(200).send(pngBuffer);
