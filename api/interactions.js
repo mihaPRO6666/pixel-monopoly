@@ -181,21 +181,39 @@ export default async function handler(req, res) {
       const playerName = stats?.customName || stats?.name || globalName;
       const nameColorHex = (stats?.nameColor || stats?.color || '').replace('#', '');
 
+      const cardImageUrl = `https://pixel-monopoly-nu.vercel.app/api/profile-card?userId=${userId}&name=${encodeURIComponent(playerName)}&discordTag=${encodeURIComponent(globalName)}&avatarUrl=${encodeURIComponent(avatarUrl)}&t=${Date.now()}`;
+
       const embed = {
-        title: `🎩 Профиль игрока`,
-        color: nameColorHex ? parseInt(nameColorHex, 16) : 0x14b8a6,
-        thumbnail: { url: avatarUrl },
-        fields: [
-          { name: '👤 Ник в игре', value: `**${playerName}**`, inline: true },
-          { name: '🏆 Победы', value: wins !== null ? `**${wins}**` : '—', inline: true },
-          { name: '🎲 Матчей', value: games !== null ? `**${games}**` : '—', inline: true },
-          { name: '📈 Винрейт', value: (wins !== null && games !== null) ? `**${winRate(wins, games)}**` : '—', inline: true },
-          { name: '🎮 Играть', value: '[Pixel Monopoly](https://pixel-monopoly-nu.vercel.app)', inline: true }
-        ],
-        footer: { text: 'Pixel Monopoly' }
+        color: nameColorHex ? parseInt(nameColorHex, 16) : 0xf59e0b,
+        image: {
+          url: cardImageUrl
+        }
       };
 
-      return res.json({ type: 4, data: { embeds: [embed] } });
+      const components = [
+        {
+          type: 1,
+          components: [
+            {
+              type: 2,
+              style: 2,
+              label: '🎨 Персонализация',
+              custom_id: `profile_gear_${userId}`
+            },
+            {
+              type: 2,
+              style: 5,
+              label: '🎲 Играть в Монополию',
+              url: 'https://pixel-monopoly-nu.vercel.app'
+            }
+          ]
+        }
+      ];
+
+      return res.json({
+        type: 4,
+        data: { embeds: [embed], components }
+      });
     }
 
     // ===== /история =====
@@ -220,9 +238,11 @@ export default async function handler(req, res) {
     return res.json({ type: 4, data: { content: '❓ Неизвестная команда', flags: 64 } });
   }
 
-  // MESSAGE_COMPONENT (Type 3) — Button pagination click
+  // MESSAGE_COMPONENT (Type 3) — Button interactions
   if (interaction.type === 3) {
     const customId = interaction.data?.custom_id || '';
+
+    // History pagination
     if (customId.startsWith('history_page_')) {
       const pageNum = parseInt(customId.replace('history_page_', ''), 10) || 0;
       const history = await fetchHistory();
@@ -233,6 +253,35 @@ export default async function handler(req, res) {
       return res.json({
         type: 7, // UPDATE_MESSAGE
         data: { embeds: [embed], components }
+      });
+    }
+
+    // Profile customization info button
+    if (customId.startsWith('profile_gear_')) {
+      const targetUserId = customId.replace('profile_gear_', '');
+      const stats = targetUserId ? await fetchPlayerStats(targetUserId) : null;
+      const token = stats?.token || 'Шляпа 🎩';
+      const title = stats?.title || 'Создатель 🛠️';
+      const diceSkin = stats?.diceSkin || 'Космическая пустота 🎲';
+      const color = stats?.nameColor || stats?.color || 'Изумрудный 🟢';
+
+      const gearEmbed = {
+        title: '🎨 Экипировка и персонализация',
+        description: `Текущие настройки персонализации игрока в **Pixel Monopoly**:`,
+        color: 0xf59e0b,
+        fields: [
+          { name: '🎭 Фишка игрока', value: `\`${token}\``, inline: true },
+          { name: '🏷️ Титул', value: `\`${title}\``, inline: true },
+          { name: '🎲 Скин кубиков', value: `\`${diceSkin}\``, inline: true },
+          { name: '🎨 Цвет ника', value: `\`${color}\``, inline: true },
+          { name: '💰 Монеты профиля', value: `**${(stats?.coins || 0).toLocaleString('ru-RU')} 🪙**`, inline: true }
+        ],
+        footer: { text: 'Сменить скины можно в игре → Поменять профиль' }
+      };
+
+      return res.json({
+        type: 4, // CHANNEL_MESSAGE_WITH_SOURCE
+        data: { embeds: [gearEmbed], flags: 64 } // Ephemeral
       });
     }
   }
