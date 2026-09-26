@@ -4,7 +4,7 @@
  * Endpoint: POST /api/interactions
  */
 
-import { webcrypto } from 'crypto';
+import { verifyKey, InteractionType, InteractionResponseType } from 'discord-interactions';
 
 const PUBLIC_KEY = process.env.DISCORD_PUBLIC_KEY;
 const NTFY_BASE = 'https://ntfy.sh/pixel_monopoly_sync_';
@@ -13,24 +13,29 @@ const HISTORY_URL = 'https://raw.githubusercontent.com/mihaPRO6666/pixel-monopol
 const PAGE_SIZE = 10;
 const MAX_PAGES = 10;
 
-// Verify Discord request signature (ed25519)
-async function verifySignature(rawBody, signature, timestamp) {
-  try {
-    const keyData = Buffer.from(PUBLIC_KEY, 'hex');
-    const pubKey = await webcrypto.subtle.importKey('raw', keyData, { name: 'Ed25519' }, false, ['verify']);
-    const msg = Buffer.from(timestamp + rawBody);
-    const sig = Buffer.from(signature, 'hex');
-    return await webcrypto.subtle.verify({ name: 'Ed25519' }, pubKey, sig, msg);
-  } catch (e) {
-    return false;
+// Disable built-in Vercel body parser to get raw body buffer for verification
+export const config = {
+  api: {
+    bodyParser: false
   }
+};
+
+async function getRawBody(req) {
+  if (typeof req.body === 'string') return req.body;
+  if (Buffer.isBuffer(req.body)) return req.body.toString('utf8');
+  return new Promise((resolve) => {
+    let data = '';
+    req.on('data', (chunk) => { data += chunk; });
+    req.on('end', () => { resolve(data); });
+  });
 }
 
 // Fetch player game stats from ntfy cloud sync
 async function fetchPlayerStats(discordId) {
+  if (!discordId) return null;
   try {
     const res = await fetch(`${NTFY_BASE}${discordId}/json?since=all&limit=10`, {
-      signal: AbortSignal.timeout(3000)
+      signal: AbortSignal.timeout(2000)
     });
     if (!res.ok) return null;
     const text = await res.text();
@@ -48,15 +53,10 @@ async function fetchPlayerStats(discordId) {
 // Fetch match history from GitHub
 async function fetchHistory() {
   try {
-    const res = await fetch(HISTORY_URL + '?t=' + Date.now(), { signal: AbortSignal.timeout(4000) });
+    const res = await fetch(HISTORY_URL + '?t=' + Date.now(), { signal: AbortSignal.timeout(2500) });
     if (!res.ok) return null;
     return await res.json();
   } catch (e) { return null; }
-}
-
-function winRate(wins, games) {
-  if (!games) return '0%';
-  return `${Math.round((wins / games) * 100)}%`;
 }
 
 function timeAgo(isoDate) {
@@ -144,21 +144,27 @@ function buildHistoryPage(matches, pageIndex = 0) {
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
-  const rawBody = JSON.stringify(req.body);
   const signature = req.headers['x-signature-ed25519'];
   const timestamp = req.headers['x-signature-timestamp'];
 
   if (!signature || !timestamp) return res.status(401).send('Missing signature headers');
-  const isValid = await verifySignature(rawBody, signature, timestamp);
-  if (!isValid) return res.status(401).send('Invalid signature');
 
-  const interaction = req.body;
+  const rawBody = await getRawBody(req);
+
+  const isValid = verifyKey(rawBody, signature, timestamp, PUBLIC_KEY);
+  if (!isValid) {
+    return res.status(401).send('Invalid signature');
+  }
+
+  const interaction = JSON.parse(rawBody);
 
   // PING (Type 1)
-  if (interaction.type === 1) return res.json({ type: 1 });
+  if (interaction.type === InteractionType.PING) {
+    return res.status(200).json({ type: InteractionResponseType.PONG });
+  }
 
   // APPLICATION_COMMAND (Type 2)
-  if (interaction.type === 2) {
+  if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     const commandName = interaction.data?.name;
 
     // ===== /профиль =====
@@ -175,16 +181,10 @@ export default async function handler(req, res) {
         ? `https://cdn.discordapp.com/avatars/${userId}/${avatarHash}.png?size=128`
         : `https://cdn.discordapp.com/embed/avatars/${Number(BigInt(userId || '0') % 6n)}.png`;
 
-      const stats = userId ? await fetchPlayerStats(userId) : null;
-      const wins = stats?.stats?.wins ?? stats?.wins ?? null;
-      const games = stats?.stats?.gamesPlayed ?? stats?.games ?? null;
-      const playerName = stats?.customName || stats?.name || globalName;
-      const nameColorHex = (stats?.nameColor || stats?.color || '').replace('#', '');
-
-      const cardImageUrl = `https://pixel-monopoly-nu.vercel.app/api/profile-card?userId=${userId}&name=${encodeURIComponent(playerName)}&discordTag=${encodeURIComponent(globalName)}&avatarUrl=${encodeURIComponent(avatarUrl)}&t=${Date.now()}`;
+      const cardImageUrl = `https://pixel-monopoly-nu.vercel.app/api/profile-card?userId=${userId}&name=${encodeURIComponent(globalName)}&discordTag=${encodeURIComponent(globalName)}&avatarUrl=${encodeURIComponent(avatarUrl)}&t=${Date.now()}`;
 
       const embed = {
-        color: nameColorHex ? parseInt(nameColorHex, 16) : 0xf59e0b,
+        color: 0xf59e0b,
         image: {
           url: cardImageUrl
         }
@@ -210,8 +210,8 @@ export default async function handler(req, res) {
         }
       ];
 
-      return res.json({
-        type: 4,
+      return res.status(200).json({
+        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: { embeds: [embed], components }
       });
     }
@@ -222,24 +222,27 @@ export default async function handler(req, res) {
       const matches = history?.matches || [];
 
       if (!matches.length) {
-        return res.json({
-          type: 4,
+        return res.status(200).json({
+          type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
           data: { content: '📭 История матчей пока пуста. Сыграйте онлайн партию!', flags: 64 }
         });
       }
 
       const { embed, components } = buildHistoryPage(matches, 0);
-      return res.json({
-        type: 4, // CHANNEL_MESSAGE_WITH_SOURCE
+      return res.status(200).json({
+        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: { embeds: [embed], components }
       });
     }
 
-    return res.json({ type: 4, data: { content: '❓ Неизвестная команда', flags: 64 } });
+    return res.status(200).json({
+      type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+      data: { content: '❓ Неизвестная команда', flags: 64 }
+    });
   }
 
   // MESSAGE_COMPONENT (Type 3) — Button interactions
-  if (interaction.type === 3) {
+  if (interaction.type === InteractionType.MESSAGE_COMPONENT) {
     const customId = interaction.data?.custom_id || '';
 
     // History pagination
@@ -250,8 +253,8 @@ export default async function handler(req, res) {
 
       const { embed, components } = buildHistoryPage(matches, pageNum);
 
-      return res.json({
-        type: 7, // UPDATE_MESSAGE
+      return res.status(200).json({
+        type: InteractionResponseType.UPDATE_MESSAGE,
         data: { embeds: [embed], components }
       });
     }
@@ -279,8 +282,8 @@ export default async function handler(req, res) {
         footer: { text: 'Сменить скины можно в игре → Поменять профиль' }
       };
 
-      return res.json({
-        type: 4, // CHANNEL_MESSAGE_WITH_SOURCE
+      return res.status(200).json({
+        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: { embeds: [gearEmbed], flags: 64 } // Ephemeral
       });
     }
