@@ -4,49 +4,15 @@
  */
 
 import { Resvg } from '@resvg/resvg-js';
-import { readFileSync, existsSync } from 'fs';
-import { join } from 'path';
+import { ROBOTO_BOLD, ROBOTO_REGULAR } from './fonts-data.js';
 
 const NTFY_BASE = 'https://ntfy.sh/pixel_monopoly_sync_';
-
-// In-memory cache for fonts & stats
-let cachedFontBold = null;
-let cachedFontReg = null;
-
-async function getFonts() {
-  if (cachedFontBold && cachedFontReg) {
-    return [cachedFontBold, cachedFontReg];
-  }
-
-  const boldPath = join(process.cwd(), 'fonts', 'Roboto-Bold.ttf');
-  const regPath = join(process.cwd(), 'fonts', 'Roboto-Regular.ttf');
-
-  if (existsSync(boldPath) && existsSync(regPath)) {
-    cachedFontBold = readFileSync(boldPath);
-    cachedFontReg = readFileSync(regPath);
-    return [cachedFontBold, cachedFontReg];
-  }
-
-  // Fallback: download if missing in container
-  try {
-    const [bRes, rRes] = await Promise.all([
-      fetch('https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf'),
-      fetch('https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf')
-    ]);
-    cachedFontBold = Buffer.from(await bRes.arrayBuffer());
-    cachedFontReg = Buffer.from(await rRes.arrayBuffer());
-    return [cachedFontBold, cachedFontReg];
-  } catch (e) {
-    console.warn('Font download error:', e);
-    return [];
-  }
-}
 
 async function fetchPlayerStats(discordId) {
   if (!discordId) return null;
   try {
     const res = await fetch(`${NTFY_BASE}${discordId}/json?since=all&limit=10`, {
-      signal: AbortSignal.timeout(2000)
+      signal: AbortSignal.timeout(1500)
     });
     if (!res.ok) return null;
     const text = await res.text();
@@ -64,7 +30,7 @@ async function fetchPlayerStats(discordId) {
 async function fetchAvatarBase64(url) {
   if (!url) return null;
   try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(2000) });
+    const res = await fetch(url, { signal: AbortSignal.timeout(1500) });
     if (!res.ok) return null;
     const buffer = await res.arrayBuffer();
     const mime = res.headers.get('content-type') || 'image/png';
@@ -85,9 +51,8 @@ function escapeXml(str) {
 export default async function handler(req, res) {
   const { userId, name = 'Hizuhara', avatarUrl, discordTag = 'Hizuhara', color = '#14b8a6' } = req.query || {};
 
-  // Fetch fonts and player stats in parallel
-  const [fonts, syncData, avatarBase64] = await Promise.all([
-    getFonts(),
+  // Fetch player stats and avatar in parallel
+  const [syncData, avatarBase64] = await Promise.all([
     userId ? fetchPlayerStats(userId) : null,
     avatarUrl ? fetchAvatarBase64(avatarUrl) : null
   ]);
@@ -156,29 +121,29 @@ export default async function handler(req, res) {
   ${avatarBase64 ? `
     <image x="28" y="28" width="84" height="84" href="${avatarBase64}" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
   ` : `
-    <text x="70" y="80" text-anchor="middle" font-size="40" font-family="Roboto, sans-serif">VIP</text>
+    <text x="70" y="76" text-anchor="middle" fill="#f59e0b" font-size="28" font-family="Roboto" font-weight="bold">VIP</text>
   `}
   <!-- Avatar Level Badge -->
   <rect x="36" y="96" width="68" height="18" rx="6" fill="#f59e0b"/>
-  <text x="70" y="109" text-anchor="middle" fill="#000000" font-size="11" font-family="Roboto, sans-serif" font-weight="bold">PRO VIP</text>
+  <text x="70" y="109" text-anchor="middle" fill="#000000" font-size="11" font-family="Roboto" font-weight="bold">PRO VIP</text>
 
   <!-- User Identity Info -->
-  <text x="130" y="58" fill="${userColor}" font-size="28" font-family="Roboto, sans-serif" font-weight="bold">${playerName}</text>
+  <text x="130" y="58" fill="${userColor}" font-size="28" font-family="Roboto" font-weight="bold">${playerName}</text>
 
   <!-- Title Badge (e.g. [ Создатель ]) -->
-  <rect x="130" y="70" width="105" height="22" rx="6" fill="#e11d48" fill-opacity="0.25" stroke="#f43f5e" stroke-width="1"/>
-  <text x="182" y="85" text-anchor="middle" fill="#fda4af" font-size="12" font-family="Roboto, sans-serif" font-weight="bold">[ ${escapeXml(title)} ]</text>
+  <rect x="130" y="70" width="115" height="22" rx="6" fill="#e11d48" fill-opacity="0.25" stroke="#f43f5e" stroke-width="1"/>
+  <text x="187" y="85" text-anchor="middle" fill="#fda4af" font-size="12" font-family="Roboto" font-weight="bold">[ ${escapeXml(title)} ]</text>
 
   <!-- Discord Tag Badge -->
-  <rect x="242" y="70" width="130" height="22" rx="6" fill="#5865f2" fill-opacity="0.2" stroke="#5865f2" stroke-width="1"/>
-  <text x="307" y="85" text-anchor="middle" fill="#c7d2fe" font-size="12" font-family="Roboto, sans-serif">@${escapeXml(discordTag)}</text>
+  <rect x="252" y="70" width="130" height="22" rx="6" fill="#5865f2" fill-opacity="0.2" stroke="#5865f2" stroke-width="1"/>
+  <text x="317" y="85" text-anchor="middle" fill="#c7d2fe" font-size="12" font-family="Roboto">@${escapeXml(discordTag)}</text>
 
   <!-- Header Right Stats Pill -->
   <g transform="translate(${width - 240}, 35)">
     <rect x="0" y="0" width="210" height="70" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
-    <text x="15" y="26" fill="#94a3b8" font-size="11" font-family="Roboto, sans-serif" font-weight="bold">СТАТУС ИГРОКА</text>
-    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Roboto, sans-serif" font-weight="bold">ЧЕМПИОН</text>
-    <text x="195" y="48" text-anchor="end" fill="#10b981" font-size="12" font-family="Roboto, sans-serif" font-weight="bold">ONLINE</text>
+    <text x="15" y="26" fill="#94a3b8" font-size="11" font-family="Roboto" font-weight="bold">СТАТУС ИГРОКА</text>
+    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Roboto" font-weight="bold">ЧЕМПИОН</text>
+    <text x="195" y="48" text-anchor="end" fill="#10b981" font-size="12" font-family="Roboto" font-weight="bold">ONLINE</text>
     <circle cx="132" cy="44" r="4" fill="#10b981"/>
   </g>
 
@@ -186,33 +151,33 @@ export default async function handler(req, res) {
   <!-- Card 1: ПОБЕДЫ -->
   <g transform="translate(20, 130)">
     <rect width="205" height="75" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-    <text x="15" y="24" fill="#fbbf24" font-size="11" font-family="Roboto, sans-serif" font-weight="bold" letter-spacing="1">ПОБЕДЫ</text>
-    <text x="15" y="56" fill="#ffffff" font-size="28" font-family="Roboto, sans-serif" font-weight="bold">${wins}</text>
-    <text x="190" y="54" text-anchor="end" fill="#10b981" font-size="12" font-family="Roboto, sans-serif" font-weight="bold">ТОП 1</text>
+    <text x="15" y="24" fill="#fbbf24" font-size="11" font-family="Roboto" font-weight="bold" letter-spacing="1">ПОБЕДЫ</text>
+    <text x="15" y="56" fill="#ffffff" font-size="28" font-family="Roboto" font-weight="bold">${wins}</text>
+    <text x="190" y="54" text-anchor="end" fill="#10b981" font-size="12" font-family="Roboto" font-weight="bold">ТОП 1</text>
   </g>
 
   <!-- Card 2: МАТЧИ -->
   <g transform="translate(235, 130)">
     <rect width="205" height="75" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-    <text x="15" y="24" fill="#60a5fa" font-size="11" font-family="Roboto, sans-serif" font-weight="bold" letter-spacing="1">МАТЧИ</text>
-    <text x="15" y="56" fill="#ffffff" font-size="28" font-family="Roboto, sans-serif" font-weight="bold">${games}</text>
-    <text x="190" y="54" text-anchor="end" fill="#94a3b8" font-size="12" font-family="Roboto, sans-serif">сыграно</text>
+    <text x="15" y="24" fill="#60a5fa" font-size="11" font-family="Roboto" font-weight="bold" letter-spacing="1">МАТЧИ</text>
+    <text x="15" y="56" fill="#ffffff" font-size="28" font-family="Roboto" font-weight="bold">${games}</text>
+    <text x="190" y="54" text-anchor="end" fill="#94a3b8" font-size="12" font-family="Roboto">сыграно</text>
   </g>
 
   <!-- Card 3: ВИНРЕЙТ -->
   <g transform="translate(450, 130)">
     <rect width="205" height="75" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-    <text x="15" y="24" fill="#34d399" font-size="11" font-family="Roboto, sans-serif" font-weight="bold" letter-spacing="1">ВИНРЕЙТ</text>
-    <text x="15" y="56" fill="#10b981" font-size="28" font-family="Roboto, sans-serif" font-weight="bold">${winRate}%</text>
-    <text x="190" y="54" text-anchor="end" fill="#34d399" font-size="12" font-family="Roboto, sans-serif">эффект.</text>
+    <text x="15" y="24" fill="#34d399" font-size="11" font-family="Roboto" font-weight="bold" letter-spacing="1">ВИНРЕЙТ</text>
+    <text x="15" y="56" fill="#10b981" font-size="28" font-family="Roboto" font-weight="bold">${winRate}%</text>
+    <text x="190" y="54" text-anchor="end" fill="#34d399" font-size="12" font-family="Roboto">эффект.</text>
   </g>
 
   <!-- Card 4: МОНЕТЫ -->
   <g transform="translate(665, 130)">
     <rect width="215" height="75" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-    <text x="15" y="24" fill="#f43f5e" font-size="11" font-family="Roboto, sans-serif" font-weight="bold" letter-spacing="1">МОНЕТЫ</text>
-    <text x="15" y="56" fill="#fbbf24" font-size="28" font-family="Roboto, sans-serif" font-weight="bold">${coins.toLocaleString('ru-RU')}</text>
-    <text x="200" y="54" text-anchor="end" fill="#f59e0b" font-size="12" font-family="Roboto, sans-serif">баланс</text>
+    <text x="15" y="24" fill="#f43f5e" font-size="11" font-family="Roboto" font-weight="bold" letter-spacing="1">МОНЕТЫ</text>
+    <text x="15" y="56" fill="#fbbf24" font-size="28" font-family="Roboto" font-weight="bold">${coins.toLocaleString('ru-RU')}</text>
+    <text x="200" y="54" text-anchor="end" fill="#f59e0b" font-size="12" font-family="Roboto">баланс</text>
   </g>
 
   <!-- ================= TWO LOWER DATA PANELS ================= -->
@@ -221,35 +186,35 @@ export default async function handler(req, res) {
     <rect width="420" height="270" rx="12" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
     <!-- Panel Header Bar -->
     <rect x="0" y="0" width="420" height="34" rx="12" fill="#d97706" fill-opacity="0.25"/>
-    <text x="15" y="22" fill="#fbbf24" font-size="12" font-family="Roboto, sans-serif" font-weight="bold" letter-spacing="1">БОЕВАЯ СТАТИСТИКА И РЕЗУЛЬТАТЫ</text>
+    <text x="15" y="22" fill="#fbbf24" font-size="12" font-family="Roboto" font-weight="bold" letter-spacing="1">БОЕВАЯ СТАТИСТИКА И РЕЗУЛЬТАТЫ</text>
 
     <!-- Row 1 -->
-    <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Процент побед (Winrate)</text>
-    <text x="390" y="65" text-anchor="end" fill="#10b981" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">${winRate}%</text>
+    <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Roboto">Процент побед (Winrate)</text>
+    <text x="390" y="65" text-anchor="end" fill="#10b981" font-size="14" font-family="Roboto" font-weight="bold">${winRate}%</text>
     <line x1="18" y1="78" x2="390" y2="78" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 2 -->
-    <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Всего побед</text>
-    <text x="390" y="105" text-anchor="end" fill="#f1f5f9" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">${wins} матчей</text>
+    <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Roboto">Всего побед</text>
+    <text x="390" y="105" text-anchor="end" fill="#f1f5f9" font-size="14" font-family="Roboto" font-weight="bold">${wins} матчей</text>
     <line x1="18" y1="118" x2="390" y2="118" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 3 -->
-    <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Рекордный капитал за игру</text>
-    <text x="390" y="145" text-anchor="end" fill="#fbbf24" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">$${maxNetWorth.toLocaleString('ru-RU')}</text>
+    <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Roboto">Рекордный капитал за игру</text>
+    <text x="390" y="145" text-anchor="end" fill="#fbbf24" font-size="14" font-family="Roboto" font-weight="bold">$${maxNetWorth.toLocaleString('ru-RU')}</text>
     <line x1="18" y1="158" x2="390" y2="158" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 4 -->
-    <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Поражений / Выходов</text>
-    <text x="390" y="185" text-anchor="end" fill="#f87171" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">${Math.max(0, games - wins)}</text>
+    <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Roboto">Поражений / Выходов</text>
+    <text x="390" y="185" text-anchor="end" fill="#f87171" font-size="14" font-family="Roboto" font-weight="bold">${Math.max(0, games - wins)}</text>
     <line x1="18" y1="198" x2="390" y2="198" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 5 -->
-    <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Ранг на сервере</text>
-    <text x="390" y="225" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">#1 Лидер</text>
+    <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Roboto">Ранг на сервере</text>
+    <text x="390" y="225" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Roboto" font-weight="bold">#1 Лидер</text>
     <line x1="18" y1="238" x2="390" y2="238" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Mini Progress Bar -->
-    <text x="18" y="258" fill="#64748b" font-size="11" font-family="Roboto, sans-serif">ПРОГРЕСС ВИНРЕЙТА</text>
+    <text x="18" y="258" fill="#64748b" font-size="11" font-family="Roboto">ПРОГРЕСС ВИНРЕЙТА</text>
     <rect x="160" y="248" width="230" height="12" rx="6" fill="#1e293b"/>
     <rect x="160" y="248" width="${Math.round(230 * (winRate / 100))}" height="12" rx="6" fill="url(#barGrad)"/>
   </g>
@@ -259,57 +224,52 @@ export default async function handler(req, res) {
     <rect width="420" height="270" rx="12" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
     <!-- Panel Header Bar -->
     <rect x="0" y="0" width="420" height="34" rx="12" fill="#d97706" fill-opacity="0.25"/>
-    <text x="15" y="22" fill="#fbbf24" font-size="12" font-family="Roboto, sans-serif" font-weight="bold" letter-spacing="1">ПЕРСОНАЛИЗАЦИЯ И ЭКИПИРОВКА</text>
+    <text x="15" y="22" fill="#fbbf24" font-size="12" font-family="Roboto" font-weight="bold" letter-spacing="1">ПЕРСОНАЛИЗАЦИЯ И ЭКИПИРОВКА</text>
 
     <!-- Item 1 -->
-    <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Фишка игрока</text>
-    <text x="390" y="65" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">${escapeXml(tokenName)}</text>
+    <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Roboto">Фишка игрока</text>
+    <text x="390" y="65" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Roboto" font-weight="bold">${escapeXml(tokenName)}</text>
     <line x1="18" y1="78" x2="390" y2="78" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 2 -->
-    <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Титул профиля</text>
-    <text x="390" y="105" text-anchor="end" fill="#f43f5e" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">${escapeXml(title)}</text>
+    <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Roboto">Титул профиля</text>
+    <text x="390" y="105" text-anchor="end" fill="#f43f5e" font-size="14" font-family="Roboto" font-weight="bold">${escapeXml(title)}</text>
     <line x1="18" y1="118" x2="390" y2="118" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 3 -->
-    <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Скин 3D кубиков</text>
-    <text x="390" y="145" text-anchor="end" fill="#a855f7" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">${escapeXml(diceSkin)}</text>
+    <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Roboto">Скин 3D кубиков</text>
+    <text x="390" y="145" text-anchor="end" fill="#a855f7" font-size="14" font-family="Roboto" font-weight="bold">${escapeXml(diceSkin)}</text>
     <line x1="18" y1="158" x2="390" y2="158" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 4 -->
-    <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Цвет ника и темы</text>
-    <text x="390" y="185" text-anchor="end" fill="${userColor}" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">Изумрудный</text>
+    <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Roboto">Цвет ника и темы</text>
+    <text x="390" y="185" text-anchor="end" fill="${userColor}" font-size="14" font-family="Roboto" font-weight="bold">Изумрудный</text>
     <line x1="18" y1="198" x2="390" y2="198" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 5 -->
-    <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Roboto, sans-serif">Монеты в банке</text>
-    <text x="390" y="225" text-anchor="end" fill="#fbbf24" font-size="14" font-family="Roboto, sans-serif" font-weight="bold">${coins.toLocaleString('ru-RU')} монет</text>
+    <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Roboto">Монеты в банке</text>
+    <text x="390" y="225" text-anchor="end" fill="#fbbf24" font-size="14" font-family="Roboto" font-weight="bold">${coins.toLocaleString('ru-RU')} монет</text>
     <line x1="18" y1="238" x2="390" y2="238" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Footer Note inside panel -->
-    <text x="210" y="258" text-anchor="middle" fill="#64748b" font-size="11" font-family="Roboto, sans-serif">Синхронизировано с игрой Pixel Monopoly</text>
+    <text x="210" y="258" text-anchor="middle" fill="#64748b" font-size="11" font-family="Roboto">Синхронизировано с игрой Pixel Monopoly</text>
   </g>
 
   <!-- ================= FOOTER ================= -->
-  <text x="30" y="515" fill="#64748b" font-size="11" font-family="Roboto, sans-serif">PIXEL MONOPOLY ONLINE • 2026</text>
-  <text x="${width - 30}" y="515" text-anchor="end" fill="#d97706" font-size="11" font-family="Roboto, sans-serif" font-weight="bold">pixel-monopoly-nu.vercel.app</text>
+  <text x="30" y="515" fill="#64748b" font-size="11" font-family="Roboto">PIXEL MONOPOLY ONLINE • 2026</text>
+  <text x="${width - 30}" y="515" text-anchor="end" fill="#d97706" font-size="11" font-family="Roboto" font-weight="bold">pixel-monopoly-nu.vercel.app</text>
 </svg>
   `;
 
   try {
-    const resvgOptions = {
-      fitTo: { mode: 'width', value: width }
-    };
-
-    if (fonts.length > 0) {
-      resvgOptions.font = {
-        fontBuffers: fonts,
+    const resvg = new Resvg(svg, {
+      fitTo: { mode: 'width', value: width },
+      font: {
+        fontBuffers: [ROBOTO_BOLD, ROBOTO_REGULAR],
         defaultFontFamily: 'Roboto',
         loadSystemFonts: false
-      };
-    }
-
-    const resvg = new Resvg(svg, resvgOptions);
+      }
+    });
     const pngBuffer = resvg.render().asPng();
 
     res.setHeader('Content-Type', 'image/png');
