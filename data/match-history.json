@@ -1,3 +1,49 @@
 {
-  "matches": []
+  "matches": [
+    {
+      "id": "1790435456366-ROOM-8492",
+      "roomCode": "ROOM-8492",
+      "date": "2026-09-26T15:10:55.953Z",
+      "discordMsgId": "1553423636063322154",
+      "reason": "Матч завершён (соперник вышел)",
+      "winner": {
+        "name": "Hizuhara",
+        "token": "🎩",
+        "discordId": "1472673126859935765",
+        "cash": 1500,
+        "netWorth": 1500,
+        "ownedCount": 0
+      },
+      "players": [
+        {
+          "name": "Hizuhara",
+          "token": "🎩",
+          "discordId": "1472673126859935765",
+          "cash": 1500,
+          "netWorth": 1500,
+          "ownedCount": 0,
+          "isBankrupt": false,
+          "hasLeft": false,
+          "isBot": false,
+          "isWinner": true
+        },
+        {
+          "name": "aykasu",
+          "token": "🚗",
+          "discordId": null,
+          "cash": 1200,
+          "netWorth": 1200,
+          "ownedCount": 0,
+          "isBankrupt": false,
+          "hasLeft": true,
+          "isBot": false,
+          "isWinner": false
+        }
+      ],
+      "settings": {
+        "startingCash": 1500,
+        "salary": 200
+      }
+    }
+  ]
 }
