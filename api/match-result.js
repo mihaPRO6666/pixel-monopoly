@@ -80,8 +80,8 @@ export default async function handler(req, res) {
     const medal = medals[i] || `${i + 1}.`;
     const mention = p.discordId ? ` (<@${p.discordId}>)` : '';
     const name = `${p.token} **${p.name}**${mention}`;
-    if (p.hasLeft) return `${medal} ${name} — 🚪 *Вышел из лобби/игры*`;
-    if (p.isBankrupt) return `${medal} ${name} — 💥 *Банкрот*`;
+    if (p.hasLeft) return `${medal} ${name} — **вышел ❌** ($${p.cash.toLocaleString('ru-RU')})`;
+    if (p.isBankrupt) return `${medal} ${name} — **банкрот 💥**`;
     return `${medal} ${name} — **$${p.cash.toLocaleString('ru-RU')}** | 🏛️ ${p.ownedCount} ${plural(p.ownedCount)} | Капитал: **$${p.netWorth.toLocaleString('ru-RU')}**`;
   }).join('\n');
 

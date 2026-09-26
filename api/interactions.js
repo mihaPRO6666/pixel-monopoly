@@ -144,7 +144,12 @@ export default async function handler(req, res) {
         const wName = w.discordId ? `<@${w.discordId}>` : `**${w.name}**`;
         const playerList = (m.players || [])
           .filter(p => !p.isBot)
-          .map(p => p.discordId ? `<@${p.discordId}>` : p.name)
+          .map(p => {
+            const userTag = p.discordId ? `<@${p.discordId}>` : p.name;
+            if (p.hasLeft) return `${userTag} *(вышел ❌)*`;
+            if (p.isBankrupt) return `${userTag} *(банкрот 💥)*`;
+            return userTag;
+          })
           .join(', ');
         const reasonLine = m.reason ? `⚠️ *${m.reason}*\n` : '';
         return {
