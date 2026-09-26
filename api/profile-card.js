@@ -256,12 +256,13 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   const maxNetWorth = playerData.maxNetWorth || 1500;
   const losses = playerData.losses || Math.max(0, games - wins);
   
-  const isOwnerUser = (userId === '1472673126859935765') || (name && name.toLowerCase().includes('hizuhara'));
-  const baseLevel = isOwnerUser ? 58 : 1;
-  const level = baseLevel + Math.floor(wins * 2 + Math.max(0, games - wins));
-  const currentXp = 680 + ((wins * 450 + games * 150) % 320);
-  const neededXp = 1000;
-  const xpPercent = Math.min(100, Math.max(10, Math.round((currentXp / neededXp) * 100)));
+  // Natural leveling system based on actual match performance & net worth
+  const totalXp = (wins * 400) + (games * 150) + Math.floor((maxNetWorth || 1500) / 20);
+  const xpPerLevel = 500;
+  const level = 1 + Math.floor(totalXp / xpPerLevel);
+  const currentXp = totalXp % xpPerLevel;
+  const neededXp = xpPerLevel;
+  const xpPercent = Math.min(100, Math.max(5, Math.round((currentXp / neededXp) * 100)));
 
   const width = 900;
   const height = 540;
