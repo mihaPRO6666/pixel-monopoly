@@ -4678,11 +4678,17 @@ class App {
     const winnerRewardBox = document.getElementById('winner-reward-box');
     const winnerCoinsText = document.getElementById('winner-coins-text');
     if (winnerRewardBox && winnerCoinsText) {
+      const myPlayer = (state.players || []).find(p => String(p.id) === String(profileManager.profile.id));
+      const myNet = myPlayer ? ((myPlayer.cash || 0) + (myPlayer.totalPropValue || 0)) : 1500;
+      const earnedXp = isWinner
+        ? (400 + 150 + Math.floor(myNet / 20))
+        : (150 + Math.floor(myNet / 20));
+
+      winnerRewardBox.style.display = 'inline-flex';
       if (isWinner) {
-        winnerRewardBox.style.display = 'inline-flex';
-        winnerCoinsText.innerText = '+50 монет за победу!';
+        winnerCoinsText.innerText = `+50 монет • ✨ +${earnedXp} XP за победу!`;
       } else {
-        winnerRewardBox.style.display = 'none';
+        winnerCoinsText.innerText = `✨ +${earnedXp} XP за участие!`;
       }
     }
 

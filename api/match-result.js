@@ -76,13 +76,22 @@ export default async function handler(req, res) {
     return b.netWorth - a.netWorth;
   });
 
+  const calculateXp = (p) => {
+    if (p.isWinner) return 400 + 150 + Math.floor((p.netWorth || 0) / 20);
+    if (p.hasLeft) return 25;
+    if (p.isBankrupt) return 100;
+    return 150 + Math.floor((p.netWorth || 0) / 20);
+  };
+
   const lines = playersStats.map((p, i) => {
     const medal = medals[i] || `${i + 1}.`;
     const mention = p.discordId ? ` (<@${p.discordId}>)` : '';
     const name = `${p.token} **${p.name}**${mention}`;
-    if (p.hasLeft) return `${medal} ${name} — **вышел ❌** ($${p.cash.toLocaleString('ru-RU')})`;
-    if (p.isBankrupt) return `${medal} ${name} — **банкрот 💥**`;
-    return `${medal} ${name} — **$${p.cash.toLocaleString('ru-RU')}** | 🏛️ ${p.ownedCount} ${plural(p.ownedCount)} | Капитал: **$${p.netWorth.toLocaleString('ru-RU')}**`;
+    const xp = calculateXp(p);
+    const xpBadge = `• ✨ **+${xp} XP**`;
+    if (p.hasLeft) return `${medal} ${name} — **вышел ❌** ($${p.cash.toLocaleString('ru-RU')}) ${xpBadge}`;
+    if (p.isBankrupt) return `${medal} ${name} — **банкрот 💥** ${xpBadge}`;
+    return `${medal} ${name} — **$${p.cash.toLocaleString('ru-RU')}** | 🏛️ ${p.ownedCount} ${plural(p.ownedCount)} | Капитал: **$${p.netWorth.toLocaleString('ru-RU')}** ${xpBadge}`;
   }).join('\n');
 
   const w = playersStats[0] || { name: 'Никто', token: '❓', cash: 0, netWorth: 0, ownedCount: 0 };
@@ -100,15 +109,16 @@ export default async function handler(req, res) {
   }
 
   if (w && w.id && !isAllLeft) {
+    const winnerXp = calculateXp(w);
     embedFields.push({
       name: isEarlyFinish ? '👑 Оставшийся победитель' : '👑 Победитель',
-      value: `${w.token} **${w.name}**${wMention}\n💰 $${w.cash.toLocaleString('ru-RU')} • 🏛️ ${w.ownedCount} ${plural(w.ownedCount)} • Капитал: $${w.netWorth.toLocaleString('ru-RU')}`,
+      value: `${w.token} **${w.name}**${wMention}\n💰 $${w.cash.toLocaleString('ru-RU')} • 🏛️ ${w.ownedCount} ${plural(w.ownedCount)} • Капитал: $${w.netWorth.toLocaleString('ru-RU')}\n✨ **Опыт за матч:** \`+${winnerXp} XP\``,
       inline: false
     });
   }
 
   embedFields.push({
-    name: '📊 Игроки и позиции',
+    name: '📊 Игроки, позиции и опыт',
     value: lines || 'Нет данных',
     inline: false
   });
@@ -165,11 +175,12 @@ export default async function handler(req, res) {
         date: now.toISOString(),
         discordMsgId,
         reason: matchReason,
-        winner: { name: w.name, token: w.token, discordId: w.discordId, cash: w.cash, netWorth: w.netWorth, ownedCount: w.ownedCount },
+        winner: { name: w.name, token: w.token, discordId: w.discordId, cash: w.cash, netWorth: w.netWorth, ownedCount: w.ownedCount, xpEarned: calculateXp(w) },
         players: playersStats.map(p => ({
           name: p.name, token: p.token, discordId: p.discordId,
           cash: p.cash, netWorth: p.netWorth, ownedCount: p.ownedCount,
-          isBankrupt: p.isBankrupt, hasLeft: p.hasLeft, isBot: p.isBot, isWinner: p.isWinner
+          isBankrupt: p.isBankrupt, hasLeft: p.hasLeft, isBot: p.isBot, isWinner: p.isWinner,
+          xpEarned: calculateXp(p)
         })),
         settings: { startingCash: settings.startingCash || 1500, salary: settings.salary || 200 }
       };
