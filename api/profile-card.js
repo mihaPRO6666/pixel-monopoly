@@ -4,7 +4,7 @@
  */
 
 import { Resvg } from '@resvg/resvg-js';
-import { ROBOTO_BOLD, ROBOTO_REGULAR } from './fonts-data.js';
+import { FONT_BOLD, FONT_REGULAR } from './fonts-data.js';
 
 const NTFY_BASE = 'https://ntfy.sh/pixel_monopoly_sync_';
 const HISTORY_URL = 'https://raw.githubusercontent.com/mihaPRO6666/pixel-monopoly/main/data/match-history.json';
@@ -28,8 +28,56 @@ async function getCachedHistory() {
   return cachedHistory || { matches: [] };
 }
 
+const TITLE_MAP = {
+  creator: 'Создатель',
+  novice: 'Новичок',
+  shark: 'Акула бизнеса',
+  monopolist: 'Монополист',
+  magnate: 'Магнат',
+  lucky: 'Везунчик',
+  oligarch: 'Олигарх',
+  dice_master: 'Мастер костей',
+  legend: 'Легенда',
+  investor: 'Инвестор',
+  vip: 'VIP Персона',
+  millionaire: 'Миллионер',
+  sheikh: 'Шейх',
+  cyber_king: 'Кибер Король'
+};
+
+const DICE_MAP = {
+  classic: 'Классика',
+  neon_ruby: 'Неоновый рубин',
+  cyber_emerald: 'Кибер изумруд',
+  amethyst_twilight: 'Аметист',
+  frost_crystal: 'Морозный кристалл',
+  golden_tycoon: 'Золотой магнат',
+  magma_flame: 'Магма',
+  cosmic_void: 'Космос'
+};
+
+async function fetchNtfy(userId) {
+  if (!userId) return null;
+  try {
+    const res = await fetch(`${NTFY_BASE}${userId}/json?poll=1&since=all`, {
+      signal: AbortSignal.timeout(800)
+    });
+    if (!res.ok) return null;
+    const text = await res.text();
+    for (const line of text.trim().split('\n').reverse()) {
+      try {
+        const msg = JSON.parse(line);
+        const data = msg.message ? JSON.parse(msg.message) : null;
+        if (data) return data;
+      } catch (e) {}
+    }
+  } catch (e) {}
+  return null;
+}
+
 async function getPlayerFullData(userId, rawName) {
-  const isOwner = userId === '1472673126859935765' || (rawName && rawName.toLowerCase().includes('hizuhara'));
+  const cleanRaw = (rawName || '').toLowerCase().replace(/\.$/, '').trim();
+  const isOwner = (userId === '1472673126859935765') || cleanRaw.includes('hizuhara') || cleanRaw.includes('misha');
 
   let stats = {
     wins: isOwner ? 2 : 0,
@@ -45,9 +93,13 @@ async function getPlayerFullData(userId, rawName) {
     playerName: rawName || 'Игрок'
   };
 
-  // 1. Calculate from in-memory cached match history (0ms)
+  // Fetch match history and ntfy sync concurrently for maximum speed
+  const [histData, ntfyData] = await Promise.all([
+    getCachedHistory(),
+    fetchNtfy(userId)
+  ]);
+
   try {
-    const histData = await getCachedHistory();
     const matches = histData?.matches || [];
     let matchWins = 0;
     let matchGames = 0;
@@ -55,72 +107,64 @@ async function getPlayerFullData(userId, rawName) {
     let highestNet = 1500;
 
     matches.forEach(m => {
-      const found = (m.players || []).find(p =>
-        (userId && p.discordId === userId) ||
-        (rawName && p.name && p.name.toLowerCase() === rawName.toLowerCase())
-      );
+      const found = (m.players || []).find(p => {
+        if (userId && p.discordId && String(p.discordId) === String(userId)) return true;
+        const pClean = (p.name || '').toLowerCase().replace(/\.$/, '').trim();
+        return pClean && cleanRaw && (pClean === cleanRaw || pClean.includes(cleanRaw) || cleanRaw.includes(pClean));
+      });
       if (found) {
         matchGames++;
-        if (found.isWinner || (m.winner && (m.winner.discordId === userId || m.winner.name === rawName))) {
+        const isWin = found.isWinner || (m.winner && (
+          (userId && m.winner.discordId === userId) ||
+          ((m.winner.name || '').toLowerCase().replace(/\.$/, '').trim() === cleanRaw)
+        ));
+        if (isWin) {
           matchWins++;
         }
         if (found.isBankrupt || found.hasLeft) {
           matchLosses++;
         }
-        if ((found.netWorth || found.cash || 0) > highestNet) {
-          highestNet = found.netWorth || found.cash || 0;
+        const net = found.netWorth || found.cash || 0;
+        if (net > highestNet) {
+          highestNet = net;
         }
-        if (found.token) stats.token = found.token;
+        if (found.token && found.token !== 'custom') stats.token = found.token;
         if (found.name) stats.playerName = found.name;
       }
     });
 
-    if (matchGames > 0) {
+    if (isOwner) {
+      stats.games = Math.max(2, matchGames);
+      stats.wins = Math.max(2, matchWins);
+      stats.losses = matchLosses;
+      stats.maxNetWorth = Math.max(3200, highestNet);
+    } else if (matchGames > 0) {
       stats.games = matchGames;
       stats.wins = matchWins;
-      stats.losses = matchLosses;
+      stats.losses = matchLosses || Math.max(0, matchGames - matchWins);
       stats.maxNetWorth = highestNet;
     }
   } catch (e) {
     console.warn('History read error in profile card:', e);
   }
 
+  if (ntfyData) {
+    if (ntfyData.coins !== undefined) stats.coins = ntfyData.coins;
+    if (ntfyData.title) stats.title = TITLE_MAP[ntfyData.title] || ntfyData.title;
+    if (ntfyData.nameColor) stats.nameColor = ntfyData.nameColor;
+    if (ntfyData.token && ntfyData.token !== 'custom') stats.token = ntfyData.token;
+    if (ntfyData.customName || ntfyData.name) stats.playerName = ntfyData.customName || ntfyData.name;
+    if (ntfyData.diceSkin) stats.diceSkin = DICE_MAP[ntfyData.diceSkin] || ntfyData.diceSkin;
+    if (ntfyData.stats?.wins !== undefined) stats.wins = Math.max(stats.wins, ntfyData.stats.wins);
+    if (ntfyData.stats?.gamesPlayed !== undefined) stats.games = Math.max(stats.games, ntfyData.stats.gamesPlayed);
+  }
 
-  // 2. Fetch from ntfy cloud sync with poll=1 (instant)
-  try {
-    if (userId) {
-      const ntfyRes = await fetch(`${NTFY_BASE}${userId}/json?poll=1&since=all`, {
-        signal: AbortSignal.timeout(1500)
-      });
-      if (ntfyRes.ok) {
-        const text = await ntfyRes.text();
-        for (const line of text.trim().split('\n').reverse()) {
-          try {
-            const msg = JSON.parse(line);
-            const data = msg.message ? JSON.parse(msg.message) : null;
-            if (data) {
-              if (data.coins !== undefined) stats.coins = data.coins;
-              if (data.title) stats.title = data.title;
-              if (data.nameColor) stats.nameColor = data.nameColor;
-              if (data.token) stats.token = data.token;
-              if (data.customName || data.name) stats.playerName = data.customName || data.name;
-              if (data.diceSkin) stats.diceSkin = data.diceSkin;
-              if (data.stats?.wins !== undefined) stats.wins = Math.max(stats.wins, data.stats.wins);
-              if (data.stats?.gamesPlayed !== undefined) stats.games = Math.max(stats.games, data.stats.gamesPlayed);
-              break;
-            }
-          } catch (e) {}
-        }
-      }
-    }
-  } catch (e) {}
-
-  // 3. Dynamic Title mapping & styling
+  // Dynamic Title mapping & styling
   if (isOwner) {
     stats.title = 'Создатель';
     stats.titleColor = '#f43f5e';
     stats.nameColor = stats.nameColor || '#14b8a6';
-  } else {
+  } else if (!ntfyData?.title) {
     if (stats.wins >= 10) {
       stats.title = 'Магнат';
       stats.titleColor = '#f59e0b';
@@ -130,6 +174,9 @@ async function getPlayerFullData(userId, rawName) {
     } else if (stats.wins >= 3) {
       stats.title = 'Акула бизнеса';
       stats.titleColor = '#38bdf8';
+    } else if (stats.wins >= 1) {
+      stats.title = 'Везунчик';
+      stats.titleColor = '#10b981';
     } else {
       stats.title = 'Новичок';
       stats.titleColor = '#94a3b8';
@@ -232,29 +279,29 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   ${avatarBase64 ? `
     <image x="28" y="28" width="84" height="84" href="${avatarBase64}" clip-path="url(#avatarClip)" preserveAspectRatio="xMidYMid slice"/>
   ` : `
-    <text x="70" y="76" text-anchor="middle" fill="#f59e0b" font-size="28" font-family="Roboto" font-weight="bold">VIP</text>
+    <text x="70" y="76" text-anchor="middle" fill="#f59e0b" font-size="28" font-family="Arial" font-weight="bold">VIP</text>
   `}
   <!-- Avatar Level Badge -->
   <rect x="36" y="96" width="68" height="18" rx="6" fill="#f59e0b"/>
-  <text x="70" y="109" text-anchor="middle" fill="#000000" font-size="11" font-family="Roboto" font-weight="bold">PRO VIP</text>
+  <text x="70" y="109" text-anchor="middle" fill="#000000" font-size="11" font-family="Arial" font-weight="bold">PRO VIP</text>
 
   <!-- User Identity Info -->
-  <text x="130" y="58" fill="${userColor}" font-size="28" font-family="Roboto" font-weight="bold">${playerName}</text>
+  <text x="130" y="58" fill="${userColor}" font-size="28" font-family="Arial" font-weight="bold">${playerName}</text>
 
   <!-- Title Badge (e.g. [ Создатель ]) -->
   <rect x="130" y="70" width="130" height="22" rx="6" fill="${titleColor}" fill-opacity="0.2" stroke="${titleColor}" stroke-width="1"/>
-  <text x="195" y="85" text-anchor="middle" fill="${titleColor}" font-size="12" font-family="Roboto" font-weight="bold">[ ${escapeXml(title)} ]</text>
+  <text x="195" y="85" text-anchor="middle" fill="${titleColor}" font-size="12" font-family="Arial" font-weight="bold">[ ${escapeXml(title)} ]</text>
 
   <!-- Discord Tag Badge -->
   <rect x="268" y="70" width="130" height="22" rx="6" fill="#5865f2" fill-opacity="0.2" stroke="#5865f2" stroke-width="1"/>
-  <text x="333" y="85" text-anchor="middle" fill="#c7d2fe" font-size="12" font-family="Roboto">@${escapeXml(discordTag)}</text>
+  <text x="333" y="85" text-anchor="middle" fill="#c7d2fe" font-size="12" font-family="Arial">@${escapeXml(discordTag)}</text>
 
   <!-- Header Right Stats Pill -->
   <g transform="translate(${width - 240}, 35)">
     <rect x="0" y="0" width="210" height="70" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
-    <text x="15" y="26" fill="#94a3b8" font-size="11" font-family="Roboto" font-weight="bold">СТАТУС ИГРОКА</text>
-    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Roboto" font-weight="bold">${winRate >= 50 ? 'ЧЕМПИОН ⭐' : 'ИГРОК 🎲'}</text>
-    <text x="195" y="48" text-anchor="end" fill="#10b981" font-size="12" font-family="Roboto" font-weight="bold">ONLINE</text>
+    <text x="15" y="26" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">СТАТУС ИГРОКА</text>
+    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Arial" font-weight="bold">${winRate >= 50 ? 'ЧЕМПИОН ⭐' : 'ИГРОК 🎲'}</text>
+    <text x="195" y="48" text-anchor="end" fill="#10b981" font-size="12" font-family="Arial" font-weight="bold">ONLINE</text>
     <circle cx="132" cy="44" r="4" fill="#10b981"/>
   </g>
 
@@ -262,33 +309,33 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   <!-- Card 1: ПОБЕДЫ -->
   <g transform="translate(20, 130)">
     <rect width="205" height="75" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-    <text x="15" y="24" fill="#fbbf24" font-size="11" font-family="Roboto" font-weight="bold" letter-spacing="1">ПОБЕДЫ</text>
-    <text x="15" y="56" fill="#ffffff" font-size="28" font-family="Roboto" font-weight="bold">${wins}</text>
-    <text x="190" y="54" text-anchor="end" fill="#10b981" font-size="12" font-family="Roboto" font-weight="bold">ТОП 1</text>
+    <text x="15" y="24" fill="#fbbf24" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">ПОБЕДЫ</text>
+    <text x="15" y="56" fill="#ffffff" font-size="28" font-family="Arial" font-weight="bold">${wins}</text>
+    <text x="190" y="54" text-anchor="end" fill="#10b981" font-size="12" font-family="Arial" font-weight="bold">ТОП 1</text>
   </g>
 
   <!-- Card 2: МАТЧИ -->
   <g transform="translate(235, 130)">
     <rect width="205" height="75" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-    <text x="15" y="24" fill="#60a5fa" font-size="11" font-family="Roboto" font-weight="bold" letter-spacing="1">МАТЧИ</text>
-    <text x="15" y="56" fill="#ffffff" font-size="28" font-family="Roboto" font-weight="bold">${games}</text>
-    <text x="190" y="54" text-anchor="end" fill="#94a3b8" font-size="12" font-family="Roboto">сыграно</text>
+    <text x="15" y="24" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">МАТЧИ</text>
+    <text x="15" y="56" fill="#ffffff" font-size="28" font-family="Arial" font-weight="bold">${games}</text>
+    <text x="190" y="54" text-anchor="end" fill="#94a3b8" font-size="12" font-family="Arial">сыграно</text>
   </g>
 
   <!-- Card 3: ВИНРЕЙТ -->
   <g transform="translate(450, 130)">
     <rect width="205" height="75" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-    <text x="15" y="24" fill="#34d399" font-size="11" font-family="Roboto" font-weight="bold" letter-spacing="1">ВИНРЕЙТ</text>
-    <text x="15" y="56" fill="#10b981" font-size="28" font-family="Roboto" font-weight="bold">${winRate}%</text>
-    <text x="190" y="54" text-anchor="end" fill="#34d399" font-size="12" font-family="Roboto">эффект.</text>
+    <text x="15" y="24" fill="#34d399" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">ВИНРЕЙТ</text>
+    <text x="15" y="56" fill="#10b981" font-size="28" font-family="Arial" font-weight="bold">${winRate}%</text>
+    <text x="190" y="54" text-anchor="end" fill="#34d399" font-size="12" font-family="Arial">эффект.</text>
   </g>
 
   <!-- Card 4: МОНЕТЫ -->
   <g transform="translate(665, 130)">
     <rect width="215" height="75" rx="10" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5"/>
-    <text x="15" y="24" fill="#f43f5e" font-size="11" font-family="Roboto" font-weight="bold" letter-spacing="1">МОНЕТЫ</text>
-    <text x="15" y="56" fill="#fbbf24" font-size="28" font-family="Roboto" font-weight="bold">${coins.toLocaleString('ru-RU')}</text>
-    <text x="200" y="54" text-anchor="end" fill="#f59e0b" font-size="12" font-family="Roboto">баланс</text>
+    <text x="15" y="24" fill="#f43f5e" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">МОНЕТЫ</text>
+    <text x="15" y="56" fill="#fbbf24" font-size="28" font-family="Arial" font-weight="bold">${coins.toLocaleString('ru-RU')}</text>
+    <text x="200" y="54" text-anchor="end" fill="#f59e0b" font-size="12" font-family="Arial">баланс</text>
   </g>
 
   <!-- ================= TWO LOWER DATA PANELS ================= -->
@@ -297,35 +344,35 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
     <rect width="420" height="270" rx="12" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
     <!-- Panel Header Bar -->
     <rect x="0" y="0" width="420" height="34" rx="12" fill="#d97706" fill-opacity="0.25"/>
-    <text x="15" y="22" fill="#fbbf24" font-size="12" font-family="Roboto" font-weight="bold" letter-spacing="1">БОЕВАЯ СТАТИСТИКА И РЕЗУЛЬТАТЫ</text>
+    <text x="15" y="22" fill="#fbbf24" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="1">БОЕВАЯ СТАТИСТИКА И РЕЗУЛЬТАТЫ</text>
 
     <!-- Row 1 -->
-    <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Roboto">Процент побед (Winrate)</text>
-    <text x="390" y="65" text-anchor="end" fill="#10b981" font-size="14" font-family="Roboto" font-weight="bold">${winRate}%</text>
+    <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Arial">Процент побед (Winrate)</text>
+    <text x="390" y="65" text-anchor="end" fill="#10b981" font-size="14" font-family="Arial" font-weight="bold">${winRate}%</text>
     <line x1="18" y1="78" x2="390" y2="78" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 2 -->
-    <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Roboto">Всего побед</text>
-    <text x="390" y="105" text-anchor="end" fill="#f1f5f9" font-size="14" font-family="Roboto" font-weight="bold">${wins} матчей</text>
+    <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Arial">Всего побед</text>
+    <text x="390" y="105" text-anchor="end" fill="#f1f5f9" font-size="14" font-family="Arial" font-weight="bold">${wins} матчей</text>
     <line x1="18" y1="118" x2="390" y2="118" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 3 -->
-    <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Roboto">Рекордный капитал за игру</text>
-    <text x="390" y="145" text-anchor="end" fill="#fbbf24" font-size="14" font-family="Roboto" font-weight="bold">$${maxNetWorth.toLocaleString('ru-RU')}</text>
+    <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Arial">Рекордный капитал за игру</text>
+    <text x="390" y="145" text-anchor="end" fill="#fbbf24" font-size="14" font-family="Arial" font-weight="bold">$${maxNetWorth.toLocaleString('ru-RU')}</text>
     <line x1="18" y1="158" x2="390" y2="158" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 4 -->
-    <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Roboto">Поражений / Выходов</text>
-    <text x="390" y="185" text-anchor="end" fill="#f87171" font-size="14" font-family="Roboto" font-weight="bold">${losses}</text>
+    <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Arial">Поражений / Выходов</text>
+    <text x="390" y="185" text-anchor="end" fill="#f87171" font-size="14" font-family="Arial" font-weight="bold">${losses}</text>
     <line x1="18" y1="198" x2="390" y2="198" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Row 5 -->
-    <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Roboto">Ранг на сервере</text>
-    <text x="390" y="225" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Roboto" font-weight="bold">${wins > 0 ? '#1 Лидер' : 'Участник'}</text>
+    <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Arial">Ранг на сервере</text>
+    <text x="390" y="225" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Arial" font-weight="bold">${wins > 0 ? '#1 Лидер' : 'Участник'}</text>
     <line x1="18" y1="238" x2="390" y2="238" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Mini Progress Bar -->
-    <text x="18" y="258" fill="#64748b" font-size="11" font-family="Roboto">ПРОГРЕСС ВИНРЕЙТА</text>
+    <text x="18" y="258" fill="#64748b" font-size="11" font-family="Arial">ПРОГРЕСС ВИНРЕЙТА</text>
     <rect x="160" y="248" width="230" height="12" rx="6" fill="#1e293b"/>
     <rect x="160" y="248" width="${Math.max(4, Math.round(230 * (winRate / 100)))}" height="12" rx="6" fill="url(#barGrad)"/>
   </g>
@@ -335,48 +382,48 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
     <rect width="420" height="270" rx="12" fill="url(#cardGrad)" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1"/>
     <!-- Panel Header Bar -->
     <rect x="0" y="0" width="420" height="34" rx="12" fill="#d97706" fill-opacity="0.25"/>
-    <text x="15" y="22" fill="#fbbf24" font-size="12" font-family="Roboto" font-weight="bold" letter-spacing="1">ПЕРСОНАЛИЗАЦИЯ И ЭКИПИРОВКА</text>
+    <text x="15" y="22" fill="#fbbf24" font-size="12" font-family="Arial" font-weight="bold" letter-spacing="1">ПЕРСОНАЛИЗАЦИЯ И ЭКИПИРОВКА</text>
 
     <!-- Item 1 -->
-    <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Roboto">Фишка игрока</text>
-    <text x="390" y="65" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Roboto" font-weight="bold">${escapeXml(tokenName)}</text>
+    <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Arial">Фишка игрока</text>
+    <text x="390" y="65" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Arial" font-weight="bold">${escapeXml(tokenName)}</text>
     <line x1="18" y1="78" x2="390" y2="78" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 2 -->
-    <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Roboto">Титул профиля</text>
-    <text x="390" y="105" text-anchor="end" fill="${titleColor}" font-size="14" font-family="Roboto" font-weight="bold">${escapeXml(title)}</text>
+    <text x="18" y="105" fill="#94a3b8" font-size="13" font-family="Arial">Титул профиля</text>
+    <text x="390" y="105" text-anchor="end" fill="${titleColor}" font-size="14" font-family="Arial" font-weight="bold">${escapeXml(title)}</text>
     <line x1="18" y1="118" x2="390" y2="118" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 3 -->
-    <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Roboto">Скин 3D кубиков</text>
-    <text x="390" y="145" text-anchor="end" fill="#a855f7" font-size="14" font-family="Roboto" font-weight="bold">${escapeXml(diceSkin)}</text>
+    <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Arial">Скин 3D кубиков</text>
+    <text x="390" y="145" text-anchor="end" fill="#a855f7" font-size="14" font-family="Arial" font-weight="bold">${escapeXml(diceSkin)}</text>
     <line x1="18" y1="158" x2="390" y2="158" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 4 -->
-    <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Roboto">Цвет ника и темы</text>
-    <text x="390" y="185" text-anchor="end" fill="${userColor}" font-size="14" font-family="Roboto" font-weight="bold">Изумрудный</text>
+    <text x="18" y="185" fill="#94a3b8" font-size="13" font-family="Arial">Цвет ника и темы</text>
+    <text x="390" y="185" text-anchor="end" fill="${userColor}" font-size="14" font-family="Arial" font-weight="bold">Изумрудный</text>
     <line x1="18" y1="198" x2="390" y2="198" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 5 -->
-    <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Roboto">Монеты в банке</text>
-    <text x="390" y="225" text-anchor="end" fill="#fbbf24" font-size="14" font-family="Roboto" font-weight="bold">${coins.toLocaleString('ru-RU')} монет</text>
+    <text x="18" y="225" fill="#94a3b8" font-size="13" font-family="Arial">Монеты в банке</text>
+    <text x="390" y="225" text-anchor="end" fill="#fbbf24" font-size="14" font-family="Arial" font-weight="bold">${coins.toLocaleString('ru-RU')} монет</text>
     <line x1="18" y1="238" x2="390" y2="238" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Footer Note inside panel -->
-    <text x="210" y="258" text-anchor="middle" fill="#64748b" font-size="11" font-family="Roboto">Синхронизировано с игрой Pixel Monopoly</text>
+    <text x="210" y="258" text-anchor="middle" fill="#64748b" font-size="11" font-family="Arial">Синхронизировано с игрой Pixel Monopoly</text>
   </g>
 
   <!-- ================= FOOTER ================= -->
-  <text x="30" y="515" fill="#64748b" font-size="11" font-family="Roboto">PIXEL MONOPOLY ONLINE • 2026</text>
-  <text x="${width - 30}" y="515" text-anchor="end" fill="#d97706" font-size="11" font-family="Roboto" font-weight="bold">pixel-monopoly-nu.vercel.app</text>
+  <text x="30" y="515" fill="#64748b" font-size="11" font-family="Arial">PIXEL MONOPOLY ONLINE • 2026</text>
+  <text x="${width - 30}" y="515" text-anchor="end" fill="#d97706" font-size="11" font-family="Arial" font-weight="bold">pixel-monopoly-nu.vercel.app</text>
 </svg>
   `;
 
   const resvg = new Resvg(svg, {
     fitTo: { mode: 'width', value: width },
     font: {
-      fontBuffers: [ROBOTO_BOLD, ROBOTO_REGULAR],
-      defaultFontFamily: 'Roboto',
+      fontBuffers: [FONT_REGULAR, FONT_BOLD],
+      defaultFontFamily: 'Arial',
       loadSystemFonts: false
     }
   });
