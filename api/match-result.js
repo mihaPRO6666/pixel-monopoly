@@ -173,7 +173,7 @@ export default async function handler(req, res) {
         })),
         settings: { startingCash: settings.startingCash || 1500, salary: settings.salary || 200 }
       };
-      history.matches = [newMatch, ...(history.matches || [])].slice(0, 50);
+      history.matches = [newMatch, ...(history.matches || [])].slice(0, 99);
 
       const updateBody = {
         message: `Match history: ${roomCode} - ${matchReason || `Winner: ${w.name}`}`,

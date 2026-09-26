@@ -126,7 +126,7 @@ export default async function handler(req, res) {
 
     // ===== /история =====
     if (commandName === 'история') {
-      const limit = 5;
+      const limit = 10;
 
       const history = await fetchHistory();
       const matches = history?.matches || [];
@@ -163,7 +163,7 @@ export default async function handler(req, res) {
         title: `📜 История последних матчей`,
         color: 0x6366f1,
         fields,
-        footer: { text: `Показаны последние ${recent.length} из ${matches.length} матчей • Pixel Monopoly` }
+        footer: { text: `Показано ${recent.length} из ${matches.length} сохранённых матчей (лимит 99) • Pixel Monopoly` }
       };
 
       return res.json({ type: 4, data: { embeds: [embed] } });
