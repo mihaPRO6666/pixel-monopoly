@@ -452,7 +452,7 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   </g>
 
   <!-- ================= FOOTER ================= -->
-  <text x="30" y="515" fill="#64748b" font-size="11" font-family="Arial">PIXEL MONOPOLY ONLINE • 2026</text>
+  <text x="30" y="515" fill="#64748b" font-size="11" font-family="Arial">PIXEL MONOPOLY • 2026</text>
   <text x="${width - 30}" y="515" text-anchor="end" fill="#d97706" font-size="11" font-family="Arial" font-weight="bold">pixel-monopoly-nu.vercel.app</text>
 </svg>
   `;
