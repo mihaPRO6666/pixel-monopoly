@@ -200,9 +200,6 @@ export default async function handler(req, res) {
 
     // ===== /история =====
     if (commandName === 'история') {
-      const pageOpt = interaction.data?.options?.find(o => o.name === 'страница');
-      const targetPage = pageOpt ? Math.max(0, (pageOpt.value || 1) - 1) : 0;
-
       const history = await fetchHistory();
       const matches = history?.matches || [];
 
@@ -213,7 +210,7 @@ export default async function handler(req, res) {
         });
       }
 
-      const { embed, components } = buildHistoryPage(matches, targetPage);
+      const { embed, components } = buildHistoryPage(matches, 0);
       return res.json({
         type: 4, // CHANNEL_MESSAGE_WITH_SOURCE
         data: { embeds: [embed], components }
