@@ -146,9 +146,10 @@ export default async function handler(req, res) {
           .filter(p => !p.isBot)
           .map(p => p.discordId ? `<@${p.discordId}>` : p.name)
           .join(', ');
+        const reasonLine = m.reason ? `⚠️ *${m.reason}*\n` : '';
         return {
           name: `#${i + 1} · ${m.roomCode} · ${timeAgo(m.date)}`,
-          value: `👑 ${w.token} ${wName} — $${(w.cash || 0).toLocaleString('ru-RU')}\n👥 ${playerList || 'н/д'}`,
+          value: `${reasonLine}👑 ${w.token} ${wName} — $${(w.cash || 0).toLocaleString('ru-RU')}\n👥 ${playerList || 'н/д'}`,
           inline: false
         };
       });

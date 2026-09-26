@@ -1310,6 +1310,9 @@ class App {
     // If the host leaves during a game — end the game for everyone
     if (player.isHost && !network.isHost) {
       ui.showToast('🚪 Хост покинул игру. Возврат в меню...');
+      const st = engine.getState();
+      st.reason = 'Хост покинул игру (все вышли)';
+      this.handleGameFinished(st);
       setTimeout(() => {
         this.showScreen('menu');
         this.renderLeaderboard();
@@ -1328,7 +1331,9 @@ class App {
     const winner = engine.checkGameWinner();
     if (winner) {
       network.clearSavedSession();
-      this.handleGameFinished(engine.getState());
+      const st = engine.getState();
+      st.reason = 'Все соперники покинули игру (техническая победа)';
+      this.handleGameFinished(st);
       ui.showWinnerModal(winner);
       this.broadcastAction('SYNC_STATE', { state: engine.getState() });
       ui.update(engine.getState(), profileManager.profile.id);
@@ -2989,7 +2994,20 @@ class App {
         const myId = profileManager.profile.id;
         const myName = profileManager.profile.name;
         const me = engine.players.find(p => p.id === myId);
-        if (me) me.hasLeft = true;
+        if (me) {
+          me.hasLeft = true;
+          me.isBankrupt = true;
+        }
+
+        // If host leaves or game terminates, trigger match result notification
+        if (!this.isSoloMode && !this.isLocalMode && !this.isTestMode && network.roomCode) {
+          const realPlayers = (engine.players || []).filter(p => !p.isBot);
+          if (realPlayers.length >= 2 && !this.hasSentMatchWebhook) {
+            const st = engine.getState();
+            st.reason = network.isHost ? 'Хост покинул игру (все вышли)' : 'Игрок покинул игру';
+            this.handleGameFinished(st);
+          }
+        }
 
         this.broadcastAction('PLAYER_LEFT', {
           playerId: myId,
@@ -4606,8 +4624,11 @@ class App {
 
   handleGameFinished(state) {
     this.clearActiveGameSession();
-    if (!state || !state.winner) return;
-    const isWinner = String(state.winner.id) === String(profileManager.profile.id);
+    if (!state) return;
+    if (!state.winner && state.players) {
+      state.winner = state.players.find(p => !p.hasLeft && !p.isBankrupt) || state.players[0];
+    }
+    const isWinner = state.winner && String(state.winner.id) === String(profileManager.profile.id);
     const hasBots = state.players && state.players.some(p => p.isBot);
     const isSoloOrBot = this.isSoloMode || hasBots || (network.roomCode && (network.roomCode.startsWith('SOLO-') || network.roomCode.startsWith('BOT-')));
     const isTestRoom = this.isTestMode || (network.roomCode && network.roomCode.startsWith('TEST-'));
@@ -4627,12 +4648,12 @@ class App {
       return;
     }
 
-    // Send Discord bot notification ONLY for real online multiplayer matches
-    // Conditions: online room, not local/solo/test, at least 2 real players, host sends once
+    // Send Discord bot notification for real online multiplayer matches
+    // Conditions: online room, not local/solo/test, at least 2 real players, host or remaining active player sends once
     const isRealOnline = !this.isLocalMode && !this.isSoloMode && !this.isTestMode && Boolean(network.roomCode);
     const realPlayers = (state.players || []).filter(p => !p.isBot);
     const hasEnoughRealPlayers = realPlayers.length >= 2;
-    const shouldSendWebhook = isRealOnline && hasEnoughRealPlayers && network.isHost && !this.hasSentMatchWebhook;
+    const shouldSendWebhook = isRealOnline && hasEnoughRealPlayers && (network.isHost || isWinner || Boolean(state.reason)) && !this.hasSentMatchWebhook;
 
     if (shouldSendWebhook) {
       this.hasSentMatchWebhook = true;
@@ -4642,8 +4663,9 @@ class App {
       });
     }
 
-
-    leaderboardManager.recordGameFinished(state.players, state.winner.id);
+    if (state.winner && state.players) {
+      leaderboardManager.recordGameFinished(state.players, state.winner.id);
+    }
 
     // Record to local match history
     matchHistoryManager.recordMatch({
