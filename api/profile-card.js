@@ -3,11 +3,40 @@
  * GET /api/profile-card?userId=...&name=...&avatarUrl=...
  */
 
+import fs from 'fs';
+import path from 'path';
+import os from 'os';
 import { Resvg } from '@resvg/resvg-js';
 import { FONT_BOLD, FONT_REGULAR } from './fonts-data.js';
 
 const NTFY_BASE = 'https://ntfy.sh/pixel_monopoly_sync_';
 const HISTORY_URL = 'https://raw.githubusercontent.com/mihaPRO6666/pixel-monopoly/main/data/match-history.json';
+
+let cachedFontFiles = null;
+
+function getFontFiles() {
+  if (cachedFontFiles) return cachedFontFiles;
+
+  const localReg = path.join(process.cwd(), 'fonts', 'font.ttf');
+  const localBold = path.join(process.cwd(), 'fonts', 'font-bold.ttf');
+  if (fs.existsSync(localReg) && fs.existsSync(localBold)) {
+    cachedFontFiles = [localReg, localBold];
+    return cachedFontFiles;
+  }
+
+  const tmpReg = path.join(os.tmpdir(), 'font_arial_reg.ttf');
+  const tmpBold = path.join(os.tmpdir(), 'font_arial_bold.ttf');
+
+  if (!fs.existsSync(tmpReg) || fs.statSync(tmpReg).size < 1000) {
+    fs.writeFileSync(tmpReg, FONT_REGULAR);
+  }
+  if (!fs.existsSync(tmpBold) || fs.statSync(tmpBold).size < 1000) {
+    fs.writeFileSync(tmpBold, FONT_BOLD);
+  }
+
+  cachedFontFiles = [tmpReg, tmpBold];
+  return cachedFontFiles;
+}
 
 let cachedHistory = null;
 let lastHistoryFetch = 0;
@@ -219,13 +248,14 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   const winRate = games > 0 ? Math.round((wins / games) * 100) : 0;
   const coins = playerData.coins;
   const title = playerData.title;
-  const diceSkin = playerData.diceSkin;
-  const tokenName = playerData.token;
+  const cleanDice = String(playerData.diceSkin || 'Космос').replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, '').trim() || 'Космос';
+  const cleanToken = String(playerData.token || 'Шляпа').replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, '').trim() || 'Шляпа';
   const playerName = escapeXml(playerData.playerName || name);
   const userColor = playerData.nameColor || color || '#14b8a6';
   const titleColor = playerData.titleColor || '#f43f5e';
   const maxNetWorth = playerData.maxNetWorth || 1500;
   const losses = playerData.losses || Math.max(0, games - wins);
+  const isChampion = winRate >= 50;
 
   const width = 900;
   const height = 540;
@@ -300,9 +330,10 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   <g transform="translate(${width - 240}, 35)">
     <rect x="0" y="0" width="210" height="70" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
     <text x="15" y="26" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">СТАТУС ИГРОКА</text>
-    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Arial" font-weight="bold">${winRate >= 50 ? 'ЧЕМПИОН ⭐' : 'ИГРОК 🎲'}</text>
+    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Arial" font-weight="bold">${isChampion ? 'ЧЕМПИОН' : 'ИГРОК'}</text>
+    ${isChampion ? '<polygon points="128,40 130,46 137,47 132,52 133,58 128,55 122,58 124,52 119,47 125,46" fill="#fbbf24"/>' : ''}
     <text x="195" y="48" text-anchor="end" fill="#10b981" font-size="12" font-family="Arial" font-weight="bold">ONLINE</text>
-    <circle cx="132" cy="44" r="4" fill="#10b981"/>
+    <circle cx="140" cy="44" r="4" fill="#10b981"/>
   </g>
 
   <!-- ================= 4 TOP STAT CARDS ================= -->
@@ -386,7 +417,7 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
 
     <!-- Item 1 -->
     <text x="18" y="65" fill="#94a3b8" font-size="13" font-family="Arial">Фишка игрока</text>
-    <text x="390" y="65" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Arial" font-weight="bold">${escapeXml(tokenName)}</text>
+    <text x="390" y="65" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Arial" font-weight="bold">${escapeXml(cleanToken)}</text>
     <line x1="18" y1="78" x2="390" y2="78" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 2 -->
@@ -396,7 +427,7 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
 
     <!-- Item 3 -->
     <text x="18" y="145" fill="#94a3b8" font-size="13" font-family="Arial">Скин 3D кубиков</text>
-    <text x="390" y="145" text-anchor="end" fill="#a855f7" font-size="14" font-family="Arial" font-weight="bold">${escapeXml(diceSkin)}</text>
+    <text x="390" y="145" text-anchor="end" fill="#a855f7" font-size="14" font-family="Arial" font-weight="bold">${escapeXml(cleanDice)}</text>
     <line x1="18" y1="158" x2="390" y2="158" stroke="#334155" stroke-width="0.8"/>
 
     <!-- Item 4 -->
@@ -419,10 +450,12 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
 </svg>
   `;
 
+  const fontFiles = getFontFiles();
+
   const resvg = new Resvg(svg, {
     fitTo: { mode: 'width', value: width },
     font: {
-      fontBuffers: [FONT_REGULAR, FONT_BOLD],
+      fontFiles,
       defaultFontFamily: 'Arial',
       loadSystemFonts: false
     }
@@ -435,8 +468,8 @@ export default async function handler(req, res) {
   try {
     const pngBuffer = await generateProfileCard(req.query || {});
     res.setHeader('Content-Type', 'image/png');
-    res.setHeader('Cache-Control', 'public, max-age=10, s-maxage=10');
-    return res.status(200).send(pngBuffer);
+    res.setHeader('Cache-Control', 'public, max-age=15, s-maxage=15');
+    return res.status(200).end(pngBuffer);
   } catch (err) {
     console.error('Profile card render error:', err);
     return res.status(500).json({ error: 'Render error', details: err.message });
