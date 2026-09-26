@@ -126,8 +126,7 @@ export default async function handler(req, res) {
 
     // ===== /история =====
     if (commandName === 'история') {
-      const limitOpt = interaction.data?.options?.find(o => o.name === 'количество');
-      const limit = Math.min(limitOpt?.value || 5, 10);
+      const limit = 5;
 
       const history = await fetchHistory();
       const matches = history?.matches || [];
