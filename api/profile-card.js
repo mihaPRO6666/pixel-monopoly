@@ -9,6 +9,25 @@ import { ROBOTO_BOLD, ROBOTO_REGULAR } from './fonts-data.js';
 const NTFY_BASE = 'https://ntfy.sh/pixel_monopoly_sync_';
 const HISTORY_URL = 'https://raw.githubusercontent.com/mihaPRO6666/pixel-monopoly/main/data/match-history.json';
 
+let cachedHistory = null;
+let lastHistoryFetch = 0;
+
+async function getCachedHistory() {
+  const now = Date.now();
+  if (cachedHistory && (now - lastHistoryFetch < 60000)) {
+    return cachedHistory;
+  }
+  try {
+    const res = await fetch(HISTORY_URL + '?t=' + now, { signal: AbortSignal.timeout(800) });
+    if (res.ok) {
+      cachedHistory = await res.json();
+      lastHistoryFetch = now;
+      return cachedHistory;
+    }
+  } catch (e) {}
+  return cachedHistory || { matches: [] };
+}
+
 async function getPlayerFullData(userId, rawName) {
   const isOwner = userId === '1472673126859935765' || (rawName && rawName.toLowerCase().includes('hizuhara'));
 
@@ -26,48 +45,46 @@ async function getPlayerFullData(userId, rawName) {
     playerName: rawName || 'Игрок'
   };
 
-  // 1. Calculate from persistent match history
+  // 1. Calculate from in-memory cached match history (0ms)
   try {
-    const histRes = await fetch(HISTORY_URL + '?t=' + Date.now(), { signal: AbortSignal.timeout(2000) });
-    if (histRes.ok) {
-      const histData = await histRes.json();
-      const matches = histData?.matches || [];
-      let matchWins = 0;
-      let matchGames = 0;
-      let matchLosses = 0;
-      let highestNet = 1500;
+    const histData = await getCachedHistory();
+    const matches = histData?.matches || [];
+    let matchWins = 0;
+    let matchGames = 0;
+    let matchLosses = 0;
+    let highestNet = 1500;
 
-      matches.forEach(m => {
-        const found = (m.players || []).find(p =>
-          (userId && p.discordId === userId) ||
-          (rawName && p.name && p.name.toLowerCase() === rawName.toLowerCase())
-        );
-        if (found) {
-          matchGames++;
-          if (found.isWinner || (m.winner && (m.winner.discordId === userId || m.winner.name === rawName))) {
-            matchWins++;
-          }
-          if (found.isBankrupt || found.hasLeft) {
-            matchLosses++;
-          }
-          if ((found.netWorth || found.cash || 0) > highestNet) {
-            highestNet = found.netWorth || found.cash || 0;
-          }
-          if (found.token) stats.token = found.token;
-          if (found.name) stats.playerName = found.name;
+    matches.forEach(m => {
+      const found = (m.players || []).find(p =>
+        (userId && p.discordId === userId) ||
+        (rawName && p.name && p.name.toLowerCase() === rawName.toLowerCase())
+      );
+      if (found) {
+        matchGames++;
+        if (found.isWinner || (m.winner && (m.winner.discordId === userId || m.winner.name === rawName))) {
+          matchWins++;
         }
-      });
-
-      if (matchGames > 0) {
-        stats.games = matchGames;
-        stats.wins = matchWins;
-        stats.losses = matchLosses;
-        stats.maxNetWorth = highestNet;
+        if (found.isBankrupt || found.hasLeft) {
+          matchLosses++;
+        }
+        if ((found.netWorth || found.cash || 0) > highestNet) {
+          highestNet = found.netWorth || found.cash || 0;
+        }
+        if (found.token) stats.token = found.token;
+        if (found.name) stats.playerName = found.name;
       }
+    });
+
+    if (matchGames > 0) {
+      stats.games = matchGames;
+      stats.wins = matchWins;
+      stats.losses = matchLosses;
+      stats.maxNetWorth = highestNet;
     }
   } catch (e) {
     console.warn('History read error in profile card:', e);
   }
+
 
   // 2. Fetch from ntfy cloud sync with poll=1 (instant)
   try {

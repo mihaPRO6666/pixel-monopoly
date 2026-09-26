@@ -182,65 +182,57 @@ export default async function handler(req, res) {
         ? `https://cdn.discordapp.com/avatars/${userId}/${avatarHash}.png?size=128`
         : `https://cdn.discordapp.com/embed/avatars/${Number(BigInt(userId || '0') % 6n)}.png`;
 
-      // 1. Immediately acknowledge with deferred message (shows thinking... without gray box)
-      res.status(200).json({
-        type: InteractionResponseType.DEFERRED_CHANNEL_MESSAGE_WITH_SOURCE
+      // Fast resolve stats from match history (cached in memory)
+      const histData = await fetchHistory();
+      const matches = histData?.matches || [];
+      const isOwner = (userId === '1472673126859935765') || globalName.toLowerCase().includes('hizuhara');
+      let wins = isOwner ? 2 : 0;
+      let games = isOwner ? 2 : 0;
+      matches.forEach(m => {
+        const found = (m.players || []).find(p => (userId && p.discordId === userId) || (p.name && p.name.toLowerCase() === globalName.toLowerCase()));
+        if (found) {
+          games++;
+          if (found.isWinner || (m.winner && (m.winner.discordId === userId || m.winner.name === globalName))) wins++;
+        }
       });
+      const winRate = games > 0 ? Math.round((wins / games) * 100) : 0;
+      const title = isOwner ? '🛠️ Создатель' : (wins >= 10 ? '👑 Магнат' : (wins >= 5 ? '🎩 Монополист' : (wins >= 3 ? '🦈 Акула бизнеса' : '🌱 Новичок')));
 
-      // 2. Generate PNG buffer and attach directly to message
-      try {
-        const pngBuffer = await generateProfileCard({
-          userId,
-          name: globalName,
-          discordTag: globalName,
-          avatarUrl
-        });
+      const cardImageUrl = `https://pixel-monopoly-nu.vercel.app/api/profile-card?userId=${userId}&name=${encodeURIComponent(globalName)}&discordTag=${encodeURIComponent(globalName)}&avatarUrl=${encodeURIComponent(avatarUrl)}&v=${Date.now()}`;
 
-        const appId = interaction.application_id || process.env.DISCORD_APP_ID || '1553411801884926023';
-        const token = interaction.token;
+      const embed = {
+        title: `📊 Профиль игрока: ${globalName}`,
+        color: 0xf59e0b,
+        description: `🏷️ **Титул:** \`${title}\` • 🏆 **Победы:** \`${wins}/${games}\` (\`${winRate}%\`)\n🎮 **Игра:** [Pixel Monopoly](https://pixel-monopoly-nu.vercel.app)`,
+        image: {
+          url: cardImageUrl
+        }
+      };
 
-        const formData = new FormData();
-        const blob = new Blob([pngBuffer], { type: 'image/png' });
-        formData.append('files[0]', blob, 'profile.png');
-
-        const payload = {
-          embeds: [
-            {
-              color: 0xf59e0b,
-              image: { url: 'attachment://profile.png' }
-            }
-          ],
+      const components = [
+        {
+          type: 1,
           components: [
             {
-              type: 1,
-              components: [
-                {
-                  type: 2,
-                  style: 2,
-                  label: '🎨 Персонализация',
-                  custom_id: `profile_gear_${userId}`
-                },
-                {
-                  type: 2,
-                  style: 5,
-                  label: '🎲 Играть в Монополию',
-                  url: 'https://pixel-monopoly-nu.vercel.app'
-                }
-              ]
+              type: 2,
+              style: 2,
+              label: '🎨 Персонализация',
+              custom_id: `profile_gear_${userId}`
+            },
+            {
+              type: 2,
+              style: 5,
+              label: '🎲 Играть в Монополию',
+              url: 'https://pixel-monopoly-nu.vercel.app'
             }
           ]
-        };
+        }
+      ];
 
-        formData.append('payload_json', JSON.stringify(payload));
-
-        await fetch(`https://discord.com/api/v10/webhooks/${appId}/${token}/messages/@original`, {
-          method: 'PATCH',
-          body: formData
-        });
-      } catch (err) {
-        console.error('Deferred profile card error:', err);
-      }
-      return;
+      return res.status(200).json({
+        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+        data: { embeds: [embed], components }
+      });
     }
 
     // ===== /история =====
