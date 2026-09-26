@@ -255,7 +255,13 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   const titleColor = playerData.titleColor || '#f43f5e';
   const maxNetWorth = playerData.maxNetWorth || 1500;
   const losses = playerData.losses || Math.max(0, games - wins);
-  const isChampion = winRate >= 50;
+  
+  const isOwnerUser = (userId === '1472673126859935765') || (name && name.toLowerCase().includes('hizuhara'));
+  const baseLevel = isOwnerUser ? 58 : 1;
+  const level = baseLevel + Math.floor(wins * 2 + Math.max(0, games - wins));
+  const currentXp = 680 + ((wins * 450 + games * 150) % 320);
+  const neededXp = 1000;
+  const xpPercent = Math.min(100, Math.max(10, Math.round((currentXp / neededXp) * 100)));
 
   const width = 900;
   const height = 540;
@@ -313,7 +319,7 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   `}
   <!-- Avatar Level Badge -->
   <rect x="36" y="96" width="68" height="18" rx="6" fill="#f59e0b"/>
-  <text x="70" y="109" text-anchor="middle" fill="#000000" font-size="11" font-family="Arial" font-weight="bold">PRO VIP</text>
+  <text x="70" y="109" text-anchor="middle" fill="#000000" font-size="11" font-family="Arial" font-weight="bold">LVL ${level}</text>
 
   <!-- User Identity Info -->
   <text x="130" y="58" fill="${userColor}" font-size="28" font-family="Arial" font-weight="bold">${playerName}</text>
@@ -326,14 +332,17 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
   <rect x="268" y="70" width="130" height="22" rx="6" fill="#5865f2" fill-opacity="0.2" stroke="#5865f2" stroke-width="1"/>
   <text x="333" y="85" text-anchor="middle" fill="#c7d2fe" font-size="12" font-family="Arial">@${escapeXml(discordTag)}</text>
 
-  <!-- Header Right Stats Pill -->
+  <!-- Header Right LVL Widget -->
   <g transform="translate(${width - 240}, 35)">
-    <rect x="0" y="0" width="210" height="70" rx="12" fill="#0f172a" fill-opacity="0.8" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1"/>
-    <text x="15" y="26" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold">СТАТУС ИГРОКА</text>
-    <text x="15" y="52" fill="#fbbf24" font-size="20" font-family="Arial" font-weight="bold">${isChampion ? 'ЧЕМПИОН' : 'ИГРОК'}</text>
-    ${isChampion ? '<polygon points="128,40 130,46 137,47 132,52 133,58 128,55 122,58 124,52 119,47 125,46" fill="#fbbf24"/>' : ''}
-    <text x="195" y="48" text-anchor="end" fill="#10b981" font-size="12" font-family="Arial" font-weight="bold">ONLINE</text>
-    <circle cx="140" cy="44" r="4" fill="#10b981"/>
+    <rect x="0" y="0" width="210" height="70" rx="12" fill="#0f172a" fill-opacity="0.85" stroke="#f59e0b" stroke-opacity="0.5" stroke-width="1.2"/>
+    <text x="15" y="24" fill="#94a3b8" font-size="11" font-family="Arial" font-weight="bold" letter-spacing="1">УРОВЕНЬ</text>
+    <text x="195" y="24" text-anchor="end" fill="#60a5fa" font-size="11" font-family="Arial" font-weight="bold">${currentXp} / ${neededXp} XP</text>
+    <text x="15" y="49" fill="#fbbf24" font-size="22" font-family="Arial" font-weight="bold">LVL ${level}</text>
+    <text x="195" y="48" text-anchor="end" fill="#10b981" font-size="11" font-family="Arial" font-weight="bold">${xpPercent}%</text>
+    
+    <!-- Level XP mini bar -->
+    <rect x="15" y="55" width="180" height="6" rx="3" fill="#1e293b"/>
+    <rect x="15" y="55" width="${Math.max(6, Math.round(180 * (xpPercent / 100)))}" height="6" rx="3" fill="url(#barGrad)"/>
   </g>
 
   <!-- ================= 4 TOP STAT CARDS ================= -->
@@ -402,10 +411,8 @@ export async function generateProfileCard({ userId, name = 'Hizuhara', avatarUrl
     <text x="390" y="225" text-anchor="end" fill="#38bdf8" font-size="14" font-family="Arial" font-weight="bold">${wins > 0 ? '#1 Лидер' : 'Участник'}</text>
     <line x1="18" y1="238" x2="390" y2="238" stroke="#334155" stroke-width="0.8"/>
 
-    <!-- Mini Progress Bar -->
-    <text x="18" y="258" fill="#64748b" font-size="11" font-family="Arial">ПРОГРЕСС ВИНРЕЙТА</text>
-    <rect x="160" y="248" width="230" height="12" rx="6" fill="#1e293b"/>
-    <rect x="160" y="248" width="${Math.max(4, Math.round(230 * (winRate / 100)))}" height="12" rx="6" fill="url(#barGrad)"/>
+    <!-- Footer Note inside panel -->
+    <text x="210" y="258" text-anchor="middle" fill="#64748b" font-size="11" font-family="Arial">Статистика матчей Pixel Monopoly</text>
   </g>
 
   <!-- Right Box: ПЕРСОНАЛИЗАЦИЯ И ИНВЕНТАРЬ -->
