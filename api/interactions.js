@@ -1,6 +1,6 @@
 /**
- * Vercel Serverless Function — Discord Slash Command Handler
- * Handles: /профиль, /история
+ * Vercel Serverless Function — Discord Slash Command & Component Handler
+ * Handles: /профиль, /история, and Interactive Pagination Buttons
  * Endpoint: POST /api/interactions
  */
 
@@ -9,6 +9,9 @@ import { webcrypto } from 'crypto';
 const PUBLIC_KEY = process.env.DISCORD_PUBLIC_KEY;
 const NTFY_BASE = 'https://ntfy.sh/pixel_monopoly_sync_';
 const HISTORY_URL = 'https://raw.githubusercontent.com/mihaPRO6666/pixel-monopoly/main/data/match-history.json';
+
+const PAGE_SIZE = 10;
+const MAX_PAGES = 10;
 
 // Verify Discord request signature (ed25519)
 async function verifySignature(rawBody, signature, timestamp) {
@@ -67,6 +70,77 @@ function timeAgo(isoDate) {
   return 'только что';
 }
 
+// Build Embed & ActionRow components for history page
+function buildHistoryPage(matches, pageIndex = 0) {
+  const totalMatches = matches.length;
+  const totalPages = Math.min(MAX_PAGES, Math.max(1, Math.ceil(totalMatches / PAGE_SIZE)));
+  const page = Math.max(0, Math.min(pageIndex, totalPages - 1));
+
+  const startIdx = page * PAGE_SIZE;
+  const pageItems = matches.slice(startIdx, startIdx + PAGE_SIZE);
+
+  const fields = pageItems.map((m, i) => {
+    const globalIdx = startIdx + i + 1;
+    const w = m.winner || { name: 'Никто', token: '❓', cash: 0 };
+    const wName = w.discordId ? `<@${w.discordId}>` : `**${w.name}**`;
+    const playerList = (m.players || [])
+      .filter(p => !p.isBot)
+      .map(p => {
+        const userTag = p.discordId ? `<@${p.discordId}>` : p.name;
+        if (p.hasLeft) return `${userTag} *(вышел ❌)*`;
+        if (p.isBankrupt) return `${userTag} *(банкрот 💥)*`;
+        return userTag;
+      })
+      .join(', ');
+
+    const reasonLine = m.reason ? `⚠️ *${m.reason}*\n` : '';
+    return {
+      name: `#${globalIdx} · ${m.roomCode} · ${timeAgo(m.date)}`,
+      value: `${reasonLine}👑 ${w.token} ${wName} — $${(w.cash || 0).toLocaleString('ru-RU')}\n👥 ${playerList || 'н/д'}`,
+      inline: false
+    };
+  });
+
+  const embed = {
+    title: `📜 История матчей — Страница ${page + 1} из ${totalPages}`,
+    description: `Всего сохранено **${totalMatches}** из **100** матчей (до 10 страниц по 10 игр)`,
+    color: 0x6366f1,
+    fields: fields.length ? fields : [{ name: '📭 Пусто', value: 'На этой странице пока нет игр.' }],
+    footer: { text: `Страница ${page + 1}/${totalPages} • Pixel Monopoly` }
+  };
+
+  const components = [
+    {
+      type: 1, // ACTION_ROW
+      components: [
+        {
+          type: 2, // BUTTON
+          style: 2, // SECONDARY
+          label: '◀️ Назад',
+          custom_id: `history_page_${page - 1}`,
+          disabled: page <= 0
+        },
+        {
+          type: 2, // BUTTON
+          style: 1, // PRIMARY
+          label: `${page + 1} / ${totalPages}`,
+          custom_id: `history_cur_page`,
+          disabled: true
+        },
+        {
+          type: 2, // BUTTON
+          style: 2, // SECONDARY
+          label: 'Вперёд ▶️',
+          custom_id: `history_page_${page + 1}`,
+          disabled: page >= totalPages - 1
+        }
+      ]
+    }
+  ];
+
+  return { embed, components };
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
@@ -80,10 +154,10 @@ export default async function handler(req, res) {
 
   const interaction = req.body;
 
-  // PING
+  // PING (Type 1)
   if (interaction.type === 1) return res.json({ type: 1 });
 
-  // APPLICATION_COMMAND
+  // APPLICATION_COMMAND (Type 2)
   if (interaction.type === 2) {
     const commandName = interaction.data?.name;
 
@@ -126,7 +200,8 @@ export default async function handler(req, res) {
 
     // ===== /история =====
     if (commandName === 'история') {
-      const limit = 10;
+      const pageOpt = interaction.data?.options?.find(o => o.name === 'страница');
+      const targetPage = pageOpt ? Math.max(0, (pageOpt.value || 1) - 1) : 0;
 
       const history = await fetchHistory();
       const matches = history?.matches || [];
@@ -134,42 +209,35 @@ export default async function handler(req, res) {
       if (!matches.length) {
         return res.json({
           type: 4,
-          data: { content: '📭 История матчей пуста. Сыграйте партию!', flags: 64 }
+          data: { content: '📭 История матчей пока пуста. Сыграйте онлайн партию!', flags: 64 }
         });
       }
 
-      const recent = matches.slice(0, limit);
-      const fields = recent.map((m, i) => {
-        const w = m.winner;
-        const wName = w.discordId ? `<@${w.discordId}>` : `**${w.name}**`;
-        const playerList = (m.players || [])
-          .filter(p => !p.isBot)
-          .map(p => {
-            const userTag = p.discordId ? `<@${p.discordId}>` : p.name;
-            if (p.hasLeft) return `${userTag} *(вышел ❌)*`;
-            if (p.isBankrupt) return `${userTag} *(банкрот 💥)*`;
-            return userTag;
-          })
-          .join(', ');
-        const reasonLine = m.reason ? `⚠️ *${m.reason}*\n` : '';
-        return {
-          name: `#${i + 1} · ${m.roomCode} · ${timeAgo(m.date)}`,
-          value: `${reasonLine}👑 ${w.token} ${wName} — $${(w.cash || 0).toLocaleString('ru-RU')}\n👥 ${playerList || 'н/д'}`,
-          inline: false
-        };
+      const { embed, components } = buildHistoryPage(matches, targetPage);
+      return res.json({
+        type: 4, // CHANNEL_MESSAGE_WITH_SOURCE
+        data: { embeds: [embed], components }
       });
-
-      const embed = {
-        title: `📜 История последних матчей`,
-        color: 0x6366f1,
-        fields,
-        footer: { text: `Показано ${recent.length} из ${matches.length} сохранённых матчей (лимит 99) • Pixel Monopoly` }
-      };
-
-      return res.json({ type: 4, data: { embeds: [embed] } });
     }
 
     return res.json({ type: 4, data: { content: '❓ Неизвестная команда', flags: 64 } });
+  }
+
+  // MESSAGE_COMPONENT (Type 3) — Button pagination click
+  if (interaction.type === 3) {
+    const customId = interaction.data?.custom_id || '';
+    if (customId.startsWith('history_page_')) {
+      const pageNum = parseInt(customId.replace('history_page_', ''), 10) || 0;
+      const history = await fetchHistory();
+      const matches = history?.matches || [];
+
+      const { embed, components } = buildHistoryPage(matches, pageNum);
+
+      return res.json({
+        type: 7, // UPDATE_MESSAGE
+        data: { embeds: [embed], components }
+      });
+    }
   }
 
   return res.status(400).send('Unknown interaction type');
